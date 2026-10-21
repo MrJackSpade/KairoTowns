@@ -1,0 +1,16 @@
+#!/bin/sh
+# Rejects a commit message that credits anyone else. GitHub lists every
+# Co-authored-by trailer as a contributor, so the identity check on the commit
+# object alone does not keep other names off the repository.
+# Usage: check-commit-message <message-file> <label>
+set -eu
+
+file=$1
+label=$2
+found=$(grep -v '^#' "$file" | grep -inE '^[[:space:]]*co-authored-by:|noreply@anthropic\.com|generated with .*claude' || true)
+if [ -n "$found" ]; then
+    echo "$label credits someone other than MrJackSpade:" >&2
+    echo "$found" >&2
+    echo 'Remove Co-authored-by trailers and tool attribution lines from the message.' >&2
+    exit 1
+fi

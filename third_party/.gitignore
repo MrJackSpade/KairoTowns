@@ -1,0 +1,3 @@
+# Vendored snapshots are committed byte for byte; the root build and log rules do not apply here.
+!*
+!*/

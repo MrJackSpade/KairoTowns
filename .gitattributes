@@ -1,0 +1,5 @@
+# Preserve vendored source bytes, including Shift-JIS text and original line endings.
+third_party/** -text
+
+*.md text eol=lf
+.githooks/* text eol=lf

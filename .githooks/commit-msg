@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+
+# Catches attribution added in the editor, after prepare-commit-msg ran.
+exec "$(dirname "$0")/check-commit-message" "$1" 'Commit message'

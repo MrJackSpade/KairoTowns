@@ -1,0 +1,40 @@
+# Android / Gradle
+.gradle/
+.kotlin/
+.idea/
+build/
+**/build/
+local.properties
+*.iml
+*.apk
+*.aab
+
+# Native build output
+.cxx/
+cmake-build-*/
+out/
+
+# Temporary files and logs
+/.tmp/
+/tmp/
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+
+# Local games, firmware and test sets
+/docs/local/
+/.downloads/
+/roms/
+/bios/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+
+# Agent instructions stay local.
+/AGENTS.md

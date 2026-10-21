@@ -1,0 +1,22 @@
+#!/bin/sh
+set -eu
+
+# GitHub attributes commits to the identities recorded in the commit object.
+# Check Git's effective identities, including GIT_AUTHOR_* / GIT_COMMITTER_*
+# overrides, before it creates a commit. This hook also runs with --no-verify.
+for role in AUTHOR COMMITTER; do
+    identity=$(git var "GIT_${role}_IDENT")
+    case "$identity" in
+        'MrJackSpade <loffredo.ap@gmail.com> '*) ;;
+        *)
+            echo "Unexpected Git $role identity: $identity" >&2
+            echo 'Set author and committer to MrJackSpade <loffredo.ap@gmail.com> before committing.' >&2
+            exit 1
+            ;;
+    esac
+done
+
+# The identities above are not the only credit GitHub shows: it also lists every
+# Co-authored-by trailer. A -m or -F message is already in place here, and unlike
+# commit-msg this hook is not skipped by --no-verify.
+"$(dirname "$0")/check-commit-message" "$1" 'Commit message'
