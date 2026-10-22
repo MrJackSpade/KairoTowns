@@ -11,7 +11,7 @@ import com.mrjackspade.kairo.frontend.LibraryStrings
 import com.mrjackspade.kairo.frontend.MachineActivity
 import com.mrjackspade.kairo.frontend.MachineFirstRun
 import com.mrjackspade.kairo.frontend.NativeMachine
-import com.mrjackspade.kairo.frontend.sameSource
+import com.mrjackspade.kairo.frontend.mediaFor
 
 import java.io.File
 import java.util.concurrent.atomic.AtomicBoolean
@@ -84,9 +84,7 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
         val floppy = when {
             !isCd(entry) -> entry
             else -> game.mediaId("floppyA")?.let { id ->
-                val candidates = libraryEntries.filter { it.playable && (it.contentId == id || it.catalogId == id) }
-                candidates.firstOrNull { sameSource(entry, it) } ?: candidates.firstOrNull()
-                    ?: error("The boot floppy this game needs is not in the library")
+                mediaFor(id, entry, libraryEntries) ?: error("The boot floppy this game needs is not in the library")
             }
         }
         val cd = entry.takeIf(::isCd)
