@@ -12,6 +12,9 @@ The standard edition does not bundle artwork. If you choose "Download missing im
 Catalog updates
 When KairoTowns checks for catalog updates, it requests the latest catalog over HTTPS from raw.githubusercontent.com, which hosts the Kairo projects' catalogs. The request sends ordinary network information, including your IP address, to that service. It does not send your game files, file names, or content hashes. The hosting service controls its own logs and retention.
 
+Update checks
+When KairoTowns starts, it requests the list of KairoTowns's releases over HTTPS from api.github.com to see whether a newer version is available. The request sends ordinary network information, including your IP address, to GitHub. It does not send your game files, file names, or content hashes. GitHub controls its own logs and retention.
+
 Imported catalog files
 When you import a catalog file, a copy of its metadata, artwork and update address is stored privately on your device. Checking installed catalogs contacts only the update addresses supplied by those installed files over HTTPS. Those servers receive your IP address and ordinary request information, but not your game files, library names or content hashes. The servers control their own logs and retention. Removing a catalog deletes its imported metadata and artwork, while keeping your games and personal overrides.
 

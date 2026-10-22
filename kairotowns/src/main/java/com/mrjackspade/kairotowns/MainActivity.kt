@@ -25,7 +25,7 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
         "Folder access expired. Select the ROM folder again.",
         MachineFirstRun.Folder("Choose a ROM folder", "Select the folder containing your FM Towns games. KairoTowns " +
             "will scan its CD and floppy images and the ZIP and 7z archives holding them.", "Choose ROM folder…"),
-        "SAVE STATES")
+        "SAVE STATES", "MrJackSpade/KairoTowns")
     override val machine = Machine(640, 480, 4.0 / 3.0, "state.tss")
     override val bridge by lazy { NativeMachine("kairotowns") }
     override val keyboard = TownsKeys.layout
