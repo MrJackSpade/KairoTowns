@@ -30,7 +30,7 @@ Early development. There is no release yet. The emulator core is pinned in this 
 
 ## Games and firmware
 
-Games, operating systems, and firmware are not supplied. The FM Towns needs its system ROMs, which you provide from your own machine.
+Games and the FM Towns's BIOS are not supplied; you provide the BIOS from your own machine: the system, DOS, font and dictionary files are required, and the 20-dot font is optional. Menu › Machine lists every BIOS file, each marked Required or Optional. Pick each file, or use **Import all from a folder…** to import every file the app recognizes in a folder you choose.
 
 The pinned core reads CD images (ISO, CUE, MDS), floppy images, and hard disk images.
 

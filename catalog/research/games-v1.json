@@ -82,6 +82,19 @@
    ],
    "description": "An Alice Soft adventure in which a knight who failed to save his princess from a cult seeks to undo her sacrifice.",
    "developer": "Alice Soft",
+   "diskSets": {
+    "sha256-cd-v1:7d3c103fd4a371976d08fe56191e8ede28c2418ec5fad755e3eb507bc0b78f56": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:8e96f9c9398667e6403f58f54791e97eb0d3947017a4f8b616512a3c508e5a7f",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:8e96f9c9398667e6403f58f54791e97eb0d3947017a4f8b616512a3c508e5a7f"
+     ]
+    }
+   },
    "launchbox": "124835",
    "mobygames": 18742,
    "publisher": "Alice Soft",
@@ -843,6 +856,14 @@
    ],
    "description": "An adventure based on the anime Nadia: The Secret of Blue Water, itself loosely inspired by Jules Verne.",
    "developer": "Gainax",
+   "diskSets": {
+    "sha256-cd-v1:6f7a1bc3d71596cdb1bc679cc18038380f6d599d06c3f957855b065ae34088b7": {
+     "setDisks": [
+      "sha256-cd-v1:6b4cd7410acdd9586804c9d67d2860bdcdca58806ac004d70726efb4c5d74895",
+      "sha256-cd-v1:6b632d6b03fced7beed6387159ceac97826181dad26d79bea99579e0605c86b6"
+     ]
+    }
+   },
    "launchbox": "182658",
    "mobygames": 47715,
    "publisher": "Gainax",
@@ -1816,6 +1837,19 @@
    ],
    "description": "The fifth Wizardry: a party descends through Llylgamyn's maelstrom to rescue the Gatekeeper and restore balance.",
    "developer": "Sir-Tech Software",
+   "diskSets": {
+    "sha256-cd-v1:a6f3e235e619f4d1492b87087b1d4c438411cc63315e1f0d1db39e8f16122abe": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:d470290bb91af866ca956ff9929007f83842918865fa2252e2c7c98c1a531c04",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:d470290bb91af866ca956ff9929007f83842918865fa2252e2c7c98c1a531c04"
+     ]
+    }
+   },
    "launchbox": "184609",
    "mobygames": 3983,
    "publisher": "Sir-Tech Software",
@@ -2119,6 +2153,14 @@
    ],
    "description": "A role-playing game set after humanity's extinction, where demon races fight for control of an Earth reborn as the Demon World.",
    "developer": "BrainGrey",
+   "diskSets": {
+    "sha256-cd-v1:8be74b932a05a65c1020871fd3931b26c91ff9b6a2502351b139a34eca620a05": {
+     "setDisks": [
+      "sha256-cd-v1:db14f0a32609e46767f4848bb09d4419c19c2dfdc596ac8fe5abd876ab890d67",
+      "sha256-cd-v1:db4a312ce25d3985aca0ed3e9422c8df88cdfc34238f667ae34ecdb641c18257"
+     ]
+    }
+   },
    "launchbox": "184686",
    "mobygames": 13538,
    "publisher": "BrainGrey",
@@ -2324,6 +2366,19 @@
    ],
    "description": "Glodia's role-playing game: the long peace of the land of Ellzeria comes to an end.",
    "developer": "Glodia",
+   "diskSets": {
+    "sha256-cd-v1:b30ea2a49e47c16dd96c3fea6ecbfa97d916ee6e35f024abcc35a7f79845f2b8": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:5715b8b5795bd58ab126f2d9f6d07087bdf5d6f787087506a8bfbd57b077007a",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:5715b8b5795bd58ab126f2d9f6d07087bdf5d6f787087506a8bfbd57b077007a"
+     ]
+    }
+   },
    "launchbox": "185087",
    "mobygames": 45558,
    "publisher": "Glodia",
@@ -2342,6 +2397,19 @@
    ],
    "description": "The second Vain Dream: the Goddess of Darkness seizes the peaceful land of Kureia.",
    "developer": "Glodia",
+   "diskSets": {
+    "sha256-cd-v1:6746338d7ae177013cfb88fda3bbb9e46bfe32ec2311aeaed7ec38ba868be4e1": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:434d1f630ea93bfce3d1f407f748e5432340b1e45c6bd71dd1630358cc10ba0a",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:434d1f630ea93bfce3d1f407f748e5432340b1e45c6bd71dd1630358cc10ba0a"
+     ]
+    }
+   },
    "launchbox": "185088",
    "mobygames": 45565,
    "publisher": "Glodia",
@@ -4401,6 +4469,19 @@
    ],
    "description": "A detective adventure: J.B. Harold investigates the murder of a wealthy man by questioning suspects and checking alibis.",
    "developer": "Riverhill Soft",
+   "diskSets": {
+    "sha256-cd-v1:328a767b1ed5d99d67e4740646e5b1ad5a8127feddb65d77f7aad50d4c131ace": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:d1e9dff115dee09d058c0442f8bf32b4d0021427c61e710fd47ed80c6fd4a07f",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:d1e9dff115dee09d058c0442f8bf32b4d0021427c61e710fd47ed80c6fd4a07f"
+     ]
+    }
+   },
    "launchbox": "188266",
    "mobygames": 9703,
    "publisher": "Riverhill Soft",
@@ -4780,6 +4861,19 @@
    ],
    "description": "The fourth Rance: Rance becomes caught up in the legacy of a cult founded by the Master of Magic.",
    "developer": "Alice Soft",
+   "diskSets": {
+    "sha256-cd-v1:e955fc83d89187fe2f7990f63fd3cb2b1765619f7f7716d11d2c2d620a6b17cb": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:7ec99c1be2c10d1bf2f333bb1ab3f50c52497cdf6057a9559b14659673a0d8d3",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:7ec99c1be2c10d1bf2f333bb1ab3f50c52497cdf6057a9559b14659673a0d8d3"
+     ]
+    }
+   },
    "launchbox": "188299",
    "mobygames": 42518,
    "publisher": "Alice Soft",
@@ -5310,6 +5404,19 @@
    ],
    "description": "An Alice Soft sci-fi adventure starring a space thief.",
    "developer": "Alice Soft",
+   "diskSets": {
+    "sha256-cd-v1:32607fe8ef26be96393bcc8f6fd0a71544cc3718bf6b6d5d7cfd10de3818b034": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:ab7422dc8e69e7ca75e0cc7499388dc6579749c37891e19c1d26eab2f08b12a5",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:ab7422dc8e69e7ca75e0cc7499388dc6579749c37891e19c1d26eab2f08b12a5"
+     ]
+    }
+   },
    "launchbox": "188340",
    "mobygames": 47708,
    "publisher": "Alice Soft",
@@ -5432,6 +5539,19 @@
    ],
    "description": "A turn-based wrestling game: manage a new women's wrestling company and its matches.",
    "developer": "Communication Group Plum",
+   "diskSets": {
+    "sha256-cd-v1:3c59cbdfe7441343785526d1abd071499b1bc7602859955c58ed7d9c57132a48": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:049d9c5c23b15474aa8464830a89fd8154e6b3d86848a1b9f5509064ff87fab9",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:049d9c5c23b15474aa8464830a89fd8154e6b3d86848a1b9f5509064ff87fab9"
+     ]
+    }
+   },
    "launchbox": "188349",
    "mobygames": 58042,
    "publisher": "Great",
@@ -5451,6 +5571,19 @@
    ],
    "description": "A Wrestle Angels game in which you create your own wrestler.",
    "developer": "Communication Group Plum",
+   "diskSets": {
+    "sha256-cd-v1:4a8e84592e03c494ebd7899fd7fb6ea1ff7da4532bade68e24134a8c2a67ddaa": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:c6a5a9b495cb24819b5f359ffdce48ecf9a3b03bd312669925923f2809be39da",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:c6a5a9b495cb24819b5f359ffdce48ecf9a3b03bd312669925923f2809be39da"
+     ]
+    }
+   },
    "launchbox": "188350",
    "mobygames": 43629,
    "publisher": "Great",
@@ -8120,6 +8253,13 @@
     "sha256-cd-v1:14f7a923d87627e1c3a6d50f28b543291f7daa5babc0509c1e89e3d2ee2abd52",
     "sha256-cd-v1:80e0bf4be7953c64c9e987d7e79633353fad8ffdf859115c1c1305c13572f59e"
    ],
+   "diskSets": {
+    "sha256-cd-v1:14f7a923d87627e1c3a6d50f28b543291f7daa5babc0509c1e89e3d2ee2abd52": {
+     "setDisks": [
+      "sha256-cd-v1:80e0bf4be7953c64c9e987d7e79633353fad8ffdf859115c1c1305c13572f59e"
+     ]
+    }
+   },
    "sourceGroups": [
     "fmtowns-cd:Ms. Detective (1991)(Datawest)(Jp).zip"
    ],

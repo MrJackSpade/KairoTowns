@@ -16,4 +16,4 @@ The shared RetroArch Slang shader runtime uses librashader under its GPL-3.0-onl
 
 ## Firmware and games
 
-KairoTowns does not include FM Towns ROMs, operating systems, or games. Users supply any firmware and games they need.
+KairoTowns does not include FM Towns system firmware (BIOS), operating systems, or games. Users supply any firmware and games they need.

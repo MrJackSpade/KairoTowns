@@ -34,3 +34,7 @@ MEDIA = content_ids.Media(kind, content_ids.same_file, LIMITS.__getitem__, 2, se
 
 MOBYGAMES = "fmtowns"
 SCANS = {"fmtowns-cd": (".downloads/scan/fmtowns-cd.json", ("fmtowns",))}
+
+# Disk sets (shared/tools/disk_sets.py): a game boots from its CD, with its floppy (often a user disk) in drive A.
+BOOT_KINDS = ["cd", "fd"]
+COMPANION = {"cd": ("fd", "floppyA", True)}

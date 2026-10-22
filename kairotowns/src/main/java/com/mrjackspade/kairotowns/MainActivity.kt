@@ -18,13 +18,13 @@ import java.util.concurrent.atomic.AtomicBoolean
 
 /** KairoTowns: the FM Towns on Tsugaru, in the shared Kairo frontend. */
 class MainActivity : MachineActivity<DiskImageEntry>() {
-    override val identity = Identity("KAIROTOWNS", "KairoTowns", "FM Towns", "kairotowns",
+    override val identity = Identity("KAIROTOWNS", 0xff3AF677.toInt(), "KairoTowns", "FM Towns", "kairotowns",
         LibraryStrings("KAIROTOWNS", "KairoTowns"),
         "KairoTowns uses the Tsugaru emulator. Source and provenance: github.com/MrJackSpade/KairoTowns.",
-        "Choose a ROM folder to find CD and floppy images and the ZIP and 7z archives holding them",
-        "Folder access expired. Select the ROM folder again.",
-        MachineFirstRun.Folder("Choose a ROM folder", "Select the folder containing your FM Towns games. KairoTowns " +
-            "will scan its CD and floppy images and the ZIP and 7z archives holding them.", "Choose ROM folder…"),
+        "Choose a games folder to find CD and floppy images and the ZIP and 7z archives holding them",
+        "Folder access expired. Select the games folder again.",
+        MachineFirstRun.Folder("Choose a games folder", "Select the folder containing your FM Towns games. KairoTowns " +
+            "will scan its CD and floppy images and the ZIP and 7z archives holding them.", "Choose games folder…"),
         "SAVE STATES", "MrJackSpade/KairoTowns")
     override val machine = Machine(640, 480, 4.0 / 3.0, "state.tss")
     override val bridge by lazy { NativeMachine("kairotowns") }
@@ -65,18 +65,15 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
 
     private val firmwareDir by lazy { File(filesDir, "firmware") }
     override val firmwareSets by lazy {
-        fun rom(name: String, label: String, required: Boolean, size: Int) =
-            FirmwareSet.Part(name, label, setOf(name.lowercase()), required, setOf(size.toLong()))
-        listOf("FM Towns ROMs" to FirmwareSet(firmwareDir, listOf(
-            rom("FMT_SYS.ROM", "System ROM", true, 0x40000),
-            rom("FMT_DOS.ROM", "DOS ROM", true, 0x80000),
-            rom("FMT_FNT.ROM", "Font ROM", true, 0x40000),
-            rom("FMT_DIC.ROM", "Dictionary ROM", true, 0x80000),
-            rom("FMT_F20.ROM", "20-dot font ROM", false, 0x80000))))
+        fun rom(name: String, label: String, description: String, required: Boolean, size: Int) =
+            FirmwareSet.Part(name, label, "$name · $description", setOf(name.lowercase()), required, setOf(size.toLong()))
+        listOf("FM Towns BIOS" to FirmwareSet(firmwareDir, listOf(
+            rom("FMT_SYS.ROM", "System", "the BIOS that starts the FM Towns", true, 0x40000),
+            rom("FMT_DOS.ROM", "DOS", "the built-in DOS that CD games boot through", true, 0x80000),
+            rom("FMT_FNT.ROM", "Font", "the text and kanji font", true, 0x40000),
+            rom("FMT_DIC.ROM", "Dictionary", "kana-to-kanji dictionary for Japanese text", true, 0x80000),
+            rom("FMT_F20.ROM", "Large font", "a 20-dot font some games use", false, 0x80000))))
     }
-    override val firmwareText get() = Triple("FM Towns firmware",
-        "Choose the folder holding your FM Towns ROM files. KairoTowns copies the files it recognizes.",
-        "The system, DOS, font and dictionary ROMs are needed to start games.")
 
     override fun startGame(entry: DiskImageEntry, game: CatalogGame, cancelled: AtomicBoolean,
                            progress: (String) -> Unit) {
