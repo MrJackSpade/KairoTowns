@@ -11,6 +11,11 @@ get_filename_component(TSUGARU "${CMAKE_CURRENT_LIST_DIR}/../third_party/tsugaru
 # Tsugaru's own build (src/CMakeLists.txt) sets these for every target.
 add_compile_definitions(YS_LITTLE_ENDIAN YS_TWOS_COMPLEMENT)
 add_compile_options(-Wno-unused-variable -Wno-deprecated-declarations -Wno-undefined-inline)
+# Tsugaru is written for x86, where plain char is signed; ARM compilers make it unsigned.
+add_compile_options(-fsigned-char)
+# The emulator runs in real time only optimized, so the core is optimized in debug builds too;
+# without this a debug APK compiles every Tsugaru library at -O0.
+add_compile_options(-O3)
 # On Windows Tsugaru marks unreachable code with MSVC's __assume, which clang accepts as an
 # extension; the host test builds there with llvm-mingw.
 if(WIN32)
