@@ -1,0 +1,22 @@
+name: Google Play release
+
+# tag-builds.yml dispatches this after it publishes a release tag (not prereleases), and it can be
+# run by hand to publish an existing release's Play bundle.
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag whose Play bundle to publish'
+        required: true
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    uses: MrJackSpade/Kairo/.github/workflows/app-play-release.yml@4a750b4ebeba5c3fa2acd9d5e33d5627ccb5ab60
+    with:
+      name: KairoTowns
+      package: com.loxifi.kairotowns
+      tag: ${{ inputs.tag }}

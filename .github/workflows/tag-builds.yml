@@ -1,0 +1,34 @@
+name: Tagged Android builds
+
+# Builds, verifies and publishes a tagged release through the shared app release workflow
+# (shared/docs/android-build.md); a manual run builds and verifies without publishing.
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version name for a manual build'
+        required: true
+        default: '0.1.0-ci'
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    permissions:
+      contents: write
+      actions: write
+    # Pinned to the shared commit this repository's shared submodule names.
+    uses: MrJackSpade/Kairo/.github/workflows/app-release.yml@4a750b4ebeba5c3fa2acd9d5e33d5627ccb5ab60
+    with:
+      module: kairotowns
+      name: KairoTowns
+      package: com.loxifi.kairotowns
+      version: ${{ inputs.version || '0.1.0-ci' }}
+      checks: |
+        python3 shared/tools/app_catalog.py . --check
+        python3 shared/tools/fetch_artwork.py . --check
+    secrets: inherit
