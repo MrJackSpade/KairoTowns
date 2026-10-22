@@ -1,0 +1,135 @@
+{
+ "images": {
+  "art/catalog/moby/121170/box-345b6a87d652.webp": {
+   "game": "fmtowns:moby-121170",
+   "sha256": "5a4a3509b6370d7ce37ca98370e7f2ffa4d6bc0f8b760fcde14cbd5c32b91b45",
+   "sourceUrl": "https://cdn.mobygames.com/covers/7528358-rocket-ranger-extended-collectors-edition-dos-front-cover.jpg"
+  },
+  "art/catalog/moby/165943/screenshot-f91ed6f814af.webp": {
+   "game": "fmtowns:moby-165943",
+   "sha256": "402d812301d7f74c2fa082bfffa5167d94aa2708dba4a66508987f44f1af0649",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16892940-cd-rom-bishojo-collection-yu-disk-special-fm-towns-exterlien-fig.png"
+  },
+  "art/catalog/moby/1727/screenshot-153899c0058a.webp": {
+   "game": "fmtowns:moby-1727",
+   "sha256": "329b25ef68d81c2f360a737dee1aa7fa0348f2459230d240bde1679691cf36dc",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16876062-populous-ii-trials-of-the-olympian-gods-fm-towns-in-game.png"
+  },
+  "art/catalog/moby/18254/screenshot-99f1165ce36c.webp": {
+   "game": "fmtowns:moby-18254",
+   "sha256": "f50f21559663cdbd4a5d69dfafde73b946b8c138f4585d091ad0c3c180b24425",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16751714-saturday-night-slam-masters-fm-towns-im-winner.png"
+  },
+  "art/catalog/moby/183712/screenshot-d187b4553ef9.webp": {
+   "game": "fmtowns:moby-183712",
+   "sha256": "891cf41817d72375520693a6a387d55e07a5f545b7e53555eba23b074b9680bb",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16867160-steepia-lite-fm-towns-cursor-warping.png"
+  },
+  "art/catalog/moby/21669/screenshot-8ae6c3943572.webp": {
+   "game": "fmtowns:moby-21669",
+   "sha256": "20c6efa5ffff24f88ea2183befecbd14c87e55a8fd68bcf2219ee2f7681a4011",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16749530-a-train-construction-set-fm-towns-talking-to-the-bank-manager.png"
+  },
+  "art/catalog/moby/329/box-d7e9c5692eef.webp": {
+   "game": "fmtowns:moby-329",
+   "sha256": "b9091e6502abfa21f582727c282395815810380e1492e61ac34764e72d1847a3",
+   "sourceUrl": "https://cdn.mobygames.com/covers/25446149-stunts-fm-towns-front-cover.jpg"
+  },
+  "art/catalog/moby/329/screenshot-820ff13f23d2.webp": {
+   "game": "fmtowns:moby-329",
+   "sha256": "bbae2f85a93267fca50447b1f832e79e0f1d9579bceb2b2adc9530f35197f2d0",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16748849-stunts-fm-towns-mountains-and-a-disconnected-bridge-up-ahead.png"
+  },
+  "art/catalog/moby/4028/box-89fd131b96d6.webp": {
+   "game": "fmtowns:moby-4028",
+   "sha256": "1780e02643a92cf4eddeb4193cc00e3808775f22765b07418fc3c6f286aebd15",
+   "sourceUrl": "https://cdn.mobygames.com/covers/6960568-wing-commander-ii-deluxe-edition-fm-towns-front-cover.jpg"
+  },
+  "art/catalog/moby/4028/screenshot-1eebe82a6a20.webp": {
+   "game": "fmtowns:moby-4028",
+   "sha256": "2d92570eb00e35884fa83be9669edf3e0629df738838df7fe4a13a79c434f284",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16820320-wing-commander-ii-deluxe-edition-fm-towns-create-new-personnel-f.png"
+  },
+  "art/catalog/moby/42089/screenshot-46ebdbb314ae.webp": {
+   "game": "fmtowns:moby-42089",
+   "sha256": "474627870c9c940ced125e18cbe2536a067e046fb00f2ccc28e125cc7d5258e5",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16931774-fin-fin-on-teo-the-magic-planet-fm-towns-microphone-level.png"
+  },
+  "art/catalog/moby/54849/screenshot-9e696a8e8075.webp": {
+   "game": "fmtowns:moby-54849",
+   "sha256": "44c2a405c3a14348a6a274093f1502d8620b8d5b9ea49a6f277f025747ff1e9b",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16751426-sorcer-striker-fm-towns-abandoned-room-with-skeletons.png"
+  },
+  "art/catalog/moby/58421/screenshot-81de04ffe156.webp": {
+   "game": "fmtowns:205234",
+   "sha256": "bb219f456778564c24f2ba04281c312b65abc44324b4abc5f5cc775084c66576",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16760340-homa-hunter-lime-dai-2-wa-fm-towns-lime-and-bass-have-a-tumultou.png"
+  },
+  "art/catalog/moby/58438/screenshot-87276c3513fc.webp": {
+   "game": "fmtowns:205235",
+   "sha256": "c9980bb2ae18cef35d30b0a1b75ba1e89cc2269c7c014c1e682b83c9dfdb9c7c",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16760571-homa-hunter-lime-dai-3-wa-fm-towns-lime-becomes-a-nurse.png"
+  },
+  "art/catalog/moby/58439/screenshot-4df2e7b5cc98.webp": {
+   "game": "fmtowns:205249",
+   "sha256": "1c5c49c3e7ed96cd7b7f489136aada7c6df60599a17477ae3b8054c8af20ea3c",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16760424-homa-hunter-lime-dai-5-wa-fm-towns-lime-is-consoling-a-girl.png"
+  },
+  "art/catalog/moby/58440/screenshot-00c45169dfed.webp": {
+   "game": "fmtowns:205248",
+   "sha256": "3f101cd6ccb9b910672ad6f6c09912c58d6ec12e57c18b0869b77b5db6a475f1",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16761426-homa-hunter-lime-dai-4-wa-fm-towns-awww-look-at-him-he-is-scared.png"
+  },
+  "art/catalog/moby/58441/screenshot-21b2d21efa7d.webp": {
+   "game": "fmtowns:205250",
+   "sha256": "53dd1f7683d78da37310ddeb9e0fd935d0b226b7b639181db44ba7cd3c711b3d",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16761147-homa-hunter-lime-dai-6-wa-fm-towns-lime-is-captured.png"
+  },
+  "art/catalog/moby/58446/screenshot-f74e8cb47f3f.webp": {
+   "game": "fmtowns:205275",
+   "sha256": "6fad40d840264598cd81446414167cd4ceaa45caccea141d173d7743a305ea2c",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16760661-homa-hunter-lime-dai-7-wa-fm-towns-aww.png"
+  },
+  "art/catalog/moby/58447/screenshot-a1cbd7627148.webp": {
+   "game": "fmtowns:205276",
+   "sha256": "98023b207efa1bdeb28fcbf91532ad8751f17047f0bbad5a526e40b71aebd89e",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16761153-homa-hunter-lime-dai-8-wa-fm-towns-lime-becomes-a-magician.png"
+  },
+  "art/catalog/moby/58448/screenshot-b878e8b68394.webp": {
+   "game": "fmtowns:205277",
+   "sha256": "c2eaff2bb2e62c9f9d2b5d087853d6c28f3d66fc04a9257420b436fe27ed3cbf",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16761162-homa-hunter-lime-dai-9-wa-fm-towns-lime-is-sad.png"
+  },
+  "art/catalog/moby/58449/screenshot-4740c4bcd053.webp": {
+   "game": "fmtowns:205278",
+   "sha256": "50bb924d1bdba92bfde744882589ff358143e84525ee0f2ef2a465a81b2157e2",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16761168-homa-hunter-lime-dai-10-wa-fm-towns-laides-meet-another-cute-bem.png"
+  },
+  "art/catalog/moby/58450/screenshot-a6eb0b800cc5.webp": {
+   "game": "fmtowns:205279",
+   "sha256": "089ae1478a481a812023fcf3a940d76c8c3cad5aa57cb2a6d0ac17aec2bc9ed2",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16761114-homa-hunter-lime-dai-11-wa-fm-towns-panty-shot-of-an-underage-gi.png"
+  },
+  "art/catalog/moby/58451/screenshot-150d29ff145f.webp": {
+   "game": "fmtowns:205280",
+   "sha256": "d7afae2861a9ef47f4c147ba2577826a051a87b71886394b0417a92f8adabf33",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16760241-homa-hunter-lime-dai-12-wa-fm-towns-the-two-powerful-enemies-fin.png"
+  },
+  "art/catalog/moby/7009/screenshot-29b87c9fccaa.webp": {
+   "game": "fmtowns:moby-7009",
+   "sha256": "b2914f3bc79a3c6cd17b4825eddb03ea8418bcd5918140c78b86d11d195a2423",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16753334-after-burner-ii-fm-towns-oh-no.png"
+  },
+  "art/catalog/moby/71396/screenshot-d14b9e458d92.webp": {
+   "game": "fmtowns:moby-71396",
+   "sha256": "2e51bfddeb8cda18f1e87ac8830d071e97fb7c93a5b6d2e7cba97c43c499aa3d",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/15574766-new-3d-golf-simulation-eight-lakes-gc-fm-towns-ball-went-out-of-.png"
+  },
+  "art/catalog/moby/81924/screenshot-e45c67dc5e68.webp": {
+   "game": "fmtowns:moby-81924",
+   "sha256": "76d5b5ebc76e563b2de309bf3503a702677a30036f3f4be267455150ba92c8cf",
+   "sourceUrl": "https://cdn.mobygames.com/screenshots/16846860-pis-solitaire-royale-tom-snyders-puppy-love-fm-towns-puppy-love-.png"
+  }
+ },
+ "schemaVersion": 1
+}

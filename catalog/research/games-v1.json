@@ -58,12 +58,18 @@
   },
   "fmtowns:124834": {
    "boxArtUrl": "https://images.launchbox-app.com/8cb93ae1-a9e3-460a-8237-4b7f16d1b0d5.jpg",
+   "contentIds": [
+    "sha256-cd-v1:b828d67f8fbdd00020941ade711a01b0c715ba772ce59da55fda549476b47769"
+   ],
    "description": "A sci-fi role-playing game set in a small cluster of star systems, where a young hero travels between planets and fights in turn-based battles.",
    "developer": "Right Stuff",
    "launchbox": "124834",
    "mobygames": 15395,
    "publisher": "Right Stuff",
    "screenshotUrl": "https://images.launchbox-app.com/6b1d1052-60d9-4a00-8fb0-bac824e9ad22.png",
+   "sourceGroups": [
+    "fmtowns-cd:Alshark (1991)(Right Stuff Corp)(Jp)[+UserDisk].zip"
+   ],
    "title": "Alshark",
    "year": 1993
   },
@@ -1940,12 +1946,18 @@
     "Eye of the Beholder II"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/9d0688a8-abe2-42ad-9a96-48f197298820.jpg",
+   "contentIds": [
+    "sha256-cd-v1:1c2f9ea75f18761ffa87edb8ad219b9a86e53d04554ccbbf9681e05903afd778"
+   ],
    "description": "The second Eye of the Beholder: the heroes of Waterdeep investigate evil around the temple of Darkmoon in a real-time first-person role-playing game.",
    "developer": "Westwood Associates",
    "launchbox": "184619",
    "mobygames": 307,
    "publisher": "Arrow Micro-Techs",
    "screenshotUrl": "https://images.launchbox-app.com/93e67f9c-6dfc-4677-8b06-8eb2aa39906c.png",
+   "sourceGroups": [
+    "fmtowns-cd:Eye Of The Beholder II (1991)(SSI)(Jp).zip"
+   ],
    "title": "Eye of the Beholder II: The Legend of Darkmoon",
    "year": 1993
   },
@@ -4041,12 +4053,18 @@
   },
   "fmtowns:188200": {
    "boxArtUrl": "https://images.launchbox-app.com/dfdec159-5f08-48ab-a883-9e8c9516b98a.jpg",
+   "contentIds": [
+    "sha256-cd-v1:32ace7a6be7da42371f0c5cf32fc95bc208ef9d7ea4ea9f739587a3ee641747b"
+   ],
    "description": "The Life & Death sequel: as a neurosurgeon, diagnose and operate on the brain.",
    "developer": "The Software Toolworks",
    "launchbox": "188200",
    "mobygames": 4474,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/06134601-15bd-44ec-8fbd-a8a320257ed9.png",
+   "sourceGroups": [
+    "fmtowns-cd:Life & Death II (1992)(Ving)(Jp).zip"
+   ],
    "title": "Life & Death II: The Brain"
   },
   "fmtowns:188201": {
@@ -6506,6 +6524,7 @@
    "aliases": [
     "Okiraku TownsGEAR"
    ],
+   "boxArtUrl": "https://images.launchbox-app.com/7cf9ed52-005e-49ba-bf9b-3123d46c3c96.jpg",
    "launchbox": "197124",
    "publisher": "Softbank",
    "title": "Okiraku Towns Gear",
@@ -7567,6 +7586,10 @@
    "year": 1994
   },
   "fmtowns:205234": {
+   "artwork": {
+    "preview": "art/catalog/moby/58421/screenshot-81de04ffe156.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/58421/screenshot-81de04ffe156.webp"
+   },
    "description": "Episode 2 of Houma Hunter Lime: Lime goes undercover at a school to catch a monster.",
    "developer": "Silence",
    "launchbox": "205234",
@@ -7576,6 +7599,10 @@
    "year": 1994
   },
   "fmtowns:205235": {
+   "artwork": {
+    "preview": "art/catalog/moby/58438/screenshot-87276c3513fc.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/58438/screenshot-87276c3513fc.webp"
+   },
    "description": "Episode 3 of Houma Hunter Lime: a visit to the hospital leads to a new discovery.",
    "developer": "Silence",
    "launchbox": "205235",
@@ -7585,6 +7612,10 @@
    "year": 1994
   },
   "fmtowns:205248": {
+   "artwork": {
+    "preview": "art/catalog/moby/58440/screenshot-00c45169dfed.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/58440/screenshot-00c45169dfed.webp"
+   },
    "description": "Episode 4 of Houma Hunter Lime: Lime and Mizuki work as cafe waitresses to find a monster.",
    "developer": "Silence",
    "launchbox": "205248",
@@ -7594,6 +7625,10 @@
    "year": 1994
   },
   "fmtowns:205249": {
+   "artwork": {
+    "preview": "art/catalog/moby/58439/screenshot-4df2e7b5cc98.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/58439/screenshot-4df2e7b5cc98.webp"
+   },
    "description": "Episode 5 of Houma Hunter Lime: Lime and Bass witness a strange incident at school.",
    "developer": "Silence",
    "launchbox": "205249",
@@ -7603,6 +7638,10 @@
    "year": 1994
   },
   "fmtowns:205250": {
+   "artwork": {
+    "preview": "art/catalog/moby/58441/screenshot-21b2d21efa7d.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/58441/screenshot-21b2d21efa7d.webp"
+   },
    "description": "Episode 6 of Houma Hunter Lime: a treacherous monster puts Lime to sleep by a swimming pool.",
    "developer": "Silence",
    "launchbox": "205250",
@@ -7647,6 +7686,10 @@
    "year": 1994
   },
   "fmtowns:205275": {
+   "artwork": {
+    "preview": "art/catalog/moby/58446/screenshot-f74e8cb47f3f.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/58446/screenshot-f74e8cb47f3f.webp"
+   },
    "description": "Episode 7 of Houma Hunter Lime: a monster disguised as food upsets people's stomachs.",
    "developer": "Silence",
    "launchbox": "205275",
@@ -7656,6 +7699,10 @@
    "year": 1994
   },
   "fmtowns:205276": {
+   "artwork": {
+    "preview": "art/catalog/moby/58447/screenshot-a1cbd7627148.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/58447/screenshot-a1cbd7627148.webp"
+   },
    "description": "Episode 8 of Houma Hunter Lime: a monster hides among a magician's show at a fair.",
    "developer": "Silence",
    "launchbox": "205276",
@@ -7665,6 +7712,10 @@
    "year": 1994
   },
   "fmtowns:205277": {
+   "artwork": {
+    "preview": "art/catalog/moby/58448/screenshot-b878e8b68394.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/58448/screenshot-b878e8b68394.webp"
+   },
    "description": "Episode 9 of Houma Hunter Lime: Bass and Lime meet a familiar-looking little girl at a mall.",
    "developer": "Silence",
    "launchbox": "205277",
@@ -7674,6 +7725,10 @@
    "year": 1994
   },
   "fmtowns:205278": {
+   "artwork": {
+    "preview": "art/catalog/moby/58449/screenshot-4740c4bcd053.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/58449/screenshot-4740c4bcd053.webp"
+   },
    "description": "Episode 10 of Houma Hunter Lime: a trip to the countryside.",
    "developer": "Silence",
    "launchbox": "205278",
@@ -7683,6 +7738,10 @@
    "year": 1994
   },
   "fmtowns:205279": {
+   "artwork": {
+    "preview": "art/catalog/moby/58450/screenshot-a6eb0b800cc5.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/58450/screenshot-a6eb0b800cc5.webp"
+   },
    "description": "Episode 11 of Houma Hunter Lime: the heroes attend a pop idol's concert.",
    "developer": "Silence",
    "launchbox": "205279",
@@ -7692,6 +7751,10 @@
    "year": 1994
   },
   "fmtowns:205280": {
+   "artwork": {
+    "preview": "art/catalog/moby/58451/screenshot-150d29ff145f.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/58451/screenshot-150d29ff145f.webp"
+   },
    "description": "Episode 12 of Houma Hunter Lime: the final confrontation in the magical world.",
    "developer": "Silence",
    "launchbox": "205280",
@@ -8052,16 +8115,6 @@
    "title": "Take the A-Train IV",
    "year": 1993
   },
-  "fmtowns:local-10a713f349": {
-   "contentIds": [
-    "sha256-cd-v1:32ace7a6be7da42371f0c5cf32fc95bc208ef9d7ea4ea9f739587a3ee641747b"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Life & Death II (1992)(Ving)(Jp).zip"
-   ],
-   "title": "Life & Death II",
-   "year": 1992
-  },
   "fmtowns:local-13ad427966": {
    "contentIds": [
     "sha256-cd-v1:14f7a923d87627e1c3a6d50f28b543291f7daa5babc0509c1e89e3d2ee2abd52",
@@ -8170,16 +8223,6 @@
     "fmtowns-cd:4D Sports Boxing (1991)(Distinctive Software)(Jp-En).zip"
    ],
    "title": "4D Sports Boxing",
-   "year": 1991
-  },
-  "fmtowns:local-449c95e008": {
-   "contentIds": [
-    "sha256-cd-v1:1c2f9ea75f18761ffa87edb8ad219b9a86e53d04554ccbbf9681e05903afd778"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Eye Of The Beholder II (1991)(SSI)(Jp).zip"
-   ],
-   "title": "Eye Of The Beholder II",
    "year": 1991
   },
   "fmtowns:local-49fbb614d7": {
@@ -8460,16 +8503,6 @@
    "title": "Heart de Ron",
    "year": 1995
   },
-  "fmtowns:local-ab24f07b27": {
-   "contentIds": [
-    "sha256-cd-v1:b828d67f8fbdd00020941ade711a01b0c715ba772ce59da55fda549476b47769"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Alshark (1991)(Right Stuff Corp)(Jp)[+UserDisk].zip"
-   ],
-   "title": "Alshark",
-   "year": 1991
-  },
   "fmtowns:local-b12464f0cc": {
    "contentIds": [
     "sha256-cd-v1:36629579ae02a2a0c1dde80b80d073207d72948cba254849ae5791cc02622c19"
@@ -8681,6 +8714,10 @@
    "year": 1995
   },
   "fmtowns:moby-121170": {
+   "artwork": {
+    "boxArt": "art/catalog/moby/121170/box-345b6a87d652.webp",
+    "boxArtUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/121170/box-345b6a87d652.webp"
+   },
    "description": "A limited collector's edition of Rocket Ranger with physical extras.",
    "mobygames": 121170,
    "title": "Rocket Ranger (Extended Collector's Edition)",
@@ -8701,12 +8738,20 @@
   },
   "fmtowns:moby-165943": {
    "adult": true,
+   "artwork": {
+    "preview": "art/catalog/moby/165943/screenshot-f91ed6f814af.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/165943/screenshot-f91ed6f814af.webp"
+   },
    "description": "A compilation of three games: Crystal Rinal Otanoshimi Disk, Cybernoid Alpha and Exterlien.",
    "mobygames": 165943,
    "title": "CD-ROM Bishōjo Collection: Yū Disk Special",
    "year": 1996
   },
   "fmtowns:moby-1727": {
+   "artwork": {
+    "preview": "art/catalog/moby/1727/screenshot-153899c0058a.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/1727/screenshot-153899c0058a.webp"
+   },
    "description": "Bullfrog's god game sequel: as an untested deity, shape the land and lead your followers against Zeus's champions with divine powers.",
    "mobygames": 1727,
    "title": "Populous II: Trials of the Olympian Gods",
@@ -8719,12 +8764,20 @@
    "year": 1995
   },
   "fmtowns:moby-18254": {
+   "artwork": {
+    "preview": "art/catalog/moby/18254/screenshot-99f1165ce36c.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/18254/screenshot-99f1165ce36c.webp"
+   },
    "description": "Capcom's wrestling brawler: ten wrestlers with their own styles and special moves fight in singles and tag matches.",
    "mobygames": 18254,
    "title": "Saturday Night Slam Masters",
    "year": 1993
   },
   "fmtowns:moby-183712": {
+   "artwork": {
+    "preview": "art/catalog/moby/183712/screenshot-d187b4553ef9.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/183712/screenshot-d187b4553ef9.webp"
+   },
    "description": "A smaller edition of Steepia with its card and picture puzzles but without the pendulum puzzles.",
    "mobygames": 183712,
    "title": "Steepia Lite",
@@ -8737,6 +8790,10 @@
    "year": 1995
   },
   "fmtowns:moby-21669": {
+   "artwork": {
+    "preview": "art/catalog/moby/21669/screenshot-8ae6c3943572.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/21669/screenshot-8ae6c3943572.webp"
+   },
    "description": "A-Train bundled with its construction set for building custom maps.",
    "mobygames": 21669,
    "title": "A-Train + Construction Set",
@@ -8749,18 +8806,34 @@
    "year": 1996
   },
   "fmtowns:moby-329": {
+   "artwork": {
+    "boxArt": "art/catalog/moby/329/box-d7e9c5692eef.webp",
+    "boxArtUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/329/box-d7e9c5692eef.webp",
+    "preview": "art/catalog/moby/329/screenshot-820ff13f23d2.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/329/screenshot-820ff13f23d2.webp"
+   },
    "description": "A 3D driving game built around stunt tracks with loops, jumps and corkscrews, plus a track editor and replays.",
    "mobygames": 329,
    "title": "Stunts",
    "year": 1993
   },
   "fmtowns:moby-4028": {
+   "artwork": {
+    "boxArt": "art/catalog/moby/4028/box-89fd131b96d6.webp",
+    "boxArtUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/4028/box-89fd131b96d6.webp",
+    "preview": "art/catalog/moby/4028/screenshot-1eebe82a6a20.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/4028/screenshot-1eebe82a6a20.webp"
+   },
    "description": "The complete Wing Commander II saga on one CD: the main campaign and both Special Operations.",
    "mobygames": 4028,
    "title": "Wing Commander II: Deluxe Edition",
    "year": 1995
   },
   "fmtowns:moby-42089": {
+   "artwork": {
+    "preview": "art/catalog/moby/42089/screenshot-46ebdbb314ae.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/42089/screenshot-46ebdbb314ae.webp"
+   },
    "description": "A virtual pet: befriend Fin Fin, a half-dolphin, half-bird creature on the planet Teo, who responds to your voice.",
    "mobygames": 42089,
    "title": "Fin Fin: On Teo, the Magic Planet",
@@ -8862,6 +8935,10 @@
    "year": 1994
   },
   "fmtowns:moby-54849": {
+   "artwork": {
+    "preview": "art/catalog/moby/54849/screenshot-9e696a8e8075.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/54849/screenshot-9e696a8e8075.webp"
+   },
    "description": "A vertical fantasy shooter: four heroes fly against the goblin empire of King Gobligan.",
    "mobygames": 54849,
    "title": "Sorcer Striker",
@@ -8903,12 +8980,20 @@
    "year": 1993
   },
   "fmtowns:moby-7009": {
+   "artwork": {
+    "preview": "art/catalog/moby/7009/screenshot-29b87c9fccaa.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/7009/screenshot-29b87c9fccaa.webp"
+   },
    "description": "Sega's jet combat arcade sequel: fly an F-14 through waves of enemy fighters, now with throttle control and extra stages.",
    "mobygames": 7009,
    "title": "After Burner II",
    "year": 1989
   },
   "fmtowns:moby-71396": {
+   "artwork": {
+    "preview": "art/catalog/moby/71396/screenshot-d14b9e458d92.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/71396/screenshot-d14b9e458d92.webp"
+   },
    "description": "The first course add-on for Harukanaru Augusta: Eight Lakes Golf Club.",
    "mobygames": 71396,
    "title": "New 3D Golf Simulation: Eight Lakes G.C.",
@@ -8927,6 +9012,10 @@
    "year": 1994
   },
   "fmtowns:moby-81924": {
+   "artwork": {
+    "preview": "art/catalog/moby/81924/screenshot-e45c67dc5e68.webp",
+    "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/81924/screenshot-e45c67dc5e68.webp"
+   },
    "description": "A compilation of Solitaire Royale and Puppy Love.",
    "mobygames": 81924,
    "title": "PI's Solitaire Royale / Tom Snyder's Puppy Love",
