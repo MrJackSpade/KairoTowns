@@ -33,5 +33,4 @@ MEDIA = content_ids.Media(kind, content_ids.same_file, LIMITS.__getitem__, 2, se
                           candidates=CD_DATA, superseded_by=SUPERSEDED_BY)
 
 MOBYGAMES = "fmtowns"
-# No local media scanned yet.
-SCANS = {}
+SCANS = {"fmtowns-cd": (".downloads/scan/fmtowns-cd.json", ("fmtowns",))}

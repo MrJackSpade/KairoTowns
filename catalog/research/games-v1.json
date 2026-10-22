@@ -2,21 +2,33 @@
  "games": {
   "fmtowns:124830": {
    "boxArtUrl": "https://images.launchbox-app.com/6c4efc11-46a7-45b3-8226-0933dc6ba2c3.jpg",
+   "contentIds": [
+    "sha256-cd-v1:9216f5e0cf63e4aa0dabcf9d2db37a7c19fe449a1d5f9f2a4c4f852f95de23a1"
+   ],
    "description": "A tennis game with 2D players on a 3D court, followed by a camera that pans and zooms with the rallies, through a season of tournaments.",
    "developer": "Infogrames Europe",
    "launchbox": "124830",
    "mobygames": 4961,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/0ad0a692-afe5-4f0f-9e3c-1c3b57c4e3ac.jpg",
+   "sourceGroups": [
+    "fmtowns-cd:Advantage Tennis (1992)(Fujitsu)(Jp-En).zip"
+   ],
    "title": "Advantage Tennis"
   },
   "fmtowns:124831": {
    "boxArtUrl": "https://images.launchbox-app.com/8c47fbbe-8f87-4b5a-bf8c-a71188f07472.jpg",
+   "contentIds": [
+    "sha256-cd-v1:fb33c45ccad2ea6ff3368595be6d0cffd40b8dd3094813c175393be155db292c"
+   ],
    "description": "Sega's jet combat arcade game: fly an F-14 through waves of enemy fighters, locking on with missiles and rolling to dodge fire.",
    "developer": "CSK Research Institute",
    "launchbox": "124831",
    "publisher": "CSK Research Institute",
    "screenshotUrl": "https://images.launchbox-app.com/756c513a-badd-43cb-8505-248909f4f33f.png",
+   "sourceGroups": [
+    "fmtowns-cd:Afterburner (1987)(Sega)(Jp-En).zip"
+   ],
    "title": "After Burner"
   },
   "fmtowns:124832": {
@@ -31,11 +43,17 @@
   },
   "fmtowns:124833": {
    "boxArtUrl": "https://images.launchbox-app.com/42318768-2ae9-4973-a46e-890cececcaff.jpg",
+   "contentIds": [
+    "sha256-cd-v1:6bfe5881c295064fceea5e2b00d67bf869c4962dbdf9d41bcee08da16a403969"
+   ],
    "description": "The first 3D survival horror game: explore the haunted Derceto mansion as investigator Edward Carnby or Emily Hartwood, solving puzzles and fighting monsters.",
    "developer": "Infogrames Europe",
    "launchbox": "124833",
    "mobygames": 325,
    "publisher": "Arrow Micro-Techs",
+   "sourceGroups": [
+    "fmtowns-cd:Alone In The Dark (19xx)(Infogrames)(Jp).zip"
+   ],
    "title": "Alone in the Dark"
   },
   "fmtowns:124834": {
@@ -52,12 +70,19 @@
   "fmtowns:124835": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/5a79dd86-a2e7-425e-bf62-6989c7bfd8cb.jpg",
+   "contentIds": [
+    "sha256-cd-v1:7d3c103fd4a371976d08fe56191e8ede28c2418ec5fad755e3eb507bc0b78f56",
+    "sha256-fd-v1:8e96f9c9398667e6403f58f54791e97eb0d3947017a4f8b616512a3c508e5a7f"
+   ],
    "description": "An Alice Soft adventure in which a knight who failed to save his princess from a cult seeks to undo her sacrifice.",
    "developer": "Alice Soft",
    "launchbox": "124835",
    "mobygames": 18742,
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/816669f3-6215-4a80-bfa0-3e1a1acc3675.png",
+   "sourceGroups": [
+    "fmtowns-cd:Ambivalenz (1994)(Alice Soft)(Jp)[+BootDisk].zip"
+   ],
    "title": "AmbivalenZ: Niritsu Haihan",
    "year": 1994
   },
@@ -94,12 +119,18 @@
   },
   "fmtowns:124910": {
    "boxArtUrl": "https://images.launchbox-app.com/1acaf9e5-5950-450d-a9fb-f12a67244347.jpg",
+   "contentIds": [
+    "sha256-cd-v1:30574a4bd5f30a67ccb4c29ce9633a92dbf43349c26260b551324d10a8ecfe9f"
+   ],
    "description": "Namco's horror brawler: Rick, possessed by a demonic mask, fights his way through a monster-filled mansion to rescue his girlfriend Jennifer.",
    "developer": "Ving",
    "launchbox": "124910",
    "mobygames": 16377,
    "publisher": "Namco",
    "screenshotUrl": "https://images.launchbox-app.com/64edab5d-0206-46b3-9e3c-a4b58f52f3aa.jpg",
+   "sourceGroups": [
+    "fmtowns-cd:Splatterhouse (1992)(Ving)(Jp-En).zip"
+   ],
    "title": "Splatterhouse"
   },
   "fmtowns:125228": {
@@ -107,12 +138,18 @@
     "Wizardry VI: Bane of the Cosmic Forge"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/283e2749-84c5-4c0a-829f-dfda4b836ef5.jpg",
+   "contentIds": [
+    "sha256-cd-v1:da2a1bc722f7a91f548cfbee5366f004d5052a98d7e976d9dbd8290fa45a4ab4"
+   ],
    "description": "The sixth Wizardry: a party of adventurers explores a castle and its grounds in search of the Cosmic Forge, a pen whose writing becomes reality.",
    "developer": "Sir-Tech Software",
    "launchbox": "125228",
    "mobygames": 724,
    "publisher": "ASCII",
    "screenshotUrl": "https://images.launchbox-app.com/76198cd9-096f-4db6-9a5c-3e16f8d3ccf8.png",
+   "sourceGroups": [
+    "fmtowns-cd:Wizardry VI - Bane of the Cosmic Forge (1990)(Sir-Tech Software)(Jp).zip"
+   ],
    "title": "Wizardry: Bane of the Cosmic Forge"
   },
   "fmtowns:125276": {
@@ -127,32 +164,50 @@
   },
   "fmtowns:125630": {
    "boxArtUrl": "https://images.launchbox-app.com/f486ac08-1a10-481d-8f26-ca7e4ef9aa20.jpg",
+   "contentIds": [
+    "sha256-cd-v1:c9da7a76535dcaa8b94f0d70e7ab0fe7f5f3a68f59b5e4349ae090eefafd2646"
+   ],
    "description": "Bub and Bob, turned into bubble-blowing dragons, trap monsters in bubbles and pop them across a hundred single-screen cave levels, alone or with a second player.",
    "developer": "Taito",
    "launchbox": "125630",
    "mobygames": 787,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/r2_45a12b6d-f6b9-4121-b903-4c7f306cbc0e.png",
+   "sourceGroups": [
+    "fmtowns-cd:Bubble Bobble (1993)(Ving)(Jp-En).zip"
+   ],
    "title": "Bubble Bobble"
   },
   "fmtowns:134570": {
    "boxArtUrl": "https://images.launchbox-app.com/6ab6855a-beb9-4ea9-b3eb-5442ff43eb8d.jpg",
+   "contentIds": [
+    "sha256-cd-v1:a76f6d8bd0a23296501623e1c1776b405ba84e7496d836b8ec967dfae7125330"
+   ],
    "description": "Lucasfilm's comic adventure: tabloid reporter Zak McKracken and three companions travel the world and to Mars to stop aliens who are making humanity dumber.",
    "developer": "Lucasfilm Games",
    "launchbox": "134570",
    "mobygames": 305,
    "publisher": "Fujitsu",
    "screenshotUrl": "https://images.launchbox-app.com/d093de2a-9ef7-4198-a283-651fa70852e4.png",
+   "sourceGroups": [
+    "fmtowns-cd:Zak McKracken and The Alien Mindbenders (1990)(Lucasarts)(Jp-En).zip"
+   ],
    "title": "Zak McKracken and the Alien Mindbenders"
   },
   "fmtowns:138549": {
    "boxArtUrl": "https://images.launchbox-app.com/c1f511d2-cc78-4242-8479-ef424b78c47f.jpg",
+   "contentIds": [
+    "sha256-cd-v1:801478d929f13a8babc540efa0df8952ff1f4f356e0af57be7710d0160e6a93b"
+   ],
    "description": "LucasArts' adventure: Indiana Jones races the Nazis to find the lost city of Atlantis, with team, wits and fists paths through the story.",
    "developer": "LucasArts Entertainment",
    "launchbox": "138549",
    "mobygames": 316,
    "publisher": "Victor Entertainment",
    "screenshotUrl": "https://images.launchbox-app.com/eec2b3dd-3753-4a91-8080-5e939b67ac2f.png",
+   "sourceGroups": [
+    "fmtowns-cd:Indiana Jones and the Fate of Atlantis (1993)(LucasFilm)(Jp-En).zip"
+   ],
    "title": "Indiana Jones and the Fate of Atlantis"
   },
   "fmtowns:144465": {
@@ -160,12 +215,18 @@
     "Taito Chase H.Q."
    ],
    "boxArtUrl": "https://images.launchbox-app.com/715ce61b-eccc-4d8c-a3c9-cf01dc066075.jpg",
+   "contentIds": [
+    "sha256-cd-v1:938ab80d03fbe730996a0d4f55784df17ba7dd3c112f92addc89baf362fe4ddb"
+   ],
    "description": "Taito's pursuit racing game: chase fleeing criminals down the highway and ram their cars until they stop, using turbo boosts to catch up.",
    "developer": "Taito",
    "launchbox": "144465",
    "mobygames": 9832,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/835a2b3b-fb7e-4e99-b96d-c1912840ffe5.png",
+   "sourceGroups": [
+    "fmtowns-cd:Chase HQ (1991)(Ving)(Jp-En).zip"
+   ],
    "title": "Chase H.Q."
   },
   "fmtowns:144466": {
@@ -173,12 +234,18 @@
     "Kyuukyoku Tiger"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/00bf11be-dcd4-4dc2-a920-aa6d71212498.jpg",
+   "contentIds": [
+    "sha256-cd-v1:66bbf8d901844ac015f99faff2dda2ce8d0a349132e11a9ad482b811a2c16d6d"
+   ],
    "description": "Toaplan's vertical helicopter shooter: fly the Twin Cobra over enemy territory, destroying tanks, ships and gun emplacements with upgradable weapons and bombs.",
    "developer": "ToaPlan",
    "launchbox": "144466",
    "mobygames": 13725,
    "publisher": "Toaplan",
    "screenshotUrl": "https://images.launchbox-app.com/28f4fd0b-d5e4-4a37-9503-d0caf54feb64.png",
+   "sourceGroups": [
+    "fmtowns-cd:Kyukyoku Tiger (aka Twin Cobra) (1994)(Ving)(Jp-En)[mp3 source][+UserDisk].zip"
+   ],
    "title": "Twin Cobra"
   },
   "fmtowns:145079": {
@@ -186,10 +253,16 @@
     "슈퍼 스트리트 화이터 2"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/1ab03652-76b6-4bb0-bd97-b88210d19f93.png",
+   "contentIds": [
+    "sha256-cd-v1:faf01535e65b8fb04b64212ab7d395feaa920b85354f99fa75cdba37a7dd701c"
+   ],
    "description": "The fourth Street Fighter II, adding Cammy, Fei Long, Dee Jay and T. Hawk to the roster, with refreshed graphics and sound.",
    "launchbox": "145079",
    "mobygames": 10119,
    "screenshotUrl": "https://images.launchbox-app.com/9b040af9-a572-4694-81f7-e81cb7fe902d.png",
+   "sourceGroups": [
+    "fmtowns-cd:Super Street Fighter II (1993)(Capcom)(Jp-En).zip"
+   ],
    "title": "Super Street Fighter II: The New Challengers",
    "year": 1994
   },
@@ -198,44 +271,68 @@
     "ウルティマVI 偽りの予言者"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/d3f2b4f0-a584-4ba2-9818-66fc53119619.jpg",
+   "contentIds": [
+    "sha256-cd-v1:dc1fe9453edd91c39e5d526016ee8b8915d5913df52f06702ab6494c9479e105"
+   ],
    "description": "The Avatar returns to Britannia, now at war with the gargoyles, and uncovers the truth behind the conflict in this open-world role-playing game.",
    "developer": "Origin Systems",
    "launchbox": "145080",
    "mobygames": 104,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/7ad61c21-7b71-4e19-9091-a81fa3e3250d.png",
+   "sourceGroups": [
+    "fmtowns-cd:Ultima VI - The False Prophet (1990)(Origins)(Jp-En)[+UserDisk].zip"
+   ],
    "title": "Ultima VI: The False Prophet"
   },
   "fmtowns:145236": {
    "boxArtUrl": "https://images.launchbox-app.com/32bc2f71-b223-4ea1-87e8-fca455ad756d.jpg",
+   "contentIds": [
+    "sha256-cd-v1:cf3d1dbb4dce1aed33fd123b8f7d0c0ab2027ef581e128afa3c4bc7e2748591a"
+   ],
    "description": "A turn-based mecha tactics game set in the 26th century: an elite all-woman squad of power suits fights for a colony's independence.",
    "developer": "Kogado Studio",
    "launchbox": "145236",
    "mobygames": 58587,
    "publisher": "Kogado Studio",
    "screenshotUrl": "https://images.launchbox-app.com/8a55a21a-dc53-4775-bdcb-00c94e368b81.png",
+   "sourceGroups": [
+    "fmtowns-cd:Power Dolls2 (1995)(Kogado)(Jp).zip"
+   ],
    "title": "Power Dolls 2",
    "year": 1994
   },
   "fmtowns:145237": {
    "boxArtUrl": "https://images.launchbox-app.com/a26017c5-912b-463c-8b98-38f94380ece6.jpg",
+   "contentIds": [
+    "sha256-cd-v1:6159d77cc7c3da170aca5de4ff752eb464d67474eeae11716f6d6cd30464d44c"
+   ],
    "description": "FTL's real-time dungeon role-playing sequel: four champions explore the land around Skullkeep, with outdoor areas, weather and magic.",
    "developer": "Victor Entertainment",
    "launchbox": "145237",
    "mobygames": 914,
    "publisher": "FTL Games",
    "screenshotUrl": "https://images.launchbox-app.com/38f70bd6-0cb6-4fee-b84a-40a438ec5851.png",
+   "sourceGroups": [
+    "fmtowns-cd:Dungeon Master II Skull Keep (1993)(Victor)(Jp).zip"
+   ],
    "title": "Dungeon Master II: Skullkeep",
    "year": 1994
   },
   "fmtowns:145238": {
    "boxArtUrl": "https://images.launchbox-app.com/351d7798-470b-411f-8dc0-9b9fd45be883.jpg",
+   "contentIds": [
+    "sha256-cd-v1:2bdf6ad5269a85b546cb2eb6f611daa2d0ce141b0647f910697ea56f6d0bb343"
+   ],
    "description": "Lucasfilm's adventure: Indiana Jones and his father search for the Holy Grail before the Nazis can claim it.",
    "developer": "Lucasfilm Games",
    "launchbox": "145238",
    "mobygames": 534,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/e74cf2c1-f30f-4258-b01e-f7e09a91b673.png",
+   "sourceGroups": [
+    "fmtowns-cd:Indiana Jones and the Last Crusade (1989)(LucasFilm)(Jp-En).zip"
+   ],
    "title": "Indiana Jones and the Last Crusade: The Graphic Adventure "
   },
   "fmtowns:145240": {
@@ -261,12 +358,18 @@
   },
   "fmtowns:146765": {
    "boxArtUrl": "https://images.launchbox-app.com/6f9cc66a-d1fa-4949-b285-7b568553f132.jpg",
+   "contentIds": [
+    "sha256-cd-v1:fe4b4c9d97395d8e68fecec26c2cd46106869675f2ac22064793bbe70f0180fd"
+   ],
    "description": "A real-time fantasy role-playing game: a party of four crosses an island ruled by dragon lords to stop a prophecy of dragon rule.",
    "developer": "Infogrames",
    "launchbox": "146765",
    "mobygames": 1969,
    "publisher": "Fujitsu",
    "screenshotUrl": "https://images.launchbox-app.com/4e003abc-175c-49b5-966a-97b52ff6ccdb.jpg",
+   "sourceGroups": [
+    "fmtowns-cd:Drakkhen (1990)(Fujitsu)(Jp-En).zip"
+   ],
    "title": "Drakkhen"
   },
   "fmtowns:146766": {
@@ -281,22 +384,34 @@
   },
   "fmtowns:146767": {
    "boxArtUrl": "https://images.launchbox-app.com/2adbaa0f-4ee7-4b20-bf2a-3db9748e7c94.jpg",
+   "contentIds": [
+    "sha256-cd-v1:b9014cd522eb33b8edfa3821c9d338c784e6c9cb7507a6ce1adf0eff180acf9d"
+   ],
    "description": "Lucasfilm's musical adventure: Bobbin Threadbare of the Weavers' Guild casts spells by playing four-note drafts on his distaff.",
    "developer": "LucasArts",
    "launchbox": "146767",
    "mobygames": 176,
    "publisher": "Fujitsu",
    "screenshotUrl": "https://images.launchbox-app.com/d584e112-610f-48dd-a2c8-73eeb3a7b811.png",
+   "sourceGroups": [
+    "fmtowns-cd:Loom (1991)(LucasFilm)(Jp-En).zip"
+   ],
    "title": "Loom"
   },
   "fmtowns:146768": {
    "boxArtUrl": "https://images.launchbox-app.com/f5e2aa4a-4ac9-4869-b2d5-f533cbd778a3.jpg",
+   "contentIds": [
+    "sha256-cd-v1:bf8689256d486dd4505840197fbc6aa3870a04fbcbd2d1661ac89fa368644637"
+   ],
    "description": "Steer a marble down isometric obstacle courses against the clock, avoiding drops, hazards and creatures that try to knock it off the track.",
    "developer": "Home Data",
    "launchbox": "146768",
    "mobygames": 466,
    "publisher": "Home Data",
    "screenshotUrl": "https://images.launchbox-app.com/ce3a3a8f-2f70-43c5-8ff0-076c18d8a7e8.png",
+   "sourceGroups": [
+    "fmtowns-cd:Marble Madness (1991)(Homedata)(Jp-En).zip"
+   ],
    "title": "Marble Madness"
   },
   "fmtowns:156643": {
@@ -304,36 +419,60 @@
     "Muscle Bomber: The Body Explosion"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/f45d109b-83f4-4a06-8c06-90718abfec96.jpg",
+   "contentIds": [
+    "sha256-cd-v1:c52670f6005c6183fc90e286ba6ee49181f80c87b127880524615843ca0d5497"
+   ],
    "description": "Capcom's wrestling game: muscular grapplers battle in the ring with throws, slams and special moves.",
    "developer": "Capcom",
    "launchbox": "156643",
    "publisher": "Capcom",
+   "sourceGroups": [
+    "fmtowns-cd:Muscle Bomber (1994)(CapCom).zip"
+   ],
    "title": "Muscle Bomber"
   },
   "fmtowns:156644": {
    "boxArtUrl": "https://images.launchbox-app.com/86a44e98-1d27-4034-ab71-529cc57a54b3.jpg",
+   "contentIds": [
+    "sha256-cd-v1:e0ab365a0fb561d7d1a82624557b17477b67938dd3e35ef3b09b25cc46098370"
+   ],
    "description": "Taito's platformer: Tiki the kiwi escapes captivity and rescues his friends, riding balloons and other vehicles through New Zealand-themed levels.",
    "launchbox": "156644",
    "mobygames": 9715,
    "publisher": "Ving",
+   "sourceGroups": [
+    "fmtowns-cd:New Zealand Story, The (1989)(Ving)(Jp-En).zip"
+   ],
    "title": "The NewZealand Story"
   },
   "fmtowns:156646": {
    "boxArtUrl": "https://images.launchbox-app.com/a8a8ccf8-1005-42fb-b991-01172ac89fd0.jpg",
+   "contentIds": [
+    "sha256-cd-v1:86c888414f8dfe56ac6aacaa70fd7fc60c9ebcf772d907bac6ff7632d1739eab"
+   ],
    "description": "Taito's gun game: as commando Roy Adams, shoot through enemy territory to rescue hostages, managing limited ammunition and grenades.",
    "developer": "Taito",
    "launchbox": "156646",
    "mobygames": 3475,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/af703964-5f88-4f4b-bfb1-f2b8dd63cec6.jpg",
+   "sourceGroups": [
+    "fmtowns-cd:Operation Wolf (1990)(Ving)(Jp-En)[mp3 source].zip"
+   ],
    "title": "Operation Wolf"
   },
   "fmtowns:156648": {
    "boxArtUrl": "https://images.launchbox-app.com/d8edd0bf-a669-4969-88a5-dc94ce50ee10.jpg",
+   "contentIds": [
+    "sha256-cd-v1:549383e4129875424731584b2ce7a5b1538f6ab901a9ce291b79ba9c5e7e9c25"
+   ],
    "description": "Bullfrog's real-time war game: a deposed leader conquers a new land settlement by settlement, commanding captains and armies on a 3D map.",
    "launchbox": "156648",
    "mobygames": 1993,
    "publisher": "Imagineer",
+   "sourceGroups": [
+    "fmtowns-cd:Power Monger (1992)(Imagineer)(Jp-En)[+BootDisk].zip"
+   ],
    "title": "PowerMonger"
   },
   "fmtowns:156651": {
@@ -341,10 +480,16 @@
     "Novastorm"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/25322c88-0036-4dea-83b3-2702c29fcfff.jpg",
+   "contentIds": [
+    "sha256-cd-v1:e38866f30fa86406df8eb690f6311a0e13d0dd356600296b1bd8772ac3c40cde"
+   ],
    "description": "A rail shooter over full-motion video backgrounds, set as humanity searches for a new home among the stars.",
    "launchbox": "156651",
    "mobygames": 271,
    "publisher": "Fujitsu",
+   "sourceGroups": [
+    "fmtowns-cd:Scavenger 4 (1994)(Psygnosis)(Jp-En).zip"
+   ],
    "title": "Scavenger 4"
   },
   "fmtowns:156655": {
@@ -362,20 +507,32 @@
   },
   "fmtowns:156657": {
    "boxArtUrl": "https://images.launchbox-app.com/056d228b-ff09-4c93-b02c-a6ccdd4c96fa.jpg",
+   "contentIds": [
+    "sha256-cd-v1:a50dcceddc4755c5fcdc4064e5e81cfe60e849a4f051f2bd13a7edff546e0f86"
+   ],
    "description": "An isometric shooter in the tradition of Zaxxon, flying a ship through angled stages of mechanical enemies.",
    "developer": "Sammy",
    "launchbox": "156657",
    "mobygames": 16179,
    "publisher": "Ving",
+   "sourceGroups": [
+    "fmtowns-cd:Viewpoint (1993)(Ving)(Jp-En)[mp3 source].zip"
+   ],
    "title": "Viewpoint"
   },
   "fmtowns:157253": {
    "boxArtUrl": "https://images.launchbox-app.com/94d70178-bbf1-40c4-989b-4f70f456ba27.jpg",
+   "contentIds": [
+    "sha256-cd-v1:60a6a69b2e97f16e162f2bc8c2394344ec8ef82bcb7fdfe0a5a6d88cd3054952"
+   ],
    "description": "The prince escapes the Grand Vizier Jaffar's dungeons and palace within an hour to save the princess, with fluid animation, deadly traps and swordfights.",
    "developer": "Riverhill Soft",
    "launchbox": "157253",
    "mobygames": 196,
    "publisher": "Riverhill Soft",
+   "sourceGroups": [
+    "fmtowns-cd:Prince of Persia (1992)(Riverhill Soft)(Jp).zip"
+   ],
    "title": "Prince of Persia"
   },
   "fmtowns:157257": {
@@ -383,30 +540,48 @@
     "Raiden Densetsu: Raiden Trad"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/9da15586-31ab-4185-9d91-2290f5ad0e47.jpg",
+   "contentIds": [
+    "sha256-cd-v1:438d30f4c0a13fb09bfdc2d9ba18495e2347da1cae8a01301fb300bdc8e07435"
+   ],
    "description": "Seibu Kaihatsu's vertical shooter: pilot the Raiden fighter against an alien invasion, powering up lasers, vulcans, missiles and bombs.",
    "developer": "Success",
    "launchbox": "157257",
    "mobygames": 1317,
    "publisher": "KID",
+   "sourceGroups": [
+    "fmtowns-cd:Raiden Densetsu (1991)(Kid Corp)(Jp-En).zip"
+   ],
    "title": "Raiden Densetsu"
   },
   "fmtowns:157258": {
    "boxArtUrl": "https://images.launchbox-app.com/fc7e9f22-9811-42ec-a2f5-afd30b108ffd.jpg",
+   "contentIds": [
+    "sha256-cd-v1:342904e2babe2990eeb46a7bc6817ebe79096636d1dbcc5d00d646015b6ef2b1"
+   ],
    "description": "SNK's weapon fighting game set in feudal Japan: samurai, ninja and swordsmen duel with blades, with a rage meter that boosts damage.",
    "launchbox": "157258",
    "mobygames": 7255,
    "publisher": "Japan Home Video",
    "screenshotUrl": "https://images.launchbox-app.com/r2_d49d9950-5980-45a3-8484-7dfb2a9e9cfa.png",
+   "sourceGroups": [
+    "fmtowns-cd:Samurai Spirits (1995)(Ving)(Jp-En)[mp3 source][+BootDisk].zip"
+   ],
    "title": "Samurai Spirits"
   },
   "fmtowns:157260": {
    "boxArtUrl": "https://images.launchbox-app.com/4a250aba-5c95-44cc-ae95-a08dbbf0e48b.jpg",
+   "contentIds": [
+    "sha256-cd-v1:f88d7d3fd27e2dde9bec9e8697f9e72d7d1f15f436b189d210867f1c4d53a526"
+   ],
    "description": "LucasArts' pirate comedy: Guybrush Threepwood sets out to become a pirate on Melee Island and faces the ghost pirate LeChuck.",
    "developer": "Lucasfilm Games",
    "launchbox": "157260",
    "mobygames": 141074,
    "publisher": "Victor Musical Industries",
    "screenshotUrl": "https://images.launchbox-app.com/8335c83e-91e0-4403-b690-8b73fae03eab.png",
+   "sourceGroups": [
+    "fmtowns-cd:Secret of Monkey Island, The (1992)(LucasFilm)(Jp-En)[+BootDisk].zip"
+   ],
    "title": "The Secret of Monkey Island"
   },
   "fmtowns:157262": {
@@ -414,71 +589,113 @@
     "Shadow of the Beast: Mashou no Okite"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/d8e30757-4418-4c9d-8dd2-56fb591aad1a.jpg",
+   "contentIds": [
+    "sha256-cd-v1:d8bf0b333dc8744fb93673a769a512e1ccbc91d2492a2e4f310d1c14769b7b2f"
+   ],
    "description": "Psygnosis's side-scrolling action game: Aarbron, turned into a beast by the Beast Lord's priests, fights his way across a hostile land for revenge.",
    "developer": "The Creative Assembly",
    "launchbox": "157262",
    "mobygames": 7461,
    "publisher": "Victor Musical Industries",
+   "sourceGroups": [
+    "fmtowns-cd:Shadow of the Beast (1994)(Psygnosis)(Jp-En).zip"
+   ],
    "title": "Shadow of the Beast"
   },
   "fmtowns:157263": {
    "boxArtUrl": "https://images.launchbox-app.com/cedba8fe-81b5-4cb8-aa3f-2d8590a92b07.jpg",
+   "contentIds": [
+    "sha256-cd-v1:0e465fe5769bfcf8c300ba43e8f1679d5bdbbe9ba0cb7c42fa3ce42cdbbef539"
+   ],
    "description": "Sega's sequel to Out Run: race a turbocharged sports car across the United States against a rival, upgrading between stages.",
    "developer": "CSK Research Institute",
    "launchbox": "157263",
    "mobygames": 794,
    "publisher": "CSK Research Institute",
+   "sourceGroups": [
+    "fmtowns-cd:Turbo Outrun (1988)(Sega)(Jp).zip"
+   ],
    "title": "Turbo OutRun"
   },
   "fmtowns:157264": {
    "boxArtUrl": "https://images.launchbox-app.com/1a07a511-db47-41bd-b7c6-0d8b4a25890a.jpg",
+   "contentIds": [
+    "sha256-cd-v1:42a7ce2aab190bacb4c404eb8ae8b2ed699b24efdc32e9ea70c1aa3db2bb3e96"
+   ],
    "description": "The Avatar returns to Britannia, where Lord British has vanished and the tyrant Blackthorn enforces twisted laws, in this party-based role-playing game of exploration and turn-based combat.",
    "developer": "Origin Systems",
    "launchbox": "157264",
    "mobygames": 808,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/5dfcb7b1-80a1-4ac9-bbb6-a6285e724fc7.png",
+   "sourceGroups": [
+    "fmtowns-cd:Ultima V - Warriors of Destiny (1988)(Origins)(Jp-En)[+UserDisk].zip"
+   ],
    "title": "Ultima V: Warriors of Destiny"
   },
   "fmtowns:157266": {
    "boxArtUrl": "https://images.launchbox-app.com/a89d2fa7-7896-4323-a6f0-e3794a28c682.jpg",
+   "contentIds": [
+    "sha256-cd-v1:61719f4a92731414848518e13c436808af0b002731ad4b10a57f5e376411ebd3"
+   ],
    "description": "Taito's area-claiming game: cut off parts of the playfield from the aliens roaming it, capturing at least most of each screen.",
    "developer": "Taito",
    "launchbox": "157266",
    "mobygames": 432,
    "publisher": "Ving",
+   "sourceGroups": [
+    "fmtowns-cd:Volfied (1991)(Ving)(Jp-En).zip"
+   ],
    "title": "Volfied",
    "year": 1991
   },
   "fmtowns:158197": {
    "boxArtUrl": "https://images.launchbox-app.com/11a3abe8-b2aa-43ec-8510-80f23b40974c.png",
+   "contentIds": [
+    "sha256-cd-v1:559b065abb9a98836e6bb9ea59f1796f37e889e5c6b384e302256ed77e31d21f"
+   ],
    "description": "LucasArts' pirate comedy sequel: Guybrush hunts for the treasure of Big Whoop while LeChuck returns for revenge.",
    "developer": "LucasArts Entertainment",
    "launchbox": "158197",
    "mobygames": 289,
    "publisher": "Victor Entertainment",
    "screenshotUrl": "https://images.launchbox-app.com/4ab8246c-6fcc-44cd-b68b-772281e5ad68.png",
+   "sourceGroups": [
+    "fmtowns-cd:Monkey Island 2 - LeChuck's Revenge (1991)(LucasFilm)(Jp-En).zip"
+   ],
    "title": "Monkey Island 2: LeChuck's Revenge"
   },
   "fmtowns:164122": {
    "boxArtUrl": "https://images.launchbox-app.com/11e89f3f-2ac5-48ff-a336-69fa2da988d2.jpg",
+   "contentIds": [
+    "sha256-cd-v1:7657a22ea32aec830cde690bf62da24e95631b9dc5687d5e979392c0d204cfec"
+   ],
    "description": "Sega's 3D space shooter: fly through planets and alien fortresses, firing lasers and lock-on missiles, with a CD soundtrack and new intro.",
    "developer": "CSK Research Institute",
    "launchbox": "164122",
    "mobygames": 23025,
    "publisher": "Sega",
    "screenshotUrl": "https://images.launchbox-app.com/cfbf9eac-c413-40bb-9b9e-422436af3d1d.png",
+   "sourceGroups": [
+    "fmtowns-cd:Galaxy Force II (1990)(CSK)(Jp-En).zip"
+   ],
    "title": "Galaxy Force II",
    "year": 1991
   },
   "fmtowns:164125": {
    "boxArtUrl": "https://images.launchbox-app.com/d06a76d6-e7f5-4fee-aa95-1211eb30fd6e.jpg",
+   "contentIds": [
+    "sha256-cd-v1:124b6c9c3a36a906cd7cf22db7573cc84e1efd856052177c742933d938cda30e"
+   ],
    "description": "Data West's horizontal shooter, with fast stages and large bosses.",
    "developer": "Data West",
    "launchbox": "164125",
    "mobygames": 52155,
    "publisher": "Data West",
    "screenshotUrl": "https://images.launchbox-app.com/80a618d6-f327-4925-bcea-3733c42d5a5d.png",
+   "sourceGroups": [
+    "fmtowns-cd:Rayxanber (1990)(Datawest)(Jp-En).zip"
+   ],
    "title": "Rayxanber"
   },
   "fmtowns:164702": {
@@ -507,12 +724,18 @@
   },
   "fmtowns:166885": {
    "boxArtUrl": "https://images.launchbox-app.com/fa945ecb-29cc-4cb6-97ad-ab5fdafdd0a8.jpg",
+   "contentIds": [
+    "sha256-cd-v1:63317d443de35abf2cc466ea5db33e01fbf5c2520c0eda14fa8580fa1a486d37"
+   ],
    "description": "A first-person role-playing game in real time: the Avatar descends into the Stygian Abyss to rescue a baron's kidnapped daughter.",
    "developer": "Blue Sky Productions",
    "launchbox": "166885",
    "mobygames": 690,
    "publisher": "Electronic Arts Victor",
    "screenshotUrl": "https://images.launchbox-app.com/d2f72aa8-b784-4d46-a03c-e6150f7c44de.png",
+   "sourceGroups": [
+    "fmtowns-cd:Ultima Underworld - The Stygian Abyss (1993)(Origins)(Jp)[+UserDisk].zip"
+   ],
    "title": "Ultima Underworld: The Stygian Abyss",
    "year": 1993
   },
@@ -533,11 +756,17 @@
     "Desire: Haitoku no Rasen"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/5c3c2660-eb73-4678-9dc9-8d69be475c13.jpg",
+   "contentIds": [
+    "sha256-cd-v1:85d056466f21d5daeca5477836d388a9f8b032a3a239856ee4984da2e977d1b2"
+   ],
    "description": "A mystery adventure on a remote island research institute with ties to the military, told from more than one point of view.",
    "launchbox": "177171",
    "mobygames": 5165,
    "publisher": "C's Ware",
    "screenshotUrl": "https://images.launchbox-app.com/70d0776c-02c2-4248-ac58-4923c28fb58c.png",
+   "sourceGroups": [
+    "fmtowns-cd:Desire (1994)(Cs Ware)(Jp).zip"
+   ],
    "title": "Desire"
   },
   "fmtowns:177879": {
@@ -554,12 +783,18 @@
   "fmtowns:178588": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/ca81cc33-ec6a-4a24-a28b-41a2b05b177d.jpg",
+   "contentIds": [
+    "sha256-cd-v1:a1362592c94ee03bd070062353b5fc91d4b177af45cf21d5f953229b29a1a162"
+   ],
    "description": "A raising game in which a young man at a talent agency trains girls to become pop idols.",
    "developer": "KSS",
    "launchbox": "178588",
    "mobygames": 45773,
    "publisher": "KSS",
    "screenshotUrl": "https://images.launchbox-app.com/134ce5e8-c0ac-44eb-a96e-a50bd608b274.png",
+   "sourceGroups": [
+    "fmtowns-cd:Idol Project (1995)(KSS)(Jp)[+SystemDisk].zip"
+   ],
    "title": "Idol Project"
   },
   "fmtowns:182654": {
@@ -575,12 +810,18 @@
   },
   "fmtowns:182656": {
    "boxArtUrl": "https://images.launchbox-app.com/ad3774b2-1f16-4dbc-bf67-a6b83a96e1fc.jpg",
+   "contentIds": [
+    "sha256-cd-v1:7b9e28ad1ee1fa0febeea0192a580edba27b84a7d9ba33d6c7ac925f964efd04"
+   ],
    "description": "A sci-fi action adventure in 2027: infiltrate an Arctic research base and pilot a fighter through full-motion video battles.",
    "developer": "Xatrix Entertainment",
    "launchbox": "182656",
    "mobygames": 810,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/ab175439-4147-4b05-ab20-d2df6ffc5498.png",
+   "sourceGroups": [
+    "fmtowns-cd:Cyberia(req.HD Install) (1995)(Fujitsu)(Jp).zip"
+   ],
    "title": "Cyberia"
   },
   "fmtowns:182658": {
@@ -589,12 +830,20 @@
     "The Secret of the Blue Water"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/7160e704-872a-427b-9699-d0ecb9df1c81.jpg",
+   "contentIds": [
+    "sha256-cd-v1:6b4cd7410acdd9586804c9d67d2860bdcdca58806ac004d70726efb4c5d74895",
+    "sha256-cd-v1:6b632d6b03fced7beed6387159ceac97826181dad26d79bea99579e0605c86b6",
+    "sha256-cd-v1:6f7a1bc3d71596cdb1bc679cc18038380f6d599d06c3f957855b065ae34088b7"
+   ],
    "description": "An adventure based on the anime Nadia: The Secret of Blue Water, itself loosely inspired by Jules Verne.",
    "developer": "Gainax",
    "launchbox": "182658",
    "mobygames": 47715,
    "publisher": "Gainax",
    "screenshotUrl": "https://images.launchbox-app.com/ef34c4ff-e948-4d77-82cb-40c92526fe38.png",
+   "sourceGroups": [
+    "fmtowns-cd:Secret of the Blue Water, The (1991)(Toho)(Jp).zip"
+   ],
    "title": "Fushigi no Umi no Nadia: The Secret of the Blue Water"
   },
   "fmtowns:182659": {
@@ -632,12 +881,18 @@
     "The 4th Unit 1+2 Towns: Linkage"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/07442a22-c5fc-4e23-913c-ca17fc74146a.jpg",
+   "contentIds": [
+    "sha256-cd-v1:16a7559447f36c69e6f1ecb49e3f4f0f12b4eeceda732f8c9e9dfcaad1df500e"
+   ],
    "description": "The first two 4th Unit adventures, following the bionic girl Blon-Win, released together.",
    "developer": "Data West",
    "launchbox": "183538",
    "mobygames": 58061,
    "publisher": "Data West",
    "screenshotUrl": "https://images.launchbox-app.com/1ae94baf-6d58-46e1-9dcf-fa8cfd5e1623.png",
+   "sourceGroups": [
+    "fmtowns-cd:4th Unit Act 1+2 Towns Linkage, The (1989)(Datawest)(Jp).zip"
+   ],
    "title": "The 4th Unit 1-2 Towns: Linkage"
   },
   "fmtowns:183539": {
@@ -725,12 +980,18 @@
     "3x3 Eyes: Sanjiyan Henjō"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/150985c1-ce46-40e1-8cd2-6f48cb4ee869.jpg",
+   "contentIds": [
+    "sha256-cd-v1:9852979b2b979bb0ddaae6041675335c9a266448d9071fa3facfba9044c979c1"
+   ],
    "description": "An adventure based on 3x3 Eyes: the immortal three-eyed girl Pai seeks a way to become human with the help of a young man named Yakumo.",
    "developer": "Nihon Create",
    "launchbox": "183926",
    "mobygames": 16352,
    "publisher": "Nihon Create",
    "screenshotUrl": "https://images.launchbox-app.com/32e3c4b5-5ca0-4261-acb1-40a74e87945c.png",
+   "sourceGroups": [
+    "fmtowns-cd:3x3 Eyes (1993)(Nihon Create)(Jp)[+UserDisk].zip"
+   ],
    "title": "3x3 Eyes: Sanjiyan Henjyo",
    "year": 1993
   },
@@ -761,32 +1022,50 @@
     "De.FaNa"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/abd13ea4-4ed8-4f97-8b58-c717c993d44c.jpg",
+   "contentIds": [
+    "sha256-cd-v1:a67a1b0ea5ff86d6768ad3f536ce516ea272a33908a7f13c7aa9723ecc1e1087"
+   ],
    "description": "A fantasy adventure about a spiky-haired boy enjoying a lazy day before trouble finds him.",
    "developer": "Himeya Soft",
    "launchbox": "184102",
    "mobygames": 43166,
    "publisher": "Himeya Soft",
    "screenshotUrl": "https://images.launchbox-app.com/ecdb77bc-2c0c-43b5-b7d8-8ea0d01f9fbd.png",
+   "sourceGroups": [
+    "fmtowns-cd:De.FaNa (1995)(Himeya Soft)(Jp).zip"
+   ],
    "title": "De. FaNa"
   },
   "fmtowns:184103": {
    "boxArtUrl": "https://images.launchbox-app.com/76bd26e6-b09f-4932-b5ba-9fdefbf110ac.jpg",
+   "contentIds": [
+    "sha256-cd-v1:fb4369dfb4c4d38ef3059fd14682055f07003e9932fe6dd37f220617833ef9d8"
+   ],
    "description": "A card-battle role-playing game based on the Dragon Half manga, starring Mink, a girl who is half human and half dragon.",
    "developer": "Micro Cabin",
    "launchbox": "184103",
    "mobygames": 44037,
    "publisher": "Micro Cabin",
    "screenshotUrl": "https://images.launchbox-app.com/0c7f9bea-5cf0-40fc-b4f1-2327ca0a5cb7.png",
+   "sourceGroups": [
+    "fmtowns-cd:Dragon Half (1994)(MicroCabin)(Jp).zip"
+   ],
    "title": "Dragon Half"
   },
   "fmtowns:184107": {
    "boxArtUrl": "https://images.launchbox-app.com/a4e51967-9834-41f8-8b11-5add7f7e016c.jpg",
+   "contentIds": [
+    "sha256-cd-v1:876758836c3f105ebc6709aeebaa72a26af30adbc381b188e1482753fdacb52d"
+   ],
    "description": "A side-scrolling mecha brawler: police and rogue combat robots called Slave Gears clash in a future city.",
    "developer": "Fill in Café",
    "launchbox": "184107",
    "mobygames": 57122,
    "publisher": "Family Soft",
    "screenshotUrl": "https://images.launchbox-app.com/9f84ad50-c859-40f6-ad9c-2c45d3ce4063.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mad Stalker (1994)(Family Soft)(Jp-En).zip"
+   ],
    "title": "Mad Stalker: Full Metal Force"
   },
   "fmtowns:184109": {
@@ -809,12 +1088,18 @@
     "Silent Moebius: Case: Titanic"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/8c2ba67a-4477-4de8-b31a-3ec719285961.jpg",
+   "contentIds": [
+    "sha256-cd-v1:e74e5e5792b0da1b405bae225e5ea54e32332a13b7aeefe0d4adce88c8690443"
+   ],
    "description": "An adventure based on the manga Silent Möbius: the police unit AMP investigates a supernatural case in a future Tokyo.",
    "developer": "Gainax",
    "launchbox": "184110",
    "mobygames": 58692,
    "publisher": "Gainax",
    "screenshotUrl": "https://images.launchbox-app.com/6698e34e-ddad-4454-af9b-f68cfc003f95.png",
+   "sourceGroups": [
+    "fmtowns-cd:Silent Mobius (1991)(Gainax)(Jp).zip"
+   ],
    "title": "Silent Möbius: Case: Titanic"
   },
   "fmtowns:184111": {
@@ -859,12 +1144,18 @@
     "A Living Body Armor: Elm Knight"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/770d4db3-0981-4463-bdba-16ac04882526.jpg",
+   "contentIds": [
+    "sha256-cd-v1:68557022a496a16492cd7b4c509b03952d60bd7eda343827e9be7ce58c86695f"
+   ],
    "description": "A first-person mecha shooter set in a world ruled by an empire that hunts people with special powers.",
    "developer": "Micro Cabin",
    "launchbox": "184138",
    "mobygames": 47640,
    "publisher": "Micro Cabin",
    "screenshotUrl": "https://images.launchbox-app.com/4d8d9ec9-eec2-4cae-baf3-3683db25f6c6.png",
+   "sourceGroups": [
+    "fmtowns-cd:ElmKnight (1992)(Micro Cabin)(Jp).zip"
+   ],
    "title": "Elm Knight"
   },
   "fmtowns:184139": {
@@ -883,12 +1174,18 @@
     "ImageFight"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/6151a2ca-e633-4be8-b404-6565f8e4c9df.jpg",
+   "contentIds": [
+    "sha256-cd-v1:5415b83805ace68f593cc2ac467b27e453f651d691f32011b2b7bc43c0a018ec"
+   ],
    "description": "Irem's vertical shooter: a fighter trains in simulations, then battles an alien life form that has seized the moon base, using detachable pods.",
    "developer": "Irem",
    "launchbox": "184140",
    "mobygames": 27229,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/973a6c51-37ad-4ea6-9f29-8071c700606c.png",
+   "sourceGroups": [
+    "fmtowns-cd:Image Fight (1990)(Ving)(Jp-En).zip"
+   ],
    "title": "Image Fight"
   },
   "fmtowns:184141": {
@@ -906,12 +1203,18 @@
   },
   "fmtowns:184142": {
    "boxArtUrl": "https://images.launchbox-app.com/ffdad4ba-e7c6-43c4-81e1-f7db09a1dd67.jpg",
+   "contentIds": [
+    "sha256-cd-v1:12a59e81f87c3e1b6126a94ba38c8914d6dc10bb14b5fe6f0fd8424177f66829"
+   ],
    "description": "A rail shooter in 2051: shrink a craft and fly through the body of a corporation's president to destroy a rival's implanted droids.",
    "developer": "Psygnosis",
    "launchbox": "184142",
    "mobygames": 2098,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/c43e6bef-4fa8-4a60-b661-2691eaa481b2.png",
+   "sourceGroups": [
+    "fmtowns-cd:Micro Cosm (1993)(Psygnosis)(Jp).zip"
+   ],
    "title": "Microcosm"
   },
   "fmtowns:184143": {
@@ -942,12 +1245,18 @@
   "fmtowns:184145": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/9a344d73-3957-4b99-9d3a-d9647a9345d4.jpg",
+   "contentIds": [
+    "sha256-cd-v1:0634d85a80fad87f94996b2babe849703bf4db0c7bb9df0465fb176739b7c7c9"
+   ],
    "description": "Gainax's raising simulation: a hero adopts a young girl and plans her studies, work and rest for eight years, shaping who she becomes.",
    "developer": "Gainax",
    "launchbox": "184145",
    "mobygames": 165,
    "publisher": "Gainax",
    "screenshotUrl": "https://images.launchbox-app.com/20ef0900-35db-4fbf-9787-6d4297c25acd.png",
+   "sourceGroups": [
+    "fmtowns-cd:Princess Maker 2 (1994)(Gainax)(Jp).zip"
+   ],
    "title": "Princess Maker 2",
    "year": 1994
   },
@@ -975,11 +1284,17 @@
   },
   "fmtowns:184148": {
    "boxArtUrl": "https://images.launchbox-app.com/edde361b-cbee-410c-810e-a1c1ef07e02a.jpg",
+   "contentIds": [
+    "sha256-cd-v1:99e6c87f1175cd52f1bb6e0d8b9ab28c86f6f5a70e5c8c1b8c6e025b581d0ad3"
+   ],
    "description": "Strike Commander with its additional tactical operations missions.",
    "developer": "Origin Systems",
    "launchbox": "184148",
    "publisher": "Electronic Arts Victor",
    "screenshotUrl": "https://images.launchbox-app.com/5cd3f2eb-81f4-4d8c-9663-71ea08f9164a.png",
+   "sourceGroups": [
+    "fmtowns-cd:Strike Commander Plus (1994)(Origin)(Jp-En)[+HDD+CMOS].zip"
+   ],
    "title": "Strike Commander Plus"
   },
   "fmtowns:184149": {
@@ -1026,11 +1341,17 @@
   },
   "fmtowns:184371": {
    "boxArtUrl": "https://images.launchbox-app.com/ea7da1ea-ceb4-42b7-a5cc-a77dfe3018c2.jpg",
+   "contentIds": [
+    "sha256-cd-v1:b17cce5bf30a00b9f1b93ccdebdf768f36098c2c3c08a2f639eba54a470cefb9"
+   ],
    "description": "The Alone in the Dark sequel: detective Edward Carnby enters a pirate gangster's mansion to rescue a kidnapped girl.",
    "developer": "Infogrames Europe",
    "launchbox": "184371",
    "mobygames": 907,
    "screenshotUrl": "https://images.launchbox-app.com/c7c1ab23-18f9-4a72-95b0-35ef7fb1257b.png",
+   "sourceGroups": [
+    "fmtowns-cd:Alone in the Dark2(req.HD Install) (1994)(AMT)(Jp).zip"
+   ],
    "title": "Alone in the Dark 2",
    "year": 1994
   },
@@ -1072,20 +1393,32 @@
     "Mahō Daisakusen"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/584f7779-400a-43e5-bc54-ea6b1a767a57.jpg",
+   "contentIds": [
+    "sha256-cd-v1:ff6e761909e0dc12368bc393a0077b6a0ed24368c6789dd5d41daf4d0a90809f"
+   ],
    "description": "Raizing's vertical shooter set in a world of magic and machinery: fight the goblin king Gobligan's armies with one of several heroes, each with their own magic.",
    "launchbox": "184375",
    "publisher": "Electronic Arts Victor",
    "screenshotUrl": "https://images.launchbox-app.com/6d33476b-6de7-40aa-802d-e2dc2563b407.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mahou Daisakusen (aka Sorcerer Striker) (1993)(Electronic Arts)(Jp).zip"
+   ],
    "title": "Mahou Daisakusen"
   },
   "fmtowns:184376": {
    "boxArtUrl": "https://images.launchbox-app.com/0ac290ca-204d-419a-9f72-984b83cb9acf.jpg",
+   "contentIds": [
+    "sha256-cd-v1:858fb4efb3f13062c014419e8bcbc2461dcf27fcf82d55cd5c4d5a364dfad9a1"
+   ],
    "description": "A behind-view shooter: fly a shape-shifting ship through cave systems on a planet holding the remains of an ancient civilization.",
    "developer": "Psygnosis",
    "launchbox": "184376",
    "mobygames": 58518,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/9d7ce836-d8d9-4913-bebb-c07726910c89.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mega Morph (1994)(Psygnosis)(Jp).zip"
+   ],
    "title": "MegaMorph"
   },
   "fmtowns:184377": {
@@ -1103,12 +1436,18 @@
   },
   "fmtowns:184378": {
    "boxArtUrl": "https://images.launchbox-app.com/076f61a0-b5ad-452f-ae0e-0ebe2cf4005b.jpg",
+   "contentIds": [
+    "sha256-cd-v1:42692307befc86fb0413ce2e57a126f8462536695b3d91944f3512db84dd73c3"
+   ],
    "description": "A simple horizontal shooter: a flying mechanical bug fights through stages of enemies.",
    "developer": "Amorphous",
    "launchbox": "184378",
    "mobygames": 58712,
    "publisher": "Amorphous",
    "screenshotUrl": "https://images.launchbox-app.com/f46c1ab9-761d-4666-b506-ea06208b8e25.png",
+   "sourceGroups": [
+    "fmtowns-cd:Super Shooting Towns (199x)(-)(Jp-En).zip"
+   ],
    "title": "Super Shooting Towns"
   },
   "fmtowns:184379": {
@@ -1124,12 +1463,18 @@
     "Tatsujin Ō"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/c3573a26-9f0b-4747-87c1-81ca8133326c.jpg",
+   "contentIds": [
+    "sha256-cd-v1:a7472ba4b00c017581fad10bcee3890b1c9f17c9c74602a9bc37448d980f9c10"
+   ],
    "description": "Toaplan's Truxton II: a vertical shooter against an alien empire, with screen-clearing bombs and powerful upgraded weapons.",
    "developer": "ToaPlan",
    "launchbox": "184380",
    "mobygames": 52339,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/c9544d6b-9863-43fc-b695-fda50b6dd2c8.png",
+   "sourceGroups": [
+    "fmtowns-cd:Tatsujin Ou (aka Truxton II) (1993)(Ving)(Jp-En).zip"
+   ],
    "title": "Tatsujin Ou"
   },
   "fmtowns:184381": {
@@ -1137,12 +1482,18 @@
     "Pu•Li•Ru•La"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/fba7c5b0-95b0-42c5-9ce0-d32bea2e5a47.jpg",
+   "contentIds": [
+    "sha256-cd-v1:0b1fa1b89f2b078f97763d54e5b5b95a38254a1d611d58075d6679bba5c9746f"
+   ],
    "description": "Taito's surreal side-scrolling brawler: two young heroes with magic wands fight through Radishland to recover a stolen key.",
    "developer": "Taito",
    "launchbox": "184381",
    "mobygames": 34183,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/35f074e3-ac90-4e43-b14e-443bbb9fd729.png",
+   "sourceGroups": [
+    "fmtowns-cd:Pu-Li-Ru-La (1994)(Ving)(Jp-En).zip"
+   ],
    "title": "Pu-Li-Ru-La"
   },
   "fmtowns:184542": {
@@ -1191,12 +1542,18 @@
   },
   "fmtowns:184571": {
    "boxArtUrl": "https://images.launchbox-app.com/89f8b14a-aec0-47f9-85cb-ea92b4278a17.jpg",
+   "contentIds": [
+    "sha256-cd-v1:9edaa1cc3e33fca30c4cd672e6de05f64e32bdb94106b78b42c6b6a7dc13f011"
+   ],
    "description": "Guide the lemmings, who walk blindly onward, to the exit by giving some of them jobs such as digging, building or blocking, across 120 levels.",
    "developer": "4000Do",
    "launchbox": "184571",
    "mobygames": 683,
    "publisher": "Imagineer",
    "screenshotUrl": "https://images.launchbox-app.com/869bd91b-f50f-4a23-8d1b-161482c8dc80.png",
+   "sourceGroups": [
+    "fmtowns-cd:Lemmings (1991)(Psygnosis)(Jp-En).zip"
+   ],
    "title": "Lemmings"
   },
   "fmtowns:184572": {
@@ -1211,12 +1568,18 @@
   },
   "fmtowns:184588": {
    "boxArtUrl": "https://images.launchbox-app.com/67629d5d-6d7a-4477-a19a-744f521ef5e2.jpg",
+   "contentIds": [
+    "sha256-cd-v1:da9d334fb6581a346eb4b8e4db6f361959fe96a0a8c35b35d7f79fae2e57c891"
+   ],
    "description": "Compile's falling-blob puzzle: link four Puyo of a color to pop them, setting up chains that drop garbage on your opponent.",
    "developer": "Compile",
    "launchbox": "184588",
    "mobygames": 69239,
    "publisher": "CSK Research Institute",
    "screenshotUrl": "https://images.launchbox-app.com/f1b6d2b1-a008-4286-a4e7-53dde9cf42f8.png",
+   "sourceGroups": [
+    "fmtowns-cd:Puyo Puyo (1994)(CRI)(Jp).zip"
+   ],
    "title": "Puyo Puyo"
   },
   "fmtowns:184589": {
@@ -1234,12 +1597,18 @@
     "Rainbow Islands: The Story of Bubble Bobble 2: Extra Version"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/eab00cfd-39d8-4aa3-b76c-444d69ff4375.jpg",
+   "contentIds": [
+    "sha256-cd-v1:cededb0dd69036226e4e9122ab0ba021e1aa38b274b062c05ef0c0b0d33ba003"
+   ],
    "description": "Taito's Rainbow Islands with its Extra version: Bub and Bob climb islands by casting rainbows to trap enemies and build bridges.",
    "developer": "Taito",
    "launchbox": "184590",
    "mobygames": 43394,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/692de2a6-05b8-4e23-9f31-0b2ad3ce0081.png",
+   "sourceGroups": [
+    "fmtowns-cd:Rainbow Islands Extra (1992)(Ving)(Jp-En).zip"
+   ],
    "title": "Rainbow Islands Extra"
   },
   "fmtowns:184591": {
@@ -1247,12 +1616,18 @@
     "Mixed-Up Mother Goose"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/6da1f78c-1f34-4b2f-902d-2ffddd4f70bd.jpg",
+   "contentIds": [
+    "sha256-cd-v1:d14b1d0016737e838869667ee645578faec2bd2b2afae79f4a616d212ac28644"
+   ],
    "description": "Roberta Williams' adventure for children: return the lost items of Mother Goose's characters so each rhyme can be sung.",
    "developer": "Sierra On-Line",
    "launchbox": "184591",
    "mobygames": 1085,
    "publisher": "Sierra On-Line Japan",
    "screenshotUrl": "https://images.launchbox-app.com/7ad40056-9bdf-4c80-8355-347eb3f97833.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mixed-Up Mother Goose (1991)(Sierra)(Jp).zip"
+   ],
    "title": "Roberta Williams' Mixed-Up Mother Goose"
   },
   "fmtowns:184596": {
@@ -1268,55 +1643,85 @@
   },
   "fmtowns:184597": {
    "boxArtUrl": "https://images.launchbox-app.com/4bd7eb1a-0bb7-40d7-99d2-7bf3b9834bd2.jpg",
+   "contentIds": [
+    "sha256-cd-v1:76686451d0ec05869a88fe0e06fc26fa200ab228a4665146562d787f0db548f0"
+   ],
    "description": "Game Arts' animated adventure: schoolgirl Yumimi dreams of a unicorn couple, and a mysterious classmate draws her into a magical journey.",
    "developer": "Game Arts",
    "launchbox": "184597",
    "mobygames": 58735,
    "publisher": "CSK Research Institute",
    "screenshotUrl": "https://images.launchbox-app.com/242b7f72-4e5b-4eae-9821-4c6c3bd23cd8.png",
+   "sourceGroups": [
+    "fmtowns-cd:Yumimi Mix (1993)(CRI)(Jp).zip"
+   ],
    "title": "Yumimi Mix",
    "year": 1993
   },
   "fmtowns:184598": {
    "boxArtUrl": "https://images.launchbox-app.com/725d1e53-cc40-42bb-9dcc-ba5f36678af4.jpg",
+   "contentIds": [
+    "sha256-cd-v1:8d6fa89376f126e1621e85728de4e20bf1ea84ed4e1e355330f3e4a8db6aeced"
+   ],
    "description": "Bullfrog's cyberpunk strategy game: lead squads of cyborg agents through isometric cities on missions to expand your corporation's control.",
    "developer": "Bullfrog Productions",
    "launchbox": "184598",
    "mobygames": 281,
    "publisher": "Electronic Arts Victor",
    "screenshotUrl": "https://images.launchbox-app.com/28f2f7e1-35f2-471c-9183-a92428901c35.png",
+   "sourceGroups": [
+    "fmtowns-cd:Syndicate (1994)(Bullfrog)(US).zip"
+   ],
    "title": "Syndicate"
   },
   "fmtowns:184599": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/a18309c7-5c38-4122-9318-e56754496fa4.jpg",
+   "contentIds": [
+    "sha256-cd-v1:0a8c8b3888f65dd61c3ab6a0553ffe49e57cefb187c419f126e39ef253abdf04"
+   ],
    "description": "A sci-fi role-playing game: a young weapons expert investigates his father's work on artificial life.",
    "developer": "Elf",
    "launchbox": "184599",
    "mobygames": 43349,
    "publisher": "elf",
    "screenshotUrl": "https://images.launchbox-app.com/2db6ebe3-ffd0-4272-8ca7-bb79c14246a8.png",
+   "sourceGroups": [
+    "fmtowns-cd:Metal Eye (1993)(Elf)(Jp).zip"
+   ],
    "title": "Metal Eye"
   },
   "fmtowns:184600": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/ca9b6c9b-e84a-40a2-a378-c7bdeac488f8.jpg",
+   "contentIds": [
+    "sha256-cd-v1:2274f401e00929e7fac8ee9dcf73d83a05aea7308bb7ad198f7d226a2d47fb14"
+   ],
    "description": "The second Metal Eye: a sci-fi role-playing game set in the same universe as the first.",
    "developer": "Elf",
    "launchbox": "184600",
    "mobygames": 43352,
    "publisher": "elf",
    "screenshotUrl": "https://images.launchbox-app.com/96da1a7e-9c9b-48bc-99bc-d0a58a2e1df5.png",
+   "sourceGroups": [
+    "fmtowns-cd:Metal Eye2 (1994)(Elf)(Jp).zip"
+   ],
    "title": "Metal Eye 2"
   },
   "fmtowns:184601": {
    "boxArtUrl": "https://images.launchbox-app.com/20de920d-1f08-423b-88de-30a00db3fa6d.jpg",
+   "contentIds": [
+    "sha256-cd-v1:bb4de2151b7df9c86ce82ebf9c02a2a1216a3fbffe1c7453137a47089d8bc30d"
+   ],
    "description": "A 3D tank combat game in the vein of Battlezone, set in a cyberpunk world.",
    "developer": "Velocity",
    "launchbox": "184601",
    "mobygames": 16640,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/81b31802-23a6-4957-bed1-69b8bbef7aff.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mega Spectre (1993)(Fujitsu)(Jp).zip"
+   ],
    "title": "Megaspectre"
   },
   "fmtowns:184602": {
@@ -1347,22 +1752,34 @@
   },
   "fmtowns:184604": {
    "boxArtUrl": "https://images.launchbox-app.com/5f0b83c6-97ad-4af1-b3b6-a5d8a882b15f.jpg",
+   "contentIds": [
+    "sha256-cd-v1:51d33c7d792d30a44fa1c858922dc5c048537c83d249533e1e8d9949f51ccaa7"
+   ],
    "description": "A jet combat simulator: fly the F-22 or the fictional F-29 through four campaigns of increasing difficulty.",
    "developer": "Digital Image Design",
    "launchbox": "184604",
    "mobygames": 6233,
    "publisher": "Imagineer",
    "screenshotUrl": "https://images.launchbox-app.com/49a7b46e-5fcb-43ff-858c-e80b5e6ad9ad.png",
+   "sourceGroups": [
+    "fmtowns-cd:F29 Retaliator (1993)(Imagineer)(Jp).zip"
+   ],
    "title": "F29 Retaliator"
   },
   "fmtowns:184605": {
    "boxArtUrl": "https://images.launchbox-app.com/98a55619-1047-435f-beff-fe84ff6f85ea.jpg",
+   "contentIds": [
+    "sha256-cd-v1:a674195364c3e013fb6019502cea893bebd004c7c53eb2a6c3e6729f89987669"
+   ],
    "description": "A first-person 3D shooter in an abstract world, playing a creature that evolves as it survives.",
    "developer": "System Sacom",
    "launchbox": "184605",
    "mobygames": 58227,
    "publisher": "System Sacom",
    "screenshotUrl": "https://images.launchbox-app.com/754f6a02-afcf-4399-a5fb-a45611b6356b.png",
+   "sourceGroups": [
+    "fmtowns-cd:Evolution (1989)(System Sacom)(Jp-En).zip"
+   ],
    "title": "Evolution"
   },
   "fmtowns:184608": {
@@ -1371,22 +1788,35 @@
     "Wizardry: Crusaders of the Dark Savant"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/72dcef10-16f8-422b-9fe4-388e0967dd25.jpg",
+   "contentIds": [
+    "sha256-cd-v1:4b5b002b9ecf8896be29af8e8de2a20943c8f6b36463b03fb19ccb9b171d0164"
+   ],
    "description": "The seventh Wizardry: a party races rival factions across the planet Guardia to find the secret of the Cosmic Forge.",
    "developer": "Sir-Tech Software",
    "launchbox": "184608",
    "mobygames": 715,
    "publisher": "ASCII",
    "screenshotUrl": "https://images.launchbox-app.com/4fe36f03-81de-4da3-b247-0b0899289428.png",
+   "sourceGroups": [
+    "fmtowns-cd:Wizardry VII - Crusaders of the Dark Savant (1993)(Sir-Tech Software)(Jp).zip"
+   ],
    "title": "Wizardry VII: Crusaders of the Dark Savant"
   },
   "fmtowns:184609": {
    "boxArtUrl": "https://images.launchbox-app.com/2ad2cf98-40f7-4d73-bba4-487994d01235.jpg",
+   "contentIds": [
+    "sha256-cd-v1:a6f3e235e619f4d1492b87087b1d4c438411cc63315e1f0d1db39e8f16122abe",
+    "sha256-fd-v1:d470290bb91af866ca956ff9929007f83842918865fa2252e2c7c98c1a531c04"
+   ],
    "description": "The fifth Wizardry: a party descends through Llylgamyn's maelstrom to rescue the Gatekeeper and restore balance.",
    "developer": "Sir-Tech Software",
    "launchbox": "184609",
    "mobygames": 3983,
    "publisher": "Sir-Tech Software",
    "screenshotUrl": "https://images.launchbox-app.com/3963a03b-afb5-430d-a28e-47c3032329d0.png",
+   "sourceGroups": [
+    "fmtowns-cd:Wizardry V - Heart of the Maelstrom (1988)(Sir-Tech Software)(Jp)[+UserDisk].zip"
+   ],
    "title": "Wizardry V: Heart of the Maelstrom"
   },
   "fmtowns:184610": {
@@ -1426,22 +1856,34 @@
     "Ravenloft: Aku no Keshin"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/2f1028e2-3ba3-40dc-8036-bad5ac757c32.jpg",
+   "contentIds": [
+    "sha256-cd-v1:48f0617f0c188d7f52cb4e3527bda55a033cadada2e1b0b77f6642692271adcc"
+   ],
    "description": "A first-person horror role-playing game: adventurers chasing a stolen holy symbol are drawn into the vampire Strahd's land of Barovia.",
    "developer": "DreamForge Intertainment",
    "launchbox": "184613",
    "mobygames": 3315,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/6dc91d02-dd7a-4034-ba4e-4b8f382ea5cf.png",
+   "sourceGroups": [
+    "fmtowns-cd:Ravenloft (1995)(Ving)(Jp).zip"
+   ],
    "title": "Ravenloft: Strahd's Possession"
   },
   "fmtowns:184615": {
    "boxArtUrl": "https://images.launchbox-app.com/cf0f9f15-3e96-4c55-9926-6b5aa512641f.jpg",
+   "contentIds": [
+    "sha256-cd-v1:f28fa3d1a80cdea74677617379c7b8a57d87d159571373871dfeef9e84147225"
+   ],
    "description": "Populous with its Promised Lands expansion: the god game of shaping land and guiding followers against a rival deity, plus new worlds.",
    "developer": "Bullfrog Productions",
    "launchbox": "184615",
    "mobygames": 16151,
    "publisher": "Imagineer",
    "screenshotUrl": "https://images.launchbox-app.com/20cb6d86-ddfa-4ca2-a632-2afb2e82ac31.png",
+   "sourceGroups": [
+    "fmtowns-cd:Populous & The Promised Lands (1990)(Imagineer)(Jp).zip"
+   ],
    "title": "Populous & The Promised Lands",
    "year": 1990
   },
@@ -1460,12 +1902,18 @@
   },
   "fmtowns:184617": {
    "boxArtUrl": "https://images.launchbox-app.com/c5e6c10e-20a8-40f6-a09c-05202fbbdf67.jpg",
+   "contentIds": [
+    "sha256-cd-v1:a34527c8303f131d3ea0a28416818d635785ed6d69d9606e0294dac8d0a421ab"
+   ],
    "description": "Sierra's adventure: King Graham searches the land of Serenia for his family, stolen away with the castle by an evil wizard.",
    "developer": "Sierra On-Line",
    "launchbox": "184617",
    "mobygames": 130,
    "publisher": "Sierra On-Line Japan",
    "screenshotUrl": "https://images.launchbox-app.com/7d2d67a8-ee31-454c-a1d8-3f4ec9e27f8c.png",
+   "sourceGroups": [
+    "fmtowns-cd:Kings Quest V (1991)(Sierra)(Jp).zip"
+   ],
    "title": "King's Quest V: Absence Makes the Heart Go Yonder!"
   },
   "fmtowns:184618": {
@@ -1473,12 +1921,18 @@
     "King's Bounty: Nusumareta Chitsujo"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/9921f415-1b07-4a49-b73f-01564dc4a1ed.jpg",
+   "contentIds": [
+    "sha256-cd-v1:de83369dda0cc7bd66a93ed7ee6517b8c9991875a3b304be2503e4bcae068a81"
+   ],
    "description": "New World Computing's fantasy strategy game: lead an army to recover the Sceptre of Order, hiring troops and fighting turn-based battles.",
    "developer": "New World Computing",
    "launchbox": "184618",
    "mobygames": 1473,
    "publisher": "StarCraft",
    "screenshotUrl": "https://images.launchbox-app.com/9cf9e90c-178d-415c-8ed0-81364e273a18.png",
+   "sourceGroups": [
+    "fmtowns-cd:Kings Bounty (1994)(Star Craft)(Jp).zip"
+   ],
    "title": "King's Bounty"
   },
   "fmtowns:184619": {
@@ -1500,22 +1954,34 @@
     "Dungeon Master: Kaosu no Gyakushuu"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/7693fdf6-b6cb-48ae-8090-0dabd4140923.jpg",
+   "contentIds": [
+    "sha256-cd-v1:e243cc2f9f5f2bd3d02564d160c4b1054fe9d3d6b429eef17edb1a81d6cde901"
+   ],
    "description": "The Dungeon Master sequel: lead four champions into Chaos's new dungeon, with tougher puzzles and monsters.",
    "developer": "FTL Games",
    "launchbox": "184621",
    "mobygames": 8257,
    "publisher": "Victor Musical Industries",
    "screenshotUrl": "https://images.launchbox-app.com/9a3d4ea4-a36d-4f0f-b846-c211925a66f5.png",
+   "sourceGroups": [
+    "fmtowns-cd:Dungeon Master Chaos Strikes Back (1990)(Victor)(Jp-En).zip"
+   ],
    "title": "Dungeon Master: Chaos Strikes Back"
   },
   "fmtowns:184622": {
    "boxArtUrl": "https://images.launchbox-app.com/96ec661d-d07b-48b5-86bf-e98ca2b6b0c8.jpg",
+   "contentIds": [
+    "sha256-cd-v1:f4a4a0b25daafd03473cbd365564d23bd4b0bcec4939f1fa13376f406cc3272a"
+   ],
    "description": "Build castles to rule the land: design the walls and towers, manage workers and resources, and keep the church, nobles and peasants content while defending against attacks.",
    "developer": "Quicksilver Software",
    "launchbox": "184622",
    "mobygames": 177,
    "publisher": "Victor Musical Industries",
    "screenshotUrl": "https://images.launchbox-app.com/9f029e45-d299-47ec-bdfc-74e677ff8e3e.png",
+   "sourceGroups": [
+    "fmtowns-cd:Castles (1992)(Victor)(Jp-En).zip"
+   ],
    "title": "Castles",
    "year": 1992
   },
@@ -1553,12 +2019,18 @@
     "Eternam"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/59b0c8c5-5ac7-4678-bd6c-9f3535c07080.jpg",
+   "contentIds": [
+    "sha256-cd-v1:d7195d49af310080511455c1d89674b0a7e4a777440b1add8dfe2aca991c27e6"
+   ],
    "description": "An adventure mixing third-person scenes with first-person 3D travel, set on a strange island where myths and eras collide.",
    "developer": "Infogrames Europe",
    "launchbox": "184680",
    "mobygames": 1368,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/ccc8c259-fc59-4088-bee8-85c457881cab.png",
+   "sourceGroups": [
+    "fmtowns-cd:Aeternam (1993)(Fujitsu)(Jp).zip"
+   ],
    "title": "Æternam"
   },
   "fmtowns:184681": {
@@ -1574,12 +2046,18 @@
   },
   "fmtowns:184682": {
    "boxArtUrl": "https://images.launchbox-app.com/6797ea8e-9114-49fd-a88a-23004ee4b699.jpg",
+   "contentIds": [
+    "sha256-cd-v1:d17b9de8f85b9140c42017bf116b3d1dbacf32c99e428286a091a6f05261237d"
+   ],
    "description": "Taito's boxing game: fight through knockout competitions with large, detailed boxers.",
    "developer": "Taito",
    "launchbox": "184682",
    "mobygames": 21346,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/d84308ae-db14-4150-9465-2b377b9b1de4.png",
+   "sourceGroups": [
+    "fmtowns-cd:Final Blow (1990)(Ving)(Jp-En).zip"
+   ],
    "title": "Final Blow"
   },
   "fmtowns:184683": {
@@ -1622,22 +2100,36 @@
     "Last Armageddon: CD Special"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/09200ac7-38f8-4f09-ae65-6b02da678ab5.jpg",
+   "contentIds": [
+    "sha256-cd-v1:8be74b932a05a65c1020871fd3931b26c91ff9b6a2502351b139a34eca620a05",
+    "sha256-cd-v1:db14f0a32609e46767f4848bb09d4419c19c2dfdc596ac8fe5abd876ab890d67",
+    "sha256-cd-v1:db4a312ce25d3985aca0ed3e9422c8df88cdfc34238f667ae34ecdb641c18257"
+   ],
    "description": "A role-playing game set after humanity's extinction, where demon races fight for control of an Earth reborn as the Demon World.",
    "developer": "BrainGrey",
    "launchbox": "184686",
    "mobygames": 13538,
    "publisher": "BrainGrey",
    "screenshotUrl": "https://images.launchbox-app.com/d4ed5cb3-63ec-44b9-9550-669aa6061db3.png",
+   "sourceGroups": [
+    "fmtowns-cd:Last Armageddon CD Special (1989)(Brain Grey)(Jp).zip"
+   ],
    "title": "Last Armageddon"
   },
   "fmtowns:184687": {
    "boxArtUrl": "https://images.launchbox-app.com/873d1a25-868d-43b1-bcbb-ba211c4dcafc.png",
+   "contentIds": [
+    "sha256-cd-v1:eacc712127a1bc78803e2c52d5b4556de96eee8d54c5d2b4933bc1b4b62eed40"
+   ],
    "description": "Sega's early 3D shooter: navigate a maze and shoot down opponents in a race to be the last one standing.",
    "developer": "CSK Research Institute",
    "launchbox": "184687",
    "mobygames": 63828,
    "publisher": "CSK Research Institute",
    "screenshotUrl": "https://images.launchbox-app.com/e63b7cd5-98df-4b49-b122-653ee7d877e6.png",
+   "sourceGroups": [
+    "fmtowns-cd:Last Survivor (1990)(CRI)(Jp).zip"
+   ],
    "title": "Last Survivor",
    "year": 1990
   },
@@ -1659,12 +2151,18 @@
     "Legends of Valour: Gouyuu no Densetsu"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/f18621e6-e053-4223-bb2a-1c5cd8cd93bd.jpg",
+   "contentIds": [
+    "sha256-cd-v1:2f6b8387f54b14ac473673b1ebf74099ba952b3e2ade2d797372f090182274f4"
+   ],
    "description": "A first-person role-playing game in an open city: search Mittledorf for your missing cousin while factions, guilds and quests compete for your time.",
    "developer": "Synthetic Dimensions",
    "launchbox": "184689",
    "mobygames": 2041,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/dc2be3e0-acd4-4c19-972e-19b3375f8153.png",
+   "sourceGroups": [
+    "fmtowns-cd:Legends of Valour (1993)(US Gold)(Jp).zip"
+   ],
    "title": "Legends of Valour"
   },
   "fmtowns:184690": {
@@ -1681,32 +2179,50 @@
   },
   "fmtowns:184691": {
    "boxArtUrl": "https://images.launchbox-app.com/b49869c0-1604-4f3e-9644-61136f4af5a4.jpg",
+   "contentIds": [
+    "sha256-cd-v1:d72dda6cf29094e6dc94c7892c939d4502e20a354949a515a37fe81b8bb60ccf"
+   ],
    "description": "Glodia's role-playing game: Atrushan, a dragon raised in the Dragon World, takes human form to protect a girl he has grown up with in the human world.",
    "developer": "Glodia",
    "launchbox": "184691",
    "mobygames": 13893,
    "publisher": "Glodia",
    "screenshotUrl": "https://images.launchbox-app.com/095fa55e-2076-44c0-8caf-2768161a776c.png",
+   "sourceGroups": [
+    "fmtowns-cd:Emerald Dragon (1992)(Glodia)(Jp)[+SystemDisk].zip"
+   ],
    "title": "Emerald Dragon"
   },
   "fmtowns:184738": {
    "boxArtUrl": "https://images.launchbox-app.com/7027dd70-8fb8-4aa4-af81-28910dda3c7e.jpg",
+   "contentIds": [
+    "sha256-cd-v1:bc5e2a0db9e5b2e2916a852ba8348cbf74d994e2c5f620296cad63b478cd3562"
+   ],
    "description": "A turn-based Gundam strategy game of battles between the Earth Federation and Zeon.",
    "developer": "Family Soft",
    "launchbox": "184738",
    "mobygames": 58538,
    "publisher": "Family Soft",
    "screenshotUrl": "https://images.launchbox-app.com/73f32c61-8c4d-4887-8304-87bde579a071.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mubile Suit Gundam Hyper Classic Operation (1992)(FamilySoft)(Jp).zip"
+   ],
    "title": "Mobile Suit Gundam: Hyper Classic Operation"
   },
   "fmtowns:184739": {
    "boxArtUrl": "https://images.launchbox-app.com/c6cc09b4-3cea-4071-a5d5-5a95cc3b4965.jpg",
+   "contentIds": [
+    "sha256-cd-v1:885facdf9661b993a1d365757cf5b0914f59fbe370033dc03d12c57fddc5e82b"
+   ],
    "description": "A turn-based Gundam strategy game focused on desert battles between the Earth Federation and Zeon.",
    "developer": "Family Soft",
    "launchbox": "184739",
    "mobygames": 58540,
    "publisher": "Family Soft",
    "screenshotUrl": "https://images.launchbox-app.com/1d2c7287-2158-49d9-98ac-b10fa80e9e48.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mubile Suit Gundam Hyper Desert Operation (1992)(FamilySoft)(Jp).zip"
+   ],
    "title": "Mobile Suit Gundam: Hyper Desert Operation"
   },
   "fmtowns:184823": {
@@ -1731,12 +2247,18 @@
   "fmtowns:185083": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/7463a381-56bb-470a-a17b-097c3f5801eb.jpg",
+   "contentIds": [
+    "sha256-cd-v1:d40d171c28f4edf50bce814112c2c8321dd1c568de6626f09eb9662f07545095"
+   ],
    "description": "A turn-based strategy game set in 2048, after biological weapons from a third world war created monsters.",
    "developer": "D.O.",
    "launchbox": "185083",
    "mobygames": 50019,
    "publisher": "D.O.",
    "screenshotUrl": "https://images.launchbox-app.com/751d0b06-82f9-4a39-8998-630fad97ccf7.png",
+   "sourceGroups": [
+    "fmtowns-cd:Youju Senki AD2048 (Adult)(19xx)(DO)(Jp)[+UserDisk].zip"
+   ],
    "title": "Youjuu Senki: A.D. 2048"
   },
   "fmtowns:185084": {
@@ -1768,33 +2290,53 @@
     "W W: Words Worth"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/b2996c28-db15-4881-a75a-1f462a3016fb.jpg",
+   "contentIds": [
+    "sha256-cd-v1:0a0dd6b1569e73b8c3a6df05013f8dfbacd463fb8d731bcf7e9cac43ac71a019"
+   ],
    "description": "A fantasy role-playing game set in a world balanced between a tribe of light and a tribe of shadow.",
    "developer": "Elf",
    "launchbox": "185086",
    "mobygames": 42895,
    "screenshotUrl": "https://images.launchbox-app.com/ffe86f55-e515-4fcf-a0f2-415aba520944.png",
+   "sourceGroups": [
+    "fmtowns-cd:Words Worth (1993)(Elf)(Jp).ccd.zip"
+   ],
    "title": "Words Worth",
    "year": 1993
   },
   "fmtowns:185087": {
    "boxArtUrl": "https://images.launchbox-app.com/eb86c366-1ae6-4d85-a67a-b1b683db83a4.jpg",
+   "contentIds": [
+    "sha256-cd-v1:b30ea2a49e47c16dd96c3fea6ecbfa97d916ee6e35f024abcc35a7f79845f2b8",
+    "sha256-fd-v1:5715b8b5795bd58ab126f2d9f6d07087bdf5d6f787087506a8bfbd57b077007a"
+   ],
    "description": "Glodia's role-playing game: the long peace of the land of Ellzeria comes to an end.",
    "developer": "Glodia",
    "launchbox": "185087",
    "mobygames": 45558,
    "publisher": "Glodia",
    "screenshotUrl": "https://images.launchbox-app.com/040670b0-756a-4692-b759-4ec04fee808a.png",
+   "sourceGroups": [
+    "fmtowns-cd:Vain Dream (1993)(Glodia)(Jp)[+SystemDisk].zip"
+   ],
    "title": "Vain Dream",
    "year": 1993
   },
   "fmtowns:185088": {
    "boxArtUrl": "https://images.launchbox-app.com/d9316ec5-ac63-45ca-9d17-1ea81c13cb52.jpg",
+   "contentIds": [
+    "sha256-cd-v1:6746338d7ae177013cfb88fda3bbb9e46bfe32ec2311aeaed7ec38ba868be4e1",
+    "sha256-fd-v1:434d1f630ea93bfce3d1f407f748e5432340b1e45c6bd71dd1630358cc10ba0a"
+   ],
    "description": "The second Vain Dream: the Goddess of Darkness seizes the peaceful land of Kureia.",
    "developer": "Glodia",
    "launchbox": "185088",
    "mobygames": 45565,
    "publisher": "Glodia",
    "screenshotUrl": "https://images.launchbox-app.com/749d4a5e-9dec-49ad-a4d5-efac7e6fb256.png",
+   "sourceGroups": [
+    "fmtowns-cd:Vain DreamII (1993)(Glodia)(Jp)[+SystemDisk].zip"
+   ],
    "title": "Vain Dream II",
    "year": 1993
   },
@@ -1822,12 +2364,18 @@
     "Stronghold: Emperor no Yousai"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/6ef3abab-b3e1-48ef-a213-1332a6dc2d26.jpg",
+   "contentIds": [
+    "sha256-cd-v1:fca08fa214740cba2a6b5074cc3ab25e6f125f18648a4e32d6d274a89146ca7b"
+   ],
    "description": "A real-time strategy and city-building game in the Dungeons & Dragons world: grow a fortress settlement of several races and defend it against monsters.",
    "developer": "Stormfront Studios",
    "launchbox": "185091",
    "mobygames": 482,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/4cb020e2-99f7-4443-8c58-40237da9e8c7.png",
+   "sourceGroups": [
+    "fmtowns-cd:Strong Hold (1994)(Ving)(Jp).zip"
+   ],
    "title": "Stronghold: Koutei no Yousai"
   },
   "fmtowns:185092": {
@@ -1853,12 +2401,18 @@
     "Might and Magic: Clouds of Xeen"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/5bc2bfee-7a31-4979-bb40-dacfaf220a89.jpg",
+   "contentIds": [
+    "sha256-cd-v1:0796eb027b0631bfb624baea7ff504294b2af98d2a9a770588f74320e4619a12"
+   ],
    "description": "The fourth Might and Magic: a party explores the world of Xeen to stop Lord Xeen.",
    "developer": "New World Computing",
    "launchbox": "185094",
    "mobygames": 3423,
    "publisher": "StarCraft",
    "screenshotUrl": "https://images.launchbox-app.com/a1022303-4c97-41e5-b8c7-98e8c723634c.png",
+   "sourceGroups": [
+    "fmtowns-cd:Might and Magic - Clouds of Xeen (1992)(New World Computing)(Jp)[+UserDisk].zip"
+   ],
    "title": "Might and Magic IV: Clouds of Xeen"
   },
   "fmtowns:185095": {
@@ -1866,12 +2420,18 @@
     "Might and Magic: Dark Side of Xeen"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/120b4f41-0373-4ee0-814f-45113f4aff7b.jpg",
+   "contentIds": [
+    "sha256-cd-v1:17c4958e9d6acdac3c667e3d8b40048e3fd8a832a34af0d5133a55a6b0abdf78"
+   ],
    "description": "The fifth Might and Magic: a party crosses to the dark side of Xeen to stop the guardian Sheltem.",
    "developer": "New World Computing",
    "launchbox": "185095",
    "mobygames": 3424,
    "publisher": "StarCraft",
    "screenshotUrl": "https://images.launchbox-app.com/1ac4d402-4170-4a71-94b4-ee97931baa47.png",
+   "sourceGroups": [
+    "fmtowns-cd:Might and Magic - Darkside of Xeen (1993)(New World Computing)(Jp)[+BootDisk].zip"
+   ],
    "title": "Might and Magic V: Darkside of Xeen"
   },
   "fmtowns:185133": {
@@ -1890,12 +2450,18 @@
   },
   "fmtowns:185134": {
    "boxArtUrl": "https://images.launchbox-app.com/6b0e76d0-7121-4be7-b2c8-c9b7a93a30bd.jpg",
+   "contentIds": [
+    "sha256-cd-v1:e329c6f6987efd8d27979d709f4dd6de5783cec280782841506a2e4a36016f6d"
+   ],
    "description": "Air Combat II with both of its additional scenario disks: a 3D flight and air combat simulation.",
    "developer": "SystemSoft",
    "launchbox": "185134",
    "mobygames": 58110,
    "publisher": "Victor Musical Industries",
    "screenshotUrl": "https://images.launchbox-app.com/399f5e97-bb08-4a2c-9cb1-01bc4cade35e.png",
+   "sourceGroups": [
+    "fmtowns-cd:Air Combat II Special (1993)(Victor Musical)(Jp).zip"
+   ],
    "title": "Air Combat II Special"
   },
   "fmtowns:185170": {
@@ -1979,12 +2545,18 @@
   },
   "fmtowns:186476": {
    "boxArtUrl": "https://images.launchbox-app.com/24feab78-e908-4544-8f0c-09af52730ff5.jpg",
+   "contentIds": [
+    "sha256-cd-v1:86cdaa1be6d39bca975c2f3397877e2783f29ce709420cd5acb232af4acb9899"
+   ],
    "description": "Namco's Libble Rabble: stretch a line between two arrows around mushrooms and enemies to capture them and reveal the picture beneath.",
    "developer": "Namco",
    "launchbox": "186476",
    "mobygames": 58495,
    "publisher": "Dempa Shimbunsha",
    "screenshotUrl": "https://images.launchbox-app.com/fd663ee4-8602-4855-a57a-68d453d0c980.png",
+   "sourceGroups": [
+    "fmtowns-cd:LibbleRabble (1993)(Namco)(Jp-En).zip"
+   ],
    "title": "Libble Rabble"
   },
   "fmtowns:186477": {
@@ -2002,12 +2574,18 @@
     "Blandia"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/a919fb4e-c013-4aca-942e-a172d441a5c0.jpg",
+   "contentIds": [
+    "sha256-cd-v1:4519035c6e842e41aa338652e51343c5e29b33ffc23b29e766a0517500427930"
+   ],
    "description": "A fantasy weapons fighting game on the continent of Eurasia, fought over the resurrection of a demonic power.",
    "developer": "Allumer",
    "launchbox": "186730",
    "mobygames": 54872,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/r2_f6f5d1b5-15e8-4723-b461-28d50ab7d4e5.png",
+   "sourceGroups": [
+    "fmtowns-cd:Blandia (1994)(Ving)(Jp-En)[mp3 source].zip"
+   ],
    "title": "Blandia Plus"
   },
   "fmtowns:187735": {
@@ -2070,12 +2648,18 @@
     "Angel Haloe"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/r2_0316fc45-f192-4b4a-8b47-8dfceb84c8de.jpg",
+   "contentIds": [
+    "sha256-cd-v1:8aa9a305c807f7bea9a61bcc6daae3f785f6b1672451826f950b6a46c4f5178b"
+   ],
    "description": "A visual novel set in 1999, as excitement grows around an ordinary teenager before the new millennium.",
    "developer": "Active Software",
    "launchbox": "187740",
    "mobygames": 47143,
    "publisher": "Active Software",
    "screenshotUrl": "https://images.launchbox-app.com/8bc3c124-f7ff-47d5-b227-f6746f98b98f.png",
+   "sourceGroups": [
+    "fmtowns-cd:Angel Halo (1996)(Active)(Jp)[+BootDisk].zip"
+   ],
    "title": "Angel Halo"
   },
   "fmtowns:187741": {
@@ -2092,22 +2676,34 @@
   },
   "fmtowns:187742": {
    "boxArtUrl": "https://images.launchbox-app.com/c3ebf457-1bfa-4e6c-bef1-829e7a8230f8.jpg",
+   "contentIds": [
+    "sha256-cd-v1:de3805286dadf79660e47530a4ee5d1339c7689b5ed9016486c4e70f56b05836"
+   ],
    "description": "ArtDink's age-of-discovery game: under contract to a 15th-century king, send expeditions to chart and trade with a world that takes shape as it is explored.",
    "developer": "ArtDink",
    "launchbox": "187742",
    "mobygames": 2337,
    "publisher": "ArtDink",
    "screenshotUrl": "https://images.launchbox-app.com/2a91a6c1-dca6-4224-aa02-81663d1674db.png",
+   "sourceGroups": [
+    "fmtowns-cd:Atlas,The (1991)(Artdink)(Jp).zip"
+   ],
    "title": "The Atlas"
   },
   "fmtowns:187743": {
    "boxArtUrl": "https://images.launchbox-app.com/a65e830d-af08-4618-ab5f-7ae59eb68275.jpg",
+   "contentIds": [
+    "sha256-cd-v1:f37fc68b667d07f3a9683697fe2f64e96979a276741cbea16371736471e6cceb"
+   ],
    "description": "The second Atlas: chart, trade and build an empire in a world that is revealed only as it is explored.",
    "developer": "ArtDink",
    "launchbox": "187743",
    "mobygames": 58114,
    "publisher": "ArtDink",
    "screenshotUrl": "https://images.launchbox-app.com/440ad018-1c84-4b3a-8964-1b67ca04f5ed.png",
+   "sourceGroups": [
+    "fmtowns-cd:AtlasII,The (1993)(Artdink)(Jp)[+SystemDisk].zip"
+   ],
    "title": "The Atlas II"
   },
   "fmtowns:187744": {
@@ -2136,12 +2732,18 @@
   "fmtowns:187746": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/b708b7d8-a629-40f2-81aa-e1f48129f45a.jpg",
+   "contentIds": [
+    "sha256-cd-v1:6c307adcdbea4f6fb66fe4feb1b44f7a6471f95808506ab8d826eb83c323de76"
+   ],
    "description": "A version of Ayumi-chan Monogatari with photographed scenes.",
    "developer": "Alice Soft",
    "launchbox": "187746",
    "mobygames": 45883,
    "publisher": "Core Magazine",
    "screenshotUrl": "https://images.launchbox-app.com/720cea06-bd19-4d5d-8edf-d31a691205b2.png",
+   "sourceGroups": [
+    "fmtowns-cd:Ayumichan Monogatari Jissyaban (1995)(Byakuya Shobou)(Jp).zip"
+   ],
    "title": "Ayumi-chan Monogatari: Jisshaban"
   },
   "fmtowns:187747": {
@@ -2172,23 +2774,35 @@
   "fmtowns:187749": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/b70d5a95-8ab8-4e5d-b863-7a7e49261567.jpg",
+   "contentIds": [
+    "sha256-cd-v1:b19e831222a76e91967f9187665c201fd04ea8df2608338e6b13ba35edbf4106"
+   ],
    "description": "A role-playing game in which a young girl is summoned to rescue a kingdom's abducted prince and princess from invading monsters.",
    "developer": "D.O.",
    "launchbox": "187749",
    "mobygames": 42790,
    "publisher": "D.O.",
    "screenshotUrl": "https://images.launchbox-app.com/36292c6b-699a-498d-a65b-3b5574344f9b.png",
+   "sourceGroups": [
+    "fmtowns-cd:Branmarker (1993)(D.O.)(Jp).zip"
+   ],
    "title": "Branmarker"
   },
   "fmtowns:187750": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/9c61d482-e444-4f5c-b503-9bca77c297d0.jpg",
+   "contentIds": [
+    "sha256-cd-v1:6037abb09d091ba0c695916d02f0f3b5612cd77b252b67cc7bdb82fd4add4b6b"
+   ],
    "description": "The Branmarker sequel: the heroine Shami takes on a new quest after completing the first.",
    "developer": "D.O.",
    "launchbox": "187750",
    "mobygames": 42793,
    "publisher": "D.O.",
    "screenshotUrl": "https://images.launchbox-app.com/2397f777-d175-4c3e-bc90-f6647a7f2e7e.png",
+   "sourceGroups": [
+    "fmtowns-cd:Branmarker2 (1995)(D.O.)(Jp)(missing Extra Disc).zip"
+   ],
    "title": "Branmarker 2"
   },
   "fmtowns:187751": {
@@ -2196,12 +2810,18 @@
     "Burai: Kanketsu-hen"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/02ea9184-c830-46fd-bae1-03b518462c5d.jpg",
+   "contentIds": [
+    "sha256-cd-v1:82b84d6ab4384da86b090d596ebbdc88503cc78cf7d392d28642e7d1180ac06c"
+   ],
    "description": "The concluding Burai: the eight heroes chosen by magical pearls continue their quest against the followers of the evil god Daar.",
    "developer": "Riverhill Soft",
    "launchbox": "187751",
    "mobygames": 43759,
    "publisher": "Riverhill Soft",
    "screenshotUrl": "https://images.launchbox-app.com/e61b793a-671b-482b-9267-2037239e0149.png",
+   "sourceGroups": [
+    "fmtowns-cd:Burai Kanketuhen (1991)(Riverhill Soft)(Jp).zip"
+   ],
    "title": "Burai: Gekan: Kanketsu-hen"
   },
   "fmtowns:187752": {
@@ -2235,22 +2855,34 @@
   },
   "fmtowns:187812": {
    "boxArtUrl": "https://images.launchbox-app.com/b2fb9a70-cdb4-456f-b09b-3c638a3adb30.jpg",
+   "contentIds": [
+    "sha256-cd-v1:fd7b404739afdca49638f4f7417fd10944c8bf5df71d2aa589fd629247498872"
+   ],
    "description": "Koei's grand strategy game of Genghis Khan's conquests: unite the Mongol tribes and expand across Asia and Europe through war, diplomacy and governance.",
    "developer": "Koei",
    "launchbox": "187812",
    "mobygames": 1927,
    "publisher": "Koei",
    "screenshotUrl": "https://images.launchbox-app.com/307ac1f5-6b67-4039-a2c4-57c79025f55a.png",
+   "sourceGroups": [
+    "fmtowns-cd:Aokiohkami to Sirokimejika Genchohishi (1993)(Koei)(Jp)[+SystemDisk].zip"
+   ],
    "title": "Aoki Ookami to Shiroki Mejika: Genchou Hishi"
   },
   "fmtowns:187845": {
    "boxArtUrl": "https://images.launchbox-app.com/64d725d9-e51e-4515-a92f-582fe21b4ffb.jpg",
+   "contentIds": [
+    "sha256-cd-v1:7f70211d63a3e774496e5b6ac6668be02420bc8c2148d663ce8df93fde07d13c"
+   ],
    "description": "Riverhill Soft's role-playing game: eight heroes chosen by magical pearls gather to stop the followers of the defeated evil god Daar.",
    "developer": "Riverhill Soft",
    "launchbox": "187845",
    "mobygames": 43758,
    "publisher": "Riverhill Soft",
    "screenshotUrl": "https://images.launchbox-app.com/62fe70de-943f-42e4-986a-97fb330f9332.png",
+   "sourceGroups": [
+    "fmtowns-cd:Burai Jyoukan (1990)(Riverhill Soft)(Jp).zip"
+   ],
    "title": "Burai: Joukan"
   },
   "fmtowns:188060": {
@@ -2284,23 +2916,35 @@
   "fmtowns:188062": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/1161d1d3-5047-4af2-b58a-f44b18ca73d7.jpg",
+   "contentIds": [
+    "sha256-cd-v1:4de412936934fec7cc224c95605dd55c6fd77989a935591c3128348f8d007d83"
+   ],
    "description": "The first two Cal games in one collection; the second opens after the first is finished.",
    "developer": "Birdy Soft",
    "launchbox": "188062",
    "mobygames": 58176,
    "publisher": "Birdy Soft",
    "screenshotUrl": "https://images.launchbox-app.com/bf1b533b-d3b7-4db1-85ec-4c06d38424cc.png",
+   "sourceGroups": [
+    "fmtowns-cd:Cal Towns (1992)(Birdie Soft)(Jp).zip"
+   ],
    "title": "Cal Towns"
   },
   "fmtowns:188063": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/d3e07845-6e38-4028-af36-95ed36cf3b93.jpg",
+   "contentIds": [
+    "sha256-cd-v1:08f5880d0e48dc8453cdfc5ff24f3b38628a0e9ab0834896ce10dbaccf97a6d9"
+   ],
    "description": "An adventure continuing Can Can Bunny, with another lonely hero looking for a girlfriend.",
    "developer": "Cocktail Soft",
    "launchbox": "188063",
    "mobygames": 43154,
    "publisher": "Cocktail Soft",
    "screenshotUrl": "https://images.launchbox-app.com/199e4755-3003-46e0-bf3f-e38c0cd5724f.png",
+   "sourceGroups": [
+    "fmtowns-cd:Can Can Bunny Extra (1993)(Cocktail Soft)(Jp).zip"
+   ],
    "title": "Can Can Bunny Extra"
   },
   "fmtowns:188065": {
@@ -2327,12 +2971,18 @@
   },
   "fmtowns:188068": {
    "boxArtUrl": "https://images.launchbox-app.com/634e3568-71dd-45ca-9adb-cb7bff3b3e5e.jpg",
+   "contentIds": [
+    "sha256-cd-v1:f388fd5205bae245e1ab9e4ac1f04be3c3a338ffe94d101e59035cedd418d4f9"
+   ],
    "description": "Rise from legionnaire to Caesar in 275 BC: conquer provinces through war or diplomacy, fight land and sea battles and hold chariot races.",
    "developer": "Bits of Magic",
    "launchbox": "188068",
    "mobygames": 213,
    "publisher": "Electronic Arts Victor",
    "screenshotUrl": "https://images.launchbox-app.com/4c16107a-f81d-4bca-ac41-f3dbae1199a8.png",
+   "sourceGroups": [
+    "fmtowns-cd:Centurion (1993)(Victor)(Jp).zip"
+   ],
    "title": "Centurion: Defender of Rome"
   },
   "fmtowns:188069": {
@@ -2365,23 +3015,35 @@
     "Custom Mate 2 + Itsuka Dokoka de"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/85694174-d01a-4635-9dda-50ef170fc2fd.jpg",
+   "contentIds": [
+    "sha256-cd-v1:3b66d15f9b2e3edf17528963656e6f1d19a37f1df00c1faf7f61682b693de282"
+   ],
    "description": "Two Cocktail Soft visual novels in one collection: Custom Mate 2 and Itsuka Dokoka de.",
    "developer": "Cocktail Soft",
    "launchbox": "188071",
    "mobygames": 75082,
    "publisher": "IDES",
+   "sourceGroups": [
+    "fmtowns-cd:Custom Mate2 + Itsuka Dokokade (1995)(Cocktail Soft)(Jp)[+SaveDisk].zip"
+   ],
    "title": "Custom Mate 2 & Itsuka Dokoka de.",
    "year": 1995
   },
   "fmtowns:188072": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/df1abfc8-5b35-4276-a55a-dbc2373403d2.jpg",
+   "contentIds": [
+    "sha256-cd-v1:37750cfd89b36c751a982eb3d4dbaec212ee0af3e96d3df760b9021001f79f8b"
+   ],
    "description": "An Alice Soft strategy role-playing game in which a young man is caught in a struggle between two gods.",
    "developer": "Alice Soft",
    "launchbox": "188072",
    "mobygames": 18710,
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/8e6b736c-a9b5-47fc-a16d-60ee8b28a427.png",
+   "sourceGroups": [
+    "fmtowns-cd:Dalk (1993)(Alice Soft)(Jp)[+BootDisk].zip"
+   ],
    "title": "Dalk"
   },
   "fmtowns:188073": {
@@ -2410,24 +3072,36 @@
     "Shinseiki Kouboushi: Dead Force"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/bc7bd2e2-1941-4c21-901d-a7b42b3720ed.jpg",
+   "contentIds": [
+    "sha256-cd-v1:95d060282e4c81e6785460a79e832b22a0859a3ccbce61f482e8992a0459370c"
+   ],
    "description": "A fantasy strategy role-playing game set on a continent divided by the Karma mountain range.",
    "developer": "Fuga System",
    "launchbox": "188108",
    "mobygames": 58145,
    "publisher": "Fuga System",
    "screenshotUrl": "https://images.launchbox-app.com/6b947e69-61c2-4126-bc07-f430953a1664.png",
+   "sourceGroups": [
+    "fmtowns-cd:Dead Force (1995)(Fuga System)(Jp).zip"
+   ],
    "title": "Dead Force",
    "year": 1995
   },
   "fmtowns:188110": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/5496946a-e90a-42a6-a945-8820828cf083.jpg",
+   "contentIds": [
+    "sha256-cd-v1:27510d4774c0a9a7830ee2d3dcc6323f41184936d91bff108476e3a8ebbfc0cd"
+   ],
    "description": "A sci-fi adventure set after a third world war in 1999, from which Japan emerged stronger than before.",
    "developer": "JAST",
    "launchbox": "188110",
    "mobygames": 43164,
    "publisher": "Jast",
    "screenshotUrl": "https://images.launchbox-app.com/5a921d98-4227-4238-8078-f4e51349a16f.png",
+   "sourceGroups": [
+    "fmtowns-cd:Deep (1995)(Jast)(Jp)[+BootDisk].zip"
+   ],
    "title": "Deep",
    "year": 1995
   },
@@ -2437,33 +3111,51 @@
     "De-Ja II"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/9b364a47-ebb0-4e16-bffb-bf71f2db173f.jpg",
+   "contentIds": [
+    "sha256-cd-v1:eed150da14a9184b002d990831d802eb85524cc70a1976f1bd8bcf30fb5b5405"
+   ],
    "description": "The second DE-JA adventure: the young archaeologist Ryuusuke takes on a new mystery.",
    "developer": "Elf",
    "launchbox": "188111",
    "mobygames": 47328,
    "publisher": "elf",
    "screenshotUrl": "https://images.launchbox-app.com/011bda90-e344-4126-b12b-0b2d0dae6e48.png",
+   "sourceGroups": [
+    "fmtowns-cd:DE JAII (1992)(Elf)(Jp).zip"
+   ],
    "title": "DE・JA II"
   },
   "fmtowns:188113": {
    "boxArtUrl": "https://images.launchbox-app.com/0756c77a-db9a-4662-94dd-8f6d593d85ee.jpg",
+   "contentIds": [
+    "sha256-cd-v1:facb51c2f82c37fed108dd6943edf136af8e47de2d0b307d44931de2e469b117"
+   ],
    "description": "ASCII's horse racing simulation: breed and train racehorses and enter them in races.",
    "developer": "ASCII",
    "launchbox": "188113",
    "mobygames": 11183,
    "publisher": "ASCII",
    "screenshotUrl": "https://images.launchbox-app.com/76470df9-fbc5-4433-bc38-940489c41ca5.png",
+   "sourceGroups": [
+    "fmtowns-cd:Derby Stallion (1994)(Ascii)(Jp).zip"
+   ],
    "title": "Derby Stallion",
    "year": 1994
   },
   "fmtowns:188114": {
    "boxArtUrl": "https://images.launchbox-app.com/deed1c41-0759-4816-be84-011b68adfd0b.jpg",
+   "contentIds": [
+    "sha256-cd-v1:d30634891a4d2605c321982111053ed46ceda9018a5494515b07c31deca137bb"
+   ],
    "description": "A follow-up to Gekirin: years after the hero claimed the legendary sword, a new adventure begins.",
    "developer": "Nihon Application",
    "launchbox": "188114",
    "mobygames": 58226,
    "publisher": "Nihon Application",
    "screenshotUrl": "https://images.launchbox-app.com/706dcea2-b36f-43d3-b767-6cb86e54b5e1.png",
+   "sourceGroups": [
+    "fmtowns-cd:Die Gekirin (1995)(NAC)(Jp).zip"
+   ],
    "title": "Die Gekirin"
   },
   "fmtowns:188115": {
@@ -2471,12 +3163,18 @@
     "Gekirin: Ushinawareshi Houken"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/d2193ee4-e002-489d-adf7-2d6cb6d56698.jpg",
+   "contentIds": [
+    "sha256-cd-v1:76050130d8d687d466bd47d763bdbb6f8c22710e9e3d12fe495f59d5ef505051"
+   ],
    "description": "An action role-playing game without a story: a nameless adventurer explores an abstract medieval world.",
    "developer": "Nihon Application",
    "launchbox": "188115",
    "mobygames": 58188,
    "publisher": "Nihon Application",
    "screenshotUrl": "https://images.launchbox-app.com/5c02d605-f6bd-454c-b71a-c2580064471f.png",
+   "sourceGroups": [
+    "fmtowns-cd:Gekirin (1994)(NAC)(Jp).zip"
+   ],
    "title": "Gekirin",
    "year": 1994
   },
@@ -2494,24 +3192,36 @@
   "fmtowns:188117": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/b8f17ccc-8361-4ff0-ab0e-1088db27b2bb.jpg",
+   "contentIds": [
+    "sha256-cd-v1:e531a2bec3d554f55aa2a1ee74130feaf2053d3ed87aeb6fb30af3816c650def"
+   ],
    "description": "Elf's dating adventure: a high school student spends his summer vacation getting to know the girls of his town, with each day's events shaped by where he goes.",
    "developer": "Elf",
    "launchbox": "188117",
    "mobygames": 44026,
    "publisher": "elf",
    "screenshotUrl": "https://images.launchbox-app.com/dd4ad0dc-8aa8-4693-9d70-a65ed3366650.png",
+   "sourceGroups": [
+    "fmtowns-cd:Doukyusei (1993)(Elf)(Jp).zip"
+   ],
    "title": "Doukyuusei",
    "year": 1993
   },
   "fmtowns:188118": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/eee7257b-c7c2-4a0e-90ef-b134aba3405d.jpg",
+   "contentIds": [
+    "sha256-cd-v1:50ce4c18c3549b1694ab43e83b695ba956987eeaa836f7a75d666d23a310fa30"
+   ],
    "description": "Elf's dating adventure sequel: a student spends his winter break in his town getting to know its girls.",
    "developer": "Elf",
    "launchbox": "188118",
    "mobygames": 16065,
    "publisher": "elf",
    "screenshotUrl": "https://images.launchbox-app.com/19d81de4-b991-4938-8dfe-3215c99c642f.png",
+   "sourceGroups": [
+    "fmtowns-cd:Doukyusei2 (1995)(Elf)(Jp).zip"
+   ],
    "title": "Doukyuusei 2"
   },
   "fmtowns:188119": {
@@ -2520,12 +3230,18 @@
     "DOR SE Sakigake: Battle Hold in Ashikaga Kougyou Koukou"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/4d1e7a4f-db1b-4de2-8148-483fd62abc0c.jpg",
+   "contentIds": [
+    "sha256-cd-v1:dc0f270c09f638bce5a588416e292fe851801e0b09945f6ea6d2dcebd3c010bf"
+   ],
    "description": "A DOR entry built around a single scenario instead of the series' usual three.",
    "developer": "D.O.",
    "launchbox": "188119",
    "mobygames": 47473,
    "publisher": "D.O.",
    "screenshotUrl": "https://images.launchbox-app.com/9e9285d8-5d78-479b-8d7b-2a53576ee7de.png",
+   "sourceGroups": [
+    "fmtowns-cd:DOR Special Edition Sakigake (1993)(D.O.)(Jp).zip"
+   ],
    "title": "DOR Special Edition: Sakigake"
   },
   "fmtowns:188120": {
@@ -2546,11 +3262,17 @@
   "fmtowns:188121": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/4d179193-b3a6-4b01-8488-a0be79364b98.jpg",
+   "contentIds": [
+    "sha256-cd-v1:63038438c482fd704c84ddfd3272bc9ef1cf9b774a0709623de3992a8b597628"
+   ],
    "description": "Every scenario from Alice Soft's Dream Program System series, fifteen in all, in one collection.",
    "developer": "Alice Soft",
    "launchbox": "188121",
    "mobygames": 47529,
    "publisher": "Alice Soft",
+   "sourceGroups": [
+    "fmtowns-cd:DPS Zenbu(req.HD Install) (1995)(Alice Soft)(Jp).zip"
+   ],
    "title": "D.P.S. Zenbu",
    "year": 1995
   },
@@ -2572,24 +3294,36 @@
   "fmtowns:188123": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/a9ce0f73-7d7c-4dcd-95ca-420c21050248.jpg",
+   "contentIds": [
+    "sha256-cd-v1:c42ca15983296b84c5dbaf9c27f242d49053d77a4dccd161d5ef60dd545cfe21"
+   ],
    "description": "The fourth Dragon Knight, a tactical role-playing game: years after the earlier games, a new generation faces returning evil.",
    "developer": "Elf",
    "launchbox": "188123",
    "mobygames": 9704,
    "publisher": "elf",
    "screenshotUrl": "https://images.launchbox-app.com/d3ca4a41-de3a-4fc0-85d3-1ceb54c1cc04.png",
+   "sourceGroups": [
+    "fmtowns-cd:Dragon Knight4 (1994)(Elf)(Jp).zip"
+   ],
    "title": "Dragon Knight 4",
    "year": 1994
   },
   "fmtowns:188125": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/e3dafb46-e17b-4d98-8413-55fb6c9e9712.jpg",
+   "contentIds": [
+    "sha256-cd-v1:367213bdce9d146fa20e5cae17ce09c4c7a30ebef2ac47c77d72c5a4a716dca1"
+   ],
    "description": "The third Dragon Knight, a real-time role-playing game: the warrior Takeru, robbed of his gear, sets out on a new journey.",
    "developer": "Elf",
    "launchbox": "188125",
    "mobygames": 1665,
    "publisher": "elf",
    "screenshotUrl": "https://images.launchbox-app.com/e1503774-d8ed-4d2d-8d77-3885f9fab996.png",
+   "sourceGroups": [
+    "fmtowns-cd:Dragon Knight III (1991)(Elf)(Jp).zip"
+   ],
    "title": "Dragon Knight III"
   },
   "fmtowns:188126": {
@@ -2597,12 +3331,18 @@
     "El-Fish"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/b7cdc02c-73e5-4e5b-b57e-b6c5a22419b1.jpg",
+   "contentIds": [
+    "sha256-cd-v1:03d5af2cbf3f0544fc082ded8121be8f7384a7b213d777c36b47d852b6c40791"
+   ],
    "description": "An aquarium simulator: catch, breed and evolve tropical fish, then watch them swim in rendered tanks.",
    "developer": "AnimaTek International",
    "launchbox": "188126",
    "mobygames": 314,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/c994bfc7-75fe-4ff0-b5ca-317b7f5d191c.png",
+   "sourceGroups": [
+    "fmtowns-cd:Elfish(req.HD Install) (1994)(Fujitsu)(Jp).zip"
+   ],
    "title": "Elfish"
   },
   "fmtowns:188127": {
@@ -2665,12 +3405,18 @@
     "Giga Mortion"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/bab3f7a8-840d-46fc-9733-277f84db7f20.jpg",
+   "contentIds": [
+    "sha256-cd-v1:b104e720e8b072e20d311d08dbdf86221ec8d99daf48fab3d28d12cf79f00c31"
+   ],
    "description": "An isometric fantasy role-playing game: a young man named Jackie is drawn into an adventure.",
    "developer": "Inter Heart",
    "launchbox": "188132",
    "mobygames": 58400,
    "publisher": "Inter Heart",
    "screenshotUrl": "https://images.launchbox-app.com/22437564-756a-4622-97c5-bf0585486c18.png",
+   "sourceGroups": [
+    "fmtowns-cd:Giga Motion (1995)(InterHeart)(Jp).zip"
+   ],
    "title": "Giga Motion",
    "year": 1995
   },
@@ -2737,12 +3483,18 @@
   },
   "fmtowns:188138": {
    "boxArtUrl": "https://images.launchbox-app.com/da6f4f8e-dcdc-442e-b67c-b3d79c916b35.jpg",
+   "contentIds": [
+    "sha256-cd-v1:8c41b26e99ad452e09e45845151721eded04ccb28aade574551a875df769aff3"
+   ],
    "description": "A fantasy role-playing game: an apprentice swordsman leaves his master's secluded tower to make his way in the world.",
    "developer": "Kinpukurin",
    "launchbox": "188138",
    "mobygames": 44176,
    "publisher": "Kinpukurin",
    "screenshotUrl": "https://images.launchbox-app.com/16e495ab-a8d7-4269-bc97-bf075750a25f.png",
+   "sourceGroups": [
+    "fmtowns-cd:Free Will -Knight of Argent- (1992)(Sofcom)(Jp).zip"
+   ],
    "title": "Free Will: Knight of Argent"
   },
   "fmtowns:188140": {
@@ -2757,12 +3509,18 @@
   "fmtowns:188141": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/ce77db58-f3e5-410a-a0e2-3cb9ce129c5a.jpg",
+   "contentIds": [
+    "sha256-cd-v1:dc5aee8d1f76dc9d2a706c5ad9e879de984ce6a3e25227c650a26af382c54c4b"
+   ],
    "description": "Alice Soft's school-building game set in Meiji-era Japan: a young heir founds and runs his own school.",
    "developer": "Alice Soft",
    "launchbox": "188141",
    "mobygames": 44180,
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/18a03daa-a8d2-46ff-afdf-368754382eed.png",
+   "sourceGroups": [
+    "fmtowns-cd:Gakuen King(req.Hd Install) (1996)(Alice Soft)(Jp).zip"
+   ],
    "title": "Gakuen King: Hidehiko Gakkou o Tsukuru",
    "year": 1996
   },
@@ -2780,12 +3538,18 @@
   "fmtowns:188143": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/a3471256-921f-4265-896d-a7edc4c75e7d.jpg",
+   "contentIds": [
+    "sha256-cd-v1:cfed419790d98142714bb0a4d3799ed15b8e857c01e477860ad47c44457eb3f4"
+   ],
    "description": "A collection of three Game Technopolis adventures, with bonus content.",
    "developer": "Game Technopolis",
    "launchbox": "188143",
    "mobygames": 78314,
    "publisher": "Tokuma Shoten Intermedia",
    "screenshotUrl": "https://images.launchbox-app.com/54741638-3e21-4488-a040-10ce3bedcb5b.png",
+   "sourceGroups": [
+    "fmtowns-cd:Game Technopolis Super Collection1 (1992)(Tokuma Shoten)(Jp).zip"
+   ],
    "title": "Game Technopolis Super Collection 1"
   },
   "fmtowns:188144": {
@@ -2801,12 +3565,18 @@
   },
   "fmtowns:188165": {
    "boxArtUrl": "https://images.launchbox-app.com/9844cb00-fa41-4994-9b1c-872bc114dc6b.jpg",
+   "contentIds": [
+    "sha256-cd-v1:ac79b2d1b6cda075612b890bb2fa9422eeef8f4d36d788249ad52a291ffd7ea9"
+   ],
    "description": "Koei's age-of-exploration game: as heir to a fallen Portuguese family, trade, explore and fight at sea to restore its fortune.",
    "developer": "Koei",
    "launchbox": "188165",
    "mobygames": 1903,
    "publisher": "Koei",
    "screenshotUrl": "https://images.launchbox-app.com/f103eef6-a45b-4ce9-9af6-fb2cf7c37502.png",
+   "sourceGroups": [
+    "fmtowns-cd:Dai Koukai Jidai (1990)(Koei)(Jp)[+UserDisk].zip"
+   ],
    "title": "Daikoukai Jidai"
   },
   "fmtowns:188167": {
@@ -2822,70 +3592,106 @@
   "fmtowns:188168": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/81abd69e-c9ca-4cf3-8035-b2120878affb.jpg",
+   "contentIds": [
+    "sha256-cd-v1:1fe0d6d9d74dea4db7c1ac3cd81294c53261eac966d6cba4ff5fd649c6756167"
+   ],
    "description": "A role-playing game set in 19th-century London: a young private detective named Mark Flint takes on a case.",
    "developer": "Active Software",
    "launchbox": "188168",
    "mobygames": 44267,
    "publisher": "Active Software",
    "screenshotUrl": "https://images.launchbox-app.com/cfe16f65-2dda-4010-8a1b-09d544154760.png",
+   "sourceGroups": [
+    "fmtowns-cd:Gun Blaze (1994)(Active)(Jp).zip"
+   ],
    "title": "GunBlaze",
    "year": 1994
   },
   "fmtowns:188169": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/79cef446-ff81-4938-bff4-911fc0e7d369.jpg",
+   "contentIds": [
+    "sha256-cd-v1:46e5c82fd9f36c261a68d528071056d5c1eb32ccc6eae4aa882bfba789caec1a"
+   ],
    "description": "A visual novel of five episodes, chosen from the main menu.",
    "developer": "Foster",
    "launchbox": "188169",
    "mobygames": 47860,
    "publisher": "Foster",
    "screenshotUrl": "https://images.launchbox-app.com/c5e74a21-40ac-4bd7-90f3-39cc104d61a6.png",
+   "sourceGroups": [
+    "fmtowns-cd:Hana no Kioku (1995)(Foster)(Jp).zip"
+   ],
    "title": "Hana no Kioku",
    "year": 1995
   },
   "fmtowns:188170": {
    "boxArtUrl": "https://images.launchbox-app.com/02d819ce-ef8a-4111-880a-17d645fe379f.jpg",
+   "contentIds": [
+    "sha256-cd-v1:9692af1b3f961786c7f8c5e580493038ae439251dbc7a3c1c64b1d82dc1a091f"
+   ],
    "description": "A real-time strategy and action game: the serving lad Chauncey, given a magic sword, defends his villages from the hungry Horde while building them up.",
    "developer": "Toys for Bob",
    "launchbox": "188170",
    "mobygames": 6142,
    "publisher": "Arrow Micro-Techs",
    "screenshotUrl": "https://images.launchbox-app.com/c6c4ce93-1b0b-444f-bfac-aba1558728f1.png",
+   "sourceGroups": [
+    "fmtowns-cd:Horde,The(req.HD Install) (1995)(AMT)(Jp).zip"
+   ],
    "title": "The Horde",
    "year": 1995
   },
   "fmtowns:188171": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/6c08d424-c60c-4d7b-aa9f-2db2522ef433.jpg",
+   "contentIds": [
+    "sha256-cd-v1:92a67cbc926a8bc79f5241824dbaab7957422daf6f091c71b74c74d56bcb0583"
+   ],
    "description": "A mystery adventure about a 19-year-old living in a boarding house.",
    "developer": "D.O.",
    "launchbox": "188171",
    "mobygames": 44320,
    "publisher": "D.O.",
    "screenshotUrl": "https://images.launchbox-app.com/cb7d3aa3-5bc9-4759-a9f2-f326c06c5118.png",
+   "sourceGroups": [
+    "fmtowns-cd:Hoshi no Suna Monogatari (1992)(D.O.)(Jp).zip"
+   ],
    "title": "Hoshi no Suna Monogatari"
   },
   "fmtowns:188172": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/efba4247-d46d-4334-87ab-9228b58fc7dd.jpg",
+   "contentIds": [
+    "sha256-cd-v1:f98d95d9a441feedf76c95387c60c88b950ddc3b883ca89c766fbe14570085ec"
+   ],
    "description": "The second Hoshi no Suna Monogatari mystery adventure, with another case for its young amateur detective.",
    "developer": "D.O.",
    "launchbox": "188172",
    "mobygames": 44321,
    "publisher": "D.O.",
    "screenshotUrl": "https://images.launchbox-app.com/21d85f4b-437d-4145-a967-cf2fc1c2e0e0.png",
+   "sourceGroups": [
+    "fmtowns-cd:Hoshi no Suna Monogatari2 (1992)(D.O.)(Jp).zip"
+   ],
    "title": "Hoshi no Suna Monogatari 2",
    "year": 1992
   },
   "fmtowns:188173": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/1e15246d-bc40-48be-b3ba-a62b68049dc8.jpg",
+   "contentIds": [
+    "sha256-cd-v1:f665022d647b8dcd5b01b15ca2c5d714239ef521d27728d60192cd441ec9b136"
+   ],
    "description": "The third Hoshi no Suna Monogatari mystery adventure, with a new protagonist.",
    "developer": "D.O.",
    "launchbox": "188173",
    "mobygames": 44322,
    "publisher": "D.O.",
    "screenshotUrl": "https://images.launchbox-app.com/58792494-c975-4169-a3e5-d33b0741b5eb.png",
+   "sourceGroups": [
+    "fmtowns-cd:Hoshi no Suna Monogatari3 (1995)(D.O.)(Jp).zip"
+   ],
    "title": "Hoshi no Suna Monogatari 3"
   },
   "fmtowns:188174": {
@@ -2916,22 +3722,34 @@
   },
   "fmtowns:188176": {
    "boxArtUrl": "https://images.launchbox-app.com/1880ccf5-0a96-44b7-9275-8273426de1e1.jpg",
+   "contentIds": [
+    "sha256-cd-v1:146abf2b1c740ea464359db94e8ed31308ecbbb3bf1b02307a77d6e524e56fbc"
+   ],
    "description": "Go, the ancient board game, against the computer at several difficulty levels.",
    "developer": "ASCII",
    "launchbox": "188176",
    "mobygames": 58461,
    "publisher": "ASCII",
    "screenshotUrl": "https://images.launchbox-app.com/aea14975-0331-4d99-8607-62e78d08c5a7.png",
+   "sourceGroups": [
+    "fmtowns-cd:IgoII (1989)(Ascii)(Jp).zip"
+   ],
    "title": "Igo II"
   },
   "fmtowns:188177": {
    "boxArtUrl": "https://images.launchbox-app.com/fe94f45d-0e11-4999-9f71-7904f5c75c8e.jpg",
+   "contentIds": [
+    "sha256-cd-v1:cdc453513f4dd065732bec4313f7edf2ae804ed91069391a5fb87f7a1d37f851"
+   ],
    "description": "Build Rube Goldberg contraptions from ropes, balloons, conveyors and animals to solve each puzzle's simple goal.",
    "developer": "Jeff Tunnell Productions",
    "launchbox": "188177",
    "mobygames": 2473,
    "publisher": "Cybelle",
    "screenshotUrl": "https://images.launchbox-app.com/c6482a24-84da-4cad-ba59-ac980d4bf76e.png",
+   "sourceGroups": [
+    "fmtowns-cd:Incredible Machine,The (1994)(Cybelle)(Jp).zip"
+   ],
    "title": "The Incredible Machine",
    "year": 1994
   },
@@ -2953,12 +3771,18 @@
     "Injuu Gakuen: La Blue Girl"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/r2_0229947a-591e-4ac6-b18b-7bdd1378ea92.png",
+   "contentIds": [
+    "sha256-cd-v1:549fadbcbe03740296e505dbe3540bffd74f8728c04669f57af7a4d8b801d62e"
+   ],
    "description": "An adventure based on La Blue Girl, about a schoolgirl from a ninja family.",
    "developer": "Dez Climax",
    "launchbox": "188179",
    "mobygames": 53145,
    "publisher": "Dez Climax",
    "screenshotUrl": "https://images.launchbox-app.com/09d6ea7e-098e-4246-90ec-d89195be29e7.png",
+   "sourceGroups": [
+    "fmtowns-cd:Inju Gakuen (1994)(Dez Soft Network)(Jp).zip"
+   ],
    "title": "Inju Gakuen: La Blue Girl",
    "year": 1994
   },
@@ -2990,12 +3814,18 @@
     "Ishidoo: The Way of Stones"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/bb4a3dda-6093-40a8-8559-ad785ccb4c38.jpg",
+   "contentIds": [
+    "sha256-cd-v1:98e735bc320169913fffe1f0816720f96ca6fa54abcc8d959a6c4c352faefb3f"
+   ],
    "description": "A solitaire tile game: place each stone next to tiles that match its color or symbol, scoring most for stones that touch four neighbors.",
    "developer": "Publishing International",
    "launchbox": "188182",
    "mobygames": 4253,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/015466ef-c88e-4072-8f23-e8207272cb65.png",
+   "sourceGroups": [
+    "fmtowns-cd:Ishido (1990)(Fujitsu)(Jp-En).zip"
+   ],
    "title": "Ishido: The Way of Stones"
   },
   "fmtowns:188183": {
@@ -3011,44 +3841,68 @@
   "fmtowns:188184": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/d4b8df08-f8a8-4243-b4d8-d1e2274dbc2c.jpg",
+   "contentIds": [
+    "sha256-cd-v1:55e49ec4d8876f96f959d4fbea3a5efe3d0c485ab82fc5978ba962f93cbf37ac"
+   ],
    "description": "A mahjong game with a story: a young man sets out to help a woman in trouble.",
    "developer": "Elf",
    "launchbox": "188184",
    "mobygames": 48491,
    "publisher": "elf",
    "screenshotUrl": "https://images.launchbox-app.com/35833db3-c070-424d-bcc2-0bb7a0bbb152.png",
+   "sourceGroups": [
+    "fmtowns-cd:Jan Jaka Jan (1993)(Elf)(Jp).zip"
+   ],
    "title": "Jan Jaka Jan",
    "year": 1993
   },
   "fmtowns:188185": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/4fcddac7-0a1f-4922-ac36-4600837208bf.jpg",
+   "contentIds": [
+    "sha256-cd-v1:ac8e42928c0608fed41248f6f99d313c6625015f3aaf7e6716ac9964611b4c3e"
+   ],
    "developer": "Fairytale Red Zone",
    "launchbox": "188185",
    "mobygames": 58462,
    "publisher": "Fairytale Red Zone",
    "screenshotUrl": "https://images.launchbox-app.com/57831fcf-9e16-47e4-9a65-17f895bc92eb.png",
+   "sourceGroups": [
+    "fmtowns-cd:Jankirou (1994)(Fairytale)(Jp).zip"
+   ],
    "title": "Jankirou"
   },
   "fmtowns:188186": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/48c0704a-ffb4-4b7f-a8e7-444e6113b201.jpg",
+   "contentIds": [
+    "sha256-cd-v1:1f163deb4ec338ae9ef44ca236b78639624579b3eb5aca6a089bf438b89af5bd"
+   ],
    "description": "A visual novel in which a young man's ordinary evening takes an unexpected turn.",
    "developer": "Inter Heart",
    "launchbox": "188186",
    "mobygames": 48493,
    "publisher": "Inter Heart",
    "screenshotUrl": "https://images.launchbox-app.com/c51cd480-e9b0-4bc2-b0ab-5699d94c7690.png",
+   "sourceGroups": [
+    "fmtowns-cd:Jealousy (1995)(InterHeart)(Jp).zip"
+   ],
    "title": "Jealousy"
   },
   "fmtowns:188187": {
    "boxArtUrl": "https://images.launchbox-app.com/7b532f3c-321a-4b10-ab47-5204c3eb37bf.jpg",
+   "contentIds": [
+    "sha256-cd-v1:54230f28509c144e9c6b7e40752307d03fd06652874754113934401fa12e6d3b"
+   ],
    "description": "A turn-based fantasy strategy game of rival nations on a semi-medieval continent.",
    "developer": "Panther Software",
    "launchbox": "188187",
    "mobygames": 58466,
    "publisher": "Panther Software",
    "screenshotUrl": "https://images.launchbox-app.com/3abacd4a-0b8e-4b7d-ae3f-262c58f30898.png",
+   "sourceGroups": [
+    "fmtowns-cd:Joshua (1992)(Panther Software)(Jp).zip"
+   ],
    "title": "Joshua"
   },
   "fmtowns:188188": {
@@ -3072,12 +3926,18 @@
   },
   "fmtowns:188190": {
    "boxArtUrl": "https://images.launchbox-app.com/4a725bd3-aebc-4548-a026-366880687768.jpg",
+   "contentIds": [
+    "sha256-cd-v1:dee596e23affd9381a3996f2ebc0b887b6f6098a2f0d9fa5f8efb3af1ab69550"
+   ],
    "description": "Riverhill Soft's role-playing game set on Shizuni, a glowing planet of the star Vanas, where humans have built a civilization.",
    "developer": "Riverhill Soft",
    "launchbox": "188190",
    "mobygames": 44357,
    "publisher": "Riverhill Soft",
    "screenshotUrl": "https://images.launchbox-app.com/7d253bf4-ee15-4b6c-beee-b2ac3afcbcc4.png",
+   "sourceGroups": [
+    "fmtowns-cd:Kigen (19xx)(Riverhill Soft)(Jp).zip"
+   ],
    "title": "Kigen: Kagayaki no Hasha",
    "year": 1992
   },
@@ -3103,12 +3963,18 @@
   },
   "fmtowns:188194": {
    "boxArtUrl": "https://images.launchbox-app.com/cfaba123-0702-4c9a-bcd1-04fbfc55a2ac.jpg",
+   "contentIds": [
+    "sha256-cd-v1:7caa3f4a662ed82cd1fd38abea7851cbd91cdc45510fbb66d8c73a6e796375ba"
+   ],
    "description": "The second Kiwame shogi program, with stronger computer opponents.",
    "developer": "LOG",
    "launchbox": "188194",
    "mobygames": 58489,
    "publisher": "LOG",
    "screenshotUrl": "https://images.launchbox-app.com/0b46d48a-e906-45f0-b7ca-bb352715b4b4.png",
+   "sourceGroups": [
+    "fmtowns-cd:KiwameII (1994)(Log)(Jp).zip"
+   ],
    "title": "Kiwame II"
   },
   "fmtowns:188195": {
@@ -3117,11 +3983,17 @@
     "Kyan Kyan Collection: Daifugouhen"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/f0ca0651-4e20-4861-95c2-cc4b2cf73bb8.jpg",
+   "contentIds": [
+    "sha256-cd-v1:2b2858e1f4d2b409a9c991f0e3231573a7202ce149f66c41e10e2eb5d4ee9deb"
+   ],
    "developer": "I-cell",
    "launchbox": "188195",
    "mobygames": 58491,
    "publisher": "I-cell",
    "screenshotUrl": "https://images.launchbox-app.com/a12de359-fe4f-430d-93e0-78649f426063.png",
+   "sourceGroups": [
+    "fmtowns-cd:Kyan Kyan Collection (1989)(Icell)(Jp).zip"
+   ],
    "title": "Kyan Kyan Collection"
   },
   "fmtowns:188196": {
@@ -3137,22 +4009,34 @@
   },
   "fmtowns:188197": {
    "boxArtUrl": "https://images.launchbox-app.com/39390b99-983b-4c44-8a58-74c51f02a142.jpg",
+   "contentIds": [
+    "sha256-cd-v1:92b3ecc5db510a58014a2509f790b47fce07bc69df31501c6ab7154806a1b3e2"
+   ],
    "description": "A fantasy role-playing game in a world shaped by two primordial dragons, one red and one blue.",
    "developer": "Panther Software",
    "launchbox": "188197",
    "mobygames": 58492,
    "publisher": "Panther Software",
    "screenshotUrl": "https://images.launchbox-app.com/83e4700c-4089-4c02-8b1c-05a2f41f1504.png",
+   "sourceGroups": [
+    "fmtowns-cd:Lesser Mern (1992)(Panther Software)(Jp).zip"
+   ],
    "title": "Lesser Mern"
   },
   "fmtowns:188198": {
    "boxArtUrl": "https://images.launchbox-app.com/593e45dd-628c-43e2-9407-ab0b4bc8736b.jpg",
+   "contentIds": [
+    "sha256-cd-v1:16cbf4ac598802b3b34c85e6ffb15388bd0a58153235b6c00d53205f72768810"
+   ],
    "description": "A hospital simulation: diagnose patients' abdominal complaints, order tests and treatments, and perform surgery.",
    "developer": "The Software Toolworks",
    "launchbox": "188198",
    "mobygames": 109,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/0d2c7b22-02ac-437c-af3c-d3d0031aeeb2.png",
+   "sourceGroups": [
+    "fmtowns-cd:Life & Death (1992)(Ving)(Jp).zip"
+   ],
    "title": "Life & Death"
   },
   "fmtowns:188200": {
@@ -3181,23 +4065,35 @@
   },
   "fmtowns:188203": {
    "boxArtUrl": "https://images.launchbox-app.com/b0123a48-e245-4934-99e4-6bc0c9a5aa3d.jpg",
+   "contentIds": [
+    "sha256-cd-v1:6c80e80deeaa2627782fb1fd7746e35bfb557ab51bb6b15549b2071b8e59c93e"
+   ],
    "description": "ArtDink's open-ended fantasy role-playing game: an adventurer takes jobs, explores and builds a reputation in a living world.",
    "developer": "ArtDink",
    "launchbox": "188203",
    "mobygames": 44478,
    "publisher": "ArtDink",
    "screenshotUrl": "https://images.launchbox-app.com/d31ae317-50af-40c0-b14e-f35285e098a3.png",
+   "sourceGroups": [
+    "fmtowns-cd:Lunatic Dawn II (1994)(Artdink)(Jp)[+UserDisk].zip"
+   ],
    "title": "Lunatic Dawn II"
   },
   "fmtowns:188204": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/0423696e-bdef-48b1-b026-760fdbce42a2.jpg",
+   "contentIds": [
+    "sha256-cd-v1:8314a2767ebcbfd9b1723a7468e0af301e8121973a00b1fb8417864b6f8fa5de"
+   ],
    "description": "A role-playing game of revenge: the hero hunts the man named Gorgus who killed his father.",
    "developer": "Queen Soft",
    "launchbox": "188204",
    "mobygames": 9702,
    "publisher": "Queen Soft",
    "screenshotUrl": "https://images.launchbox-app.com/aa60e96f-92d0-47d6-898c-7651ebf7f03b.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mad Paradox (1994)(Queen Soft)(Jp).zip"
+   ],
    "title": "Mad Paradox"
   },
   "fmtowns:188205": {
@@ -3248,12 +4144,18 @@
   "fmtowns:188214": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/a98de301-c431-4ea3-8688-b735b1905121.jpg",
+   "contentIds": [
+    "sha256-cd-v1:c7b16d19470f45a73495107d6ebdc097fe514b110aed6cbd17ef9821f9e81532"
+   ],
    "description": "A fantasy role-playing game about a child born as a comet approached Earth.",
    "developer": "Discovery",
    "launchbox": "188214",
    "mobygames": 44597,
    "publisher": "Discovery",
    "screenshotUrl": "https://images.launchbox-app.com/48004245-ce03-4b88-8b76-414d93481345.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mirage (1993)(Intergalactic Development).zip"
+   ],
    "title": "Mirage"
   },
   "fmtowns:188215": {
@@ -3286,43 +4188,67 @@
   "fmtowns:188218": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/df73832a-4d4e-4e84-acc0-a309c11f5571.jpg",
+   "contentIds": [
+    "sha256-cd-v1:e551f146a7c0f84f7736d9d5e2660c3a73484e2a9187b21ded27d3a9743c686f"
+   ],
    "developer": "Active Software",
    "launchbox": "188218",
    "mobygames": 58499,
    "publisher": "Active Software",
    "screenshotUrl": "https://images.launchbox-app.com/ce63a31b-6c74-4f24-84b1-313bcf52bda7.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mahjong de Pon! (1994)(Active)(Jp).zip"
+   ],
    "title": "Mahjong de Pon!",
    "year": 1994
   },
   "fmtowns:188219": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/a85c903a-5979-4822-9b75-faeab1fcbe04.jpg",
+   "contentIds": [
+    "sha256-cd-v1:758102887d65fba775aed33f6f8fed5b4bc4d595b605fe5f630b5a6d33e2ea45"
+   ],
    "developer": "Queen Soft",
    "launchbox": "188219",
    "mobygames": 58505,
    "publisher": "Queen Soft",
    "screenshotUrl": "https://images.launchbox-app.com/59b32ae7-45b6-4544-98c6-6b338c7301c2.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mahjong Houteiraoyui (1995)(Queen Soft)(Jp).zip"
+   ],
    "title": "Mahjong Houtei Raoyui"
   },
   "fmtowns:188220": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/0c4fcbe3-003b-44dc-ba06-53fa58381225.jpg",
+   "contentIds": [
+    "sha256-cd-v1:e5d8e39e5db41d0e37939012e35b2414fdb445cc2afbec3cfc4d1848c0246afa"
+   ],
    "description": "A mahjong game with story and versus modes.",
    "developer": "Foresight",
    "launchbox": "188220",
    "mobygames": 53226,
    "publisher": "Foresight",
    "screenshotUrl": "https://images.launchbox-app.com/e2875749-1d18-4b9b-ab77-fe5cccaca9d7.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mandarake Ichizoku (1995)(Foresight)(Jp).zip"
+   ],
    "title": "Mandala Keichizoku"
   },
   "fmtowns:188222": {
    "boxArtUrl": "https://images.launchbox-app.com/125358d6-f6c8-4064-ab9c-6dde8216e7ee.jpg",
+   "contentIds": [
+    "sha256-cd-v1:5d3af31efac4c9d621e43bbda1ef267124e63698fa788fb31b3927b510fed795"
+   ],
    "description": "Cyan's exploration game for children: open a manhole to find a giant beanstalk and wander a dreamlike world of talking animals.",
    "developer": "Cyan",
    "launchbox": "188222",
    "mobygames": 10711,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/52c53bea-b6b6-4177-90bd-5ba122a4f64b.png",
+   "sourceGroups": [
+    "fmtowns-cd:Manhole,The (1990)(Fujitsu)(Jp).zip"
+   ],
    "title": "The Manhole",
    "year": 1990
   },
@@ -3358,22 +4284,34 @@
   },
   "fmtowns:188226": {
    "boxArtUrl": "https://images.launchbox-app.com/5c550088-395d-42bc-b2d8-9b6a753ebe7e.jpg",
+   "contentIds": [
+    "sha256-cd-v1:30733908c29da3a033ea033bd79fc0481022c2ab8af534a013e5087af8d2d598"
+   ],
    "description": "A fantasy role-playing game: the powerful kingdom of Ishut, protector of the continent's peace, is suddenly attacked.",
    "developer": "Kinpukurin",
    "launchbox": "188226",
    "mobygames": 58142,
    "publisher": "Kinpukurin",
    "screenshotUrl": "https://images.launchbox-app.com/d55b0b89-9b25-4ee8-aa4f-7da66d39b35b.png",
+   "sourceGroups": [
+    "fmtowns-cd:Blue (1992)(Kinpukurin)(Jp).zip"
+   ],
    "title": "Blue: Will to Power"
   },
   "fmtowns:188261": {
    "boxArtUrl": "https://images.launchbox-app.com/67e52ffe-41e7-4fe6-9ab9-e1994b6705b4.jpg",
+   "contentIds": [
+    "sha256-cd-v1:0d9f22462ec771d941e667f45d901b0e563957a59602f8fa94ac820db8964945"
+   ],
    "description": "A horror mystery adventure originally made for the PC-88, played through menu commands.",
    "developer": "Soft Studio Wing",
    "launchbox": "188261",
    "mobygames": 41354,
    "publisher": "Apros",
    "screenshotUrl": "https://images.launchbox-app.com/861d0c79-148b-40e8-bcc9-6919a8aded77.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mirrors (1992)(Views)(Jp).zip"
+   ],
    "title": "Mirrors"
   },
   "fmtowns:188262": {
@@ -3392,22 +4330,34 @@
   "fmtowns:188263": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/5decfea1-148a-48d4-8298-dc20b8946726.jpg",
+   "contentIds": [
+    "sha256-cd-v1:ba5efc30d7ec355d4612ccd76ad78238aa7183b4272f87f5ab0a2e0f8f22210a"
+   ],
    "developer": "D.O.",
    "launchbox": "188263",
    "mobygames": 58542,
    "publisher": "D.O.",
    "screenshotUrl": "https://images.launchbox-app.com/0869dc7e-7ca8-40ad-8927-dca4852cd6f7.png",
+   "sourceGroups": [
+    "fmtowns-cd:Moon Light Chan Rin Shan (1993)(D.O.)(Jp).zip"
+   ],
    "title": "Moonlight-chan Rinshan"
   },
   "fmtowns:188264": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/366c88a4-8315-40f5-bb50-1d2bdcd0cf9f.jpg",
+   "contentIds": [
+    "sha256-cd-v1:61e0eb5d2bac6401d89d272e349c53ea7479f94915601c8e01a49047e41ab059"
+   ],
    "description": "An Alice Soft visual novel: the young heir of a powerful family returns home after a long absence.",
    "developer": "Alice Soft",
    "launchbox": "188264",
    "mobygames": 46186,
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/9ea31913-8541-47ea-974f-dff764d197be.png",
+   "sourceGroups": [
+    "fmtowns-cd:Mugenhouyou(req.HD Install) (1995)(Alice Soft)(Jp).zip"
+   ],
    "title": "Mugen Houyou",
    "year": 1995
   },
@@ -3427,34 +4377,53 @@
     "J. B. Harold Jikenbo 1: Murder Club DX"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/ff4ffe73-b550-4720-8e69-5e0e4a67ed07.jpg",
+   "contentIds": [
+    "sha256-cd-v1:328a767b1ed5d99d67e4740646e5b1ad5a8127feddb65d77f7aad50d4c131ace",
+    "sha256-fd-v1:d1e9dff115dee09d058c0442f8bf32b4d0021427c61e710fd47ed80c6fd4a07f"
+   ],
    "description": "A detective adventure: J.B. Harold investigates the murder of a wealthy man by questioning suspects and checking alibis.",
    "developer": "Riverhill Soft",
    "launchbox": "188266",
    "mobygames": 9703,
    "publisher": "Riverhill Soft",
    "screenshotUrl": "https://images.launchbox-app.com/33fe41ae-9299-4ec9-9753-53b9071e1045.png",
+   "sourceGroups": [
+    "fmtowns-cd:Murder ClubDX (1992)(Riverhill Soft)(Jp)[+UserDisk].zip"
+   ],
    "title": "Murder Club DX",
    "year": 1992
   },
   "fmtowns:188267": {
    "boxArtUrl": "https://images.launchbox-app.com/869aef4b-ad53-4bd0-bfe9-143e852bf805.jpg",
+   "contentIds": [
+    "sha256-cd-v1:505a51410f4875c1d6dc4a7f87261fa00d8842fc537aaaa439e9fcb7f0697968"
+   ],
    "description": "A visual novel about Ryouko, a researcher in communication with aquatic animals, whose discovery draws unwanted attention.",
    "developer": "Birdy Soft",
    "launchbox": "188267",
    "mobygames": 58543,
    "publisher": "Birdy Soft",
    "screenshotUrl": "https://images.launchbox-app.com/a35132b5-d783-4c5a-9360-9f0c118a434d.png",
+   "sourceGroups": [
+    "fmtowns-cd:My Eyes (1992)(Birdie Soft)(Jp).zip"
+   ],
    "title": "My Eyes!"
   },
   "fmtowns:188268": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/r2_850d9922-3310-4292-aafa-32a984076c00.png",
+   "contentIds": [
+    "sha256-cd-v1:878a79e2cc27e470fcdec9cfc956c3a30313e815db3587b0422a1d32ff374f69"
+   ],
    "description": "A horror adventure based on H.P. Lovecraft's writings, set in his New England.",
    "developer": "FairyTale",
    "launchbox": "188268",
    "mobygames": 44603,
    "publisher": "FairyTale",
    "screenshotUrl": "https://images.launchbox-app.com/d64101f2-5737-4535-bce9-20024ddc95c9.png",
+   "sourceGroups": [
+    "fmtowns-cd:Necronomicon (1994)(Fairytale)(Jp).zip"
+   ],
    "title": "Necronomicon"
   },
   "fmtowns:188269": {
@@ -3513,12 +4482,18 @@
   },
   "fmtowns:188275": {
    "boxArtUrl": "https://images.launchbox-app.com/77567efd-2120-4a51-b15a-42d5975e1c94.jpg",
+   "contentIds": [
+    "sha256-cd-v1:597cb5cc1a3c85019c91e69aa93a6a8fce84eb9a96271cdf3ce3c01d075b82de"
+   ],
    "description": "The sixth Nobunaga's Ambition: unify Warring States Japan, with a new isometric castle and battle map.",
    "developer": "Koei",
    "launchbox": "188275",
    "mobygames": 171215,
    "publisher": "Koei",
    "screenshotUrl": "https://images.launchbox-app.com/c03f4f0f-6270-4c17-95d7-4124c47fa556.jpg",
+   "sourceGroups": [
+    "fmtowns-cd:Nobunaga no Yabou - Tenshouki (1994)(Koei)(Jp)[mp3 source][+BootDisk].zip"
+   ],
    "title": "Nobunaga no Yabou: Tenshouki"
   },
   "fmtowns:188276": {
@@ -3533,12 +4508,18 @@
   "fmtowns:188277": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/b6d39620-35c0-403a-b30a-0400ecbe8774.jpg",
+   "contentIds": [
+    "sha256-cd-v1:6e5fd5517d78ec8fe98cbd477bf1aece9b62000c6d6ae4e8ed2d560e0b43e927"
+   ],
    "description": "A visual novel of three unrelated scenarios, one of them a private investigator's case.",
    "developer": "Ponytail Soft",
    "launchbox": "188277",
    "mobygames": 58554,
    "publisher": "Ponytail Soft",
    "screenshotUrl": "https://images.launchbox-app.com/0e727956-b1d9-48cf-9ade-f1f2f1b26c92.png",
+   "sourceGroups": [
+    "fmtowns-cd:Ponkan (1994)(Ponytail Soft)(Jp).zip"
+   ],
    "title": "Ponkan",
    "year": 1994
   },
@@ -3568,12 +4549,18 @@
   "fmtowns:188280": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/44952d22-0459-4d9a-8d81-f6f4802a5c8e.jpg",
+   "contentIds": [
+    "sha256-cd-v1:a73516fa31d030fc4e16c7b54f4588e47de8dc5b583337edf3d93f04c3b06259"
+   ],
    "description": "An Alice Soft adventure set in a future Japan reshaped by radical education reforms.",
    "developer": "Alice Soft",
    "launchbox": "188280",
    "mobygames": 58610,
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/392a57e7-cd2c-41b3-a5c6-639a78af4800.png",
+   "sourceGroups": [
+    "fmtowns-cd:Pro Student -G- (1993)(Alice Soft)(Jp)[+BootDisk].zip"
+   ],
    "title": "Pro Student G",
    "year": 1993
   },
@@ -3589,12 +4576,18 @@
   },
   "fmtowns:188283": {
    "boxArtUrl": "https://images.launchbox-app.com/a7f68b72-fc03-44d4-8f43-c32bb615bc3d.jpg",
+   "contentIds": [
+    "sha256-cd-v1:52b8da68a36fce65398e102932a8c44be814092deb9c7b1a19192f32c8879334"
+   ],
    "description": "A fantasy role-playing game: the long peace of the Kingdom of Faladia comes to a sudden end.",
    "developer": "Kinpukurin",
    "launchbox": "188283",
    "mobygames": 58617,
    "publisher": "Kinpukurin",
    "screenshotUrl": "https://images.launchbox-app.com/39bdf6b3-a3d3-4073-a75a-ccb09e8fd200.png",
+   "sourceGroups": [
+    "fmtowns-cd:Provvidenza - Legenda la spada di Alfa (1991)(Sofcom Corp)(Jp)[+UserDisk].zip"
+   ],
    "title": "Provvidenza: Legenda la Spada di Alfa"
   },
   "fmtowns:188285": {
@@ -3694,22 +4687,34 @@
   "fmtowns:188294": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/5d9c9215-0c36-46b9-95df-e51fdd7f264b.jpg",
+   "contentIds": [
+    "sha256-cd-v1:5461d8f0500941ff6258d011538c52a8261302ec731d8e1d8ba7123d864e0014"
+   ],
    "description": "A Rance side story released after the fourth game, built around a separate quest.",
    "developer": "Alice Soft",
    "launchbox": "188294",
    "mobygames": 42519,
    "publisher": "Alice Soft",
+   "sourceGroups": [
+    "fmtowns-cd:Rance4.1(Req.Hd Install) (1995)(Alice Soft)(Jp).zip"
+   ],
    "title": "Rance 4.1: Okusuri Koujou o Sukue!",
    "year": 1995
   },
   "fmtowns:188295": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/1a4ad073-830c-4bdc-b4a5-88d9cbd6f452.jpg",
+   "contentIds": [
+    "sha256-cd-v1:8a9d90c89fe5ad04c91009ce23b0a5227f4bce11cc09e69d2835ea95715583a3"
+   ],
    "description": "The second part of the story begun in Rance 4.1.",
    "developer": "Alice Soft",
    "launchbox": "188295",
    "mobygames": 42544,
    "publisher": "Alice Soft",
+   "sourceGroups": [
+    "fmtowns-cd:Rance4.2(Req.Hd Install) (1995)(Alice Soft)(Jp).zip"
+   ],
    "title": "Rance 4.2: Angel-gumi",
    "year": 1995
   },
@@ -3751,12 +4756,19 @@
   "fmtowns:188299": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/e67a463c-90d0-48fe-8a44-2c90ddd4cdb3.jpg",
+   "contentIds": [
+    "sha256-cd-v1:e955fc83d89187fe2f7990f63fd3cb2b1765619f7f7716d11d2c2d620a6b17cb",
+    "sha256-fd-v1:7ec99c1be2c10d1bf2f333bb1ab3f50c52497cdf6057a9559b14659673a0d8d3"
+   ],
    "description": "The fourth Rance: Rance becomes caught up in the legacy of a cult founded by the Master of Magic.",
    "developer": "Alice Soft",
    "launchbox": "188299",
    "mobygames": 42518,
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/c6840b1f-05f8-4a59-ad31-0bb558d85a67.png",
+   "sourceGroups": [
+    "fmtowns-cd:RanceIV (1994)(Alice Soft)(Jp)[+BootDisk].zip"
+   ],
    "title": "Rance IV: Kyoudan no Isan",
    "year": 1994
   },
@@ -3778,12 +4790,18 @@
     "Regional Power II"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/36f40d65-c419-43d3-92a5-b8d380602945.jpg",
+   "contentIds": [
+    "sha256-cd-v1:af5eeb568bb34f3e2ee001f6fd1e500281bac722f90d3fde4aa2030bd8272a93"
+   ],
    "description": "A space strategy game of empire building across a galaxy map.",
    "developer": "Cosmos Computer",
    "launchbox": "188301",
    "mobygames": 58649,
    "publisher": "Cosmos Computer",
    "screenshotUrl": "https://images.launchbox-app.com/c6a78008-e005-496f-9566-4f610cf09f05.png",
+   "sourceGroups": [
+    "fmtowns-cd:Galaxy Wars - Regional Power II (1992)(Cosmos)(Jp).zip"
+   ],
    "title": "Galaxy Wars: Regional Power II"
   },
   "fmtowns:188302": {
@@ -3800,12 +4818,18 @@
   },
   "fmtowns:188303": {
    "boxArtUrl": "https://images.launchbox-app.com/2be6156f-0314-46c2-b1ce-7c79999e28fb.jpg",
+   "contentIds": [
+    "sha256-cd-v1:fae83fff68caaef2b0ae7793b4120eba5c7ace077b4a56b0f2305d6707659afa"
+   ],
    "description": "Activision's return to the Zork world: explore the ruined Great Underground Empire in a full-motion video adventure.",
    "developer": "Activision",
    "launchbox": "188303",
    "mobygames": 1219,
    "publisher": "Data West",
    "screenshotUrl": "https://images.launchbox-app.com/2c0f46b6-4614-47d2-bebb-ec7da9986226.png",
+   "sourceGroups": [
+    "fmtowns-cd:Return to Zork(req.HD Install) (1994)(Datawest)(Jp).zip"
+   ],
    "title": "Return to Zork",
    "year": 1994
   },
@@ -3823,12 +4847,18 @@
   "fmtowns:188306": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/29d856a9-ad8e-4106-9b8e-2243ff19bcdb.jpg",
+   "contentIds": [
+    "sha256-cd-v1:ce3f4b024da828d91dd5a04e3405ba5035928540f8b1f517ccf3402f02f925ef"
+   ],
    "description": "A visual novel in which a young woman is taken to pay her father's debts to a criminal organization.",
    "developer": "ZyX",
    "launchbox": "188306",
    "mobygames": 58655,
    "publisher": "ZyX",
    "screenshotUrl": "https://images.launchbox-app.com/5d6a16c9-9354-4e9c-a842-d5dd097a8bbb.png",
+   "sourceGroups": [
+    "fmtowns-cd:Ring Out!! (1995)(ZyX)(Jp).zip"
+   ],
    "title": "Ring Out!!",
    "year": 1995
   },
@@ -3881,22 +4911,34 @@
   },
   "fmtowns:188311": {
    "boxArtUrl": "https://images.launchbox-app.com/e7a2e733-fcc4-4db5-b91f-66505019b1dc.jpg",
+   "contentIds": [
+    "sha256-cd-v1:33026b66e44765ba84536a17a580b537929f23bcdcf0ff9a10c7250a6d8e30ed"
+   ],
    "description": "The fourth Schwarzschild space strategy game, set in 3958.",
    "developer": "Kogado Studio",
    "launchbox": "188311",
    "mobygames": 57208,
    "publisher": "Kogado Studio",
    "screenshotUrl": "https://images.launchbox-app.com/6a7c8afb-6f3f-4020-9f43-894962ee7ce6.png",
+   "sourceGroups": [
+    "fmtowns-cd:Schwarzschild IV (1993)(Kogado)(Jp).zip"
+   ],
    "title": "Schwarzschild IV: The Cradle End"
   },
   "fmtowns:188312": {
    "boxArtUrl": "https://images.launchbox-app.com/cac3e362-cd33-4fc3-828a-d10e6184bfd2.jpg",
+   "contentIds": [
+    "sha256-cd-v1:ca734f92c3fb16a3c5cc82443d70f1c098ca3c39d62663978e014f89259ebc6a"
+   ],
    "description": "A space strategy game set in the far future, where rival powers fight to control a star cluster.",
    "developer": "Kogado Studio",
    "launchbox": "188312",
    "mobygames": 57200,
    "publisher": "Kogado Studio",
    "screenshotUrl": "https://images.launchbox-app.com/95f87601-6fc9-481c-8e2f-e6ff2536dd50.png",
+   "sourceGroups": [
+    "fmtowns-cd:Schwarzschild (1991)(Kogado)(Jp)[+GameDisk].zip"
+   ],
    "title": "Schwarzschild: Kyouran no Ginga"
   },
   "fmtowns:188313": {
@@ -3924,24 +4966,36 @@
   "fmtowns:188315": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/5a370531-9dc7-441c-ab35-4509d7161687.jpg",
+   "contentIds": [
+    "sha256-cd-v1:e51465bfb8273b7d85e9e54dbac44b4f44de24eb1f2c5b9cd151818bc3d3fca7"
+   ],
    "description": "The second Shangrlia strategy game: dark forces threaten the magical kingdom again.",
    "developer": "Elf",
    "launchbox": "188315",
    "mobygames": 58691,
    "publisher": "elf",
    "screenshotUrl": "https://images.launchbox-app.com/78eb1ee2-bb11-4cc6-82e1-a1d016a76496.png",
+   "sourceGroups": [
+    "fmtowns-cd:Shangrlia2 (1994)(Elf)(Jp).zip"
+   ],
    "title": "Shangrlia 2",
    "year": 1993
   },
   "fmtowns:188316": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/300f6c0a-306f-472e-bb28-080219668a2d.jpg",
+   "contentIds": [
+    "sha256-cd-v1:49d976afea33e63c34006e462110714afc12839efc23eb0c548c17920587f586"
+   ],
    "description": "A fantasy role-playing game following a lone adventurer named Hero Narcissus.",
    "developer": "Libido",
    "launchbox": "188316",
    "mobygames": 45183,
    "publisher": "Libido",
    "screenshotUrl": "https://images.launchbox-app.com/baa55566-16fb-4b03-bdec-3cbdf53cb3df.png",
+   "sourceGroups": [
+    "fmtowns-cd:Shinc (1993)(Libido)(Jp).zip"
+   ],
    "title": "Shinc"
   },
   "fmtowns:188317": {
@@ -3956,32 +5010,50 @@
   },
   "fmtowns:188318": {
    "boxArtUrl": "https://images.launchbox-app.com/8b96e8c5-794a-4103-b84f-649f73939ca3.jpg",
+   "contentIds": [
+    "sha256-cd-v1:7a61b725e685a4d7cc356f5532523be4ab7bf325aec297e29a570795fa10750d"
+   ],
    "description": "Maxis's city builder: zone land, build roads, power and services, balance taxes and budgets, and deal with disasters as the city grows.",
    "developer": "Maxis Software",
    "launchbox": "188318",
    "mobygames": 848,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/aab9b5ca-593a-4ec2-b902-f077c2fcd314.png",
+   "sourceGroups": [
+    "fmtowns-cd:Sim City (1990)(Maxis)(Jp-En).zip"
+   ],
    "title": "SimCity"
   },
   "fmtowns:188319": {
    "boxArtUrl": "https://images.launchbox-app.com/fa381356-8894-4267-bf25-b8bf3fe86cb0.jpg",
+   "contentIds": [
+    "sha256-cd-v1:05caee7ef05dd6eadb118d88c9060036e8d14900f4bf4c2b01f3e3e3ec0f98d4"
+   ],
    "description": "Maxis's isometric city builder: lay out zones, utilities, transit and services across terrain, managing budgets, ordinances and disasters.",
    "developer": "Maxis Software",
    "launchbox": "188319",
    "mobygames": 657,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/8b33e1a2-89d3-463e-9c05-c7e846db2eae.png",
+   "sourceGroups": [
+    "fmtowns-cd:Sim City 2000 (1993)(Maxis)(Jp).zip"
+   ],
    "title": "SimCity 2000"
   },
   "fmtowns:188320": {
    "boxArtUrl": "https://images.launchbox-app.com/9df5ac5f-b21c-46b8-a0fd-649ce8ee292e.jpg",
+   "contentIds": [
+    "sha256-cd-v1:79bff53009bef91a26ea0f947618709dad96f770f5f1a4c12bc233e9d49c6b1c"
+   ],
    "description": "Guide a planet through billions of years: shape its geology, atmosphere and life, nurturing species toward intelligence and civilization.",
    "developer": "Maxis Software",
    "launchbox": "188320",
    "mobygames": 1835,
    "publisher": "Imagineer",
    "screenshotUrl": "https://images.launchbox-app.com/40f2a029-7531-477a-9201-1216f106c1ea.png",
+   "sourceGroups": [
+    "fmtowns-cd:Sim Earth (1993)(Maxis)(Jp).zip"
+   ],
    "title": "SimEarth: The Living Planet"
   },
   "fmtowns:188322": {
@@ -3989,12 +5061,18 @@
     "SimFarm"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/cbceb483-b188-4d92-a712-1e7ddde607d9.jpg",
+   "contentIds": [
+    "sha256-cd-v1:198f94626cb8993057a126cd50cd0df7a9837166bdbfe2db257e93f5400be2be"
+   ],
    "description": "Run a farm: plant and tend crops, raise livestock, buy equipment and sell your produce to a growing town.",
    "developer": "Maxis Software",
    "launchbox": "188322",
    "mobygames": 1845,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/e565e58a-d4c8-409e-b4d1-bf78450f64a0.png",
+   "sourceGroups": [
+    "fmtowns-cd:Sim Farm (1994)(Fujitsu)(Jp).zip"
+   ],
    "title": "SimFarm: SimCity's Country Cousin",
    "year": 1994
   },
@@ -4020,12 +5098,18 @@
   },
   "fmtowns:188325": {
    "boxArtUrl": "https://images.launchbox-app.com/5fca7619-9295-43d7-b860-23099f713905.jpg",
+   "contentIds": [
+    "sha256-cd-v1:94f63840bfa132a2200d32b23cd81324f6c31543198a16420a1c951b9b43e10a"
+   ],
    "description": "A turn-based tactical game of defending a city and its power plant from giant monster attacks.",
    "developer": "Data West",
    "launchbox": "188325",
    "mobygames": 58719,
    "publisher": "Data West",
    "screenshotUrl": "https://images.launchbox-app.com/d59ad789-6624-46e3-99ac-670590003f2f.png",
+   "sourceGroups": [
+    "fmtowns-cd:T.D,F (1990)(Datawest)(Jp).zip"
+   ],
    "title": "T.D.F.: Terrestrial Defense Force",
    "year": 1990
   },
@@ -4042,12 +5126,18 @@
   "fmtowns:188327": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/c110bba4-4271-4488-9cfe-d8aefd02f169.jpg",
+   "contentIds": [
+    "sha256-cd-v1:01b4d27cd61aa3af752a30ec038b726edaca4084e52d6ef0592b532f63ecf141"
+   ],
    "description": "An adventure about a young man struggling to find work as a teacher.",
    "developer": "ZyX",
    "launchbox": "188327",
    "mobygames": 53144,
    "publisher": "ZyX",
    "screenshotUrl": "https://images.launchbox-app.com/56a7558e-bdbe-44db-ba48-7440d81596ef.png",
+   "sourceGroups": [
+    "fmtowns-cd:Takamizawa Kyousuke Nekketsu!! Kyouikukenshu (1995)(ZyX)(Jp).zip"
+   ],
    "title": "Takamizawa Kyousuke Nekketsu!! Kyouiku Kenshuu",
    "year": 1995
   },
@@ -4056,12 +5146,18 @@
     "Sotsugyou: Graduation '93"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/0a8f7d60-947c-4d5e-8688-811857da5311.jpg",
+   "contentIds": [
+    "sha256-cd-v1:0bee493a4cac3f4b0b0cf39928bcb81ef6dcc88148769e325ed76486033f5913"
+   ],
    "description": "A raising simulation: as a high school teacher, guide five troubled girls through their final school year.",
    "developer": "Headroom",
    "launchbox": "188328",
    "mobygames": 43243,
    "publisher": "Japan Home Video",
    "screenshotUrl": "https://images.launchbox-app.com/18937e21-8a0d-465b-8d9f-fe6e1daca90c.png",
+   "sourceGroups": [
+    "fmtowns-cd:Sotsugyou'93 Graduation (1993)(-)(Jp)[+UserDisk].zip"
+   ],
    "title": "Sotsugyou '93: Graduation"
   },
   "fmtowns:188329": {
@@ -4086,12 +5182,18 @@
   "fmtowns:188331": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/b41f2e93-83ad-462f-a864-6060d311e937.jpg",
+   "contentIds": [
+    "sha256-cd-v1:12f30355dab57f70c1f7e01376c43080e37e01a36cddbef51b66279a23d1921e"
+   ],
    "description": "An arcade mahjong game: a club member takes on its female players.",
    "developer": "SETA",
    "launchbox": "188331",
    "mobygames": 55294,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/d6aff010-7c87-474e-b479-58c4351e5d39.png",
+   "sourceGroups": [
+    "fmtowns-cd:Super Real Mahjong PIV (1994)(Ving)(Jp).zip"
+   ],
    "title": "Super Real Mahjong PIV"
   },
   "fmtowns:188332": {
@@ -4140,22 +5242,34 @@
   },
   "fmtowns:188337": {
    "boxArtUrl": "https://images.launchbox-app.com/7c830a14-0575-4fb9-aca4-fd643019f1df.jpg",
+   "contentIds": [
+    "sha256-cd-v1:671e0de740429a8d2748cf0fc3ad788ecf85aa2e497958ce231b76220977e15c"
+   ],
    "description": "A follow-up to the second Toushin Toshi.",
    "developer": "Alice Soft",
    "launchbox": "188337",
    "publisher": "Alice Soft",
+   "sourceGroups": [
+    "fmtowns-cd:Toushin Toshi II Soshite Sorekara(req.HD Install) (1995)(Alice Soft)(Jp).zip"
+   ],
    "title": "Toushin Toshi II: Soshite, Sorekara...",
    "year": 1995
   },
   "fmtowns:188338": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/572de4c1-2fcd-4d3e-aab3-2271146fa5d8.jpg",
+   "contentIds": [
+    "sha256-cd-v1:6d78f7b00905240dc8358b4f9e4c75b8a2e0cf2d4f6036af845756f57c5a78c5"
+   ],
    "description": "A visual novel of three unrelated stories.",
    "developer": "ZyX",
    "launchbox": "188338",
    "mobygames": 58731,
    "publisher": "ZyX",
    "screenshotUrl": "https://images.launchbox-app.com/feadfd9a-dc14-49a6-9a52-4d725b2d4868.png",
+   "sourceGroups": [
+    "fmtowns-cd:Trigger (1994)(ZyX)(Jp).zip"
+   ],
    "title": "Trigger",
    "year": 1994
   },
@@ -4172,23 +5286,36 @@
   "fmtowns:188340": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/e3f367a0-80a7-47e6-8a88-2db93b6ac4e9.jpg",
+   "contentIds": [
+    "sha256-cd-v1:32607fe8ef26be96393bcc8f6fd0a71544cc3718bf6b6d5d7cfd10de3818b034",
+    "sha256-fd-v1:ab7422dc8e69e7ca75e0cc7499388dc6579749c37891e19c1d26eab2f08b12a5"
+   ],
    "description": "An Alice Soft sci-fi adventure starring a space thief.",
    "developer": "Alice Soft",
    "launchbox": "188340",
    "mobygames": 47708,
    "publisher": "Alice Soft",
+   "sourceGroups": [
+    "fmtowns-cd:Uchu Kaitou Funny Bee (1994)(Alice Soft)(Jp)[+BootDisk].zip"
+   ],
    "title": "Uchuu Kaitou Funny Bee",
    "year": 1994
   },
   "fmtowns:188341": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/348d44d9-853b-46f2-a077-c70f2fbdc0a6.jpg",
+   "contentIds": [
+    "sha256-cd-v1:72203f6a703acc40a86e7ca15ed46a895eafd6abd6a4766a00e6e6678f8328e5"
+   ],
    "description": "A visual novel of three unrelated short stories.",
    "developer": "Mediax",
    "launchbox": "188341",
    "mobygames": 58730,
    "publisher": "CD Bros.",
    "screenshotUrl": "https://images.launchbox-app.com/b2cd8db2-66db-4acb-a30d-ce8201ac6c91.png",
+   "sourceGroups": [
+    "fmtowns-cd:Vastness (1993)(CD Bros)(Jp).zip"
+   ],
    "title": "Vastness: Kuukyo no Ikenie-tachi",
    "year": 1994
   },
@@ -4229,12 +5356,18 @@
   "fmtowns:188345": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/f78d870c-87cd-4485-9a46-e4550a7db370.jpg",
+   "contentIds": [
+    "sha256-cd-v1:e6b03a8b9ae14cac18f9b3fe335bce4ff3e34c0e3290f7663b9a6e4af4cdb6bb"
+   ],
    "description": "An updated release of the third Viper: three short animated stories.",
    "developer": "Sogna",
    "launchbox": "188345",
    "mobygames": 43490,
    "publisher": "Sogna",
    "screenshotUrl": "https://images.launchbox-app.com/310b43b2-a937-4762-b2b5-befb5f9e45a4.png",
+   "sourceGroups": [
+    "fmtowns-cd:Viper V10 Turbo RS (1995)(Sogna)(Jp).zip"
+   ],
    "title": "Viper V10 Turbo RS",
    "year": 1995
   },
@@ -4275,57 +5408,89 @@
     "Wrestle Angels 3: Mezasu wa Saikyou Dantai!"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/18695ffe-824f-40af-8514-0a66b3d4589c.jpg",
+   "contentIds": [
+    "sha256-cd-v1:3c59cbdfe7441343785526d1abd071499b1bc7602859955c58ed7d9c57132a48",
+    "sha256-fd-v1:049d9c5c23b15474aa8464830a89fd8154e6b3d86848a1b9f5509064ff87fab9"
+   ],
    "description": "A turn-based wrestling game: manage a new women's wrestling company and its matches.",
    "developer": "Communication Group Plum",
    "launchbox": "188349",
    "mobygames": 58042,
    "publisher": "Great",
    "screenshotUrl": "https://images.launchbox-app.com/9c483b1d-0441-4600-9aa2-424144433a0f.png",
+   "sourceGroups": [
+    "fmtowns-cd:Wrestle Angels3 (1994)(Great)(Jp)[+UserDisk].zip"
+   ],
    "title": "Wrestle Angels 3",
    "year": 1994
   },
   "fmtowns:188350": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/e83dacb0-72f7-408e-be29-4ad29d0ff7e1.jpg",
+   "contentIds": [
+    "sha256-cd-v1:4a8e84592e03c494ebd7899fd7fb6ea1ff7da4532bade68e24134a8c2a67ddaa",
+    "sha256-fd-v1:c6a5a9b495cb24819b5f359ffdce48ecf9a3b03bd312669925923f2809be39da"
+   ],
    "description": "A Wrestle Angels game in which you create your own wrestler.",
    "developer": "Communication Group Plum",
    "launchbox": "188350",
    "mobygames": 43629,
    "publisher": "Great",
    "screenshotUrl": "https://images.launchbox-app.com/a153aeda-e39c-4539-be10-225baa6c887d.png",
+   "sourceGroups": [
+    "fmtowns-cd:Wrestle Angels Special (1994)(Great)(Jp)[+UserDisk].zip"
+   ],
    "title": "Wrestle Angels Special: Mou Hitori no Top Eventer",
    "year": 1994
   },
   "fmtowns:188351": {
    "boxArtUrl": "https://images.launchbox-app.com/3b1b3d0f-4a55-4837-acd7-14b92184dce5.jpg",
+   "contentIds": [
+    "sha256-cd-v1:21e68853696a4607b6b7483b4f395ea09b77af4b564142648f757986c59390e6"
+   ],
    "description": "Micro Cabin's action role-playing sequel: Latok faces the demon Badu's return after rescuing a fellow warrior.",
    "developer": "Micro Cabin",
    "launchbox": "188351",
    "mobygames": 44118,
    "publisher": "Micro Cabin",
    "screenshotUrl": "https://images.launchbox-app.com/03db7b01-2261-480a-9fcc-cf949009e322.png",
+   "sourceGroups": [
+    "fmtowns-cd:Xak II (1991)(Micro Cabin)(Jp).zip"
+   ],
    "title": "Xak II: Rising of the Redmoon"
   },
   "fmtowns:188352": {
    "boxArtUrl": "https://images.launchbox-app.com/a4a5d240-84fc-4289-817c-256e0acb2c22.jpg",
+   "contentIds": [
+    "sha256-cd-v1:7d299ead0f5b78e5c81f88e8a0007acb6dcdc88ada87490b6c65f6a29d963520"
+   ],
    "description": "The third Xak: the hero Latok, back in his home town, is drawn into a new conflict with the demon world.",
    "developer": "Micro Cabin",
    "launchbox": "188352",
    "mobygames": 44139,
    "publisher": "Micro Cabin",
    "screenshotUrl": "https://images.launchbox-app.com/4368d699-5d25-4d4c-bc98-0d905d0f0cbb.png",
+   "sourceGroups": [
+    "fmtowns-cd:Xak III - The Eternal Recurrence (1993)(MicroCabin-Nec)(Jp).zip"
+   ],
    "title": "Xak III: The Eternal Recurrence",
    "year": 1993
   },
   "fmtowns:188353": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/de9dfdc0-637a-4eb7-a896-62074a1cf15c.jpg",
+   "contentIds": [
+    "sha256-cd-v1:48299a769367e92741b13a44131509ffd4d5fcf499570a5ebd8851ec04d4fe94"
+   ],
    "description": "A sci-fi visual novel: a high school student keeps dreaming vividly of being aboard a spaceship.",
    "developer": "C's Ware",
    "launchbox": "188353",
    "mobygames": 58046,
    "publisher": "C's Ware",
    "screenshotUrl": "https://images.launchbox-app.com/179adbfb-7779-4042-970c-497a79f5acc7.png",
+   "sourceGroups": [
+    "fmtowns-cd:Xenon (19xx)(Cs Ware)(Jp).zip"
+   ],
    "title": "Xenon: Mugen no Shitai",
    "year": 1995
   },
@@ -4334,12 +5499,18 @@
     "Yami no Ketsuzoku Special: The Predestined Homicides"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/8aeb07de-ab29-4689-97b7-156e930bbf5c.jpg",
+   "contentIds": [
+    "sha256-cd-v1:dbc661c18cf66221c3cfeb51b16ecc48dfa34c8f8c35628cc8d68b6c1b5d1d5f"
+   ],
    "description": "Both Yami no Ketsuzoku detective adventures in one collection.",
    "developer": "System Sacom",
    "launchbox": "188354",
    "mobygames": 58038,
    "publisher": "System Sacom",
    "screenshotUrl": "https://images.launchbox-app.com/32db32d7-37bd-497d-8ee2-9db8e8f8a0c1.png",
+   "sourceGroups": [
+    "fmtowns-cd:Yami no Ketsuzoku Special (1991)(System Sacom)(Jp)[+UserDisk].zip"
+   ],
    "title": "Yami no Ketsuzoku Special"
   },
   "fmtowns:188355": {
@@ -4367,12 +5538,18 @@
   "fmtowns:188357": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/e9987674-846d-43f1-b83b-3067fef51a73.png",
+   "contentIds": [
+    "sha256-cd-v1:5441e90b80dfb39dc4c2ec4b70e40a140e453264c5c1a9c28650ae0985c7b465"
+   ],
    "description": "A horror visual novel about a young man who remembers nothing of his early life.",
    "developer": "D.O.",
    "launchbox": "188357",
    "mobygames": 58737,
    "publisher": "D.O.",
    "screenshotUrl": "https://images.launchbox-app.com/c1f6272e-1098-4e22-b0bb-418435e25bc5.png",
+   "sourceGroups": [
+    "fmtowns-cd:Zatsuon Ryouiki (1995)(D.O.)(Jp).zip"
+   ],
    "title": "Zatsuon Ryouiki",
    "year": 1995
   },
@@ -4395,20 +5572,32 @@
     "Animation Zenith"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/0d20748a-b7b9-4963-9613-17488a65c902.jpg",
+   "contentIds": [
+    "sha256-cd-v1:efe93a099e2fc95ebdc0d101e2dec9432769fb436e00160d5eb629ebecd45e71"
+   ],
    "description": "A short interactive anime, the first of a series of full animation adventures.",
    "developer": "Himeya Soft",
    "launchbox": "188359",
    "mobygames": 58738,
    "publisher": "Himeya Soft",
    "screenshotUrl": "https://images.launchbox-app.com/2b869200-c199-467d-aa3b-da8c65abeb6f.png",
+   "sourceGroups": [
+    "fmtowns-cd:Zenith (1995)(Himeya Soft)(Jp).zip"
+   ],
    "title": "Zenith"
   },
   "fmtowns:188361": {
    "boxArtUrl": "https://images.launchbox-app.com/bd197190-e680-4870-bdbd-cf995308d808.jpg",
+   "contentIds": [
+    "sha256-cd-v1:c3cbf4df67b230ca272bb1947f61e0d0cf35faecf3877dc8cf86203e480749a1"
+   ],
    "developer": "ASCII Entertainment Software",
    "launchbox": "188361",
    "publisher": "ASCII Entertainment Software",
    "screenshotUrl": "https://images.launchbox-app.com/ba15f486-1c70-4555-ad3d-3ecfd9927404.png",
+   "sourceGroups": [
+    "fmtowns-cd:Best Play Baseball,The (1992)(Ascii)(Jp).zip"
+   ],
    "title": "The Best Play Baseball"
   },
   "fmtowns:188362": {
@@ -4465,12 +5654,18 @@
     "Death Brade"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/c99ef6b7-61e0-448c-89cd-04da6f531c44.jpg",
+   "contentIds": [
+    "sha256-cd-v1:7b19eab572eef464cfeed38d62d67c5e2e5123d4a1c165da3e642e63ab148426"
+   ],
    "description": "Data East's fighting game: create a warrior or play Hercules, battling mythical creatures and gladiators in large-sprite duels.",
    "developer": "Hi-Position Soft Ware",
    "launchbox": "188367",
    "mobygames": 54840,
    "publisher": "KID",
    "screenshotUrl": "https://images.launchbox-app.com/bffdffbc-2672-4fdc-a67c-79736edde8eb.png",
+   "sourceGroups": [
+    "fmtowns-cd:Death Brade (1992)(Kid Corp)(Jp).zip"
+   ],
    "title": "Mutant Fighter: Death Brade"
   },
   "fmtowns:188368": {
@@ -4583,8 +5778,14 @@
     "Digital Pinup Girls Vol. 1: Sexy Shooting"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/cd471f79-e008-4f42-bdc0-7523a1822fb6.jpg",
+   "contentIds": [
+    "sha256-cd-v1:671128258b593f5e0cfc29cfbadfbcb9b346510330c3337f639801f85ccf5987"
+   ],
    "launchbox": "188775",
    "publisher": "Transpegasus Limited",
+   "sourceGroups": [
+    "fmtowns-cd:Digital Pinup Girls Vol.1 (1993)(Transpegasus Limited)(Jp-En).zip"
+   ],
    "title": "Digital Pinup Girls: Vol. 1"
   },
   "fmtowns:188776": {
@@ -4618,12 +5819,18 @@
     "Amy's Fantasies",
     "Eimmy to Yobanaide: Please Don't Call Me Eimmy"
    ],
+   "contentIds": [
+    "sha256-cd-v1:23f772f482028021096d3862e51edb6510e67694a91ce368f00c8bc2e963995c"
+   ],
    "description": "A visual novel about a high school girl named Emi.",
    "developer": "C's Ware",
    "launchbox": "188779",
    "mobygames": 6414,
    "publisher": "C's Ware",
    "screenshotUrl": "https://images.launchbox-app.com/880938f5-2893-4bf5-a05b-b8ad7eb16e80.png",
+   "sourceGroups": [
+    "fmtowns-cd:Eimmy to Yobanaide (1995)(Cs Ware)(Jp).zip"
+   ],
    "title": "Amy to Yobanaide",
    "year": 1995
   },
@@ -4639,12 +5846,18 @@
   "fmtowns:188781": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/17452999-e197-4009-8936-ae004eab9014.jpg",
+   "contentIds": [
+    "sha256-cd-v1:25b0407bb0d9dd9423b82ef22051e961de95f98e0a98f5224b98ed732a78e448"
+   ],
    "description": "An investigator is sent to a secretive girls' academy.",
    "developer": "C's Ware",
    "launchbox": "188781",
    "mobygames": 6411,
    "publisher": "C's Ware",
    "screenshotUrl": "https://images.launchbox-app.com/d5a8ba6f-07fe-4627-9a75-226e6167dc94.png",
+   "sourceGroups": [
+    "fmtowns-cd:Etsuraku no Gakuen (1994)(Cs Ware)(Jp).zip"
+   ],
    "title": "Etsuraku no Gakuen",
    "year": 1994
   },
@@ -4862,10 +6075,16 @@
     "Morita Shougi II"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/50021f98-2fed-4e1b-9218-0f95fe5d61e5.jpg",
+   "contentIds": [
+    "sha256-cd-v1:53d4d5b9f11db5e150863e1b874568366b6ca9d9bc0c813ccea3a389b74eb4d8"
+   ],
    "developer": "Random House",
    "launchbox": "188808",
    "publisher": "Enix",
    "screenshotUrl": "https://images.launchbox-app.com/c9f5873c-b642-4dd8-96f6-fed5deb582f6.png",
+   "sourceGroups": [
+    "fmtowns-cd:Morita ShougiII (1989)(Enix)(Jp).zip"
+   ],
    "title": "Morita Shogi II"
   },
   "fmtowns:188809": {
@@ -5239,12 +6458,18 @@
     "Nova: Miirareta Shitai"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/6426121e-8c4a-4fd5-8a99-6026d389b6ea.jpg",
+   "contentIds": [
+    "sha256-cd-v1:6c005b5d5ae25acb2a5e4733a9a7b40811504296abeee717e8e273aac281be1f"
+   ],
    "description": "A sci-fi horror adventure: the hero awakens in a spaceship's cryogenic chamber with no memory.",
    "developer": "Cat's Pro",
    "launchbox": "194669",
    "mobygames": 54120,
    "publisher": "Cat's Pro",
    "screenshotUrl": "https://images.launchbox-app.com/a3bcfb31-9b8c-44b4-8a40-14ce817690e6.png",
+   "sourceGroups": [
+    "fmtowns-cd:Nova (1993)(Cats Pro)(Jp).zip"
+   ],
    "title": "Nova",
    "year": 1993
   },
@@ -5257,10 +6482,16 @@
   "fmtowns:197095": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/40878643-94d8-40bf-9dcf-64e0c1af3a18.jpg",
+   "contentIds": [
+    "sha256-cd-v1:1145069527857474ba216467ed288a8723f6a3430fe95ea8b77015e6195dc8f1"
+   ],
    "description": "A visual novel about a young girl named Naru.",
    "developer": "Libido",
    "launchbox": "197095",
    "publisher": "Libido",
+   "sourceGroups": [
+    "fmtowns-cd:Libido7 (1994)(Libido)(Jp).zip"
+   ],
    "title": "Libido7",
    "year": 1994
   },
@@ -6400,12 +7631,18 @@
    "year": 1992
   },
   "fmtowns:205274": {
+   "contentIds": [
+    "sha256-cd-v1:8c5839a77672f00b3a97176266cb038737a607f2811573719fa2e34020c917b2"
+   ],
    "description": "A quiz game of Japanese provinces: pick a district and conquer the country by answering questions on geography, history and science.",
    "developer": "Mic",
    "launchbox": "205274",
    "mobygames": 58734,
    "publisher": "MIC",
    "screenshotUrl": "https://images.launchbox-app.com/920f5887-251e-44c8-bac6-53e78da99065.png",
+   "sourceGroups": [
+    "fmtowns-cd:Wakoku Seiha Den (1994)(Mic)(Jp).zip"
+   ],
    "title": "Wakoku Seiha Den",
    "year": 1994
   },
@@ -6466,12 +7703,18 @@
   "fmtowns:205281": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/b8336553-df7c-401c-bc56-a325d0e08b59.jpg",
+   "contentIds": [
+    "sha256-cd-v1:f73179b574461338d92408d4a807222daf7d09cdc26b6396436ce5dc243dbde1"
+   ],
    "description": "A digitized photo game featuring Japanese models.",
    "developer": "Byakuya-Shobo",
    "launchbox": "205281",
    "mobygames": 58474,
    "publisher": "Byakuya-Shobo",
    "screenshotUrl": "https://images.launchbox-app.com/a97a81ab-eef4-4737-98fa-5bce6d7b992c.png",
+   "sourceGroups": [
+    "fmtowns-cd:Jyoshikousei Shoujyohatsunetsu (1993)(Byakuya Shobou)(Jp).zip"
+   ],
    "title": "Joshi Kousei Shoujo Hatsunetsu",
    "year": 1993
   },
@@ -6613,12 +7856,18 @@
     "Genocide²"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/a06119c3-d993-4790-8381-5842e8fc94b0.jpg",
+   "contentIds": [
+    "sha256-cd-v1:9bfa9620dcefbb1e0e01b24cbe6edc466db4dc3eadd050c65d1d668257ff70c5"
+   ],
    "description": "Zoom's remastered Genocide and Genocide 2: side-scrolling action piloting a combat mech.",
    "developer": "Zoom",
    "launchbox": "422914",
    "mobygames": 54774,
    "publisher": "Zoom",
    "screenshotUrl": "https://images.launchbox-app.com/c4ca79a1-f4aa-44c1-b847-fbe8cd05b624.png",
+   "sourceGroups": [
+    "fmtowns-cd:Genocide Squared (1993)(Zoom)(Jp-En).zip"
+   ],
    "title": "Genocide Square",
    "year": 1993
   },
@@ -6654,10 +7903,16 @@
   "fmtowns:456060": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/0c425a0b-eac6-4563-a32c-c82f5b5c0de1.jpg",
+   "contentIds": [
+    "sha256-cd-v1:cb7da6e58c1c6d8c6d3ec5795a72b42945fb1362bd1283e5f30d3dfb9b8a933a"
+   ],
    "developer": "Paradise",
    "launchbox": "456060",
    "publisher": "Paradise",
    "screenshotUrl": "https://images.launchbox-app.com/5f3a65dd-6695-43cf-80fd-a3bda3710475.png",
+   "sourceGroups": [
+    "fmtowns-cd:Uwaki na Anata (1994)(HOP)(Jp)[+BootDisk].zip"
+   ],
    "title": "Uwaki na Anata: Switch o Irete"
   },
   "fmtowns:456061": {
@@ -6689,10 +7944,16 @@
   },
   "fmtowns:456064": {
    "boxArtUrl": "https://images.launchbox-app.com/e941f4b3-f0ab-4544-b219-87d00ef904c5.jpg",
+   "contentIds": [
+    "sha256-cd-v1:dec1c842a0181acf6f5b393b14c942ce003951fcd8c61e620af4e3ef330b5e58"
+   ],
    "developer": "Datt Japan",
    "launchbox": "456064",
    "publisher": "Datt Japan",
    "screenshotUrl": "https://images.launchbox-app.com/7f636b31-e287-440c-ab1c-53f12f08248f.png",
+   "sourceGroups": [
+    "fmtowns-cd:Shounen Magazine History (1992)(Datt Japan)(Jp).zip"
+   ],
    "title": "Shounen Magazine History"
   },
   "fmtowns:456065": {
@@ -6771,6 +8032,641 @@
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/64dbe07f-bc53-4bab-a7dd-1e19ffa64fa7.png",
    "title": "Palamedes"
+  },
+  "fmtowns:local-0938fc300a": {
+   "contentIds": [
+    "sha256-cd-v1:61e2281aeca5522d48e9e1e96a079d3544dd5abcbf819395169ceed859c666e5"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Zan 2 (19xx)(-)(Jp)[+UserDisk].zip"
+   ],
+   "title": "Zan 2"
+  },
+  "fmtowns:local-0bd2453e3a": {
+   "contentIds": [
+    "sha256-cd-v1:0440adf3a2996d47051d62bd435ef547c4261c7fecbbdf2cca1af94c32612205"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Take the A-Train IV (1993)(Artdink)(Jp)[+SystemDisk].zip"
+   ],
+   "title": "Take the A-Train IV",
+   "year": 1993
+  },
+  "fmtowns:local-10a713f349": {
+   "contentIds": [
+    "sha256-cd-v1:32ace7a6be7da42371f0c5cf32fc95bc208ef9d7ea4ea9f739587a3ee641747b"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Life & Death II (1992)(Ving)(Jp).zip"
+   ],
+   "title": "Life & Death II",
+   "year": 1992
+  },
+  "fmtowns:local-13ad427966": {
+   "contentIds": [
+    "sha256-cd-v1:14f7a923d87627e1c3a6d50f28b543291f7daa5babc0509c1e89e3d2ee2abd52",
+    "sha256-cd-v1:80e0bf4be7953c64c9e987d7e79633353fad8ffdf859115c1c1305c13572f59e"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Ms. Detective (1991)(Datawest)(Jp).zip"
+   ],
+   "title": "Ms. Detective",
+   "year": 1991
+  },
+  "fmtowns:local-267735d5c7": {
+   "contentIds": [
+    "sha256-cd-v1:24467519a4ed1b144e11ee3d18334b6d5a8a4f53993f56254afb91a4cb15d176"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Take the A-Train III (1991)(Artdink)(Jp).zip"
+   ],
+   "title": "Take the A-Train III",
+   "year": 1991
+  },
+  "fmtowns:local-26dd0b1455": {
+   "contentIds": [
+    "sha256-cd-v1:fe8660aafd0bd0bfc63729544de37429203f60f7eba6d4af0f114f47d02244da"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Psychic Detective Vol. 2 - Memories (1989)(Datawest)(Jp).zip"
+   ],
+   "title": "Psychic Detective Vol. 2 - Memories",
+   "year": 1989
+  },
+  "fmtowns:local-2d631fe112": {
+   "contentIds": [
+    "sha256-cd-v1:7972de0e8283648443c803bc1db50017324cb26e67890d07264109631dd5c15a"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:4D Sports Tennis (1993)(Victor)(Jp-En).zip"
+   ],
+   "title": "4D Sports Tennis",
+   "year": 1993
+  },
+  "fmtowns:local-30bd78c447": {
+   "contentIds": [
+    "sha256-cd-v1:10a3f9d3b18a1bc1e2510b0f506b97833695adfb2d317ded3022da5d0c8937a4"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Tiny Step (1993)(Birdie Soft)(Jp).zip"
+   ],
+   "title": "Tiny Step",
+   "year": 1993
+  },
+  "fmtowns:local-313ca69d87": {
+   "contentIds": [
+    "sha256-cd-v1:2f3c50f733fef3bacaab1759f254d5c671cfa88cece16070b34e35853228cc7a"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Sayaka (1994)(Ides)(Jp).zip"
+   ],
+   "title": "Sayaka",
+   "year": 1994
+  },
+  "fmtowns:local-3732fa1cdd": {
+   "contentIds": [
+    "sha256-cd-v1:8bfc48c83af093a31ce7d17aabb4fa951b4a8c6f7627585ec0c11de384a90d4c"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Madoh Gakuin R (19xx)(Foresight)(Jp).zip"
+   ],
+   "title": "Madoh Gakuin R"
+  },
+  "fmtowns:local-3bed931fbc": {
+   "contentIds": [
+    "sha256-cd-v1:de19cc8dafbd48b12474b2a33e5f811ff78f7845bde714b1eefedae7a504f7bb"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Psychic Detective Final - Solitude Gekan (1993)(Datawest)(Jp)[+UserDisk].zip"
+   ],
+   "title": "Psychic Detective Final - Solitude Gekan",
+   "year": 1993
+  },
+  "fmtowns:local-400e19efbc": {
+   "contentIds": [
+    "sha256-cd-v1:133636e79b96715cc41bd7132507df4fd09356f433d274bfe7ce0ff0a02146ea"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Maria ni Sasageru Ballade (1995)(Fairytale)(Jp)[+UserDisk].zip"
+   ],
+   "title": "Maria ni Sasageru Ballade",
+   "year": 1995
+  },
+  "fmtowns:local-42028eb511": {
+   "contentIds": [
+    "sha256-cd-v1:7b5dcfab32fcd8abceb01a45fd554dc0f0781101df0e309e32c4269e09c4196f"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Doki Doki Disk CDban Vol.1 (1994)(D.O.)(Jp).zip"
+   ],
+   "title": "Doki Doki Disk CDban Vol.1",
+   "year": 1994
+  },
+  "fmtowns:local-43c3f59fdf": {
+   "contentIds": [
+    "sha256-cd-v1:caa63b1b86f92a41ed9ae22af666319c72d9c8fa5689dd5568a1df56fef5ea42"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:4D Sports Boxing (1991)(Distinctive Software)(Jp-En).zip"
+   ],
+   "title": "4D Sports Boxing",
+   "year": 1991
+  },
+  "fmtowns:local-449c95e008": {
+   "contentIds": [
+    "sha256-cd-v1:1c2f9ea75f18761ffa87edb8ad219b9a86e53d04554ccbbf9681e05903afd778"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Eye Of The Beholder II (1991)(SSI)(Jp).zip"
+   ],
+   "title": "Eye Of The Beholder II",
+   "year": 1991
+  },
+  "fmtowns:local-49fbb614d7": {
+   "contentIds": [
+    "sha256-cd-v1:590a38e6080df344cb83fdfb3a2e08500092bd8ea431ea2db446bf310e5882e5"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Wing Commander II and Special Operations (1991)(Origin)(Jp)[+HDD+CMOS].zip"
+   ],
+   "title": "Wing Commander II and Special Operations",
+   "year": 1991
+  },
+  "fmtowns:local-4b74dd94e3": {
+   "contentIds": [
+    "sha256-cd-v1:2c539ba81bff13c39bac86355b504d979646114d1ef248ac36c56bff8a031496"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:4D Sports Driving (1992)(Distinctive Software)(Jp-En).zip"
+   ],
+   "title": "4D Sports Driving",
+   "year": 1992
+  },
+  "fmtowns:local-53e11de06c": {
+   "contentIds": [
+    "sha256-cd-v1:f87c681ad72b9bfff058761f6717b03b1690bf7baa630baaea7520373b17e6dd"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Psychic Detective Vol. 1 - Invitation (1992)(Datawest)(Jp)[+UserDisk].zip"
+   ],
+   "title": "Psychic Detective Vol. 1 - Invitation",
+   "year": 1992
+  },
+  "fmtowns:local-5476885fa1": {
+   "contentIds": [
+    "sha256-cd-v1:4ce58aac1bb59c35300f72c7b99a5039302a6381df533d865555b01052f2be05"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Psychic Detective Vol. 3 - Aya (1990)(Datawest)(Jp).zip"
+   ],
+   "title": "Psychic Detective Vol. 3 - Aya",
+   "year": 1990
+  },
+  "fmtowns:local-55bbcf2e90": {
+   "contentIds": [
+    "sha256-cd-v1:6e202662df90af06584050f48485c114317a6ffc1b870d2f1cc01a187912be64"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Railroad Tycoon (19xx)(Microprose)(Jp)[missing bootdisk].zip"
+   ],
+   "title": "Railroad Tycoon"
+  },
+  "fmtowns:local-5608266361": {
+   "contentIds": [
+    "sha256-cd-v1:09095579184db0d9e1de7b17071550090782e134058b1d93aa432409dfc1557b"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Yuwaku (1996)(T2)(Jp)[+UserDisk].zip"
+   ],
+   "title": "Yuwaku",
+   "year": 1996
+  },
+  "fmtowns:local-5709dae663": {
+   "contentIds": [
+    "sha256-cd-v1:5a4b82eb9269a11d24d52e05364596ce30a280e4b712bc8b27ca5f7504bc6f73"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Amaranth 3 (1994)(Fuga Systems)(Jp).zip"
+   ],
+   "title": "Amaranth 3",
+   "year": 1994
+  },
+  "fmtowns:local-626679af6b": {
+   "contentIds": [
+    "sha256-cd-v1:08efd014777e2cd871dba4932e6207227bdec9d31688a0595bcda519984b722d"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Afterburner 2 (1989)(Sega)(Jp-En).zip"
+   ],
+   "title": "Afterburner 2",
+   "year": 1989
+  },
+  "fmtowns:local-7123af5d69": {
+   "contentIds": [
+    "sha256-cd-v1:a32d4214056a11e94c93733e6ce9594778cdf4b9f42366e2598709bad8c314eb"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Ayumichan Monogatari (1993)(Alice Soft)(Jp)[+BootDisk].zip"
+   ],
+   "title": "Ayumichan Monogatari",
+   "year": 1993
+  },
+  "fmtowns:local-763849a33b": {
+   "contentIds": [
+    "sha256-cd-v1:f63a1250bfab7eebe819a35cf66ace146b60be23edfd397a0bd25f3af0c0d4b3"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:RAC Rally (1995)(Victor)(En).zip"
+   ],
+   "title": "RAC Rally",
+   "year": 1995
+  },
+  "fmtowns:local-7a7401f57c": {
+   "contentIds": [
+    "sha256-cd-v1:fccdbb152bc432514f1bf20f85d256cfa2521a9d185ce2bf00f7740346a161d4"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Psychic Detective Final - Solitude Jyoukan (1992)(Datawest)(Jp)[+UserDisk].zip"
+   ],
+   "title": "Psychic Detective Final - Solitude Jyoukan",
+   "year": 1992
+  },
+  "fmtowns:local-7c4f343622": {
+   "contentIds": [
+    "sha256-cd-v1:b18676e07153332f92a5d70d069b91eea9bdbf8cbdce8fa4fd0c340352b40a5f"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Star CruserII (1994)(JHV)(Jp)[+UserDisk].zip"
+   ],
+   "title": "Star CruserII",
+   "year": 1994
+  },
+  "fmtowns:local-7db2d16eb3": {
+   "contentIds": [
+    "sha256-cd-v1:bdc488b4139a8b7cb8bba7e68bdbf74d332e7fcb1b7eefac341b6d5de6e7bc70"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Legend of Kyrandia, The (1992)(Westwood Studios)(Jp)[+UserDisk].zip"
+   ],
+   "title": "The Legend of Kyrandia",
+   "year": 1992
+  },
+  "fmtowns:local-7f68699243": {
+   "contentIds": [
+    "sha256-cd-v1:6f64e9d7a95afe025789c24333ddbb53bd286ed30c7f40c7a04a3cfee98736b3"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Towns Hyakunin Issyu (1989)(Fujitsu)(Jp).zip"
+   ],
+   "title": "Towns Hyakunin Issyu",
+   "year": 1989
+  },
+  "fmtowns:local-8075d1baf3": {
+   "contentIds": [
+    "sha256-cd-v1:12487e01394f04017b8ce13f424fef930d404167e3a7f0fadc85b8cd9ff056ba"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Regional Power2 (1992)(Cosmos)(Jp).zip"
+   ],
+   "title": "Regional Power2",
+   "year": 1992
+  },
+  "fmtowns:local-838bd22cc7": {
+   "contentIds": [
+    "sha256-cd-v1:54251e33eb27fa961db63fdb333df18a973da152aaf6cd006e3a051b5a18021d"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Scholar Movie Magazine (1994)(King Video)(Jp)[+BootDisk].zip"
+   ],
+   "title": "Scholar Movie Magazine",
+   "year": 1994
+  },
+  "fmtowns:local-844d210dfa": {
+   "contentIds": [
+    "sha256-cd-v1:54874f23c9ee7258d05b40251aec65beb70262c8fedcf9beab37ae177f115579"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Bacta1+2 (1996)(Himeya Soft)(Jp).zip"
+   ],
+   "title": "Bacta1+2",
+   "year": 1996
+  },
+  "fmtowns:local-89f7f5d2cb": {
+   "contentIds": [
+    "sha256-cd-v1:0465a2a4ea345e0ff1472be9bbf71b8f42ff3e6fd399d762b7f3282ae11cfb02"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:A 1-2-3 (19xx)(-)(Jp).zip"
+   ],
+   "title": "A 1-2-3"
+  },
+  "fmtowns:local-8c464fb0f7": {
+   "contentIds": [
+    "sha256-cd-v1:89991ade8c78d48d3f4c9d1b8aa678087546b9e55d9a98ff04d86f067d3f58dc"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Ikazuchi no Sensi Laidi (1994)(ZyX)(Jp).zip"
+   ],
+   "title": "Ikazuchi no Sensi Laidi",
+   "year": 1994
+  },
+  "fmtowns:local-92a214634d": {
+   "contentIds": [
+    "sha256-cd-v1:a730dcbb73ee77ab2bdf22057169806ebf96bde9ceee8fceffc531e57a474b34"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Record of Lodoss War (1991)(Humming Bird)(Jp)[+UserDisk].zip"
+   ],
+   "title": "Record of Lodoss War",
+   "year": 1991
+  },
+  "fmtowns:local-957fd52ad3": {
+   "contentIds": [
+    "sha256-cd-v1:9274104019624d608a2f830aa40e303205a08cfa93786daebea9a6ecdf108fa9"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Legend of Kyrandia 2, The (1993)(Westwood Studios)(Jp)[+UserDisk].zip"
+   ],
+   "title": "The Legend of Kyrandia 2",
+   "year": 1993
+  },
+  "fmtowns:local-993e3722f5": {
+   "contentIds": [
+    "sha256-cd-v1:31ba0529594ae2f0aa40734c643487ceb8044badb801362f2d073e3ea1634d4d"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Psychic Detective Vol. 4 - Olgel (1991)(Datawest)(Jp)[+UserDisk].zip"
+   ],
+   "title": "Psychic Detective Vol. 4 - Olgel",
+   "year": 1991
+  },
+  "fmtowns:local-9dcd699f97": {
+   "contentIds": [
+    "sha256-cd-v1:e887705246c807e73c717c2e0f111c361ddad4ba66a3cc85ab5bd080f5813f2d"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Rance 3 v1.21 (Adult)(1991)(Alice Soft)(Jp).zip"
+   ],
+   "title": "Rance 3 v1.21",
+   "year": 1991
+  },
+  "fmtowns:local-a48d70589b": {
+   "contentIds": [
+    "sha256-cd-v1:fbf6d5024591dd27268c5554488682479cee686411670a95d95e3574198001fa"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Rejection Denno Syoujyo (1992)(Takeru)(Jp).zip"
+   ],
+   "title": "Rejection Denno Syoujyo",
+   "year": 1992
+  },
+  "fmtowns:local-a5c952c7ff": {
+   "contentIds": [
+    "sha256-cd-v1:0d425f80dd364135938c5d64d555c02b64907c29b2a919f16cf65f259dbc83a1"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Date,The (1990)(Jamp)(Jp).zip"
+   ],
+   "title": "The Date",
+   "year": 1990
+  },
+  "fmtowns:local-a796bab8dc": {
+   "contentIds": [
+    "sha256-cd-v1:611fa0aecd7c464b99606d04aaed84fe7803eab04c26dfd8e3ceaed6072267c4"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Dead of the Brain (1993)(Fairytale)(Jp).zip"
+   ],
+   "title": "Dead of the Brain",
+   "year": 1993
+  },
+  "fmtowns:local-a992b1e9bc": {
+   "contentIds": [
+    "sha256-cd-v1:94991394f8bf8cb4b8bc67b566419ea2f4460bdacd69e6e8b41861111522b664"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:FMTOWNS Super Technology Demo 1993 (Demo)(1993)(Fujitsu)[Game Previews].zip"
+   ],
+   "title": "FMTOWNS Super Technology Demo 1993",
+   "year": 1993
+  },
+  "fmtowns:local-a9d2e85927": {
+   "contentIds": [
+    "sha256-cd-v1:9d57106731b42e8515cea205ad76dbfcdf99dd45e2ab05ed5f86fae4845972d7"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Heart de Ron (1995)(D.O.)(Jp).zip"
+   ],
+   "title": "Heart de Ron",
+   "year": 1995
+  },
+  "fmtowns:local-ab24f07b27": {
+   "contentIds": [
+    "sha256-cd-v1:b828d67f8fbdd00020941ade711a01b0c715ba772ce59da55fda549476b47769"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Alshark (1991)(Right Stuff Corp)(Jp)[+UserDisk].zip"
+   ],
+   "title": "Alshark",
+   "year": 1991
+  },
+  "fmtowns:local-b12464f0cc": {
+   "contentIds": [
+    "sha256-cd-v1:36629579ae02a2a0c1dde80b80d073207d72948cba254849ae5791cc02622c19"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Populous (1990)(Imagineer)(Jp-En).zip"
+   ],
+   "title": "Populous",
+   "year": 1990
+  },
+  "fmtowns:local-b1b187cf00": {
+   "contentIds": [
+    "sha256-cd-v1:51455c4e01117c92c9f406dccdb7b26f8979fd10122cb11c09791227e3ad36a5"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Intruder (1989)(AliceSoft)[+UserDisk].zip"
+   ],
+   "title": "Intruder",
+   "year": 1989
+  },
+  "fmtowns:local-b8594b27f4": {
+   "contentIds": [
+    "sha256-cd-v1:1e72ede82590e986cf0db070a0a8d032f218998f21d6d510eade6c9549e544a4"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:GohII Towns Special  (1993)(Wolf Team)(Jp)[+SystemDisk].zip"
+   ],
+   "title": "GohII Towns Special",
+   "year": 1993
+  },
+  "fmtowns:local-c73e2211a8": {
+   "contentIds": [
+    "sha256-cd-v1:e2ab733c454c8e1a42dba2e1c2449fefbf018185714a8135eeb9d06b8f7de5ad"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Dungeon Master (1987)(FTL)(Jp-En).zip"
+   ],
+   "title": "Dungeon Master",
+   "year": 1987
+  },
+  "fmtowns:local-c839510143": {
+   "contentIds": [
+    "sha256-cd-v1:385b0ea43b4eae8c71c89bfa2e9442e808d864bb9066b0345e41d0a2b8773df9"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Ultima Trilogy 1-3 (1990)(Origins)(Jp-En)[+UserDisk].zip"
+   ],
+   "title": "Ultima Trilogy 1-3",
+   "year": 1990
+  },
+  "fmtowns:local-ca1c75e58e": {
+   "contentIds": [
+    "sha256-cd-v1:ff169f7e80877a93b6cf603b01ecaf6ed836b5f062a3cd85f4fae3aef4a29867"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Wing Commander+Secret Missions (1990)(Origin)(Jp-En)[+UserDisk].zip"
+   ],
+   "title": "Wing Commander+Secret Missions",
+   "year": 1990
+  },
+  "fmtowns:local-ccf16d383b": {
+   "contentIds": [
+    "sha256-cd-v1:15ac36a907b02c0dccaeb01b0e0341eb0dc739c8353f2ab036b88588c737a5e0"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Queen Of Duellist, The (199x)(Agumix)(Jp-En)[+UserDisk].zip"
+   ],
+   "title": "The Queen Of Duellist"
+  },
+  "fmtowns:local-cf48175506": {
+   "contentIds": [
+    "sha256-cd-v1:3410477b541899bfed943863e7ed43c7d73cf9f93e935718b59ba9fa64ef81da"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:AD&D Dragons of Flame (1992)(PonyCanyon)(Jp-En).zip"
+   ],
+   "title": "AD&D Dragons of Flame",
+   "year": 1992
+  },
+  "fmtowns:local-d5a03f9ad3": {
+   "contentIds": [
+    "sha256-cd-v1:fff467a3de33efb266a0842c51af92ae46ca4aceb3effe147d5bd2431f2639b5"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Where in the World is Carmen Sandiego (1993)(Fujitsu)(Jp-En).zip"
+   ],
+   "title": "Where in the World is Carmen Sandiego",
+   "year": 1993
+  },
+  "fmtowns:local-d90a3c5a90": {
+   "contentIds": [
+    "sha256-cd-v1:3b9fa772916a7cd4d2cafa856622f7444150e62fd40c0f3262465ec3d356b473"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Doll Using (19xx)(Forest)(Jp).zip"
+   ],
+   "title": "Doll Using"
+  },
+  "fmtowns:local-db9c6e960a": {
+   "contentIds": [
+    "sha256-cd-v1:7bcd0aa7a90c47201006c9d355c406246c855dc0017d0e4985cfe186e4f35c31"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Sherlock Holmes no Tantei Kouza (1991)(Fujitsu)(Jp-En).zip"
+   ],
+   "title": "Sherlock Holmes no Tantei Kouza",
+   "year": 1991
+  },
+  "fmtowns:local-e16673bc50": {
+   "contentIds": [
+    "sha256-cd-v1:bd28476a858db7ce18597656b2c0cb43c03d1eb3f115e8887f07b274d6e08af8"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Super Real Mahjong PII+PIII (Jp)(1992)(Ving).zip"
+   ],
+   "title": "Super Real Mahjong PII+PIII",
+   "year": 1992
+  },
+  "fmtowns:local-e27f4b1130": {
+   "contentIds": [
+    "sha256-cd-v1:6e17356b539748ee7d7d4d0c78878b52ff0cbc169a89b11da4c7946b11e987d7"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Hanahuda de Pon! (1996)(Active)(Jp)[+BootDisk].zip"
+   ],
+   "title": "Hanahuda de Pon!",
+   "year": 1996
+  },
+  "fmtowns:local-e91e393492": {
+   "contentIds": [
+    "sha256-cd-v1:dd7826ee7a04823b6cb78cb6ee665136cf298b61ef91898f94bba56cb379ae41"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:American Oudan Ultra Quizz - King of Quiz (1994)(NTV)(Jp).zip"
+   ],
+   "title": "American Oudan Ultra Quizz - King of Quiz",
+   "year": 1994
+  },
+  "fmtowns:local-ed6e2d5ebe": {
+   "contentIds": [
+    "sha256-cd-v1:cba6bc730330b57e85c0c58c5b62e354f608f239fa30810ae9f3500e67bc103d"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Crescent Moon (1989)(Alice Soft)(Jp)[+UserDisk].zip"
+   ],
+   "title": "Crescent Moon",
+   "year": 1989
+  },
+  "fmtowns:local-f0d355bd2a": {
+   "contentIds": [
+    "sha256-cd-v1:42c4bf50a0d3f20382168b842d2d83705ee7ed941520e45c93e7d442c62158a4"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Kikou Shidan (1990)(Artdink)(Jp).zip"
+   ],
+   "title": "Kikou Shidan",
+   "year": 1990
+  },
+  "fmtowns:local-f3a0b71a35": {
+   "contentIds": [
+    "sha256-cd-v1:c0a23e318ba06909b2a727a2320b97238572c4ee38c6f57898b08ffbcdbef57a"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Super Shanghai II Dragons Eye (1991)(Hot B)(Jp).zip"
+   ],
+   "title": "Super Shanghai II Dragons Eye",
+   "year": 1991
+  },
+  "fmtowns:local-f826f302b0": {
+   "contentIds": [
+    "sha256-cd-v1:7d4ee74788bb57c0d329e65bd6812d3583460e05891c654995133812b755cf6a"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Psychic Detective Vol. 5 - Nightmare (1994)(Datawest)(Jp)[+SystemDisk].zip"
+   ],
+   "title": "Psychic Detective Vol. 5 - Nightmare",
+   "year": 1994
+  },
+  "fmtowns:local-fc034aa413": {
+   "contentIds": [
+    "sha256-cd-v1:cdd3095b537666eddedcd121dfc801a3a836816b18a77498a1955b150eea3303"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Flying Shark (1993)(Ving)(Jp-En).zip"
+   ],
+   "title": "Flying Shark",
+   "year": 1993
+  },
+  "fmtowns:local-fed8d9b0e6": {
+   "contentIds": [
+    "sha256-cd-v1:8d297bd29baaafdc9393f3030534732a387887693d70250b741d9169236da559"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Afterburner 3 (1992)(Sega)(Jp).zip"
+   ],
+   "title": "Afterburner 3",
+   "year": 1992
   },
   "fmtowns:moby-10591": {
    "description": "SNK's improved Fatal Fury 2: a one-on-one fighter with more characters, faster play and new moves.",
@@ -7044,5 +8940,10 @@
   }
  },
  "schemaVersion": 1,
- "sharedContentIds": {}
+ "sharedContentIds": {
+  "sha256-fd-v1:e45f81d9805fa3aebcce3e48794d5020ffe1d18f07d8bccfdaf6b26a7ec94cfc": [
+   "fmtowns:local-b1b187cf00",
+   "fmtowns:local-ed6e2d5ebe"
+  ]
+ }
 }
