@@ -1,0 +1,33 @@
+name: Discord sync
+
+# Mirrors this repository's issues into the Kairo Discord forum, which every Kairo app shares,
+# through the shared action; the Discord message IDs are committed under .github/discord-sync.
+on:
+  issues:
+    types: [opened, edited, closed, reopened]
+  issue_comment:
+    types: [created, edited, deleted]
+  workflow_dispatch:
+    inputs:
+      issue:
+        description: 'Issue number to mirror, or to rewrite from GitHub if already mirrored; leave empty to mirror every issue without a thread'
+        required: false
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  sync:
+    # issue_comment also fires for pull request comments; only issues are mirrored.
+    if: ${{ !github.event.issue.pull_request }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: MrJackSpade/Kairo/.github/actions/discord-sync@375bd4e0cb273d804b075aa96074724ec7f1872f
+        with:
+          webhook: ${{ secrets.KAIRO_DISCORD_WEBHOOK }}
+          state: .github/discord-sync/issues
+          issue: ${{ inputs.issue }}
