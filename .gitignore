@@ -38,3 +38,6 @@ __pycache__/
 
 # Agent instructions stay local.
 /AGENTS.md
+
+# Local build output and logs (shared/tools/build.ps1, tools/test-core.ps1)
+/.build/

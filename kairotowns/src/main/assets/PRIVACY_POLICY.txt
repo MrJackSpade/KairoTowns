@@ -1,0 +1,20 @@
+KairoTowns Privacy Policy
+Last updated: October 21, 2026
+
+KairoTowns is an Android FM Towns emulator published by Loxifi LLC. This policy covers KairoTowns, including the paid Google Play edition and the free GitHub edition. For privacy questions or requests, email admin@loxifi.com.
+
+Data on your device
+KairoTowns reads the game folder and any firmware files that you choose through Android's file picker. It uses disk image contents to identify supported games. Game files, file names, content hashes, imported firmware, settings, and downloaded images stay on your device in the selected folder or the app's private storage. Loxifi does not receive these files, names, hashes, or settings. KairoTowns has no account, advertising, analytics, or crash reporting service.
+
+Optional artwork downloads
+Artwork is not bundled in the no-artwork edition. If you choose "Download missing images" or tap an image to request a larger version, KairoTowns makes an HTTPS request directly to images.launchbox-app.com or gamesdb-images.launchbox.gg. The requested image URL can reveal which game's artwork was requested. The image service also receives your network IP address and ordinary request information needed to deliver the image. KairoTowns does not send your game files, file names, firmware, or content hashes to these services, and Loxifi does not receive their request logs. The services control their own logging and retention. Downloaded thumbnails are stored on your device.
+
+Imported catalog files
+
+When you import a catalog file, a copy of its metadata, artwork and update address is stored privately on your device. Checking installed catalogs contacts only the update addresses supplied by those installed files over HTTPS. Those servers receive your IP address and ordinary request information, but not your game files, library names or content hashes. The servers control their own logs and retention. Removing a catalog deletes its imported metadata and artwork, while keeping your games and personal overrides.
+
+Storage, security, and deletion
+KairoTowns accesses files only after you select them with Android's file picker. It stores app data in private app storage, does not enable Android app backup, and uses HTTPS for optional artwork requests. Local app data remains until you clear KairoTowns's storage or uninstall it; that does not remove original game files in your chosen folder. Loxifi has no server copy of app data to delete. To ask about data sent to an image service, contact that service. If you email Loxifi for support, we receive the email address and information you choose to send and use it to respond; email admin@loxifi.com to request deletion of that correspondence.
+
+Changes
+We may update this policy when KairoTowns's behavior changes. The current version will be available in the app and through the Google Play listing.

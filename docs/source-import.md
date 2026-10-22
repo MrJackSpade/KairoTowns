@@ -20,3 +20,5 @@ Copied from the archive: `src/`, `LICENSE`, `readme.md`, `command.md`, `hdimage.
 Not copied: the desktop GUI (`gui/`, `winapp/`), guest-side programs and utilities (`dosapp/`, `townsapp/`, `util/`), test programs and disk images (`testasm/`, `testc/`, `testdata/`), `experiments/`, `symtables/`, `scripts/`, and `reminder.txt`. They are not part of the emulator library. `src/towns/townsdef/.gitignore` was removed so every copied file is tracked.
 
 There are no local changes to the Tsugaru sources.
+
+The Android and host builds (`core/CMakeLists.txt`) build Tsugaru's own subdirectories without changing them. For compilers other than MSVC they force-include `<cmath>` and `<cstdlib>` into C++ files that use `std::pow` and `rand` without including them, choose the Unix or Windows file-system helper and the silent sound backend themselves, give Android an empty `pthread` target (its threads are in the C library), and on Windows pass `-fms-extensions` for MSVC's `__assume`.
