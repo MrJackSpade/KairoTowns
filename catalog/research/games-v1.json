@@ -567,7 +567,6 @@
     "CyberCity: The Golden Age of Cybernetics"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/a85d0199-279f-49f2-9bbb-a2e3389e4e85.jpg",
-   "description": "An action game by Telenet, released in 1989.",
    "developer": "Renovation Game",
    "launchbox": "182654",
    "publisher": "Nippon Telenet",
@@ -1037,7 +1036,6 @@
   },
   "fmtowns:184372": {
    "boxArtUrl": "https://images.launchbox-app.com/0430523c-4a35-4395-846d-7bb66aa1ba2e.jpg",
-   "description": "A crosshair shooter by Family Soft.",
    "developer": "Family Soft",
    "launchbox": "184372",
    "publisher": "Family Soft",
@@ -1115,7 +1113,6 @@
   },
   "fmtowns:184379": {
    "boxArtUrl": "https://images.launchbox-app.com/7b0db6c7-d26b-45ce-84da-0b48359def7b.jpg",
-   "description": "A tool for making shooters, by Amorphous.",
    "developer": "Amorphous",
    "launchbox": "184379",
    "publisher": "Amorphous",
@@ -1408,7 +1405,6 @@
   },
   "fmtowns:184611": {
    "boxArtUrl": "https://images.launchbox-app.com/c4d6e77a-a638-4483-81bc-9e1e1b619cf0.jpg",
-   "description": "An adventure game by Fujitsu, released in 1989.",
    "developer": "Fujitsu",
    "launchbox": "184611",
    "publisher": "Fujitsu",
@@ -1804,7 +1800,6 @@
   },
   "fmtowns:185089": {
    "boxArtUrl": "https://images.launchbox-app.com/91798168-2264-4359-89fa-1153cceb3208.jpg",
-   "description": "A strategy game by ArtDink, released in 1994.",
    "developer": "ArtDink",
    "launchbox": "185089",
    "publisher": "ArtDink",
@@ -1816,7 +1811,6 @@
     "Tokio: Tokyo-to Dai-24-ku"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/03e7c090-e56e-4c75-8cdb-8268a92e8492.jpg",
-   "description": "A simulation game by ArtDink, released in 1992.",
    "developer": "ArtDink",
    "launchbox": "185090",
    "publisher": "ArtDink",
@@ -1838,7 +1832,6 @@
   },
   "fmtowns:185092": {
    "boxArtUrl": "https://images.launchbox-app.com/30bf7bb5-9ca4-4f5e-8326-9fbc2582c43b.jpg",
-   "description": "An adventure set in Shinjuku, by Technopolis Soft.",
    "developer": "Technopolis Soft",
    "launchbox": "185092",
    "publisher": "Tokuma Shoten",
@@ -1910,7 +1903,6 @@
     "Bible Master"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/53a3138b-06a0-4644-a07a-fa7e928d2181.jpg",
-   "description": "A fantasy strategy role-playing game by Glodia.",
    "developer": "Glodia",
    "launchbox": "185170",
    "publisher": "Glodia",
@@ -1979,7 +1971,6 @@
   },
   "fmtowns:185644": {
    "boxArtUrl": "https://images.launchbox-app.com/50a4613c-6e88-4e45-87f0-c243294e9fa8.jpg",
-   "description": "An adventure game by Family Soft, released in 1997.",
    "developer": "Family Soft",
    "launchbox": "185644",
    "publisher": "Family Soft",
@@ -2925,7 +2916,6 @@
   },
   "fmtowns:188176": {
    "boxArtUrl": "https://images.launchbox-app.com/1880ccf5-0a96-44b7-9275-8273426de1e1.jpg",
-   "description": "Go against the computer at several difficulty levels.",
    "developer": "ASCII",
    "launchbox": "188176",
    "mobygames": 58461,
@@ -3032,7 +3022,6 @@
   "fmtowns:188185": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/4fcddac7-0a1f-4922-ac36-4600837208bf.jpg",
-   "description": "A four-player mahjong game.",
    "developer": "Fairytale Red Zone",
    "launchbox": "188185",
    "mobygames": 58462,
@@ -3127,7 +3116,6 @@
     "Kyan Kyan Collection: Daifugouhen"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/f0ca0651-4e20-4861-95c2-cc4b2cf73bb8.jpg",
-   "description": "A daifugo card game collection.",
    "developer": "I-cell",
    "launchbox": "188195",
    "mobygames": 58491,
@@ -3297,7 +3285,6 @@
   "fmtowns:188218": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/df73832a-4d4e-4e84-acc0-a309c11f5571.jpg",
-   "description": "A one-on-one mahjong game against a series of opponents.",
    "developer": "Active Software",
    "launchbox": "188218",
    "mobygames": 58499,
@@ -3309,7 +3296,6 @@
   "fmtowns:188219": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/a85c903a-5979-4822-9b75-faeab1fcbe04.jpg",
-   "description": "A mahjong game named after a winning hand taken from the last discard.",
    "developer": "Queen Soft",
    "launchbox": "188219",
    "mobygames": 58505,
@@ -3405,7 +3391,6 @@
   "fmtowns:188263": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/5decfea1-148a-48d4-8298-dc20b8946726.jpg",
-   "description": "A quiz game against a choice of eight opponents.",
    "developer": "D.O.",
    "launchbox": "188263",
    "mobygames": 58542,
@@ -4396,7 +4381,6 @@
     "Zen Nihon Bishoujo Mahjong Senshuken Taikai: Heart de Ron!!"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/250a321e-4d7e-4642-8e92-2a7f0e244ab3.jpg",
-   "description": "A mahjong tournament game against a field of opponents.",
    "developer": "D.O.",
    "launchbox": "188358",
    "mobygames": 58411,
@@ -4420,7 +4404,6 @@
   },
   "fmtowns:188361": {
    "boxArtUrl": "https://images.launchbox-app.com/bd197190-e680-4870-bdbd-cf995308d808.jpg",
-   "description": "A baseball game by ASCII.",
    "developer": "ASCII Entertainment Software",
    "launchbox": "188361",
    "publisher": "ASCII Entertainment Software",
@@ -4517,7 +4500,6 @@
     "Mahjong Musashi"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/7cba04ca-a952-4cd7-a04d-30ab79a078c1.jpg",
-   "description": "A mahjong game by Cosmos Computer.",
    "developer": "Cosmos Computer",
    "launchbox": "188370",
    "publisher": "Cosmos Computer",
@@ -4557,7 +4539,6 @@
   },
   "fmtowns:188770": {
    "boxArtUrl": "https://images.launchbox-app.com/69e93f69-4b8b-4e6c-82ea-11099c8cf199.jpg",
-   "description": "A sports game by ArtDink, released in 1992.",
    "developer": "ArtDink",
    "launchbox": "188770",
    "publisher": "ArtDink",
@@ -4565,7 +4546,6 @@
   },
   "fmtowns:188771": {
    "boxArtUrl": "https://images.launchbox-app.com/d67bd4e4-77dd-49da-8eb4-bcd517903d45.jpg",
-   "description": "A horse racing game by Victor.",
    "developer": "Victor Interactive Software",
    "launchbox": "188771",
    "publisher": "Victor Interactive Software",
@@ -4756,7 +4736,6 @@
   },
   "fmtowns:188793": {
    "boxArtUrl": "https://images.launchbox-app.com/b9211702-ac95-46ab-a296-f234111eab36.jpg",
-   "description": "A war simulation game by Wolf Team, released in 1993.",
    "developer": "Wolf Team",
    "launchbox": "188793",
    "publisher": "Wolf Team",
@@ -4773,7 +4752,6 @@
   },
   "fmtowns:188795": {
    "boxArtUrl": "https://images.launchbox-app.com/b3428b0f-3190-470b-a322-3d59d27caf75.jpg",
-   "description": "A hanafuda card game by Active.",
    "developer": "Active Software",
    "launchbox": "188795",
    "publisher": "Active Software",
@@ -4808,7 +4786,6 @@
    "title": "Hyper Planet"
   },
   "fmtowns:188800": {
-   "description": "The fourth Jangou mahjong game.",
    "developer": "Victor Interactive Software",
    "launchbox": "188800",
    "publisher": "Victor Interactive Software",
@@ -4817,7 +4794,6 @@
   },
   "fmtowns:188801": {
    "boxArtUrl": "https://images.launchbox-app.com/60f48ccf-fce0-4336-8448-370a004f55ec.jpg",
-   "description": "An adventure game by KSS.",
    "developer": "KSS",
    "launchbox": "188801",
    "publisher": "KSS",
@@ -4885,7 +4861,6 @@
     "Morita Shougi II"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/50021f98-2fed-4e1b-9218-0f95fe5d61e5.jpg",
-   "description": "Shogi, the Japanese chess game, against the computer.",
    "developer": "Random House",
    "launchbox": "188808",
    "publisher": "Enix",
@@ -4921,7 +4896,6 @@
     "Niko^2"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/2ed8847c-9012-45a9-aa0e-43b814cc93dd.jpg",
-   "description": "An action game by Wolf Team, released in 1991.",
    "developer": "Wolf Team",
    "launchbox": "188811",
    "publisher": "Wolf Team",
@@ -4931,7 +4905,6 @@
   "fmtowns:188812": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/r2_c6446046-2df6-41fa-8eb0-b9e7e7f9a0b1.png",
-   "description": "An adventure game by Cocktail Soft.",
    "developer": "Cocktail Soft",
    "launchbox": "188812",
    "publisher": "Cocktail Soft",
@@ -4992,7 +4965,6 @@
   },
   "fmtowns:188819": {
    "boxArtUrl": "https://images.launchbox-app.com/a738a476-1d44-48f4-a95d-e2acb56bb895.jpg",
-   "description": "An adventure game by DataWest.",
    "developer": "DataWest",
    "launchbox": "188819",
    "publisher": "DataWest",
@@ -5001,7 +4973,6 @@
   },
   "fmtowns:188820": {
    "boxArtUrl": "https://images.launchbox-app.com/e35e3413-928e-4d7c-abbd-cdba45a024e9.jpg",
-   "description": "A role-playing game by Wavetrain, released in 1989.",
    "developer": "Wavetrain",
    "launchbox": "188820",
    "publisher": "Wavetrain",
@@ -5010,7 +4981,6 @@
   },
   "fmtowns:188821": {
    "boxArtUrl": "https://images.launchbox-app.com/5d38242e-25c8-47e5-9e7a-74b5e9670d2b.jpg",
-   "description": "An adventure game released in 1989.",
    "developer": "Chou Onsoku",
    "launchbox": "188821",
    "publisher": "Chou Onsoku",
@@ -5020,7 +4990,6 @@
   "fmtowns:188903": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/39090880-9308-4351-88f9-fdb800722edd.jpg",
-   "description": "An adventure game with voiced scenes, by Himeya Soft.",
    "developer": "Himeya Soft",
    "launchbox": "188903",
    "publisher": "Himeya Soft",
@@ -5257,7 +5226,6 @@
   },
   "fmtowns:194288": {
    "boxArtUrl": "https://images.launchbox-app.com/071e7683-0d5e-46b5-875b-4f91607623cb.jpg",
-   "description": "An intermediate-level language learning program by CSK.",
    "developer": "CSK Research Institute",
    "launchbox": "194288",
    "publisher": "CSK Research Institute",
@@ -5341,7 +5309,6 @@
   },
   "fmtowns:197129": {
    "boxArtUrl": "https://images.launchbox-app.com/39e2fcd6-58ef-43a2-82fc-f80274e8b4d1.jpg",
-   "description": "An introductory disc for the FM Towns computer.",
    "launchbox": "197129",
    "publisher": "Fujitsu",
    "title": "Welcome to FM Towns",
@@ -5583,7 +5550,6 @@
    "title": "Darwin's Dilemma"
   },
   "fmtowns:199838": {
-   "description": "A vertical shooter made by an independent developer.",
    "developer": "Satoshi Yoshida",
    "launchbox": "199838",
    "mobygames": 158574,
@@ -5770,7 +5736,6 @@
   },
   "fmtowns:200755": {
    "boxArtUrl": "https://images.launchbox-app.com/ede9764f-6f1f-4c5a-9c5b-7b1cbd0ce03f.jpg",
-   "description": "A puzzle game by Ponytail Soft.",
    "developer": "Ponytail Soft",
    "launchbox": "200755",
    "publisher": "Ponytail Soft",
@@ -5803,7 +5768,6 @@
   },
   "fmtowns:201330": {
    "boxArtUrl": "https://images.launchbox-app.com/1d23bc2f-6c73-4084-b0a2-25d7bd509ac8.jpg",
-   "description": "A baseball game by Wolf Team.",
    "developer": "Wolf Team",
    "launchbox": "201330",
    "publisher": "Wolf Team",
@@ -6033,7 +5997,6 @@
   },
   "fmtowns:202011": {
    "boxArtUrl": "https://images.launchbox-app.com/9317bcea-ad2c-43f9-870f-01951375de76.jpg",
-   "description": "A mahjong game by C.Class.",
    "developer": "C.Class",
    "launchbox": "202011",
    "publisher": "C.Class",
@@ -6151,7 +6114,6 @@
   },
   "fmtowns:203204": {
    "boxArtUrl": "https://images.launchbox-app.com/9ec1bd9a-4880-43ed-96f8-cca076831f70.jpg",
-   "description": "A strategy game about directing traffic.",
    "developer": "Masterpiece",
    "launchbox": "203204",
    "publisher": "Masterpiece",
@@ -6160,7 +6122,6 @@
   },
   "fmtowns:203206": {
    "boxArtUrl": "https://images.launchbox-app.com/4bf7a7ab-3b45-4692-96a2-ef440fb69206.png",
-   "description": "A role-playing game by Grocer.",
    "developer": "Grocer",
    "launchbox": "203206",
    "publisher": "Grocer",
@@ -6295,7 +6256,6 @@
   },
   "fmtowns:204356": {
    "boxArtUrl": "https://images.launchbox-app.com/f2dcd3a2-5205-4719-a9ea-f2d363cac5dd.jpg",
-   "description": "An advanced-level language learning program by CSK.",
    "launchbox": "204356",
    "publisher": "CSK Research Institute",
    "screenshotUrl": "https://images.launchbox-app.com/b4ccee89-dcaf-46eb-9410-93a29822a7d3.png",
@@ -6421,7 +6381,6 @@
   },
   "fmtowns:205272": {
    "boxArtUrl": "https://images.launchbox-app.com/ee4f4851-a9fb-4e8c-bb89-448973f8acf1.jpg",
-   "description": "A shogi program by Home Data.",
    "developer": "Home Data",
    "launchbox": "205272",
    "publisher": "Home Data",
