@@ -108,6 +108,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/6334c8a6-65a3-4f82-ae58-d8b7860a0077.jpg",
    "developer": "Interplay Productions",
    "launchbox": "125276",
+   "mobygames": 1557,
    "publisher": "Fujitsu Interactive",
    "title": "Battle Chess",
    "year": 1991
@@ -169,6 +170,7 @@
    ],
    "boxArtUrl": "https://images.launchbox-app.com/1ab03652-76b6-4bb0-bd97-b88210d19f93.png",
    "launchbox": "145079",
+   "mobygames": 10119,
    "screenshotUrl": "https://images.launchbox-app.com/9b040af9-a572-4694-81f7-e81cb7fe902d.png",
    "title": "Super Street Fighter II: The New Challengers",
    "year": 1994
@@ -189,6 +191,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/32bc2f71-b223-4ea1-87e8-fca455ad756d.jpg",
    "developer": "Kogado Studio",
    "launchbox": "145236",
+   "mobygames": 58587,
    "publisher": "Kogado Studio",
    "screenshotUrl": "https://images.launchbox-app.com/8a55a21a-dc53-4775-bdcb-00c94e368b81.png",
    "title": "Power Dolls 2",
@@ -346,6 +349,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/9da15586-31ab-4185-9d91-2290f5ad0e47.jpg",
    "developer": "Success",
    "launchbox": "157257",
+   "mobygames": 1317,
    "publisher": "KID",
    "title": "Raiden Densetsu"
   },
@@ -790,6 +794,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/510e3ce4-2930-426c-8d5a-421024df1708.jpg",
    "developer": "Delphine Software International",
    "launchbox": "184139",
+   "mobygames": 555,
    "publisher": "Victor Entertainment",
    "screenshotUrl": "https://images.launchbox-app.com/58861e16-221e-49d2-9b8e-ed725fef0eed.png",
    "title": "Flashback",
@@ -877,7 +882,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/2ed40c86-fabb-40f4-8779-c854bb3f2024.jpg",
    "developer": "Origin Systems",
    "launchbox": "184147",
-   "mobygames": 1365,
+   "mobygames": 34390,
    "publisher": "Electronic Arts Victor",
    "screenshotUrl": "https://images.launchbox-app.com/275b59e1-de28-44b3-ad97-e5b1bd6ffed4.png",
    "title": "Strike Commander"
@@ -1143,6 +1148,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/f78c946d-0993-4bf4-9bfa-55c67f7ab242.jpg",
    "developer": "Distinctive Software",
    "launchbox": "184596",
+   "mobygames": 19025,
    "publisher": "Electronic Arts Victor",
    "screenshotUrl": "https://images.launchbox-app.com/6275821c-df4b-4353-9d80-58ed286b2bda.png",
    "title": "4D Tennis",
@@ -1306,6 +1312,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/cf0f9f15-3e96-4c55-9926-6b5aa512641f.jpg",
    "developer": "Bullfrog Productions",
    "launchbox": "184615",
+   "mobygames": 16151,
    "publisher": "Imagineer",
    "screenshotUrl": "https://images.launchbox-app.com/20cb6d86-ddfa-4ca2-a632-2afb2e82ac31.png",
    "title": "Populous & The Promised Lands",
@@ -1364,6 +1371,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/7693fdf6-b6cb-48ae-8090-0dabd4140923.jpg",
    "developer": "FTL Games",
    "launchbox": "184621",
+   "mobygames": 8257,
    "publisher": "Victor Musical Industries",
    "screenshotUrl": "https://images.launchbox-app.com/9a3d4ea4-a36d-4f0f-b846-c211925a66f5.png",
    "title": "Dungeon Master: Chaos Strikes Back"
@@ -1496,6 +1504,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/2851e92e-baf4-4859-a4cb-ed11328f8a69.jpg",
    "developer": "Westwood Studios",
    "launchbox": "184688",
+   "mobygames": 394,
    "publisher": "StarCraft",
    "screenshotUrl": "https://images.launchbox-app.com/5b8e3998-e5c7-4cfc-8036-cae491313a14.png",
    "title": "The Legend of Kyrandia"
@@ -1567,9 +1576,11 @@
    "title": "Cameltry"
   },
   "fmtowns:185083": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/7463a381-56bb-470a-a17b-097c3f5801eb.jpg",
    "developer": "D.O.",
    "launchbox": "185083",
+   "mobygames": 50019,
    "publisher": "D.O.",
    "screenshotUrl": "https://images.launchbox-app.com/751d0b06-82f9-4a39-8998-630fad97ccf7.png",
    "title": "Youjuu Senki: A.D. 2048"
@@ -1654,6 +1665,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/6ef3abab-b3e1-48ef-a213-1332a6dc2d26.jpg",
    "developer": "Stormfront Studios",
    "launchbox": "185091",
+   "mobygames": 482,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/4cb020e2-99f7-4443-8c58-40237da9e8c7.png",
    "title": "Stronghold: Koutei no Yousai"
@@ -1707,6 +1719,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/7edd3d88-9c3d-4ecf-8436-946a53240b66.jpg",
    "developer": "System Sacom",
    "launchbox": "185133",
+   "mobygames": 48394,
    "publisher": "System Sacom",
    "screenshotUrl": "https://images.launchbox-app.com/1c4da994-ba19-4b6e-801d-d4cddddc1c65.png",
    "title": "38 Man Kilo No Kokuu"
@@ -1867,17 +1880,20 @@
    "boxArtUrl": "https://images.launchbox-app.com/d5587bfb-5f8c-4d85-b680-85bac1339be8.jpg",
    "developer": "Fujitsu Interactive",
    "launchbox": "187739",
+   "mobygames": 58112,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/7c952ce9-aea1-4caa-8893-9da127b5aabf.png",
    "title": "America Oudan Ultra Quiz"
   },
   "fmtowns:187740": {
+   "adult": true,
    "aliases": [
     "Angel Haloe"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/r2_0316fc45-f192-4b4a-8b47-8dfceb84c8de.jpg",
    "developer": "Active Software",
    "launchbox": "187740",
+   "mobygames": 47143,
    "publisher": "Active Software",
    "screenshotUrl": "https://images.launchbox-app.com/8bc3c124-f7ff-47d5-b227-f6746f98b98f.png",
    "title": "Angel Halo"
@@ -2034,6 +2050,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/64d725d9-e51e-4515-a92f-582fe21b4ffb.jpg",
    "developer": "Riverhill Soft",
    "launchbox": "187845",
+   "mobygames": 43758,
    "publisher": "Riverhill Soft",
    "screenshotUrl": "https://images.launchbox-app.com/62fe70de-943f-42e4-986a-97fb330f9332.png",
    "title": "Burai: Joukan"
@@ -2257,18 +2274,22 @@
    "year": 1991
   },
   "fmtowns:188117": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/b8f17ccc-8361-4ff0-ab0e-1088db27b2bb.jpg",
    "developer": "Elf",
    "launchbox": "188117",
+   "mobygames": 44026,
    "publisher": "elf",
    "screenshotUrl": "https://images.launchbox-app.com/dd4ad0dc-8aa8-4693-9d70-a65ed3366650.png",
    "title": "Doukyuusei",
    "year": 1993
   },
   "fmtowns:188118": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/eee7257b-c7c2-4a0e-90ef-b134aba3405d.jpg",
    "developer": "Elf",
    "launchbox": "188118",
+   "mobygames": 16065,
    "publisher": "elf",
    "screenshotUrl": "https://images.launchbox-app.com/19d81de4-b991-4938-8dfe-3215c99c642f.png",
    "title": "Doukyuusei 2"
@@ -2369,6 +2390,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/dba492d5-3c51-4fad-b313-1b7c7fbdc9d1.jpg",
    "developer": "Koei",
    "launchbox": "188128",
+   "mobygames": 121246,
    "publisher": "Koei",
    "screenshotUrl": "https://images.launchbox-app.com/b1adb9d0-cb5a-4700-a2b8-e6b9c91e37df.png",
    "title": "EMIT Vol. 2: Meigake no Tabi",
@@ -2729,9 +2751,11 @@
    "year": 1993
   },
   "fmtowns:188185": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/4fcddac7-0a1f-4922-ac36-4600837208bf.jpg",
    "developer": "Fairytale Red Zone",
    "launchbox": "188185",
+   "mobygames": 58462,
    "publisher": "Fairytale Red Zone",
    "screenshotUrl": "https://images.launchbox-app.com/57831fcf-9e16-47e4-9a65-17f895bc92eb.png",
    "title": "Jankirou"
@@ -2895,6 +2919,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/a5d52ff7-7202-4472-800e-4cfe17dbff63.jpg",
    "developer": "Access Software",
    "launchbox": "188205",
+   "mobygames": 3757,
    "publisher": "Cybelle",
    "screenshotUrl": "https://images.launchbox-app.com/9195266c-1d97-4388-891f-f9db02f0f187.png",
    "title": "Golf Links 386 Pro"
@@ -2978,9 +3003,11 @@
    "year": 1994
   },
   "fmtowns:188219": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/a85c903a-5979-4822-9b75-faeab1fcbe04.jpg",
    "developer": "Queen Soft",
    "launchbox": "188219",
+   "mobygames": 58505,
    "publisher": "Queen Soft",
    "screenshotUrl": "https://images.launchbox-app.com/59b32ae7-45b6-4544-98c6-6b338c7301c2.png",
    "title": "Mahjong Houtei Raoyui"
@@ -2999,6 +3026,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/125358d6-f6c8-4064-ab9c-6dde8216e7ee.jpg",
    "developer": "Cyan",
    "launchbox": "188222",
+   "mobygames": 10711,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/52c53bea-b6b6-4177-90bd-5ba122a4f64b.png",
    "title": "The Manhole",
@@ -3072,9 +3100,11 @@
    "title": "Moonlight-chan Rinshan"
   },
   "fmtowns:188264": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/366c88a4-8315-40f5-bb50-1d2bdcd0cf9f.jpg",
    "developer": "Alice Soft",
    "launchbox": "188264",
+   "mobygames": 46186,
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/9ea31913-8541-47ea-974f-dff764d197be.png",
    "title": "Mugen Houyou",
@@ -3084,6 +3114,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/b3748ccf-d566-436e-94d8-62a4d3e63b89.jpg",
    "developer": "Mediamuse",
    "launchbox": "188265",
+   "mobygames": 54069,
    "publisher": "KSS",
    "screenshotUrl": "https://images.launchbox-app.com/9052f0f9-11cb-4b56-b5ed-0dcc27f99bd4.png",
    "title": "Mujintou Monogatari",
@@ -3096,6 +3127,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/ff4ffe73-b550-4720-8e69-5e0e4a67ed07.jpg",
    "developer": "Riverhill Soft",
    "launchbox": "188266",
+   "mobygames": 9703,
    "publisher": "Riverhill Soft",
    "screenshotUrl": "https://images.launchbox-app.com/33fe41ae-9299-4ec9-9753-53b9071e1045.png",
    "title": "Murder Club DX",
@@ -3134,6 +3166,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/e5af21f2-2fe0-4649-bb57-c9cdd5c1a122.jpg",
    "developer": "T&E Soft",
    "launchbox": "188270",
+   "mobygames": 56201,
    "publisher": "T&E Soft",
    "title": "New 3D Golf Simulation: Harukanaru Augusta",
    "year": 1990
@@ -3171,6 +3204,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/77567efd-2120-4a51-b15a-42d5975e1c94.jpg",
    "developer": "Koei",
    "launchbox": "188275",
+   "mobygames": 171215,
    "publisher": "Koei",
    "screenshotUrl": "https://images.launchbox-app.com/c03f4f0f-6270-4c17-95d7-4124c47fa556.jpg",
    "title": "Nobunaga no Yabou: Tenshouki"
@@ -3331,9 +3365,11 @@
    "title": "The Queen of Duellist: Gaiden Alpha Light"
   },
   "fmtowns:188294": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/5d9c9215-0c36-46b9-95df-e51fdd7f264b.jpg",
    "developer": "Alice Soft",
    "launchbox": "188294",
+   "mobygames": 42519,
    "publisher": "Alice Soft",
    "title": "Rance 4.1: Okusuri Koujou o Sukue!",
    "year": 1995
@@ -3381,9 +3417,11 @@
    "year": 1992
   },
   "fmtowns:188299": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/e67a463c-90d0-48fe-8a44-2c90ddd4cdb3.jpg",
    "developer": "Alice Soft",
    "launchbox": "188299",
+   "mobygames": 42518,
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/c6840b1f-05f8-4a59-ad31-0bb558d85a67.png",
    "title": "Rance IV: Kyoudan no Isan",
@@ -3434,17 +3472,21 @@
    "year": 1994
   },
   "fmtowns:188304": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/479a9225-e4c5-4c7c-b19e-be5c6a82e63b.jpg",
    "developer": "Foster",
    "launchbox": "188304",
+   "mobygames": 58987,
    "publisher": "Foster",
    "title": "Rinkan Gakkou",
    "year": 1996
   },
   "fmtowns:188306": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/29d856a9-ad8e-4106-9b8e-2243ff19bcdb.jpg",
    "developer": "ZyX",
    "launchbox": "188306",
+   "mobygames": 58655,
    "publisher": "ZyX",
    "screenshotUrl": "https://images.launchbox-app.com/5d6a16c9-9354-4e9c-a842-d5dd097a8bbb.png",
    "title": "Ring Out!!",
@@ -3471,6 +3513,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/711e78d9-0f63-42d2-bb0d-5e42ec64a82a.jpg",
    "developer": "Publishing International",
    "launchbox": "188309",
+   "mobygames": 75996,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/01988ce3-036c-4a20-8fb2-73e24f59ba49.png",
    "title": "Ryuutouden",
@@ -3528,9 +3571,11 @@
    "year": 1992
   },
   "fmtowns:188315": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/5a370531-9dc7-441c-ab35-4509d7161687.jpg",
    "developer": "Elf",
    "launchbox": "188315",
+   "mobygames": 58691,
    "publisher": "elf",
    "screenshotUrl": "https://images.launchbox-app.com/78eb1ee2-bb11-4cc6-82e1-a1d016a76496.png",
    "title": "Shangrlia 2",
@@ -3626,14 +3671,17 @@
    "boxArtUrl": "https://images.launchbox-app.com/6d14a051-8539-478b-bcfd-d3e4123d1af0.jpg",
    "developer": "Koei",
    "launchbox": "188326",
+   "mobygames": 57522,
    "publisher": "Koei",
    "screenshotUrl": "https://images.launchbox-app.com/26a59be2-46cb-447d-8a00-06507094d9f3.png",
    "title": "Taikou Risshiden"
   },
   "fmtowns:188327": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/c110bba4-4271-4488-9cfe-d8aefd02f169.jpg",
    "developer": "ZyX",
    "launchbox": "188327",
+   "mobygames": 53144,
    "publisher": "ZyX",
    "screenshotUrl": "https://images.launchbox-app.com/56a7558e-bdbe-44db-ba48-7440d81596ef.png",
    "title": "Takamizawa Kyousuke Nekketsu!! Kyouiku Kenshuu",
@@ -3646,14 +3694,17 @@
    "boxArtUrl": "https://images.launchbox-app.com/0a8f7d60-947c-4d5e-8688-811857da5311.jpg",
    "developer": "Headroom",
    "launchbox": "188328",
+   "mobygames": 43243,
    "publisher": "Japan Home Video",
    "screenshotUrl": "https://images.launchbox-app.com/18937e21-8a0d-465b-8d9f-fe6e1daca90c.png",
    "title": "Sotsugyou '93: Graduation"
   },
   "fmtowns:188329": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/25a38c5b-c6d1-45f8-b246-7a5c3da6d4da.jpg",
    "developer": "SETA",
    "launchbox": "188329",
+   "mobygames": 55298,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/98bac0ab-895c-4896-8968-c69ac7f8c8ea.png",
    "title": "Super Real Mahjong: PII & PIII"
@@ -3679,6 +3730,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/5ef291a3-5f5b-441d-bad4-4d68ca799451.jpg",
    "developer": "Activision",
    "launchbox": "188332",
+   "mobygames": 2055,
    "publisher": "Hot-B",
    "screenshotUrl": "https://images.launchbox-app.com/c3437087-2c97-4f47-99e4-8f4e41c2b7d2.png",
    "title": "Super Shanghai: Dragon's Eye"
@@ -3694,18 +3746,22 @@
    "title": "Tenshin Ranma"
   },
   "fmtowns:188335": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/e226cb8c-d4f5-4e90-abd7-6e616cb59fb7.jpg",
    "developer": "Alice Soft",
    "launchbox": "188335",
+   "mobygames": 18730,
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/aa6e38c0-fd10-4942-995d-a224bba0025e.png",
    "title": "Toushin Toshi",
    "year": 1990
   },
   "fmtowns:188336": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/312d0952-0b4a-4c47-aa31-fb5700a1fdc0.jpg",
    "developer": "Alice Soft",
    "launchbox": "188336",
+   "mobygames": 45393,
    "publisher": "Alice Soft",
    "title": "Toushin Toshi II",
    "year": 1995
@@ -3739,17 +3795,21 @@
    "title": "True Heart"
   },
   "fmtowns:188340": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/e3f367a0-80a7-47e6-8a88-2db93b6ac4e9.jpg",
    "developer": "Alice Soft",
    "launchbox": "188340",
+   "mobygames": 47708,
    "publisher": "Alice Soft",
    "title": "Uchuu Kaitou Funny Bee",
    "year": 1994
   },
   "fmtowns:188341": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/348d44d9-853b-46f2-a077-c70f2fbdc0a6.jpg",
    "developer": "Mediax",
    "launchbox": "188341",
+   "mobygames": 58730,
    "publisher": "CD Bros.",
    "screenshotUrl": "https://images.launchbox-app.com/b2cd8db2-66db-4acb-a30d-ce8201ac6c91.png",
    "title": "Vastness: Kuukyo no Ikenie-tachi",
@@ -3759,6 +3819,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/3f82a710-880e-448e-b88b-4d13083e21b3.jpg",
    "developer": "Event Horizon Software",
    "launchbox": "188342",
+   "mobygames": 1271,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/f0508b73-a226-4177-8362-4786ad1128ca.png",
    "title": "Veil of Darkness: Norowareta Yogen"
@@ -3906,9 +3967,11 @@
    "title": "Zan III: Towns Special"
   },
   "fmtowns:188357": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/e9987674-846d-43f1-b83b-3067fef51a73.png",
    "developer": "D.O.",
    "launchbox": "188357",
+   "mobygames": 58737,
    "publisher": "D.O.",
    "screenshotUrl": "https://images.launchbox-app.com/c1f6272e-1098-4e22-b0bb-418435e25bc5.png",
    "title": "Zatsuon Ryouiki",
@@ -3996,6 +4059,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/c99ef6b7-61e0-448c-89cd-04da6f531c44.jpg",
    "developer": "Hi-Position Soft Ware",
    "launchbox": "188367",
+   "mobygames": 54840,
    "publisher": "KID",
    "screenshotUrl": "https://images.launchbox-app.com/bffdffbc-2672-4fdc-a67c-79736edde8eb.png",
    "title": "Mutant Fighter: Death Brade"
@@ -4016,6 +4080,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/4adf5b4c-8b7e-45f4-8c41-670a3c64fd31.jpg",
    "developer": "Fujitsu",
    "launchbox": "188369",
+   "mobygames": 21889,
    "publisher": "Fujitsu",
    "screenshotUrl": "https://images.launchbox-app.com/9def42b2-8207-4b93-99ad-30f60e1b508a.png",
    "title": "Fujitsu Habitat"
@@ -4269,6 +4334,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/bb981239-0520-4f25-8ee9-3a7aaaccdd82.jpg",
    "developer": "Silence",
    "launchbox": "188797",
+   "mobygames": 58418,
    "publisher": "Brother Kougyou",
    "screenshotUrl": "https://images.launchbox-app.com/c3e81536-35df-44b2-9491-709a85b004e1.png",
    "title": "Houma Hunter Lime",
@@ -4321,9 +4387,11 @@
    "year": 1996
   },
   "fmtowns:188806": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/46dd46bd-b953-4fb8-8351-2cc8ac017ce9.jpg",
    "developer": "Foresight",
    "launchbox": "188806",
+   "mobygames": 45983,
    "publisher": "Foresight",
    "screenshotUrl": "https://images.launchbox-app.com/2c5ebf0e-46ba-4208-9293-449e5af13578.png",
    "title": "Madou Gakuin R",
@@ -4620,9 +4688,11 @@
    "year": 1994
   },
   "fmtowns:192865": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/r2_845b466b-c58f-4295-8b79-5180cb872f10.jpg",
    "developer": "Foster",
    "launchbox": "192865",
+   "mobygames": 59184,
    "publisher": "Foster",
    "screenshotUrl": "https://images.launchbox-app.com/r2_4612c375-864d-449d-92e1-59f7d03b6453.png",
    "title": "Sayonara no Mukougawa",
@@ -5023,9 +5093,11 @@
    "title": "The Silent Service: Chinmoku no Kantai"
   },
   "fmtowns:200001": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/68186525-8d8f-47d1-875f-11753e107073.jpg",
    "developer": "Foster",
    "launchbox": "200001",
+   "mobygames": 9769,
    "publisher": "Foster",
    "title": "Time Stripper Mako-chan",
    "year": 1996
@@ -5682,6 +5754,7 @@
   "fmtowns:205234": {
    "developer": "Silence",
    "launchbox": "205234",
+   "mobygames": 58421,
    "publisher": "Brother Kougyou",
    "title": "Houma Hunter Lime Dai 02 Wa",
    "year": 1994
@@ -5689,6 +5762,7 @@
   "fmtowns:205235": {
    "developer": "Silence",
    "launchbox": "205235",
+   "mobygames": 58438,
    "publisher": "Brother Kougyou",
    "title": "Houma Hunter Lime Dai 03 Wa",
    "year": 1994
@@ -5696,6 +5770,7 @@
   "fmtowns:205248": {
    "developer": "Silence",
    "launchbox": "205248",
+   "mobygames": 58440,
    "publisher": "Brother Kougyou",
    "title": "Houma Hunter Lime Dai 04 Wa",
    "year": 1994
@@ -5703,6 +5778,7 @@
   "fmtowns:205249": {
    "developer": "Silence",
    "launchbox": "205249",
+   "mobygames": 58439,
    "publisher": "Brother Kougyou",
    "title": "Houma Hunter Lime Dai 05 Wa",
    "year": 1994
@@ -5710,6 +5786,7 @@
   "fmtowns:205250": {
    "developer": "Silence",
    "launchbox": "205250",
+   "mobygames": 58441,
    "publisher": "Brother Kougyou",
    "title": "Houma Hunter Lime Dai 06 Wa",
    "year": 1994
@@ -5744,6 +5821,7 @@
   "fmtowns:205275": {
    "developer": "Silence",
    "launchbox": "205275",
+   "mobygames": 58446,
    "publisher": "Brother Kougyou",
    "title": "Houma Hunter Lime Dai 07 Wa",
    "year": 1994
@@ -5751,6 +5829,7 @@
   "fmtowns:205276": {
    "developer": "Silence",
    "launchbox": "205276",
+   "mobygames": 58447,
    "publisher": "Brother Kougyou",
    "title": "Houma Hunter Lime Dai 08 Wa",
    "year": 1994
@@ -5758,6 +5837,7 @@
   "fmtowns:205277": {
    "developer": "Silence",
    "launchbox": "205277",
+   "mobygames": 58448,
    "publisher": "Brother Kougyou",
    "title": "Houma Hunter Lime Dai 09 Wa",
    "year": 1994
@@ -5787,9 +5867,11 @@
    "year": 1994
   },
   "fmtowns:205281": {
+   "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/b8336553-df7c-401c-bc56-a325d0e08b59.jpg",
    "developer": "Byakuya-Shobo",
    "launchbox": "205281",
+   "mobygames": 58474,
    "publisher": "Byakuya-Shobo",
    "screenshotUrl": "https://images.launchbox-app.com/a97a81ab-eef4-4737-98fa-5bce6d7b992c.png",
    "title": "Joshi Kousei Shoujo Hatsunetsu",
@@ -5923,6 +6005,7 @@
    "boxArtUrl": "https://images.launchbox-app.com/a06119c3-d993-4790-8381-5842e8fc94b0.jpg",
    "developer": "Zoom",
    "launchbox": "422914",
+   "mobygames": 54774,
    "publisher": "Zoom",
    "screenshotUrl": "https://images.launchbox-app.com/c4ca79a1-f4aa-44c1-b847-fbe8cd05b624.png",
    "title": "Genocide Square",
@@ -6062,20 +6145,10 @@
    "screenshotUrl": "https://images.launchbox-app.com/64dbe07f-bc53-4bab-a7dd-1e19ffa64fa7.png",
    "title": "Palamedes"
   },
-  "fmtowns:moby-10119": {
-   "mobygames": 10119,
-   "title": "Super Street Fighter II",
-   "year": 1994
-  },
   "fmtowns:moby-10591": {
    "mobygames": 10591,
    "title": "Fatal Fury Special",
    "year": 1996
-  },
-  "fmtowns:moby-10711": {
-   "mobygames": 10711,
-   "title": "The Manhole: New and Enhanced",
-   "year": 1990
   },
   "fmtowns:moby-11866": {
    "mobygames": 11866,
@@ -6086,11 +6159,6 @@
    "mobygames": 121170,
    "title": "Rocket Ranger (Extended Collector's Edition)",
    "year": 2018
-  },
-  "fmtowns:moby-121246": {
-   "mobygames": 121246,
-   "title": "EMIT Vol. 2: Inochigake no Tabi",
-   "year": 1994
   },
   "fmtowns:moby-123176": {
    "adult": true,
@@ -6103,20 +6171,10 @@
    "title": "Nobunaga's Ambition: Lord of Darkness",
    "year": 1991
   },
-  "fmtowns:moby-1271": {
-   "mobygames": 1271,
-   "title": "Veil of Darkness",
-   "year": 1994
-  },
   "fmtowns:moby-1313": {
    "mobygames": 1313,
    "title": "Sky Shark",
    "year": 1993
-  },
-  "fmtowns:moby-1317": {
-   "mobygames": 1317,
-   "title": "Raiden",
-   "year": 1991
   },
   "fmtowns:moby-13947": {
    "mobygames": 13947,
@@ -6134,22 +6192,6 @@
    "title": "Runaway City",
    "year": 1996
   },
-  "fmtowns:moby-1557": {
-   "mobygames": 1557,
-   "title": "Battle Chess: Enhanced CD-ROM",
-   "year": 1991
-  },
-  "fmtowns:moby-16065": {
-   "adult": true,
-   "mobygames": 16065,
-   "title": "Dōkyūsei 2",
-   "year": 1995
-  },
-  "fmtowns:moby-16151": {
-   "mobygames": 16151,
-   "title": "Populous / Populous: The Promised Lands",
-   "year": 1990
-  },
   "fmtowns:moby-165943": {
    "adult": true,
    "mobygames": 165943,
@@ -6161,11 +6203,6 @@
    "mobygames": 1665,
    "title": "Knights of Xentar",
    "year": 1992
-  },
-  "fmtowns:moby-171215": {
-   "mobygames": 171215,
-   "title": "Nobunaga no Yabō: Tenshōki",
-   "year": 1995
   },
   "fmtowns:moby-1727": {
    "mobygames": 1727,
@@ -6185,17 +6222,6 @@
   "fmtowns:moby-183712": {
    "mobygames": 183712,
    "title": "Steepia Lite",
-   "year": 1993
-  },
-  "fmtowns:moby-18730": {
-   "adult": true,
-   "mobygames": 18730,
-   "title": "Tōshin Toshi",
-   "year": 1990
-  },
-  "fmtowns:moby-19025": {
-   "mobygames": 19025,
-   "title": "4D Sports Tennis",
    "year": 1993
   },
   "fmtowns:moby-1903": {
@@ -6233,11 +6259,6 @@
    "title": "Heaven & Earth",
    "year": 1993
   },
-  "fmtowns:moby-2055": {
-   "mobygames": 2055,
-   "title": "Shanghai II: Dragon's Eye",
-   "year": 1991
-  },
   "fmtowns:moby-20638": {
    "mobygames": 20638,
    "title": "Shanghai: Triple-Threat",
@@ -6258,11 +6279,6 @@
    "title": "Game Nihonshi: Kakumeiji - Oda Nobunaga",
    "year": 1996
   },
-  "fmtowns:moby-21889": {
-   "mobygames": 21889,
-   "title": "Habitat",
-   "year": 1989
-  },
   "fmtowns:moby-3202": {
    "mobygames": 3202,
    "title": "P.T.O.: Pacific Theater of Operations II",
@@ -6278,24 +6294,9 @@
    "title": "Stunts",
    "year": 1993
   },
-  "fmtowns:moby-34390": {
-   "mobygames": 34390,
-   "title": "Strike Commander: CD-ROM Edition",
-   "year": 1995
-  },
   "fmtowns:moby-34505": {
    "mobygames": 34505,
    "title": "Rise of the Phoenix",
-   "year": 1993
-  },
-  "fmtowns:moby-3757": {
-   "mobygames": 3757,
-   "title": "Links 386 Pro",
-   "year": 1995
-  },
-  "fmtowns:moby-394": {
-   "mobygames": 394,
-   "title": "Fables & Fiends: The Legend of Kyrandia - Book One",
    "year": 1993
   },
   "fmtowns:moby-4028": {
@@ -6308,27 +6309,10 @@
    "title": "Fin Fin: On Teo, the Magic Planet",
    "year": 1995
   },
-  "fmtowns:moby-42518": {
-   "adult": true,
-   "mobygames": 42518,
-   "title": "Rance IV: Kyōdan no Isan",
-   "year": 1994
-  },
-  "fmtowns:moby-42519": {
-   "adult": true,
-   "mobygames": 42519,
-   "title": "Rance 4.1: O-Kusuri Kōjō o Sukue!",
-   "year": 1995
-  },
   "fmtowns:moby-4261": {
    "mobygames": 4261,
    "title": "Hometown, U.S.A.",
    "year": 1990
-  },
-  "fmtowns:moby-43243": {
-   "mobygames": 43243,
-   "title": "Graduation",
-   "year": 1993
   },
   "fmtowns:moby-43301": {
    "adult": true,
@@ -6354,27 +6338,10 @@
    "title": "Viper V10",
    "year": 1995
   },
-  "fmtowns:moby-43758": {
-   "mobygames": 43758,
-   "title": "Burai: Jōkan",
-   "year": 1990
-  },
   "fmtowns:moby-43956": {
    "mobygames": 43956,
    "title": "Air Warrior",
    "year": 1992
-  },
-  "fmtowns:moby-44026": {
-   "adult": true,
-   "mobygames": 44026,
-   "title": "Dōkyūsei",
-   "year": 1993
-  },
-  "fmtowns:moby-45393": {
-   "adult": true,
-   "mobygames": 45393,
-   "title": "Tōshin Toshi II",
-   "year": 1995
   },
   "fmtowns:moby-45566": {
    "adult": true,
@@ -6405,29 +6372,11 @@
    "title": ":Loop - Iginahi no Kaikiten",
    "year": 1995
   },
-  "fmtowns:moby-45983": {
-   "adult": true,
-   "mobygames": 45983,
-   "title": "Madō Gakuin R",
-   "year": 1994
-  },
   "fmtowns:moby-46067": {
    "adult": true,
    "mobygames": 46067,
    "title": "Mahjong Fantasia II",
    "year": 1993
-  },
-  "fmtowns:moby-46186": {
-   "adult": true,
-   "mobygames": 46186,
-   "title": "Mugen Hōyō",
-   "year": 1995
-  },
-  "fmtowns:moby-47143": {
-   "adult": true,
-   "mobygames": 47143,
-   "title": "Angel Halö",
-   "year": 1996
   },
   "fmtowns:moby-47224": {
    "mobygames": 47224,
@@ -6440,27 +6389,11 @@
    "title": "DOR: Part 2",
    "year": 1992
   },
-  "fmtowns:moby-47708": {
-   "adult": true,
-   "mobygames": 47708,
-   "title": "Uchū Kaitō Funny Bee",
-   "year": 1994
-  },
   "fmtowns:moby-47937": {
    "adult": true,
    "mobygames": 47937,
    "title": "Image II",
    "year": 1994
-  },
-  "fmtowns:moby-482": {
-   "mobygames": 482,
-   "title": "Stronghold",
-   "year": 1994
-  },
-  "fmtowns:moby-48394": {
-   "mobygames": 48394,
-   "title": "380000 Kilo no Kokū",
-   "year": 1989
   },
   "fmtowns:moby-48571": {
    "adult": true,
@@ -6474,22 +6407,10 @@
    "title": "Yōjū Club Custom",
    "year": 1992
   },
-  "fmtowns:moby-50019": {
-   "adult": true,
-   "mobygames": 50019,
-   "title": "Yōjū Senki: A.D. 2048",
-   "year": 1993
-  },
   "fmtowns:moby-52339": {
    "mobygames": 52339,
    "title": "Truxton II",
    "year": 1993
-  },
-  "fmtowns:moby-53144": {
-   "adult": true,
-   "mobygames": 53144,
-   "title": "Takamizawa Kyōsuke Nekketsu!!  Kyōiku Kenshū",
-   "year": 1995
   },
   "fmtowns:moby-53225": {
    "adult": true,
@@ -6503,20 +6424,10 @@
    "title": "Electric Device Marian",
    "year": 1998
   },
-  "fmtowns:moby-54069": {
-   "mobygames": 54069,
-   "title": "Mujintō Monogatari",
-   "year": 1995
-  },
   "fmtowns:moby-54291": {
    "mobygames": 54291,
    "title": "Tōdō Ryūnosuke Tantei Nikki: Ōgon no Rashinban",
    "year": 1991
-  },
-  "fmtowns:moby-54774": {
-   "mobygames": 54774,
-   "title": "Genocide² - Genocide Square",
-   "year": 1993
   },
   "fmtowns:moby-54836": {
    "mobygames": 54836,
@@ -6527,11 +6438,6 @@
    "mobygames": 54837,
    "title": "Loop Eraser",
    "year": 1994
-  },
-  "fmtowns:moby-54840": {
-   "mobygames": 54840,
-   "title": "Mutant Fighter",
-   "year": 1992
   },
   "fmtowns:moby-54849": {
    "mobygames": 54849,
@@ -6544,36 +6450,10 @@
    "title": "Mahjong Clinic: Zōkangō",
    "year": 1991
   },
-  "fmtowns:moby-55298": {
-   "adult": true,
-   "mobygames": 55298,
-   "title": "Super Real Mahjong: PII & PIII",
-   "year": 1992
-  },
-  "fmtowns:moby-555": {
-   "mobygames": 555,
-   "title": "Flashback: The Quest for Identity",
-   "year": 1994
-  },
-  "fmtowns:moby-56201": {
-   "mobygames": 56201,
-   "title": "Harukanaru Augusta",
-   "year": 1990
-  },
   "fmtowns:moby-57200": {
    "mobygames": 57200,
    "title": "Kyōran no Ginga: Schwarzschild",
    "year": 1991
-  },
-  "fmtowns:moby-57522": {
-   "mobygames": 57522,
-   "title": "Taikō Risshiden",
-   "year": 1992
-  },
-  "fmtowns:moby-58112": {
-   "mobygames": 58112,
-   "title": "America Ōdan Ultra Quiz",
-   "year": 1994
   },
   "fmtowns:moby-58122": {
    "adult": true,
@@ -6581,102 +6461,10 @@
    "title": "A 1-2-3",
    "year": 1993
   },
-  "fmtowns:moby-58418": {
-   "mobygames": 58418,
-   "title": "Hōma Hunter Lime",
-   "year": 1993
-  },
-  "fmtowns:moby-58421": {
-   "mobygames": 58421,
-   "title": "Hōma Hunter Lime Dai-2 Wa",
-   "year": 1993
-  },
-  "fmtowns:moby-58438": {
-   "mobygames": 58438,
-   "title": "Hōma Hunter Lime Dai-3 Wa",
-   "year": 1993
-  },
-  "fmtowns:moby-58439": {
-   "mobygames": 58439,
-   "title": "Hōma Hunter Lime Dai-5 Wa",
-   "year": 1993
-  },
-  "fmtowns:moby-58440": {
-   "mobygames": 58440,
-   "title": "Hōma Hunter Lime Dai-4 Wa",
-   "year": 1993
-  },
-  "fmtowns:moby-58441": {
-   "mobygames": 58441,
-   "title": "Hōma Hunter Lime Dai-6 Wa",
-   "year": 1993
-  },
-  "fmtowns:moby-58446": {
-   "mobygames": 58446,
-   "title": "Hōma Hunter Lime Dai-7 Wa",
-   "year": 1993
-  },
-  "fmtowns:moby-58447": {
-   "mobygames": 58447,
-   "title": "Hōma Hunter Lime Dai-8 Wa",
-   "year": 1994
-  },
-  "fmtowns:moby-58448": {
-   "mobygames": 58448,
-   "title": "Hōma Hunter Lime Dai-9 Wa",
-   "year": 1994
-  },
-  "fmtowns:moby-58462": {
-   "adult": true,
-   "mobygames": 58462,
-   "title": "Jankirō",
-   "year": 1994
-  },
-  "fmtowns:moby-58474": {
-   "adult": true,
-   "mobygames": 58474,
-   "title": "Joshi Kōsei Shōjo Hatsunetsu",
-   "year": 1993
-  },
-  "fmtowns:moby-58505": {
-   "adult": true,
-   "mobygames": 58505,
-   "title": "Mahjong Hōtei Raoyui",
-   "year": 1995
-  },
-  "fmtowns:moby-58587": {
-   "mobygames": 58587,
-   "title": "Power Dolls 2",
-   "year": 1995
-  },
-  "fmtowns:moby-58655": {
-   "adult": true,
-   "mobygames": 58655,
-   "title": "Ring Out!: Pro-Lesring",
-   "year": 1995
-  },
-  "fmtowns:moby-58691": {
-   "adult": true,
-   "mobygames": 58691,
-   "title": "Shangrlia 2",
-   "year": 1994
-  },
   "fmtowns:moby-58719": {
    "mobygames": 58719,
    "title": "T.D.F. Kaijū daisensō kesshi no genshiro bōei sakusen",
    "year": 1990
-  },
-  "fmtowns:moby-58730": {
-   "adult": true,
-   "mobygames": 58730,
-   "title": "Vastness: Kūkyo no Ikenietachi",
-   "year": 1993
-  },
-  "fmtowns:moby-58737": {
-   "adult": true,
-   "mobygames": 58737,
-   "title": "Zatsuon Ryōiki",
-   "year": 1995
   },
   "fmtowns:moby-58899": {
    "adult": true,
@@ -6695,18 +6483,6 @@
    "mobygames": 58901,
    "title": "Pasocomic Purple Cat Volume. 3: The Jokyōshi Tokushū",
    "year": 1993
-  },
-  "fmtowns:moby-58987": {
-   "adult": true,
-   "mobygames": 58987,
-   "title": "Rinkan Gakkō",
-   "year": 1996
-  },
-  "fmtowns:moby-59184": {
-   "adult": true,
-   "mobygames": 59184,
-   "title": "Sayonara no Mukō-gawa",
-   "year": 1997
   },
   "fmtowns:moby-59189": {
    "adult": true,
@@ -6761,11 +6537,6 @@
    "title": "CRI Gokan Pack",
    "year": 1994
   },
-  "fmtowns:moby-75996": {
-   "mobygames": 75996,
-   "title": "Ryūtōden",
-   "year": 1994
-  },
   "fmtowns:moby-81924": {
    "mobygames": 81924,
    "title": "PI's Solitaire Royale / Tom Snyder's Puppy Love",
@@ -6774,11 +6545,6 @@
   "fmtowns:moby-8221": {
    "mobygames": 8221,
    "title": "P.T.O.: Pacific Theater of Operations",
-   "year": 1990
-  },
-  "fmtowns:moby-8257": {
-   "mobygames": 8257,
-   "title": "Dungeon Master: Chaos Strikes Back - Expansion Set #1",
    "year": 1990
   },
   "fmtowns:moby-83076": {
@@ -6806,17 +6572,6 @@
    "adult": true,
    "mobygames": 9534,
    "title": "Paradise Heights 2",
-   "year": 1996
-  },
-  "fmtowns:moby-9703": {
-   "mobygames": 9703,
-   "title": "Murder Club",
-   "year": 1992
-  },
-  "fmtowns:moby-9769": {
-   "adult": true,
-   "mobygames": 9769,
-   "title": "Time Stripper",
    "year": 1996
   }
  },

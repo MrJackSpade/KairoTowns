@@ -53,6 +53,10 @@
    "reason": "MobyGames Adult genre",
    "title": "Phobos"
   },
+  "fmtowns:185083": {
+   "reason": "MobyGames Adult genre",
+   "title": "Yōjū Senki: A.D. 2048"
+  },
   "fmtowns:185086": {
    "reason": "MobyGames Adult genre",
    "title": "Words Worth"
@@ -68,6 +72,10 @@
   "fmtowns:187738": {
    "reason": "MobyGames Adult genre",
    "title": "Alice no Yakata CD"
+  },
+  "fmtowns:187740": {
+   "reason": "MobyGames Adult genre",
+   "title": "Angel Halö"
   },
   "fmtowns:187741": {
    "reason": "MobyGames Adult genre",
@@ -144,6 +152,14 @@
   "fmtowns:188111": {
    "reason": "MobyGames Adult genre",
    "title": "DE・JA II"
+  },
+  "fmtowns:188117": {
+   "reason": "MobyGames Adult genre",
+   "title": "Dōkyūsei"
+  },
+  "fmtowns:188118": {
+   "reason": "MobyGames Adult genre",
+   "title": "Dōkyūsei 2"
   },
   "fmtowns:188119": {
    "reason": "MobyGames Adult genre",
@@ -245,6 +261,10 @@
    "reason": "MobyGames Adult genre",
    "title": "Jan Jaka Jan"
   },
+  "fmtowns:188185": {
+   "reason": "MobyGames Adult genre",
+   "title": "Jankirō"
+  },
   "fmtowns:188186": {
    "reason": "MobyGames Adult genre",
    "title": "Jealousy"
@@ -285,6 +305,10 @@
    "reason": "MobyGames Adult genre",
    "title": "Mahjong de Pon!"
   },
+  "fmtowns:188219": {
+   "reason": "MobyGames Adult genre",
+   "title": "Mahjong Hōtei Raoyui"
+  },
   "fmtowns:188220": {
    "reason": "MobyGames Adult genre",
    "title": "Mandala Keichizoku"
@@ -292,6 +316,10 @@
   "fmtowns:188263": {
    "reason": "MobyGames Adult genre",
    "title": "Moonlight-chan Rinshan"
+  },
+  "fmtowns:188264": {
+   "reason": "MobyGames Adult genre",
+   "title": "Mugen Hōyō"
   },
   "fmtowns:188268": {
    "reason": "MobyGames Adult genre",
@@ -317,6 +345,10 @@
    "reason": "MobyGames Adult genre",
    "title": "The Queen of Duellist"
   },
+  "fmtowns:188294": {
+   "reason": "MobyGames Adult genre",
+   "title": "Rance 4.1: O-Kusuri Kōjō o Sukue!"
+  },
   "fmtowns:188295": {
    "reason": "MobyGames Adult genre",
    "title": "Rance 4.2: Angel-gumi"
@@ -333,9 +365,21 @@
    "reason": "MobyGames Adult genre",
    "title": "Rance III: Leazas Kanraku"
   },
+  "fmtowns:188299": {
+   "reason": "MobyGames Adult genre",
+   "title": "Rance IV: Kyōdan no Isan"
+  },
   "fmtowns:188302": {
    "reason": "MobyGames Adult genre",
    "title": "Reira: Slave Doll"
+  },
+  "fmtowns:188304": {
+   "reason": "MobyGames Adult genre",
+   "title": "Rinkan Gakkō"
+  },
+  "fmtowns:188306": {
+   "reason": "MobyGames Adult genre",
+   "title": "Ring Out!: Pro-Lesring"
   },
   "fmtowns:188310": {
    "reason": "MobyGames Adult genre",
@@ -345,6 +389,10 @@
    "reason": "MobyGames Adult genre",
    "title": "Shangrlia"
   },
+  "fmtowns:188315": {
+   "reason": "MobyGames Adult genre",
+   "title": "Shangrlia 2"
+  },
   "fmtowns:188316": {
    "reason": "MobyGames Adult genre",
    "title": "Shinc"
@@ -352,6 +400,14 @@
   "fmtowns:188324": {
    "reason": "MobyGames Adult genre",
    "title": "Sweet Angel"
+  },
+  "fmtowns:188327": {
+   "reason": "MobyGames Adult genre",
+   "title": "Takamizawa Kyōsuke Nekketsu!!  Kyōiku Kenshū"
+  },
+  "fmtowns:188329": {
+   "reason": "MobyGames Adult genre",
+   "title": "Super Real Mahjong: PII & PIII"
   },
   "fmtowns:188331": {
    "reason": "MobyGames Adult genre",
@@ -361,6 +417,14 @@
    "reason": "MobyGames Adult genre",
    "title": "Tenshin Ranma"
   },
+  "fmtowns:188335": {
+   "reason": "MobyGames Adult genre",
+   "title": "Tōshin Toshi"
+  },
+  "fmtowns:188336": {
+   "reason": "MobyGames Adult genre",
+   "title": "Tōshin Toshi II"
+  },
   "fmtowns:188338": {
    "reason": "MobyGames Adult genre",
    "title": "Trigger"
@@ -368,6 +432,14 @@
   "fmtowns:188339": {
    "reason": "MobyGames Adult genre",
    "title": "True Heart"
+  },
+  "fmtowns:188340": {
+   "reason": "MobyGames Adult genre",
+   "title": "Uchū Kaitō Funny Bee"
+  },
+  "fmtowns:188341": {
+   "reason": "MobyGames Adult genre",
+   "title": "Vastness: Kūkyo no Ikenietachi"
   },
   "fmtowns:188346": {
    "reason": "MobyGames Adult genre",
@@ -384,6 +456,10 @@
   "fmtowns:188353": {
    "reason": "MobyGames Adult genre",
    "title": "Xenon: Mugen no Shitai"
+  },
+  "fmtowns:188357": {
+   "reason": "MobyGames Adult genre",
+   "title": "Zatsuon Ryōiki"
   },
   "fmtowns:188358": {
    "reason": "MobyGames Adult genre",
@@ -408,6 +484,10 @@
   "fmtowns:188789": {
    "reason": "MobyGames Adult genre",
    "title": "Two Shot Diary"
+  },
+  "fmtowns:188806": {
+   "reason": "MobyGames Adult genre",
+   "title": "Madō Gakuin R"
   },
   "fmtowns:190755": {
    "reason": "MobyGames Adult genre",
@@ -436,6 +516,10 @@
   "fmtowns:192862": {
    "reason": "MobyGames Adult genre",
    "title": "Only You: Seikimatsu no Juliet-tachi"
+  },
+  "fmtowns:192865": {
+   "reason": "MobyGames Adult genre",
+   "title": "Sayonara no Mukō-gawa"
   },
   "fmtowns:192867": {
    "reason": "MobyGames Adult genre",
@@ -492,6 +576,10 @@
   "fmtowns:199997": {
    "reason": "MobyGames Adult genre",
    "title": "Kousoku Chojin"
+  },
+  "fmtowns:200001": {
+   "reason": "MobyGames Adult genre",
+   "title": "Time Stripper"
   },
   "fmtowns:200002": {
    "reason": "MobyGames Adult genre",
@@ -585,6 +673,10 @@
    "reason": "MobyGames Adult genre",
    "title": "Super D.P.S."
   },
+  "fmtowns:205281": {
+   "reason": "MobyGames Adult genre",
+   "title": "Joshi Kōsei Shōjo Hatsunetsu"
+  },
   "fmtowns:210831": {
    "reason": "MobyGames Adult genre",
    "title": "2069 AD"
@@ -609,10 +701,6 @@
    "reason": "MobyGames Adult genre",
    "title": "Runaway City"
   },
-  "fmtowns:moby-16065": {
-   "reason": "MobyGames Adult genre",
-   "title": "Dōkyūsei 2"
-  },
   "fmtowns:moby-165943": {
    "reason": "MobyGames Adult genre",
    "title": "CD-ROM Bishōjo Collection: Yū Disk Special"
@@ -620,18 +708,6 @@
   "fmtowns:moby-1665": {
    "reason": "MobyGames Adult genre",
    "title": "Knights of Xentar"
-  },
-  "fmtowns:moby-18730": {
-   "reason": "MobyGames Adult genre",
-   "title": "Tōshin Toshi"
-  },
-  "fmtowns:moby-42518": {
-   "reason": "MobyGames Adult genre",
-   "title": "Rance IV: Kyōdan no Isan"
-  },
-  "fmtowns:moby-42519": {
-   "reason": "MobyGames Adult genre",
-   "title": "Rance 4.1: O-Kusuri Kōjō o Sukue!"
   },
   "fmtowns:moby-43301": {
    "reason": "MobyGames Adult genre",
@@ -649,14 +725,6 @@
    "reason": "MobyGames Adult genre",
    "title": "Viper V10"
   },
-  "fmtowns:moby-44026": {
-   "reason": "MobyGames Adult genre",
-   "title": "Dōkyūsei"
-  },
-  "fmtowns:moby-45393": {
-   "reason": "MobyGames Adult genre",
-   "title": "Tōshin Toshi II"
-  },
   "fmtowns:moby-45566": {
    "reason": "MobyGames Adult genre",
    "title": "Virgin Angel"
@@ -673,29 +741,13 @@
    "reason": "MobyGames Adult genre",
    "title": ":Loop - Iginahi no Kaikiten"
   },
-  "fmtowns:moby-45983": {
-   "reason": "MobyGames Adult genre",
-   "title": "Madō Gakuin R"
-  },
   "fmtowns:moby-46067": {
    "reason": "MobyGames Adult genre",
    "title": "Mahjong Fantasia II"
   },
-  "fmtowns:moby-46186": {
-   "reason": "MobyGames Adult genre",
-   "title": "Mugen Hōyō"
-  },
-  "fmtowns:moby-47143": {
-   "reason": "MobyGames Adult genre",
-   "title": "Angel Halö"
-  },
   "fmtowns:moby-47437": {
    "reason": "MobyGames Adult genre",
    "title": "DOR: Part 2"
-  },
-  "fmtowns:moby-47708": {
-   "reason": "MobyGames Adult genre",
-   "title": "Uchū Kaitō Funny Bee"
   },
   "fmtowns:moby-47937": {
    "reason": "MobyGames Adult genre",
@@ -709,14 +761,6 @@
    "reason": "MobyGames Adult genre",
    "title": "Yōjū Club Custom"
   },
-  "fmtowns:moby-50019": {
-   "reason": "MobyGames Adult genre",
-   "title": "Yōjū Senki: A.D. 2048"
-  },
-  "fmtowns:moby-53144": {
-   "reason": "MobyGames Adult genre",
-   "title": "Takamizawa Kyōsuke Nekketsu!!  Kyōiku Kenshū"
-  },
   "fmtowns:moby-53225": {
    "reason": "MobyGames Adult genre",
    "title": "Manami no Doko made Iku no?"
@@ -729,41 +773,9 @@
    "reason": "MobyGames Adult genre",
    "title": "Mahjong Clinic: Zōkangō"
   },
-  "fmtowns:moby-55298": {
-   "reason": "MobyGames Adult genre",
-   "title": "Super Real Mahjong: PII & PIII"
-  },
   "fmtowns:moby-58122": {
    "reason": "MobyGames Adult genre",
    "title": "A 1-2-3"
-  },
-  "fmtowns:moby-58462": {
-   "reason": "MobyGames Adult genre",
-   "title": "Jankirō"
-  },
-  "fmtowns:moby-58474": {
-   "reason": "MobyGames Adult genre",
-   "title": "Joshi Kōsei Shōjo Hatsunetsu"
-  },
-  "fmtowns:moby-58505": {
-   "reason": "MobyGames Adult genre",
-   "title": "Mahjong Hōtei Raoyui"
-  },
-  "fmtowns:moby-58655": {
-   "reason": "MobyGames Adult genre",
-   "title": "Ring Out!: Pro-Lesring"
-  },
-  "fmtowns:moby-58691": {
-   "reason": "MobyGames Adult genre",
-   "title": "Shangrlia 2"
-  },
-  "fmtowns:moby-58730": {
-   "reason": "MobyGames Adult genre",
-   "title": "Vastness: Kūkyo no Ikenietachi"
-  },
-  "fmtowns:moby-58737": {
-   "reason": "MobyGames Adult genre",
-   "title": "Zatsuon Ryōiki"
   },
   "fmtowns:moby-58899": {
    "reason": "MobyGames Adult genre",
@@ -776,14 +788,6 @@
   "fmtowns:moby-58901": {
    "reason": "MobyGames Adult genre",
    "title": "Pasocomic Purple Cat Volume. 3: The Jokyōshi Tokushū"
-  },
-  "fmtowns:moby-58987": {
-   "reason": "MobyGames Adult genre",
-   "title": "Rinkan Gakkō"
-  },
-  "fmtowns:moby-59184": {
-   "reason": "MobyGames Adult genre",
-   "title": "Sayonara no Mukō-gawa"
   },
   "fmtowns:moby-59189": {
    "reason": "MobyGames Adult genre",
@@ -804,10 +808,6 @@
   "fmtowns:moby-9534": {
    "reason": "MobyGames Adult genre",
    "title": "Paradise Heights 2"
-  },
-  "fmtowns:moby-9769": {
-   "reason": "MobyGames Adult genre",
-   "title": "Time Stripper"
   }
  },
  "schemaVersion": 1
