@@ -4300,7 +4300,7 @@
    "contentIds": [
     "sha256-cd-v1:758102887d65fba775aed33f6f8fed5b4bc4d595b605fe5f630b5a6d33e2ea45"
    ],
-   "description": "A mahjong game set at a private high school: play one-on-one against seven opponents, choosing all but the last in any order.",
+   "description": "A mahjong game set at a private high school: play one-on-one against seven schoolgirls, choosing all but the last in any order.",
    "developer": "Queen Soft",
    "launchbox": "188219",
    "mobygames": 58505,
@@ -6169,7 +6169,7 @@
   },
   "fmtowns:188801": {
    "boxArtUrl": "https://images.launchbox-app.com/60f48ccf-fce0-4336-8448-370a004f55ec.jpg",
-   "description": "A life simulation: a student in his year of exam preparation lives alone, earns his keep at part-time jobs, and spends any time left on the girls in his neighborhood.",
+   "description": "A life simulation: a student in his year of exam preparation lives alone, earns his keep at part-time jobs, and spends any time left on the high-school girls in his neighborhood.",
    "developer": "KSS",
    "launchbox": "188801",
    "publisher": "KSS",
@@ -6287,6 +6287,7 @@
   },
   "fmtowns:188812": {
    "adult": true,
+   "adultDescription": "An adult adventure: the heroine begins having erotic daydreams and slowly loses her grip on reality.",
    "boxArtUrl": "https://images.launchbox-app.com/r2_c6446046-2df6-41fa-8eb0-b9e7e7f9a0b1.png",
    "developer": "Cocktail Soft",
    "launchbox": "188812",
@@ -7145,6 +7146,7 @@
   },
   "fmtowns:201328": {
    "adult": true,
+   "adultDescription": "An adult game built on the 1992 adult film Sorority Sex Kittens 2, with its full cast of 25 actresses.",
    "boxArtUrl": "https://images.launchbox-app.com/e3ba371e-d75a-48f0-bf54-7e0c6a3ed650.jpg",
    "developer": "HOP",
    "launchbox": "201328",
