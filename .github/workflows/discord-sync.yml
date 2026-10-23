@@ -26,8 +26,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - uses: MrJackSpade/Kairo/.github/actions/discord-sync@375bd4e0cb273d804b075aa96074724ec7f1872f
+      - uses: MrJackSpade/Kairo/.github/actions/discord-sync@153ab503c672456aa786be5f83cf20851e642aec
         with:
           webhook: ${{ secrets.KAIRO_DISCORD_WEBHOOK }}
+          bot-token: ${{ secrets.KAIRO_DISCORD_BOT_TOKEN }}
           state: .github/discord-sync/issues
           issue: ${{ inputs.issue }}
