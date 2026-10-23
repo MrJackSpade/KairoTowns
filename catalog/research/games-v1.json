@@ -2422,6 +2422,7 @@
   },
   "fmtowns:185089": {
    "boxArtUrl": "https://images.launchbox-app.com/91798168-2264-4359-89fa-1153cceb3208.jpg",
+   "description": "Run a wholesale house in Genroku-era Edo. Pick one of ten trades, from dyeing to timber, and grow the business with no fixed ending: send captains to buy at the ports, appoint a head clerk you cannot fully vet, court officials, retainers and townsfolk with gifts and favors, and keep both the guild and the public on side. Crimes such as smuggling risk exile or execution.",
    "developer": "ArtDink",
    "launchbox": "185089",
    "publisher": "ArtDink",
@@ -5747,6 +5748,7 @@
    "contentIds": [
     "sha256-cd-v1:c3cbf4df67b230ca272bb1947f61e0d0cf35faecf3877dc8cf86203e480749a1"
    ],
+   "description": "Manage a professional baseball team through a pennant race. Call pinch hitters and pitching changes, order steals and set defensive shifts while pitchers tire and recover across the rotation, or let the computer run any team. Player names and ratings can be edited to recreate real rosters, and this version plays both leagues at once, with crowds that follow each team's form.",
    "developer": "ASCII Entertainment Software",
    "launchbox": "188361",
    "publisher": "ASCII Entertainment Software",
@@ -6234,6 +6236,7 @@
    "contentIds": [
     "sha256-cd-v1:53d4d5b9f11db5e150863e1b874568366b6ca9d9bc0c813ccea3a389b74eb4d8"
    ],
+   "description": "Computer shogi from the Morita Shogi series, built around Kazuro Morita's thinking routines. Play matches against the computer, take rank certification tests, study positions, and work through tsume-shogi checkmate problems.",
    "developer": "Random House",
    "launchbox": "188808",
    "publisher": "Enix",
