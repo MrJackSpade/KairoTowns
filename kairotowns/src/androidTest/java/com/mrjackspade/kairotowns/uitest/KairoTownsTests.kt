@@ -33,6 +33,10 @@ object KairoTownsApp : AppUnderTest() {
     override val bootGame = "Populous & The Promised Lands"
     override val singleEntryGames = listOf("Intruder")
     override val searchTerm = "Populous"
+    override val arrowKeys = listOf(com.mrjackspade.kairotowns.TownsKeys.UP, com.mrjackspade.kairotowns.TownsKeys.DOWN,
+        com.mrjackspade.kairotowns.TownsKeys.LEFT, com.mrjackspade.kairotowns.TownsKeys.RIGHT)
+    override val returnKey = com.mrjackspade.kairo.frontend.JisMainBlock.RETURN
+    override val spaceKey = com.mrjackspade.kairo.frontend.JisMainBlock.SPACE
     override val bootGameFile = "games/Populous & The Promised Lands (1990)(Imagineer)(Jp).zip"
     override val otherGame = "Intruder"
     override val defaultOption = "cpu"
