@@ -24,17 +24,46 @@
 
 # KairoTowns
 
-**Play your own FM Towns games on Android phones and handhelds.** KairoTowns is an Android emulator for the Fujitsu FM Towns, built on the [Kairo shared frontend](https://github.com/MrJackSpade/Kairo): the same game library, controller and touch controls, on-screen keyboard, and per-game settings as [Kairo98](https://github.com/MrJackSpade/Kairo98) and [KairoDos](https://github.com/MrJackSpade/KairoDos). It runs a pinned copy of [Tsugaru](https://github.com/captainys/TOWNSEMU), the FM Towns emulator by Soji Yamakawa. It is an independent project, not an official Tsugaru release.
+**Play your own FM Towns games on Android phones and handhelds.** KairoTowns is an Android emulator for the Fujitsu FM Towns, built on the [Kairo shared frontend](https://github.com/MrJackSpade/Kairo): the same game library with artwork, controller and touch controls, on-screen keyboard, save states, and per-game settings as [Kairo98](https://github.com/MrJackSpade/Kairo98) and [KairoDos](https://github.com/MrJackSpade/KairoDos). It runs a pinned copy of [Tsugaru](https://github.com/captainys/TOWNSEMU), the FM Towns emulator by Soji Yamakawa. It is an independent project, not an official Tsugaru release.
 
-## Status
+## Download
 
-Early development. There is no release yet. The emulator core is pinned in this repository, and the Android app is being built around it.
+<!-- kairo:download -->
+- **[GitHub Releases](https://github.com/MrJackSpade/KairoTowns/releases)** (free): install the APK yourself. The larger `-with-images` APK also bundles catalog artwork.
 
-## Games and firmware
+Requires an ARM64 device running Android 8.0 or newer.
+<!-- /kairo:download -->
 
-Games and the FM Towns's BIOS are not supplied; you provide the BIOS from your own machine: the system, DOS, font and dictionary files are required, and the 20-dot font is optional. Menu › Machine lists every BIOS file, each marked Required or Optional. Pick each file, or use **Import all from a folder…** to import every file the app recognizes in a folder you choose.
+## Quick start
 
-The pinned core reads CD images (ISO, CUE, MDS), floppy images, and hard disk images.
+1. Install KairoTowns from [GitHub Releases](https://github.com/MrJackSpade/KairoTowns/releases).
+2. Open KairoTowns and choose the folder that holds your FM Towns games. You can change it later in **Menu › Manage library**.
+3. Import the FM Towns BIOS from your own machine in **Menu › Machine** (see [Firmware](#firmware)).
+4. Select a game and tap **Play**.
+
+Games and the FM Towns BIOS are not supplied.
+
+## Supported formats
+
+| Type | Formats |
+| --- | --- |
+| CDs | CUE (with its BIN, IMG or ISO), CCD (with its IMG), MDS (with its MDF), ISO |
+| Floppies | D77, D88 |
+| Archives | Any of the above inside ZIP or 7z archives |
+
+A game's discs and disks show as one library entry. **Menu › Discs** changes them during play.
+
+## Firmware
+
+KairoTowns needs the FM Towns system, DOS, font and dictionary files (`FMT_SYS.ROM`, `FMT_DOS.ROM`, `FMT_FNT.ROM`, `FMT_DIC.ROM`) from your own machine; the 20-dot font (`FMT_F20.ROM`) is optional. **Menu › Machine** lists every BIOS file, each marked Required or Optional. Pick each file, or use **Import all from a folder…** to import every file the app recognizes in a folder you choose.
+
+## Machine settings
+
+**Menu › Machine** sets these for all games; each game can override them in its **Game settings**.
+
+- **Memory:** 2 to 16 MB (6 MB by default).
+- **CPU clock:** 16 to 66 MHz (40 MHz by default).
+- **Skip memory check** (on by default): starts games without the FM Towns's power-on memory test.
 
 ## Documentation
 
@@ -58,27 +87,13 @@ git clone --recurse-submodules https://github.com/MrJackSpade/KairoTowns.git
 ```
 <!-- /kairo:clone -->
 
-The Android build is not set up yet.
+Build the app, and optionally install it, with the shared build script:
 
-<!-- kairo:ui-tests -->
-## UI tests
-
-KairoTowns has device tests in the style of Selenium tests, on the shared Kairo test framework: they
-name the app's elements, act on them as a player would, and assert what the player would see
-([how they work and how to run them](https://github.com/MrJackSpade/Kairo/blob/main/docs/ui-tests.md)). Run them from this
-repository with a device connected over adb (Android 10 or later) and the `LOCAL_BUILD_TOKEN` key set:
-
-```
-shared\tools\uitest.ps1 -Device <serial>                                              every test
-shared\tools\uitest.ps1 -Device <serial> -Filter 'MenuTests|ControllerTests'          by test name
-shared\tools\uitest.ps1 -Device <serial> -Class com.mrjackspade.kairotowns.uitest.<Class>   one class
-shared\tools\uitest-all.ps1 -Device <serial>                                          every Kairo app
+```powershell
+shared\tools\build.ps1 -Install <adb serial>
 ```
 
-The tests are in `kairotowns/src/androidTest/java/com/mrjackspade/kairotowns/uitest/`. They run in a
-build of their own, `com.loxifi.kairotowns.uitest`, installed beside the app without touching its data, and
-each run's logs, screenshots and summary land in `.build/uitest/<run id>/`.
-<!-- /kairo:ui-tests -->
+Host tests and UI tests: see [development](docs/development.md).
 
 ## License
 
