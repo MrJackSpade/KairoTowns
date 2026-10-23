@@ -8657,6 +8657,19 @@
    "contentIds": [
     "sha256-cd-v1:51455c4e01117c92c9f406dccdb7b26f8979fd10122cb11c09791227e3ad36a5"
    ],
+   "diskSets": {
+    "sha256-cd-v1:51455c4e01117c92c9f406dccdb7b26f8979fd10122cb11c09791227e3ad36a5": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:e45f81d9805fa3aebcce3e48794d5020ffe1d18f07d8bccfdaf6b26a7ec94cfc",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:e45f81d9805fa3aebcce3e48794d5020ffe1d18f07d8bccfdaf6b26a7ec94cfc"
+     ]
+    }
+   },
    "sourceGroups": [
     "fmtowns-cd:Intruder (1989)(AliceSoft)[+UserDisk].zip"
    ],
@@ -8785,6 +8798,19 @@
    "contentIds": [
     "sha256-cd-v1:cba6bc730330b57e85c0c58c5b62e354f608f239fa30810ae9f3500e67bc103d"
    ],
+   "diskSets": {
+    "sha256-cd-v1:cba6bc730330b57e85c0c58c5b62e354f608f239fa30810ae9f3500e67bc103d": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:e45f81d9805fa3aebcce3e48794d5020ffe1d18f07d8bccfdaf6b26a7ec94cfc",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:e45f81d9805fa3aebcce3e48794d5020ffe1d18f07d8bccfdaf6b26a7ec94cfc"
+     ]
+    }
+   },
    "sourceGroups": [
     "fmtowns-cd:Crescent Moon (1989)(Alice Soft)(Jp)[+UserDisk].zip"
    ],
