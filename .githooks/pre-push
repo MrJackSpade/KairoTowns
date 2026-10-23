@@ -16,6 +16,14 @@ while read -r local_ref local_sha remote_ref remote_sha; do
     case "$remote_ref" in
         refs/tags/v*)
             tag=${remote_ref#refs/tags/}
+            # Every Kairo app releases the version in the shared commit this tag pins.
+            pin=$(git rev-parse "$local_sha^{commit}:shared")
+            if version=$(git -C shared show "$pin:release-version" 2>/dev/null); then
+                sh shared/tools/check-release-version.sh "$tag" "$version" || status=1
+            else
+                echo "Tag $tag: shared/release-version is missing at the pinned shared commit $pin (fetch shared?)" >&2
+                status=1
+            fi
             notes="docs/releases/$tag.md"
             if ! git cat-file -e "$local_sha^{commit}:$notes" 2>/dev/null ||
                 [ "$(git cat-file -s "$local_sha^{commit}:$notes")" -eq 0 ]; then
