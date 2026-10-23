@@ -1,0 +1,11 @@
+{
+ "schemaVersion": 1,
+ "files": {
+  "bios/FMT_DIC.ROM": "C:\\Users\\Service Account\\Kairo\\KairoTowns\\bios\\FMT_DIC.ROM",
+  "bios/FMT_DOS.ROM": "C:\\Users\\Service Account\\Kairo\\KairoTowns\\bios\\FMT_DOS.ROM",
+  "bios/FMT_FNT.ROM": "C:\\Users\\Service Account\\Kairo\\KairoTowns\\bios\\FMT_FNT.ROM",
+  "bios/FMT_SYS.ROM": "C:\\Users\\Service Account\\Kairo\\KairoTowns\\bios\\FMT_SYS.ROM",
+  "games/Intruder (1989)(AliceSoft)[+UserDisk].zip": "\\\\192.168.1.202\\Public\\Games\\Roms\\FM Towns\\FM-Towns CD\\Intruder (1989)(AliceSoft)[+UserDisk].zip",
+  "games/Populous & The Promised Lands (1990)(Imagineer)(Jp).zip": "\\\\192.168.1.202\\Public\\Games\\Roms\\FM Towns\\FM-Towns CD\\Populous & The Promised Lands (1990)(Imagineer)(Jp).zip"
+ }
+}
