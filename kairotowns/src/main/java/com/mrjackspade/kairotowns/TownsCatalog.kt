@@ -23,7 +23,8 @@ object TownsCatalog : LayeredGameCatalog.Schema {
         "6", numeric = true)
     val cpu = MachineOption("cpu", "CPU clock", listOf(16, 20, 25, 33, 40, 66).map { ChoiceOption("$it", "$it MHz") },
         "40", numeric = true)
-    val options = listOf(memory, cpu)
+    val skipMemoryCheck = MachineOption.skipMemoryCheck()
+    val options = listOf(memory, cpu, skipMemoryCheck)
 
     override val fields: Map<String, Set<String>?> = mapOf(MachineOption.SECTION to options.map { it.id }.toSet())
     override val singleMediaRoles = setOf("floppyA")

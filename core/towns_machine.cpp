@@ -4,6 +4,7 @@
 #include "towns_machine.h"
 
 #include <algorithm>
+#include <chrono>
 #include <cstring>
 #include <deque>
 
@@ -216,6 +217,9 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
     parameters.fdImgFName[1] = config.fd[1];
     parameters.memSizeInMB = config.memory_mb;
     parameters.freq = config.cpu_mhz;
+    // Booting until the first disk read: run_frame runs it as fast as it can when skipping the memory check.
+    parameters.noWait = config.skip_memory_check;
+    parameters.noWaitStandby = false;
     parameters.gamePort[0] = TOWNS_GAMEPORTEMU_PHYSICAL0;
     parameters.gamePort[1] = TOWNS_GAMEPORTEMU_MOUSE;
     parameters.interactive = false;
@@ -244,8 +248,30 @@ TownsMachine::~TownsMachine() {
 
 bool TownsMachine::run_frame(std::string &error) {
     auto &towns = *impl_->towns;
-    // Guest time run this frame, counted step by step: a reset starts Tsugaru's clock over.
     uint64_t ran = 0;
+    if (!towns.state.noWait) {
+        if (!run_guest(ran, error)) return false;
+        impl_->last_frame = ran;
+        return impl_->speaker.catch_up(ran, error);
+    }
+    // Skipping the memory check: until its first disk read, the machine runs as fast as this
+    // frame's real time allows, as Tsugaru's -NOWAITBOOT does, so the BIOS memory test passes in
+    // a moment. Its sound is dropped and the frame counts as one frame, so audio stays in step.
+    const auto start = std::chrono::steady_clock::now();
+    do {
+        if (!run_guest(ran, error)) return false;
+    } while (towns.state.noWait &&
+             std::chrono::steady_clock::now() - start < std::chrono::nanoseconds(kFrameNanoseconds));
+    impl_->speaker.restart();
+    impl_->speaker.advance(kFrameNanoseconds);
+    impl_->last_frame = kFrameNanoseconds;
+    return impl_->speaker.catch_up(kFrameNanoseconds, error);
+}
+
+bool TownsMachine::run_guest(uint64_t &ran, std::string &error) {
+    auto &towns = *impl_->towns;
+    // Guest time run this frame, counted step by step: a reset starts Tsugaru's clock over.
+    ran = 0;
     while (ran < kFrameNanoseconds) {
         const uint64_t step_start = towns.state.townsTime;
         towns.var.nextTimeSync = towns.state.townsTime + kTimeSync;
@@ -284,8 +310,7 @@ bool TownsMachine::run_frame(std::string &error) {
             return false;
         }
     }
-    impl_->last_frame = ran;
-    return impl_->speaker.catch_up(ran, error);
+    return true;
 }
 
 double TownsMachine::frame_seconds() const { return impl_->last_frame / 1e9; }

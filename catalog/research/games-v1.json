@@ -3942,6 +3942,7 @@
    "contentIds": [
     "sha256-cd-v1:ac8e42928c0608fed41248f6f99d313c6625015f3aaf7e6716ac9964611b4c3e"
    ],
+   "description": "Four-player Mahjong in which the hero travels through one of three magic gates, each holding five opponents from whom he chooses three to play.",
    "developer": "Fairytale Red Zone",
    "launchbox": "188185",
    "mobygames": 58462,
@@ -4066,6 +4067,7 @@
    "contentIds": [
     "sha256-cd-v1:2b2858e1f4d2b409a9c991f0e3231573a7202ce149f66c41e10e2eb5d4ee9deb"
    ],
+   "description": "A game of the card game Daifugō against a series of opponents faced one after another.",
    "developer": "I-cell",
    "launchbox": "188195",
    "mobygames": 58491,
@@ -4277,6 +4279,7 @@
    "contentIds": [
     "sha256-cd-v1:e551f146a7c0f84f7736d9d5e2660c3a73484e2a9187b21ded27d3a9743c686f"
    ],
+   "description": "One-on-one Mahjong in an elite club, where a Mahjong expert takes on three opponents in turn, each until her money runs out.",
    "developer": "Active Software",
    "launchbox": "188218",
    "mobygames": 58499,
@@ -4419,6 +4422,7 @@
    "contentIds": [
     "sha256-cd-v1:ba5efc30d7ec355d4612ccd76ad78238aa7183b4272f87f5ab0a2e0f8f22210a"
    ],
+   "description": "A quiz game against one of eight opponents, where you first spread points across question categories such as history, geography, sport, anime and games.",
    "developer": "D.O.",
    "launchbox": "188263",
    "mobygames": 58542,
@@ -5710,6 +5714,7 @@
     "Zen Nihon Bishoujo Mahjong Senshuken Taikai: Heart de Ron!!"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/250a321e-4d7e-4642-8e92-2a7f0e244ab3.jpg",
+   "description": "A story-driven Mahjong game in which you enter an all-Japan Mahjong championship, starting at a Mahjong theme park and meeting each one-on-one opponent along the way.",
    "developer": "D.O.",
    "launchbox": "188358",
    "mobygames": 58411,
@@ -6336,6 +6341,7 @@
   },
   "fmtowns:188819": {
    "boxArtUrl": "https://images.launchbox-app.com/a738a476-1d44-48f4-a95d-e2acb56bb895.jpg",
+   "description": "A polygon adventure from DataWest based on the Epic of Gilgamesh, set in towns and ruins drawn in 3D.",
    "developer": "DataWest",
    "launchbox": "188819",
    "publisher": "DataWest",
@@ -6934,6 +6940,7 @@
    "title": "Darwin's Dilemma"
   },
   "fmtowns:199838": {
+   "description": "A vertically scrolling doujin shooter by Satoshi Yoshida, later of Siter Skain, which won a prize at the 1996 ASCII Entertainment Software Contest and appeared on a CD with Login Soft magazine.",
    "developer": "Satoshi Yoshida",
    "launchbox": "199838",
    "mobygames": 158574,

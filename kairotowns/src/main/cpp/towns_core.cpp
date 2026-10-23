@@ -108,9 +108,15 @@ std::unique_ptr<kairo::MachineCore> kairo::create_core(const kairo::Launch &laun
     config.cd = launch.media.size() > kCd ? launch.media[kCd] : "";
     config.fd[0] = launch.media.size() > kFloppyA ? launch.media[kFloppyA] : "";
     config.fd[1] = launch.media.size() > kFloppyB ? launch.media[kFloppyB] : "";
-    // The settings TownsCatalog's options name; every launch passes both.
+    // The settings TownsCatalog's options name; every launch passes all of them.
     config.memory_mb = static_cast<unsigned>(std::stoul(launch.settings.at("memory")));
     config.cpu_mhz = static_cast<unsigned>(std::stoul(launch.settings.at("cpu")));
+    const std::string &skip = launch.settings.at("skipMemoryCheck");
+    if (skip != "on" && skip != "off") {
+        error = "Skip memory check is \"" + skip + "\", not on or off";
+        return nullptr;
+    }
+    config.skip_memory_check = skip == "on";
     auto machine = TownsMachine::create(config, error);
     if (!machine) return nullptr;
     return std::make_unique<TownsCore>(std::move(machine));

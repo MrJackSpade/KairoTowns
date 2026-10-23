@@ -26,6 +26,9 @@ struct Config {
     unsigned memory_mb = 4;
     // The CPU clock in MHz.
     unsigned cpu_mhz = 40;
+    // Whether the boot runs as fast as the host can until its first disk read, so the BIOS
+    // memory test passes in a moment (this BIOS ignores the CMOS setting that skips it).
+    bool skip_memory_check = true;
 };
 
 // The gamepad in game port 0. A, B, RUN and SELECT are the pad's buttons.
@@ -71,6 +74,8 @@ public:
 
 private:
     struct Impl;
+    // Runs one frame of guest time; [ran] is how much ran.
+    bool run_guest(uint64_t &ran, std::string &error);
     explicit TownsMachine(std::unique_ptr<Impl> impl);
     std::unique_ptr<Impl> impl_;
 };
