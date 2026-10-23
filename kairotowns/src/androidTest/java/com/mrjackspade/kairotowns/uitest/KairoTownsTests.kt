@@ -2,12 +2,21 @@ package com.mrjackspade.kairotowns.uitest
 
 import com.mrjackspade.kairo.uitest.AppUnderTest
 import com.mrjackspade.kairo.uitest.AppUnderTest.BiosFile
+import com.mrjackspade.kairo.uitest.AppUnderTest.MediaSwap
 import com.mrjackspade.kairo.uitest.KairoUiTest
 import com.mrjackspade.kairo.uitest.suites.FirstRunTests
 import com.mrjackspade.kairo.uitest.suites.GameTests
 import com.mrjackspade.kairo.uitest.suites.LibraryTests
 import com.mrjackspade.kairo.uitest.suites.SearchTests
 import com.mrjackspade.kairo.uitest.suites.WordingTests
+import com.mrjackspade.kairo.uitest.suites.MediaTests
+import com.mrjackspade.kairo.uitest.suites.MenuTests
+import com.mrjackspade.kairo.uitest.suites.ControllerTests
+import com.mrjackspade.kairo.uitest.suites.TouchTests
+import com.mrjackspade.kairo.uitest.suites.LaunchTests
+import com.mrjackspade.kairo.uitest.suites.LibraryManagementTests
+import com.mrjackspade.kairo.uitest.suites.SettingsTests
+import com.mrjackspade.kairo.uitest.suites.StateTests
 import org.junit.Test
 
 /**
@@ -24,6 +33,10 @@ object KairoTownsApp : AppUnderTest() {
     override val bootGame = "Populous & The Promised Lands"
     override val singleEntryGames = listOf("Intruder")
     override val searchTerm = "Populous"
+    override val bootGameFile = "games/Populous & The Promised Lands (1990)(Imagineer)(Jp).zip"
+    override val otherGame = "Intruder"
+    override val defaultOption = "cpu"
+    override val mediaSwap = MediaSwap("Intruder", "Floppy A", "Intruder")
 }
 
 class KairoTownsFirstRunTests : FirstRunTests() { override val app = KairoTownsApp }
@@ -31,10 +44,38 @@ class KairoTownsLibraryTests : LibraryTests() { override val app = KairoTownsApp
 class KairoTownsSearchTests : SearchTests() { override val app = KairoTownsApp }
 class KairoTownsGameTests : GameTests() { override val app = KairoTownsApp }
 class KairoTownsWordingTests : WordingTests() { override val app = KairoTownsApp }
+class KairoTownsMediaTests : MediaTests() { override val app = KairoTownsApp }
+class KairoTownsMenuTests : MenuTests() { override val app = KairoTownsApp }
+class KairoTownsControllerTests : ControllerTests() { override val app = KairoTownsApp }
+class KairoTownsTouchTests : TouchTests() { override val app = KairoTownsApp }
+class KairoTownsLaunchTests : LaunchTests() { override val app = KairoTownsApp }
+class KairoTownsLibraryManagementTests : LibraryManagementTests() { override val app = KairoTownsApp }
+class KairoTownsSettingsTests : SettingsTests() { override val app = KairoTownsApp }
+class KairoTownsStateTests : StateTests() { override val app = KairoTownsApp }
 
 /** The FM Towns's own behavior: a CD game starts with its floppy in drive A. */
 class FmTownsTests : KairoUiTest() {
     override val app = KairoTownsApp
+
+    private fun startedWith(option: String): Pair<String, String?> {
+        screens.completeFirstRun().waitForGame(KairoTownsApp.bootGame)
+        val picked = screens.choose(screens.openMachinePage(), "default-$option")
+        driver.press(android.view.KeyEvent.KEYCODE_BUTTON_MODE)
+        screens.library.open(KairoTownsApp.bootGame).play()
+        return picked to driver.probe().details["machine.$option"]
+    }
+
+    @Test
+    fun theCpuClockReachesTheMachine() {
+        val (picked, started) = startedWith("cpu")
+        expect.equal("the CPU clock the FM Towns started with", picked, started)
+    }
+
+    @Test
+    fun theMemoryReachesTheMachine() {
+        val (picked, started) = startedWith("memory")
+        expect.equal("the memory the FM Towns started with", picked, started)
+    }
 
     @Test
     fun aCdGameStartsWithItsUserDiskInFloppyA() {
