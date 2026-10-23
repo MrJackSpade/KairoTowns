@@ -1,6 +1,6 @@
 name: Discord release announcement
 
-# Announces a release in the Kairo Discord forum, which every Kairo app shares. Releases published
+# Announces a release in the Kairo Discord releases channel, which every Kairo app shares. Releases published
 # by tag-builds.yml use GITHUB_TOKEN, which does not raise release events, so that workflow
 # dispatches this one directly. Releases published by hand arrive as events.
 on:
@@ -19,7 +19,7 @@ jobs:
   announce:
     runs-on: ubuntu-24.04
     steps:
-      - uses: MrJackSpade/Kairo/.github/actions/discord-release@375bd4e0cb273d804b075aa96074724ec7f1872f
+      - uses: MrJackSpade/Kairo/.github/actions/discord-release@705f9d055d3d69273af523c6a1092d9cd378b3d8
         with:
-          webhook: ${{ secrets.KAIRO_DISCORD_WEBHOOK }}
+          webhook: ${{ secrets.KAIRO_DISCORD_RELEASE_WEBHOOK }}
           tag: ${{ github.event.release.tag_name || inputs.tag }}
