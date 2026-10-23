@@ -2461,6 +2461,7 @@
   },
   "fmtowns:185092": {
    "boxArtUrl": "https://images.launchbox-app.com/30bf7bb5-9ca4-4f5e-8326-9fbc2582c43b.jpg",
+   "description": "An adventure: on his friend Sayako's birthday the hero oversleeps and rushes to her place, the start of a story that began when they rescued a kitten together in the rain.",
    "developer": "Technopolis Soft",
    "launchbox": "185092",
    "publisher": "Tokuma Shoten",
@@ -2618,6 +2619,7 @@
   },
   "fmtowns:185644": {
    "boxArtUrl": "https://images.launchbox-app.com/50a4613c-6e88-4e45-87f0-c243294e9fa8.jpg",
+   "description": "A high school life simulation that runs from entrance to graduation.",
    "developer": "Family Soft",
    "launchbox": "185644",
    "publisher": "Family Soft",
@@ -4298,6 +4300,7 @@
    "contentIds": [
     "sha256-cd-v1:758102887d65fba775aed33f6f8fed5b4bc4d595b605fe5f630b5a6d33e2ea45"
    ],
+   "description": "A mahjong game set at a private high school: play one-on-one against seven opponents, choosing all but the last in any order.",
    "developer": "Queen Soft",
    "launchbox": "188219",
    "mobygames": 58505,
@@ -6166,6 +6169,7 @@
   },
   "fmtowns:188801": {
    "boxArtUrl": "https://images.launchbox-app.com/60f48ccf-fce0-4336-8448-370a004f55ec.jpg",
+   "description": "A life simulation: a student in his year of exam preparation lives alone, earns his keep at part-time jobs, and spends any time left on the girls in his neighborhood.",
    "developer": "KSS",
    "launchbox": "188801",
    "publisher": "KSS",
@@ -6881,6 +6885,7 @@
   },
   "fmtowns:198890": {
    "boxArtUrl": "https://images.launchbox-app.com/0569131c-bee1-4407-b9dc-76e40e0350a2.jpg",
+   "description": "A mahjong game: Naru knows nothing about mahjong, so her friends, meant to be making an adventure game, hold a tournament to teach her.",
    "developer": "Libido",
    "launchbox": "198890",
    "publisher": "Libido",
@@ -6903,6 +6908,7 @@
   },
   "fmtowns:198894": {
    "boxArtUrl": "https://images.launchbox-app.com/f1da53aa-9f68-4dbf-9694-a9f2901ed630.jpg",
+   "description": "A mahjong adventure in ancient China: three girls set out to seal away the Mahjong King, a youkai with a troublesome magic.",
    "developer": "Ponytail Soft",
    "launchbox": "198894",
    "publisher": "Ponytail Soft",
@@ -6983,6 +6989,7 @@
   },
   "fmtowns:199998": {
    "boxArtUrl": "https://images.launchbox-app.com/9fda1512-506b-4be8-8ceb-b1a52d83c9e7.jpg",
+   "description": "Misato visits a doctor and tells him about her three dreams, of being an assistant, a maid and an idol.",
    "developer": "Active",
    "launchbox": "199998",
    "publisher": "Active",
@@ -7311,6 +7318,7 @@
   },
   "fmtowns:201344": {
    "boxArtUrl": "https://images.launchbox-app.com/d9211df1-ce85-4659-a8d9-1430596483ac.jpg",
+   "description": "A science-fiction adventure: people born on the planet M15 set out into space to learn the truth behind humanity's exodus from Earth.",
    "developer": "Beluga Computer",
    "launchbox": "201344",
    "publisher": "Japan Home Video",
@@ -7516,6 +7524,7 @@
   },
   "fmtowns:203206": {
    "boxArtUrl": "https://images.launchbox-app.com/4bf7a7ab-3b45-4692-96a2-ef440fb69206.png",
+   "description": "A fantasy adventure: the indecisive Seth enters the search for the princess's groom, which means clearing the court magician's training dungeon.",
    "developer": "Grocer",
    "launchbox": "203206",
    "publisher": "Grocer",
@@ -8290,6 +8299,7 @@
    "contentIds": [
     "sha256-cd-v1:fe8660aafd0bd0bfc63729544de37429203f60f7eba6d4af0f114f47d02244da"
    ],
+   "description": "The second Psychic Detective story: a girl asks Katsuya Furuyagi to erase her memory of her father, and he enters the past through people's memories.",
    "sourceGroups": [
     "fmtowns-cd:Psychic Detective Vol. 2 - Memories (1989)(Datawest)(Jp).zip"
    ],
@@ -8330,6 +8340,7 @@
    "contentIds": [
     "sha256-cd-v1:8bfc48c83af093a31ce7d17aabb4fa951b4a8c6f7627585ec0c11de384a90d4c"
    ],
+   "description": "A fantasy role-playing game: after the king of Digal turns on his High Priest and the land falls into chaos, Rezas and his classmates at the Magic School swear revenge on the gang that attacked it.",
    "sourceGroups": [
     "fmtowns-cd:Madoh Gakuin R (19xx)(Foresight)(Jp).zip"
    ],
@@ -8349,6 +8360,7 @@
    "contentIds": [
     "sha256-cd-v1:133636e79b96715cc41bd7132507df4fd09356f433d274bfe7ce0ff0a02146ea"
    ],
+   "description": "A detective thriller: New York detective Jake Snipes searches for a missing actress while a serial killer working through American cities reaches his own.",
    "sourceGroups": [
     "fmtowns-cd:Maria ni Sasageru Ballade (1995)(Fairytale)(Jp)[+UserDisk].zip"
    ],
@@ -8428,6 +8440,7 @@
    "contentIds": [
     "sha256-cd-v1:09095579184db0d9e1de7b17071550090782e134058b1d93aa432409dfc1557b"
    ],
+   "description": "A detective adventure: former police officer Kyo Saeki, now a private eye who spends his free time at the arcade, takes the case of a painting a client's stepmother probably stole.",
    "sourceGroups": [
     "fmtowns-cd:Yuwaku (1996)(T2)(Jp)[+UserDisk].zip"
    ],
@@ -8448,6 +8461,7 @@
    "contentIds": [
     "sha256-cd-v1:08efd014777e2cd871dba4932e6207227bdec9d31688a0595bcda519984b722d"
    ],
+   "description": "Sega's arcade flight shooter: fly an F-14 through enemy lines with cannon and lock-on missiles, rolling to shake off missiles, over 23 stages with ground attacks and mid-air refueling.",
    "sourceGroups": [
     "fmtowns-cd:Afterburner 2 (1989)(Sega)(Jp-En).zip"
    ],
@@ -8458,6 +8472,7 @@
    "contentIds": [
     "sha256-cd-v1:a32d4214056a11e94c93733e6ce9594778cdf4b9f42366e2598709bad8c314eb"
    ],
+   "description": "A school romance: Kouichi loves Ayumi Kawai, the most beautiful girl in school, and one day she says she loves him too.",
    "sourceGroups": [
     "fmtowns-cd:Ayumichan Monogatari (1993)(Alice Soft)(Jp)[+BootDisk].zip"
    ],
@@ -8627,6 +8642,7 @@
    "contentIds": [
     "sha256-cd-v1:611fa0aecd7c464b99606d04aaed84fe7803eab04c26dfd8e3ceaed6072267c4"
    ],
+   "description": "A horror adventure: Cole's friend Doc has invented a drug that revives the dead, and the city fills with the walking dead; fights switch to first-person shooting against the clock.",
    "sourceGroups": [
     "fmtowns-cd:Dead of the Brain (1993)(Fairytale)(Jp).zip"
    ],
@@ -8657,6 +8673,7 @@
    "contentIds": [
     "sha256-cd-v1:36629579ae02a2a0c1dde80b80d073207d72948cba254849ae5791cc02622c19"
    ],
+   "description": "Peter Molyneux's god game: raise and lower the land so your followers can settle and multiply, then use earthquakes, swamps, floods and volcanoes against a rival god's people.",
    "sourceGroups": [
     "fmtowns-cd:Populous (1990)(Imagineer)(Jp-En).zip"
    ],
@@ -8700,6 +8717,7 @@
    "contentIds": [
     "sha256-cd-v1:e2ab733c454c8e1a42dba2e1c2449fefbf018185714a8135eeb9d06b8f7de5ad"
    ],
+   "description": "FTL's real-time dungeon role-playing game: lead a party through the dungeon below Mount Anaias to recover the Firestaff before Lord Chaos does, with monsters that never wait and food and water to keep up.",
    "sourceGroups": [
     "fmtowns-cd:Dungeon Master (1987)(FTL)(Jp-En).zip"
    ],
@@ -8851,6 +8869,7 @@
    "contentIds": [
     "sha256-cd-v1:7d4ee74788bb57c0d329e65bd6812d3583460e05891c654995133812b755cf6a"
    ],
+   "description": "The fifth Psychic Detective story: Katsuya Furuyagi dreams of a young woman trapped in a remote castle and begins to wonder whether the nightmare is real.",
    "sourceGroups": [
     "fmtowns-cd:Psychic Detective Vol. 5 - Nightmare (1994)(Datawest)(Jp)[+SystemDisk].zip"
    ],
@@ -8861,6 +8880,7 @@
    "contentIds": [
     "sha256-cd-v1:cdd3095b537666eddedcd121dfc801a3a836816b18a77498a1955b150eea3303"
    ],
+   "description": "Toaplan's vertical shooter: fly the biplane Flying Shark over tanks, ships and gun emplacements, spreading your shot with power-ups and clearing the screen with bombs.",
    "sourceGroups": [
     "fmtowns-cd:Flying Shark (1993)(Ving)(Jp-En).zip"
    ],
