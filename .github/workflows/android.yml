@@ -1,0 +1,35 @@
+name: Android debug build
+
+# Verifies and builds the debug APK through the shared app build workflow
+# (shared/docs/android-build.md). A manual run with signed builds an APK signed with the Kairo key
+# that updates an installed release.
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      signed:
+        description: 'Sign with the Kairo key, to update an installed release'
+        type: boolean
+        default: false
+      version_code:
+        description: 'Version code of a signed APK, above the installed one'
+        type: string
+        default: ''
+      version_name:
+        description: 'Version name of a signed APK'
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    uses: MrJackSpade/Kairo/.github/workflows/app-build.yml@9c1b49f6dca382dabb5b8c584dbd093a039dc2ef
+    with:
+      module: kairotowns
+      signed: ${{ inputs.signed || false }}
+      version_code: ${{ inputs.version_code }}
+      version_name: ${{ inputs.version_name }}
+    secrets: inherit

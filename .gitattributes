@@ -1,7 +1,13 @@
+# Every Kairo app's .gitattributes (shared/tools/check-app.sh requires it to match this file).
 # Preserve vendored source bytes, including Shift-JIS text and original line endings.
 third_party/** -text
 # Generated catalogs carry checksums of their exact bytes.
 catalog/** -text
+# Packaged assets ship as committed on every platform (audit_android_release.py).
+*/src/main/assets/** -text
 
 *.md text eol=lf
-.githooks/* text eol=lf
+*.sh text eol=lf
+*.proftext text eol=lf
+
+.gitattributes text eol=lf
