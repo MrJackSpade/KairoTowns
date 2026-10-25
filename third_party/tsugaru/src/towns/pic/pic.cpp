@@ -103,26 +103,25 @@ void TownsPIC::I8259A::WriteReg0(unsigned char data)
 			break;
 		}
 	}
+	owner->state.UpdateIRRCache(); // KairoTowns: ISR and the priority decide what fires.
 }
 bool TownsPIC::I8259A::WriteReg1(unsigned char data)
 {
+	bool ICW4Written=false;
 	if(0==init_stage)
 	{
 		OCW[0]=data;
 		IMR=data;
-		owner->state.UpdateIRRCache(); // KairoTowns: the cache leaves out masked requests.
 		// Are OCR1 and IMR the same thing?  Probably.
 	}
 	else
 	{
 		ICW[init_stage++]=data;
 		init_stage&=3;
-		if(0==init_stage)
-		{
-			return true;
-		}
+		ICW4Written=(0==init_stage);
 	}
-	return false;
+	owner->state.UpdateIRRCache(); // KairoTowns: the mask and ICW4 decide what fires.
+	return ICW4Written;
 }
 bool TownsPIC::I8259A::PollingMode(void) const
 {
@@ -153,6 +152,7 @@ void TownsPIC::I8259A::SetInterruptRequestBit(unsigned int intNum,bool request)
 {
 	// [2] pp.58
 	unsigned int bit=(1<<intNum);
+	const auto before=IRR;
 	if(true==request)
 	{
 		if(0==(IRR&bit) && TriggerMode()==TRIGGER_EDGE)
@@ -165,7 +165,12 @@ void TownsPIC::I8259A::SetInterruptRequestBit(unsigned int intNum,bool request)
 	{
 		IRR&=(~bit);
 	}
-	owner->state.UpdateIRRCache();
+	// KairoTowns: devices restate their requests at every polling; only a change can change
+	// what fires.
+	if(before!=IRR)
+	{
+		owner->state.UpdateIRRCache();
+	}
 }
 
 bool TownsPIC::I8259A::GetInterruptRequestBit(unsigned int intNum) const
@@ -216,6 +221,7 @@ void TownsPIC::I8259A::FireIRQ(i486DXCommon &cpu,Memory &mem,unsigned int INTToG
 	else
 	{
 		ISR|=(1<<INTToGo);
+		owner->state.UpdateIRRCache(); // KairoTowns: an interrupt in service holds others back.
 		auto CPUINT=(GetT()&0xF8)|(INTToGo&7);
 		cpu.RedirectInterrupt(CPUINT,mem,0,0,false);
 	}

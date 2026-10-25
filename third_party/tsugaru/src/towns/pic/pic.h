@@ -153,18 +153,34 @@ public:
 		I8259A i8259A[2];
 
 		mutable unsigned char IRR0_OR_IRR1_Cache=0; // Not saved in the state file.  Updated after state is loaded.
+		// KairoTowns: non-zero only while ProcessIRQ would fire an interrupt once the CPU accepts
+		// one: a request that is not masked (OCW1), not held back by one in service (ISR) and not
+		// held back in special fully nested mode, chosen exactly as ProcessIRQ chooses. A request
+		// that cannot fire no longer makes ProcessIRQ search both chips after every instruction
+		// (KairoTowns#8). Called after every change to the chips' state: requests, register
+		// writes, a fired interrupt, a reset and a loaded state.
 		void UpdateIRRCache(void) const
 		{
-			// KairoTowns: only requests ProcessIRQ can fire, so a request its mask (OCW1) holds back
-			// no longer makes ProcessIRQ search both chips after every instruction. ProcessIRQ checks
-			// PIC1 only while PIC0's cascade input (bit 7) is unmasked; a request this leaves out
-			// would have found no INTToGo there.
-			unsigned int possible=(i8259A[0].IRR&~i8259A[0].OCW[0]);
+			unsigned int chip=0,INTToGo=8;
 			if(0==(i8259A[0].OCW[0]&0x80))
 			{
-				possible|=(i8259A[1].IRR&~i8259A[1].OCW[0]);
+				if(7==i8259A[0].highestPriorityInt)
+				{
+					chip=1;
+				}
+				INTToGo=i8259A[chip].INTToGo();
+				if(8<=INTToGo && 0==i8259A[chip].ISR)
+				{
+					chip=1-chip;
+					INTToGo=i8259A[chip].INTToGo();
+				}
 			}
-			IRR0_OR_IRR1_Cache=(unsigned char)possible;
+			else
+			{
+				INTToGo=i8259A[chip].INTToGo();
+			}
+			IRR0_OR_IRR1_Cache=(INTToGo<8 &&
+				!(i8259A[chip].SpecialFullyNestedMode() && i8259A[chip].HigherPriorityINTIsInService(INTToGo))) ? 1 : 0;
 		}
 
 		void Reset(void);
