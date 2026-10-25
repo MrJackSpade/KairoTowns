@@ -56,6 +56,15 @@ add_library(kairotowns_core STATIC towns_machine.cpp)
 target_include_directories(kairotowns_core PUBLIC "${CMAKE_CURRENT_LIST_DIR}")
 target_link_libraries(kairotowns_core PUBLIC towns townsrender outside_world yssimplesound)
 
+# The measurement tool for the device too, as a standalone executable run through adb
+# (tools/perf/device-profile.ps1).
+option(KAIROTOWNS_TOOLS "Build game_profile on Android" OFF)
+if(ANDROID AND KAIROTOWNS_TOOLS)
+    add_executable(game_profile test/game_profile.cpp)
+    target_link_libraries(game_profile PRIVATE kairotowns_core)
+    target_link_options(game_profile PRIVATE -static-libstdc++)
+endif()
+
 if(NOT ANDROID)
     add_executable(boot_test test/boot_test.cpp)
     target_link_libraries(boot_test PRIVATE kairotowns_core)

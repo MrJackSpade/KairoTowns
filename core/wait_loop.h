@@ -34,14 +34,25 @@ public:
 
     // Before the CPU runs the instruction at CS:EIP, after `instructions` instructions and `clocks`
     // clocks in all. May move guest time on over whole repeated passes, never past `deadline`.
-    void before_instruction(TownsType &towns, uint64_t instructions, uint64_t clocks, uint64_t deadline) {
+    // Inline, as it runs before every instruction: only a backward jump in the same code segment
+    // starts a pass.
+    inline __attribute__((always_inline)) void before_instruction(TownsType &towns, uint64_t instructions,
+                                                                  uint64_t clocks, uint64_t deadline) {
         const auto &state = towns.CPU().state;
         const uint32_t eip = state.EIP;
         const uint16_t cs = state.CS().value;
         const bool pass_start = cs == last_cs_ && eip < last_eip_;
         last_cs_ = cs;
         last_eip_ = eip;
-        if (!pass_start) return;
+        if (pass_start) at_pass_start(towns, cs, eip, instructions, clocks, deadline);
+    }
+
+    const Counts &counts() const { return counts_; }
+
+private:
+    __attribute__((noinline)) void at_pass_start(TownsType &towns, uint16_t cs, uint32_t eip, uint64_t instructions,
+                                                 uint64_t clocks, uint64_t deadline) {
+        const auto &state = towns.CPU().state;
         const uint64_t effects = towns.mem.sideEffects + towns.io.accesses;
         // Only a pass that starts where the last one did, with nothing done in between, can be a
         // repeat; the state is captured for such a pass alone, so code that only loops now and then
@@ -69,9 +80,6 @@ public:
         pass_clocks_ = clocks;
     }
 
-    const Counts &counts() const { return counts_; }
-
-private:
     using CpuState = typename std::remove_reference<decltype(std::declval<TownsType &>().CPU().state)>::type;
 
     // Every part of the CPU state an instruction can read, as bytes. Bytes that differ while the

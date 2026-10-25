@@ -1467,6 +1467,55 @@ public:
 		Operand op2;
 	};
 
+	/*! KairoTowns: instructions decoded from code read directly through a memory window, by the
+	    host address of their first byte. Decoding such code is a function of its bytes and the
+	    default operand and address sizes alone, so an entry whose bytes still match the code is
+	    the decode of the code (FetchInstructionClass::FetchInstruction). Not saved in states.
+	*/
+	class DecodedInstruction
+	{
+	public:
+		const unsigned char *code=nullptr;
+		unsigned int defOperSize=0,defAddrSize=0;
+		// The instruction's bytes as bytes 0-7 and 7-14 of the code, each masked to the bytes the
+		// instruction has; MatchesCode compares them with two loads.
+		uint64_t low=0,high=0,lowMask=0,highMask=0;
+		InstructionAndOperand instOp;
+
+		static inline uint64_t Load(const unsigned char *p)
+		{
+			uint64_t v;
+			memcpy(&v,p,8);
+			return v;
+		}
+		// Masks of the first n bytes of bytes 0-7 and of bytes 7-14, as loaded little-endian.
+		static inline uint64_t LowMask(unsigned int n)
+		{
+			return (8<=n ? ~(uint64_t)0 : (((uint64_t)1<<(8*n))-1));
+		}
+		static inline uint64_t HighMask(unsigned int n)
+		{
+			return (n<=8 ? 0 : (((n-7)>=8 ? ~(uint64_t)0 : (((uint64_t)1<<(8*(n-7)))-1))));
+		}
+		// code must have at least MAX_INSTRUCTION_LENGTH readable bytes.
+		inline bool MatchesCode(const unsigned char *p) const
+		{
+			return ((Load(p)&lowMask)==low && (Load(p+7)&highMask)==high);
+		}
+		inline void Store(const unsigned char *p,unsigned int numBytes)
+		{
+			lowMask=LowMask(numBytes);
+			highMask=HighMask(numBytes);
+			low=(Load(p)&lowMask);
+			high=(Load(p+7)&highMask);
+		}
+	};
+	enum
+	{
+		DECODE_CACHE_SIZE=4096,
+	};
+	mutable std::vector <DecodedInstruction> decodeCache;
+
 	/*! OperandValue class is an evaluated operand value, or a value to be stored to
 	    the destination described by the operand.
 	    In 80486, operand itself may not know its size if it is an address operand.

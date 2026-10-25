@@ -665,6 +665,80 @@ void TownsRender::Render8Bit(const TownsCRTC::Layer &layer,const Vec4ub palette[
 	auto ZV=layer.zoom2x.y()/2;
 
 	auto bottomY=this->hei-ZV;
+
+	// KairoTowns: a row whose VRAM is contiguous before the layer's offset translation (no
+	// horizontal or vertical scroll wrap) is drawn one VRAM pixel at a time: each is read and
+	// looked up once and written zoom times, exactly as the general loop below writes it pixel by
+	// pixel. Returns false for a row the general loop draws.
+	const auto powerOfTwoMask=[](uint32_t mask){return 0==(mask&(mask+1));};
+	const bool fastRows=1<=ZHsrc[0] && 1<=ZHsrc[1] && powerOfTwoMask(VRAMHScrollMask) &&
+	                    powerOfTwoMask(VRAMVScrollMask) && 0<=layer.originOnMonitor.x();
+	const auto drawRow=[&](unsigned char *&dst,bool transparentRow) -> bool
+	{
+		const unsigned int inLineStart=layer.VRAMHSkipBytes;
+		const unsigned int inLineLimit=layer.bytesPerLine;
+		if(true!=fastRows || inLineLimit<=inLineStart)
+		{
+			return false;
+		}
+		const int xEnd=std::min<int>(layer.sizeOnMonitor.x(),(int)this->wid-(int)layer.originOnMonitor.x());
+		if(xEnd<=0)
+		{
+			return false;
+		}
+		// The VRAM pixels the row reads: as many as its xEnd pixels take at ZHsrc[0], ZHsrc[1],
+		// ZHsrc[0], ... each, and none at or past inLineLimit.
+		const uint64_t pair=ZHsrc[0]+ZHsrc[1];
+		const uint64_t pairs=xEnd/pair,rest=xEnd%pair;
+		const uint64_t sources=2*pairs+(0==rest ? 0 : (rest<=(uint64_t)ZHsrc[0] ? 1 : 2));
+		const uint64_t span=std::min<uint64_t>(sources-1,inLineLimit-1-inLineStart);
+		const uint32_t h0=(inLineStart+VRAMOffsetHorizontal)&VRAMHScrollMask;
+		if(VRAMHScrollMask<(uint64_t)h0+span)
+		{
+			return false;
+		}
+		const uint32_t v0=(lineVRAMOffset+h0+VRAMOffsetVertical)&VRAMVScrollMask;
+		if(VRAMVScrollMask<(uint64_t)v0+span)
+		{
+			return false;
+		}
+		unsigned int address=VRAMBase+v0;
+		unsigned int inLine=inLineStart;
+		int ZHswitch=0;
+		for(int x=0; x<xEnd && inLine<inLineLimit;)
+		{
+			unsigned int VRAMAddr=address;
+			OFFSETTRANS::Trans(VRAMAddr);
+			const unsigned char col8=VRAM[VRAMAddr];
+			int n=ZHsrc[ZHswitch];
+			const bool whole=(n<=xEnd-x);
+			if(true!=whole)
+			{
+				n=xEnd-x;
+			}
+			if(true==transparentRow && 0==col8)
+			{
+				dst+=4*n;
+			}
+			else
+			{
+				for(int i=0; i<n; ++i)
+				{
+					std::memcpy(dst,&palette[col8],4);
+					dst+=4;
+				}
+			}
+			x+=n;
+			if(true!=whole)
+			{
+				break;
+			}
+			ZHswitch=1-ZHswitch;
+			++inLine;
+			++address;
+		}
+		return true;
+	};
 	if (true != transparent)
 	{
 		for (int y = 0; y < layer.sizeOnMonitor.y() && y + layer.originOnMonitor.y() <= bottomY; y += ZV)
@@ -677,6 +751,7 @@ void TownsRender::Render8Bit(const TownsCRTC::Layer &layer,const Vec4ub palette[
 			unsigned int inLineVRAMOffset = layer.VRAMHSkipBytes;
 			int ZHswitch = 0;
 			auto ZH = ZHsrc[ZHswitch];
+			if(true!=drawRow(dst,false))
 			for (int x = 0; x < layer.sizeOnMonitor.x() && x + layer.originOnMonitor.x() < this->wid && inLineVRAMOffset < layer.bytesPerLine; x++)
 			{
 				unsigned int VRAMAddr = lineVRAMOffset + ((inLineVRAMOffset + VRAMOffsetHorizontal) & VRAMHScrollMask);
@@ -716,6 +791,7 @@ void TownsRender::Render8Bit(const TownsCRTC::Layer &layer,const Vec4ub palette[
 			unsigned int inLineVRAMOffset = layer.VRAMHSkipBytes;
 			int ZHswitch = 0;
 			auto ZH = ZHsrc[ZHswitch];
+			if(true!=drawRow(dst,true))
 			for (int x = 0; x < layer.sizeOnMonitor.x() && x + layer.originOnMonitor.x() < this->wid && inLineVRAMOffset < layer.bytesPerLine; x++)
 			{
 				unsigned int VRAMAddr = lineVRAMOffset + ((inLineVRAMOffset + VRAMOffsetHorizontal) & VRAMHScrollMask);

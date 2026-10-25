@@ -80,6 +80,9 @@ int main(int argc, char **argv) {
     config.rom_dir = argv[1];
     config.cmos_file = work + "/cmos.bin";
     config.cd = argv[3];
+    // The state round trip compares two runs of the same second, so the run must repeat: CD audio
+    // read in the background and the host's clock would make them differ (Config::repeatable).
+    config.repeatable = true;
     const int frames = std::atoi(argv[4]) * 60;
 
     std::string error;

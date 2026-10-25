@@ -357,6 +357,11 @@ public:
 	{
 		auto &inst=instOp.inst;
 
+		// KairoTowns: the whole instruction and both operands start at zero. Clear() set only some
+		// fields, so fields an instruction's decode does not set (an operand it does not have) kept
+		// whatever the caller's stack held, and executing code that reads them made runs differ
+		// from launch to launch (KairoTowns#32); a cached decode would also have kept them.
+		memset(&instOp,0,sizeof(instOp));
 		inst.Clear();
 		inst.operandSize=defOperSize;
 		inst.addressSize=defAddrSize;
@@ -397,9 +402,47 @@ public:
 		// According to the sample taken 2024/06/07, burst-mode is used for roughly 99.96% of the instructions.
 		if(MAX_INSTRUCTION_LENGTH<=ptr.length)
 		{
+			// KairoTowns: the decode of code that matches a cached decode is that decode
+			// (i486DXCommon::DecodedInstruction). KAIROTOWNS_NO_DECODE_CACHE builds without it, to
+			// compare.
+		#ifndef KAIROTOWNS_NO_DECODE_CACHE
+			if(true==cpu.decodeCache.empty())
+			{
+				cpu.decodeCache.resize(DECODE_CACHE_SIZE);
+			}
+			const unsigned char *code=ptr.ptr;
+			auto &cached=cpu.decodeCache[(reinterpret_cast<uintptr_t>(code))&(DECODE_CACHE_SIZE-1)];
+			if(cached.code==code && cached.defOperSize==defOperSize && cached.defAddrSize==defAddrSize &&
+			   true==cached.MatchesCode(code))
+			{
+			#ifdef KAIROTOWNS_VERIFY_DECODE_CACHE
+				// KairoTowns: decodes the code again and stops when the cached decode differs.
+				inst.opCode=BURSTMODEFUNCCLASS::FetchInstructionByte(cpu,ptr,inst.codeAddressSize,CS,offset,mem);
+				CPUCLASS::template FetchOperandLoop<CPUCLASS,MEMCLASS,BURSTMODEFUNCCLASS>(cpu,instOp,ptr,CS,offset+1,mem,defOperSize,defAddrSize);
+				if(0!=memcmp(&instOp,&cached.instOp,sizeof(instOp)))
+				{
+					fprintf(stderr,"Decode cache differs at %p opcode %x\n",(const void *)code,inst.opCode);
+					abort();
+				}
+			#endif
+				instOp=cached.instOp;
+				return;
+			}
 			inst.opCode=BURSTMODEFUNCCLASS::FetchInstructionByte(cpu,ptr,inst.codeAddressSize,CS,offset,mem);
 			CPUCLASS::template FetchOperandLoop<CPUCLASS,MEMCLASS,BURSTMODEFUNCCLASS>(cpu,instOp,ptr,CS,offset+1,mem,defOperSize,defAddrSize);
 			// BurstModeFetchInstructionFunctions does not update ptr.length.
+			if(inst.numBytes<=MAX_INSTRUCTION_LENGTH)
+			{
+				cached.code=code;
+				cached.defOperSize=defOperSize;
+				cached.defAddrSize=defAddrSize;
+				cached.Store(code,inst.numBytes);
+				cached.instOp=instOp;
+			}
+		#else
+			inst.opCode=BURSTMODEFUNCCLASS::FetchInstructionByte(cpu,ptr,inst.codeAddressSize,CS,offset,mem);
+			CPUCLASS::template FetchOperandLoop<CPUCLASS,MEMCLASS,BURSTMODEFUNCCLASS>(cpu,instOp,ptr,CS,offset+1,mem,defOperSize,defAddrSize);
+		#endif
 		}
 		else
 		{
