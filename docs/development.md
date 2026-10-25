@@ -13,6 +13,7 @@ shared\tools\build.ps1 -Install <adb serial>
 The machine also builds for the host, without Android: build `core/` with CMake for the host. Run them under `shared\tools\run-limited.ps1`.
 
 - `boot_test <rom dir> <work dir> <disc image> <seconds>` boots a disc, checks that a save state loads back to the same picture, and starts a second machine in the same process, as the app does for its next game.
+- `frame_dump <rom dir> <work dir> <disc image> <seconds> <frames between pictures>` runs a disc and writes a picture every so many frames, printing each change of picture size; to look at what the core itself draws. Build it with `-fsanitize=address` to check the core's memory use with a game.
 - `memory_check_test <rom dir> <work dir> <seconds>` boots with no media twice, skipping the power-on memory test and then running it, and writes one picture a second of each.
 
 <!-- kairo:ui-tests -->

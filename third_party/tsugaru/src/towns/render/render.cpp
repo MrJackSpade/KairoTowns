@@ -388,17 +388,19 @@ void TownsRender::Render4Bit(
 				const unsigned char* src = VRAMTop + VRAMAddr;
 				unsigned char* dstLine = rgba.data() + 4 * (Y * this->wid + X);
 				auto dst = dstLine;
+				// KairoTowns: a zoomed VRAM byte can reach past the row's right edge; clip its pixels there.
+				const unsigned char* dstEnd = rgba.data() + 4 * (Y + 1) * this->wid;
 				for (int x = 0; x < layer.sizeOnMonitor.x() && x + layer.originOnMonitor.x() < this->wid; x += ZH[2])
 				{
 					unsigned char vrambyte = ((*src) & pixelMask);
 					unsigned char pix = (vrambyte & 0x0f);
-					for (int i = 0; i < ZH[0]; ++i)
+					for (int i = 0; i < ZH[0] && dst < dstEnd; ++i)
 					{
 						std::memcpy(dst, &palette[pix], 4);
 						dst += 4;
 					}
 					pix = (vrambyte & 0xf0) >> 4;
-					for (int i = 0; i < ZH[1]; ++i)
+					for (int i = 0; i < ZH[1] && dst < dstEnd; ++i)
 					{
 						std::memcpy(dst, &palette[pix], 4);
 						dst += 4;
@@ -438,11 +440,13 @@ void TownsRender::Render4Bit(
 				const unsigned char* src = VRAMTop + VRAMAddr;
 				unsigned char* dstLine = rgba.data() + 4 * (Y * this->wid + X);
 				auto dst = dstLine;
+				// KairoTowns: a zoomed VRAM byte can reach past the row's right edge; clip its pixels there.
+				const unsigned char* dstEnd = rgba.data() + 4 * (Y + 1) * this->wid;
 				for (int x = 0; x < layer.sizeOnMonitor.x() && x + layer.originOnMonitor.x() < this->wid; x += ZH[2])
 				{
 					unsigned char vrambyte = ((*src) & pixelMask);
 					unsigned char pix = (vrambyte & 0x0f);
-					for (int i = 0; i < ZH[0]; ++i)
+					for (int i = 0; i < ZH[0] && dst < dstEnd; ++i)
 					{
 						if (0 != pix)
 						{
@@ -451,7 +455,7 @@ void TownsRender::Render4Bit(
 						dst += 4;
 					}
 					pix = (vrambyte & 0xf0) >> 4;
-					for (int i = 0; i < ZH[1]; ++i)
+					for (int i = 0; i < ZH[1] && dst < dstEnd; ++i)
 					{
 						if (0 != pix)
 						{
@@ -539,17 +543,19 @@ void TownsRender::Render4Bit(
 				const unsigned char* src = VRAMTop + VRAMAddr;
 				unsigned char* dstLine = rgba.data() + 4 * (Y * this->wid + X);
 				auto dst = dstLine;
+				// KairoTowns: a zoomed VRAM byte can reach past the row's right edge; clip its pixels there.
+				const unsigned char* dstEnd = rgba.data() + 4 * (Y + 1) * this->wid;
 				for (int x = 0; x < layer.sizeOnMonitor.x() && x + layer.originOnMonitor.x() < this->wid; x += ZH[2])
 				{
 					unsigned char vrambyte = ((*src) & pixelMask);
 					unsigned char pix = (vrambyte & 0x0f);
-					for (int i = 0; i < ZH[0]; ++i)
+					for (int i = 0; i < ZH[0] && dst < dstEnd; ++i)
 					{
 						std::memcpy(dst, &paletteUpdate[pix], 4);
 						dst += 4;
 					}
 					pix = (vrambyte & 0xf0) >> 4;
-					for (int i = 0; i < ZH[1]; ++i)
+					for (int i = 0; i < ZH[1] && dst < dstEnd; ++i)
 					{
 						std::memcpy(dst, &paletteUpdate[pix], 4);
 						dst += 4;
@@ -600,11 +606,13 @@ void TownsRender::Render4Bit(
 				const unsigned char* src = VRAMTop + VRAMAddr;
 				unsigned char* dstLine = rgba.data() + 4 * (Y * this->wid + X);
 				auto dst = dstLine;
+				// KairoTowns: a zoomed VRAM byte can reach past the row's right edge; clip its pixels there.
+				const unsigned char* dstEnd = rgba.data() + 4 * (Y + 1) * this->wid;
 				for (int x = 0; x < layer.sizeOnMonitor.x() && x + layer.originOnMonitor.x() < this->wid; x += ZH[2])
 				{
 					unsigned char vrambyte = ((*src) & pixelMask);
 					unsigned char pix = (vrambyte & 0x0f);
-					for (int i = 0; i < ZH[0]; ++i)
+					for (int i = 0; i < ZH[0] && dst < dstEnd; ++i)
 					{
 						if (0 != pix)
 						{
@@ -613,7 +621,7 @@ void TownsRender::Render4Bit(
 						dst += 4;
 					}
 					pix = (vrambyte & 0xf0) >> 4;
-					for (int i = 0; i < ZH[1]; ++i)
+					for (int i = 0; i < ZH[1] && dst < dstEnd; ++i)
 					{
 						if (0 != pix)
 						{

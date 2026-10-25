@@ -19,6 +19,8 @@ Copied from the archive: `src/`, `LICENSE`, `readme.md`, `command.md`, `hdimage.
 
 Not copied: the desktop GUI (`gui/`, `winapp/`), guest-side programs and utilities (`dosapp/`, `townsapp/`, `util/`), test programs and disk images (`testasm/`, `testc/`, `testdata/`), `experiments/`, `symtables/`, `scripts/`, and `reminder.txt`. They are not part of the emulator library. `src/towns/townsdef/.gitignore` was removed so every copied file is tracked.
 
-There are no local changes to the Tsugaru sources.
+Local changes to the Tsugaru sources, each marked `KairoTowns:` in the code:
+
+- `src/towns/render/render.cpp`, `TownsRender::Render4Bit`: a 16-colour layer draws each VRAM byte as a run of zoomed pixels, and its row loop only checked that a run started inside the picture, so a layer whose origin and zoom put the last run across the right edge wrote past the row, and on the bottom row past the end of the picture (KairoTowns#7: Super Street Fighter II's warning screen, an 800-pixel picture with a 2x layer at x 186, crashed the app). Each run is now clipped at the row's end.
 
 The Android and host builds (`core/CMakeLists.txt`) build Tsugaru's own subdirectories without changing them. For compilers other than MSVC they force-include `<cmath>` and `<cstdlib>` into C++ files that use `std::pow` and `rand` without including them, choose the Unix or Windows file-system helper and the silent sound backend themselves, give Android an empty `pthread` target (its threads are in the C library), on Windows pass `-fms-extensions` for MSVC's `__assume`, and compile with `-fsigned-char` (Tsugaru assumes x86's signed `char`; on ARM the BIOS otherwise stops on an undefined instruction) and `-O3` in every build type, because the core only runs in real time optimized.
