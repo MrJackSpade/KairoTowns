@@ -5155,16 +5155,23 @@
   },
   "fmtowns:188310": {
    "adult": true,
+   "adultDescription": "Two adult Red Zone adventures on one disc. Sayaka is a click-through digital comic about a young woman who marries her lecherous boss, who demands sex anywhere, while the household maid photographs her and her affections drift to his son; in Miho, a nurse at her grandfather's hospital is sexually used by the doctors, including scenes with medical instruments.",
    "aliases": [
     "Sayaka + Miho"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/ba14e1f5-4893-420f-95eb-d4b381998238.png",
-   "description": "Two FairyTale stories, Sayaka and Miho, in one collection.",
+   "contentIds": [
+    "sha256-cd-v1:2f3c50f733fef3bacaab1759f254d5c671cfa88cece16070b34e35853228cc7a"
+   ],
+   "description": "Two Red Zone adventures on one disc. In Sayaka, a young woman becomes the second wife of her boss and moves into his household; in Miho, a nurse starts work at her grandfather's hospital. Both advance through simple command choices.",
    "developer": "Fairytale Red Zone",
    "launchbox": "188310",
    "mobygames": 58658,
    "publisher": "Fairytale Red Zone",
    "screenshotUrl": "https://images.launchbox-app.com/ffcbf9b3-e297-4e8e-8cf8-e1500ddc5ecf.png",
+   "sourceGroups": [
+    "fmtowns-cd:Sayaka (1994)(Ides)(Jp).zip"
+   ],
    "title": "Sayaka & Miho",
    "year": 1994
   },
@@ -6284,10 +6291,13 @@
    "title": "Hana Yori Dango 2"
   },
   "fmtowns:188795": {
+   "adult": true,
+   "adultDescription": "An adult hanafuda game with adult event illustrations: the player faces more than twenty fully voiced girl opponents, who introduce themselves and banter before each match.",
    "boxArtUrl": "https://images.launchbox-app.com/b3428b0f-3190-470b-a322-3d59d27caf75.jpg",
    "contentIds": [
     "sha256-cd-v1:6e17356b539748ee7d7d4d0c78878b52ff0cbc169a89b11da4c7946b11e987d7"
    ],
+   "description": "A hanafuda card game with a cast of more than twenty fully voiced girls as opponents, each of whom introduces herself and trades banter with the others before a match. Released on a combined disc for Windows 95, PC-9821 and FM Towns.",
    "developer": "Active Software",
    "launchbox": "188795",
    "publisher": "Active Software",
@@ -6425,10 +6435,24 @@
     "Ms. Detective File 1: Iwami Ginzan Satsujin Jiken"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/7fd488db-cdd9-4932-ba1e-9743145afb11.jpg",
-   "description": "A detective adventure set around a murder at the Iwami silver mine.",
+   "contentIds": [
+    "sha256-cd-v1:14f7a923d87627e1c3a6d50f28b543291f7daa5babc0509c1e89e3d2ee2abd52",
+    "sha256-cd-v1:80e0bf4be7953c64c9e987d7e79633353fad8ffdf859115c1c1305c13572f59e"
+   ],
+   "description": "A live-action video mystery adventure on two CDs. Detective Chisato Hiwatari takes a case to find a client's missing father at the Iwami Ginzan silver mine in Shimane, only for the man to turn up dead and the client to vanish.",
    "developer": "DataWest",
+   "diskSets": {
+    "sha256-cd-v1:14f7a923d87627e1c3a6d50f28b543291f7daa5babc0509c1e89e3d2ee2abd52": {
+     "setDisks": [
+      "sha256-cd-v1:80e0bf4be7953c64c9e987d7e79633353fad8ffdf859115c1c1305c13572f59e"
+     ]
+    }
+   },
    "launchbox": "188809",
    "publisher": "DataWest",
+   "sourceGroups": [
+    "fmtowns-cd:Ms. Detective (1991)(Datawest)(Jp).zip"
+   ],
    "title": "Ms. Detective File #1: Iwami Ginzan Satsujin Jiken",
    "year": 1992
   },
@@ -8421,24 +8445,6 @@
    "screenshotUrl": "https://images.launchbox-app.com/64dbe07f-bc53-4bab-a7dd-1e19ffa64fa7.png",
    "title": "Palamedes"
   },
-  "fmtowns:local-13ad427966": {
-   "contentIds": [
-    "sha256-cd-v1:14f7a923d87627e1c3a6d50f28b543291f7daa5babc0509c1e89e3d2ee2abd52",
-    "sha256-cd-v1:80e0bf4be7953c64c9e987d7e79633353fad8ffdf859115c1c1305c13572f59e"
-   ],
-   "diskSets": {
-    "sha256-cd-v1:14f7a923d87627e1c3a6d50f28b543291f7daa5babc0509c1e89e3d2ee2abd52": {
-     "setDisks": [
-      "sha256-cd-v1:80e0bf4be7953c64c9e987d7e79633353fad8ffdf859115c1c1305c13572f59e"
-     ]
-    }
-   },
-   "sourceGroups": [
-    "fmtowns-cd:Ms. Detective (1991)(Datawest)(Jp).zip"
-   ],
-   "title": "Ms. Detective",
-   "year": 1991
-  },
   "fmtowns:local-267735d5c7": {
    "contentIds": [
     "sha256-cd-v1:24467519a4ed1b144e11ee3d18334b6d5a8a4f53993f56254afb91a4cb15d176"
@@ -8471,16 +8477,6 @@
    ],
    "title": "Tiny Step",
    "year": 1993
-  },
-  "fmtowns:local-313ca69d87": {
-   "contentIds": [
-    "sha256-cd-v1:2f3c50f733fef3bacaab1759f254d5c671cfa88cece16070b34e35853228cc7a"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Sayaka (1994)(Ides)(Jp).zip"
-   ],
-   "title": "Sayaka",
-   "year": 1994
   },
   "fmtowns:local-3732fa1cdd": {
    "contentIds": [
@@ -8582,6 +8578,7 @@
    "contentIds": [
     "sha256-cd-v1:54251e33eb27fa961db63fdb333df18a973da152aaf6cd006e3a051b5a18021d"
    ],
+   "description": "The first issue of a CD-ROM movie magazine tied to the Japanese magazine Scholar. Clearing its mini-games unlocks full-motion video clips of gravure idols played back with DAPS video.",
    "sourceGroups": [
     "fmtowns-cd:Scholar Movie Magazine (1994)(King Video)(Jp)[+BootDisk].zip"
    ],
