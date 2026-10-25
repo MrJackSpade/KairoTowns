@@ -33,12 +33,18 @@
   },
   "fmtowns:124832": {
    "boxArtUrl": "https://images.launchbox-app.com/863e8020-1e61-4edd-9bb2-2f9bf3e5dba7.jpg",
+   "contentIds": [
+    "sha256-cd-v1:8d297bd29baaafdc9393f3030534732a387887693d70250b741d9169236da559"
+   ],
    "description": "An aerial combat game based on Sega's Strike Fighter: fly jet missions against enemy aircraft and ground targets with a CD soundtrack.",
    "developer": "CSK Research Institute",
    "launchbox": "124832",
    "mobygames": 22833,
    "publisher": "CSK Research Institute",
    "screenshotUrl": "https://images.launchbox-app.com/36062b10-d57d-4d81-8312-21a51d6a2d83.jpg",
+   "sourceGroups": [
+    "fmtowns-cd:Afterburner 3 (1992)(Sega)(Jp).zip"
+   ],
    "title": "After Burner III"
   },
   "fmtowns:124833": {
@@ -84,12 +90,6 @@
    "developer": "Alice Soft",
    "diskSets": {
     "sha256-cd-v1:7d3c103fd4a371976d08fe56191e8ede28c2418ec5fad755e3eb507bc0b78f56": {
-     "media": [
-      {
-       "contentId": "sha256-fd-v1:8e96f9c9398667e6403f58f54791e97eb0d3947017a4f8b616512a3c508e5a7f",
-       "role": "floppyA"
-      }
-     ],
      "setDisks": [
       "sha256-fd-v1:8e96f9c9398667e6403f58f54791e97eb0d3947017a4f8b616512a3c508e5a7f"
      ]
@@ -117,12 +117,18 @@
   },
   "fmtowns:124848": {
    "boxArtUrl": "https://images.launchbox-app.com/fbd783d8-08b9-46b1-a3d3-dd7624c31a79.jpg",
+   "contentIds": [
+    "sha256-cd-v1:caa63b1b86f92a41ed9ae22af666319c72d9c8fa5689dd5568a1df56fef5ea42"
+   ],
    "description": "A boxing simulation with polygon fighters: create a boxer, train him and climb the rankings through fights viewed from several angles.",
    "developer": "Distinctive Software",
    "launchbox": "124848",
    "mobygames": 162,
    "publisher": "Electronic Arts Victor",
    "screenshotUrl": "https://images.launchbox-app.com/1adfdd13-757a-4f62-9350-76b82b618530.png",
+   "sourceGroups": [
+    "fmtowns-cd:4D Sports Boxing (1991)(Distinctive Software)(Jp-En).zip"
+   ],
    "title": "4D Boxing",
    "year": 1992
   },
@@ -393,12 +399,18 @@
   },
   "fmtowns:146766": {
    "boxArtUrl": "https://images.launchbox-app.com/33832433-6ff0-4552-a057-7ac6b65e0c48.jpg",
+   "contentIds": [
+    "sha256-cd-v1:e2ab733c454c8e1a42dba2e1c2449fefbf018185714a8135eeb9d06b8f7de5ad"
+   ],
    "description": "FTL's real-time dungeon role-playing game: lead four champions through a deep dungeon, solving puzzles, casting runic spells and fighting monsters.",
    "developer": "FTL Games",
    "launchbox": "146766",
    "mobygames": 834,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/6a27c531-77e1-445c-b9ad-cf0271a89c95.png",
+   "sourceGroups": [
+    "fmtowns-cd:Dungeon Master (1987)(FTL)(Jp-En).zip"
+   ],
    "title": "Dungeon Master"
   },
   "fmtowns:146767": {
@@ -894,12 +906,18 @@
     "Record of Lodoss War: Lodoss-tou Senki: Haiiro no Majo"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/0e382736-e519-4385-a586-25a015390b12.jpg",
+   "contentIds": [
+    "sha256-cd-v1:a730dcbb73ee77ab2bdf22057169806ebf96bde9ceee8fceffc531e57a474b34"
+   ],
    "description": "A role-playing game set in the Record of Lodoss War world, with a party fighting the dark forces around the Grey Witch.",
    "developer": "Humming Bird Soft",
    "launchbox": "182660",
    "mobygames": 58636,
    "publisher": "Humming Bird Soft",
    "screenshotUrl": "https://images.launchbox-app.com/c4195eb3-e254-42ba-857c-3950e465a78a.png",
+   "sourceGroups": [
+    "fmtowns-cd:Record of Lodoss War (1991)(Humming Bird)(Jp)[+UserDisk].zip"
+   ],
    "title": "Lodoss Tou Senki: Haiiro no Majo"
   },
   "fmtowns:183538": {
@@ -1024,12 +1042,18 @@
   },
   "fmtowns:184100": {
    "boxArtUrl": "https://images.launchbox-app.com/10282d16-c55a-499b-83f0-bfd6dd9f0bba.jpg",
+   "contentIds": [
+    "sha256-cd-v1:5a4b82eb9269a11d24d52e05364596ce30a280e4b712bc8b27ca5f7504bc6f73"
+   ],
    "description": "The third Amaranth role-playing game, continuing the journey of the knight Lyann and the elf Din.",
    "developer": "Fuga System",
    "launchbox": "184100",
    "mobygames": 43694,
    "publisher": "Fuga System",
    "screenshotUrl": "https://images.launchbox-app.com/8ac116d3-d415-4a93-8448-929f1d0864aa.png",
+   "sourceGroups": [
+    "fmtowns-cd:Amaranth 3 (1994)(Fuga Systems)(Jp).zip"
+   ],
    "title": "Amaranth III"
   },
   "fmtowns:184101": {
@@ -1246,16 +1270,23 @@
   },
   "fmtowns:184143": {
    "adult": true,
+   "adultDescription": "An erotic fighting game whose only adult content is stripping: each opponent beaten in story mode rewards a picture of her girl pilot undressing. A cut-down version was sold in the US as Metal & Lace: The Battle of the Robo Babes.",
    "aliases": [
     "Ningyō Tsukai"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/5bf1337f-8a3d-4221-abbf-51af42773ae2.jpg",
-   "description": "A side-view fighting game between robot-suited girls.",
+   "contentIds": [
+    "sha256-cd-v1:3b9fa772916a7cd4d2cafa856622f7444150e62fd40c0f3262465ec3d356b473"
+   ],
+   "description": "A one-on-one fighter about remote-controlled robots called Silhouettes that duel as a near-future sport. Rika Mizuho, daughter of a robot maker sunk by its parent firm's bankruptcy, enters an underground tournament for girl pilots with Mimi, a robot modeled on herself, to win the prize money. The FM Towns version adds two characters.",
    "developer": "Forest",
    "launchbox": "184143",
    "mobygames": 53539,
    "publisher": "Forest",
    "screenshotUrl": "https://images.launchbox-app.com/35be1b7c-08cd-4144-8e06-900d4fb359f9.png",
+   "sourceGroups": [
+    "fmtowns-cd:Doll Using (19xx)(Forest)(Jp).zip"
+   ],
    "title": "Ningyou Tsukai"
   },
   "fmtowns:184144": {
@@ -1304,7 +1335,7 @@
    "description": "Origin's combat flight simulator: fly an F-16 for a mercenary squadron in a near-future world of corporate and regional wars, with cinematic story scenes.",
    "developer": "Origin Systems",
    "launchbox": "184147",
-   "mobygames": 34390,
+   "mobygames": 1365,
    "publisher": "Electronic Arts Victor",
    "screenshotUrl": "https://images.launchbox-app.com/275b59e1-de28-44b3-ad97-e5b1bd6ffed4.png",
    "title": "Strike Commander"
@@ -1406,12 +1437,18 @@
    "aliases": [
     "Ikazuchi no Senshi Raidi"
    ],
+   "contentIds": [
+    "sha256-cd-v1:89991ade8c78d48d3f4c9d1b8aa678087546b9e55d9a98ff04d86f067d3f58dc"
+   ],
    "description": "A turn-based role-playing game: the warrior Raidy comes to a village whose people have been taken by demons and descends into their tower.",
    "developer": "ZyX",
    "launchbox": "184374",
    "mobygames": 42814,
    "publisher": "ZyX",
    "screenshotUrl": "https://images.launchbox-app.com/e8deffa4-3a67-486a-b382-fc2458ec2a28.png",
+   "sourceGroups": [
+    "fmtowns-cd:Ikazuchi no Sensi Laidi (1994)(ZyX)(Jp).zip"
+   ],
    "title": "Lightning Warrior Raidy",
    "year": 1994
   },
@@ -1453,12 +1490,18 @@
     "Rejection - Denno Senshi"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/3d2528cd-4ab9-45fe-97c6-ac85a4a5c8bc.jpg",
+   "contentIds": [
+    "sha256-cd-v1:fbf6d5024591dd27268c5554488682479cee686411670a95d95e3574198001fa"
+   ],
    "description": "A role-playing game set after a meteorite destroys Tokyo, leaving a strange and hostile city.",
    "developer": "Takeru",
    "launchbox": "184377",
    "mobygames": 58654,
    "publisher": "Sur de Wave",
    "screenshotUrl": "https://images.launchbox-app.com/1659c28e-20e6-48fa-b107-d3a3a070d3de.png",
+   "sourceGroups": [
+    "fmtowns-cd:Rejection Denno Syoujyo (1992)(Takeru)(Jp).zip"
+   ],
    "title": "Rejection: Den-No Senshi"
   },
   "fmtowns:184378": {
@@ -1538,12 +1581,18 @@
     "StarCruiser II for CD-ROM"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/fa25cfa9-e7fc-48b5-b518-ce397d34df0e.jpg",
+   "contentIds": [
+    "sha256-cd-v1:b18676e07153332f92a5d70d069b91eea9bdbf8cbdce8fa4fd0c340352b40a5f"
+   ],
    "description": "The Star Cruiser sequel: a first-person 3D space game mixing exploration, combat and role-playing in a war with an alien alliance.",
    "developer": "Arsys Software",
    "launchbox": "184543",
    "mobygames": 58696,
    "publisher": "Japan Home Video",
    "screenshotUrl": "https://images.launchbox-app.com/cbdf630e-5c8a-4d95-89f2-579c30c2fcfd.png",
+   "sourceGroups": [
+    "fmtowns-cd:Star CruserII (1994)(JHV)(Jp)[+UserDisk].zip"
+   ],
    "title": "Star Cruiser II: The Odysseus Project"
   },
   "fmtowns:184544": {
@@ -1659,12 +1708,18 @@
   },
   "fmtowns:184596": {
    "boxArtUrl": "https://images.launchbox-app.com/f78c946d-0993-4bf4-9bfa-55c67f7ab242.jpg",
+   "contentIds": [
+    "sha256-cd-v1:7972de0e8283648443c803bc1db50017324cb26e67890d07264109631dd5c15a"
+   ],
    "description": "A 3D tennis simulation from the 4D Sports series, with tournaments and adjustable views.",
    "developer": "Distinctive Software",
    "launchbox": "184596",
    "mobygames": 19025,
    "publisher": "Electronic Arts Victor",
    "screenshotUrl": "https://images.launchbox-app.com/6275821c-df4b-4353-9d80-58ed286b2bda.png",
+   "sourceGroups": [
+    "fmtowns-cd:4D Sports Tennis (1993)(Victor)(Jp-En).zip"
+   ],
    "title": "4D Tennis",
    "year": 1993
   },
@@ -1913,16 +1968,25 @@
   "fmtowns:184615": {
    "boxArtUrl": "https://images.launchbox-app.com/cf0f9f15-3e96-4c55-9926-6b5aa512641f.jpg",
    "contentIds": [
+    "sha256-cd-v1:36629579ae02a2a0c1dde80b80d073207d72948cba254849ae5791cc02622c19",
     "sha256-cd-v1:f28fa3d1a80cdea74677617379c7b8a57d87d159571373871dfeef9e84147225"
    ],
    "description": "Populous with its Promised Lands expansion: the god game of shaping land and guiding followers against a rival deity, plus new worlds.",
    "developer": "Bullfrog Productions",
+   "diskSets": {
+    "sha256-cd-v1:36629579ae02a2a0c1dde80b80d073207d72948cba254849ae5791cc02622c19": {
+     "setDisks": [
+      "sha256-cd-v1:f28fa3d1a80cdea74677617379c7b8a57d87d159571373871dfeef9e84147225"
+     ]
+    }
+   },
    "launchbox": "184615",
    "mobygames": 16151,
    "publisher": "Imagineer",
    "screenshotUrl": "https://images.launchbox-app.com/20cb6d86-ddfa-4ca2-a632-2afb2e82ac31.png",
    "sourceGroups": [
-    "fmtowns-cd:Populous & The Promised Lands (1990)(Imagineer)(Jp).zip"
+    "fmtowns-cd:Populous & The Promised Lands (1990)(Imagineer)(Jp).zip",
+    "fmtowns-cd:Populous (1990)(Imagineer)(Jp-En).zip"
    ],
    "title": "Populous & The Promised Lands",
    "year": 1990
@@ -2192,12 +2256,18 @@
     "The Legend of Kyrandia: Fables and Fiends"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/2851e92e-baf4-4859-a4cb-ed11328f8a69.jpg",
+   "contentIds": [
+    "sha256-cd-v1:bdc488b4139a8b7cb8bba7e68bdbf74d332e7fcb1b7eefac341b6d5de6e7bc70"
+   ],
    "description": "Westwood's adventure: Brandon, grandson of the mystic Kallak, sets out to stop the evil jester Malcolm and restore Kyrandia.",
    "developer": "Westwood Studios",
    "launchbox": "184688",
    "mobygames": 394,
    "publisher": "StarCraft",
    "screenshotUrl": "https://images.launchbox-app.com/5b8e3998-e5c7-4cfc-8036-cae491313a14.png",
+   "sourceGroups": [
+    "fmtowns-cd:Legend of Kyrandia, The (1992)(Westwood Studios)(Jp)[+UserDisk].zip"
+   ],
    "title": "The Legend of Kyrandia"
   },
   "fmtowns:184689": {
@@ -2368,12 +2438,6 @@
    "developer": "Glodia",
    "diskSets": {
     "sha256-cd-v1:b30ea2a49e47c16dd96c3fea6ecbfa97d916ee6e35f024abcc35a7f79845f2b8": {
-     "media": [
-      {
-       "contentId": "sha256-fd-v1:5715b8b5795bd58ab126f2d9f6d07087bdf5d6f787087506a8bfbd57b077007a",
-       "role": "floppyA"
-      }
-     ],
      "setDisks": [
       "sha256-fd-v1:5715b8b5795bd58ab126f2d9f6d07087bdf5d6f787087506a8bfbd57b077007a"
      ]
@@ -2399,12 +2463,6 @@
    "developer": "Glodia",
    "diskSets": {
     "sha256-cd-v1:6746338d7ae177013cfb88fda3bbb9e46bfe32ec2311aeaed7ec38ba868be4e1": {
-     "media": [
-      {
-       "contentId": "sha256-fd-v1:434d1f630ea93bfce3d1f407f748e5432340b1e45c6bd71dd1630358cc10ba0a",
-       "role": "floppyA"
-      }
-     ],
      "setDisks": [
       "sha256-fd-v1:434d1f630ea93bfce3d1f407f748e5432340b1e45c6bd71dd1630358cc10ba0a"
      ]
@@ -2644,12 +2702,18 @@
   },
   "fmtowns:186477": {
    "boxArtUrl": "https://images.launchbox-app.com/f39d79ff-2bef-4c38-aab0-bda46a787468.jpg",
+   "contentIds": [
+    "sha256-cd-v1:7bcd0aa7a90c47201006c9d355c406246c855dc0017d0e4985cfe186e4f35c31"
+   ],
    "description": "Solve mysteries as Sherlock Holmes: read the clues, visit witnesses in full-motion video around London and name the culprit before Holmes does.",
    "developer": "ICOM Simulations",
    "launchbox": "186477",
    "mobygames": 392,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/b12c5554-7dd3-4780-aaa4-cac9b9faefa4.png",
+   "sourceGroups": [
+    "fmtowns-cd:Sherlock Holmes no Tantei Kouza (1991)(Fujitsu)(Jp-En).zip"
+   ],
    "title": "Sherlock Holmes: Consulting Detective"
   },
   "fmtowns:186730": {
@@ -2717,12 +2781,18 @@
   },
   "fmtowns:187739": {
    "boxArtUrl": "https://images.launchbox-app.com/d5587bfb-5f8c-4d85-b680-85bac1339be8.jpg",
+   "contentIds": [
+    "sha256-cd-v1:dd7826ee7a04823b6cb78cb6ee665136cf298b61ef91898f94bba56cb379ae41"
+   ],
    "description": "A quiz game based on the Japanese TV show America Oudan Ultra Quiz, answering trivia on a journey across America.",
    "developer": "Fujitsu Interactive",
    "launchbox": "187739",
    "mobygames": 58112,
    "publisher": "Fujitsu Interactive",
    "screenshotUrl": "https://images.launchbox-app.com/7c952ce9-aea1-4caa-8893-9da127b5aabf.png",
+   "sourceGroups": [
+    "fmtowns-cd:American Oudan Ultra Quizz - King of Quiz (1994)(NTV)(Jp).zip"
+   ],
    "title": "America Oudan Ultra Quiz"
   },
   "fmtowns:187740": {
@@ -2804,12 +2874,18 @@
   "fmtowns:187745": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/58692790-7480-409c-80b7-88f79185b0dc.jpg",
+   "contentIds": [
+    "sha256-cd-v1:a32d4214056a11e94c93733e6ce9594778cdf4b9f42366e2598709bad8c314eb"
+   ],
    "description": "A simulation in which a young boy named Kouichi pursues the girl he loves.",
    "developer": "Alice Soft",
    "launchbox": "187745",
    "mobygames": 45881,
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/ada00dd4-326b-46ef-b102-e206c8768eec.png",
+   "sourceGroups": [
+    "fmtowns-cd:Ayumichan Monogatari (1993)(Alice Soft)(Jp)[+BootDisk].zip"
+   ],
    "title": "Ayumi-chan Monogatari"
   },
   "fmtowns:187746": {
@@ -2832,12 +2908,18 @@
   "fmtowns:187747": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/60bd54fc-e7b6-4969-93b9-9d464173dfd1.jpg",
+   "contentIds": [
+    "sha256-cd-v1:54874f23c9ee7258d05b40251aec65beb70262c8fedcf9beab37ae177f115579"
+   ],
    "description": "Both Bacta adventures in one collection, with voice acting added.",
    "developer": "Himeya Soft",
    "launchbox": "187747",
    "mobygames": 58135,
    "publisher": "Himeya Soft",
    "screenshotUrl": "https://images.launchbox-app.com/1a592117-d582-430c-8cb2-c3832014e051.png",
+   "sourceGroups": [
+    "fmtowns-cd:Bacta1+2 (1996)(Himeya Soft)(Jp).zip"
+   ],
    "title": "Bacta 1 & 2 + Voice"
   },
   "fmtowns:187748": {
@@ -2846,12 +2928,18 @@
     "Ballade for Maria: Maria ni Sasageru Ballade"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/ae5bc26b-a6fa-4749-bb54-9f664675a6fe.jpg",
+   "contentIds": [
+    "sha256-cd-v1:133636e79b96715cc41bd7132507df4fd09356f433d274bfe7ce0ff0a02146ea"
+   ],
    "description": "A horror mystery adventure: New York detective Jake Spikes investigates a series of brutal murders.",
    "developer": "FairyTale",
    "launchbox": "187748",
    "mobygames": 19585,
    "publisher": "FairyTale",
    "screenshotUrl": "https://images.launchbox-app.com/517e0f52-a6bd-45ca-8b5b-df265d978c05.png",
+   "sourceGroups": [
+    "fmtowns-cd:Maria ni Sasageru Ballade (1995)(Fairytale)(Jp)[+UserDisk].zip"
+   ],
    "title": "Ballade for Maria"
   },
   "fmtowns:187749": {
@@ -3508,12 +3596,18 @@
     "Gou II: Towns Special"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/2c3e3640-092d-47ca-ad15-93a5b0d4080a.jpg",
+   "contentIds": [
+    "sha256-cd-v1:1e72ede82590e986cf0db070a0a8d032f218998f21d6d510eade6c9549e544a4"
+   ],
    "description": "Wolf Team's turn-based strategy game of World War II in Asia.",
    "developer": "Wolf Team",
    "launchbox": "188133",
    "mobygames": 58350,
    "publisher": "Wolf Team",
    "screenshotUrl": "https://images.launchbox-app.com/77b03f08-a985-4b23-8bba-8521197d1e56.png",
+   "sourceGroups": [
+    "fmtowns-cd:GohII Towns Special  (1993)(Wolf Team)(Jp)[+SystemDisk].zip"
+   ],
    "title": "Goh II"
   },
   "fmtowns:188134": {
@@ -4027,12 +4121,18 @@
   },
   "fmtowns:188191": {
    "boxArtUrl": "https://images.launchbox-app.com/1c98e1c6-5810-4800-8ff5-4712d53b4ab7.jpg",
+   "contentIds": [
+    "sha256-cd-v1:42c4bf50a0d3f20382168b842d2d83705ee7ed941520e45c93e7d442c62158a4"
+   ],
    "description": "ArtDink's World War II strategy game of 1944 armored warfare, fought on fictional maps without fixed sides.",
    "developer": "ArtDink",
    "launchbox": "188191",
    "mobygames": 58487,
    "publisher": "ArtDink",
    "screenshotUrl": "https://images.launchbox-app.com/8e117c55-83ea-4ad1-9c22-51bd9e15b051.png",
+   "sourceGroups": [
+    "fmtowns-cd:Kikou Shidan (1990)(Artdink)(Jp).zip"
+   ],
    "title": "Kikou Shidan: Panzer Division"
   },
   "fmtowns:188193": {
@@ -4535,12 +4635,18 @@
   },
   "fmtowns:188269": {
    "boxArtUrl": "https://images.launchbox-app.com/493429b0-dc86-401d-b28e-4a6063a1a18e.jpg",
+   "contentIds": [
+    "sha256-cd-v1:f63a1250bfab7eebe819a35cf66ace146b60be23edfd397a0bd25f3af0c0d4b3"
+   ],
    "description": "A rally driving game licensed from the RAC Rally: race stages across Britain in varying conditions.",
    "developer": "Pixelkraft",
    "launchbox": "188269",
    "mobygames": 27962,
    "publisher": "Victor Entertainment",
    "screenshotUrl": "https://images.launchbox-app.com/131b8ea6-48b1-421f-b054-d1d530d714e6.png",
+   "sourceGroups": [
+    "fmtowns-cd:RAC Rally (1995)(Victor)(En).zip"
+   ],
    "title": "Network Q RAC Rally",
    "year": 1995
   },
@@ -4730,12 +4836,18 @@
   },
   "fmtowns:188288": {
    "boxArtUrl": "https://images.launchbox-app.com/c2102f51-c822-4171-a678-512e9aa69168.jpg",
+   "contentIds": [
+    "sha256-cd-v1:31ba0529594ae2f0aa40734c643487ceb8044badb801362f2d073e3ea1634d4d"
+   ],
    "description": "The fourth Psychic Detective adventure: a mysterious woman in mourning comes to Katsuya Furuyagi's office.",
    "developer": "Data West",
    "launchbox": "188288",
    "mobygames": 54912,
    "publisher": "Data West",
    "screenshotUrl": "https://images.launchbox-app.com/9d5943d8-a7e8-4ab4-9760-a4340e52cf93.png",
+   "sourceGroups": [
+    "fmtowns-cd:Psychic Detective Vol. 4 - Olgel (1991)(Datawest)(Jp)[+UserDisk].zip"
+   ],
    "title": "Psychic Detective Series Vol. 4: Orgel",
    "year": 1991
   },
@@ -4752,11 +4864,17 @@
   },
   "fmtowns:188290": {
    "boxArtUrl": "https://images.launchbox-app.com/0b0a2b5f-7c18-4710-8a67-c4f3ec3c1c35.jpg",
+   "contentIds": [
+    "sha256-cd-v1:fccdbb152bc432514f1bf20f85d256cfa2521a9d185ce2bf00f7740346a161d4"
+   ],
    "description": "The first part of the Psychic Detective finale: months after Nightmare, Furuyagi learns that Aya Shingonji is alive.",
    "developer": "DataWest",
    "launchbox": "188290",
    "publisher": "DataWest",
    "screenshotUrl": "https://images.launchbox-app.com/42c14f0f-05d9-4eaa-8a41-02e4c68b888a.png",
+   "sourceGroups": [
+    "fmtowns-cd:Psychic Detective Final - Solitude Jyoukan (1992)(Datawest)(Jp)[+UserDisk].zip"
+   ],
    "title": "Psychic Detective Series Final: Solitude: Joukan",
    "year": 1993
   },
@@ -4776,12 +4894,18 @@
     "The Queen of Duelist"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/0244c5f7-72c6-43db-b00e-3108ae35cd46.jpg",
+   "contentIds": [
+    "sha256-cd-v1:15ac36a907b02c0dccaeb01b0e0341eb0dc739c8353f2ab036b88588c737a5e0"
+   ],
    "description": "A one-on-one fighting game with an all-female cast.",
    "developer": "Agumix",
    "launchbox": "188292",
    "mobygames": 58619,
    "publisher": "Agumix",
    "screenshotUrl": "https://images.launchbox-app.com/5d230e20-aa2e-4a38-ba96-bad95414f9a2.png",
+   "sourceGroups": [
+    "fmtowns-cd:Queen Of Duellist, The (199x)(Agumix)(Jp-En)[+UserDisk].zip"
+   ],
    "title": "The Queen of Duellist"
   },
   "fmtowns:188293": {
@@ -4851,12 +4975,18 @@
   "fmtowns:188298": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/6251517e-6064-4edd-b2da-11e020776775.jpg",
+   "contentIds": [
+    "sha256-cd-v1:e887705246c807e73c717c2e0f111c361ddad4ba66a3cc85ab5bd080f5813f2d"
+   ],
    "description": "The third Rance: broke again, Rance takes on the invasion of the kingdom of Leazas.",
    "developer": "Alice Soft",
    "launchbox": "188298",
    "mobygames": 18708,
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/1e31670a-f68c-4d22-8f0a-2da3c954a7dd.png",
+   "sourceGroups": [
+    "fmtowns-cd:Rance 3 v1.21 (Adult)(1991)(Alice Soft)(Jp).zip"
+   ],
    "title": "Rance III: Leazas Kanraku",
    "year": 1992
   },
@@ -4871,12 +5001,6 @@
    "developer": "Alice Soft",
    "diskSets": {
     "sha256-cd-v1:e955fc83d89187fe2f7990f63fd3cb2b1765619f7f7716d11d2c2d620a6b17cb": {
-     "media": [
-      {
-       "contentId": "sha256-fd-v1:7ec99c1be2c10d1bf2f333bb1ab3f50c52497cdf6057a9559b14659673a0d8d3",
-       "role": "floppyA"
-      }
-     ],
      "setDisks": [
       "sha256-fd-v1:7ec99c1be2c10d1bf2f333bb1ab3f50c52497cdf6057a9559b14659673a0d8d3"
      ]
@@ -4897,12 +5021,18 @@
     "AIV: A Ressha de Ikou 4"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/618a66b3-e90d-45a4-bfea-03e58864ceab.jpg",
-   "description": "The fourth A-Train: build railways and grow a city, now with more detailed management and graphics.",
+   "contentIds": [
+    "sha256-cd-v1:0440adf3a2996d47051d62bd435ef547c4261c7fecbbdf2cca1af94c32612205"
+   ],
+   "description": "Artdink's railway and city-building simulation: lay track, run trains and buy and build property to grow a city around your railway company, while trading on the stock market.",
    "developer": "ArtDink",
    "launchbox": "188300",
    "mobygames": 45784,
    "publisher": "ArtDink",
    "screenshotUrl": "https://images.launchbox-app.com/a163b406-4776-4d7d-b1c3-0e59e1efa5ee.png",
+   "sourceGroups": [
+    "fmtowns-cd:Take the A-Train IV (1993)(Artdink)(Jp)[+SystemDisk].zip"
+   ],
    "title": "A Ressha de Ikou IV"
   },
   "fmtowns:188301": {
@@ -4911,16 +5041,25 @@
    ],
    "boxArtUrl": "https://images.launchbox-app.com/36f40d65-c419-43d3-92a5-b8d380602945.jpg",
    "contentIds": [
+    "sha256-cd-v1:12487e01394f04017b8ce13f424fef930d404167e3a7f0fadc85b8cd9ff056ba",
     "sha256-cd-v1:af5eeb568bb34f3e2ee001f6fd1e500281bac722f90d3fde4aa2030bd8272a93"
    ],
    "description": "A space strategy game of empire building across a galaxy map.",
    "developer": "Cosmos Computer",
+   "diskSets": {
+    "sha256-cd-v1:12487e01394f04017b8ce13f424fef930d404167e3a7f0fadc85b8cd9ff056ba": {
+     "setDisks": [
+      "sha256-cd-v1:af5eeb568bb34f3e2ee001f6fd1e500281bac722f90d3fde4aa2030bd8272a93"
+     ]
+    }
+   },
    "launchbox": "188301",
    "mobygames": 58649,
    "publisher": "Cosmos Computer",
    "screenshotUrl": "https://images.launchbox-app.com/c6a78008-e005-496f-9566-4f610cf09f05.png",
    "sourceGroups": [
-    "fmtowns-cd:Galaxy Wars - Regional Power II (1992)(Cosmos)(Jp).zip"
+    "fmtowns-cd:Galaxy Wars - Regional Power II (1992)(Cosmos)(Jp).zip",
+    "fmtowns-cd:Regional Power2 (1992)(Cosmos)(Jp).zip"
    ],
    "title": "Galaxy Wars: Regional Power II"
   },
@@ -5283,12 +5422,18 @@
   "fmtowns:188329": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/25a38c5b-c6d1-45f8-b246-7a5c3da6d4da.jpg",
+   "contentIds": [
+    "sha256-cd-v1:bd28476a858db7ce18597656b2c0cb43c03d1eb3f115e8887f07b274d6e08af8"
+   ],
    "description": "A mahjong compilation of two arcade Super Real Mahjong games.",
    "developer": "SETA",
    "launchbox": "188329",
    "mobygames": 55298,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/98bac0ab-895c-4896-8968-c69ac7f8c8ea.png",
+   "sourceGroups": [
+    "fmtowns-cd:Super Real Mahjong PII+PIII (Jp)(1992)(Ving).zip"
+   ],
    "title": "Super Real Mahjong: PII & PIII"
   },
   "fmtowns:188330": {
@@ -5414,12 +5559,6 @@
    "developer": "Alice Soft",
    "diskSets": {
     "sha256-cd-v1:32607fe8ef26be96393bcc8f6fd0a71544cc3718bf6b6d5d7cfd10de3818b034": {
-     "media": [
-      {
-       "contentId": "sha256-fd-v1:ab7422dc8e69e7ca75e0cc7499388dc6579749c37891e19c1d26eab2f08b12a5",
-       "role": "floppyA"
-      }
-     ],
      "setDisks": [
       "sha256-fd-v1:ab7422dc8e69e7ca75e0cc7499388dc6579749c37891e19c1d26eab2f08b12a5"
      ]
@@ -5674,12 +5813,18 @@
   },
   "fmtowns:188355": {
    "boxArtUrl": "https://images.launchbox-app.com/c4635440-aa47-4879-aeac-efd515ce9fe6.jpg",
+   "contentIds": [
+    "sha256-cd-v1:61e2281aeca5522d48e9e1e96a079d3544dd5abcbf819395169ceed859c666e5"
+   ],
    "description": "Wolf Team's strategy game of Japan's Warring States era, an enhanced FM Towns edition of the Zan series.",
    "developer": "Wolf Team",
    "launchbox": "188355",
    "mobygames": 58041,
    "publisher": "Wolf Team",
    "screenshotUrl": "https://images.launchbox-app.com/ecbcb87a-2395-40fb-957f-81337a447e4f.png",
+   "sourceGroups": [
+    "fmtowns-cd:Zan 2 (19xx)(-)(Jp)[+UserDisk].zip"
+   ],
    "title": "Zan II: Towns Special"
   },
   "fmtowns:188356": {
@@ -5718,12 +5863,18 @@
     "Zen Nihon Bishoujo Mahjong Senshuken Taikai: Heart de Ron!!"
    ],
    "boxArtUrl": "https://images.launchbox-app.com/250a321e-4d7e-4642-8e92-2a7f0e244ab3.jpg",
+   "contentIds": [
+    "sha256-cd-v1:9d57106731b42e8515cea205ad76dbfcdf99dd45e2ab05ed5f86fae4845972d7"
+   ],
    "description": "A story-driven Mahjong game in which you enter an all-Japan Mahjong championship, starting at a Mahjong theme park and meeting each one-on-one opponent along the way.",
    "developer": "D.O.",
    "launchbox": "188358",
    "mobygames": 58411,
    "publisher": "D.O.",
    "screenshotUrl": "https://images.launchbox-app.com/a3d8c7dc-da9a-4636-9f13-fdcf069a2096.png",
+   "sourceGroups": [
+    "fmtowns-cd:Heart de Ron (1995)(D.O.)(Jp).zip"
+   ],
    "title": "Zen Nihon Bishojo Mahjong Seshuken Taikai: Heart de Ron!"
   },
   "fmtowns:188359": {
@@ -5763,12 +5914,18 @@
   },
   "fmtowns:188362": {
    "boxArtUrl": "https://images.launchbox-app.com/9e296067-7d84-4b08-8e75-ae66f8994cb3.jpg",
+   "contentIds": [
+    "sha256-cd-v1:cdd3095b537666eddedcd121dfc801a3a836816b18a77498a1955b150eea3303"
+   ],
    "description": "Toaplan's vertical shooter in a biplane: fly over World War II battlefields, destroying tanks, ships and planes with upgradable guns and bombs.",
    "developer": "ToaPlan",
    "launchbox": "188362",
    "mobygames": 1313,
    "publisher": "Ving",
    "screenshotUrl": "https://images.launchbox-app.com/0a73ce09-49de-4ca2-9674-8d163a61dbb7.png",
+   "sourceGroups": [
+    "fmtowns-cd:Flying Shark (1993)(Ving)(Jp-En).zip"
+   ],
    "title": "Hishouzame: Flying Shark"
   },
   "fmtowns:188363": {
@@ -5935,6 +6092,7 @@
   },
   "fmtowns:188775": {
    "adult": true,
+   "adultDescription": "A photo disc of 100 hardcore nude photographs of models, subtitled Sexy Shooting, the first volume of Transpegasus's Digital Pinup Girls series.",
    "aliases": [
     "Digital Pinup Girls Vol. 1: Sexy Shooting"
    ],
@@ -6127,19 +6285,31 @@
   },
   "fmtowns:188795": {
    "boxArtUrl": "https://images.launchbox-app.com/b3428b0f-3190-470b-a322-3d59d27caf75.jpg",
+   "contentIds": [
+    "sha256-cd-v1:6e17356b539748ee7d7d4d0c78878b52ff0cbc169a89b11da4c7946b11e987d7"
+   ],
    "developer": "Active Software",
    "launchbox": "188795",
    "publisher": "Active Software",
+   "sourceGroups": [
+    "fmtowns-cd:Hanahuda de Pon! (1996)(Active)(Jp)[+BootDisk].zip"
+   ],
    "title": "Hanafuda de Pon!"
   },
   "fmtowns:188796": {
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/07d59c7b-ae56-42e9-8678-b82b702c40fe.jpg",
+   "contentIds": [
+    "sha256-cd-v1:0465a2a4ea345e0ff1472be9bbf71b8f42ff3e6fd399d762b7f3282ae11cfb02"
+   ],
    "description": "The first three Hacchake Ayayo-san visual novels in one collection.",
    "developer": "HARD",
    "launchbox": "188796",
    "mobygames": 58122,
    "publisher": "HARD",
+   "sourceGroups": [
+    "fmtowns-cd:A 1-2-3 (19xx)(-)(Jp).zip"
+   ],
    "title": "Hatchake Ayayo-san 1-2-3",
    "year": 1993
   },
@@ -8164,6 +8334,7 @@
    "contentIds": [
     "sha256-cd-v1:dec1c842a0181acf6f5b393b14c942ce003951fcd8c61e620af4e3ef330b5e58"
    ],
+   "description": "A reference CD-ROM from Datt Japan holding a database on the history of the manga weekly Shonen Magazine, released in November 1992.",
    "developer": "Datt Japan",
    "launchbox": "456064",
    "publisher": "Datt Japan",
@@ -8250,26 +8421,6 @@
    "screenshotUrl": "https://images.launchbox-app.com/64dbe07f-bc53-4bab-a7dd-1e19ffa64fa7.png",
    "title": "Palamedes"
   },
-  "fmtowns:local-0938fc300a": {
-   "contentIds": [
-    "sha256-cd-v1:61e2281aeca5522d48e9e1e96a079d3544dd5abcbf819395169ceed859c666e5"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Zan 2 (19xx)(-)(Jp)[+UserDisk].zip"
-   ],
-   "title": "Zan 2"
-  },
-  "fmtowns:local-0bd2453e3a": {
-   "contentIds": [
-    "sha256-cd-v1:0440adf3a2996d47051d62bd435ef547c4261c7fecbbdf2cca1af94c32612205"
-   ],
-   "description": "Artdink's railway and city-building simulation: lay track, run trains and buy and build property to grow a city around your railway company, while trading on the stock market.",
-   "sourceGroups": [
-    "fmtowns-cd:Take the A-Train IV (1993)(Artdink)(Jp)[+SystemDisk].zip"
-   ],
-   "title": "Take the A-Train IV",
-   "year": 1993
-  },
   "fmtowns:local-13ad427966": {
    "contentIds": [
     "sha256-cd-v1:14f7a923d87627e1c3a6d50f28b543291f7daa5babc0509c1e89e3d2ee2abd52",
@@ -8309,17 +8460,6 @@
    ],
    "title": "Psychic Detective Vol. 2 - Memories",
    "year": 1989
-  },
-  "fmtowns:local-2d631fe112": {
-   "contentIds": [
-    "sha256-cd-v1:7972de0e8283648443c803bc1db50017324cb26e67890d07264109631dd5c15a"
-   ],
-   "description": "A 3D polygon tennis game with movable camera views, exhibitions and tournaments.",
-   "sourceGroups": [
-    "fmtowns-cd:4D Sports Tennis (1993)(Victor)(Jp-En).zip"
-   ],
-   "title": "4D Sports Tennis",
-   "year": 1993
   },
   "fmtowns:local-30bd78c447": {
    "contentIds": [
@@ -8363,17 +8503,6 @@
    "title": "Psychic Detective Final - Solitude Gekan",
    "year": 1993
   },
-  "fmtowns:local-400e19efbc": {
-   "contentIds": [
-    "sha256-cd-v1:133636e79b96715cc41bd7132507df4fd09356f433d274bfe7ce0ff0a02146ea"
-   ],
-   "description": "A detective thriller: New York detective Jake Snipes searches for a missing actress while a serial killer working through American cities reaches his own.",
-   "sourceGroups": [
-    "fmtowns-cd:Maria ni Sasageru Ballade (1995)(Fairytale)(Jp)[+UserDisk].zip"
-   ],
-   "title": "Maria ni Sasageru Ballade",
-   "year": 1995
-  },
   "fmtowns:local-42028eb511": {
    "contentIds": [
     "sha256-cd-v1:7b5dcfab32fcd8abceb01a45fd554dc0f0781101df0e309e32c4269e09c4196f"
@@ -8383,17 +8512,6 @@
    ],
    "title": "Doki Doki Disk CDban Vol.1",
    "year": 1994
-  },
-  "fmtowns:local-43c3f59fdf": {
-   "contentIds": [
-    "sha256-cd-v1:caa63b1b86f92a41ed9ae22af666319c72d9c8fa5689dd5568a1df56fef5ea42"
-   ],
-   "description": "A 3D polygon boxing game: create a boxer, train him and fight up the rankings toward the title.",
-   "sourceGroups": [
-    "fmtowns-cd:4D Sports Boxing (1991)(Distinctive Software)(Jp-En).zip"
-   ],
-   "title": "4D Sports Boxing",
-   "year": 1991
   },
   "fmtowns:local-49fbb614d7": {
    "contentIds": [
@@ -8405,17 +8523,6 @@
    ],
    "title": "Wing Commander II and Special Operations",
    "year": 1991
-  },
-  "fmtowns:local-4b74dd94e3": {
-   "contentIds": [
-    "sha256-cd-v1:2c539ba81bff13c39bac86355b504d979646114d1ef248ac36c56bff8a031496"
-   ],
-   "description": "A 3D stunt-car racing game, known in English as Stunts: race tracks of loops, jumps and corkscrews, build your own with the track editor, and watch replays from any camera.",
-   "sourceGroups": [
-    "fmtowns-cd:4D Sports Driving (1992)(Distinctive Software)(Jp-En).zip"
-   ],
-   "title": "4D Sports Driving",
-   "year": 1992
   },
   "fmtowns:local-53e11de06c": {
    "contentIds": [
@@ -8460,98 +8567,16 @@
    "title": "Yuwaku",
    "year": 1996
   },
-  "fmtowns:local-5709dae663": {
-   "contentIds": [
-    "sha256-cd-v1:5a4b82eb9269a11d24d52e05364596ce30a280e4b712bc8b27ca5f7504bc6f73"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Amaranth 3 (1994)(Fuga Systems)(Jp).zip"
-   ],
-   "title": "Amaranth 3",
-   "year": 1994
-  },
-  "fmtowns:local-626679af6b": {
-   "contentIds": [
-    "sha256-cd-v1:08efd014777e2cd871dba4932e6207227bdec9d31688a0595bcda519984b722d"
-   ],
-   "description": "Sega's arcade flight shooter: fly an F-14 through enemy lines with cannon and lock-on missiles, rolling to shake off missiles, over 23 stages with ground attacks and mid-air refueling.",
-   "sourceGroups": [
-    "fmtowns-cd:Afterburner 2 (1989)(Sega)(Jp-En).zip"
-   ],
-   "title": "Afterburner 2",
-   "year": 1989
-  },
-  "fmtowns:local-7123af5d69": {
-   "contentIds": [
-    "sha256-cd-v1:a32d4214056a11e94c93733e6ce9594778cdf4b9f42366e2598709bad8c314eb"
-   ],
-   "description": "A school romance: Kouichi loves Ayumi Kawai, the most beautiful girl in school, and one day she says she loves him too.",
-   "sourceGroups": [
-    "fmtowns-cd:Ayumichan Monogatari (1993)(Alice Soft)(Jp)[+BootDisk].zip"
-   ],
-   "title": "Ayumichan Monogatari",
-   "year": 1993
-  },
-  "fmtowns:local-763849a33b": {
-   "contentIds": [
-    "sha256-cd-v1:f63a1250bfab7eebe819a35cf66ace146b60be23edfd397a0bd25f3af0c0d4b3"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:RAC Rally (1995)(Victor)(En).zip"
-   ],
-   "title": "RAC Rally",
-   "year": 1995
-  },
-  "fmtowns:local-7a7401f57c": {
-   "contentIds": [
-    "sha256-cd-v1:fccdbb152bc432514f1bf20f85d256cfa2521a9d185ce2bf00f7740346a161d4"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Psychic Detective Final - Solitude Jyoukan (1992)(Datawest)(Jp)[+UserDisk].zip"
-   ],
-   "title": "Psychic Detective Final - Solitude Jyoukan",
-   "year": 1992
-  },
-  "fmtowns:local-7c4f343622": {
-   "contentIds": [
-    "sha256-cd-v1:b18676e07153332f92a5d70d069b91eea9bdbf8cbdce8fa4fd0c340352b40a5f"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Star CruserII (1994)(JHV)(Jp)[+UserDisk].zip"
-   ],
-   "title": "Star CruserII",
-   "year": 1994
-  },
-  "fmtowns:local-7db2d16eb3": {
-   "contentIds": [
-    "sha256-cd-v1:bdc488b4139a8b7cb8bba7e68bdbf74d332e7fcb1b7eefac341b6d5de6e7bc70"
-   ],
-   "description": "Westwood's point-and-click fantasy adventure: Brandon, grandson of the royal mystic Kallak, sets out to stop the mad jester Malcolm, who is draining Kyrandia's magic.",
-   "sourceGroups": [
-    "fmtowns-cd:Legend of Kyrandia, The (1992)(Westwood Studios)(Jp)[+UserDisk].zip"
-   ],
-   "title": "The Legend of Kyrandia",
-   "year": 1992
-  },
   "fmtowns:local-7f68699243": {
    "contentIds": [
     "sha256-cd-v1:6f64e9d7a95afe025789c24333ddbb53bd286ed30c7f40c7a04a3cfee98736b3"
    ],
+   "description": "A Hyakunin Isshu program for the classic anthology of one hundred waka poems, using the FM Towns CD to read the verses aloud in digitized voice. Made by Fujitsu Oita Software Laboratory for the system's 1989 launch year.",
    "sourceGroups": [
     "fmtowns-cd:Towns Hyakunin Issyu (1989)(Fujitsu)(Jp).zip"
    ],
    "title": "Towns Hyakunin Issyu",
    "year": 1989
-  },
-  "fmtowns:local-8075d1baf3": {
-   "contentIds": [
-    "sha256-cd-v1:12487e01394f04017b8ce13f424fef930d404167e3a7f0fadc85b8cd9ff056ba"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Regional Power2 (1992)(Cosmos)(Jp).zip"
-   ],
-   "title": "Regional Power2",
-   "year": 1992
   },
   "fmtowns:local-838bd22cc7": {
    "contentIds": [
@@ -8562,45 +8587,6 @@
    ],
    "title": "Scholar Movie Magazine",
    "year": 1994
-  },
-  "fmtowns:local-844d210dfa": {
-   "contentIds": [
-    "sha256-cd-v1:54874f23c9ee7258d05b40251aec65beb70262c8fedcf9beab37ae177f115579"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Bacta1+2 (1996)(Himeya Soft)(Jp).zip"
-   ],
-   "title": "Bacta1+2",
-   "year": 1996
-  },
-  "fmtowns:local-89f7f5d2cb": {
-   "contentIds": [
-    "sha256-cd-v1:0465a2a4ea345e0ff1472be9bbf71b8f42ff3e6fd399d762b7f3282ae11cfb02"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:A 1-2-3 (19xx)(-)(Jp).zip"
-   ],
-   "title": "A 1-2-3"
-  },
-  "fmtowns:local-8c464fb0f7": {
-   "contentIds": [
-    "sha256-cd-v1:89991ade8c78d48d3f4c9d1b8aa678087546b9e55d9a98ff04d86f067d3f58dc"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Ikazuchi no Sensi Laidi (1994)(ZyX)(Jp).zip"
-   ],
-   "title": "Ikazuchi no Sensi Laidi",
-   "year": 1994
-  },
-  "fmtowns:local-92a214634d": {
-   "contentIds": [
-    "sha256-cd-v1:a730dcbb73ee77ab2bdf22057169806ebf96bde9ceee8fceffc531e57a474b34"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Record of Lodoss War (1991)(Humming Bird)(Jp)[+UserDisk].zip"
-   ],
-   "title": "Record of Lodoss War",
-   "year": 1991
   },
   "fmtowns:local-957fd52ad3": {
    "contentIds": [
@@ -8613,41 +8599,11 @@
    "title": "The Legend of Kyrandia 2",
    "year": 1993
   },
-  "fmtowns:local-993e3722f5": {
-   "contentIds": [
-    "sha256-cd-v1:31ba0529594ae2f0aa40734c643487ceb8044badb801362f2d073e3ea1634d4d"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Psychic Detective Vol. 4 - Olgel (1991)(Datawest)(Jp)[+UserDisk].zip"
-   ],
-   "title": "Psychic Detective Vol. 4 - Olgel",
-   "year": 1991
-  },
-  "fmtowns:local-9dcd699f97": {
-   "contentIds": [
-    "sha256-cd-v1:e887705246c807e73c717c2e0f111c361ddad4ba66a3cc85ab5bd080f5813f2d"
-   ],
-   "description": "The third Rance game: the kingdom of Leazas falls to the Helman army and its demon allies, and the swordsman Rance fights to win it back, with his companion Sill.",
-   "sourceGroups": [
-    "fmtowns-cd:Rance 3 v1.21 (Adult)(1991)(Alice Soft)(Jp).zip"
-   ],
-   "title": "Rance 3 v1.21",
-   "year": 1991
-  },
-  "fmtowns:local-a48d70589b": {
-   "contentIds": [
-    "sha256-cd-v1:fbf6d5024591dd27268c5554488682479cee686411670a95d95e3574198001fa"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Rejection Denno Syoujyo (1992)(Takeru)(Jp).zip"
-   ],
-   "title": "Rejection Denno Syoujyo",
-   "year": 1992
-  },
   "fmtowns:local-a5c952c7ff": {
    "contentIds": [
     "sha256-cd-v1:0d425f80dd364135938c5d64d555c02b64907c29b2a919f16cf65f259dbc83a1"
    ],
+   "description": "A dating simulation built from live-action photographs, subtitled 'Kore de Kanojo wa Boku no Mono!' (Now She's Mine!), packaged with a guide to 350 real date spots.",
    "sourceGroups": [
     "fmtowns-cd:Date,The (1990)(Jamp)(Jp).zip"
    ],
@@ -8669,37 +8625,20 @@
    "contentIds": [
     "sha256-cd-v1:94991394f8bf8cb4b8bc67b566419ea2f4460bdacd69e6e8b41861111522b664"
    ],
+   "description": "Fujitsu's showcase disc of five overseas developers on the 486 FM Towns: Argonaut's full-screen 3D action-adventure and software-rendering demos, AnimaTek's fish-breeding evolution sim El-Fish, a Macromedia Director movie player, a Xatrix full-motion-video adventure, and Psygnosis's fractal game Scavenger 4.",
    "sourceGroups": [
     "fmtowns-cd:FMTOWNS Super Technology Demo 1993 (Demo)(1993)(Fujitsu)[Game Previews].zip"
    ],
    "title": "FMTOWNS Super Technology Demo 1993",
    "year": 1993
   },
-  "fmtowns:local-a9d2e85927": {
-   "contentIds": [
-    "sha256-cd-v1:9d57106731b42e8515cea205ad76dbfcdf99dd45e2ab05ed5f86fae4845972d7"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Heart de Ron (1995)(D.O.)(Jp).zip"
-   ],
-   "title": "Heart de Ron",
-   "year": 1995
-  },
-  "fmtowns:local-b12464f0cc": {
-   "contentIds": [
-    "sha256-cd-v1:36629579ae02a2a0c1dde80b80d073207d72948cba254849ae5791cc02622c19"
-   ],
-   "description": "Peter Molyneux's god game: raise and lower the land so your followers can settle and multiply, then use earthquakes, swamps, floods and volcanoes against a rival god's people.",
-   "sourceGroups": [
-    "fmtowns-cd:Populous (1990)(Imagineer)(Jp-En).zip"
-   ],
-   "title": "Populous",
-   "year": 1990
-  },
   "fmtowns:local-b1b187cf00": {
+   "adult": true,
+   "adultDescription": "An erotic adventure: the command menu includes an assault option that leads to sex scenes with the maids and other girls living in the mansion, though pushing it too far ends the game, and the trespassing hero ends up winning Sayoko.",
    "contentIds": [
     "sha256-cd-v1:51455c4e01117c92c9f406dccdb7b26f8979fd10122cb11c09791227e3ad36a5"
    ],
+   "description": "Smitten with Sayoko, a rich girl he glimpsed among falling cherry blossoms, Minoru uses a grappling hook to climb into her mansion and return the pendant she dropped. Verb-and-noun command menus drive the search of its many rooms, where you eavesdrop on the maids and collect items, with a map showing your position. Alice Soft's first release, out the same day as Rance.",
    "diskSets": {
     "sha256-cd-v1:51455c4e01117c92c9f406dccdb7b26f8979fd10122cb11c09791227e3ad36a5": {
      "media": [
@@ -8718,27 +8657,6 @@
    ],
    "title": "Intruder",
    "year": 1989
-  },
-  "fmtowns:local-b8594b27f4": {
-   "contentIds": [
-    "sha256-cd-v1:1e72ede82590e986cf0db070a0a8d032f218998f21d6d510eade6c9549e544a4"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:GohII Towns Special  (1993)(Wolf Team)(Jp)[+SystemDisk].zip"
-   ],
-   "title": "GohII Towns Special",
-   "year": 1993
-  },
-  "fmtowns:local-c73e2211a8": {
-   "contentIds": [
-    "sha256-cd-v1:e2ab733c454c8e1a42dba2e1c2449fefbf018185714a8135eeb9d06b8f7de5ad"
-   ],
-   "description": "FTL's real-time dungeon role-playing game: lead a party through the dungeon below Mount Anaias to recover the Firestaff before Lord Chaos does, with monsters that never wait and food and water to keep up.",
-   "sourceGroups": [
-    "fmtowns-cd:Dungeon Master (1987)(FTL)(Jp-En).zip"
-   ],
-   "title": "Dungeon Master",
-   "year": 1987
   },
   "fmtowns:local-c839510143": {
    "contentIds": [
@@ -8762,15 +8680,6 @@
    "title": "Wing Commander+Secret Missions",
    "year": 1990
   },
-  "fmtowns:local-ccf16d383b": {
-   "contentIds": [
-    "sha256-cd-v1:15ac36a907b02c0dccaeb01b0e0341eb0dc739c8353f2ab036b88588c737a5e0"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Queen Of Duellist, The (199x)(Agumix)(Jp-En)[+UserDisk].zip"
-   ],
-   "title": "The Queen Of Duellist"
-  },
   "fmtowns:local-cf48175506": {
    "contentIds": [
     "sha256-cd-v1:3410477b541899bfed943863e7ed43c7d73cf9f93e935718b59ba9fa64ef81da"
@@ -8792,55 +8701,6 @@
    ],
    "title": "Where in the World is Carmen Sandiego",
    "year": 1993
-  },
-  "fmtowns:local-d90a3c5a90": {
-   "contentIds": [
-    "sha256-cd-v1:3b9fa772916a7cd4d2cafa856622f7444150e62fd40c0f3262465ec3d356b473"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Doll Using (19xx)(Forest)(Jp).zip"
-   ],
-   "title": "Doll Using"
-  },
-  "fmtowns:local-db9c6e960a": {
-   "contentIds": [
-    "sha256-cd-v1:7bcd0aa7a90c47201006c9d355c406246c855dc0017d0e4985cfe186e4f35c31"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Sherlock Holmes no Tantei Kouza (1991)(Fujitsu)(Jp-En).zip"
-   ],
-   "title": "Sherlock Holmes no Tantei Kouza",
-   "year": 1991
-  },
-  "fmtowns:local-e16673bc50": {
-   "contentIds": [
-    "sha256-cd-v1:bd28476a858db7ce18597656b2c0cb43c03d1eb3f115e8887f07b274d6e08af8"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Super Real Mahjong PII+PIII (Jp)(1992)(Ving).zip"
-   ],
-   "title": "Super Real Mahjong PII+PIII",
-   "year": 1992
-  },
-  "fmtowns:local-e27f4b1130": {
-   "contentIds": [
-    "sha256-cd-v1:6e17356b539748ee7d7d4d0c78878b52ff0cbc169a89b11da4c7946b11e987d7"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Hanahuda de Pon! (1996)(Active)(Jp)[+BootDisk].zip"
-   ],
-   "title": "Hanahuda de Pon!",
-   "year": 1996
-  },
-  "fmtowns:local-e91e393492": {
-   "contentIds": [
-    "sha256-cd-v1:dd7826ee7a04823b6cb78cb6ee665136cf298b61ef91898f94bba56cb379ae41"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:American Oudan Ultra Quizz - King of Quiz (1994)(NTV)(Jp).zip"
-   ],
-   "title": "American Oudan Ultra Quizz - King of Quiz",
-   "year": 1994
   },
   "fmtowns:local-ed6e2d5ebe": {
    "contentIds": [
@@ -8866,16 +8726,6 @@
    "title": "Crescent Moon",
    "year": 1989
   },
-  "fmtowns:local-f0d355bd2a": {
-   "contentIds": [
-    "sha256-cd-v1:42c4bf50a0d3f20382168b842d2d83705ee7ed941520e45c93e7d442c62158a4"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Kikou Shidan (1990)(Artdink)(Jp).zip"
-   ],
-   "title": "Kikou Shidan",
-   "year": 1990
-  },
   "fmtowns:local-f3a0b71a35": {
    "contentIds": [
     "sha256-cd-v1:c0a23e318ba06909b2a727a2320b97238572c4ee38c6f57898b08ffbcdbef57a"
@@ -8897,27 +8747,6 @@
    ],
    "title": "Psychic Detective Vol. 5 - Nightmare",
    "year": 1994
-  },
-  "fmtowns:local-fc034aa413": {
-   "contentIds": [
-    "sha256-cd-v1:cdd3095b537666eddedcd121dfc801a3a836816b18a77498a1955b150eea3303"
-   ],
-   "description": "Toaplan's vertical shooter: fly the biplane Flying Shark over tanks, ships and gun emplacements, spreading your shot with power-ups and clearing the screen with bombs.",
-   "sourceGroups": [
-    "fmtowns-cd:Flying Shark (1993)(Ving)(Jp-En).zip"
-   ],
-   "title": "Flying Shark",
-   "year": 1993
-  },
-  "fmtowns:local-fed8d9b0e6": {
-   "contentIds": [
-    "sha256-cd-v1:8d297bd29baaafdc9393f3030534732a387887693d70250b741d9169236da559"
-   ],
-   "sourceGroups": [
-    "fmtowns-cd:Afterburner 3 (1992)(Sega)(Jp).zip"
-   ],
-   "title": "Afterburner 3",
-   "year": 1992
   },
   "fmtowns:moby-10591": {
    "description": "SNK's improved Fatal Fury 2: a one-on-one fighter with more characters, faster play and new moves.",
@@ -9030,8 +8859,14 @@
     "preview": "art/catalog/moby/329/screenshot-820ff13f23d2.webp",
     "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/329/screenshot-820ff13f23d2.webp"
    },
+   "contentIds": [
+    "sha256-cd-v1:2c539ba81bff13c39bac86355b504d979646114d1ef248ac36c56bff8a031496"
+   ],
    "description": "A 3D driving game built around stunt tracks with loops, jumps and corkscrews, plus a track editor and replays.",
    "mobygames": 329,
+   "sourceGroups": [
+    "fmtowns-cd:4D Sports Driving (1992)(Distinctive Software)(Jp-En).zip"
+   ],
    "title": "Stunts",
    "year": 1993
   },
@@ -9202,8 +9037,14 @@
     "preview": "art/catalog/moby/7009/screenshot-29b87c9fccaa.webp",
     "previewUrl": "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/moby/7009/screenshot-29b87c9fccaa.webp"
    },
+   "contentIds": [
+    "sha256-cd-v1:08efd014777e2cd871dba4932e6207227bdec9d31688a0595bcda519984b722d"
+   ],
    "description": "Sega's jet combat arcade sequel: fly an F-14 through waves of enemy fighters, now with throttle control and extra stages.",
    "mobygames": 7009,
+   "sourceGroups": [
+    "fmtowns-cd:Afterburner 2 (1989)(Sega)(Jp-En).zip"
+   ],
    "title": "After Burner II",
    "year": 1989
   },
