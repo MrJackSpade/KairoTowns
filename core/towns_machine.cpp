@@ -223,6 +223,9 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
     parameters.gamePort[0] = TOWNS_GAMEPORTEMU_PHYSICAL0;
     parameters.gamePort[1] = TOWNS_GAMEPORTEMU_MOUSE;
     parameters.interactive = false;
+    // Tsugaru by default darkens the row two thirds down every picture, as the damper wire of a
+    // Trinitron monitor shows; on a phone screen it is only a discoloured line across the game.
+    parameters.damperWireLine = false;
     auto &towns = *impl->towns;
     if (!FMTownsCommon::Setup(towns, &impl->world, &impl->window, parameters)) {
         error = towns.vmAbortReason.empty() ? "The FM Towns did not start; check its ROM files" : towns.vmAbortReason;
