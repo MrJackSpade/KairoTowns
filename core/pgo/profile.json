@@ -3,26 +3,26 @@
   "compilerVersion": "19.0.1",
   "ndkProvenance": "28.2.13676358",
   "abi": "arm64-v8a",
-  "sourceRevision": "b2a27de7e16238f9759ad1d5c88e942e318d221b",
-  "portableTextSha256": "c18d9cf6dc82947d60e74f5727990ddccee1db2ffdc43b180412109f5e8b1711",
-  "functionRecords": 749,
+  "sourceRevision": "46eb9998c55138857cef25ddc6464674cd0afb8c",
+  "portableTextSha256": "97a880ef502af181ee54644b852fae070aa7a609d99f894046ba79f35a775e4e",
+  "functionRecords": 748,
   "pathOccurrencesRewritten": 12,
   "normalization": "The checkout root in function names is @KAIRO_SOURCE@/ (shared/cmake/KairoPgo.cmake puts the actual root back before indexing). LF newlines, one final newline.",
   "training": "tools/perf/pgo-train.ps1: afterburner, ssf2, mahou, 90 s of guest time each, flat out; 3x3 Eyes held out",
   "inputs": [
     {
       "name": "afterburner",
-      "rawProfileSha256": "31e6cc70cc39b75d8ae8e06ca7d43a74515d14bf1787a3bec738b704e850c889",
+      "rawProfileSha256": "79be9e2773503434d37ea02ab92f28f092cc36ea095bbd0145239a5df7279ba6",
       "weight": 1
     },
     {
       "name": "mahou",
-      "rawProfileSha256": "02276bacb0d0fb108a5a3873f8153863c2f1cae55591ed6454f10acb468ef57f",
+      "rawProfileSha256": "8612bc1b6fabdd9f9fe9e4dda207f0a0deb2fd9aefac23b31be75bb6a11a5926",
       "weight": 1
     },
     {
       "name": "ssf2",
-      "rawProfileSha256": "ce196b14fbd1e9282657005fbb44e2c75e940410436422f8af927bb2aebb4ac6",
+      "rawProfileSha256": "769b9ccc908eb60818957267b0bfa2eee1f3fc67a0348e320dd2f8ae42778034",
       "weight": 1
     }
   ]
