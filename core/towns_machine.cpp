@@ -328,9 +328,12 @@ bool TownsMachine::run_guest(uint64_t &ran, std::string &error) {
         const uint64_t step_start = towns.state.townsTime;
         towns.var.nextTimeSync = towns.state.townsTime + kTimeSync;
         towns.var.justLoadedState = false;
+        // Sound, input and the app's own hooks between steps can touch anything (wait_loop.h).
+        impl_->wait_loop.restart();
         while (towns.state.townsTime < towns.var.nextTimeSync) {
-            // Until the fast device polling only the CPU runs (wait_loop.h).
-            impl_->wait_loop.restart();
+            // Until the fast device polling only the CPU runs; after a polling, a skip goes on unless
+            // an interrupt request is waiting (wait_loop.h), as ProcessIRQ would then act.
+            if (towns.pic.state.IRR0_OR_IRR1_Cache != 0) impl_->wait_loop.restart();
             while (towns.state.townsTime <= towns.state.nextFastDevicePollingTime && 0 == towns.GetStopFlags()) {
                 if (impl_->sample_pcs && impl_->profile.instructions % kPcSampleInterval == 0)
                     ++impl_->profile.pcs[uint64_t(towns.CPU().state.CS().value) << 32 | towns.CPU().state.EIP];

@@ -10,6 +10,12 @@
 // the polling is the same pass again. The skip moves guest time over as many whole passes as end
 // before the polling, with Tsugaru's own clock arithmetic, and the CPU then runs on from the same
 // instruction with the same state and time as it would have reached. Nothing else changes.
+//
+// The polling itself changes nothing the loop reads unless it raises an interrupt request: a
+// device's write to RAM goes through Memory (DMA included) and counts in sideEffects, and taking an
+// interrupt changes the CPU state. So a pass found before a polling with no interrupt request
+// waiting is still the same pass after it, and skipping goes on without finding it again; with a
+// request waiting the machine restarts, so the CPU takes the interrupt as soon as it would have.
 
 #pragma once
 
@@ -29,7 +35,8 @@ public:
         uint64_t skips = 0, passes = 0, instructions = 0;
     };
 
-    // A new stretch of CPU-only time begins: what came before it says nothing about what follows.
+    // What came before says nothing about what follows: an interrupt may be taken, or the machine
+    // did more between instructions than the fast device polling (TownsMachine::run_guest).
     void restart() { candidate_ = false; }
 
     // Before the CPU runs the instruction at CS:EIP, after `instructions` instructions and `clocks`
@@ -62,8 +69,11 @@ private:
             snapshot(state, scratch_);
             if (scratch_ == pass_state_) {
                 skip(towns, instructions - pass_instructions_, clocks - pass_clocks_, deadline);
-                // The time left is less than a pass; the CPU runs it.
-                candidate_ = false;
+                // The time left is less than a pass; the CPU runs it, across the polling, and the
+                // pass after it, with the same state and nothing done between, is the same pass:
+                // it is counted from here.
+                pass_instructions_ = instructions;
+                pass_clocks_ = clocks;
                 return;
             }
             std::swap(pass_state_, scratch_);
