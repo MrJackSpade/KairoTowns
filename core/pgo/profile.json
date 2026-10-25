@@ -1,0 +1,29 @@
+{
+  "format": "LLVM IR instrumentation profile text, sparse",
+  "compilerVersion": "19.0.1",
+  "ndkProvenance": "28.2.13676358",
+  "abi": "arm64-v8a",
+  "sourceRevision": "b2a27de7e16238f9759ad1d5c88e942e318d221b",
+  "portableTextSha256": "c18d9cf6dc82947d60e74f5727990ddccee1db2ffdc43b180412109f5e8b1711",
+  "functionRecords": 749,
+  "pathOccurrencesRewritten": 12,
+  "normalization": "The checkout root in function names is @KAIRO_SOURCE@/ (shared/cmake/KairoPgo.cmake puts the actual root back before indexing). LF newlines, one final newline.",
+  "training": "tools/perf/pgo-train.ps1: afterburner, ssf2, mahou, 90 s of guest time each, flat out; 3x3 Eyes held out",
+  "inputs": [
+    {
+      "name": "afterburner",
+      "rawProfileSha256": "31e6cc70cc39b75d8ae8e06ca7d43a74515d14bf1787a3bec738b704e850c889",
+      "weight": 1
+    },
+    {
+      "name": "mahou",
+      "rawProfileSha256": "02276bacb0d0fb108a5a3873f8153863c2f1cae55591ed6454f10acb468ef57f",
+      "weight": 1
+    },
+    {
+      "name": "ssf2",
+      "rawProfileSha256": "ce196b14fbd1e9282657005fbb44e2c75e940410436422f8af927bb2aebb4ac6",
+      "weight": 1
+    }
+  ]
+}

@@ -1,0 +1,20983 @@
+# IR level Instrumentation Flag
+:ir
+@KAIRO_SOURCE@/core/test/game_profile.cpp;_ZN12_GLOBAL__N_16reportEPKcNSt6__ndk16vectorIdNS2_9allocatorIdEEEERKN10kairotowns12TownsMachine7ProfileESB_
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+30
+
+@KAIRO_SOURCE@/core/towns_machine.cpp;_ZN10kairotowns12_GLOBAL__N_17Speaker19FMPCMChannelPlayingEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+283082
+
+@KAIRO_SOURCE@/core/towns_machine.cpp;_ZN10kairotowns12_GLOBAL__N_17Speaker4growEm
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+12560279
+11744
+
+@KAIRO_SOURCE@/core/towns_machine.cpp;_ZN10kairotowns12_GLOBAL__N_17Speaker6appendERKNSt6__ndk16vectorIhNS2_9allocatorIhEEEERm
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+6470352
+3668
+
+@KAIRO_SOURCE@/core/towns_machine.cpp;_ZN10kairotowns12_GLOBAL__N_17Speaker7restartEv
+# Func Hash:
+331779889214346592
+# Num Counters:
+8
+# Counter Values:
+551
+663264
+649
+223
+220
+220
+220
+0
+
+@KAIRO_SOURCE@/core/towns_machine.cpp;_ZN10kairotowns12_GLOBAL__N_17Speaker8catch_upEmRNSt6__ndk112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE
+# Func Hash:
+5832820485142737
+# Num Counters:
+10
+# Counter Values:
+16200
+8076
+0
+0
+0
+0
+0
+0
+0
+0
+
+@KAIRO_SOURCE@/core/towns_machine.cpp;_ZN10kairotowns12_GLOBAL__N_17Speaker9FMPCMPlayERNSt6__ndk16vectorIhNS2_9allocatorIhEEEE
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+25881408
+3668
+
+@KAIRO_SOURCE@/core/towns_machine.cpp;_ZNK10kairotowns12_GLOBAL__N_15World27GetProgramResourceDirectoryEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+@KAIRO_SOURCE@/third_party/tsugaru/src/osdependent/filesys/filesys_unix.cpp;_GLOBAL__sub_I_filesys_unix.cpp
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_Z12FMTownsIOMapv
+# Func Hash:
+543940340283592012
+# Num Counters:
+683
+# Counter Values:
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN10LineParser6DeleteEPNS_4TermE
+# Func Hash:
+238984481799490044
+# Num Counters:
+3
+# Counter Values:
+6
+0
+0
+
+_ZN10LineParserC2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+6
+
+_ZN10LineParserD2Ev
+# Func Hash:
+238984484201432128
+# Num Counters:
+3
+# Counter Values:
+6
+0
+0
+
+_ZN10TownsCDROM10IOReadByteEj
+# Func Hash:
+1069590791355814779
+# Num Counters:
+50
+# Counter Values:
+183870
+33108
+5837925
+0
+0
+0
+0
+0
+5804816
+33108
+1
+0
+0
+33108
+0
+0
+0
+0
+0
+8277
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+5792166
+4905035
+5804816
+989204
+5790279
+5804816
+4927
+
+_ZN10TownsCDROM11IOWriteByteEjj
+# Func Hash:
+775946769075500017
+# Num Counters:
+25
+# Counter Values:
+0
+33953
+1867
+1867
+14936
+11294
+1867
+0
+0
+5856
+0
+6794
+3552
+0
+5856
+0
+6460
+3552
+5856
+5856
+0
+0
+0
+0
+1867
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+4
+1
+_ZN15FMTownsTemplateI21i486DXDefaultFidelityE3CPUEv:1867
+1
+_ZN15FMTownsTemplateI21i486DXDefaultFidelityE3CPUEv:1867
+1
+_ZN15FMTownsTemplateI21i486DXDefaultFidelityE3CPUEv:14936
+1
+_ZN15FMTownsTemplateI21i486DXDefaultFidelityE3CPUEv:14936
+
+_ZN10TownsCDROM15AsyncWaveReader10ThreadFuncEv
+# Func Hash:
+1124680653157207770
+# Num Counters:
+3
+# Counter Values:
+4581696
+3
+1
+
+_ZN10TownsCDROM15AsyncWaveReader5StartEP9DiscImageNS1_9MinSecFrmES3_
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+3
+0
+
+_ZN10TownsCDROM15AsyncWaveReaderC2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsCDROM15AsyncWaveReaderD2Ev
+# Func Hash:
+391331302853643512
+# Num Counters:
+6
+# Counter Values:
+19220544
+3
+0
+2
+0
+0
+
+_ZN10TownsCDROM15BeginReadSectorEN9DiscImage9MinSecFrmES1_
+# Func Hash:
+37730073980293528
+# Num Counters:
+4
+# Counter Values:
+0
+329
+202
+35
+
+_ZN10TownsCDROM15PrepareCDDAPlayEv
+# Func Hash:
+30393572303726362
+# Num Counters:
+8
+# Counter Values:
+0
+0
+3
+0
+0
+0
+0
+0
+
+_ZN10TownsCDROM16RunScheduledTaskEy
+# Func Hash:
+680479509329638460
+# Num Counters:
+68
+# Counter Values:
+12041
+0
+0
+0
+8270
+12047
+11993088
+6
+0
+11510
+0
+329
+0
+6
+0
+202
+0
+0
+0
+0
+0
+0
+0
+0
+0
+8766
+0
+0
+0
+5856
+5856
+0
+5856
+5856
+0
+5856
+5856
+5856
+2946
+0
+5856
+0
+0
+0
+5856
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2910
+127
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+0
+0
+0
+
+_ZN10TownsCDROM16SetStatusNoErrorEv
+# Func Hash:
+959085193070499304
+# Num Counters:
+5
+# Counter Values:
+1867
+1867
+1867
+1867
+6
+
+_ZN10TownsCDROM19BreakOnCommandCheckEPKc
+# Func Hash:
+334798877461783539
+# Num Counters:
+31
+# Counter Values:
+0
+0
+0
+0
+10137
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+10137
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+0
+
+_ZN10TownsCDROM19ExecuteCDROMCommandEv
+# Func Hash:
+784007059655560962
+# Num Counters:
+2
+# Counter Values:
+1867
+3
+
+_ZN10TownsCDROM20AddWaveForNumSamplesEPhji
+# Func Hash:
+899992054461503742
+# Num Counters:
+24
+# Counter Values:
+794
+1410613
+1401205
+1410612
+1401204
+0
+0
+0
+0
+0
+1595
+1595
+1595
+2
+1595
+1595
+795
+795
+0
+1410612
+1410612
+1145424
+1401204
+145
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+0
+
+_ZN10TownsCDROM20SetStatusQueueForTOCEv
+# Func Hash:
+1051690256849012040
+# Num Counters:
+5
+# Counter Values:
+97
+4
+93
+0
+0
+
+_ZN10TownsCDROM23DelayedCommandExecutionEy
+# Func Hash:
+289525338516719580
+# Num Counters:
+137
+# Counter Values:
+329
+0
+66160
+0
+0
+0
+8270
+0
+0
+0
+329
+0
+1522
+3
+0
+0
+6
+4
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+6
+0
+6403
+3
+0
+4
+1522
+0
+0
+0
+0
+0
+0
+0
+0
+2
+0
+0
+6
+3
+0
+4
+1522
+2
+0
+0
+0
+0
+0
+2
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+0
+1
+0
+0
+1
+1
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+329
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+1
+1
+1
+1
+0
+1
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+6
+0
+0
+0
+0
+0
+0
+
+_ZN10TownsCDROM23UpdateCDDAStateInternalEx
+# Func Hash:
+1124680652285324760
+# Num Counters:
+4
+# Counter Values:
+20245
+4506
+2
+0
+
+_ZN10TownsCDROM32WaitUntilAsyncWaveReaderFinishedEv
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+6
+0
+
+_ZN10TownsCDROM35SetStatusDriveNotReadyOrDiscChangedEv
+# Func Hash:
+886271539695672017
+# Num Counters:
+4
+# Counter Values:
+1538
+0
+0
+1538
+
+_ZN10TownsCDROM5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsCDROM5State15PushStatusQueueEhhhh
+# Func Hash:
+184475610974972307
+# Num Counters:
+25
+# Counter Values:
+0
+0
+0
+0
+22
+8277
+3
+3
+0
+22
+19
+3
+3
+3
+3
+0
+0
+0
+0
+0
+0
+22
+3
+3
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+4
+8
+0:3
+4:3
+8:3
+16:3
+32:3
+64:3
+128:2
+256:2
+1
+1:3
+1
+2:3
+0
+
+_ZN10TownsCDROM5State5ResetEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+0
+9
+
+_ZN10TownsCDROM5State7GetDiscEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsCDROM5State8ResetMPUEv
+# Func Hash:
+536873291336558756
+# Num Counters:
+3
+# Counter Values:
+72
+0
+9
+
+_ZN10TownsCDROM5StateC2Ev
+# Func Hash:
+650973720051723098
+# Num Counters:
+7
+# Counter Values:
+3
+0
+0
+0
+0
+0
+0
+
+_ZN10TownsCDROM5StateD2Ev
+# Func Hash:
+701607649293546898
+# Num Counters:
+11
+# Counter Values:
+19220544
+0
+0
+92
+3
+3
+2
+3
+0
+3
+3
+
+_ZN10TownsCDROM7PowerOnEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsCDROMC2EP13FMTownsCommonP8TownsPICP9TownsDMAC
+# Func Hash:
+694937220915773166
+# Num Counters:
+5
+# Counter Values:
+3
+0
+0
+0
+0
+
+_ZN10TownsCDROMD2Ev
+# Func Hash:
+798733565971490940
+# Num Counters:
+4
+# Counter Values:
+0
+3
+0
+0
+
+_ZN10TownsSound10IOReadByteEj
+# Func Hash:
+252375184168180851
+# Num Counters:
+20
+# Counter Values:
+0
+314467
+0
+0
+163580
+0
+150783
+1
+1
+18
+84
+142983
+0
+0
+0
+0
+24125
+0
+33910
+150742
+
+_ZN10TownsSound11IOWriteByteEjj
+# Func Hash:
+393568427989277239
+# Num Counters:
+18
+# Counter Values:
+334842
+13
+146320
+146320
+351
+87
+11
+40
+178
+205
+205
+170
+24460
+351
+178
+0
+15550
+403
+
+_ZN10TownsSound12ProcessSoundEv
+# Func Hash:
+907658898858770917
+# Num Counters:
+76
+# Counter Values:
+0
+0
+94
+765
+0
+28784
+0
+0
+25697
+0
+0
+14096
+0
+0
+211
+0
+663264
+5397840
+0
+283082
+0
+0
+272018
+142681
+0
+1178940
+3668
+203595
+0
+0
+0
+2910
+0
+203595
+0
+0
+3671
+1595
+3671
+0
+0
+193
+997
+1595
+47
+94
+765
+202845
+94
+0
+765
+0
+0
+193
+997
+47
+168420
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+10371
+68423
+0
+139636
+252
+1762
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+4
+1
+@KAIRO_SOURCE@/core/towns_machine.cpp;_ZN10kairotowns12_GLOBAL__N_17Speaker19FMPCMChannelPlayingEv:283082
+1
+@KAIRO_SOURCE@/core/towns_machine.cpp;_ZN10kairotowns12_GLOBAL__N_17Speaker9FMPCMPlayERNSt6__ndk16vectorIhNS2_9allocatorIhEEEE:3668
+0
+0
+
+_ZN10TownsSound12SoundPollingEy
+# Func Hash:
+1063705161908944610
+# Num Counters:
+3
+# Counter Values:
+25122134
+24546081
+23009506
+
+_ZN10TownsSound14SetSCSIPointerEP9TownsSCSI
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsSound15SetCDROMPointerEP10TownsCDROM
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsSound15SetOutsideWorldEPN13Outside_World5SoundE
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsSound20ProcessRecordFMWriteEjjh
+# Func Hash:
+971686719003046197
+# Num Counters:
+7
+# Counter Values:
+146671
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+0
+
+_ZN10TownsSound21ProcessRecordPCMWriteEjh
+# Func Hash:
+1138669267499666640
+# Num Counters:
+5
+# Counter Values:
+41389
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+0
+
+_ZN10TownsSound5ResetEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+0
+3
+
+_ZN10TownsSound7PowerOnEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsSoundC2EP13FMTownsCommon
+# Func Hash:
+650973720864673298
+# Num Counters:
+7
+# Counter Values:
+3
+0
+0
+0
+0
+0
+0
+
+_ZN10TownsSoundD2Ev
+# Func Hash:
+647472251836370454
+# Num Counters:
+9
+# Counter Values:
+21168
+0
+0
+196608
+3
+3
+0
+0
+3
+
+_ZN10TownsTgDrv5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsTgDrv5StateC2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsTgDrv7PowerOnEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsTgDrvC2EP13FMTownsCommon
+# Func Hash:
+391331301608828574
+# Num Counters:
+7
+# Counter Values:
+24
+3
+0
+0
+0
+0
+0
+
+_ZN10TownsTimer10IOReadByteEj
+# Func Hash:
+969186095174629783
+# Num Counters:
+20
+# Counter Values:
+34086
+26960
+17249
+0
+0
+0
+0
+0
+0
+0
+26960
+0
+17043
+331
+0
+286
+26960
+48
+26960
+26960
+
+_ZN10TownsTimer11IOWriteByteEjj
+# Func Hash:
+908950568663017323
+# Num Counters:
+20
+# Counter Values:
+26979
+3
+0
+0
+0
+6
+0
+0
+0
+26970
+26561
+26939
+0
+0
+0
+0
+0
+0
+26970
+26888
+
+_ZN10TownsTimer5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsTimer5State17SetChannelCounterEjj
+# Func Hash:
+650973720686959430
+# Num Counters:
+9
+# Counter Values:
+3
+6
+3
+6
+0
+3
+0
+0
+0
+
+_ZN10TownsTimer5State21ProcessControlCommandEjj
+# Func Hash:
+567185240681018651
+# Num Counters:
+5
+# Counter Values:
+0
+0
+0
+3
+0
+
+_ZN10TownsTimer5State5ResetEv
+# Func Hash:
+798733565343935288
+# Num Counters:
+4
+# Counter Values:
+48
+12
+12
+6
+
+_ZN10TownsTimer5State6TickInEj
+# Func Hash:
+198238756926166379
+# Num Counters:
+9
+# Counter Values:
+150832944
+125694120
+73246
+125620874
+0
+0
+25138824
+0
+18832
+
+_ZN10TownsTimer7PowerOnEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsTimerC2EP13FMTownsCommonP8TownsPIC
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsVnDrv5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsVnDrv7PowerOnEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10TownsVnDrvC2EP13FMTownsCommon
+# Func Hash:
+798733568108732971
+# Num Counters:
+5
+# Counter Values:
+24
+3
+0
+0
+0
+
+_ZN10kairotowns12TownsMachine10read_audioEPsj
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+12228647
+27756
+
+_ZN10kairotowns12TownsMachine14run_frame_bodyERNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE
+# Func Hash:
+287486625558628412
+# Num Counters:
+6
+# Counter Values:
+672
+669
+220
+220
+15980
+15980
+
+_ZN10kairotowns12TownsMachine4Impl12check_renderEv
+# Func Hash:
+1063705161908944610
+# Num Counters:
+3
+# Counter Values:
+25122134
+17298
+17107
+
+_ZN10kairotowns12TownsMachine4Impl12poll_devicesEv
+# Func Hash:
+536873292609532375
+# Num Counters:
+4
+# Counter Values:
+35359
+0
+0
+35359
+
+_ZN10kairotowns12TownsMachine4Impl9save_cmosEv
+# Func Hash:
+247671766505625257
+# Num Counters:
+10
+# Counter Values:
+3
+3
+0
+0
+0
+0
+0
+0
+0
+3
+
+_ZN10kairotowns12TownsMachine4ImplC2Ev
+# Func Hash:
+93478048670608692
+# Num Counters:
+6
+# Counter Values:
+3
+0
+0
+0
+0
+0
+
+_ZN10kairotowns12TownsMachine4ImplD2Ev
+# Func Hash:
+414921810027130007
+# Num Counters:
+7
+# Counter Values:
+3599360
+3599360
+3
+3
+3
+3
+3
+
+_ZN10kairotowns12TownsMachine6createERKNS_6ConfigERNSt6__ndk112basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEE
+# Func Hash:
+473396407263766617
+# Num Counters:
+30
+# Counter Values:
+0
+3
+3
+3
+3
+0
+3
+3
+3
+3
+3
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN10kairotowns12TownsMachine9run_frameERNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+16200
+
+_ZN10kairotowns12TownsMachine9run_guestERmRNSt6__ndk112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE
+# Func Hash:
+838267673152231810
+# Num Counters:
+24
+# Counter Values:
+23177621
+472209135
+38002
+472209135
+0
+472209135
+64382513
+0
+0
+25122134
+1837922
+283082
+0
+20245
+35359
+284
+0
+0
+0
+0
+0
+16652
+470292613
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+4
+_ZN10TownsCDROM16RunScheduledTaskEy:20317
+_ZN11TownsSprite16RunScheduledTaskEy:14349
+_ZN15TownsHighResPCM16RunScheduledTaskEy:3324
+_ZN13TownsKeyboard16RunScheduledTaskEy:12
+
+_ZN10kairotowns12TownsMachineC2ENSt6__ndk110unique_ptrINS0_4ImplENS1_14default_deleteIS3_EEEE
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN10kairotowns12TownsMachineD2Ev
+# Func Hash:
+798733564829900906
+# Num Counters:
+5
+# Counter Values:
+3
+3
+3
+3
+0
+
+_ZN10kairotowns12WaitLoopSkipI15FMTownsTemplateI21i486DXDefaultFidelityEE13at_pass_startERS3_tjmmm
+# Func Hash:
+732038791911549621
+# Num Counters:
+7
+# Counter Values:
+53086197
+3433152
+931528
+50606806
+9411027
+63361555
+13775707
+
+_ZN10kairotowns12WaitLoopSkipI15FMTownsTemplateI21i486DXDefaultFidelityEE4skipERS3_mmm
+# Func Hash:
+844982799874925684
+# Num Counters:
+5
+# Counter Values:
+9411027
+9411027
+9411027
+9411027
+9407491
+
+_ZN10kairotowns12WaitLoopSkipI15FMTownsTemplateI21i486DXDefaultFidelityEE8snapshotERKN12i486DXCommon5StateERNS4_8SnapshotE
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+55102828
+13775707
+
+_ZN11RealNetworkC2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN11RealNetworkD2Ev
+# Func Hash:
+5832818071721360
+# Num Counters:
+9
+# Counter Values:
+0
+0
+0
+3
+0
+0
+0
+0
+0
+
+_ZN11TownsRender10BuildImageEPKhRKN9TownsCRTC13AnalogPaletteERKNS2_14ChaseHQPaletteE
+# Func Hash:
+958667112556813174
+# Num Counters:
+23
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1281
+0
+21
+15826
+0
+11610
+14523
+1281
+17097
+0
+17107
+0
+
+_ZN11TownsRender10Render4BitINS_10VRAM0TransEEEvRKN9TownsCRTC5LayerEPK6Vec4ubRKNS2_14ChaseHQPaletteEPKhb
+# Func Hash:
+887001625481725317
+# Num Counters:
+60
+# Counter Values:
+370329600
+370329600
+0
+0
+0
+0
+153411328
+201532800
+30673328
+0
+31047312
+0
+0
+0
+2893
+0
+0
+0
+83832896
+370329600
+0
+0
+516544
+0
+0
+0
+83694464
+370329600
+0
+0
+0
+0
+0
+560224
+1157280
+0
+0
+0
+0
+43680
+516544
+1157280
+0
+0
+0
+0
+0
+43680
+1157280
+5308
+0
+2893
+153411328
+201671232
+370329600
+370329600
+0
+0
+0
+0
+
+_ZN11TownsRender10Render8BitINS_10VRAM1TransEEEvRKN9TownsCRTC5LayerEPK6Vec4ubPKhb
+# Func Hash:
+209100684895085765
+# Num Counters:
+23
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+614880
+0
+614880
+0
+1281
+1281
+1281
+1281
+1281
+0
+0
+
+_ZN11TownsRender11Render16BitINS_10VRAM0TransEEEvRKN9TownsCRTC5LayerEPKhb
+# Func Hash:
+307694448506581780
+# Num Counters:
+28
+# Counter Values:
+0
+0
+11630
+0
+2184136
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2184136
+5473272
+0
+2184136
+0
+5473272
+0
+2736636
+20825
+20825
+20825
+11630
+20825
+20825
+
+_ZN11TownsRender6CreateEii
+# Func Hash:
+798733567721905133
+# Num Counters:
+4
+# Counter Values:
+972800
+4
+17
+4
+
+_ZN11TownsRender6RenderINS_10VRAM0TransEEEvjRKN9TownsCRTC5LayerERKNS2_13AnalogPaletteERKNS2_14ChaseHQPaletteEPKhb
+# Func Hash:
+844982797069585453
+# Num Counters:
+5
+# Counter Values:
+26133
+0
+0
+20825
+5308
+
+_ZN11TownsRender6RenderINS_10VRAM1TransEEEvjRKN9TownsCRTC5LayerERKNS2_13AnalogPaletteERKNS2_14ChaseHQPaletteEPKhb
+# Func Hash:
+844982797069585453
+# Num Counters:
+5
+# Counter Values:
+1281
+0
+1281
+0
+0
+
+_ZN11TownsRender7PrepareERK9TownsCRTC
+# Func Hash:
+647472254057163197
+# Num Counters:
+10
+# Counter Values:
+17107
+0
+0
+0
+1281
+15826
+15826
+1281
+14394
+11739
+
+_ZN11TownsRender9SwapImageERNS_9ImageCopyE
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+17107
+
+_ZN11TownsRenderC2Ev
+# Func Hash:
+238984482353853237
+# Num Counters:
+3
+# Counter Values:
+3060
+3060
+6
+
+_ZN11TownsSprite10IOReadByteEj
+# Func Hash:
+536873289842098099
+# Num Counters:
+4
+# Counter Values:
+1086
+0
+1086
+0
+
+_ZN11TownsSprite11IOWriteByteEjj
+# Func Hash:
+647472253864550785
+# Num Counters:
+15
+# Counter Values:
+1533
+1533
+20950
+9932
+11018
+3065
+3065
+1901
+1901
+0
+0
+1894
+1891
+7
+4
+
+_ZN11TownsSprite16RunScheduledTaskEy
+# Func Hash:
+567185241872526088
+# Num Counters:
+5
+# Counter Values:
+14349
+4
+0
+7169
+7176
+
+_ZN11TownsSprite5ResetEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+24
+3
+
+_ZN11TownsSprite7PowerOnEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+24
+3
+
+_ZN11TownsSpriteC2EP13FMTownsCommonP19TownsPhysicalMemory
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN11VGMRecorderD2Ev
+# Func Hash:
+647472253206709751
+# Num Counters:
+10
+# Counter Values:
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN12MemoryAccess10StoreDwordEjj
+# Func Hash:
+927006190477508607
+# Num Counters:
+1
+# Counter Values:
+576
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+4
+1
+_ZN18TownsFMRVRAMAccess9StoreByteEjh:576
+1
+_ZN18TownsFMRVRAMAccess9StoreByteEjh:576
+1
+_ZN18TownsFMRVRAMAccess9StoreByteEjh:576
+1
+_ZN18TownsFMRVRAMAccess9StoreByteEjh:576
+
+_ZN12MemoryAccess12StoreByteDMAEjh
+# Func Hash:
+170957022131388415
+# Num Counters:
+1
+# Counter Values:
+11993088
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZN18TownsMainRAMAccess9StoreByteEjh:11993088
+
+_ZN12MemoryAccess15GetMemoryWindowEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+9811
+
+_ZN12MemoryAccess9StoreWordEjj
+# Func Hash:
+567090795815895039
+# Num Counters:
+1
+# Counter Values:
+4320
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+2
+1
+_ZN18TownsFMRVRAMAccess9StoreByteEjh:4320
+1
+_ZN18TownsFMRVRAMAccess9StoreByteEjh:4320
+
+_ZN12RatocREX35865ResetEv
+# Func Hash:
+1124680649878571617
+# Num Counters:
+3
+# Counter Values:
+768
+24
+6
+
+_ZN12RatocREX35867PowerOnEv
+# Func Hash:
+170957022131388415
+# Num Counters:
+1
+# Counter Values:
+3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZN12RatocREX35865ResetEv:3
+
+_ZN12RatocREX3586C2EP13FMTownsCommon
+# Func Hash:
+650973720051723098
+# Num Counters:
+7
+# Counter Values:
+3
+0
+0
+0
+0
+0
+0
+
+_ZN12RatocREX3586D2Ev
+# Func Hash:
+93478050184159130
+# Num Counters:
+6
+# Counter Values:
+0
+0
+3
+3
+0
+0
+
+_ZN12i486DXCommon11REPCheckA16ERjj
+# Func Hash:
+844982799998961430
+# Num Counters:
+4
+# Counter Values:
+1089329
+1084557
+1011048
+4772
+
+_ZN12i486DXCommon11REPCheckA32ERjj
+# Func Hash:
+844982799998961430
+# Num Counters:
+4
+# Counter Values:
+51253637
+51013012
+46699321
+240625
+
+_ZN12i486DXCommon11ShlTemplateILj16ELj65535ELj32768EEEvRjj
+# Func Hash:
+5832820681430465
+# Num Counters:
+9
+# Counter Values:
+1003890
+895250
+1868
+1010909
+2657
+150991
+490472
+2064
+106576
+
+_ZN12i486DXCommon11ShlTemplateILj32ELj4294967295ELj2147483648EEEvRjj
+# Func Hash:
+5832820681430465
+# Num Counters:
+9
+# Counter Values:
+1280419
+103477
+1176977
+79553
+190625
+416755
+79797
+103442
+0
+
+_ZN12i486DXCommon11ShlTemplateILj8ELj255ELj128EEEvRjj
+# Func Hash:
+5832820681430465
+# Num Counters:
+9
+# Counter Values:
+237704
+149439
+12408
+225306
+19099
+51738
+163442
+5960
+82305
+
+_ZN12i486DXCommon13DecrementByteERj
+# Func Hash:
+414921810057747291
+# Num Counters:
+6
+# Counter Values:
+883976
+860091
+16495
+867828
+309336
+342457
+
+_ZN12i486DXCommon13DecrementWordERj
+# Func Hash:
+414921810057747291
+# Num Counters:
+6
+# Counter Values:
+1060253
+986857
+76189
+984064
+280171
+403931
+
+_ZN12i486DXCommon13IncrementByteERj
+# Func Hash:
+414921810057747291
+# Num Counters:
+6
+# Counter Values:
+436778
+437388
+543
+436849
+37
+381857
+
+_ZN12i486DXCommon13IncrementWordERj
+# Func Hash:
+414921810057747291
+# Num Counters:
+6
+# Counter Values:
+1590482
+1691758
+186243
+1505542
+27475
+999859
+
+_ZN12i486DXCommon14DecrementDwordERj
+# Func Hash:
+414921810057747291
+# Num Counters:
+6
+# Counter Values:
+4291027
+282836
+4008191
+77980
+144627
+2158127
+
+_ZN12i486DXCommon14DetachDebuggerEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN12i486DXCommon14IncrementDwordERj
+# Func Hash:
+414921810057747291
+# Num Counters:
+6
+# Counter Values:
+7404712
+0
+7766377
+9617
+11699
+4161036
+
+_ZN12i486DXCommon15ConsumeVariableEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+774417
+
+_ZN12i486DXCommon15GetRegisterSizeEi
+# Func Hash:
+95820317117272548
+# Num Counters:
+33
+# Counter Values:
+175625
+0
+0
+43263
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+361805
+0
+496104
+1049624
+262010
+2520267
+218888
+0
+2301379
+0
+
+_ZN12i486DXCommon16FetchOperandLoopI19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6MemoryNS3_29RealFetchInstructionFunctionsEEEvRT_RNS_21InstructionAndOperandERN12MemoryAccess12ConstPointerERKNS_15SegmentRegisterEiRT0_jj
+# Func Hash:
+471052672715781307
+# Num Counters:
+145
+# Counter Values:
+3195
+0
+0
+0
+0
+0
+0
+0
+0
+1015
+148
+1727
+193
+6
+2547
+0
+0
+10492
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3195
+1015
+5810535
+13
+2553
+0
+27
+132
+0
+0
+0
+0
+0
+0
+0
+52180
+1705
+2830474
+152
+1
+2060
+14
+40236
+2673914
+0
+0
+0
+0
+8
+623
+0
+0
+0
+840
+0
+22865
+0
+0
+992
+0
+553
+12629
+0
+0
+0
+168976
+3797
+2714170
+6
+0
+0
+0
+331
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+438
+0
+0
+0
+0
+0
+0
+0
+0
+4862
+0
+0
+0
+138
+1008
+0
+0
+0
+3195
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+24
+0
+0
+0
+0
+0
+
+_ZN12i486DXCommon16FetchOperandLoopI19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6MemoryNS3_34BurstModeFetchInstructionFunctionsEEEvRT_RNS_21InstructionAndOperandERN12MemoryAccess12ConstPointerERKNS_15SegmentRegisterEiRT0_jj
+# Func Hash:
+918681011195933432
+# Num Counters:
+103
+# Counter Values:
+9271
+28
+33
+41
+0
+17
+2
+0
+37730
+195302
+30051
+224194
+53411
+150359
+139549
+7199
+134
+3765907
+0
+0
+0
+0
+0
+0
+0
+0
+0
+9380
+233065
+13628509
+7694
+226888
+282218
+183888
+207
+80628
+62249
+8
+543
+54218
+479519
+3
+8536
+125
+1350
+1814748
+20831
+28381
+40385
+21056
+33807
+405323
+73794
+254780
+889711
+734764
+689
+973
+0
+1779203
+481082
+1556535
+204676
+167852
+0
+956588
+587
+0
+57865
+12594
+240183
+105632
+51399
+0
+0
+0
+0
+96
+29
+75
+0
+9
+65531
+7588
+0
+0
+0
+672031
+1060968
+0
+0
+15
+3
+0
+0
+0
+76814
+0
+18758
+803
+0
+0
+0
+
+_ZN12i486DXCommon21FetchInstructionClassI19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6MemoryNS3_29RealFetchInstructionFunctionsENS3_34BurstModeFetchInstructionFunctionsEE16FetchInstructionERS3_RN12MemoryAccess17ConstMemoryWindowERNS_21InstructionAndOperandERKNS_15SegmentRegisterEjRS4_jj
+# Func Hash:
+414504214734794228
+# Num Counters:
+20
+# Counter Values:
+0
+12651916
+466398600
+5810535
+452770688
+13628509
+0
+452770091
+171713
+0
+3
+452770091
+171713
+0
+1432217
+0
+0
+452770688
+452770688
+341705
+
+_ZN12i486DXCommon23FetchOperandRMandDecodeI19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6MemoryNS3_29RealFetchInstructionFunctionsEEEjRNS_7OperandEiiRT_RNS_11InstructionERN12MemoryAccess12ConstPointerERKNS_15SegmentRegisterEjRT0_
+# Func Hash:
+1029007430746345582
+# Num Counters:
+30
+# Counter Values:
+9393
+2945064
+21718
+63
+4819
+2662857
+81482
+2891
+256
+0
+566
+7
+3548
+791
+7
+559
+297
+0
+0
+0
+4088
+18520
+140
+140
+0
+88
+112962
+140
+88
+60516
+
+_ZN12i486DXCommon23FetchOperandRMandDecodeI19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6MemoryNS3_34BurstModeFetchInstructionFunctionsEEEjRNS_7OperandEiiRT_RNS_11InstructionERN12MemoryAccess12ConstPointerERKNS_15SegmentRegisterEjRT0_
+# Func Hash:
+325048439364973000
+# Num Counters:
+18
+# Counter Values:
+1764905
+3994971
+675822
+513956
+62823
+46257
+466047
+908770
+753455
+96727
+288583
+1625158
+106291
+116163
+79515
+1610
+18326
+373
+
+_ZN12i486DXCommon23MakeOpCodeRenumberTableEv
+# Func Hash:
+536873293222025096
+# Num Counters:
+3
+# Counter Values:
+1536
+1536
+3
+
+_ZN12i486DXCommon24InvalidatePageTableCacheEv
+# Func Hash:
+238984481500702494
+# Num Counters:
+3
+# Counter Values:
+0
+120851
+0
+
+_ZN12i486DXCommon25InvalidateDescriptorCacheEv
+# Func Hash:
+844982797421846395
+# Num Counters:
+4
+# Counter Values:
+0
+0
+207780
+0
+
+_ZN12i486DXCommon27LoadDescriptorTableRegisterERNS_21SystemAddressRegisterEiPKh
+# Func Hash:
+146835647075900052
+# Num Counters:
+2
+# Counter Values:
+186
+173341
+
+_ZN12i486DXCommon27LoadSegmentRegisterRealModeERNS_15SegmentRegisterEj
+# Func Hash:
+784007059655560962
+# Num Counters:
+2
+# Counter Values:
+259692
+0
+
+_ZN12i486DXCommon27LoadSegmentRegisterTemplateI19i486DXFidelityLayerI30i486DXDefaultFidelityOperationES2_E19LoadSegmentRegisterERS3_RNS_15SegmentRegisterEjRK6Memoryj
+# Func Hash:
+579636723360388460
+# Num Counters:
+10
+# Counter Values:
+0
+2921984
+0
+4931333
+5246617
+0
+93
+3095876
+5233349
+0
+
+_ZN12i486DXCommon27LoadSegmentRegisterTemplateI19i486DXFidelityLayerI30i486DXDefaultFidelityOperationES2_E27LoadProtectedModeDescriptorERS3_jRK6Memory
+# Func Hash:
+820911087554386440
+# Num Counters:
+12
+# Counter Values:
+5436770
+5012293
+424477
+336943
+87534
+424477
+86494
+336341
+86494
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:86494
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:86494
+2
+_ZNK18TownsMainRAMAccess20GetConstMemoryWindowEj:423565
+_ZNK17TownsSysROMAccess20GetConstMemoryWindowEj:912
+
+_ZN12i486DXCommon27LoadSegmentRegisterTemplateIKS_30i486DXDefaultFidelityOperationE27LoadProtectedModeDescriptorERS1_jRK6Memory
+# Func Hash:
+499339610599101673
+# Num Counters:
+10
+# Counter Values:
+14
+0
+14
+14
+0
+14
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+0
+0
+1
+_ZNK18TownsMainRAMAccess20GetConstMemoryWindowEj:14
+
+_ZN12i486DXCommon27LoadSegmentRegisterTemplateIS_30i486DXDefaultFidelityOperationE27LoadProtectedModeDescriptorERS_jRK6Memory
+# Func Hash:
+820911087554386440
+# Num Counters:
+12
+# Counter Values:
+43240
+0
+43240
+43240
+0
+43240
+0
+43240
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+0
+0
+1
+_ZNK18TownsMainRAMAccess20GetConstMemoryWindowEj:43240
+
+_ZN12i486DXCommon5ResetEv
+# Func Hash:
+93478048348325434
+# Num Counters:
+6
+# Counter Values:
+9437184
+147456
+147456
+72
+9
+9
+
+_ZN12i486DXCommon5StateC2Ev
+# Func Hash:
+238984482353853237
+# Num Counters:
+3
+# Counter Values:
+15
+3145725
+3
+
+_ZN12i486DXCommon6OrByteERjj
+# Func Hash:
+1096621590013681508
+# Num Counters:
+4
+# Counter Values:
+758308
+332679
+175292
+211211
+
+_ZN12i486DXCommon6OrWordERjj
+# Func Hash:
+1096621590013681508
+# Num Counters:
+4
+# Counter Values:
+1290447
+674599
+248344
+723903
+
+_ZN12i486DXCommon7AdcByteERjj
+# Func Hash:
+560129078653891381
+# Num Counters:
+9
+# Counter Values:
+776
+776
+776
+776
+0
+745
+0
+0
+31
+
+_ZN12i486DXCommon7AdcWordERjj
+# Func Hash:
+560129078653891381
+# Num Counters:
+9
+# Counter Values:
+124339
+121660
+124335
+75683
+0
+21844
+5
+37476
+53578
+
+_ZN12i486DXCommon7AddByteERjj
+# Func Hash:
+164393669737054207
+# Num Counters:
+6
+# Counter Values:
+476337
+450268
+12611
+32361
+101021
+193611
+
+_ZN12i486DXCommon7AddWordERjj
+# Func Hash:
+164393669737054207
+# Num Counters:
+6
+# Counter Values:
+6530845
+5431500
+128698
+43642
+800464
+3210509
+
+_ZN12i486DXCommon7AndByteERjj
+# Func Hash:
+702941992757231615
+# Num Counters:
+3
+# Counter Values:
+39715780
+11521192
+27297050
+
+_ZN12i486DXCommon7AndWordERjj
+# Func Hash:
+702941992757231615
+# Num Counters:
+3
+# Counter Values:
+1887798
+590937
+771659
+
+_ZN12i486DXCommon7Operand13DecodeFarAddrEiiPKh
+# Func Hash:
+146835647075900052
+# Num Counters:
+2
+# Counter Values:
+65862
+7588
+
+_ZN12i486DXCommon7Operand23DecodeMODR_MForRegisterEih
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+433979
+
+_ZN12i486DXCommon7Operand25DecodeMODR_MForCRRegisterEh
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+70459
+
+_ZN12i486DXCommon7Operand25DecodeMODR_MForDRRegisterEh
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+8661
+
+_ZN12i486DXCommon7Operand30DecodeMODR_MForSegmentRegisterEh
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+346446
+
+_ZN12i486DXCommon7OrDwordERjj
+# Func Hash:
+1096621590013681508
+# Num Counters:
+4
+# Counter Values:
+878398
+74809
+716122
+249638
+
+_ZN12i486DXCommon7RclByteERjj
+# Func Hash:
+694937220347533089
+# Num Counters:
+5
+# Counter Values:
+0
+226845
+54315
+0
+6390
+
+_ZN12i486DXCommon7RclWordERjj
+# Func Hash:
+694937220347533089
+# Num Counters:
+5
+# Counter Values:
+0
+3871
+3871
+0
+3871
+
+_ZN12i486DXCommon7RcrWordERjj
+# Func Hash:
+694937217353429101
+# Num Counters:
+5
+# Counter Values:
+2008
+11872
+13880
+896
+12984
+
+_ZN12i486DXCommon7RolByteERjj
+# Func Hash:
+290495011016395612
+# Num Counters:
+5
+# Counter Values:
+17
+43
+12
+34
+60
+
+_ZN12i486DXCommon7RolWordERjj
+# Func Hash:
+290495011016395612
+# Num Counters:
+5
+# Counter Values:
+307
+3483
+54
+378
+3790
+
+_ZN12i486DXCommon7RorByteERjj
+# Func Hash:
+290495011016395612
+# Num Counters:
+5
+# Counter Values:
+0
+108
+0
+98
+108
+
+_ZN12i486DXCommon7RorWordERjj
+# Func Hash:
+290495011016395612
+# Num Counters:
+5
+# Counter Values:
+4
+22914
+0
+0
+22918
+
+_ZN12i486DXCommon7SarWordERjj
+# Func Hash:
+1055735128068300702
+# Num Counters:
+8
+# Counter Values:
+17431
+2080
+16745
+1463
+5746
+3078
+16745
+18825
+
+_ZN12i486DXCommon7SbbByteERjj
+# Func Hash:
+876259025837144105
+# Num Counters:
+10
+# Counter Values:
+3
+20
+1
+0
+20
+0
+8
+17
+2
+0
+
+_ZN12i486DXCommon7SbbWordERjj
+# Func Hash:
+876259025837144105
+# Num Counters:
+10
+# Counter Values:
+73417
+73414
+73407
+3
+73414
+72132
+759
+0
+8
+3
+
+_ZN12i486DXCommon7ShlByteERjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+237714
+
+_ZN12i486DXCommon7ShlWordERjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+1012777
+
+_ZN12i486DXCommon7ShrByteERjj
+# Func Hash:
+647472250325153437
+# Num Counters:
+9
+# Counter Values:
+418361
+417605
+0
+418361
+10089
+73568
+217985
+5
+751
+
+_ZN12i486DXCommon7ShrWordERjj
+# Func Hash:
+647472250325153437
+# Num Counters:
+9
+# Counter Values:
+352599
+317101
+1
+352605
+44995
+34659
+231127
+70
+35428
+
+_ZN12i486DXCommon7SubByteERjj
+# Func Hash:
+164393669737054207
+# Num Counters:
+6
+# Counter Values:
+21340292
+973528
+322967
+9738463
+6059934
+4208517
+
+_ZN12i486DXCommon7SubWordERjj
+# Func Hash:
+164393669737054207
+# Num Counters:
+6
+# Counter Values:
+7127035
+1545183
+126510
+1825179
+2117415
+2506434
+
+_ZN12i486DXCommon7XorByteERjj
+# Func Hash:
+1096621590013681508
+# Num Counters:
+4
+# Counter Values:
+15840
+406025
+398039
+10156
+
+_ZN12i486DXCommon7XorWordERjj
+# Func Hash:
+1096621590013681508
+# Num Counters:
+4
+# Counter Values:
+0
+83918
+81959
+1836
+
+_ZN12i486DXCommon8AdcDwordERjj
+# Func Hash:
+816289419069240117
+# Num Counters:
+8
+# Counter Values:
+4025
+2646
+4025
+4025
+0
+286
+79
+2021
+
+_ZN12i486DXCommon8AddDwordERjj
+# Func Hash:
+164393669737054207
+# Num Counters:
+6
+# Counter Values:
+13260584
+11543495
+15223
+165848
+4102093
+6209767
+
+_ZN12i486DXCommon8AndDwordERjj
+# Func Hash:
+702941992757231615
+# Num Counters:
+3
+# Counter Values:
+10889370
+1581983
+4355066
+
+_ZN12i486DXCommon8FPUState6FNINITEv
+# Func Hash:
+238984484159291185
+# Num Counters:
+3
+# Counter Values:
+0
+15
+0
+
+_ZN12i486DXCommon8FPUStateC2Ev
+# Func Hash:
+1124680653601441999
+# Num Counters:
+3
+# Counter Values:
+21
+24
+3
+
+_ZN12i486DXCommon8REPCheckERjjj
+# Func Hash:
+844982799998961430
+# Num Counters:
+4
+# Counter Values:
+2833512
+2832064
+11584
+1448
+
+_ZN12i486DXCommon8RcrDwordERjj
+# Func Hash:
+694937217353429101
+# Num Counters:
+5
+# Counter Values:
+15
+6496
+6511
+41
+6470
+
+_ZN12i486DXCommon8RolDwordERjj
+# Func Hash:
+290495011016395612
+# Num Counters:
+5
+# Counter Values:
+19313
+423683
+0
+0
+442996
+
+_ZN12i486DXCommon8RorDwordERjj
+# Func Hash:
+290495011016395612
+# Num Counters:
+5
+# Counter Values:
+855546
+1347597
+0
+0
+2203143
+
+_ZN12i486DXCommon8SarDwordERjj
+# Func Hash:
+1055735128068300702
+# Num Counters:
+8
+# Counter Values:
+862447
+544387
+466552
+155558
+187404
+519504
+544387
+1010939
+
+_ZN12i486DXCommon8ShlDwordERjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+1280454
+
+_ZN12i486DXCommon8ShrDwordERjj
+# Func Hash:
+647472250325153437
+# Num Counters:
+9
+# Counter Values:
+1969461
+670759
+1302653
+448031
+158636
+1082720
+2148
+666142
+666
+
+_ZN12i486DXCommon8SubDwordERjj
+# Func Hash:
+164393669737054207
+# Num Counters:
+6
+# Counter Values:
+26096080
+2199811
+862
+11939106
+5196928
+6987546
+
+_ZN12i486DXCommon8XorDwordERjj
+# Func Hash:
+1096621590013681508
+# Num Counters:
+4
+# Counter Values:
+806204
+0
+806204
+2109
+
+_ZN12i486DXCommonC2EP6VMBase
+# Func Hash:
+714500945115550884
+# Num Counters:
+10
+# Counter Values:
+18
+102
+3145728
+768
+3
+3
+3
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZN12i486DXCommon5ResetEv:3
+
+_ZN12i486Debugger11GetSymTableEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+6
+
+_ZN12i486Debugger17MakeVxDLabelTableEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN12i486Debugger7CleanUpEv
+# Func Hash:
+927205939764041387
+# Num Counters:
+8
+# Counter Values:
+768
+196608
+196608
+196605
+0
+0
+3
+0
+
+_ZN12i486DebuggerC2EP6VMBase
+# Func Hash:
+987649777536308818
+# Num Counters:
+31
+# Counter Values:
+765
+765
+196608
+196608
+196608
+3
+3
+3
+3
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+196608
+3072
+3072
+196608
+3072
+3072
+
+_ZN12i486DebuggerD2Ev
+# Func Hash:
+790715553287989845
+# Num Counters:
+16
+# Counter Values:
+765
+768
+0
+196608
+0
+3
+3
+3
+0
+3
+3
+3
+0
+0
+0
+0
+
+_ZN13FMTownsCommon10IOReadByteEj
+# Func Hash:
+58757369452936398
+# Num Counters:
+29
+# Counter Values:
+295137
+294890
+3
+0
+159
+0
+0
+0
+32
+0
+14
+0
+28
+0
+4
+7
+0
+0
+0
+0
+0
+32
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+7
+0
+0
+0
+0
+0
+0
+0
+
+_ZN13FMTownsCommon11IOWriteByteEjj
+# Func Hash:
+882759128137197537
+# Num Counters:
+57
+# Counter Values:
+395262
+0
+86559
+0
+0
+0
+0
+0
+0
+390
+392
+6472
+6476
+0
+0
+0
+0
+3
+6446
+0
+0
+6448
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+8
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN13FMTownsCommon11MakeINTInfoER15i486SymbolTable
+# Func Hash:
+15763963546510329
+# Num Counters:
+250
+# Counter Values:
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+3
+0
+0
+3
+0
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN13FMTownsCommon11OnCDDAStartEv
+# Func Hash:
+784007059655560962
+# Num Counters:
+2
+# Counter Values:
+3
+0
+
+_ZN13FMTownsCommon12ProcessSoundEP13Outside_World
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+283082
+
+_ZN13FMTownsCommon13LoadROMImagesENSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEb
+# Func Hash:
+45209324259170203
+# Num Counters:
+15
+# Counter Values:
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN13FMTownsCommon14NotifyDiskReadEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+5856
+
+_ZN13FMTownsCommon14SetMainRAMSizeEx
+# Func Hash:
+238984482413483552
+# Num Counters:
+3
+# Counter Values:
+3
+0
+0
+
+_ZN13FMTownsCommon15DisableDebuggerEv
+# Func Hash:
+170957022131388415
+# Num Counters:
+1
+# Counter Values:
+3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZN15FMTownsTemplateI21i486DXDefaultFidelityE3CPUEv:3
+
+_ZN13FMTownsCommon15SetGamePadStateEibbbbbbbbb
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+35359
+
+_ZN13FMTownsCommon16AppSpecificSetupEP13Outside_WorldRK20TownsStartParameters
+# Func Hash:
+135188633907592430
+# Num Counters:
+9
+# Counter Values:
+3
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN13FMTownsCommon16MemoryEvaluationC2EPS_
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+6
+
+_ZN13FMTownsCommon16OnCRTC_HST_WriteEv
+# Func Hash:
+1132922103452600746
+# Num Counters:
+431
+# Counter Values:
+15
+15
+0
+10
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+95
+1
+_ZN15FMTownsTemplateI21i486DXDefaultFidelityE3CPUEv:15
+1
+** External Symbol **:15
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN13FMTownsCommon18TownsTypeToCPUTypeEj
+# Func Hash:
+650973719077283425
+# Num Counters:
+16
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+9
+0
+0
+0
+6
+0
+
+_ZN13FMTownsCommon19SetMouseButtonStateEbb
+# Func Hash:
+523456430808925275
+# Num Counters:
+35
+# Counter Values:
+0
+0
+0
+70718
+35359
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+35359
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN13FMTownsCommon28RunFastDevicePollingInternalEv
+# Func Hash:
+303685791103140467
+# Num Counters:
+11
+# Counter Values:
+50243562
+37682629
+27267
+89378
+3
+3
+25032756
+25121781
+25122131
+16537
+16537
+
+_ZN13FMTownsCommon5ResetEv
+# Func Hash:
+727966330025315908
+# Num Counters:
+3
+# Counter Values:
+63
+60
+3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+_ZN15FMTownsTemplateI21i486DXDefaultFidelityE3CPUEv:3
+1
+_ZN12i486DXCommon5ResetEv:3
+20
+_ZN10TownsCDROM5ResetEv:3
+_ZN10TownsVnDrv5ResetEv:3
+_ZN9TownsDMAC5ResetEv:3
+_ZN19TownsPhysicalMemory5ResetEv:3
+_ZN8TownsFDC5ResetEv:3
+_ZN9TownsMIDI5ResetEv:3
+_ZN9TownsCRTC5ResetEv:3
+_ZN13TownsKeyboard5ResetEv:3
+_ZN13TownsGamePort5ResetEv:3
+_ZN10TownsTimer5ResetEv:3
+_ZN12RatocREX35865ResetEv:3
+_ZN15TownsSerialPort5ResetEv:3
+_ZN15TownsHighResPCM5ResetEv:3
+_ZN10TownsTgDrv5ResetEv:3
+_ZN8TownsPIC5ResetEv:3
+_ZN8TownsRTC5ResetEv:3
+_ZN6Device5ResetEv:3
+_ZN9TownsSCSI5ResetEv:3
+_ZN10TownsSound5ResetEv:3
+_ZN11TownsSprite5ResetEv:3
+
+_ZN13FMTownsCommon5SetupERS_P13Outside_WorldPNS1_15WindowInterfaceERK20TownsStartParameters
+# Func Hash:
+958052878503683622
+# Num Counters:
+341
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+12
+6
+0
+6
+15
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+21
+0
+0
+21
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+12
+0
+0
+6
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+0
+3
+0
+3
+0
+3
+0
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+0
+0
+3
+0
+3
+0
+3
+0
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+0
+0
+12
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+3
+3
+0
+3
+6
+0
+0
+3
+0
+0
+0
+0
+# Num Value Kinds:
+2
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+27
+0
+0
+0
+0
+1
+@KAIRO_SOURCE@/core/towns_machine.cpp;_ZNK10kairotowns12_GLOBAL__N_15World27GetProgramResourceDirectoryEv:3
+0
+0
+0
+0
+1
+_ZN15FMTownsTemplateI21i486DXDefaultFidelityE3CPUEv:3
+0
+0
+0
+0
+0
+0
+0
+0
+1
+_ZN13FMTownsCommon5ResetEv:3
+1
+_ZN13Outside_World34CacheGamePadIndicesThatNeedUpdatesEv:3
+0
+0
+1
+_ZN13Outside_World19RegisterPauseResumeENSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE:3
+0
+0
+0
+0
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZN13FMTownsCommon7PowerOnEv
+# Func Hash:
+727966330025315908
+# Num Counters:
+3
+# Counter Values:
+63
+60
+3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+_ZN15FMTownsTemplateI21i486DXDefaultFidelityE3CPUEv:3
+1
+_ZN6Device7PowerOnEv:3
+16
+_ZN6Device7PowerOnEv:15
+_ZN9TownsDMAC7PowerOnEv:3
+_ZN12RatocREX35867PowerOnEv:3
+_ZN10TownsTgDrv7PowerOnEv:3
+_ZN15TownsSerialPort7PowerOnEv:3
+_ZN9TownsSCSI7PowerOnEv:3
+_ZN10TownsSound7PowerOnEv:3
+_ZN10TownsVnDrv7PowerOnEv:3
+_ZN15TownsHighResPCM7PowerOnEv:3
+_ZN10TownsCDROM7PowerOnEv:3
+_ZN11TownsSprite7PowerOnEv:3
+_ZN8TownsPIC7PowerOnEv:3
+_ZN10TownsTimer7PowerOnEv:3
+_ZN9TownsMIDI7PowerOnEv:3
+_ZN8TownsRTC7PowerOnEv:3
+_ZN13TownsGamePort7PowerOnEv:3
+
+_ZN13FMTownsCommon8VariableC2Ev
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+12288
+3
+
+_ZN13FMTownsCommon8VariableD2Ev
+# Func Hash:
+896858937305277160
+# Num Counters:
+9
+# Counter Values:
+0
+3
+0
+0
+0
+0
+0
+0
+0
+
+_ZN13FMTownsCommonC2Ev
+# Func Hash:
+787327392750072933
+# Num Counters:
+518
+# Counter Values:
+21
+24576
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+0
+3
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+3
+0
+3
+0
+0
+0
+0
+3
+3
+3
+3
+0
+0
+3
+3
+0
+0
+0
+0
+0
+0
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+0
+3
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+3
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+20
+1
+8:3
+1
+16:3
+0
+1
+32:3
+0
+0
+0
+1
+64:3
+0
+0
+0
+0
+0
+0
+0
+1
+128:3
+0
+0
+0
+0
+
+_ZN13FMTownsCommonD2Ev
+# Func Hash:
+744640996493335158
+# Num Counters:
+17
+# Counter Values:
+3
+21
+21
+18
+12
+30
+15
+3145728
+0
+0
+0
+3
+3
+1
+0
+0
+0
+
+_ZN13Outside_World10UseGamePadEj
+# Func Hash:
+938826627516607580
+# Num Counters:
+11
+# Counter Values:
+0
+0
+0
+3
+0
+3
+0
+3
+0
+0
+3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+1
+0:3
+
+_ZN13Outside_World15WindowInterfaceC2Ev
+# Func Hash:
+45209325223560995
+# Num Counters:
+14
+# Counter Values:
+122880
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN13Outside_World15WindowInterfaceD2Ev
+# Func Hash:
+950994588574064372
+# Num Counters:
+10
+# Counter Values:
+0
+0
+0
+0
+3
+3
+0
+0
+0
+0
+
+_ZN13Outside_World18ProcessAppSpecificER13FMTownsCommon
+# Func Hash:
+566450991683056914
+# Num Counters:
+7
+# Counter Values:
+283082
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+4
+0
+0
+0
+0
+
+_ZN13Outside_World19RegisterPauseResumeENSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+# Func Hash:
+491275432709448237
+# Num Counters:
+3
+# Counter Values:
+3
+3
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+** External Symbol **:3
+
+_ZN13Outside_World34CacheGamePadIndicesThatNeedUpdatesEv
+# Func Hash:
+90653978924536896
+# Num Counters:
+80
+# Counter Values:
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+6
+0
+0
+0
+0
+0
+3
+0
+0
+0
+0
+3
+0
+0
+0
+3
+
+_ZN13Outside_WorldC2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN13Outside_WorldD2Ev
+# Func Hash:
+694937219909695662
+# Num Counters:
+5
+# Counter Values:
+3
+0
+3
+3
+0
+
+_ZN13TownsEventLogC2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN13TownsEventLogD2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN13TownsGamePort10IOReadByteEj
+# Func Hash:
+480928631164007712
+# Num Counters:
+16
+# Counter Values:
+0
+151151
+132040
+19111
+0
+48
+0
+0
+0
+3
+132040
+0
+0
+0
+132040
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+0
+
+_ZN13TownsGamePort11IOWriteByteEjj
+# Func Hash:
+784007059655560962
+# Num Counters:
+2
+# Counter Values:
+135244
+135244
+
+_ZN13TownsGamePort19BootSequenceStartedEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+5856
+
+_ZN13TownsGamePort21SetBootKeyCombinationEj
+# Func Hash:
+238984481933630832
+# Num Counters:
+5
+# Counter Values:
+0
+0
+0
+3
+3
+
+_ZN13TownsGamePort25EmulationTypeToDeviceTypeEj
+# Func Hash:
+937442763840528754
+# Num Counters:
+64
+# Counter Values:
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+6
+3
+0
+0
+0
+0
+0
+3
+
+_ZN13TownsGamePort4Port15SetGamePadStateEbbbbbbbbbx
+# Func Hash:
+238984482720105921
+# Num Counters:
+3
+# Counter Values:
+35359
+0
+0
+
+_ZN13TownsGamePort4Port4ReadEx
+# Func Hash:
+339226955483688981
+# Num Counters:
+100
+# Counter Values:
+132040
+302302
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+528160
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+132040
+0
+0
+0
+0
+0
+7172
+0
+0
+0
+0
+0
+3977
+3977
+3977
+7180
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+131262
+131262
+19111
+19111
+0
+132040
+132040
+132040
+132040
+132040
+132040
+132040
+132040
+120109
+132040
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN13TownsGamePort4Port5WriteExbh
+# Func Hash:
+647472254126607743
+# Num Counters:
+14
+# Counter Values:
+3982
+3977
+0
+5
+0
+270488
+135244
+0
+15909
+0
+0
+3973
+7954
+7950
+
+_ZN13TownsGamePort5ResetEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+6
+3
+
+_ZN13TownsGamePort7PowerOnEv
+# Func Hash:
+798733568040585457
+# Num Counters:
+4
+# Counter Values:
+192
+192
+6
+3
+
+_ZN13TownsGamePortC2EP13FMTownsCommon
+# Func Hash:
+287486627852785619
+# Num Counters:
+5
+# Counter Values:
+3
+192
+192
+6
+3
+
+_ZN13TownsKeyboard10IOReadByteEj
+# Func Hash:
+59064685459144283
+# Num Counters:
+33
+# Counter Values:
+24
+20
+4
+0
+0
+4
+0
+0
+16
+0
+0
+16
+0
+12
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+4
+0
+4
+0
+0
+
+_ZN13TownsKeyboard11IOWriteByteEjj
+# Func Hash:
+526279455192803993
+# Num Counters:
+11
+# Counter Values:
+10
+4
+6
+0
+0
+4
+0
+0
+0
+0
+3
+
+_ZN13TownsKeyboard16RunScheduledTaskEy
+# Func Hash:
+431494654108067943
+# Num Counters:
+3
+# Counter Values:
+12
+12
+0
+
+_ZN13TownsKeyboard19BootSequenceStartedEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+5856
+
+_ZN13TownsKeyboard21SetBootKeyCombinationEj
+# Func Hash:
+784007059655560962
+# Num Counters:
+2
+# Counter Values:
+3
+3
+
+_ZN13TownsKeyboard5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+6
+
+_ZN13TownsKeyboard8PushFifoEhh
+# Func Hash:
+441200136512014043
+# Num Counters:
+95
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+8
+0
+8
+0
+0
+8
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN13TownsKeyboardC2EP13FMTownsCommonP8TownsPIC
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN13YsSoundPlayer9SoundData18CleanUpAPISpecificEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+6
+
+_ZN13YsSoundPlayer9SoundData21CreateAPISpecificDataEv
+# Func Hash:
+784007058953177093
+# Num Counters:
+2
+# Counter Values:
+3
+0
+
+_ZN13YsSoundPlayer9SoundData21DeleteAPISpecificDataEPNS0_27APISpecificDataPerSoundDataE
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+3
+3
+
+_ZN13YsSoundPlayer9SoundData27APISpecificDataPerSoundDataC2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN13YsSoundPlayer9SoundData27APISpecificDataPerSoundDataD2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN13YsSoundPlayer9SoundDataC2Ev
+# Func Hash:
+79639229170349408
+# Num Counters:
+8
+# Counter Values:
+0
+3
+3
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+0
+
+_ZN13YsSoundPlayer9SoundDataD2Ev
+# Func Hash:
+79639229528622627
+# Num Counters:
+8
+# Counter Values:
+0
+0
+3
+3
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+0
+
+_ZN14MIDI_Interface6CreateEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+30
+
+_ZN14MIDI_Interface6DeleteEPS_
+# Func Hash:
+238984482353853237
+# Num Counters:
+3
+# Counter Values:
+30
+30
+30
+
+_ZN14TownsMemAccess13SetCPUPointerEP12i486DXCommon
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+90
+
+_ZN14TownsMemAccess24SetPhysicalMemoryPointerEP19TownsPhysicalMemory
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+90
+
+_ZN14TownsMemAccessC2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+84
+
+_ZN14YsSocketClientC2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN14YsSocketClientD2Ev
+# Func Hash:
+1096621588576863830
+# Num Counters:
+5
+# Counter Values:
+3
+3
+0
+0
+0
+
+_ZN15FMTownsTemplateI21i486DXDefaultFidelityE3CPUEv
+# Func Hash:
+784007058953177093
+# Num Counters:
+2
+# Counter Values:
+1008834422
+0
+
+_ZN15FMTownsTemplateI21i486DXDefaultFidelityEC2Ev
+# Func Hash:
+376260592742545333
+# Num Counters:
+8
+# Counter Values:
+3
+3
+3
+3
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZN13FMTownsCommon7PowerOnEv:3
+
+_ZN15TownsHighResPCM10IOReadByteEj
+# Func Hash:
+353254415062747228
+# Num Counters:
+57
+# Counter Values:
+174
+174
+0
+0
+1
+0
+0
+0
+0
+0
+87
+0
+86
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2
+87
+87
+87
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+86
+86
+1
+
+_ZN15TownsHighResPCM10ProcessDMAEv
+# Func Hash:
+502833844830277171
+# Num Counters:
+15
+# Counter Values:
+301960
+3324
+3240
+3240
+85
+85
+85
+85
+12
+0
+0
+0
+0
+3240
+3240
+
+_ZN15TownsHighResPCM11IOWriteByteEjj
+# Func Hash:
+62757332800330459
+# Num Counters:
+49
+# Counter Values:
+2655
+286920
+2655
+86
+395
+309
+217
+172
+131
+131
+131
+131
+131
+131
+0
+0
+1
+0
+395
+172
+257
+172
+86
+0
+87
+86
+86
+86
+86
+86
+86
+0
+0
+0
+0
+0
+86
+0
+0
+0
+86
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZN15TownsHighResPCM5ResetEv:1
+
+_ZN15TownsHighResPCM16RunScheduledTaskEy
+# Func Hash:
+784007059655560962
+# Num Counters:
+2
+# Counter Values:
+3324
+3240
+
+_ZN15TownsHighResPCM20AddWaveForNumSamplesEPhjj
+# Func Hash:
+842987909726527938
+# Num Counters:
+14
+# Counter Values:
+15040
+0
+47
+47
+47
+47
+47
+47
+0
+47
+47
+0
+0
+47
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+1
+513:47
+
+_ZN15TownsHighResPCM5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+10
+
+_ZN15TownsHighResPCM5State5ResetEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+0
+10
+
+_ZN15TownsHighResPCM7PowerOnEv
+# Func Hash:
+170957022131388415
+# Num Counters:
+1
+# Counter Values:
+6
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZN15TownsHighResPCM5ResetEv:6
+
+_ZN15TownsHighResPCM9PopulatorINS_8WAV8MonoEE8PopulateERiPhRKNSt6__ndk16vectorIhNS5_9allocatorIhEEEEjjjff
+# Func Hash:
+607699196633919449
+# Num Counters:
+4
+# Counter Values:
+82908
+15040
+47
+97995
+
+_ZN15TownsHighResPCM9UpdatePICEv
+# Func Hash:
+917515341624514957
+# Num Counters:
+8
+# Counter Values:
+876
+961
+961
+876
+341
+0
+258
+341
+
+_ZN15TownsHighResPCMC2EP13FMTownsCommon
+# Func Hash:
+948945316119003209
+# Num Counters:
+10
+# Counter Values:
+3
+3
+3
+3
+3
+3
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+2
+0
+1
+** External Symbol **:3
+
+_ZN15TownsSerialPort10IOReadByteEj
+# Func Hash:
+1007539318491205869
+# Num Counters:
+32
+# Counter Values:
+6
+6
+6
+6
+0
+0
+0
+0
+0
+1
+1
+1
+0
+0
+0
+0
+0
+34
+30
+0
+4
+6
+7
+7
+7
+7
+6
+0
+0
+0
+0
+0
+
+_ZN15TownsSerialPort11IOWriteByteEjj
+# Func Hash:
+45209324733541466
+# Num Counters:
+28
+# Counter Values:
+14
+12
+12
+12
+2
+2
+2
+2
+1
+1
+1
+1
+0
+0
+0
+76
+62
+10
+4
+16
+15
+15
+15
+15
+14
+2
+0
+0
+
+_ZN15TownsSerialPort13DefaultClient11SetStopBitsEh
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+2
+
+_ZN15TownsSerialPort13DefaultClient13SetDataLengthEh
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+4
+
+_ZN15TownsSerialPort13DefaultClient2TxEh
+# Func Hash:
+359038230873156740
+# Num Counters:
+113
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2
+0
+0
+0
+0
+0
+0
+0
+2
+0
+0
+0
+2
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2
+2
+2
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+2
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+** External Symbol **:2
+0
+0
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+10
+1
+0:2
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN15TownsSerialPort13DefaultClient3DSREv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+6
+
+_ZN15TownsSerialPort13DefaultClient5RxRDYEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+6
+
+_ZN15TownsSerialPort13DefaultClient5TxRDYEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+2
+
+_ZN15TownsSerialPort13DefaultClient7CommandEbbb
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+6
+
+_ZN15TownsSerialPort13DefaultClient9SetParityEbb
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+4
+
+_ZN15TownsSerialPort5ResetEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+15
+3
+
+_ZN15TownsSerialPort5State14UpdateINTStateEv
+# Func Hash:
+391331301972643827
+# Num Counters:
+7
+# Counter Values:
+0
+0
+40
+0
+0
+0
+8
+
+_ZN15TownsSerialPort7PowerOnEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+15
+3
+
+_ZN15TownsSerialPort9UpdatePICEv
+# Func Hash:
+238984481799490044
+# Num Counters:
+3
+# Counter Values:
+88
+88
+22
+
+_ZN15TownsSerialPortC2EP13FMTownsCommon
+# Func Hash:
+393568427455195979
+# Num Counters:
+12
+# Counter Values:
+12
+12
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN15TownsSerialPortD2Ev
+# Func Hash:
+701607650229392998
+# Num Counters:
+11
+# Counter Values:
+15
+0
+2
+0
+0
+2
+0
+0
+0
+3
+0
+
+_ZN15i486SymbolTable11AddINTLabelEjNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+87
+
+_ZN15i486SymbolTable15AddINTFuncLabelEjjNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+# Func Hash:
+784007059655560962
+# Num Counters:
+2
+# Counter Values:
+162
+162
+
+_ZN15i486SymbolTable19MakeDOSIntFuncLabelEv
+# Func Hash:
+848042595775007277
+# Num Counters:
+1317
+# Counter Values:
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+0
+3
+0
+3
+3
+0
+0
+3
+0
+3
+3
+0
+3
+3
+3
+3
+3
+3
+0
+0
+0
+0
+0
+0
+3
+3
+3
+0
+3
+0
+0
+3
+3
+0
+0
+0
+3
+3
+3
+3
+3
+3
+3
+3
+0
+0
+3
+0
+0
+0
+0
+0
+3
+0
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+0
+0
+0
+3
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+0
+3
+0
+0
+3
+3
+3
+3
+0
+3
+0
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN16NullMemoryAccess10StoreDwordEjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+576
+
+_ZN16TownsOsROMAccess9StoreByteEjh
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+2
+
+_ZN18TownsFMRVRAMAccess10StoreDwordEjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+576
+
+_ZN18TownsFMRVRAMAccess9StoreByteEjh
+# Func Hash:
+1131306754806051125
+# Num Counters:
+32
+# Counter Values:
+311468
+89682
+87537
+77867
+0
+554
+0
+0
+0
+0
+0
+0
+0
+0
+4
+4
+3
+270
+0
+0
+270
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN18TownsFMRVRAMAccess9StoreWordEjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+4320
+
+_ZN18TownsFMRVRAMAccessC2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN18TownsMainRAMAccess10StoreDwordEjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+32105038
+
+_ZN18TownsMainRAMAccess15GetMemoryWindowEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+40921085
+
+_ZN18TownsMainRAMAccess9StoreByteEjh
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+23574541
+
+_ZN18TownsMainRAMAccess9StoreWordEjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+14834041
+
+_ZN18TownsWaveRAMAccess9StoreByteEjh
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+679284
+0
+
+_ZN18TownsWaveRAMAccessC2EP13FMTownsCommonP6RF5C68P11VGMRecorder
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN19TownsPhysicalMemory10IOReadByteEj
+# Func Hash:
+316755235776230526
+# Num Counters:
+55
+# Counter Values:
+125797
+11091
+0
+0
+73530
+52258
+0
+3
+0
+0
+0
+4
+0
+0
+1
+0
+0
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+8987
+8973
+0
+0
+0
+0
+0
+0
+4
+4
+0
+1
+1
+# Num Value Kinds:
+2
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+** External Symbol **:1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+2
+0
+0
+
+_ZN19TownsPhysicalMemory10IOReadWordEj
+# Func Hash:
+404071003449598961
+# Num Counters:
+20
+# Counter Values:
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+2
+0
+0
+
+_ZN19TownsPhysicalMemory11IOWriteByteEjj
+# Func Hash:
+52286797557883053
+# Num Counters:
+41
+# Counter Values:
+0
+0
+195705
+6946
+107919
+1038
+0
+2
+2
+0
+0
+0
+86724
+0
+0
+14
+6
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+0
+
+_ZN19TownsPhysicalMemory11IOWriteWordEjj
+# Func Hash:
+1124680651190764884
+# Num Counters:
+4
+# Counter Values:
+12
+12
+0
+0
+
+_ZN19TownsPhysicalMemory11SetVRAMSizeEx
+# Func Hash:
+784007058953177093
+# Num Counters:
+2
+# Counter Values:
+3
+0
+
+_ZN19TownsPhysicalMemory12LoadROMImageENSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEb
+# Func Hash:
+556960142444819399
+# Num Counters:
+13
+# Counter Values:
+0
+33
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN19TownsPhysicalMemory12SetCVRAMSizeEx
+# Func Hash:
+798733567721905133
+# Num Counters:
+4
+# Counter Values:
+0
+0
+3
+0
+
+_ZN19TownsPhysicalMemory12SetDummySizeEx
+# Func Hash:
+798733567721905133
+# Num Counters:
+4
+# Counter Values:
+0
+0
+3
+0
+
+_ZN19TownsPhysicalMemory13LoadROMImagesENSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEb
+# Func Hash:
+822500745935047352
+# Num Counters:
+288
+# Counter Values:
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1572864
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+0
+0
+0
+3
+0
+3
+0
+0
+0
+0
+3
+0
+3
+0
+0
+0
+0
+3
+0
+3
+0
+0
+0
+0
+3
+0
+3
+0
+0
+0
+0
+3
+0
+3
+0
+0
+0
+0
+3
+0
+3
+0
+0
+0
+0
+3
+0
+3
+0
+0
+0
+0
+3
+0
+3
+0
+0
+0
+0
+3
+0
+3
+0
+0
+0
+0
+3
+0
+3
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+0
+3
+3
+3
+3
+3
+0
+3
+3
+3
+3
+3
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+0
+1
+** External Symbol **:3
+1
+** External Symbol **:3
+
+_ZN19TownsPhysicalMemory14SetMainRAMSizeEx
+# Func Hash:
+290495010640403437
+# Num Counters:
+5
+# Counter Values:
+0
+3
+3
+0
+0
+
+_ZN19TownsPhysicalMemory15SetUpVRAMAccessEjbb
+# Func Hash:
+798733566896545641
+# Num Counters:
+4
+# Counter Values:
+3
+0
+0
+0
+
+_ZN19TownsPhysicalMemory16SetSpriteRAMSizeEx
+# Func Hash:
+784007058953177093
+# Num Counters:
+2
+# Counter Values:
+3
+0
+
+_ZN19TownsPhysicalMemory17SetUpMemoryAccessEjj
+# Func Hash:
+315285099605162546
+# Num Counters:
+9
+# Counter Values:
+0
+3
+0
+3
+0
+3
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZN15FMTownsTemplateI21i486DXDefaultFidelityE3CPUEv:3
+
+_ZN19TownsPhysicalMemory24UpdateFMRVRAMMappingFlagEb
+# Func Hash:
+844982796974805307
+# Num Counters:
+4
+# Counter Values:
+107934
+43382
+0
+43382
+
+_ZN19TownsPhysicalMemory29UpdateSysROMDicROMMappingFlagEbb
+# Func Hash:
+694937217554402907
+# Num Counters:
+6
+# Counter Values:
+86742
+20
+43368
+43371
+10
+10
+
+_ZN19TownsPhysicalMemory5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+6
+
+_ZN19TownsPhysicalMemory5State5ResetEv
+# Func Hash:
+135188632197466473
+# Num Counters:
+6
+# Counter Values:
+25165824
+9437184
+196608
+1179648
+393216
+9
+
+_ZN19TownsPhysicalMemory5StateD2Ev
+# Func Hash:
+950994588006102429
+# Num Counters:
+10
+# Counter Values:
+0
+196608
+98304
+12582912
+3
+0
+3
+3
+3
+0
+
+_ZN19TownsPhysicalMemoryC2EP13FMTownsCommonP6MemoryP6RF5C68
+# Func Hash:
+289922724398757339
+# Num Counters:
+47
+# Counter Values:
+96
+24576
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN19TownsPhysicalMemoryD2Ev
+# Func Hash:
+890259285334400481
+# Num Counters:
+21
+# Counter Values:
+0
+0
+0
+0
+1572864
+1572864
+786432
+1572864
+786432
+3
+0
+0
+0
+0
+0
+0
+3
+3
+3
+3
+3
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE10FetchDwordEjRKN12i486DXCommon15SegmentRegisterEjR6Memory
+# Func Hash:
+178023599433749998
+# Num Counters:
+15
+# Counter Values:
+44513107
+0
+41080718
+3381220
+3381220
+142139
+34863317
+51169
+137051
+137051
+0
+0
+0
+0
+1952408
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:137051
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:137051
+7
+_ZNK18TownsMainRAMAccess10FetchDwordEj:40938579
+_ZNK20TownsSpriteRAMAccess10FetchDwordEj:75032
+_ZNK16TownsOsROMAccess10FetchDwordEj:55552
+_ZNK23TownsVRAMAccessTemplateILj0EE10FetchDwordEj:9481
+_ZNK12MemoryAccess10FetchDwordEj:939
+_ZNK16NullMemoryAccess10FetchDwordEj:576
+_ZNK23TownsMappedSysROMAccess10FetchDwordEj:559
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE10StoreDwordER6MemoryiRKN12i486DXCommon15SegmentRegisterEjj
+# Func Hash:
+1100609214537253970
+# Num Counters:
+12
+# Counter Values:
+42630062
+1910476
+1910473
+35794497
+259
+55735
+55735
+0
+0
+0
+0
+935230
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:55735
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:55735
+6
+_ZN18TownsMainRAMAccess10StoreDwordEjj:32105038
+_ZN20TownsSpriteRAMAccess10StoreDwordEjj:5501924
+_ZN23TownsVRAMAccessTemplateILj0EE10StoreDwordEjj:3906236
+_ZN33TownsSinglePageVRAMAccessTemplateILj0E35TownsSinglePageVRAMAddressTransformE10StoreDwordEjj:1115712
+_ZN16NullMemoryAccess10StoreDwordEjj:576
+_ZN18TownsFMRVRAMAccess10StoreDwordEjj:576
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE14FetchImm16or32ERN12i486DXCommon11InstructionERN12MemoryAccess12ConstPointerERKNS2_15SegmentRegisterEjR6Memory
+# Func Hash:
+1096621590162319571
+# Num Counters:
+4
+# Counter Values:
+877
+6979
+2662168
+3903
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE15EvaluateOperandER6MemoryiiRKN12i486DXCommon7OperandEi
+# Func Hash:
+610385559323950681
+# Num Counters:
+38
+# Counter Values:
+1
+1
+1
+1
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+130498
+0
+0
+8984
+0
+3583890
+209904
+10620709
+1198168
+3987574
+0
+735318
+0
+0
+0
+0
+7630679
+2392684
+0
+0
+0
+0
+0
+0
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RedirectInterruptEjR6Memoryjjb
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+188471
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6MemoryR5InOut
+# Func Hash:
+842084304674684011
+# Num Counters:
+2681
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+153327
+340897
+103945
+0
+0
+13826
+29948
+86
+308
+7988
+0
+615
+1
+0
+7147
+4145
+0
+306
+17355797
+13195725
+200454
+7988
+615
+472209135
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+472209135
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+43663
+43263
+0
+0
+0
+0
+0
+0
+0
+29254
+0
+756
+0
+0
+0
+0
+0
+0
+80
+113191
+0
+0
+0
+39918
+0
+0
+0
+0
+0
+0
+8
+0
+0
+0
+4144
+156840
+0
+0
+0
+0
+0
+0
+0
+0
+0
+8
+0
+0
+2976
+26
+0
+0
+0
+0
+0
+0
+0
+7571
+25784
+323260
+4321064
+1495
+0
+7521
+6777
+24678
+321537
+4285803
+375
+0
+0
+350541
+3368127
+349778
+313861
+97059
+27979
+664969
+0
+0
+0
+0
+1
+678518
+528
+150917
+43516
+205651
+16410052
+746
+0
+0
+0
+0
+5
+0
+5131649
+0
+25776
+0
+0
+150246
+41459
+205601
+16050633
+155
+0
+0
+0
+0
+0
+0
+5124247
+9083
+0
+48752
+554130
+396
+21399310
+0
+30341
+354
+321669
+0
+3368052
+46919
+386
+10829
+535536
+322
+20531436
+0
+0
+0
+0
+0
+0
+0
+0
+8603
+0
+5
+0
+5131619
+0
+0
+0
+691995
+4779096
+24092
+0
+112734
+458074
+1120
+0
+15
+0
+0
+0
+0
+612047
+33152986
+2979314
+898809
+1921671
+735318
+1893422
+3557859
+1126240
+87384
+201554
+8984
+68602
+2560292
+13032
+0
+22185
+1900
+129792
+430356
+3310847
+0
+1995
+0
+205491
+41380
+0
+396282
+362343
+28
+610846
+342812
+0
+10842
+323675
+49141
+0
+22670
+0
+0
+2802576
+175704
+0
+202108
+230108
+3834
+17962
+218461
+372793
+2301379
+365484
+6637
+18446
+7138
+564246
+1312
+30707705
+384317
+0
+0
+0
+0
+150604
+205614
+243
+4314298
+375
+1017
+0
+0
+0
+0
+553832
+0
+21386952
+440706
+96
+66003
+0
+6
+801257
+209904
+270
+0
+0
+754482
+20
+0
+60913
+0
+210
+2
+0
+212
+9248
+52415
+0
+625369
+834278
+0
+210071
+4
+0
+1321715
+2278140
+0
+0
+0
+0
+0
+0
+3792354
+0
+0
+216516
+1
+1762
+4323265
+0
+95538
+96554
+518466
+0
+0
+0
+428716
+790192
+377678
+689
+22589
+18307
+1127
+490936
+535904
+728652
+983251
+88332
+0
+0
+57624
+36463
+18350526
+8246725
+0
+0
+1345632
+853331
+1867450
+83711
+796705
+1889071
+3051961
+313638
+1150588
+3925
+474262
+993
+0
+690273
+792392
+0
+0
+5
+0
+430597
+940568
+1181325
+123
+181122
+83536
+262780
+640990
+821429
+0
+247786
+407
+247786
+87
+718946
+0
+0
+145811
+75186
+75173
+336292
+2
+0
+901973
+1652467
+82427
+918452
+5725
+2375945
+197313
+242775
+200249
+3233215
+0
+60784
+101474
+162988
+0
+0
+1175
+4025
+0
+0
+20263
+343733
+151
+66760
+65419
+77293
+2
+14825
+198
+0
+288035
+1129228
+133776
+21651
+29
+45
+133654
+98
+0
+0
+39254
+6019
+63927
+101835
+430542
+872300
+0
+0
+591
+0
+239180
+90863
+706077
+4
+4
+128142
+815703
+53347
+18154
+2110732
+124350
+317534
+211142
+0
+0
+22674
+0
+29514
+37543
+128800
+822178
+72066
+0
+0
+0
+0
+0
+0
+0
+1988
+174232
+300295
+0
+8859185
+97618
+0
+0
+0
+942839
+4579938
+3890
+8538
+897438
+16
+112768
+0
+0
+902336
+1667897
+674
+0
+0
+0
+1146448
+34907
+226491
+683649
+129481
+18866
+103
+60684
+1024788
+0
+546801
+0
+0
+0
+24735
+7482
+75524
+0
+1475084
+22617
+126637
+195634
+327927
+11
+5
+7921
+0
+7921
+7921
+251346
+0
+5
+47320
+64
+0
+503548
+3441186
+489171
+277005
+489171
+415580
+1019199
+867560
+265626
+0
+3822106
+0
+0
+360144
+2980563
+2902
+13611
+57360
+0
+138470
+800341
+209904
+0
+2405972
+575938
+724648
+190321
+1305176
+9820867
+5085441
+496525
+747260
+0
+0
+6
+0
+828
+111625
+1892128
+3638422
+981
+11
+88536
+339784
+172195
+1127638
+406
+0
+2015889
+3414479
+128220
+102017
+1509307
+1396663
+272800
+1424715
+80
+316978
+548573
+177348
+30941764
+7819553
+99476
+257836
+3
+3
+131
+437717
+3055375
+374306
+3055375
+0
+106781
+3623658
+380930
+743580
+0
+120115
+120770
+0
+0
+0
+1160
+0
+1160
+196341
+463407
+0
+14
+1404
+735691
+206615
+1311131
+0
+0
+0
+0
+0
+0
+0
+41466
+8192
+16182577
+155
+519
+0
+0
+0
+0
+0
+0
+0
+0
+0
+176
+2914
+0
+112768
+6311
+0
+1508
+66329
+0
+0
+0
+0
+0
+0
+29571
+0
+0
+3
+240291
+0
+0
+0
+0
+3623138
+0
+6311
+0
+0
+0
+0
+0
+79372
+0
+0
+3
+0
+0
+6242237
+2081209
+109477
+3472
+0
+4
+0
+634305
+0
+103
+0
+0
+0
+2654405
+10842
+0
+1407998
+13
+0
+24
+21697
+0
+0
+3
+2
+0
+0
+1751
+0
+0
+0
+0
+0
+0
+0
+112768
+16
+112768
+0
+0
+1424513
+0
+814315
+4040
+0
+123191
+3679
+0
+181608
+6158
+55032
+92
+206
+0
+0
+0
+1237
+0
+0
+198
+0
+0
+562278
+0
+562278
+562278
+0
+127966
+2769663
+0
+0
+4429315
+1615437
+164600
+13144
+23884
+3219
+0
+0
+0
+21471
+38364
+0
+0
+1249534
+5926802
+163730
+928579
+15403
+62074
+5491676
+17691432
+0
+576525
+126348
+3563
+281
+99
+87
+33152986
+4145
+667226
+7147
+178
+27427
+612047
+0
+0
+0
+0
+0
+0
+0
+0
+764
+502708
+8313
+0
+154937
+1721881
+34351
+5525538
+0
+0
+0
+0
+0
+0
+718
+0
+610080
+610080
+610080
+610080
+610080
+610080
+0
+610080
+743637
+0
+0
+0
+0
+81
+0
+7789
+0
+886
+979
+576
+1044
+4445
+6252
+1824
+4544
+13
+362
+13
+507
+105
+615
+6326
+4
+4
+98
+411332
+0
+9421
+0
+0
+0
+8
+3106
+831
+0
+0
+0
+74558
+3955
+35777
+0
+0
+0
+0
+0
+0
+120851
+0
+0
+0
+11500
+851571
+31870
+87463
+131475
+9
+8
+467200
+148
+0
+0
+9277
+5955964
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1670093
+0
+0
+0
+121614
+129729
+548789
+0
+0
+0
+0
+43567
+57268
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+35493
+84
+4727
+0
+0
+61
+759
+0
+0
+2184
+2370
+0
+372
+0
+4
+363
+0
+636
+0
+108
+293
+43265
+168874
+43265
+0
+432
+10423667
+13941745
+86582
+0
+9504
+11584
+0
+18
+0
+353
+68
+308
+0
+0
+1708316
+4076524
+0
+0
+0
+0
+0
+0
+0
+186
+2428
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+8
+8
+554684
+0
+0
+1366987
+0
+4211317
+66063
+6300673
+0
+0
+14
+0
+0
+0
+0
+184
+0
+0
+0
+0
+1615437
+0
+0
+0
+0
+0
+0
+262703
+0
+0
+9
+0
+0
+0
+43263
+43263
+43266
+0
+3623138
+0
+0
+4
+0
+0
+0
+0
+1430
+2130
+1639
+332474
+6560
+0
+0
+606245
+350061
+7966
+374590
+437392
+884323
+4
+103254
+0
+1856
+4442
+10
+169198
+8
+2841210
+0
+74869
+71506
+3910600
+0
+9535561
+119939
+0
+3254782
+534016
+9590276
+134506
+819784
+1894761
+1
+9620
+691648
+6062269
+14604
+130287
+129797
+93
+93
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+267
+0
+0
+0
+0
+0
+0
+0
+0
+993
+0
+0
+0
+0
+143
+22531
+20
+15685887
+776
+0
+246535
+322967
+14770
+18425
+1066600
+0
+0
+542302
+4499
+1366987
+120098
+69485
+6039
+31155
+26205
+72602
+0
+186
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+184
+0
+0
+374590
+0
+0
+634
+68332
+15940
+1228
+34908
+0
+0
+0
+0
+0
+0
+154814
+0
+0
+0
+0
+0
+13
+0
+0
+0
+0
+0
+0
+353
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+342439
+326166
+0
+0
+486
+3209
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+139917
+614514
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+104
+0
+0
+0
+0
+129625
+129625
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+14
+0
+0
+350061
+0
+1801573
+0
+0
+0
+0
+0
+826207
+90033
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+86624
+86534
+43663
+43263
+1091724
+840641
+819981
+3178165
+0
+41353
+146353
+11952
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+143
+0
+542302
+0
+69485
+8
+0
+31155
+1832
+58399
+49251
+251599
+0
+0
+6390
+46
+98
+756
+88248
+0
+68332
+0
+0
+0
+2
+0
+45934
+50618
+438
+0
+0
+47925
+12
+10
+371671
+98848
+5543
+726502
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+342439
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2310
+866
+0
+0
+0
+93
+0
+0
+0
+24508
+23433
+582812
+23433
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+60231
+26
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+15
+0
+43266
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+58287
+1980
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1091724
+840641
+819981
+3178165
+0
+17362
+0
+855381
+0
+0
+3339
+22916
+442996
+2203143
+311936
+1248574
+893981
+1176708
+13880
+1463
+6511
+155558
+3871
+0
+432
+0
+0
+0
+35475
+663070
+108609
+103440
+0
+0
+0
+0
+0
+0
+19
+2
+0
+0
+5195
+61768
+10187
+306
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3249
+0
+11355
+0
+0
+0
+3233
+725636
+2310
+866
+0
+0
+0
+24508
+0
+0
+23433
+0
+0
+0
+0
+0
+0
+0
+3249
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+9
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+43240
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+9
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+20592
+0
+0
+26877
+21291
+0
+0
+1351
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2818
+0
+0
+38459
+18
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1533
+8202
+3741
+18910
+0
+0
+1452
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2188099
+54
+630
+72
+0
+0
+0
+0
+0
+66935
+1
+1522
+12278
+14
+0
+0
+0
+9248
+9248
+60913
+60913
+216516
+216516
+52415
+52415
+0
+0
+1762
+1762
+20
+20
+173610
+173610
+0
+0
+0
+4735
+0
+1340
+0
+340855
+0
+4125
+0
+0
+0
+795
+0
+3688
+3219
+3219
+702873
+702873
+55124
+55124
+2898061
+2898061
+1237
+1237
+126870
+126870
+59835
+59835
+206
+206
+1134
+3088226
+225467
+2862080
+523
+199447
+624790
+0
+0
+0
+0
+0
+0
+194822
+0
+306
+3186
+0
+0
+0
+362343
+60
+0
+1385
+0
+0
+0
+0
+674
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+407339
+3
+7090929
+0
+104
+423917
+0
+1932365
+3998146
+97601
+276506
+7966
+0
+26580
+0
+14739510
+14739510
+14452359
+14452359
+3669946
+9525779
+81638
+72446
+0
+119998
+0
+186
+0
+0
+0
+0
+14
+0
+0
+6
+732020
+192538
+321537
+1627
+4285803
+6599
+150604
+150246
+906
+41459
+2055
+205614
+205601
+114
+16050633
+223535
+2130631
+11584
+11584
+11584
+0
+0
+0
+430542
+377533
+489171
+1160
+7469
+6777
+24678
+0
+0
+0
+0
+0
+5124247
+43263
+43263
+0
+0
+0
+0
+0
+0
+0
+0
+0
+343486
+767
+97
+46919
+1836
+375
+386
+10
+14238
+13355
+178011
+7954
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+0
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17StoreOperandValueERKN12i486DXCommon7OperandER6MemoryiiRKNS2_12OperandValueE
+# Func Hash:
+276344552716232699
+# Num Counters:
+43
+# Counter Values:
+1
+1
+1
+1
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+8017028
+17962
+0
+778782
+0
+4494005
+915765
+219373
+68544
+2301379
+0
+0
+0
+496104
+0
+0
+3190161
+828217
+345830
+0
+0
+0
+0
+0
+0
+0
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE18FetchOperand16or32ERN12i486DXCommon11InstructionERN12MemoryAccess12ConstPointerERKNS2_15SegmentRegisterEjR6Memory
+# Func Hash:
+1096621590162319571
+# Num Counters:
+4
+# Counter Values:
+331
+0
+0
+0
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE18GetOperandPointer8ER6MemoryiiRKN12i486DXCommon7OperandEb
+# Func Hash:
+749077306731365513
+# Num Counters:
+21
+# Counter Values:
+8639479
+15691950
+631598
+15691950
+15691950
+461867
+10320598
+568
+568
+47038
+47038
+0
+0
+0
+0
+0
+0
+0
+0
+4861512
+6
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+5
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:568
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:568
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:47038
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:47038
+2
+_ZN18TownsMainRAMAccess15GetMemoryWindowEj:15691944
+_ZN12MemoryAccess15GetMemoryWindowEj:6
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE19GetOperandPointer16ER6MemoryiiRKN12i486DXCommon7OperandEb
+# Func Hash:
+142120596072226521
+# Num Counters:
+22
+# Counter Values:
+4639238
+9195860
+5926501
+9195860
+9195860
+9195860
+4718166
+2719100
+2880
+2880
+66483
+66483
+0
+0
+0
+0
+0
+0
+0
+0
+2076199
+13
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+5
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:2880
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:2880
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:66483
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:66483
+2
+_ZN18TownsMainRAMAccess15GetMemoryWindowEj:9195847
+_ZN12MemoryAccess15GetMemoryWindowEj:13
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE19GetOperandPointer32ER6MemoryiiRKN12i486DXCommon7OperandEb
+# Func Hash:
+142120594621577063
+# Num Counters:
+22
+# Counter Values:
+25755547
+15359531
+6930810
+15359531
+15359531
+15359387
+6857686
+8412782
+6171
+6171
+15022
+15022
+0
+0
+0
+0
+0
+0
+0
+0
+99760
+288
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+5
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:6171
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:6171
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:15022
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:15022
+2
+_ZN18TownsMainRAMAccess15GetMemoryWindowEj:15359099
+_ZN12MemoryAccess15GetMemoryWindowEj:288
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE21GetStackAccessPointerER6Memoryjj
+# Func Hash:
+225415999797517796
+# Num Counters:
+13
+# Counter Values:
+55186954
+55177027
+504165
+55090480
+55177027
+305222
+59140
+59140
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:59140
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:59140
+1
+_ZN18TownsMainRAMAccess15GetMemoryWindowEj:504165
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE22GetInterruptDescriptorEjR6Memory
+# Func Hash:
+844982798061698008
+# Num Counters:
+4
+# Counter Values:
+190060
+0
+190060
+190060
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE23GetOperandPointer16or32ER6MemoryiiRKN12i486DXCommon7OperandEb
+# Func Hash:
+421853594375540697
+# Num Counters:
+23
+# Counter Values:
+69873
+160455
+179534
+179534
+179534
+179534
+179534
+171255
+0
+25
+25
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+137764
+9504
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+5
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:25
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:25
+0
+0
+2
+_ZN18TownsMainRAMAccess15GetMemoryWindowEj:170030
+_ZN12MemoryAccess15GetMemoryWindowEj:9504
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE24EvaluateOperandRegOrMem8ER6MemoryiiRKN12i486DXCommon7OperandE
+# Func Hash:
+942389667449461396
+# Num Counters:
+3
+# Counter Values:
+7510571
+5385340
+2152317
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE25EvaluateOperandRegOrMem16ER6MemoryiiRKN12i486DXCommon7OperandE
+# Func Hash:
+238984481002779099
+# Num Counters:
+3
+# Counter Values:
+4303946
+0
+11237991
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE25EvaluateOperandRegOrMem32ER6MemoryiiRKN12i486DXCommon7OperandE
+# Func Hash:
+238984481002779099
+# Num Counters:
+3
+# Counter Values:
+0
+13246151
+13540977
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE26StoreOperandValueRegOrMem8ERKN12i486DXCommon7OperandER6Memoryiih
+# Func Hash:
+146835647075900052
+# Num Counters:
+2
+# Counter Values:
+0
+3557859
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE27StoreOperandValueRegOrMem16ERKN12i486DXCommon7OperandER6Memoryiit
+# Func Hash:
+238984481002779099
+# Num Counters:
+3
+# Counter Values:
+0
+0
+9820867
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE27StoreOperandValueRegOrMem32ERKN12i486DXCommon7OperandER6Memoryiij
+# Func Hash:
+238984481002779099
+# Num Counters:
+3
+# Counter Values:
+0
+0
+5085441
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE32EvaluateOperandReg16OrReg32OrMemER6MemoryiiRKN12i486DXCommon7OperandEi
+# Func Hash:
+391331302025135506
+# Num Counters:
+7
+# Counter Values:
+0
+121157
+51002
+936003
+15654
+105503
+0
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE37GetConstMemoryWindowFromLinearAddressEjR6Memory
+# Func Hash:
+730887931929889608
+# Num Counters:
+9
+# Counter Values:
+12841976
+11006259
+473235
+473235
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:473235
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:473235
+3
+_ZNK18TownsMainRAMAccess20GetConstMemoryWindowEj:12830350
+_ZNK23TownsMappedSysROMAccess20GetConstMemoryWindowEj:11319
+_ZNK17TownsSysROMAccess20GetConstMemoryWindowEj:307
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE3PopERjS2_R6Memoryj
+# Func Hash:
+11922955087259859
+# Num Counters:
+5
+# Counter Values:
+489171
+277005
+0
+0
+489171
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE3PopERjS2_S2_R6Memoryj
+# Func Hash:
+11922955087259859
+# Num Counters:
+5
+# Counter Values:
+168874
+605327
+0
+216
+212139
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE4JMPFER6Memorytttjt
+# Func Hash:
+685250119902114118
+# Num Counters:
+25
+# Counter Values:
+0
+0
+0
+0
+0
+0
+43573
+100841
+82829
+0
+0
+0
+0
+0
+57268
+0
+0
+0
+0
+0
+0
+0
+0
+0
+100841
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE4PushER6Memoryjjj
+# Func Hash:
+290495009815043945
+# Num Counters:
+5
+# Counter Values:
+460706
+887050
+0
+23
+461142
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE4PushER6Memoryjjjj
+# Func Hash:
+290495009815043945
+# Num Counters:
+5
+# Counter Values:
+49077
+1400544
+0
+9684
+49949
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE5CALLFER6Memorytttjt
+# Func Hash:
+522568735119779549
+# Num Counters:
+43
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+0
+276989
+0
+0
+0
+459944
+276989
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+276989
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+2
+0
+0
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE5Pop16ER6Memory
+# Func Hash:
+942389667449461396
+# Num Counters:
+3
+# Counter Values:
+5929285
+0
+5211243
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE5Pop32ER6Memory
+# Func Hash:
+942389667449461396
+# Num Counters:
+3
+# Counter Values:
+20873022
+2
+280990
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6Push16ER6Memoryj
+# Func Hash:
+942389667449461396
+# Num Counters:
+3
+# Counter Values:
+6738220
+0
+5843269
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6Push32ER6Memoryj
+# Func Hash:
+942389667449461396
+# Num Counters:
+3
+# Counter Values:
+17298746
+2
+353288
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9FetchByteEjRKN12i486DXCommon15SegmentRegisterEjR6Memory
+# Func Hash:
+225416000566199137
+# Num Counters:
+12
+# Counter Values:
+0
+540653
+18847990
+298623
+13492871
+67422
+67422
+0
+0
+0
+0
+6090034
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:67422
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:67422
+8
+_ZNK18TownsMainRAMAccess9FetchByteEj:18549367
+_ZNK23TownsVRAMAccessTemplateILj0EE9FetchByteEj:174891
+_ZNK16TownsOsROMAccess9FetchByteEj:77313
+_ZNK23TownsMappedSysROMAccess9FetchByteEj:36958
+_ZNK18TownsFMRVRAMAccess9FetchByteEj:8640
+_ZNK17TownsSysROMAccess9FetchByteEj:777
+_ZNK20TownsSpriteRAMAccess9FetchByteEj:32
+_ZNK33TownsMappedDICROMandCMOSRAMAccess9FetchByteEj:12
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9FetchWordEjRKN12i486DXCommon15SegmentRegisterEjR6Memory
+# Func Hash:
+178023599433749998
+# Num Counters:
+15
+# Counter Values:
+21662199
+0
+20262542
+1360522
+1360522
+199338
+18356309
+39135
+164634
+164634
+0
+0
+0
+0
+2962019
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:164634
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:164634
+6
+_ZNK18TownsMainRAMAccess9FetchWordEj:20063204
+_ZNK23TownsVRAMAccessTemplateILj0EE9FetchWordEj:197874
+_ZNK23TownsMappedSysROMAccess9FetchWordEj:851
+_ZNK20TownsSpriteRAMAccess9FetchWordEj:341
+_ZNK12MemoryAccess9FetchWordEj:259
+_ZNK18TownsFMRVRAMAccess9FetchWordEj:13
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9InterruptEjR6Memoryjjb
+# Func Hash:
+368663976196107042
+# Num Counters:
+65
+# Counter Values:
+0
+0
+0
+0
+47553
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+190060
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+190060
+190060
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+22561
+8454
+190060
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:47553
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9StoreByteER6MemoryiRKN12i486DXCommon15SegmentRegisterEjh
+# Func Hash:
+171139386400136379
+# Num Counters:
+10
+# Counter Values:
+182358
+13061368
+11468078
+24542
+24542
+0
+0
+0
+0
+2214387
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:24542
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:24542
+5
+_ZN18TownsMainRAMAccess9StoreByteEjh:11581453
+_ZN23TownsVRAMAccessTemplateILj0EE9StoreByteEjh:733152
+_ZN18TownsWaveRAMAccess9StoreByteEjh:679284
+_ZN18TownsFMRVRAMAccess9StoreByteEjh:67477
+_ZN16TownsOsROMAccess9StoreByteEjh:2
+
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9StoreWordER6MemoryiRKN12i486DXCommon15SegmentRegisterEjj
+# Func Hash:
+1100609214537253970
+# Num Counters:
+12
+# Counter Values:
+14933244
+295118
+295118
+13951701
+0
+21381
+21381
+0
+0
+0
+0
+1270044
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:21381
+1
+_ZNK18TownsMainRAMAccess10FetchDwordEj:21381
+4
+_ZN18TownsMainRAMAccess9StoreWordEjj:14834041
+_ZN23TownsVRAMAccessTemplateILj0EE9StoreWordEjj:58639
+_ZN20TownsSpriteRAMAccess9StoreWordEjj:36244
+_ZN18TownsFMRVRAMAccess9StoreWordEjj:4320
+
+_ZN20TownsSpriteRAMAccess10StoreDwordEjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+5501924
+
+_ZN20TownsSpriteRAMAccess9StoreWordEjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+36244
+
+_ZN20TownsStartParametersC2Ev
+# Func Hash:
+574091927662794528
+# Num Counters:
+27
+# Counter Values:
+9
+18
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN20TownsStartParametersD2Ev
+# Func Hash:
+657568768015104287
+# Num Counters:
+25
+# Counter Values:
+6
+21
+12
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+0
+0
+0
+
+_ZN23TownsVRAMAccessTemplateILj0EE10StoreDwordEjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3906236
+
+_ZN23TownsVRAMAccessTemplateILj0EE9StoreByteEjh
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+733152
+
+_ZN23TownsVRAMAccessTemplateILj0EE9StoreWordEjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+58639
+
+_ZN33TownsSinglePageVRAMAccessTemplateILj0E35TownsSinglePageVRAMAddressTransformE10StoreDwordEjj
+# Func Hash:
+146835647075900052
+# Num Counters:
+2
+# Counter Values:
+0
+1115712
+
+_ZN5InOut3In8Ej
+# Func Hash:
+681106900128785138
+# Num Counters:
+9
+# Counter Values:
+0
+33765033
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+2
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+17
+_ZN9TownsCRTC10IOReadByteEj:21885565
+_ZN10TownsCDROM10IOReadByteEj:5837925
+_ZN8TownsFDC10IOReadByteEj:4113771
+_ZN9TownsSCSI10IOReadByteEj:696940
+_ZN10TownsSound10IOReadByteEj:314467
+_ZThn96_N13FMTownsCommon10IOReadByteEj:295129
+_ZN8TownsRTC10IOReadByteEj:203492
+_ZN13TownsGamePort10IOReadByteEj:151151
+_ZN19TownsPhysicalMemory10IOReadByteEj:136886
+_ZN8TownsPIC10IOReadByteEj:90056
+_ZN10TownsTimer10IOReadByteEj:26960
+_ZN9TownsDMAC10IOReadByteEj:11329
+_ZN11TownsSprite10IOReadByteEj:1086
+_ZN15TownsHighResPCM10IOReadByteEj:174
+_ZN6Device10IOReadByteEj:48
+_ZN15TownsSerialPort10IOReadByteEj:34
+_ZN13TownsKeyboard10IOReadByteEj:20
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZN5InOut4In16Ej
+# Func Hash:
+681106900128785138
+# Num Counters:
+9
+# Counter Values:
+0
+3623142
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+2
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+3
+_ZN6Device10IOReadWordEj:3623137
+_ZThn96_N13FMTownsCommon10IOReadWordEj:4
+_ZN19TownsPhysicalMemory10IOReadWordEj:1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZN5InOut4Out8Ejj
+# Func Hash:
+681106900128785138
+# Num Counters:
+9
+# Counter Values:
+0
+6206709
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+2
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+17
+_ZN6Device11IOWriteByteEjj:3752279
+_ZN8TownsRTC11IOWriteByteEjj:610200
+_ZN8TownsPIC11IOWriteByteEjj:441200
+_ZThn96_N13FMTownsCommon11IOWriteByteEjj:395262
+_ZN10TownsSound11IOWriteByteEjj:334842
+_ZN9TownsCRTC11IOWriteByteEjj:217964
+_ZN19TownsPhysicalMemory11IOWriteByteEjj:202651
+_ZN13TownsGamePort11IOWriteByteEjj:135244
+_ZN10TownsCDROM11IOWriteByteEjj:33953
+_ZN9TownsDMAC11IOWriteByteEjj:32598
+_ZN10TownsTimer11IOWriteByteEjj:26979
+_ZN11TownsSprite11IOWriteByteEjj:20950
+_ZN15TownsHighResPCM11IOWriteByteEjj:1353
+_ZN8TownsFDC11IOWriteByteEjj:1096
+_ZN15TownsSerialPort11IOWriteByteEjj:76
+_ZN9TownsSCSI11IOWriteByteEjj:52
+_ZN13TownsKeyboard11IOWriteByteEjj:10
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZN5InOut5Out16Ejj
+# Func Hash:
+681106900128785138
+# Num Counters:
+9
+# Counter Values:
+0
+7819
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+2
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+3
+_ZN6Device11IOWriteWordEjj:6528
+_ZN9TownsCRTC11IOWriteWordEjj:1279
+_ZN19TownsPhysicalMemory11IOWriteWordEjj:12
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZN5InOut5Out32Ejj
+# Func Hash:
+681106900128785138
+# Num Counters:
+9
+# Counter Values:
+0
+66329
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+2
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+2
+_ZN9TownsCRTC12IOWriteDwordEjj:66112
+_ZN6Device12IOWriteDwordEjj:217
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZN5InOut9AddDeviceEP6Devicej
+# Func Hash:
+784007059655560962
+# Num Counters:
+2
+# Counter Values:
+759
+759
+
+_ZN5InOut9AddDeviceEP6Devicejj
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+12408
+15
+
+_ZN5InOutC2Ev
+# Func Hash:
+653247342419232034
+# Num Counters:
+11
+# Counter Values:
+196608
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN5InOutD2Ev
+# Func Hash:
+694937219909695662
+# Num Counters:
+5
+# Counter Values:
+0
+196608
+3
+0
+3
+
+_ZN5i825111VMWriteDataEhx
+# Func Hash:
+212526876123949159
+# Num Counters:
+2
+# Counter Values:
+2
+2
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZN15TownsSerialPort13DefaultClient2TxEh:2
+
+_ZN5i825115VMWriteCommnandEh
+# Func Hash:
+1063355336116296164
+# Num Counters:
+8
+# Counter Values:
+2
+2
+2
+6
+4
+2
+6
+2
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+6
+1
+_ZN15TownsSerialPort13DefaultClient9SetParityEbb:2
+1
+_ZN15TownsSerialPort13DefaultClient13SetDataLengthEh:2
+1
+_ZN15TownsSerialPort13DefaultClient11SetStopBitsEh:2
+1
+_ZN15TownsSerialPort13DefaultClient9SetParityEbb:2
+1
+_ZN15TownsSerialPort13DefaultClient13SetDataLengthEh:2
+1
+_ZN15TownsSerialPort13DefaultClient7CommandEbbb:6
+
+_ZN5i82515ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+90
+
+_ZN5i82516UpdateEx
+# Func Hash:
+287486625174582707
+# Num Counters:
+6
+# Counter Values:
+20
+0
+8
+20
+0
+8
+
+_ZN5i8251C2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+45
+
+_ZN5i82535ResetEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+9
+3
+
+_ZN5i82536TickInEj
+# Func Hash:
+1107865778924139274
+# Num Counters:
+10
+# Counter Values:
+75366393
+0
+0
+0
+0
+0
+0
+25122131
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+0
+
+_ZN5i82537PowerOnEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+9
+3
+
+_ZN6Device10IOReadByteEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+48
+
+_ZN6Device10IOReadWordEj
+# Func Hash:
+567090795815895039
+# Num Counters:
+1
+# Counter Values:
+3623142
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+2
+3
+_ZN9TownsCRTC10IOReadByteEj:3623137
+_ZThn96_N13FMTownsCommon10IOReadByteEj:4
+_ZN19TownsPhysicalMemory10IOReadByteEj:1
+3
+_ZN9TownsCRTC10IOReadByteEj:3623137
+_ZThn96_N13FMTownsCommon10IOReadByteEj:4
+_ZN19TownsPhysicalMemory10IOReadByteEj:1
+
+_ZN6Device11IOWriteByteEjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3752279
+
+_ZN6Device11IOWriteWordEjj
+# Func Hash:
+567090795815895039
+# Num Counters:
+1
+# Counter Values:
+6528
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+2
+2
+_ZN9TownsDMAC11IOWriteByteEjj:6311
+_ZN15TownsHighResPCM11IOWriteByteEjj:217
+2
+_ZN9TownsDMAC11IOWriteByteEjj:6311
+_ZN15TownsHighResPCM11IOWriteByteEjj:217
+
+_ZN6Device12IOWriteDwordEjj
+# Func Hash:
+927006190477508607
+# Num Counters:
+1
+# Counter Values:
+217
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+4
+1
+_ZN15TownsHighResPCM11IOWriteByteEjj:217
+1
+_ZN15TownsHighResPCM11IOWriteByteEjj:217
+1
+_ZN15TownsHighResPCM11IOWriteByteEjj:217
+1
+_ZN15TownsHighResPCM11IOWriteByteEjj:217
+
+_ZN6Device5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+6
+
+_ZN6Device7PowerOnEv
+# Func Hash:
+170957022131388415
+# Num Counters:
+1
+# Counter Values:
+18
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+6
+_ZN12i486DXCommon5ResetEv:3
+_ZN19TownsPhysicalMemory5ResetEv:3
+_ZN8TownsFDC5ResetEv:3
+_ZN9TownsCRTC5ResetEv:3
+_ZN13TownsKeyboard5ResetEv:3
+_ZN6Device5ResetEv:3
+
+_ZN6DeviceC2EP6VMBase
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+69
+
+_ZN6Memory12RemoveAccessEjj
+# Func Hash:
+798733567960582082
+# Num Counters:
+4
+# Counter Values:
+0
+0
+2958119
+43395
+
+_ZN6Memory7CleanUpEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+3145728
+3
+
+_ZN6Memory9AddAccessEP12MemoryAccessjj
+# Func Hash:
+123569782529343389
+# Num Counters:
+11
+# Counter Values:
+0
+0
+3504501
+173570
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+0
+0
+0
+
+_ZN6MemoryC2Ev
+# Func Hash:
+599005164575225273
+# Num Counters:
+8
+# Counter Values:
+3145728
+0
+3
+0
+0
+0
+0
+0
+
+_ZN6RF5C6810SetIRQBankEj
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+211
+42
+
+_ZN6RF5C6813WriteRegisterEhhm
+# Func Hash:
+974670605230904621
+# Num Counters:
+6
+# Counter Values:
+0
+41389
+0
+0
+0
+0
+
+_ZN6RF5C6816WriteIRQBankMaskEh
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+87
+
+_ZN6RF5C6819ReallyWriteRegisterEjjm
+# Func Hash:
+3603320272438498
+# Num Counters:
+17
+# Counter Values:
+270
+1064
+140
+0
+41389
+178
+403
+40
+178
+170
+15550
+205
+205
+392
+22245
+2215
+22412
+
+_ZN6RF5C6820AddWaveForNumSamplesEPhjim
+# Func Hash:
+276762106095145350
+# Num Counters:
+41
+# Counter Values:
+0
+7392621
+1779057
+1779057
+0
+0
+0
+5614571
+3104640
+5613564
+0
+1007
+3104640
+3104640
+0
+0
+816079
+181
+0
+0
+1637993
+1637993
+5613564
+763
+1007
+0
+14096
+1466647
+14096
+0
+0
+11649
+14096
+7733
+1762
+1466649
+1247977
+1247977
+0
+0
+3105628
+
+_ZN6RF5C685ClearEv
+# Func Hash:
+1124680652362269767
+# Num Counters:
+3
+# Counter Values:
+589824
+72
+9
+
+_ZN6RF5C68C2Ev
+# Func Hash:
+303685791329541372
+# Num Counters:
+10
+# Counter Values:
+21
+0
+3
+0
+0
+0
+0
+0
+0
+0
+
+_ZN6VMBase16CacheDeviceIndexEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+63
+3
+
+_ZN6VMBase22ScheduleDeviceCallBackER6Devicex
+# Func Hash:
+1063705160746808702
+# Num Counters:
+3
+# Counter Values:
+43863
+38005
+14679
+
+_ZN6VMBase24UnscheduleDeviceCallBackER6Device
+# Func Hash:
+238984481596976647
+# Num Counters:
+3
+# Counter Values:
+39524
+38002
+12959
+
+_ZN6VMBase7Device0C2EPS_
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN6VMBaseC2Ev
+# Func Hash:
+689355213093959377
+# Num Counters:
+17
+# Counter Values:
+0
+0
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+1
+0:3
+
+_ZN6VMBaseD2Ev
+# Func Hash:
+974670607639850399
+# Num Counters:
+6
+# Counter Values:
+63
+3
+3
+3
+0
+0
+
+_ZN6YM261213CheckToneDoneEj
+# Func Hash:
+599005162992790430
+# Num Counters:
+10
+# Counter Values:
+8
+726
+100
+25
+60
+25
+666
+22008
+21282
+25
+
+_ZN6YM261213UpdateReleaseERKNS_7ChannelERNS_4SlotE
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+468
+
+_ZN6YM261213WriteRegisterEjjjm
+# Func Hash:
+238984482422036564
+# Num Counters:
+3
+# Counter Values:
+143494
+146671
+3177
+
+_ZN6YM261218UpdateSlotEnvelopeEjj
+# Func Hash:
+694937218556235124
+# Num Counters:
+6
+# Counter Values:
+64
+0
+0
+0
+0
+0
+
+_ZN6YM261219MakeWaveForNSamplesEPhjPjym
+# Func Hash:
+798733566896545641
+# Num Counters:
+4
+# Counter Values:
+40
+247
+0
+0
+
+_ZN6YM261219MakeWaveForNSamplesEPhym
+# Func Hash:
+1124680650144255556
+# Num Counters:
+3
+# Counter Values:
+1722
+701
+287
+
+_ZN6YM261219ReallyWriteRegisterEjjjm
+# Func Hash:
+118917597054265856
+# Num Counters:
+51
+# Counter Values:
+19
+0
+0
+146671
+2721
+0
+0
+0
+0
+0
+0
+0
+143474
+456
+0
+260
+260
+56
+277
+59
+236
+277
+260
+1
+59
+0
+48
+16
+0
+452
+3
+3
+135316
+17072
+381
+532
+0
+53
+48
+48
+288
+120
+0
+0
+0
+0
+0
+0
+0
+0
+261
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZN6YM261220MakeDB100to4095ScaleEv
+# Func Hash:
+1124680650655923454
+# Num Counters:
+3
+# Counter Values:
+28803
+12285
+3
+
+_ZN6YM261221MakeRegWriteCaseTableEv
+# Func Hash:
+446858652886492854
+# Num Counters:
+21
+# Counter Values:
+3
+3
+3
+21
+18
+333
+405
+3
+252
+36
+9
+9
+9
+9
+36
+36
+36
+36
+36
+36
+36
+
+_ZN6YM261221UpdatePhase12StepSlotERNS_7ChannelE
+# Func Hash:
+11922954556640807
+# Num Counters:
+6
+# Counter Values:
+1108
+1026
+277
+1
+0
+1026
+
+_ZN6YM261221WriteRegisterScheduleEjjjm
+# Func Hash:
+635500208148592571
+# Num Counters:
+8
+# Counter Values:
+0
+3152
+25
+22
+25
+0
+0
+25
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+8
+513:4
+0:3
+16:3
+32:3
+64:3
+128:3
+256:3
+512:3
+
+_ZN6YM261224CheckToneDoneAllChannelsEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+22008
+3668
+
+_ZN6YM261227MakeWaveForNSamplesTemplateINS_10WithoutLFOENS_13WithSchedulerE10WordOp_SetEExPhjPjym
+# Func Hash:
+76346326784578434
+# Num Counters:
+17
+# Counter Values:
+0
+1166004
+48396
+0
+1161
+0
+0
+1482
+409248
+698
+1859
+0
+47286
+247
+409263
+0
+0
+
+_ZN6YM261227MakeWaveForNSamplesTemplateINS_7WithLFOENS_13WithSchedulerE10WordOp_SetEExPhjPjym
+# Func Hash:
+1044887270701669908
+# Num Counters:
+21
+# Counter Values:
+70560
+0
+70560
+0
+0
+70560
+0
+27260
+530
+0
+0
+240
+35280
+788
+1318
+0
+26749
+40
+35300
+0
+0
+
+_ZN6YM26123RunEy
+# Func Hash:
+896858936734930400
+# Num Counters:
+11
+# Counter Values:
+25122131
+3
+25122131
+5795655
+15368259
+135805
+18935
+135805
+18935
+0
+0
+
+_ZN6YM26125KeyOnEjj
+# Func Hash:
+1073436550995343312
+# Num Counters:
+12
+# Counter Values:
+212
+172
+106
+212
+0
+40
+53
+53
+53
+2
+0
+106
+
+_ZN6YM26125ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN6YM26125State5ResetEv
+# Func Hash:
+393568427079170551
+# Num Counters:
+12
+# Counter Values:
+4608
+216
+54
+27
+27
+27
+27
+18
+18
+18
+54
+9
+
+_ZN6YM26126KeyOffEjj
+# Func Hash:
+844982800129858751
+# Num Counters:
+4
+# Counter Values:
+180
+180
+48
+45
+
+_ZN6YM26127Channel5ClearEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+216
+54
+
+_ZN6YM26127PowerOnEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN6YM2612C2Ev
+# Func Hash:
+521810678516500437
+# Num Counters:
+20
+# Counter Values:
+15
+12285
+12288
+12288
+384
+45
+12291
+28803
+12288
+3
+3
+3
+3
+3
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+** External Symbol **:3
+
+_ZN6YM2612D2Ev
+# Func Hash:
+694937219909695662
+# Num Counters:
+5
+# Counter Values:
+0
+0
+3
+3
+0
+
+_ZN7D77FileC2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+12
+
+_ZN7D77FileD2Ev
+# Func Hash:
+93478049774058527
+# Num Counters:
+6
+# Counter Values:
+0
+0
+0
+12
+0
+0
+
+_ZN7FileSys10FindStructC2Ev
+# Func Hash:
+238984484201432128
+# Num Counters:
+3
+# Counter Values:
+768
+0
+0
+
+_ZN7FileSys10FindStructD2Ev
+# Func Hash:
+844982799563831398
+# Num Counters:
+4
+# Counter Values:
+768
+768
+0
+0
+
+_ZN7FileSys11FindContextD2Ev
+# Func Hash:
+238984482353853237
+# Num Counters:
+3
+# Counter Values:
+768
+0
+0
+
+_ZN7FileSys15SystemFileTableC2Ev
+# Func Hash:
+798733566915304256
+# Num Counters:
+4
+# Counter Values:
+1536
+0
+0
+0
+
+_ZN7FileSys17CreateFindContextEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+768
+
+_ZN7FileSys17DeleteFindContextEPNS_11FindContextE
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+768
+768
+
+_ZN7FileSysC2Ev
+# Func Hash:
+141929911891712616
+# Num Counters:
+13
+# Counter Values:
+768
+1536
+48
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN7FileSysD2Ev
+# Func Hash:
+694937220881302389
+# Num Counters:
+6
+# Counter Values:
+720
+1536
+0
+0
+48
+0
+
+_ZN7cpputil10CapitalizeERNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+# Func Hash:
+871441886430464423
+# Num Counters:
+5
+# Counter Values:
+1544
+100
+296
+293
+293
+
+_ZN7cpputil13StrStartsWithERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEPKc
+# Func Hash:
+515675264523890533
+# Num Counters:
+7
+# Counter Values:
+18
+15
+3
+3
+18
+15
+0
+
+_ZN7cpputil14ExpandFileNameENSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERKNS0_3mapIS6_S6_NS0_4lessIS6_EENS4_INS0_4pairIKS6_S6_EEEEEE
+# Func Hash:
+415903442469976339
+# Num Counters:
+40
+# Counter Values:
+0
+260
+0
+0
+0
+0
+260
+0
+0
+0
+0
+0
+260
+0
+0
+0
+0
+0
+0
+0
+0
+33
+0
+0
+0
+0
+0
+0
+0
+0
+30
+30
+33
+33
+0
+0
+0
+0
+0
+0
+
+_ZN7cpputil14ReadBinaryFileENSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+# Func Hash:
+301351147188357859
+# Num Counters:
+16
+# Counter Values:
+12
+0
+36
+12
+12
+12
+12
+12
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN7cpputil15RemoveExtensionEPKc
+# Func Hash:
+650973723001915387
+# Num Counters:
+8
+# Counter Values:
+170
+3
+158
+3
+0
+0
+0
+0
+
+_ZN7cpputil15WriteBinaryFileERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEyPKh
+# Func Hash:
+567185239351416615
+# Num Counters:
+6
+# Counter Values:
+3
+3
+3
+3
+0
+0
+
+_ZN7cpputil16MakeFullPathNameENSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES6_
+# Func Hash:
+132627815906994868
+# Num Counters:
+16
+# Counter Values:
+0
+33
+0
+33
+33
+33
+0
+0
+0
+33
+33
+33
+33
+33
+33
+33
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+1
+4:33
+
+_ZN7cpputil16SeparatePathFileERNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES7_RKS6_
+# Func Hash:
+581449317591546546
+# Num Counters:
+14
+# Counter Values:
+3
+173
+0
+170
+0
+167
+0
+167
+3
+0
+0
+0
+0
+0
+
+_ZN7cpputil4AtoiEPKc
+# Func Hash:
+776814507076569975
+# Num Counters:
+17
+# Counter Values:
+0
+1555
+0
+0
+0
+1555
+736
+0
+0
+365
+365
+0
+167
+0
+0
+0
+0
+
+_ZN7cpputil5UbtoxEh
+# Func Hash:
+31819174110576859
+# Num Counters:
+7
+# Counter Values:
+0
+4
+2
+0
+0
+4
+4
+
+_ZN7cpputil5UstoxEt
+# Func Hash:
+31819174110576859
+# Num Counters:
+7
+# Counter Values:
+0
+4
+1
+0
+0
+3
+4
+
+_ZN7cpputil6Is2toNEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+32933
+
+_ZN7cpputil6ParserEPKc
+# Func Hash:
+1120787492845147783
+# Num Counters:
+36
+# Counter Values:
+361
+0
+0
+361
+0
+0
+545
+0
+0
+155
+3
+544
+3
+544
+3
+1932
+1092
+2476
+155
+544
+0
+3
+0
+1932
+0
+544
+3
+1932
+186
+0
+0
+0
+0
+0
+0
+186
+
+_ZN7cpputil7StrSkipEPKcS1_
+# Func Hash:
+1031809833732474507
+# Num Counters:
+9
+# Counter Values:
+0
+370
+185
+185
+564
+379
+185
+185
+185
+
+_ZN7cpputil8FileSizeERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+# Func Hash:
+391331302641535422
+# Num Counters:
+7
+# Counter Values:
+3
+3
+3
+3
+0
+0
+0
+
+_ZN8TownsFDC10IOReadByteEj
+# Func Hash:
+403434657143638278
+# Num Counters:
+13
+# Counter Values:
+4113771
+0
+0
+0
+4
+3
+4113764
+0
+4113561
+3
+0
+0
+0
+
+_ZN8TownsFDC11IOWriteByteEjj
+# Func Hash:
+681263722767415044
+# Num Counters:
+51
+# Counter Values:
+1096
+0
+3
+0
+0
+15
+1078
+0
+0
+0
+0
+0
+0
+428
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+0
+
+_ZN8TownsFDC5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+9
+
+_ZN8TownsFDCC2EP13FMTownsCommonP8TownsPICP9TownsDMAC
+# Func Hash:
+402209680093585608
+# Num Counters:
+6
+# Counter Values:
+3
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+0
+
+_ZN8TownsPIC10IOReadByteEj
+# Func Hash:
+198238759255201313
+# Num Counters:
+11
+# Counter Values:
+90056
+72023
+16557
+913
+563
+16557
+72023
+0
+0
+0
+53660
+
+_ZN8TownsPIC10ProcessIRQER12i486DXCommonR6Memory
+# Func Hash:
+896858937646534703
+# Num Counters:
+12
+# Counter Values:
+171075
+472209135
+100426137
+43074606
+42929116
+189080
+0
+42902539
+171684
+0
+42586717
+0
+
+_ZN8TownsPIC11IOWriteByteEjj
+# Func Hash:
+612928224324807913
+# Num Counters:
+23
+# Counter Values:
+441200
+260500
+986
+178457
+1257
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+6
+6
+
+_ZN8TownsPIC22SetInterruptRequestBitEjb
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+75465014
+
+_ZN8TownsPIC5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN8TownsPIC5State5ResetEv
+# Func Hash:
+694937220316220690
+# Num Counters:
+5
+# Counter Values:
+72
+54
+18
+9
+9
+
+_ZN8TownsPIC6I8259A22SetInterruptRequestBitEjb
+# Func Hash:
+798733567696526752
+# Num Counters:
+4
+# Counter Values:
+74420843
+3276564
+72188450
+188586
+
+_ZN8TownsPIC6I8259A7FireIRQER12i486DXCommonR6Memoryj
+# Func Hash:
+859921303280985948
+# Num Counters:
+5
+# Counter Values:
+188471
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RedirectInterruptEjR6Memoryjjb:188471
+
+_ZN8TownsPIC6I8259A9WriteReg0Eh
+# Func Hash:
+502833844213868300
+# Num Counters:
+18
+# Counter Values:
+12
+0
+2264123
+0
+2075652
+350365
+88580
+0
+0
+0
+0
+0
+0
+350365
+0
+0
+2075652
+0
+
+_ZN8TownsPIC6I8259A9WriteReg1Eh
+# Func Hash:
+844982796254020792
+# Num Counters:
+4
+# Counter Values:
+2231
+36
+2207
+1124
+
+_ZN8TownsPIC7PowerOnEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN8TownsPICC2EP13FMTownsCommon
+# Func Hash:
+1124680653601441999
+# Num Counters:
+3
+# Counter Values:
+3
+6
+3
+
+_ZN8TownsRTC10IOReadByteEj
+# Func Hash:
+989347968339956532
+# Num Counters:
+28
+# Counter Values:
+203492
+203492
+0
+0
+203084
+201169
+370
+363
+363
+363
+365
+13
+13
+13
+13
+13
+13
+13
+0
+365
+0
+65
+0
+0
+0
+0
+0
+0
+
+_ZN8TownsRTC11IOWriteByteEjj
+# Func Hash:
+414921809099041331
+# Num Counters:
+10
+# Counter Values:
+610200
+508499
+101701
+101699
+305101
+101699
+101699
+1
+101699
+0
+
+_ZN8TownsRTC5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN8TownsRTC7PowerOnEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN8TownsRTCC2EP13FMTownsCommon
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN9DiscImage18OpenCUEPostProcessEv
+# Func Hash:
+143458067747974814
+# Num Counters:
+111
+# Counter Values:
+3
+3
+3
+3
+3
+3
+0
+3
+3
+3
+3
+0
+3
+3
+3
+3
+3
+3
+3
+3
+3
+0
+0
+3
+3
+3
+0
+0
+3
+0
+0
+3
+3
+0
+3
+0
+0
+3
+3
+0
+3
+0
+3
+0
+3
+3
+0
+0
+3
+3
+3
+0
+0
+3
+0
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+6
+2
+33:2
+65:1
+2
+33:2
+65:1
+2
+33:2
+65:1
+2
+33:2
+65:1
+2
+33:2
+65:1
+2
+33:2
+65:1
+
+_ZN9DiscImage34MakeLayoutFromTracksAndBinaryFilesEv
+# Func Hash:
+145704985603921398
+# Num Counters:
+37
+# Counter Values:
+3
+0
+0
+0
+3
+0
+71
+15
+86
+0
+0
+15
+15
+0
+3
+0
+0
+0
+3
+3
+2
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+89
+3
+0
+15
+1
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+4
+1
+0:3
+0
+6
+32:3
+64:3
+128:3
+256:2
+512:2
+513:2
+1
+256:1
+
+_ZN9DiscImage49TryAnalyzeTracksWithProbablyCorrectInterpretationEv
+# Func Hash:
+375942206846345361
+# Num Counters:
+16
+# Counter Values:
+89
+86
+0
+3
+86
+32
+3
+3
+3
+1
+2
+3
+0
+0
+12
+32
+
+_ZN9DiscImage4OpenERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+# Func Hash:
+653593442302675307
+# Num Counters:
+154
+# Counter Values:
+0
+0
+0
+0
+0
+0
+12
+0
+0
+9
+0
+0
+0
+0
+0
+0
+0
+3
+3
+0
+0
+0
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+12
+1
+4:3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN9DiscImage7CleanUpEv
+# Func Hash:
+927205941557500827
+# Num Counters:
+8
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+27
+
+_ZN9DiscImage7OpenCUEERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+# Func Hash:
+414647040480231131
+# Num Counters:
+111
+# Counter Values:
+186
+0
+0
+0
+0
+186
+186
+186
+0
+183
+183
+3
+183
+3
+0
+3
+89
+89
+2
+0
+0
+0
+0
+0
+0
+3
+3
+3
+2
+89
+0
+89
+3
+3
+89
+3
+0
+0
+0
+0
+0
+2
+0
+89
+0
+86
+3
+3
+18
+71
+3
+2
+0
+89
+3
+3
+0
+0
+86
+89
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+183
+89
+86
+3
+89
+89
+2
+0
+0
+0
+# Num Value Kinds:
+2
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+2
+1
+** External Symbol **:186
+0
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+1
+5:86
+
+_ZN9DiscImage8BCDToBinEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+2010
+
+_ZN9DiscImage8BinToBCDEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+404
+
+_ZN9DiscImage8HSGtoMSFEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+101
+
+_ZN9DiscImage8MSFtoHSGENS_9MinSecFrmE
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+97
+
+_ZN9DiscImage8StrToMSFERNS_9MinSecFrmEPKc
+# Func Hash:
+1063705161908944610
+# Num Counters:
+3
+# Counter Values:
+91
+91
+91
+
+_ZN9DiscImageC2Ev
+# Func Hash:
+414921810394990440
+# Num Counters:
+7
+# Counter Values:
+24
+0
+0
+0
+0
+0
+0
+
+_ZN9DiskDrive11SetTrackRegEi
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN9DiskDrive17CancelDiskChangedEi
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+12
+
+_ZN9DiskDrive22SaveModifiedDiskImagesEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+1148
+287
+
+_ZN9DiskDrive5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+12
+
+_ZN9DiskDrive5State5ResetEv
+# Func Hash:
+536873291336558756
+# Num Counters:
+3
+# Counter Values:
+0
+48
+12
+
+_ZN9DiskDrive9DiskImage17ClearModifiedFlagEv
+# Func Hash:
+1063705159280644635
+# Num Counters:
+3
+# Counter Values:
+1148
+0
+1148
+
+_ZN9DiskDrive9ImageFile14SaveIfModifiedEv
+# Func Hash:
+476761784646485955
+# Num Counters:
+31
+# Counter Values:
+0
+0
+0
+1148
+1148
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+0
+0
+0
+
+_ZN9DiskDriveC2EP6VMBase
+# Func Hash:
+69360626827666943
+# Num Counters:
+15
+# Counter Values:
+9
+12
+12
+12
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZN9DiskDrive5ResetEv:3
+
+_ZN9TownsCRTC10IOReadByteEj
+# Func Hash:
+472407300044377886
+# Num Counters:
+60
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+29131839
+0
+0
+4114490
+0
+3623137
+256
+0
+271
+256
+17770284
+0
+0
+0
+0
+0
+5
+0
+0
+0
+3623130
+10
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+17770282
+1844568
+111221
+27405
+111221
+111221
+27405
+27405
+0
+0
+0
+0
+0
+347924
+0
+0
+
+_ZN9TownsCRTC11IOWriteByteEjj
+# Func Hash:
+565281093105937449
+# Num Counters:
+186
+# Counter Values:
+3
+3
+3
+3
+3
+3
+3
+217964
+24
+32
+77
+5
+0
+0
+0
+2543
+39
+68655
+2543
+77
+68911
+0
+0
+67425
+7475
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+8
+0
+158
+0
+0
+5
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+4
+35
+5
+0
+0
+0
+0
+4
+4
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+4
+0
+0
+0
+0
+
+_ZN9TownsCRTC11IOWriteWordEjj
+# Func Hash:
+119778519596873817
+# Num Counters:
+174
+# Counter Values:
+0
+0
+1279
+0
+0
+0
+0
+0
+0
+0
+1274
+0
+5
+0
+0
+13
+33
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+18
+15
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+5
+0
+0
+0
+0
+0
+
+_ZN9TownsCRTC12IOWriteDwordEjj
+# Func Hash:
+260029271133002113
+# Num Counters:
+163
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+66112
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+4
+0
+0
+0
+0
+
+_ZN9TownsCRTC13AnalogPalette5ResetEv
+# Func Hash:
+1124680650655923454
+# Num Counters:
+3
+# Counter Values:
+36
+4608
+18
+
+_ZN9TownsCRTC13AnalogPalette6SetRedEhj
+# Func Hash:
+536873293562274399
+# Num Counters:
+5
+# Counter Values:
+66048
+68655
+66048
+112
+2495
+
+_ZN9TownsCRTC13AnalogPalette7SetBlueEhj
+# Func Hash:
+536873293562274399
+# Num Counters:
+5
+# Counter Values:
+66048
+68655
+66048
+112
+2495
+
+_ZN9TownsCRTC13AnalogPalette8SetGreenEhj
+# Func Hash:
+536873293562274399
+# Num Counters:
+5
+# Counter Values:
+66048
+68655
+66048
+112
+2495
+
+_ZN9TownsCRTC14TurnOnVSYNCIRQEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+16537
+
+_ZN9TownsCRTC15ScreenModeCacheC2Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN9TownsCRTC15TurnOffVSYNCIRQEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+16537
+
+_ZN9TownsCRTC20UpdateSpriteHardwareEv
+# Func Hash:
+187771965074346813
+# Num Counters:
+7
+# Counter Values:
+0
+1422
+0
+1382
+965
+965
+0
+
+_ZN9TownsCRTC28MEMIOWriteFMRVRAMDisplayModeEh
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+10
+
+_ZN9TownsCRTC5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+6
+
+_ZN9TownsCRTC5State5ResetEv
+# Func Hash:
+650973723245262098
+# Num Counters:
+7
+# Counter Values:
+288
+36
+72
+4608
+4608
+4608
+9
+
+_ZN9TownsCRTCC2EP13FMTownsCommonP11TownsSprite
+# Func Hash:
+238984482353853237
+# Num Counters:
+3
+# Counter Values:
+1530
+1530
+3
+
+_ZN9TownsDMAC10IOReadByteEj
+# Func Hash:
+130423962995859120
+# Num Counters:
+23
+# Counter Values:
+11329
+0
+0
+0
+0
+0
+0
+1204
+6513
+1204
+1204
+0
+1204
+0
+0
+0
+1204
+1204
+1204
+1204
+0
+0
+0
+
+_ZN9TownsDMAC11IOWriteByteEjj
+# Func Hash:
+250395595162020117
+# Num Counters:
+32
+# Counter Values:
+520
+45220
+3280
+3756
+6640
+0
+344
+0
+0
+0
+0
+0
+0
+0
+130
+135
+0
+329
+0
+0
+3402
+3402
+5983
+5983
+5983
+5983
+0
+0
+0
+0
+0
+0
+
+_ZN9TownsDMAC13GetDMAChannelEj
+# Func Hash:
+382993475055910911
+# Num Counters:
+2
+# Counter Values:
+17568
+17366
+
+_ZN9TownsDMAC14DeviceToMemoryEPNS_5State7ChannelERKNSt6__ndk16vectorIhNS3_9allocatorIhEEEE
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+5856
+
+_ZN9TownsDMAC17SetDMATransferEndEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+5856
+
+_ZN9TownsDMAC5ResetEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+12
+3
+
+_ZN9TownsDMAC5State7Channel14DeviceToMemoryEP13FMTownsCommonyPKh
+# Func Hash:
+833713583161490498
+# Num Counters:
+13
+# Counter Values:
+0
+11993088
+5856
+5856
+0
+5856
+5856
+5856
+2910
+11993088
+5856
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+_ZN12MemoryAccess12StoreByteDMAEjh:11993088
+0
+0
+
+_ZN9TownsDMAC5State7Channel14MemoryToDeviceEP13FMTownsCommonj
+# Func Hash:
+107071989995465197
+# Num Counters:
+26
+# Counter Values:
+0
+0
+150980
+150980
+150980
+0
+0
+85
+85
+0
+0
+85
+85
+0
+85
+0
+0
+85
+73
+0
+0
+0
+0
+0
+85
+85
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+0
+1
+_ZNK12MemoryAccess12FetchByteDMAEj:150980
+1
+_ZNK12MemoryAccess12FetchByteDMAEj:150980
+
+_ZN9TownsDMAC7PowerOnEv
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+12
+3
+
+_ZN9TownsDMACC2EP13FMTownsCommon
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+9
+3
+
+_ZN9TownsMIDI11EnableCardsEi
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+15
+3
+
+_ZN9TownsMIDI20TimerPollingInternalEm
+# Func Hash:
+62306916776817461
+# Num Counters:
+5
+# Counter Values:
+25122131
+0
+0
+0
+0
+
+_ZN9TownsMIDI5ResetEv
+# Func Hash:
+536873291336558756
+# Num Counters:
+3
+# Counter Values:
+30
+15
+3
+
+_ZN9TownsMIDI7PowerOnEv
+# Func Hash:
+536873291336558756
+# Num Counters:
+3
+# Counter Values:
+30
+15
+3
+
+_ZN9TownsMIDI8MIDICardC2Ev
+# Func Hash:
+798733564393886952
+# Num Counters:
+4
+# Counter Values:
+15
+30
+30
+15
+
+_ZN9TownsMIDIC2EP13FMTownsCommon
+# Func Hash:
+650973722726966195
+# Num Counters:
+8
+# Counter Values:
+15
+15
+3
+0
+0
+0
+0
+0
+
+_ZN9TownsSCSI10IOReadByteEj
+# Func Hash:
+237558883521211520
+# Num Counters:
+12
+# Counter Values:
+696940
+696940
+0
+696938
+2
+0
+696938
+696938
+696938
+696938
+696938
+696938
+
+_ZN9TownsSCSI10SCSIDeviceD2Ev
+# Func Hash:
+5832819194261385
+# Num Counters:
+9
+# Counter Values:
+0
+0
+0
+21
+0
+0
+0
+0
+0
+
+_ZN9TownsSCSI11IOWriteByteEjj
+# Func Hash:
+556960142860481963
+# Num Counters:
+14
+# Counter Values:
+52
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN9TownsSCSI12SCSIIOThread10ThreadFuncEv
+# Func Hash:
+1042354057208621673
+# Num Counters:
+17
+# Counter Values:
+3
+0
+0
+0
+3
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZN9TownsSCSI12SCSIIOThreadC2Ev
+# Func Hash:
+287486628139987706
+# Num Counters:
+5
+# Counter Values:
+3
+0
+0
+0
+0
+
+_ZN9TownsSCSI12SCSIIOThreadD2Ev
+# Func Hash:
+391331300807370895
+# Num Counters:
+6
+# Counter Values:
+0
+3
+3
+0
+0
+0
+
+_ZN9TownsSCSI5ResetEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN9TownsSCSI5State5ResetEv
+# Func Hash:
+536873291336558756
+# Num Counters:
+3
+# Counter Values:
+0
+42
+6
+
+_ZN9TownsSCSI7PowerOnEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZN9TownsSCSIC2EP13FMTownsCommon
+# Func Hash:
+331779889499070054
+# Num Counters:
+9
+# Counter Values:
+21
+768
+3
+0
+0
+0
+0
+0
+0
+
+_ZNK10TownsTimer15IsBuzzerPlayingEv
+# Func Hash:
+382993475055910911
+# Num Counters:
+2
+# Counter Values:
+283082
+0
+
+_ZNK10TownsTimer16UpdatePICRequestEv
+# Func Hash:
+134732432624440808
+# Num Counters:
+4
+# Counter Values:
+25121781
+23994888
+0
+23655640
+
+_ZNK10kairotowns12TownsMachine7profileEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+60
+
+_ZNK11TownsSprite6RenderEPhPKh
+# Func Hash:
+1097602107618930755
+# Num Counters:
+34
+# Counter Values:
+1501696
+481281792
+0
+0
+375714321
+254332494
+0
+0
+0
+0
+0
+0
+0
+1827840
+43877376
+1456640
+854784
+728832
+209920
+15613696
+93856
+30080112
+910971
+2738001
+5866
+1880007
+7173
+3586
+425968
+425968
+386027136
+384880667
+0
+0
+
+_ZNK12ICMemoryCard22SaveRawImageIfModifiedEv
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+284
+0
+
+_ZNK12MemoryAccess10FetchDwordEj
+# Func Hash:
+927006190477508607
+# Num Counters:
+1
+# Counter Values:
+939
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+4
+2
+_ZNK17TownsSysROMAccess9FetchByteEj:547
+_ZNK18TownsFontROMAccess9FetchByteEj:392
+2
+_ZNK17TownsSysROMAccess9FetchByteEj:547
+_ZNK18TownsFontROMAccess9FetchByteEj:392
+2
+_ZNK17TownsSysROMAccess9FetchByteEj:547
+_ZNK18TownsFontROMAccess9FetchByteEj:392
+2
+_ZNK17TownsSysROMAccess9FetchByteEj:547
+_ZNK18TownsFontROMAccess9FetchByteEj:392
+
+_ZNK12MemoryAccess12FetchByteDMAEj
+# Func Hash:
+170957022131388415
+# Num Counters:
+1
+# Counter Values:
+301960
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZNK18TownsMainRAMAccess9FetchByteEj:301960
+
+_ZNK12MemoryAccess9FetchWordEj
+# Func Hash:
+567090795815895039
+# Num Counters:
+1
+# Counter Values:
+272
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+2
+2
+_ZNK17TownsSysROMAccess9FetchByteEj:259
+_ZNK18TownsFMRVRAMAccess9FetchByteEj:13
+2
+_ZNK17TownsSysROMAccess9FetchByteEj:259
+_ZNK18TownsFMRVRAMAccess9FetchByteEj:13
+
+_ZNK12i486DXCommon13REPEorNECheckEj
+# Func Hash:
+1063705162558100101
+# Num Counters:
+3
+# Counter Values:
+5166987
+55344
+5110703
+
+_ZNK12i486DXCommon29DescriptorTableToOperandValueERKNS_21SystemAddressRegisterEi
+# Func Hash:
+784007059655560962
+# Num Counters:
+2
+# Counter Values:
+129797
+0
+
+_ZNK12i486DXCommon5State15RecalculateModeEv
+# Func Hash:
+702941992757231615
+# Num Counters:
+3
+# Counter Values:
+813717
+813717
+121238
+
+_ZNK12i486DXCommon7Operand7GetSizeEv
+# Func Hash:
+5832820404559206
+# Num Counters:
+25
+# Counter Values:
+0
+0
+0
+0
+0
+0
+1
+1
+1
+1
+0
+0
+1
+17957
+0
+0
+0
+0
+0
+2301379
+0
+0
+2538229
+17962
+2520267
+
+_ZNK12i486DXCommon8FPUState13GetStatusWordEv
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+3
+0
+
+_ZNK12i486DXCommon8FPUState14GetControlWordEv
+# Func Hash:
+382993475055910911
+# Num Counters:
+2
+# Counter Values:
+9
+9
+
+_ZNK13FMTownsCommon12FASTModeLampEv
+# Func Hash:
+382993475055910911
+# Num Counters:
+2
+# Counter Values:
+36
+1
+
+_ZNK13FMTownsCommon15GetEleVolCDLeftEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+1595
+
+_ZNK13FMTownsCommon16GetEleVolCDRightEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+1595
+
+_ZNK13FMTownsCommon16GetEleVolPCMLeftEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+47
+
+_ZNK13FMTownsCommon17GetEleVolCDLeftC0Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+1595
+
+_ZNK13FMTownsCommon17GetEleVolCDLeftENEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+1595
+
+_ZNK13FMTownsCommon17GetEleVolPCMRightEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+47
+
+_ZNK13FMTownsCommon18GetEleVolCDLeftC32Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+1595
+
+_ZNK13FMTownsCommon18GetEleVolCDRightC0Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+1595
+
+_ZNK13FMTownsCommon18GetEleVolCDRightENEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+1595
+
+_ZNK13FMTownsCommon18GetEleVolPCMLeftC0Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+47
+
+_ZNK13FMTownsCommon18GetEleVolPCMLeftENEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+47
+
+_ZNK13FMTownsCommon19GetEleVolCDRightC32Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+1595
+
+_ZNK13FMTownsCommon19GetEleVolPCMLeftC32Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+47
+
+_ZNK13FMTownsCommon19GetEleVolPCMRightC0Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+47
+
+_ZNK13FMTownsCommon19GetEleVolPCMRightENEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+47
+
+_ZNK13FMTownsCommon20GetEleVolPCMRightC32Ev
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+47
+
+_ZNK13FMTownsCommon8Variable10ApplyAliasENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE
+# Func Hash:
+896858935042357819
+# Num Counters:
+9
+# Counter Values:
+21
+3
+3
+24
+0
+0
+0
+0
+0
+
+_ZNK13FMTownsCommon8Variable14ExpandFileNameENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE
+# Func Hash:
+287486625876453265
+# Num Counters:
+5
+# Counter Values:
+3
+0
+0
+0
+0
+
+_ZNK13FMTownsCommon9MachineIDEv
+# Func Hash:
+888579791662899647
+# Num Counters:
+34
+# Counter Values:
+0
+0
+0
+163
+0
+0
+0
+0
+163
+163
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+163
+0
+0
+0
+0
+0
+0
+0
+0
+163
+
+_ZNK13YsSoundPlayer9SoundData22GetNumSamplePerChannelEv
+# Func Hash:
+382993475055910911
+# Num Counters:
+2
+# Counter Values:
+207266
+0
+
+_ZNK16NullMemoryAccess10FetchDwordEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+576
+
+_ZNK16TownsOsROMAccess10FetchDwordEj
+# Func Hash:
+287486627646949820
+# Num Counters:
+5
+# Counter Values:
+55552
+0
+0
+0
+0
+
+_ZNK16TownsOsROMAccess9FetchByteEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+77313
+
+_ZNK17TownsSysROMAccess20GetConstMemoryWindowEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+1219
+
+_ZNK17TownsSysROMAccess9FetchByteEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3483
+
+_ZNK18TownsFMRVRAMAccess9FetchByteEj
+# Func Hash:
+32267174260575833
+# Num Counters:
+60
+# Counter Values:
+104
+8640
+26
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+4032
+288
+4032
+288
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+384
+720
+0
+0
+384
+720
+104
+104
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+2
+0
+0
+
+_ZNK18TownsFMRVRAMAccess9FetchWordEj
+# Func Hash:
+218598710721846196
+# Num Counters:
+19
+# Counter Values:
+0
+0
+13
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+2
+0
+0
+
+_ZNK18TownsFontROMAccess9FetchByteEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+1568
+
+_ZNK18TownsMainRAMAccess10FetchDwordEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+43441774
+
+_ZNK18TownsMainRAMAccess20GetConstMemoryWindowEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+13297169
+
+_ZNK18TownsMainRAMAccess9FetchByteEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+18851327
+
+_ZNK18TownsMainRAMAccess9FetchWordEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+20063204
+
+_ZNK20TownsSpriteRAMAccess10FetchDwordEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+75032
+
+_ZNK20TownsSpriteRAMAccess9FetchByteEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+32
+
+_ZNK20TownsSpriteRAMAccess9FetchWordEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+341
+
+_ZNK23TownsMappedSysROMAccess10FetchDwordEj
+# Func Hash:
+287486627646949820
+# Num Counters:
+5
+# Counter Values:
+559
+0
+0
+0
+0
+
+_ZNK23TownsMappedSysROMAccess20GetConstMemoryWindowEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+11319
+
+_ZNK23TownsMappedSysROMAccess9FetchByteEj
+# Func Hash:
+287486627646949820
+# Num Counters:
+5
+# Counter Values:
+36958
+0
+0
+0
+0
+
+_ZNK23TownsMappedSysROMAccess9FetchWordEj
+# Func Hash:
+287486627646949820
+# Num Counters:
+5
+# Counter Values:
+851
+0
+0
+0
+0
+
+_ZNK23TownsVRAMAccessTemplateILj0EE10FetchDwordEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+9481
+
+_ZNK23TownsVRAMAccessTemplateILj0EE9FetchByteEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+174891
+
+_ZNK23TownsVRAMAccessTemplateILj0EE9FetchWordEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+197874
+
+_ZNK33TownsMappedDICROMandCMOSRAMAccess9FetchByteEj
+# Func Hash:
+238984482413483552
+# Num Counters:
+3
+# Counter Values:
+12
+0
+12
+
+_ZNK5i825111VMReadStateEv
+# Func Hash:
+326320012775073002
+# Num Counters:
+13
+# Counter Values:
+6
+6
+6
+2
+0
+0
+4
+6
+6
+0
+6
+6
+6
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+1
+_ZN15TownsSerialPort13DefaultClient5TxRDYEv:2
+1
+_ZN15TownsSerialPort13DefaultClient5RxRDYEv:6
+1
+_ZN15TownsSerialPort13DefaultClient3DSREv:6
+
+_ZNK6RF5C689IsPlayingEv
+# Func Hash:
+382993475055910911
+# Num Counters:
+2
+# Counter Values:
+275689
+193167
+
+_ZNK6VMBase17SetDebugBreakFlagEb
+# Func Hash:
+146835647075900052
+# Num Counters:
+2
+# Counter Values:
+0
+6
+
+_ZNK6YM261215GetChannel3ModeEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3
+
+_ZNK6YM261217CalculateEnvelopeEPjjRKNS_4SlotE
+# Func Hash:
+798733566408009235
+# Num Counters:
+4
+# Counter Values:
+0
+0
+0
+276
+
+_ZNK6YM261218CalculateAmplitudeINS_10WithoutLFOEEEiiPKmPKjPKiRi
+# Func Hash:
+667078306813901382
+# Num Counters:
+54
+# Counter Values:
+1166004
+76646
+76646
+76646
+76646
+0
+0
+0
+149940
+1016064
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+149940
+149940
+149940
+149940
+1016064
+1016064
+1016064
+1016064
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+149940
+1016064
+0
+0
+0
+0
+
+_ZNK6YM261218CalculateAmplitudeINS_7WithLFOEEEiiPKmPKjPKiRi
+# Func Hash:
+667078306813901382
+# Num Counters:
+54
+# Counter Values:
+70560
+12517
+12517
+12517
+12517
+70560
+0
+0
+0
+0
+0
+0
+0
+70560
+70560
+70560
+70560
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZNK6YM26124Slot19InterpolateEnvelopeEj
+# Func Hash:
+157411390675812425
+# Num Counters:
+13
+# Counter Values:
+0
+356652
+89621
+0
+89621
+2595
+0
+0
+3514682
+1072327
+0
+3502578
+0
+
+_ZNK6YM26128TimerAUpEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+25436497
+
+_ZNK6YM26128TimerBUpEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+24733786
+
+_ZNK7D77File10GetNumDiskEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+1148
+
+_ZNK7D77File10IsModifiedEv
+# Func Hash:
+238984481799490044
+# Num Counters:
+3
+# Counter Values:
+0
+0
+1148
+
+_ZNK8TownsPIC22GetInterruptRequestBitEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+5856
+
+_ZNK8TownsPIC6I8259A28HigherPriorityINTIsInServiceEj
+# Func Hash:
+844982799803058895
+# Num Counters:
+4
+# Counter Values:
+912975
+741376
+741985
+171684
+
+_ZNK8TownsPIC6I8259A7INTToGoEv
+# Func Hash:
+287486625598302006
+# Num Counters:
+6
+# Counter Values:
+683587867
+683398787
+683398787
+42932616
+192047
+85515833
+
+_ZNK9DiscImage12GetNumTracksEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3739
+
+_ZNK9DiscImage13GetNumSectorsEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+4
+
+_ZNK9DiscImage15ReadSectorMODE1Ejj
+# Func Hash:
+777368105455541274
+# Num Counters:
+33
+# Counter Values:
+5856
+5856
+0
+0
+0
+0
+5856
+5856
+5856
+0
+5856
+0
+5856
+0
+5856
+5856
+0
+0
+0
+5856
+0
+5856
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZNK9DiscImage7GetWaveENS_9MinSecFrmES0_
+# Func Hash:
+367574991217549967
+# Num Counters:
+51
+# Counter Values:
+3
+0
+23802240
+0
+0
+0
+0
+0
+42
+39
+0
+0
+3
+0
+0
+3
+3
+3
+0
+0
+0
+3
+0
+3
+0
+3
+3
+0
+3
+3
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+
+_ZNK9DiscImage9GetTracksEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+4
+
+_ZNK9DiskDrive10DriveReadyEm
+# Func Hash:
+231439399016074396
+# Num Counters:
+22
+# Counter Values:
+4113564
+4113564
+763090
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZNK9DiskDrive11DriveSelectEv
+# Func Hash:
+37730074220714930
+# Num Counters:
+5
+# Counter Values:
+8228624
+1527455
+1070
+874
+678
+
+_ZNK9TownsCRTC10GetPaletteEv
+# Func Hash:
+382993475055910911
+# Num Counters:
+2
+# Counter Values:
+17107
+17107
+
+_ZNK9TownsCRTC13AnalogPalette6GetRedEj
+# Func Hash:
+536873293562274399
+# Num Counters:
+5
+# Counter Values:
+256
+256
+256
+0
+0
+
+_ZNK9TownsCRTC13AnalogPalette7GetBlueEj
+# Func Hash:
+536873293562274399
+# Num Counters:
+5
+# Counter Values:
+256
+271
+256
+0
+15
+
+_ZNK9TownsCRTC13AnalogPalette8GetGreenEj
+# Func Hash:
+536873293562274399
+# Num Counters:
+5
+# Counter Values:
+256
+256
+256
+0
+0
+
+_ZNK9TownsCRTC13GetRenderSizeEv
+# Func Hash:
+974670608629527871
+# Num Counters:
+6
+# Counter Values:
+0
+1281
+15826
+1281
+15826
+15826
+
+_ZNK9TownsCRTC15GetPriorityPageEv
+# Func Hash:
+146835647075900052
+# Num Counters:
+2
+# Counter Values:
+0
+17107
+
+_ZNK9TownsCRTC16InSinglePageModeEv
+# Func Hash:
+146835647075900052
+# Num Counters:
+2
+# Counter Values:
+0
+17107
+
+_ZNK9TownsCRTC17MakePageLayerInfoERNS_5LayerEh
+# Func Hash:
+146835647075900052
+# Num Counters:
+2
+# Counter Values:
+0
+32933
+
+_ZNK9TownsCRTC19GetLowResPageZoom2XEh
+# Func Hash:
+650973721455861709
+# Num Counters:
+9
+# Counter Values:
+20370
+46513
+15881
+10262
+26204
+0
+20370
+0
+0
+
+_ZNK9TownsCRTC20GetPageSizeOnMonitorEh
+# Func Hash:
+948827211526113652
+# Num Counters:
+9
+# Counter Values:
+13580
+0
+65866
+65866
+0
+45342
+20524
+25248
+13580
+
+_ZNK9TownsCRTC23MakeLowResPageLayerInfoERNS_5LayerEh
+# Func Hash:
+1029996135941823621
+# Num Counters:
+13
+# Counter Values:
+31652
+27200
+5733
+1281
+3359
+12467
+1281
+0
+23274
+9593
+17107
+1281
+106
+
+_ZNK9TownsCRTC24GetPageVRAMAddressOffsetEh
+# Func Hash:
+56200828611522737
+# Num Counters:
+9
+# Counter Values:
+1281
+31652
+1281
+23274
+8378
+1281
+0
+23274
+0
+
+_ZNK9TownsCRTC25GetPageVRAMCoverageSize1XEh
+# Func Hash:
+1063705162494746942
+# Num Counters:
+3
+# Counter Values:
+32933
+32933
+0
+
+_ZNK9TownsCRTC28GetLowResPageOriginOnMonitorEh
+# Func Hash:
+438284563460196381
+# Num Counters:
+11
+# Counter Values:
+65866
+65866
+0
+11668
+33674
+33674
+11668
+0
+20524
+0
+20524
+
+_ZNK9TownsCRTC7InVSYNCEy
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+17298
+
+_ZNK9TownsDMAC5State7Channel15CountsAvailableEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+3240
+
+_ZNK9TownsDMAC5State7Channel4AUTIEv
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+85
+
+_ZNKSt6__ndk112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EENS_8equal_toIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_SD_SB_Lb1EEENS5_IS8_EEE4findIS7_EENS_21__hash_const_iteratorIPNS_11__hash_nodeIS8_PvEEEERKT_
+# Func Hash:
+5832819003231980
+# Num Counters:
+12
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+24
+0
+0
+0
+0
+
+_ZNKSt6__ndk113__string_hashIcNS_9allocatorIcEEEclB8ne190000ERKNS_12basic_stringIcNS_11char_traitsIcEES2_EE
+# Func Hash:
+679210745183700997
+# Num Counters:
+4
+# Counter Values:
+222
+0
+219
+219
+
+_ZNKSt6__ndk114default_deleteI15FMTownsTemplateI21i486DXDefaultFidelityEEclB8ne190000EPS3_
+# Func Hash:
+798733565653647393
+# Num Counters:
+4
+# Counter Values:
+12288
+3
+3
+3
+
+_ZNKSt6__ndk114default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS0_IS3_EEEEMN10TownsCDROM15AsyncWaveReaderEFvvEPS7_EEEEclB8ne190000EPSB_
+# Func Hash:
+238984481799490044
+# Num Counters:
+3
+# Counter Values:
+3
+3
+0
+
+_ZNKSt6__ndk114default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS0_IS3_EEEEMN9TownsSCSI12SCSIIOThreadEFvvEPS7_EEEEclB8ne190000EPSB_
+# Func Hash:
+238984481799490044
+# Num Counters:
+3
+# Counter Values:
+3
+3
+0
+
+_ZNKSt6__ndk121__murmur2_or_cityhashImLm64EEclB8ne190000EPKvm
+# Func Hash:
+287486627641171346
+# Num Counters:
+5
+# Counter Values:
+0
+219
+0
+2
+1
+
+_ZNKSt6__ndk18equal_toINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEclB8ne190000ERKS6_S9_
+# Func Hash:
+498636540569746433
+# Num Counters:
+9
+# Counter Values:
+914
+914
+183
+183
+0
+183
+183
+183
+183
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZNSt6__ndk110__list_impIN13TownsEventLog5EventENS_9allocatorIS2_EEE5clearEv
+# Func Hash:
+844982796851354657
+# Num Counters:
+4
+# Counter Values:
+0
+0
+3
+0
+
+_ZNSt6__ndk110unique_ptrINS_11__hash_nodeINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEPvEENS_22__hash_node_destructorINS6_ISB_EEEEE5resetB8ne190000EPSB_
+# Func Hash:
+536873292136300854
+# Num Counters:
+4
+# Counter Values:
+15
+0
+0
+0
+
+_ZNSt6__ndk110unique_ptrINS_11__tree_nodeINS_12__value_typeIj11i486INTFuncEEPvEENS_22__tree_node_destructorINS_9allocatorIS6_EEEEE5resetB8ne190000EPS6_
+# Func Hash:
+536873292136300854
+# Num Counters:
+4
+# Counter Values:
+1140
+0
+0
+0
+
+_ZNSt6__ndk110unique_ptrINS_11__tree_nodeINS_12__value_typeIj7i486INTEEPvEENS_22__tree_node_destructorINS_9allocatorIS6_EEEEE5resetB8ne190000EPS6_
+# Func Hash:
+536873292136300854
+# Num Counters:
+4
+# Counter Values:
+93
+0
+0
+0
+
+_ZNSt6__ndk110unique_ptrINS_11__tree_nodeINS_12__value_typeIjNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5resetB8ne190000EPSB_
+# Func Hash:
+536873292136300854
+# Num Counters:
+4
+# Counter Values:
+1596
+0
+0
+0
+
+_ZNSt6__ndk112__destroy_atB8ne190000INS_4pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EETnNS_9enable_ifIXntsr8is_arrayIT_EE5valueEiE4typeELi0EEEvPSB_
+# Func Hash:
+238984482353853237
+# Num Counters:
+3
+# Counter Values:
+3
+0
+0
+
+_ZNSt6__ndk112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EENS_8equal_toIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_SD_SB_Lb1EEENS5_IS8_EEE14__assign_multiINS_21__hash_const_iteratorIPNS_11__hash_nodeIS8_PvEEEEEEvT_SQ_
+# Func Hash:
+640704448938218731
+# Num Counters:
+14
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+
+_ZNSt6__ndk112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EENS_8equal_toIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_SD_SB_Lb1EEENS5_IS8_EEED2Ev
+# Func Hash:
+1124680651873033115
+# Num Counters:
+3
+# Counter Values:
+0
+6
+0
+
+_ZNSt6__ndk112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EENS_8equal_toIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_SD_SB_Lb1EEENS5_IS8_EEE11__do_rehashILb1EEEvm
+# Func Hash:
+640704451042743625
+# Num Counters:
+14
+# Counter Values:
+21
+3
+0
+0
+3
+3
+6
+3
+0
+0
+3
+0
+3
+0
+
+_ZNSt6__ndk112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EENS_8equal_toIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_SD_SB_Lb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSN_IJEEEEEENS_4pairINS_15__hash_iteratorIPNS_11__hash_nodeIS8_PvEEEEbEERKT_DpOT0_
+# Func Hash:
+796536980797160679
+# Num Counters:
+21
+# Counter Values:
+9
+18
+15
+0
+9
+9
+15
+9
+9
+6
+6
+6
+0
+3
+3
+6
+3
+3
+0
+3
+0
+
+_ZNSt6__ndk112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EENS_8equal_toIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_SD_SB_Lb1EEENS5_IS8_EEE4findIS7_EENS_15__hash_iteratorIPNS_11__hash_nodeIS8_PvEEEERKT_
+# Func Hash:
+5832819003231980
+# Num Counters:
+12
+# Counter Values:
+0
+183
+275
+92
+183
+92
+0
+183
+92
+183
+0
+183
+
+_ZNSt6__ndk112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EENS_8equal_toIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_SD_SB_Lb1EEENS5_IS8_EEE8__rehashILb1EEEvm
+# Func Hash:
+198238757146970717
+# Num Counters:
+9
+# Counter Values:
+3
+0
+6
+3
+0
+0
+0
+0
+0
+
+_ZNSt6__ndk112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EENS_8equal_toIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_SD_SB_Lb1EEENS5_IS8_EEED2Ev
+# Func Hash:
+798733566801274259
+# Num Counters:
+4
+# Counter Values:
+15
+0
+3
+3
+
+_ZNSt6__ndk112__hash_tableINS_17__hash_value_typeIjN8TownsFDC13BreakOnAccessEEENS_22__unordered_map_hasherIjS4_NS_4hashIjEENS_8equal_toIjEELb1EEENS_21__unordered_map_equalIjS4_S9_S7_Lb1EEENS_9allocatorIS4_EEED2Ev
+# Func Hash:
+1124680651873033115
+# Num Counters:
+3
+# Counter Values:
+0
+6
+0
+
+_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE25__init_copy_ctor_externalEPKcm
+# Func Hash:
+1075941064311504419
+# Num Counters:
+5
+# Counter Values:
+15
+0
+15
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+2
+33:10
+65:5
+
+_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2B8ne190000ENS_24__uninitialized_size_tagEmRKS4_
+# Func Hash:
+37730075260148182
+# Num Counters:
+4
+# Counter Values:
+33
+21
+0
+0
+
+_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2B8ne190000ILi0EEEPKc
+# Func Hash:
+1075941066536573760
+# Num Counters:
+5
+# Counter Values:
+765
+1116
+186
+0
+15
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+12
+6:192
+9:174
+17:162
+33:78
+8:57
+5:30
+4:24
+3:15
+7:15
+32:9
+65:6
+16:3
+
+_ZNSt6__ndk114__copy_alignedB8ne190000INS_6vectorIbNS_9allocatorIbEEEELb1EEENS_14__bit_iteratorIT_Lb0ELi0EEENS5_IS6_XT0_ELi0EEES8_S7_
+# Func Hash:
+952936700189780248
+# Num Counters:
+5
+# Counter Values:
+6
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZNSt6__ndk114__split_bufferIN9DiscImage5TrackERNS_9allocatorIS2_EEED2Ev
+# Func Hash:
+694937219174147605
+# Num Counters:
+5
+# Counter Values:
+0
+0
+0
+18
+15
+
+_ZNSt6__ndk114__split_bufferIN9DiscImage6BinaryERNS_9allocatorIS2_EEED2Ev
+# Func Hash:
+798733566801274259
+# Num Counters:
+4
+# Counter Values:
+0
+0
+3
+0
+
+_ZNSt6__ndk114__split_bufferINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS4_IS6_EEED2Ev
+# Func Hash:
+798733566801274259
+# Num Counters:
+4
+# Counter Values:
+0
+0
+559
+373
+
+_ZNSt6__ndk114__split_bufferIPiNS_9allocatorIS1_EEE10push_frontEOS1_
+# Func Hash:
+99520440197473223
+# Num Counters:
+9
+# Counter Values:
+0
+0
+2326
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZNSt6__ndk114__split_bufferIPiNS_9allocatorIS1_EEE9push_backEOS1_
+# Func Hash:
+99520440197473223
+# Num Counters:
+9
+# Counter Values:
+0
+0
+10452
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZNSt6__ndk114__split_bufferIPiRNS_9allocatorIS1_EEE10push_frontERKS1_
+# Func Hash:
+99520440197473223
+# Num Counters:
+9
+# Counter Values:
+0
+0
+45
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZNSt6__ndk114__split_bufferIPiRNS_9allocatorIS1_EEE9push_backEOS1_
+# Func Hash:
+99520440197473223
+# Num Counters:
+9
+# Counter Values:
+0
+0
+15
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZNSt6__ndk114__thread_proxyB8ne190000INS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEMN10TownsCDROM15AsyncWaveReaderEFvvEPS8_EEEEEPvSD_
+# Func Hash:
+675064526388261805
+# Num Counters:
+7
+# Counter Values:
+3
+3
+3
+0
+3
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZN10TownsCDROM15AsyncWaveReader10ThreadFuncEv:3
+
+_ZNSt6__ndk114__thread_proxyB8ne190000INS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEMN9TownsSCSI12SCSIIOThreadEFvvEPS8_EEEEEPvSD_
+# Func Hash:
+675064526388261805
+# Num Counters:
+7
+# Counter Values:
+3
+3
+3
+0
+3
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+_ZN9TownsSCSI12SCSIIOThread10ThreadFuncEv:3
+
+_ZNSt6__ndk114basic_ifstreamIcNS_11char_traitsIcEEEC1ERKNS_12basic_stringIcS2_NS_9allocatorIcEEEEj
+# Func Hash:
+753202732631485783
+# Num Counters:
+7
+# Counter Values:
+39
+39
+24
+0
+0
+0
+36
+
+_ZNSt6__ndk114basic_ofstreamIcNS_11char_traitsIcEEEC1ERKNS_12basic_stringIcS2_NS_9allocatorIcEEEEj
+# Func Hash:
+753202732631485783
+# Num Counters:
+7
+# Counter Values:
+3
+3
+0
+0
+0
+0
+3
+
+_ZNSt6__ndk116__pad_and_outputB8ne190000IcNS_11char_traitsIcEEEENS_19ostreambuf_iteratorIT_T0_EES6_PKS4_S8_S8_RNS_8ios_baseES4_
+# Func Hash:
+696072647980949999
+# Num Counters:
+14
+# Counter Values:
+0
+0
+43
+43
+0
+0
+43
+43
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+3
+0
+0
+1
+** External Symbol **:43
+
+_ZNSt6__ndk121__murmur2_or_cityhashImLm64EE18__hash_len_0_to_16B8ne190000EPKcm
+# Func Hash:
+844982798426149265
+# Num Counters:
+4
+# Counter Values:
+0
+21
+198
+0
+
+_ZNSt6__ndk121__murmur2_or_cityhashImLm64EE19__hash_len_33_to_64B8ne190000EPKcm
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+2
+
+_ZNSt6__ndk124__put_character_sequenceB8ne190000IcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_PKS4_m
+# Func Hash:
+204239781244295859
+# Num Counters:
+13
+# Counter Values:
+43
+43
+3
+3
+0
+3
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+** External Symbol **:3
+
+_ZNSt6__ndk127__tree_balance_after_insertB8ne190000IPNS_16__tree_node_baseIPvEEEEvT_S5_
+# Func Hash:
+236859846833037675
+# Num Counters:
+20
+# Counter Values:
+231
+4977
+2283
+3207
+972
+1983
+120
+72
+159
+168
+2235
+60
+0
+12
+21
+72
+2838
+48
+213
+0
+
+_ZNSt6__ndk134__uninitialized_allocator_relocateB8ne190000INS_9allocatorIN9DiscImage5TrackEEES3_EEvRT_PT0_S8_S8_
+# Func Hash:
+694937220747831518
+# Num Counters:
+5
+# Counter Values:
+0
+133
+133
+0
+18
+
+_ZNSt6__ndk13mapImmNS_4lessImEENS_9allocatorINS_4pairIKmmEEEEEC2B8ne190000ERKS8_
+# Func Hash:
+287486626266629059
+# Num Counters:
+6
+# Counter Values:
+0
+0
+0
+0
+6
+0
+
+_ZNSt6__ndk15dequeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEED2B8ne190000Ev
+# Func Hash:
+981446175885060976
+# Num Counters:
+12
+# Counter Values:
+0
+0
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+
+_ZNSt6__ndk15dequeIiNS_9allocatorIiEEE19__add_back_capacityEv
+# Func Hash:
+489421799420317172
+# Num Counters:
+31
+# Counter Values:
+45
+45
+0
+0
+0
+0
+11648
+15
+10452
+12
+1044
+2326
+0
+1044
+0
+2326
+0
+2326
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+2
+1
+8:1044
+4
+17:1515
+16:624
+32:178
+33:9
+
+_ZNSt6__ndk15dequeIiNS_9allocatorIiEEE9pop_frontEv
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+24457294
+12236
+
+_ZNSt6__ndk15dequeIiNS_9allocatorIiEEE9push_backEOi
+# Func Hash:
+886271542074319524
+# Num Counters:
+4
+# Counter Values:
+25120558
+25120558
+24441
+3
+
+_ZNSt6__ndk15dequeIiNS_9allocatorIiEEED2B8ne190000Ev
+# Func Hash:
+653247340344690925
+# Num Counters:
+11
+# Counter Values:
+0
+0
+6
+6
+0
+3
+3
+3
+3
+3
+0
+
+_ZNSt6__ndk16__treeINS_12__value_typeIN12i486DXCommon10FarPointerE10i486SymbolEENS_19__map_value_compareIS3_S5_NS_4lessIS3_EELb1EEENS_9allocatorIS5_EEE7destroyEPNS_11__tree_nodeIS5_PvEE
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+3
+0
+
+_ZNSt6__ndk16__treeINS_12__value_typeIN12i486DXCommon10FarPointerEN12i486Debugger14BreakPointInfoEEENS_19__map_value_compareIS3_S6_NS_4lessIS3_EELb1EEENS_9allocatorIS6_EEE7destroyEPNS_11__tree_nodeIS6_PvEE
+# Func Hash:
+238984481799490044
+# Num Counters:
+3
+# Counter Values:
+9
+0
+0
+
+_ZNSt6__ndk16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE12__find_equalIS7_EERPNS_16__tree_node_baseIPvEERPNS_15__tree_end_nodeISJ_EERKT_
+# Func Hash:
+684752321659598249
+# Num Counters:
+12
+# Counter Values:
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+2
+0
+0
+
+_ZNSt6__ndk16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_
+# Func Hash:
+238984484622511769
+# Num Counters:
+3
+# Counter Values:
+3
+3
+3
+
+_ZNSt6__ndk16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE7destroyEPNS_11__tree_nodeIS8_PvEE
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+9
+3
+
+_ZNSt6__ndk16__treeINS_12__value_typeIj11i486INTFuncEENS_19__map_value_compareIjS3_NS_4lessIjEELb1EEENS_9allocatorIS3_EEE25__emplace_unique_key_argsIjJRKNS_21piecewise_construct_tENS_5tupleIJRKjEEENSF_IJEEEEEENS_4pairINS_15__tree_iteratorIS3_PNS_11__tree_nodeIS3_PvEElEEbEERKT_DpOT0_
+# Func Hash:
+93478047865668023
+# Num Counters:
+8
+# Counter Values:
+1119
+10491
+0
+11613
+11610
+1143
+1140
+21
+
+_ZNSt6__ndk16__treeINS_12__value_typeIj11i486INTFuncEENS_19__map_value_compareIjS3_NS_4lessIjEELb1EEENS_9allocatorIS3_EEE7destroyEPNS_11__tree_nodeIS3_PvEE
+# Func Hash:
+238984481799490044
+# Num Counters:
+3
+# Counter Values:
+3048
+1140
+186
+
+_ZNSt6__ndk16__treeINS_12__value_typeIj7i486INTEENS_19__map_value_compareIjS3_NS_4lessIjEELb1EEENS_9allocatorIS3_EEE25__emplace_unique_key_argsIjJRKNS_21piecewise_construct_tENS_5tupleIJRKjEEENSF_IJEEEEEENS_4pairINS_15__tree_iteratorIS3_PNS_11__tree_nodeIS3_PvEElEEbEERKT_DpOT0_
+# Func Hash:
+93478047865668023
+# Num Counters:
+8
+# Counter Values:
+81
+372
+12
+450
+450
+93
+93
+6
+
+_ZNSt6__ndk16__treeINS_12__value_typeIj7i486INTEENS_19__map_value_compareIjS3_NS_4lessIjEELb1EEENS_9allocatorIS3_EEE7destroyEPNS_11__tree_nodeIS3_PvEE
+# Func Hash:
+238984481799490044
+# Num Counters:
+3
+# Counter Values:
+189
+93
+0
+
+_ZNSt6__ndk16__treeINS_12__value_typeIjN12i486DXCommon10FarPointerEEENS_19__map_value_compareIjS4_NS_4lessIjEELb1EEENS_9allocatorIS4_EEE7destroyEPNS_11__tree_nodeIS4_PvEE
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+3
+0
+
+_ZNSt6__ndk16__treeINS_12__value_typeIjN13FMTownsCommon8Variable15MemoryStateSaveEEENS_19__map_value_compareIjS5_NS_4lessIjEELb1EEENS_9allocatorIS5_EEE7destroyEPNS_11__tree_nodeIS5_PvEE
+# Func Hash:
+798733565653647393
+# Num Counters:
+4
+# Counter Values:
+0
+3
+0
+0
+
+_ZNSt6__ndk16__treeINS_12__value_typeIjNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEENS_19__map_value_compareIjS8_NS_4lessIjEELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIjJRKNS_21piecewise_construct_tENS_5tupleIJOjEEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_
+# Func Hash:
+93478047865668023
+# Num Counters:
+8
+# Counter Values:
+1374
+12936
+1755
+12768
+12765
+1599
+1596
+12
+
+_ZNSt6__ndk16__treeINS_12__value_typeIjNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEENS_19__map_value_compareIjS8_NS_4lessIjEELb1EEENS5_IS8_EEE7destroyEPNS_11__tree_nodeIS8_PvEE
+# Func Hash:
+238984481799490044
+# Num Counters:
+3
+# Counter Values:
+3210
+1596
+303
+
+_ZNSt6__ndk16__treeINS_12__value_typeIjNS_3mapIjNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIjEENS6_INS_4pairIKjS8_EEEEEEEENS_19__map_value_compareIjSG_SA_Lb1EEENS6_ISG_EEE25__emplace_unique_key_argsIjJRKNS_21piecewise_construct_tENS_5tupleIJOjEEENSP_IJEEEEEENSB_INS_15__tree_iteratorISG_PNS_11__tree_nodeISG_PvEElEEbEERKT_DpOT0_
+# Func Hash:
+93478047865668023
+# Num Counters:
+8
+# Counter Values:
+3
+72
+0
+420
+75
+351
+6
+3
+
+_ZNSt6__ndk16__treeINS_12__value_typeIjNS_3mapIjNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIjEENS6_INS_4pairIKjS8_EEEEEEEENS_19__map_value_compareIjSG_SA_Lb1EEENS6_ISG_EEE7destroyEPNS_11__tree_nodeISG_PvEE
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+15
+6
+
+_ZNSt6__ndk16__treeINS_12__value_typeImmEENS_19__map_value_compareImS2_NS_4lessImEELb1EEENS_9allocatorIS2_EEE14__assign_multiINS_21__tree_const_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEEEEvT_SH_
+# Func Hash:
+550228145474781653
+# Num Counters:
+19
+# Counter Values:
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+27
+0
+0
+0
+0
+0
+0
+0
+0
+
+_ZNSt6__ndk16__treeINS_12__value_typeImmEENS_19__map_value_compareImS2_NS_4lessImEELb1EEENS_9allocatorIS2_EEE7destroyEPNS_11__tree_nodeIS2_PvEE
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+9
+0
+
+_ZNSt6__ndk16__treeImNS_4lessImEENS_9allocatorImEEE7destroyEPNS_11__tree_nodeImPvEE
+# Func Hash:
+784007056844089447
+# Num Counters:
+2
+# Counter Values:
+768
+0
+
+_ZNSt6__ndk16threadC2IMN10TownsCDROM15AsyncWaveReaderEFvvEJPS3_ETnNS_9enable_ifIXntsr7is_sameIu14__remove_cvrefIT_ES0_EE5valueEiE4typeELi0EEEOS8_DpOT0_
+# Func Hash:
+414921810571196136
+# Num Counters:
+8
+# Counter Values:
+3
+0
+0
+0
+0
+0
+0
+0
+
+_ZNSt6__ndk16threadC2IMN9TownsSCSI12SCSIIOThreadEFvvEJPS3_ETnNS_9enable_ifIXntsr7is_sameIu14__remove_cvrefIT_ES0_EE5valueEiE4typeELi0EEEOS8_DpOT0_
+# Func Hash:
+414921810571196136
+# Num Counters:
+8
+# Counter Values:
+3
+0
+0
+0
+0
+0
+0
+0
+
+_ZNSt6__ndk16vectorIN11RealNetwork10DNSRequestENS_9allocatorIS2_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+798733568176213070
+# Num Counters:
+4
+# Counter Values:
+0
+0
+3
+0
+
+_ZNSt6__ndk16vectorIN11RealNetwork6ClientENS_9allocatorIS2_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+1124680653157207770
+# Num Counters:
+3
+# Counter Values:
+0
+3
+0
+
+_ZNSt6__ndk16vectorIN11VGMRecorder16MemoryWriteChunkENS_9allocatorIS2_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+694937219292740260
+# Num Counters:
+5
+# Counter Values:
+0
+0
+0
+3
+0
+
+_ZNSt6__ndk16vectorIN12i486DXCommon18DecodedInstructionENS_9allocatorIS2_EEE8__appendEm
+# Func Hash:
+427720647249930261
+# Num Counters:
+10
+# Counter Values:
+0
+12288
+0
+0
+3
+0
+3
+0
+0
+3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+1
+0:3
+
+_ZNSt6__ndk16vectorIN12i486DXCommon9CallStackENS_9allocatorIS2_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+798733568176213070
+# Num Counters:
+4
+# Counter Values:
+0
+0
+3
+0
+
+_ZNSt6__ndk16vectorIN12i486Debugger12CSEIPLogTypeENS_9allocatorIS2_EEE8__appendEm
+# Func Hash:
+427720647249930261
+# Num Counters:
+10
+# Counter Values:
+0
+196608
+0
+0
+3
+0
+3
+0
+0
+3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+1
+0:3
+
+_ZNSt6__ndk16vectorIN13FMTownsCommon18VMHostFileTransfer4FileENS_9allocatorIS3_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+1124680653157207770
+# Num Counters:
+3
+# Counter Values:
+0
+6
+0
+
+_ZNSt6__ndk16vectorIN14VirtualNetwork10DNSRequestENS_9allocatorIS2_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+1124680653157207770
+# Num Counters:
+3
+# Counter Values:
+0
+3
+0
+
+_ZNSt6__ndk16vectorIN14VirtualNetwork13TCPConnectionENS_9allocatorIS2_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+694937219292740260
+# Num Counters:
+5
+# Counter Values:
+0
+0
+0
+3
+0
+
+_ZNSt6__ndk16vectorIN20TownsStartParameters10FileToSendENS_9allocatorIS2_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+1124680653157207770
+# Num Counters:
+3
+# Counter Values:
+0
+3
+0
+
+_ZNSt6__ndk16vectorIN20TownsStartParameters10VirtualKeyENS_9allocatorIS2_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+798733568176213070
+# Num Counters:
+4
+# Counter Values:
+0
+0
+3
+0
+
+_ZNSt6__ndk16vectorIN20TownsStartParameters12HostShortCutENS_9allocatorIS2_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+1124680653157207770
+# Num Counters:
+3
+# Counter Values:
+0
+3
+0
+
+_ZNSt6__ndk16vectorIN9DiscImage5TrackENS_9allocatorIS2_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+694937219292740260
+# Num Counters:
+5
+# Counter Values:
+0
+89
+0
+24
+3
+
+_ZNSt6__ndk16vectorIN9DiscImage5TrackENS_9allocatorIS2_EEE21__push_back_slow_pathIRKS2_EEPS2_OT_
+# Func Hash:
+484499721236003396
+# Num Counters:
+7
+# Counter Values:
+18
+18
+18
+0
+0
+0
+18
+
+_ZNSt6__ndk16vectorIN9DiscImage6BinaryENS_9allocatorIS2_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+798733568176213070
+# Num Counters:
+4
+# Counter Values:
+3
+3
+24
+3
+
+_ZNSt6__ndk16vectorIN9DiscImage6BinaryENS_9allocatorIS2_EEE21__push_back_slow_pathIRKS2_EEPS2_OT_
+# Func Hash:
+1031809833564231397
+# Num Counters:
+8
+# Counter Values:
+3
+3
+3
+0
+0
+0
+0
+3
+
+_ZNSt6__ndk16vectorIN9DiscImage6BinaryENS_9allocatorIS2_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS2_RS4_EE
+# Func Hash:
+798733564168320446
+# Num Counters:
+4
+# Counter Values:
+0
+0
+0
+3
+
+_ZNSt6__ndk16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+798733568176213070
+# Num Counters:
+4
+# Counter Values:
+568
+24
+213
+186
+
+_ZNSt6__ndk16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEE18__assign_with_sizeB8ne190000IPS6_SA_EEvT_T0_l
+# Func Hash:
+477729235765949736
+# Num Counters:
+12
+# Counter Values:
+0
+0
+0
+0
+0
+9
+0
+0
+0
+0
+0
+0
+
+_ZNSt6__ndk16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEE21__push_back_slow_pathIS6_EEPS6_OT_
+# Func Hash:
+1027614718846883557
+# Num Counters:
+5
+# Counter Values:
+559
+559
+0
+0
+559
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+4
+0:186
+17:186
+33:184
+65:3
+
+_ZNSt6__ndk16vectorINS_4pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS5_IS8_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+1124680653157207770
+# Num Counters:
+3
+# Counter Values:
+0
+3
+0
+
+_ZNSt6__ndk16vectorIP12MemoryAccessNS_9allocatorIS2_EEE8__appendEm
+# Func Hash:
+427720647249930261
+# Num Counters:
+10
+# Counter Values:
+0
+3145728
+0
+0
+3
+0
+3
+0
+0
+3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+1
+0:3
+
+_ZNSt6__ndk16vectorIP6DeviceNS_9allocatorIS2_EEE8__appendEm
+# Func Hash:
+427720647249930261
+# Num Counters:
+10
+# Counter Values:
+0
+196608
+0
+0
+3
+0
+3
+0
+0
+3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+1
+0:3
+
+_ZNSt6__ndk16vectorIbNS_9allocatorIbEEE11__vallocateB8ne190000Em
+# Func Hash:
+238984481941143025
+# Num Counters:
+3
+# Counter Values:
+6
+0
+0
+
+_ZNSt6__ndk16vectorIbNS_9allocatorIbEEE18__construct_at_endINS_14__bit_iteratorIS3_Lb0ELm0EEES6_EEvT_T0_m
+# Func Hash:
+397363746375761548
+# Num Counters:
+11
+# Counter Values:
+0
+0
+6
+0
+6
+0
+0
+0
+0
+0
+0
+
+_ZNSt6__ndk16vectorIbNS_9allocatorIbEEE6resizeEmb
+# Func Hash:
+393568427714989076
+# Num Counters:
+12
+# Counter Values:
+0
+0
+6
+0
+6
+0
+6
+0
+0
+0
+0
+0
+
+_ZNSt6__ndk16vectorIbNS_9allocatorIbEEE7reserveEm
+# Func Hash:
+93478049473674154
+# Num Counters:
+7
+# Counter Values:
+6
+6
+6
+0
+0
+0
+0
+
+_ZNSt6__ndk16vectorIdNS_9allocatorIdEEE16__init_with_sizeB8ne190000IPdS5_EEvT_T0_m
+# Func Hash:
+283216874870965619
+# Num Counters:
+8
+# Counter Values:
+30
+30
+30
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+1
+513:30
+
+_ZNSt6__ndk16vectorIhNS_9allocatorIhEEE16__init_with_sizeB8ne190000IPhS5_EEvT_T0_m
+# Func Hash:
+283216874870965619
+# Num Counters:
+8
+# Counter Values:
+89
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+0
+
+_ZNSt6__ndk16vectorIhNS_9allocatorIhEEE18__assign_with_sizeB8ne190000IPhS5_EEvT_T0_l
+# Func Hash:
+1135039645845954343
+# Num Counters:
+13
+# Counter Values:
+4581696
+0
+3
+1
+3
+0
+0
+0
+0
+0
+0
+0
+3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+4
+0
+0
+0
+1
+513:3
+
+_ZNSt6__ndk16vectorIhNS_9allocatorIhEEE18__insert_with_sizeB8ne190000INS_11__wrap_iterIPhEES7_EES7_NS5_IPKhEET_T0_l
+# Func Hash:
+323784947390149134
+# Num Counters:
+15
+# Counter Values:
+5702
+0
+0
+85
+83
+2
+0
+2
+1
+0
+0
+83
+83
+0
+2
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+5
+2
+513:82
+65:1
+0
+0
+1
+0:2
+2
+0:1
+513:1
+
+_ZNSt6__ndk16vectorIhNS_9allocatorIhEEE8__appendEm
+# Func Hash:
+379359244367955604
+# Num Counters:
+9
+# Counter Values:
+26833728
+68764648
+0
+3673
+6845
+6845
+6
+0
+6845
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+2
+0:6839
+513:6
+
+_ZNSt6__ndk16vectorIsNS_9allocatorIsEEEC2Em
+# Func Hash:
+331779891586285888
+# Num Counters:
+8
+# Counter Values:
+24576
+3
+3
+0
+0
+0
+0
+0
+
+_ZNSt6__ndk17getlineB8ne190000IcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_istreamIT_T0_EES9_RNS_12basic_stringIS6_S7_T1_EES6_
+# Func Hash:
+571617115431672051
+# Num Counters:
+17
+# Counter Values:
+3909
+6
+3
+3726
+186
+0
+186
+0
+0
+0
+0
+0
+0
+134
+0
+0
+3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+1
+** External Symbol **:6
+
+_ZNSt6__ndk18__fill_nB8ne190000ILb0ENS_6vectorIbNS_9allocatorIbEEEEEEvNS_14__bit_iteratorIT0_Lb0ELi0EEENS6_9size_typeE
+# Func Hash:
+798733565260104375
+# Num Counters:
+4
+# Counter Values:
+6144
+6
+0
+0
+
+_ZNSt6__ndk1plB8ne190000IcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EERKS9_SB_
+# Func Hash:
+822655014874953277
+# Num Counters:
+9
+# Counter Values:
+3
+3
+3
+3
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+2
+1
+5:3
+2
+33:2
+65:1
+
+_ZThn96_N13FMTownsCommon10IOReadByteEj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+295137
+
+_ZThn96_N13FMTownsCommon10IOReadWordEj
+# Func Hash:
+146835647075900052
+# Num Counters:
+2
+# Counter Values:
+0
+4
+
+_ZThn96_N13FMTownsCommon11IOWriteByteEjj
+# Func Hash:
+742261418966908927
+# Num Counters:
+1
+# Counter Values:
+395262
+
+_ZZN11TownsRender10Render8BitINS_10VRAM1TransEEEvRKN9TownsCRTC5LayerEPK6Vec4ubPKhbENKUlRPhbE_clESC_b
+# Func Hash:
+702025127506449234
+# Num Counters:
+15
+# Counter Values:
+0
+393523200
+393523200
+614880
+0
+614880
+614880
+614880
+614880
+614880
+0
+614880
+393523200
+0
+393523200
+
+_ZZN11TownsRender11Render16BitINS_10VRAM0TransEEEvRKN9TownsCRTC5LayerEPKhbENKUlRPhbE_clES9_b
+# Func Hash:
+180680615071281004
+# Num Counters:
+16
+# Counter Values:
+0
+2581909942
+7657408
+838133962
+1264706646
+7657408
+7657408
+7657408
+7657408
+7657408
+0
+7657408
+2102840608
+0
+0
+0
+
+main
+# Func Hash:
+57155115141486974
+# Num Counters:
+202
+# Counter Values:
+3
+6
+0
+0
+0
+0
+11556
+0
+0
+0
+16200
+0
+16200
+0
+0
+0
+0
+0
+0
+16200
+0
+24576
+0
+0
+16200
+16200
+0
+16200
+0
+0
+0
+0
+0
+33
+16158
+42
+0
+33
+42
+27
+27
+27
+27
+0
+0
+33
+30
+42
+39
+27
+27
+3
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+3
+0
+0
+3
+3
+3
+3
+3
+0
+0
+0
+3
+0
+3
+0
+0
+3
+3
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+3
+0
+0
+0
+0
+3
+3
+0
+0
+33
+42
+0
+27
+27
+27
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+9
+0
+0
+0
+0
+1
+4:3
+0
+1
+4:3
+9
+513:9
+0:3
+8:3
+16:3
+32:3
+64:3
+128:3
+256:3
+512:3
+9
+513:18
+0:3
+8:3
+16:3
+32:3
+64:3
+128:3
+256:3
+512:3

@@ -16,6 +16,29 @@ add_compile_options(-fsigned-char)
 # The emulator runs in real time only optimized, so the core is optimized in debug builds too;
 # without this a debug APK compiles every Tsugaru library at -O0.
 add_compile_options(-O3)
+# The device build of the core uses a profile of the device playing games (KairoTowns#9,
+# core/pgo/README.md). The profile describes this exact code as the device compiles it, so a
+# training build (KAIROTOWNS_PGO_GENERATE), an experiment on the core or another compiler turns it
+# off with -DKAIRO_PGO=OFF. Set before Tsugaru's libraries are added, so they all use it.
+if(ANDROID)
+    set(KAIROTOWNS_PGO_DEFAULT ON)
+else()
+    set(KAIROTOWNS_PGO_DEFAULT OFF)
+endif()
+option(KAIRO_PGO "Build the core with its recorded profile (core/pgo)" ${KAIROTOWNS_PGO_DEFAULT})
+option(KAIROTOWNS_PGO_GENERATE "Build the core to record a profile (tools/perf/pgo-train.ps1)" OFF)
+if(KAIRO_PGO)
+    if(KAIROTOWNS_PGO_GENERATE)
+        message(FATAL_ERROR "The recorded profile is for the ordinary core: add -DKAIRO_PGO=OFF to a KAIROTOWNS_PGO_GENERATE build")
+    endif()
+    include("${CMAKE_CURRENT_LIST_DIR}/../shared/cmake/KairoPgo.cmake")
+    kairo_use_profile("${CMAKE_CURRENT_LIST_DIR}/pgo/arm64.proftext" "${CMAKE_CURRENT_LIST_DIR}/pgo/profile.json"
+        "${CMAKE_CURRENT_LIST_DIR}/..")
+endif()
+if(KAIROTOWNS_PGO_GENERATE)
+    add_compile_options(-fprofile-generate)
+    add_link_options(-fprofile-generate)
+endif()
 # On Windows Tsugaru marks unreachable code with MSVC's __assume, which clang accepts as an
 # extension; the host test builds there with llvm-mingw.
 if(WIN32)
