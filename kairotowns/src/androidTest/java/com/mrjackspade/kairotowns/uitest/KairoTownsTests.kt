@@ -40,7 +40,7 @@ object KairoTownsApp : AppUnderTest() {
     override val bootGameFile = "games/Populous & The Promised Lands (1990)(Imagineer)(Jp).zip"
     override val otherGame = "Intruder"
     override val defaultOption = "cpu"
-    override val mediaSwap = MediaSwap("Intruder", "Floppy A", "Intruder")
+    override val mediaSwap = MediaSwap("Intruder", "Floppy A", "Intruder", filler = "d88")
 }
 
 class KairoTownsFirstRunTests : FirstRunTests() { override val app = KairoTownsApp }
