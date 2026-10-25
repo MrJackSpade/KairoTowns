@@ -110,6 +110,7 @@ bool TownsPIC::I8259A::WriteReg1(unsigned char data)
 	{
 		OCW[0]=data;
 		IMR=data;
+		owner->state.UpdateIRRCache(); // KairoTowns: the cache leaves out masked requests.
 		// Are OCR1 and IMR the same thing?  Probably.
 	}
 	else

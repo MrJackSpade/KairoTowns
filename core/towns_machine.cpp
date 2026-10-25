@@ -14,6 +14,7 @@
 #include "towns.h"
 #include "townsdef.h"
 #include "townsparam.h"
+#include "wait_loop.h"
 
 namespace kairotowns {
 namespace {
@@ -24,6 +25,10 @@ constexpr uint64_t kFrameNanoseconds = PER_SECOND / 60;
 constexpr uint64_t kTimeSync = 1000000; // TownsThread::NANOSECONDS_PER_TIME_SYNC
 
 uint64_t frames_to_ns(uint64_t frames) { return frames * PER_SECOND / TownsMachine::kAudioRate; }
+
+uint64_t elapsed_ns(std::chrono::steady_clock::time_point start) {
+    return std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now() - start).count();
+}
 
 // The picture is drawn by the core itself, so the window does nothing.
 class Window : public Outside_World::WindowInterface {
@@ -166,6 +171,12 @@ struct TownsMachine::Impl {
     TownsRender::ImageCopy image;
     std::string cd;
     uint64_t last_frame = kFrameNanoseconds;
+    TownsMachine::Profile profile;
+    bool sample_pcs = false;
+    bool skip_wait_loops = true;
+    WaitLoopSkip<Towns> wait_loop;
+    // Clocks the CPU has run, for the wait-loop skip.
+    uint64_t clocks = 0;
 
     unsigned pad = 0;
     bool buttons[2] = {false, false};
@@ -190,12 +201,15 @@ struct TownsMachine::Impl {
     void check_render() {
         auto &t = *towns;
         if (t.state.nextRenderingTime > t.state.townsTime || t.crtc.InVSYNC(t.state.townsTime)) return;
+        const auto start = std::chrono::steady_clock::now();
         render.Prepare(t.crtc);
         render.damperWireLine = t.var.damperWireLine;
         render.scanLineEffectIn15KHz = t.var.scanLineEffectIn15KHz;
         render.BuildImage(t.physMem.state.VRAM, t.crtc.GetPalette(), t.crtc.chaseHQPalette);
-        image = render.MoveImage();
+        render.SwapImage(image);
         t.state.nextRenderingTime = t.state.townsTime + TOWNS_RENDERING_FREQUENCY;
+        ++profile.pictures;
+        profile.picture_ns += elapsed_ns(start);
     }
 
     void save_cmos() {
@@ -233,6 +247,9 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
     }
     towns.DisableDebugger();
     impl->cd = config.cd;
+    impl->skip_wait_loops = config.skip_wait_loops;
+    towns.cdrom.waitForWave = config.repeatable;
+    if (config.repeatable) towns.rtc.fixedTime = 946684800; // 2000-01-01 00:00:00
     // As TownsThread::VMStart and VMMainLoopTemplate prepare the machine.
     if (towns.state.appSpecificSetting == TOWNS_APPSPECIFIC_BRANDISH) towns.state.pretend386DX = true;
     towns.sound.SetOutsideWorld(&impl->speaker);
@@ -250,6 +267,38 @@ TownsMachine::~TownsMachine() {
 }
 
 bool TownsMachine::run_frame(std::string &error) {
+    const auto start = std::chrono::steady_clock::now();
+    const bool ran = run_frame_body(error);
+    ++impl_->profile.frames;
+    impl_->profile.run_ns += elapsed_ns(start);
+    return ran;
+}
+
+const TownsMachine::Profile &TownsMachine::profile() const {
+    impl_->profile.skipped_instructions = impl_->wait_loop.counts().instructions;
+    impl_->profile.wait_skips = impl_->wait_loop.counts().skips;
+    return impl_->profile;
+}
+
+void TownsMachine::sample_pcs(bool on) { impl_->sample_pcs = on; }
+
+std::string TownsMachine::disassemble(uint16_t selector, uint32_t eip, int count) const {
+    auto &towns = *impl_->towns;
+    i486DXCommon::SegmentRegister cs;
+    towns.CPU().DebugLoadSegmentRegisterFromFarPointer(cs, towns.mem, i486DXCommon::FarPointer{selector, eip});
+    std::string lines;
+    for (int i = 0; i < count; ++i) {
+        i486DXCommon::InstructionAndOperand instruction;
+        MemoryAccess::ConstMemoryWindow window;
+        towns.CPU().DebugFetchInstruction(window, instruction, cs, eip, towns.mem);
+        lines += towns.CPU().Disassemble(instruction.inst, instruction.op1, instruction.op2, cs, eip, towns.mem,
+                                         towns.debugger.GetSymTable(), towns.debugger.GetIOTable()) + "\n";
+        eip += instruction.inst.numBytes;
+    }
+    return lines;
+}
+
+bool TownsMachine::run_frame_body(std::string &error) {
     auto &towns = *impl_->towns;
     uint64_t ran = 0;
     if (!towns.state.noWait) {
@@ -280,8 +329,16 @@ bool TownsMachine::run_guest(uint64_t &ran, std::string &error) {
         towns.var.nextTimeSync = towns.state.townsTime + kTimeSync;
         towns.var.justLoadedState = false;
         while (towns.state.townsTime < towns.var.nextTimeSync) {
+            // Until the fast device polling only the CPU runs (wait_loop.h).
+            impl_->wait_loop.restart();
             while (towns.state.townsTime <= towns.state.nextFastDevicePollingTime && 0 == towns.GetStopFlags()) {
-                towns.RunOneInstruction();
+                if (impl_->sample_pcs && impl_->profile.instructions % kPcSampleInterval == 0)
+                    ++impl_->profile.pcs[uint64_t(towns.CPU().state.CS().value) << 32 | towns.CPU().state.EIP];
+                if (impl_->skip_wait_loops)
+                    impl_->wait_loop.before_instruction(towns, impl_->profile.instructions, impl_->clocks,
+                                                        towns.state.nextFastDevicePollingTime);
+                ++impl_->profile.instructions;
+                impl_->clocks += towns.RunOneInstruction();
                 towns.pic.ProcessIRQ(towns.CPU(), towns.mem);
             }
             towns.RunScheduledTasks();
@@ -296,8 +353,10 @@ bool TownsMachine::run_guest(uint64_t &ran, std::string &error) {
         const uint64_t step = step_end > step_start ? step_end - step_start : 0;
         ran += step;
         impl_->speaker.advance(step);
+        const auto sound_start = std::chrono::steady_clock::now();
         towns.ProcessSound(&impl_->world);
         towns.cdrom.UpdateCDDAState(towns.state.townsTime);
+        impl_->profile.sound_ns += elapsed_ns(sound_start);
         impl_->world.ProcessAppSpecific(towns);
         if (towns.state.nextDevicePollingTime < towns.state.townsTime) {
             impl_->poll_devices();

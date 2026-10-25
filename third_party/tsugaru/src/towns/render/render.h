@@ -108,6 +108,11 @@ public:
 	*/
 	ImageCopy MoveImage(void);
 
+	/*! KairoTowns: exchanges the image with img, whose bitmap this TownsRender draws the next image into.
+	    Unlike MoveImage, the next BuildImage of the same size reuses that bitmap instead of allocating one.
+	*/
+	void SwapImage(ImageCopy &img);
+
 	class VRAM0Trans // 80000000H to 80080000H
 	{
 	public:

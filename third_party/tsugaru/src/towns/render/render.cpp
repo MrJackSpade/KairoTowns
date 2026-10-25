@@ -12,7 +12,9 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 << LICENSE */
+#include <algorithm>
 #include <cstring>
+#include <type_traits>
 #include "cpputil.h"
 #include "render.h"
 
@@ -282,6 +284,12 @@ TownsRender::Image TownsRender::GetImage(void) const
 	img.hei=hei;
 	img.rgba=this->rgba.data();
 	return img;
+}
+void TownsRender::SwapImage(ImageCopy &img)
+{
+	std::swap(img.rgba,this->rgba);
+	std::swap(img.wid,this->wid);
+	std::swap(img.hei,this->hei);
 }
 TownsRender::ImageCopy TownsRender::MoveImage(void)
 {
@@ -758,6 +766,84 @@ void TownsRender::Render16Bit(const TownsCRTC::Layer &layer,const unsigned char 
 	auto bottomY=this->hei-yStep;
 	auto X=layer.originOnMonitor.x();
 	auto RenderOffsetX=X*2;
+
+	// KairoTowns: a row whose VRAM is contiguous (no horizontal or vertical scroll wrap) is drawn
+	// one VRAM pixel at a time: each is read and converted once and written zoom times, exactly as
+	// the general loop below writes it pixel by pixel. Returns false for a row the general loop draws.
+	const auto powerOfTwoMask=[](uint32_t mask){return 0==(mask&(mask+1));};
+	const bool fastRows=std::is_same<OFFSETTRANS,VRAM0Trans>::value && 1<=ZHsrc[0] && 1<=ZHsrc[1] &&
+	                    powerOfTwoMask(VRAMHScrollMask) && powerOfTwoMask(VRAMVScrollMask) && 0<=X;
+	const auto drawRow=[&](unsigned char *&dst,bool transparentRow) -> bool
+	{
+		const unsigned int inLineStart=layer.VRAMHSkipBytes;
+		const unsigned int inLineLimit=layer.bytesPerLine+RenderOffsetX;
+		if(true!=fastRows || inLineLimit<=inLineStart)
+		{
+			return false;
+		}
+		const int xEnd=std::min<int>(layer.sizeOnMonitor.x(),(int)this->wid-(int)layer.originOnMonitor.x());
+		if(xEnd<=0)
+		{
+			return false;
+		}
+		// The VRAM pixels the row reads: as many as its xEnd pixels take at ZHsrc[0], ZHsrc[1],
+		// ZHsrc[0], ... each, and none at or past inLineLimit.
+		const uint64_t pair=ZHsrc[0]+ZHsrc[1];
+		const uint64_t pairs=xEnd/pair,rest=xEnd%pair;
+		const uint64_t sources=2*pairs+(0==rest ? 0 : (rest<=(uint64_t)ZHsrc[0] ? 1 : 2));
+		const uint64_t spanByWidth=2*(sources-1);
+		const uint64_t spanByLimit=2*(uint64_t)((inLineLimit-1-inLineStart)/2);
+		const uint64_t span=std::min(spanByWidth,spanByLimit);
+		const uint32_t h0=(inLineStart+VRAMOffsetHorizontal)&VRAMHScrollMask;
+		if(VRAMHScrollMask<(uint64_t)h0+span)
+		{
+			return false;
+		}
+		const uint32_t v0=(lineVRAMOffset+h0+VRAMOffsetVertical)&VRAMVScrollMask;
+		if(VRAMVScrollMask<(uint64_t)v0+span)
+		{
+			return false;
+		}
+		const unsigned char *src=VRAM+(unsigned int)(VRAMBase+v0);
+		unsigned int inLine=inLineStart;
+		int ZHswitch=0;
+		for(int x=0; x<xEnd && inLine<inLineLimit;)
+		{
+			const unsigned short col16=cpputil::GetWord(src);
+			int n=ZHsrc[ZHswitch];
+			const bool whole=(n<=xEnd-x);
+			if(true!=whole)
+			{
+				n=xEnd-x;
+			}
+			if(true==transparentRow && 0!=(col16&0x8000))
+			{
+				dst+=4*n;
+			}
+			else
+			{
+				unsigned char pixel[4];
+				pixel[0]=((col16>>2)&0xf8)|((col16>>7)&7);
+				pixel[1]=((col16>>7)&0xf8)|((col16>>12)&7);
+				pixel[2]=((col16<<3)&0xf8)|((col16>>2)&7);
+				pixel[3]=255;
+				for(int i=0; i<n; ++i)
+				{
+					std::memcpy(dst,pixel,4);
+					dst+=4;
+				}
+			}
+			x+=n;
+			if(true!=whole)
+			{
+				break;
+			}
+			ZHswitch=1-ZHswitch;
+			inLine+=2;
+			src+=2;
+		}
+		return true;
+	};
 	if (true != transparent)
 	{
 		for (int y = 0; y < layer.sizeOnMonitor.y() && y + layer.originOnMonitor.y() <= bottomY; y += yStep)
@@ -769,7 +855,8 @@ void TownsRender::Render16Bit(const TownsCRTC::Layer &layer,const unsigned char 
 			unsigned int inLineVRAMOffset = layer.VRAMHSkipBytes;
 			int ZHswitch = 0;
 			auto ZH = ZHsrc[ZHswitch];
-			for (int x = 0; x < layer.sizeOnMonitor.x() && x + layer.originOnMonitor.x() < this->wid && inLineVRAMOffset < layer.bytesPerLine + RenderOffsetX; x++)
+				if(true!=drawRow(dst,false))
+				for (int x = 0; x < layer.sizeOnMonitor.x() && x + layer.originOnMonitor.x() < this->wid && inLineVRAMOffset < layer.bytesPerLine + RenderOffsetX; x++)
 			{
 				unsigned int VRAMAddr = lineVRAMOffset + ((inLineVRAMOffset + VRAMOffsetHorizontal) & VRAMHScrollMask);
 				VRAMAddr = VRAMBase + ((VRAMAddr + VRAMOffsetVertical) & VRAMVScrollMask);
@@ -821,7 +908,8 @@ void TownsRender::Render16Bit(const TownsCRTC::Layer &layer,const unsigned char 
 			unsigned int inLineVRAMOffset = layer.VRAMHSkipBytes;
 			int ZHswitch = 0;
 			auto ZH = ZHsrc[ZHswitch];
-			for (int x = 0; x < layer.sizeOnMonitor.x() && x + layer.originOnMonitor.x() < this->wid && inLineVRAMOffset < layer.bytesPerLine + RenderOffsetX; x++)
+				if(true!=drawRow(dst,true))
+				for (int x = 0; x < layer.sizeOnMonitor.x() && x + layer.originOnMonitor.x() < this->wid && inLineVRAMOffset < layer.bytesPerLine + RenderOffsetX; x++)
 			{
 				unsigned int VRAMAddr = lineVRAMOffset + ((inLineVRAMOffset + VRAMOffsetHorizontal) & VRAMHScrollMask);
 				VRAMAddr = VRAMBase + ((VRAMAddr + VRAMOffsetVertical) & VRAMVScrollMask);

@@ -66,6 +66,10 @@ public:
 	void AddDevice(Device *devPtr,unsigned int minIOPort,unsigned int maxIOPort);
 	void AddDevice(Device *devPtr,unsigned int ioPort);
 
+	/*! KairoTowns: counts every In and Out.
+	*/
+	uint64_t accesses=0;
+
 	unsigned int In8(unsigned int port);
 	unsigned int In16(unsigned int port);
 	unsigned int In32(unsigned int port);

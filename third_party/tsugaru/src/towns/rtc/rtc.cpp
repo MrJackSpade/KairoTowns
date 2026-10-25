@@ -105,8 +105,12 @@ TownsRTC::TownsRTC(class FMTownsCommon *townsPtr) : Device(townsPtr)
 		}
 		if(state.state!=STATE_NONE)
 		{
-			auto t=time(nullptr);
-			auto tm=localtime(&t);
+			time_t t=time(nullptr);
+			if(0!=fixedTime) // KairoTowns
+			{
+				t=(time_t)(fixedTime+(long long int)(townsPtr->state.townsTime/1000000000));
+			}
+			auto tm=(0!=fixedTime ? gmtime(&t) : localtime(&t));
 			switch(state.registerLatch)
 			{
 			case REG_1SEC://0

@@ -907,6 +907,10 @@ void i486DXCommon::FetchOperandLoop(CPUCLASS &cpu,InstructionAndOperand &instOp,
 }
 
 #define i486DXFidelityLayer__GetOperandPointerAddr(addrCond) \
+		if(true==forWrite) /* KairoTowns: a store through the pointer bypasses Memory. */ \
+		{ \
+			++mem.sideEffects; \
+		} \
 		unsigned int offset; \
 		const SegmentRegister &seg=*ExtractSegmentAndOffset(offset,op,segmentOverride); \
 		if(16==addressSize) \

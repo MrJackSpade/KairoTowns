@@ -208,6 +208,11 @@ public:
 		void ThreadFunc(void);
 	};
 	AsyncWaveReader waveReader;
+	/*! KairoTowns: when true, a CD audio read finishes before the guest goes on, so whether the
+	    audio is ready when the guest asks no longer depends on the host's disk; for tests that
+	    compare two runs.
+	*/
+	bool waitForWave=false;
 
 	class State
 	{

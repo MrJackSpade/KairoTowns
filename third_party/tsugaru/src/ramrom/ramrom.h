@@ -40,6 +40,11 @@ public:
 	*/
 	MemoryAccess *memAccessChain=nullptr;
 
+	/*! KairoTowns: true for an object whose reads have no effect (main RAM). Memory counts reads
+	    from every other object in sideEffects.
+	*/
+	bool readWithoutSideEffect=false;
+
 	virtual unsigned int FetchByte(unsigned int physAddr) const=0;
 	virtual unsigned int FetchWord(unsigned int physAddr) const;
 	virtual unsigned int FetchDword(unsigned int physAddr) const;
@@ -258,6 +263,12 @@ private:
 	};
 
 public:
+	/*! KairoTowns: counts every store and every read from an object whose reads may have an
+	    effect (readWithoutSideEffect false), including stores the CPU makes through memory
+	    windows. While it stays the same, the CPU has only read RAM.
+	*/
+	mutable uint64_t sideEffects=0;
+
 	enum
 	{
 		MEMORY_ACCESS_SLOT_SIZE=(1<<GRANURALITY_SHIFT),
@@ -294,18 +305,30 @@ public:
 	inline unsigned int FetchByte(unsigned int physAddr) const
 	{
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];
+		if(true!=memAccess->readWithoutSideEffect)
+		{
+			++sideEffects;
+		}
 		return memAccess->FetchByte(physAddr);
 	}
 
 	inline unsigned int FetchWord(unsigned int physAddr) const
 	{
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];
+		if(true!=memAccess->readWithoutSideEffect)
+		{
+			++sideEffects;
+		}
 		return memAccess->FetchWord(physAddr);
 	}
 
 	inline unsigned int FetchDword(unsigned int physAddr) const
 	{
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];
+		if(true!=memAccess->readWithoutSideEffect)
+		{
+			++sideEffects;
+		}
 		return memAccess->FetchDword(physAddr);
 	}
 
@@ -323,30 +346,35 @@ public:
 	inline void StoreByte(unsigned int physAddr,unsigned char data)
 	{
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];
+		++sideEffects;
 		memAccess->StoreByte(physAddr,data);
 	}
 
 	inline unsigned int FetchByteDMA(unsigned int physAddr) const
 	{
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];
+		++sideEffects;
 		return memAccess->FetchByteDMA(physAddr);
 	}
 
 	inline void StoreByteDMA(unsigned int physAddr,unsigned char data)
 	{
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];
+		++sideEffects;
 		memAccess->StoreByteDMA(physAddr,data);
 	}
 
 	inline void StoreWord(unsigned int physAddr,unsigned int data)
 	{
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];
+		++sideEffects;
 		memAccess->StoreWord(physAddr,data);
 	}
 
 	inline void StoreDword(unsigned int physAddr,unsigned int data)
 	{
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];
+		++sideEffects;
 		memAccess->StoreDword(physAddr,data);
 	}
 };

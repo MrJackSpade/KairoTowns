@@ -155,7 +155,16 @@ public:
 		mutable unsigned char IRR0_OR_IRR1_Cache=0; // Not saved in the state file.  Updated after state is loaded.
 		void UpdateIRRCache(void) const
 		{
-			IRR0_OR_IRR1_Cache=(i8259A[0].IRR|i8259A[1].IRR);
+			// KairoTowns: only requests ProcessIRQ can fire, so a request its mask (OCW1) holds back
+			// no longer makes ProcessIRQ search both chips after every instruction. ProcessIRQ checks
+			// PIC1 only while PIC0's cascade input (bit 7) is unmasked; a request this leaves out
+			// would have found no INTToGo there.
+			unsigned int possible=(i8259A[0].IRR&~i8259A[0].OCW[0]);
+			if(0==(i8259A[0].OCW[0]&0x80))
+			{
+				possible|=(i8259A[1].IRR&~i8259A[1].OCW[0]);
+			}
+			IRR0_OR_IRR1_Cache=(unsigned char)possible;
 		}
 
 		void Reset(void);

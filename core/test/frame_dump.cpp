@@ -1,9 +1,12 @@
 // Runs an FM Towns disc on the host and writes its pictures, to look at what the core draws.
 //
-//   frame_dump <rom dir> <work dir> <disc image> <seconds> <frames between pictures>
+//   frame_dump <rom dir> <work dir> <disc image> <seconds> <frames between pictures> <skip|check>
 //
 // Writes <work dir>/frame-<n>.ppm, n being the frame number, every <frames between pictures>
-// frames, and prints every change of picture size with the frame it happened on.
+// frames, and prints every change of picture size with the frame it happened on. skip skips the
+// memory check as the app does, which runs as fast as real time allows, so the frames vary from run
+// to run; check runs it and makes the run repeatable (Config::repeatable), so two runs of the same
+// build draw the same pictures.
 
 #include <cstdio>
 #include <cstdlib>
@@ -33,7 +36,9 @@ bool write_ppm(const std::string &file, const uint8_t *pixels, uint32_t width, u
 } // namespace
 
 int main(int argc, char **argv) {
-    if (argc != 6) return fail("usage: frame_dump <rom dir> <work dir> <disc image> <seconds> <frames between pictures>");
+    if (argc != 7) return fail("usage: frame_dump <rom dir> <work dir> <disc image> <seconds> <frames between pictures> <skip|check>");
+    const std::string memory_check = argv[6];
+    if (memory_check != "skip" && memory_check != "check") return fail("the memory check is skip or check");
     const std::string work = argv[2];
     const int frames = std::atoi(argv[4]) * 60;
     const int every = std::atoi(argv[5]);
@@ -42,6 +47,8 @@ int main(int argc, char **argv) {
     config.rom_dir = argv[1];
     config.cmos_file = work + "/cmos.bin";
     config.cd = argv[3];
+    config.skip_memory_check = memory_check == "skip";
+    config.repeatable = memory_check == "check";
 
     std::string error;
     auto machine = TownsMachine::create(config, error);

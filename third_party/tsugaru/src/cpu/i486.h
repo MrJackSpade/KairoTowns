@@ -4145,6 +4145,7 @@ inline unsigned int i486DXFidelityLayer<FIDELITY>::FetchDword(unsigned int addre
 template <class FIDELITY>
 inline void i486DXFidelityLayer<FIDELITY>::StoreByte(Memory &mem,int addressSize,const SegmentRegister &seg,unsigned int offset,unsigned char byteData)
 {
+	++mem.sideEffects; // KairoTowns: stores through SSESPWindow bypass Memory.
 	AddressMask(offset,(unsigned char)addressSize);
 	auto linearAddr=seg.baseLinearAddr+offset;
 
@@ -4173,6 +4174,7 @@ inline void i486DXFidelityLayer<FIDELITY>::StoreByte(Memory &mem,int addressSize
 template <class FIDELITY>
 inline void i486DXFidelityLayer<FIDELITY>::StoreWord(Memory &mem,int addressSize,const SegmentRegister &seg,unsigned int offset,unsigned int data)
 {
+	++mem.sideEffects; // KairoTowns: stores through SSESPWindow bypass Memory.
 	AddressMask(offset,(unsigned char)addressSize);
 	auto linearAddr=seg.baseLinearAddr+offset;
 
@@ -4210,6 +4212,7 @@ inline void i486DXFidelityLayer<FIDELITY>::StoreWord(Memory &mem,int addressSize
 template <class FIDELITY>
 inline void i486DXFidelityLayer<FIDELITY>::StoreDword(Memory &mem,int addressSize,const SegmentRegister &seg,unsigned int offset,unsigned int data)
 {
+	++mem.sideEffects; // KairoTowns: stores through SSESPWindow bypass Memory.
 	AddressMask(offset,(unsigned char)addressSize);
 	auto linearAddr=seg.baseLinearAddr+offset;
 

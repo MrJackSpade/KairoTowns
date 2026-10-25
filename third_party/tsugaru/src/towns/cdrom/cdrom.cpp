@@ -666,6 +666,10 @@ void TownsCDROM::PrepareCDDAPlay(void)
 	msfEnd-=offset;
 
 	waveReader.Start(&state.GetDisc(),msfBegin,msfEnd);
+	while(true==waitForWave && AsyncWaveReader::STATE_BUSY==waveReader.GetState()) // KairoTowns
+	{
+		std::this_thread::yield();
+	}
 }
 
 void TownsCDROM::DelayedCommandExecution(unsigned long long int townsTime)

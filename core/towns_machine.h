@@ -6,6 +6,7 @@
 #pragma once
 
 #include <cstdint>
+#include <map>
 #include <memory>
 #include <string>
 #include <vector>
@@ -29,6 +30,13 @@ struct Config {
     // Whether the boot runs as fast as the host can until its first disk read, so the BIOS
     // memory test passes in a moment (this BIOS ignores the CMOS setting that skips it).
     bool skip_memory_check = true;
+    // Whether the passes of a wait loop that cannot change anything are skipped (wait_loop.h). It
+    // changes nothing the guest does; off only to compare against.
+    bool skip_wait_loops = true;
+    // Whether a run repeats exactly, for tests that compare two runs: the clock starts at a fixed
+    // time and runs with guest time, and a CD audio read finishes before the guest goes on (the
+    // app reads it in the background).
+    bool repeatable = false;
 };
 
 // The gamepad in game port 0. A, B, RUN and SELECT are the pad's buttons.
@@ -62,6 +70,23 @@ public:
     void mouse_move(int dx, int dy);
     void mouse_button(int button, bool down);
 
+    // Host time run_frame() has spent since the machine started, in all and in its parts, for
+    // measuring where a frame's time goes.
+    struct Profile {
+        uint64_t frames = 0, pictures = 0, instructions = 0;
+        // Instructions of wait-loop passes skipped instead of run (wait_loop.h), and the skips.
+        uint64_t skipped_instructions = 0, wait_skips = 0;
+        uint64_t run_ns = 0, picture_ns = 0, sound_ns = 0;
+        // With sample_pcs on: how often each CS:EIP was the next instruction, one sample every
+        // kPcSampleInterval instructions, keyed by CS << 32 | EIP.
+        std::map<uint64_t, uint64_t> pcs;
+    };
+    static constexpr uint64_t kPcSampleInterval = 4096;
+    const Profile &profile() const;
+    void sample_pcs(bool on);
+    // count instructions from selector:eip, one a line, for measuring tools.
+    std::string disassemble(uint16_t selector, uint32_t eip, int count) const;
+
     void reset();
     bool save_state(const std::string &file);
     bool load_state(const std::string &file);
@@ -74,6 +99,7 @@ public:
 
 private:
     struct Impl;
+    bool run_frame_body(std::string &error);
     // Runs one frame of guest time; [ran] is how much ran.
     bool run_guest(uint64_t &ran, std::string &error);
     explicit TownsMachine(std::unique_ptr<Impl> impl);

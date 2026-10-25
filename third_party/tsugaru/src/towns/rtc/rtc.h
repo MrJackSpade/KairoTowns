@@ -23,6 +23,11 @@ private:
 public:
 	virtual const char *DeviceName(void) const{return "RTC";}
 
+	/*! KairoTowns: when not 0, the clock reads this time plus the guest time run, instead of the
+	    host's clock, so runs repeat exactly; for tests that compare two runs.
+	*/
+	long long int fixedTime=0;
+
 	enum
 	{
 		REG_1SEC=0,

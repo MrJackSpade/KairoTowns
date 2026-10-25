@@ -248,9 +248,11 @@ void TownsPhysicalMemory::State::Reset(void)
 		return state.nativeVRAMMask[(state.nativeVRAMMaskRegisterLatch<<1)+1];
 
 	case TOWNSIO_KANJI_JISCODE_HIGH://  0xFF94,
-		break;
+		// KairoTowns: data was returned uninitialized; as the memory-mapped port at CFF94 reads.
+		return 0x80;
 	case TOWNSIO_KANJI_JISCODE_LOW://   0xFF95,
-		break;
+		// KairoTowns: data was returned uninitialized; as the memory-mapped port at CFF95 reads.
+		return 0xff;
 	case TOWNSIO_KANJI_PTN_HIGH://      0xFF96,
 		{
 			auto ROMCode=(state.kanjiROMAccess.FontROMCode())&8191;
@@ -271,7 +273,8 @@ void TownsPhysicalMemory::State::Reset(void)
 		}
 		break;
 	case TOWNSIO_KVRAM_OR_ANKFONT://    0xFF99,
-		break;
+		// KairoTowns: data was returned uninitialized; as the memory-mapped port at CFF99 reads.
+		return 0xff;
 
 	case TOWNSIO_MEMCARD_STATUS: //           0x48A, // [2] pp.93
 		data=(true==state.memCard.changed ? 0x80 : 0);
@@ -633,6 +636,7 @@ void TownsPhysicalMemory::SetUpMemoryAccess(unsigned int townsType,unsigned int 
 
 	mainRAMAccess.SetPhysicalMemoryPointer(this);
 	mainRAMAccess.SetCPUPointer(&cpu);
+	mainRAMAccess.readWithoutSideEffect=true; // KairoTowns: see MemoryAccess::readWithoutSideEffect.
 	mem.AddAccess(&mainRAMAccess,0x00000000,0x000FFFFF);
 
 	FMRVRAMAccess.SetPhysicalMemoryPointer(this);
