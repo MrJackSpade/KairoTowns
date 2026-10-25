@@ -883,6 +883,58 @@ void TownsRender::Render16Bit(const TownsCRTC::Layer &layer,const unsigned char 
 		const unsigned char *src=VRAM+(unsigned int)(VRAMBase+v0);
 		unsigned int inLine=inLineStart;
 		int ZHswitch=0;
+		if(ZHsrc[0]==ZHsrc[1])
+		{
+			// KairoTowns: a whole-number zoom, as the loop below draws it: each VRAM pixel z
+			// times while it fits, then the part of one that does not, each written as whole
+			// words.
+			const int z=ZHsrc[0];
+			const uint64_t sourcesLeft=(inLineLimit-inLineStart+1)/2;
+			const uint64_t whole=std::min<uint64_t>(xEnd/z,sourcesLeft);
+			const auto convert=[](unsigned short col16) -> uint32_t
+			{
+				return (uint32_t)(((col16>>2)&0xf8)|((col16>>7)&7))|
+				       ((uint32_t)(((col16>>7)&0xf8)|((col16>>12)&7))<<8)|
+				       ((uint32_t)(((col16<<3)&0xf8)|((col16>>2)&7))<<16)|0xff000000u;
+			};
+			for(uint64_t k=0; k<whole; ++k)
+			{
+				const unsigned short col16=cpputil::GetWord(src+2*k);
+				if(true!=transparentRow || 0==(col16&0x8000))
+				{
+					const uint32_t pixel=convert(col16);
+					if(2==z)
+					{
+						const uint64_t two=pixel|((uint64_t)pixel<<32);
+						std::memcpy(dst,&two,8);
+					}
+					else
+					{
+						for(int i=0; i<z; ++i)
+						{
+							std::memcpy(dst+4*i,&pixel,4);
+						}
+					}
+				}
+				dst+=4*z;
+			}
+			const int x=(int)(whole*z);
+			if(x<xEnd && whole<sourcesLeft)
+			{
+				const unsigned short col16=cpputil::GetWord(src+2*whole);
+				const int n=xEnd-x;
+				if(true!=transparentRow || 0==(col16&0x8000))
+				{
+					const uint32_t pixel=convert(col16);
+					for(int i=0; i<n; ++i)
+					{
+						std::memcpy(dst+4*i,&pixel,4);
+					}
+				}
+				dst+=4*n;
+			}
+			return true;
+		}
 		for(int x=0; x<xEnd && inLine<inLineLimit;)
 		{
 			const unsigned short col16=cpputil::GetWord(src);
