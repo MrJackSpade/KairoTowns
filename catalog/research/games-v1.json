@@ -6308,11 +6308,12 @@
   },
   "fmtowns:188796": {
    "adult": true,
+   "adultDescription": "Hard's FM Towns compilation of the first three Hacchake Ayayo-san adult adventures: 17-year-old schoolgirl Ayayo's shop job turns into sex with customers and the owner; on a day off she and Tomoko pick between a porn film, shoe shopping and dirty books; and after dying they have sex with demons and Buddhist deities in the afterlife. Mosaic-censored.",
    "boxArtUrl": "https://images.launchbox-app.com/07d59c7b-ae56-42e9-8678-b82b702c40fe.jpg",
    "contentIds": [
     "sha256-cd-v1:0465a2a4ea345e0ff1472be9bbf71b8f42ff3e6fd399d762b7f3282ae11cfb02"
    ],
-   "description": "The first three Hacchake Ayayo-san visual novels in one collection.",
+   "description": "The first three Hacchake Ayayo-san stories on one CD, each a short, mostly linear menu-command adventure: 17-year-old schoolgirl Ayayo takes a part-time job in Mr. Suzuki's shop; she and her friend Tomoko decide how to spend a day off; and the pair die on a walk and wander heaven and hell. The first two let you choose the PC-88 or X68000 version.",
    "developer": "HARD",
    "launchbox": "188796",
    "mobygames": 58122,
@@ -8313,10 +8314,12 @@
   },
   "fmtowns:456060": {
    "adult": true,
+   "adultDescription": "An adult live-action video collection in HOP's TEATA format about bored, unfaithful housewives, such as a 24-year-old left alone by a husband always away on business; captions set up each woman and the player clicks through her erotic scenes one after another.",
    "boxArtUrl": "https://images.launchbox-app.com/0c425a0b-eac6-4563-a32c-c82f5b5c0de1.jpg",
    "contentIds": [
     "sha256-cd-v1:cb7da6e58c1c6d8c6d3ec5795a72b42945fb1362bd1283e5f30d3dfb9b8a933a"
    ],
+   "description": "A collection of live-action digital video clips played with HOP's TEATA codec, built around unfaithful young wives: on-screen captions introduce each woman, such as a 24-year-old whose husband is always away on business, and you click through to watch the next scene.",
    "developer": "Paradise",
    "launchbox": "456060",
    "publisher": "Paradise",
@@ -8503,6 +8506,7 @@
    "contentIds": [
     "sha256-cd-v1:7b5dcfab32fcd8abceb01a45fd554dc0f0781101df0e309e32c4269e09c4196f"
    ],
+   "description": "The first CD edition of D.O.'s members-only club disk magazine, carrying Doki Doki Disk Vol. 4 and 5: staff greetings and comedy skits, company news and goods catalogs, a music library, preview galleries for Arquelphos, Collector D, DOR Special Edition and Moonlight-chan Rin-shan, line art to color and send in, rookie artists' sketches, and a video report from a voice-recording session.",
    "sourceGroups": [
     "fmtowns-cd:Doki Doki Disk CDban Vol.1 (1994)(D.O.)(Jp).zip"
    ],
