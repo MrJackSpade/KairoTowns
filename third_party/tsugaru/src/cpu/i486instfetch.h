@@ -349,7 +349,11 @@ template <class CPUCLASS,class MEMCLASS,class FUNCCLASS,class BURSTMODEFUNCCLASS
 class i486DXCommon::FetchInstructionClass
 {
 public:
-	static inline void FetchInstruction(
+	/*! KairoTowns: the instruction at CS:offset, decoded: a decode the cache holds, used in place,
+	    or instOp filled with a fresh one. A cached decode stays as it is until the next fetch, so the
+	    caller reads it before fetching again.
+	*/
+	static inline const InstructionAndOperand &FetchInstructionRef(
 	   CPUCLASS &cpu,
 	   MemoryAccess::ConstMemoryWindow &memWin,
 	   InstructionAndOperand &instOp,
@@ -360,32 +364,39 @@ public:
 		// KairoTowns: the whole instruction and both operands start at zero. Clear() set only some
 		// fields, so fields an instruction's decode does not set (an operand it does not have) kept
 		// whatever the caller's stack held, and executing code that reads them made runs differ
-		// from launch to launch (KairoTowns#32); a cached decode would also have kept them.
-		memset(&instOp,0,sizeof(instOp));
-		inst.Clear();
-		inst.operandSize=defOperSize;
-		inst.addressSize=defAddrSize;
-		inst.codeAddressSize=defAddrSize;
+		// from launch to launch (KairoTowns#32); a cached decode would also have kept them. A cached
+		// decode replaces the whole of instOp, so an instruction found in the cache skips this.
+		bool started=false;
+		auto start=[&]()
+		{
+			memset(&instOp,0,sizeof(instOp));
+			inst.Clear();
+			inst.operandSize=defOperSize;
+			inst.addressSize=defAddrSize;
+			inst.codeAddressSize=defAddrSize;
+			started=true;
+		};
 
 		// Question: Do prefixes need to be in the specific order INST_PREFIX->ADDRSIZE_OVERRIDE->OPSIZE_OVERRIDE->SEG_OVERRIDE?
 
 		auto CSEIPLinear=CS.baseLinearAddr+offset;
 		if(true!=memWin.IsLinearAddressInRange(CSEIPLinear))
 		{
+			start();
 			FUNCCLASS::GetConstMemoryWindow(cpu,memWin,inst.codeAddressSize,CS,offset,mem);
 			// If Page Fault, do not bother fetch instruction.
 			// By fetching, Page Fault may turn into Segmentation Violation.
 			// Page Fault must be prioritize.
 			if(true==FUNCCLASS::CheckExceptionInHighFidelityMode(cpu))
 			{
-				return; // Page Fault -> Don't look at memory at all.
+				return instOp; // Page Fault -> Don't look at memory at all.
 			}
 		}
 		auto ptr=memWin.GetReadAccessPointer(CSEIPLinear);
 
 	#ifdef VERIFY_MEMORY_WINDOW
 		MemoryAccess::ConstMemoryWindow testMemWin;
-		FUNCCLASS::GetConstMemoryWindow(cpu,testMemWin,inst.codeAddressSize,CS,offset,mem);
+		FUNCCLASS::GetConstMemoryWindow(cpu,testMemWin,defAddrSize,CS,offset,mem);
 		if(testMemWin.linearBaseAddr!=memWin.linearBaseAddr || testMemWin.ptr!=memWin.ptr)
 		{
 			std::cout << "Memory Window Test failed!" << std::endl;
@@ -393,7 +404,7 @@ public:
 			std::cout << "CS:EIP Memory Window Linear Addr:   " << cpputil::Uitox(testMemWin.linearBaseAddr) << std::endl;
 			std::cout << "Pointer Diff " << cpputil::Uitox(memWin.ptr-testMemWin.ptr) << std::endl;
 			Abort("Memory Cache Failed.");
-			return;
+			return instOp;
 		}
 	#endif
 
@@ -417,6 +428,10 @@ public:
 			{
 			#ifdef KAIROTOWNS_VERIFY_DECODE_CACHE
 				// KairoTowns: decodes the code again and stops when the cached decode differs.
+				if(true!=started)
+				{
+					start();
+				}
 				inst.opCode=BURSTMODEFUNCCLASS::FetchInstructionByte(cpu,ptr,inst.codeAddressSize,CS,offset,mem);
 				CPUCLASS::template FetchOperandLoop<CPUCLASS,MEMCLASS,BURSTMODEFUNCCLASS>(cpu,instOp,ptr,CS,offset+1,mem,defOperSize,defAddrSize);
 				if(0!=memcmp(&instOp,&cached.instOp,sizeof(instOp)))
@@ -425,8 +440,11 @@ public:
 					abort();
 				}
 			#endif
-				instOp=cached.instOp;
-				return;
+				return cached.instOp;
+			}
+			if(true!=started)
+			{
+				start();
 			}
 			inst.opCode=BURSTMODEFUNCCLASS::FetchInstructionByte(cpu,ptr,inst.codeAddressSize,CS,offset,mem);
 			CPUCLASS::template FetchOperandLoop<CPUCLASS,MEMCLASS,BURSTMODEFUNCCLASS>(cpu,instOp,ptr,CS,offset+1,mem,defOperSize,defAddrSize);
@@ -440,14 +458,36 @@ public:
 				cached.instOp=instOp;
 			}
 		#else
+			if(true!=started)
+			{
+				start();
+			}
 			inst.opCode=BURSTMODEFUNCCLASS::FetchInstructionByte(cpu,ptr,inst.codeAddressSize,CS,offset,mem);
 			CPUCLASS::template FetchOperandLoop<CPUCLASS,MEMCLASS,BURSTMODEFUNCCLASS>(cpu,instOp,ptr,CS,offset+1,mem,defOperSize,defAddrSize);
 		#endif
 		}
 		else
 		{
+			if(true!=started)
+			{
+				start();
+			}
 			inst.opCode=FUNCCLASS::FetchInstructionByte(cpu,ptr,inst.codeAddressSize,CS,offset,mem);
 			CPUCLASS::template FetchOperandLoop<CPUCLASS,MEMCLASS,FUNCCLASS>(cpu,instOp,ptr,CS,offset+1,mem,defOperSize,defAddrSize);
+		}
+		return instOp;
+	}
+
+	static inline void FetchInstruction(
+	   CPUCLASS &cpu,
+	   MemoryAccess::ConstMemoryWindow &memWin,
+	   InstructionAndOperand &instOp,
+	   const SegmentRegister &CS,unsigned int offset,MEMCLASS &mem,unsigned int defOperSize,unsigned int defAddrSize)
+	{
+		const InstructionAndOperand &decoded=FetchInstructionRef(cpu,memWin,instOp,CS,offset,mem,defOperSize,defAddrSize);
+		if(&decoded!=&instOp)
+		{
+			instOp=decoded;
 		}
 	}
 };

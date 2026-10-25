@@ -2182,11 +2182,15 @@ unsigned int i486DXFidelityLayer<FIDELITY>::RunOneInstruction(Memory &mem,InOut 
 
 	state.holdIRQ=false;
 
-	InstructionAndOperand instOp;
+	// KairoTowns: the decode is read in place from the decode cache when it is there, instead of
+	// copied out of it; nothing fetches again before this instruction has run.
+	InstructionAndOperand fetched;
+	const InstructionAndOperand &instOp=FetchInstructionClass<i486DXFidelityLayer<FIDELITY>,Memory,RealFetchInstructionFunctions,BurstModeFetchInstructionFunctions>::FetchInstructionRef(
+	    *this,state.CSEIPWindow,fetched,state.CS(),state.EIP,mem,
+	    *CSOperandSizePointer[Return0InRealMode1InProtectedMode()],*CSAddressSizePointer[Return0InRealMode1InProtectedMode()]);
 	const auto &inst=instOp.inst;
 	const auto &op1=instOp.op1;
 	const auto &op2=instOp.op2;
-	FetchInstruction(state.CSEIPWindow,instOp,state.CS(),state.EIP,mem);
 
 	if(true==fidelity.HandleExceptionAfterFetchInstruction(*this,mem,inst,op1))
 	{
