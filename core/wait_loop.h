@@ -54,6 +54,13 @@ public:
         if (pass_start) at_pass_start(towns, cs, eip, instructions, clocks, deadline);
     }
 
+    // Translated code ran on to the instruction at CS:eip (jit/jit.h). Within a run EIP only grows,
+    // so none of its instructions started a pass; the last is the one the next is compared with.
+    void ran_to(uint16_t cs, uint32_t eip) {
+        last_cs_ = cs;
+        last_eip_ = eip;
+    }
+
     const Counts &counts() const { return counts_; }
 
 private:

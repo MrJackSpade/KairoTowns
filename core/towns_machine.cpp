@@ -14,8 +14,13 @@
 #include "towns.h"
 #include "townsdef.h"
 #include "townsparam.h"
-#include "picture_worker.h"
+#include "jit/jit.h"
+#include "picture_worker.h"
 #include "wait_loop.h"
+
+#if defined(__x86_64__)
+#include <x86intrin.h>
+#endif
 
 namespace kairotowns {
 namespace {
@@ -173,10 +178,125 @@ struct TownsMachine::Impl {
     uint64_t last_frame = kFrameNanoseconds;
     TownsMachine::Profile profile;
     bool sample_pcs = false;
+    bool count_ops = false;
     bool skip_wait_loops = true;
     WaitLoopSkip<Towns> wait_loop;
     // Clocks the CPU has run, for the wait-loop skip.
     uint64_t clocks = 0;
+    // Translated code, when the host has the JIT and the config wants it; and whether the
+    // interpreter runs the next instruction (translated code stopped before it).
+    std::unique_ptr<jit::Jit> jit;
+    bool interpret_next = false;
+    // The next fast device polling as a run of translated code started (jit::Host::must_stop).
+    long long run_polling = 0;
+
+    // Guest time on by clocks of CPU time, as FMTownsTemplate::RunOneInstruction counts each
+    // instruction: the remainder carries, so adding a run's clocks at once, or in parts, gives
+    // the same time.
+    void advance(uint64_t clocks) {
+        auto &t = *towns;
+        t.state.clockBalance += clocks * 1000;
+        const auto frequency = t.state.currentFreq;
+        t.state.townsTime += t.state.clockBalance / frequency;
+        t.state.clockBalance %= frequency;
+    }
+    static void host_advance(void *owner, uint32_t clocks) { static_cast<Impl *>(owner)->advance(clocks); }
+    static bool host_must_stop(void *owner) {
+        auto &t = *static_cast<Impl *>(owner)->towns;
+        return (t.pic.state.IRR0_OR_IRR1_Cache != 0 && t.CPU().GetIF()) || t.GetStopFlags() != 0 ||
+               t.state.nextFastDevicePollingTime != static_cast<Impl *>(owner)->run_polling;
+    }
+    // Instructions and clocks before the running run of translated code, for host_jumped_back.
+    uint64_t run_instructions = 0, run_clocks = 0;
+    static bool host_jumped_back(void *owner, uint16_t cs, uint32_t jump_eip, uint32_t instructions, uint32_t clocks) {
+        auto &impl = *static_cast<Impl *>(owner);
+        if (!impl.skip_wait_loops) return false;
+        auto &t = *impl.towns;
+        const auto time = t.state.townsTime;
+        const auto balance = t.state.clockBalance;
+        impl.wait_loop.ran_to(cs, jump_eip);
+        impl.wait_loop.before_instruction(t, impl.run_instructions + instructions, impl.run_clocks + clocks,
+                                          t.state.nextFastDevicePollingTime);
+        return t.state.townsTime != time || t.state.clockBalance != balance;
+    }
+    jit::Host jit_host() {
+        jit::Host host;
+        host.owner = this;
+        host.advance = &host_advance;
+        host.must_stop = &host_must_stop;
+        host.jumped_back = &host_jumped_back;
+        return host;
+    }
+    // Traces for test tools (TownsMachine::trace_translated, trace_interpreted).
+    std::vector<TownsMachine::CpuSnapshot> *translated_trace = nullptr, *interpreted_trace = nullptr;
+    const std::vector<uint64_t> *trace_counts = nullptr;
+    size_t trace_next = 0;
+
+    TownsMachine::CpuSnapshot snapshot() const {
+        const auto &t = *towns;
+        const auto &st = t.CPU().state;
+        TownsMachine::CpuSnapshot s;
+        s.instructions = profile.instructions;
+        for (int i = 0; i < 8; ++i) s.regs[i] = st.NULL_and_reg32[1 + i];
+        s.eip = st.EIP;
+        s.eflags = st.EFLAGS;
+        s.cs = st.CS().value;
+        s.cs_base = st.CS().baseLinearAddr;
+        s.cpu_mode = st.mode;
+        s.time = t.state.townsTime;
+        s.clock_balance = t.state.clockBalance;
+        s.side_effects = t.mem.sideEffects;
+        return s;
+    }
+
+    // Runs translated code from the CPU's CS:EIP when the interpreter's loop would run the same
+    // instructions; false when the interpreter runs the next one.
+    bool run_translated() {
+        auto &t = *towns;
+        auto &cpu = t.CPU();
+        // An interrupt the PIC would fire after the next instruction is the interpreter's.
+        if (t.pic.state.IRR0_OR_IRR1_Cache != 0 && cpu.GetIF()) return false;
+        // The loop starts an instruction while guest time has not passed the next fast device
+        // polling; after c more clocks the time is townsTime + (clockBalance + 1000c) / FREQ, so
+        // c may be at most ((polling - townsTime + 1) * FREQ - clockBalance - 1) / 1000.
+        const int64_t room = (int64_t(t.state.nextFastDevicePollingTime - t.state.townsTime) + 1) *
+                                 int64_t(t.state.currentFreq) - int64_t(t.state.clockBalance) - 1;
+        if (room < 0) return false;
+        const int32_t limit = int32_t(std::min<int64_t>(room / 1000, 1 << 20));
+        const uint32_t start_eip = cpu.state.EIP;
+        run_polling = t.state.nextFastDevicePollingTime;
+        run_instructions = profile.instructions;
+        run_clocks = clocks;
+        uint8_t start_code[32] = {};
+        if (translated_trace) {
+            const uint32_t lin = cpu.state.CS().baseLinearAddr + start_eip;
+            if (cpu.state.CSEIPWindow.IsLinearAddressInRange(lin)) {
+                const auto code = cpu.state.CSEIPWindow.GetReadAccessPointer(lin);
+                std::memcpy(start_code, code.ptr, std::min<size_t>(sizeof start_code, code.length));
+            }
+        }
+        const jit::Jit::Run ran = jit->run(limit);
+        interpret_next = ran.interpret_next;
+        if (ran.instructions == 0) return false;
+        // I/O in the run added the clocks before it already.
+        advance(ran.clocks - ran.advanced);
+        t.var.disassemblePointer.SEG = cpu.state.CS().value;
+        t.var.disassemblePointer.OFFSET = cpu.state.EIP;
+        // Each instruction the interpreter runs clears it first; the last may have set it again.
+        if (!ran.keep_hold_irq) cpu.state.holdIRQ = false;
+        profile.instructions += ran.instructions;
+        profile.jit_instructions += ran.instructions;
+        ++profile.jit_runs;
+        clocks += ran.clocks;
+        wait_loop.ran_to(cpu.state.CS().value, ran.last_eip);
+        t.pic.ProcessIRQ(cpu, t.mem);
+        if (translated_trace) {
+            translated_trace->push_back(snapshot());
+            translated_trace->back().start_eip = start_eip;
+            std::memcpy(translated_trace->back().code, start_code, sizeof start_code);
+        }
+        return true;
+    }
 
     unsigned pad = 0;
     bool buttons[2] = {false, false};
@@ -245,6 +365,10 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
     towns.DisableDebugger();
     impl->cd = config.cd;
     impl->skip_wait_loops = config.skip_wait_loops;
+    if (config.jit && jit::supported())
+        impl->jit = std::make_unique<jit::Jit>(towns.CPU(), towns.mem, towns.io, &towns.physMem.mainRAMAccess,
+                                               towns.physMem.state.RAM, impl->jit_host(),
+                                               &towns.pic.state.IRR0_OR_IRR1_Cache);
     towns.cdrom.waitForWave = config.repeatable;
     if (config.repeatable) towns.rtc.fixedTime = 946684800; // 2000-01-01 00:00:00
     // As TownsThread::VMStart and VMMainLoopTemplate prepare the machine.
@@ -278,10 +402,54 @@ bool TownsMachine::run_frame(std::string &error) {
 const TownsMachine::Profile &TownsMachine::profile() const {
     impl_->profile.skipped_instructions = impl_->wait_loop.counts().instructions;
     impl_->profile.wait_skips = impl_->wait_loop.counts().skips;
+    if (impl_->jit) {
+        impl_->profile.jit_translations = impl_->jit->stats().translations;
+        impl_->profile.jit_refused = impl_->jit->stats().refused;
+        impl_->profile.jit_mismatches = impl_->jit->stats().mismatches;
+        impl_->profile.jit_links = impl_->jit->stats().links;
+        impl_->profile.jit_flushes = impl_->jit->stats().flushes;
+    }
     return impl_->profile;
 }
 
 void TownsMachine::sample_pcs(bool on) { impl_->sample_pcs = on; }
+void TownsMachine::count_ops(bool on) { impl_->count_ops = on; }
+
+namespace {
+// Group opcodes, whose ModR/M REG field picks the operation.
+bool group_opcode(unsigned op) {
+    return (op >= 0x80 && op <= 0x83) || op == 0xC0 || op == 0xC1 || (op >= 0xD0 && op <= 0xD3) || op == 0xF6 ||
+           op == 0xF7 || op == 0xFE || op == 0xFF || op == 0xF00 || op == 0xF01 || op == 0xFBA;
+}
+
+uint32_t op_key_of(const Towns &towns, const i486DXCommon::InstructionAndOperand &decoded) {
+    const auto &cpu = towns.CPU();
+    const auto &inst = decoded.inst;
+    const unsigned op = inst.RealOpCode();
+    uint32_t key = op & 0xFFF;
+    if (group_opcode(op)) key |= (1u << 15) | (inst.GetREG() << 12);
+    if (decoded.op1.operandType == i486DXCommon::OPER_ADDR || decoded.op2.operandType == i486DXCommon::OPER_ADDR)
+        key |= 1u << 16;
+    key |= (inst.operandSize == 8 ? 0u : inst.operandSize == 16 ? 1u : 2u) << 17;
+    if (inst.addressSize == 32) key |= 1u << 19;
+    if (inst.instPrefix == i486DXCommon::INST_PREFIX_REP || inst.instPrefix == i486DXCommon::INST_PREFIX_REPNE)
+        key |= 1u << 20;
+    const uint32_t mode = cpu.IsInRealMode() ? 0 : (cpu.state.EFLAGS & i486DXCommon::EFLAGS_VIRTUAL86) ? 2 : 1;
+    key |= mode << 21;
+    if (cpu.PagingEnabled()) key |= 1u << 23;
+    return key;
+}
+} // namespace
+
+std::string TownsMachine::op_key(uint32_t key) {
+    char text[96];
+    static const char *modes[] = {"real", "prot", "v86", "?"};
+    std::snprintf(text, sizeof text, "%03X%s%c %s o%u a%u%s %s%s", key & 0xFFF, (key >> 15) & 1 ? "/" : "",
+                  (key >> 15) & 1 ? char('0' + ((key >> 12) & 7)) : ' ', (key >> 16) & 1 ? "mem" : "reg",
+                  8u << ((key >> 17) & 3), (key >> 19) & 1 ? 32 : 16, (key >> 20) & 1 ? " rep" : "",
+                  modes[(key >> 21) & 3], (key >> 23) & 1 ? " paging" : "");
+    return text;
+}
 
 std::string TownsMachine::disassemble(uint16_t selector, uint32_t eip, int count) const {
     auto &towns = *impl_->towns;
@@ -322,10 +490,19 @@ bool TownsMachine::run_frame_body(std::string &error) {
 }
 
 bool TownsMachine::run_guest(uint64_t &ran, std::string &error) {
-    auto &towns = *impl_->towns;
     // Guest time run this frame, counted step by step: a reset starts Tsugaru's clock over.
     ran = 0;
     while (ran < kFrameNanoseconds) {
+        uint64_t step = 0;
+        if (!run_step(step, error)) return false;
+        ran += step;
+    }
+    return true;
+}
+
+bool TownsMachine::run_step(uint64_t &ran, std::string &error) {
+    auto &towns = *impl_->towns;
+    {
         const uint64_t step_start = towns.state.townsTime;
         towns.var.nextTimeSync = towns.state.townsTime + kTimeSync;
         towns.var.justLoadedState = false;
@@ -341,9 +518,37 @@ bool TownsMachine::run_guest(uint64_t &ran, std::string &error) {
                 if (impl_->skip_wait_loops)
                     impl_->wait_loop.before_instruction(towns, impl_->profile.instructions, impl_->clocks,
                                                         towns.state.nextFastDevicePollingTime);
+                if (impl_->jit && !impl_->interpret_next && impl_->run_translated()) continue;
+                impl_->interpret_next = false;
                 ++impl_->profile.instructions;
+                if (impl_->count_ops) {
+                    i486DXCommon::InstructionAndOperand decoded;
+                    MemoryAccess::ConstMemoryWindow window;
+                    towns.CPU().DebugFetchInstruction(window, decoded, towns.mem);
+                    const uint32_t key = op_key_of(towns, decoded);
+                    ++impl_->profile.ops[key];
+                    const uint32_t next = towns.CPU().state.EIP + decoded.inst.numBytes;
+#if defined(__x86_64__)
+                    const uint64_t ticks = __rdtsc();
+#endif
+                    impl_->clocks += towns.RunOneInstruction();
+                    const bool transfer = towns.CPU().state.EIP != next;
+                    towns.pic.ProcessIRQ(towns.CPU(), towns.mem);
+#if defined(__x86_64__)
+                    impl_->profile.op_ticks[key] += __rdtsc() - ticks;
+#endif
+                    if (transfer) ++impl_->profile.transfers;
+                    continue;
+                }
                 impl_->clocks += towns.RunOneInstruction();
                 towns.pic.ProcessIRQ(towns.CPU(), towns.mem);
+                if (impl_->interpreted_trace) {
+                    const auto &counts = *impl_->trace_counts;
+                    while (impl_->trace_next < counts.size() && counts[impl_->trace_next] < impl_->profile.instructions)
+                        ++impl_->trace_next;
+                    if (impl_->trace_next < counts.size() && counts[impl_->trace_next] == impl_->profile.instructions)
+                        impl_->interpreted_trace->push_back(impl_->snapshot());
+                }
             }
             towns.RunScheduledTasks();
             towns.RunFastDevicePolling();
@@ -355,7 +560,7 @@ bool TownsMachine::run_guest(uint64_t &ran, std::string &error) {
         }
         const uint64_t step_end = towns.state.townsTime;
         const uint64_t step = step_end > step_start ? step_end - step_start : 0;
-        ran += step;
+        ran = step;
         impl_->speaker.advance(step);
         const auto sound_start = std::chrono::steady_clock::now();
         towns.ProcessSound(&impl_->world);
@@ -378,6 +583,25 @@ bool TownsMachine::run_guest(uint64_t &ran, std::string &error) {
     }
     return true;
 }
+
+bool TownsMachine::CpuSnapshot::operator==(const CpuSnapshot &o) const {
+    // What the guest can tell: the instruction count is not, as the wait-loop skip (wait_loop.h)
+    // counts the passes it skips apart, and may skip a pass sooner in one machine than another.
+    return std::equal(regs, regs + 8, o.regs) && eip == o.eip && eflags == o.eflags && cs == o.cs && time == o.time &&
+           clock_balance == o.clock_balance && side_effects == o.side_effects;
+}
+
+TownsMachine::CpuSnapshot TownsMachine::snapshot() const { return impl_->snapshot(); }
+
+void TownsMachine::trace_translated(std::vector<CpuSnapshot> *out) { impl_->translated_trace = out; }
+
+void TownsMachine::trace_interpreted(const std::vector<uint64_t> *counts, std::vector<CpuSnapshot> *out) {
+    impl_->trace_counts = counts;
+    impl_->interpreted_trace = out;
+    impl_->trace_next = 0;
+}
+
+const std::vector<unsigned char> &TownsMachine::ram() const { return impl_->towns->physMem.state.RAM; }
 
 double TownsMachine::frame_seconds() const { return impl_->last_frame / 1e9; }
 

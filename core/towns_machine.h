@@ -37,6 +37,10 @@ struct Config {
     // time and runs with guest time, and a CD audio read finishes before the guest goes on (the
     // app reads it in the background).
     bool repeatable = false;
+    // Whether the CPU runs translated code where it can, on hosts that have the JIT (jit/jit.h).
+    // It changes nothing the guest does. Off by default: it is not yet faster where it matters
+    // and stalls frames while it translates (KairoTowns#19).
+    bool jit = false;
 };
 
 // The gamepad in game port 0. A, B, RUN and SELECT are the pad's buttons.
@@ -77,15 +81,57 @@ public:
         // Instructions of wait-loop passes skipped instead of run (wait_loop.h), and the skips.
         uint64_t skipped_instructions = 0, wait_skips = 0;
         uint64_t run_ns = 0, picture_ns = 0, sound_ns = 0;
+        // Instructions translated code ran, of instructions, and the runs.
+        uint64_t jit_instructions = 0, jit_runs = 0;
+        // Translations made, and those whose first instruction was left to the interpreter.
+        uint64_t jit_translations = 0, jit_refused = 0;
+        // Code found changed at a block's entry, blocks linked, and code buffer flushes.
+        uint64_t jit_mismatches = 0, jit_links = 0, jit_flushes = 0;
         // With sample_pcs on: how often each CS:EIP was the next instruction, one sample every
         // kPcSampleInterval instructions, keyed by CS << 32 | EIP.
         std::map<uint64_t, uint64_t> pcs;
+        // With count_ops on: how many instructions of each kind the interpreter ran (keyed as
+        // op_key() describes), and how many of them went on somewhere other than the instruction
+        // after them.
+        std::map<uint32_t, uint64_t> ops;
+        uint64_t transfers = 0;
+        // With count_ops on, on x86-64 hosts: the host's time stamp counter ticks each kind took,
+        // from before the instruction to after the interrupt check that follows it.
+        std::map<uint32_t, uint64_t> op_ticks;
     };
     static constexpr uint64_t kPcSampleInterval = 4096;
     const Profile &profile() const;
     void sample_pcs(bool on);
+    void count_ops(bool on);
+    // An ops key as text: the opcode, its ModR/M REG field for group opcodes, a memory first
+    // operand, the operand and address size, a REP prefix and the CPU mode.
+    static std::string op_key(uint32_t key);
     // count instructions from selector:eip, one a line, for measuring tools.
     std::string disassemble(uint16_t selector, uint32_t eip, int count) const;
+
+    // For test tools (core/test/jit_lockstep.cpp): one step of about a millisecond of guest time,
+    // as run_frame runs them; [ran] is how much ran.
+    bool run_step(uint64_t &ran, std::string &error);
+    // The CPU and guest time at a moment.
+    struct CpuSnapshot {
+        uint64_t instructions = 0;  // run before it
+        uint32_t start_eip = 0;     // where the run of translated code that ended here started
+        uint32_t regs[8] = {}, eip = 0, eflags = 0;
+        uint16_t cs = 0;
+        uint32_t cs_base = 0, cpu_mode = 0;
+        // With a translated trace, the code where the run started, as it was then.
+        uint8_t code[32] = {};
+        uint64_t time = 0, clock_balance = 0, side_effects = 0;
+        // Equal in all the guest can tell, the instruction count aside.
+        bool operator==(const CpuSnapshot &o) const;
+    };
+    CpuSnapshot snapshot() const;
+    // With out set, every run of translated code adds the CPU after it to out.
+    void trace_translated(std::vector<CpuSnapshot> *out);
+    // With out set, the interpreter adds the CPU after each instruction whose count (instructions
+    // run, as CpuSnapshot::instructions counts them) is in counts, ascending.
+    void trace_interpreted(const std::vector<uint64_t> *counts, std::vector<CpuSnapshot> *out);
+    const std::vector<unsigned char> &ram() const;
 
     void reset();
     bool save_state(const std::string &file);

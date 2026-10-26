@@ -99,6 +99,7 @@ Memory::Memory()
 
 void Memory::CleanUp(void)
 {
+	++kairoMapGeneration;
 	for(auto &ptr : memAccessPtr)
 	{
 		ptr=&nullAccess;
@@ -114,6 +115,7 @@ void Memory::AddAccess(MemoryAccess *memAccess,unsigned int physAddrLow,unsigned
 		std::cout << "       to integer multiple of 0x1000 minus 1." << std::endl;
 		return;
 	}
+	++kairoMapGeneration;
 	auto low=physAddrLow>>GRANURALITY_SHIFT;
 	auto high=physAddrHigh>>GRANURALITY_SHIFT;
 	for(auto i=low; i<=high; ++i)
@@ -135,6 +137,7 @@ void Memory::AddAccess(MemoryAccess *memAccess,unsigned int physAddrLow,unsigned
 }
 void Memory::RemoveAccess(unsigned int physAddrLow,unsigned int physAddrHigh)
 {
+	++kairoMapGeneration;
 	auto low=physAddrLow>>GRANURALITY_SHIFT;
 	auto high=physAddrHigh>>GRANURALITY_SHIFT;
 	for(auto i=low; i<=high; ++i)
@@ -156,6 +159,7 @@ void Memory::RemoveAccess(unsigned int physAddrLow,unsigned int physAddrHigh)
 }
 void Memory::SetAccessObject(MemoryAccess *memAccess,unsigned int physAddr)
 {
+	++kairoMapGeneration;
 	auto slot=physAddr>>GRANURALITY_SHIFT;
 	memAccessPtr[slot]=memAccess;
 }

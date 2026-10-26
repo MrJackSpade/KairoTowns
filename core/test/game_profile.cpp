@@ -1,6 +1,6 @@
 // Measures where the host's time goes while an FM Towns disc runs, flat out.
 //
-//   game_profile <rom dir> <work dir> <disc image> <seconds> <skip|check> [pcs] [host] [noskip] [exact]
+//   game_profile <rom dir> <work dir> <disc image> <seconds> <skip|check> [pcs] [host] [noskip] [exact] [ops] [jit]
 //
 // Runs the disc for <seconds> of guest frames as fast as the host can and prints, for every 600
 // frames, the host time a frame took (mean, 95th percentile, longest) and how much of it went to
@@ -12,7 +12,10 @@
 // noskip runs every pass of the guest's wait loops instead of skipping them (wait_loop.h), to
 // compare. exact makes the run repeatable (Config::repeatable), so runs with check repeat
 // exactly, and prints a hash of every picture and all sound for each 600 frames; two builds or
-// options that draw and sound the same print the same hashes. Run it under shared\tools\run-limited.ps1.
+// options that draw and sound the same print the same hashes. ops counts every instruction the
+// interpreter runs in the last half of the run by kind and prints the most frequent kinds (with
+// the JIT, the ones translated code leaves to it). jit runs translated code where the host has
+// the JIT (jit/jit.h). Run it under shared\tools\run-limited.ps1.
 
 #include <algorithm>
 #include <atomic>
@@ -48,12 +51,18 @@ void report(const char *label, std::vector<double> frame_ms, const TownsMachine:
     const double picture = (to.picture_ns - from.picture_ns) / 1e6 / frames;
     const double sound = (to.sound_ns - from.sound_ns) / 1e6 / frames;
     std::printf("%s: %.0f frames, ms a frame mean %.2f p95 %.2f max %.2f; pictures %.2f ms (%.2f a frame), "
-                "sound %.2f ms, the rest %.2f ms; %.3f M instructions a frame run, %.3f M skipped in %.0f skips\n",
+                "sound %.2f ms, the rest %.2f ms; %.3f M instructions a frame run, %.3f M skipped in %.0f skips; "
+                "%.1f%% translated, %.1f a run, %.0f translations (%.0f refused), %.0f changed, %.0f links, %.0f flushes\n",
                 label, frames, run, frame_ms[frame_ms.size() * 95 / 100], frame_ms.back(), picture,
                 (to.pictures - from.pictures) / frames, sound, run - picture - sound,
                 (to.instructions - from.instructions) / frames / 1e6,
                 (to.skipped_instructions - from.skipped_instructions) / frames / 1e6,
-                (to.wait_skips - from.wait_skips) / frames);
+                (to.wait_skips - from.wait_skips) / frames,
+                100.0 * (to.jit_instructions - from.jit_instructions) / std::max<double>(1, to.instructions - from.instructions),
+                double(to.jit_instructions - from.jit_instructions) / std::max<double>(1, to.jit_runs - from.jit_runs),
+                double(to.jit_translations - from.jit_translations), double(to.jit_refused - from.jit_refused),
+                double(to.jit_mismatches - from.jit_mismatches), double(to.jit_links - from.jit_links),
+                double(to.jit_flushes - from.jit_flushes));
 }
 
 #ifdef _WIN32
@@ -108,14 +117,16 @@ uint64_t fnv1a(uint64_t hash, const void *data, size_t bytes) {
 } // namespace
 
 int main(int argc, char **argv) {
-    if (argc < 6) return fail("usage: game_profile <rom dir> <work dir> <disc image> <seconds> <skip|check> [pcs] [host] [noskip] [exact]");
-    bool pcs = false, host = false, noskip = false, exact = false;
+    if (argc < 6) return fail("usage: game_profile <rom dir> <work dir> <disc image> <seconds> <skip|check> [pcs] [host] [noskip] [exact] [ops] [jit]");
+    bool pcs = false, host = false, noskip = false, exact = false, ops = false, jit = false;
     for (int i = 6; i < argc; ++i) {
         const std::string option = argv[i];
         if (option == "pcs") pcs = true;
         else if (option == "host") host = true;
         else if (option == "noskip") noskip = true;
         else if (option == "exact") exact = true;
+        else if (option == "ops") ops = true;
+        else if (option == "jit") jit = true;
         else return fail("unknown option " + option);
     }
 #ifdef _WIN32
@@ -137,6 +148,7 @@ int main(int argc, char **argv) {
     config.skip_memory_check = memory_check == "skip";
     config.skip_wait_loops = !noskip;
     config.repeatable = exact;
+    config.jit = jit;
 
     std::string error;
     auto machine = TownsMachine::create(config, error);
@@ -161,6 +173,7 @@ int main(int argc, char **argv) {
         window.push_back(ms);
         all.push_back(ms);
         if (pcs && frame == frames / 2) machine->sample_pcs(true);
+        if (ops && frame == frames / 2) machine->count_ops(true);
 #ifdef _WIN32
         if (host && frame == frames / 2) sampler.start();
 #endif
@@ -179,6 +192,37 @@ int main(int argc, char **argv) {
         sampler.write(std::string(argv[2]) + "/host-samples.txt");
     }
 #endif
+    if (ops) {
+        const auto &profile = machine->profile();
+        std::vector<std::pair<uint32_t, uint64_t>> top(profile.ops.begin(), profile.ops.end());
+        uint64_t total = 0, ticks = 0;
+        for (const auto &op : top) total += op.second;
+        for (const auto &op : profile.op_ticks) ticks += op.second;
+        auto ticks_of = [&](uint32_t key) {
+            const auto found = profile.op_ticks.find(key);
+            return found == profile.op_ticks.end() ? uint64_t(0) : found->second;
+        };
+        std::printf("ops: %llu instructions, %.2f%% went on elsewhere, %zu kinds, %.1f host ticks an instruction\n",
+                    (unsigned long long) total, 100.0 * profile.transfers / total, top.size(),
+                    total ? double(ticks) / total : 0.0);
+        // By count, then by host time.
+        for (int pass = 0; pass < 2; ++pass) {
+            if (pass == 1 && ticks == 0) break;
+            std::sort(top.begin(), top.end(), [&](const auto &a, const auto &b) {
+                return pass == 0 ? a.second > b.second : ticks_of(a.first) > ticks_of(b.first);
+            });
+            std::printf(pass == 0 ? "by count (count%%, sum, time%%, ticks each):\n" : "by time (count%%, time%%, sum, ticks each):\n");
+            double sum = 0;
+            for (size_t i = 0; i < top.size() && i < 120; ++i) {
+                const double count = 100.0 * top[i].second / total;
+                const double time = ticks ? 100.0 * ticks_of(top[i].first) / ticks : 0.0;
+                sum += pass == 0 ? count : time;
+                std::printf("  op %-40s %6.2f%% %6.2f%% %6.2f%% %8.1f\n", TownsMachine::op_key(top[i].first).c_str(),
+                            count, pass == 0 ? sum : time, pass == 0 ? time : sum,
+                            double(ticks_of(top[i].first)) / top[i].second);
+            }
+        }
+    }
     if (pcs) {
         std::vector<std::pair<uint64_t, uint64_t>> top(machine->profile().pcs.begin(), machine->profile().pcs.end());
         uint64_t samples = 0;

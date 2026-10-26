@@ -18,6 +18,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 
 
+#include <cstddef>
 #include <vector>
 #include "cpputil.h"
 
@@ -159,6 +160,12 @@ public:
 			return (addr&~(MEMORY_WINDOW_SIZE-1))==_linearBaseAddr;
 		}
 
+		/*! KairoTowns: where _linearBaseAddr is, for the JIT's translated code (core/jit). */
+		static size_t KairoLinearBaseAddrOffset(void)
+		{
+			return offsetof(ConstMemoryWindow,_linearBaseAddr);
+		}
+
 		/*! Returns a memory-access pointer from this window.
 		    In this case, physical or linear doesn't matter.
 		    Higher than 12th bit will be masked anyway.
@@ -226,6 +233,12 @@ public:
 		{
 			return (addr&~(MEMORY_WINDOW_SIZE-1))==linearBaseAddr;
 		}
+
+		/*! KairoTowns: where linearBaseAddr is, for the JIT's translated code (core/jit). */
+		static size_t KairoLinearBaseAddrOffset(void)
+		{
+			return offsetof(MemoryWindow,linearBaseAddr);
+		}
 	};
 
 	virtual ConstMemoryWindow GetConstMemoryWindow(unsigned int physAddr) const;
@@ -268,6 +281,11 @@ public:
 	    windows. While it stays the same, the CPU has only read RAM.
 	*/
 	mutable uint64_t sideEffects=0;
+
+	/*! KairoTowns: counts changes to which memory-access object serves which 4KB slot, for the
+	    JIT (core/jit), which keeps where main RAM is per page.
+	*/
+	uint64_t kairoMapGeneration=0;
 
 	enum
 	{
@@ -337,6 +355,14 @@ public:
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];
 		return memAccess->GetConstMemoryWindow(physAddr);
 	}
+	/*! KairoTowns: the memory-access object of every 4KB slot, for the JIT's translated code
+	    (core/jit), which reads main RAM directly where Memory would.
+	*/
+	inline MemoryAccess *const *KairoAccessTable(void) const
+	{
+		return memAccessPtr.data();
+	}
+
 	inline MemoryAccess::MemoryWindow GetMemoryWindow(unsigned int physAddr)
 	{
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];

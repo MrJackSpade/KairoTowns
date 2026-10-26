@@ -2906,6 +2906,18 @@ public:
 
 	/*! Returns the addressing size (16 or 32) of the stack segment.
 	*/
+	/*! KairoTowns: the default operand and address sizes of the code segment, as instructions
+	    are decoded with them, for the JIT (core/jit).
+	*/
+	inline unsigned int KairoCodeOperandSize(void) const
+	{
+		return *CSOperandSizePointer[Return0InRealMode1InProtectedMode()];
+	}
+	inline unsigned int KairoCodeAddressSize(void) const
+	{
+		return *CSAddressSizePointer[Return0InRealMode1InProtectedMode()];
+	}
+
 	inline unsigned int GetStackAddressingSize(void) const
 	{
 		return *stackAddressSizePointer[Return0InRealMode1InProtectedMode()];
@@ -3205,6 +3217,15 @@ private:
 	static void FetchOperandLoop(CPUCLASS &cpu,InstructionAndOperand &instOp,MemoryAccess::ConstPointer &ptr,const SegmentRegister &seg,int offset,MEMCLASS &mem,unsigned int defOperSize,unsigned int defAddrSize);
 
 public:
+	/*! KairoTowns: FetchOperandLoop, for the JIT (core/jit), which decodes code exactly as the
+	    interpreter does before it translates it.
+	*/
+	template <class CPUCLASS,class MEMCLASS,class FUNCCLASS>
+	static void KairoFetchOperandLoop(CPUCLASS &cpu,InstructionAndOperand &instOp,MemoryAccess::ConstPointer &ptr,const SegmentRegister &seg,int offset,MEMCLASS &mem,unsigned int defOperSize,unsigned int defAddrSize)
+	{
+		FetchOperandLoop<CPUCLASS,MEMCLASS,FUNCCLASS>(cpu,instOp,ptr,seg,offset,mem,defOperSize,defAddrSize);
+	}
+
 	/*! Fetch an instruction from specific segment and offset.
 	    It will not affect the CPU state including exceptions.
 	*/
