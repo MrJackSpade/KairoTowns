@@ -269,6 +269,31 @@ struct TownsMachine::Impl {
         t.RunFastDevicePolling();
         jit->after(mark);
     }
+    // Whether every instruction is the interpreter's, with nothing counted, sampled or traced
+    // around it: then interpret_to_polling runs them.
+    bool plain_interpreter() const { return !jit && !sample_pcs && !count_ops && !interpreted_trace; }
+
+    // run_step's loop up to the fast device polling where plain_interpreter() holds: the same
+    // steps for each instruction (the wait-loop check, the instruction, ProcessIRQ), with what
+    // they read held in locals instead of read through the machine for every instruction.
+    void interpret_to_polling() {
+        auto &t = *towns;
+        auto &cpu = t.CPU();
+        auto &state = t.state;
+        auto &pic = t.pic;
+        auto &mem = t.mem;
+        const bool skip = skip_wait_loops;
+        uint64_t instructions = profile.instructions, ran = clocks;
+        while (state.townsTime <= state.nextFastDevicePollingTime && 0 == t.GetStopFlags()) {
+            if (skip) wait_loop.before_instruction(t, instructions, ran, state.nextFastDevicePollingTime);
+            ++instructions;
+            ran += t.RunOneInstruction();
+            pic.ProcessIRQ(cpu, mem);
+        }
+        profile.instructions = instructions;
+        clocks = ran;
+    }
+
     // Whether the machine's loop starts another instruction before the polling.
     bool cpu_runs() const {
         const auto &t = *towns;
@@ -623,7 +648,8 @@ bool TownsMachine::run_step(uint64_t &ran, std::string &error) {
             if (towns.pic.state.IRR0_OR_IRR1_Cache != 0) impl_->wait_loop.restart();
             // Translated code may do the polling itself (Impl::host_poll).
             bool polled = false;
-            while (impl_->cpu_runs()) {
+            if (impl_->plain_interpreter()) impl_->interpret_to_polling();
+            else while (impl_->cpu_runs()) {
                 impl_->before_instruction(0, 0);
                 if (impl_->jit && !impl_->interpret_next) {
                     const auto ran = impl_->run_translated();
