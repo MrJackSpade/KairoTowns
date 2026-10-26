@@ -1512,7 +1512,7 @@ public:
 	};
 	enum
 	{
-		DECODE_CACHE_SIZE=4096,
+		DECODE_CACHE_SIZE=16384,
 	};
 	mutable std::vector <DecodedInstruction> decodeCache;
 
