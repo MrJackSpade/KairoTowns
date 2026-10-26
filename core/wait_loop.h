@@ -73,8 +73,7 @@ private:
         // costs no copies.
         const bool again = cs == pass_cs_ && eip == pass_eip_ && effects == pass_effects_;
         if (again && candidate_) {
-            snapshot(state, scratch_);
-            if (scratch_ == pass_state_) {
+            if (pass_state_.matches(state)) {
                 skip(towns, instructions - pass_instructions_, clocks - pass_clocks_, deadline);
                 // The time left is less than a pass; the CPU runs it, across the polling, and the
                 // pass after it, with the same state and nothing done between, is the same pass:
@@ -83,9 +82,9 @@ private:
                 pass_clocks_ = clocks;
                 return;
             }
-            std::swap(pass_state_, scratch_);
+            pass_state_.take(state);
         } else if (again) {
-            snapshot(state, pass_state_);
+            pass_state_.take(state);
             candidate_ = true;
         } else {
             candidate_ = false;
@@ -109,37 +108,46 @@ private:
             sizeof(CpuState::holdIRQ) + sizeof(CpuState::exception) + sizeof(CpuState::exceptionCode) +
             sizeof(CpuState::exceptionType) + sizeof(CpuState::exceptionLinearAddr);
         uint8_t bytes[kBytes];
-        size_t used = 0;
 
-        template <class T> void put(const T &value) {
-            std::memcpy(bytes + used, &value, sizeof(T));
-            used += sizeof(T);
+        // Stores [state] here.
+        void take(const CpuState &state) {
+            size_t used = 0;
+            fields(state, [&](const void *value, size_t size) {
+                std::memcpy(bytes + used, value, size);
+                used += size;
+                return true;
+            });
         }
-        bool operator==(const Snapshot &other) const { return std::memcmp(bytes, other.bytes, kBytes) == 0; }
-    };
+        // Whether [state] is the state stored here, field by field: the registers first, which a
+        // loop that is not waiting changes, so such a loop is told apart at its first field.
+        bool matches(const CpuState &state) const {
+            size_t used = 0;
+            return fields(state, [&](const void *value, size_t size) {
+                const bool same = std::memcmp(bytes + used, value, size) == 0;
+                used += size;
+                return same;
+            });
+        }
 
-    static void snapshot(const CpuState &state, Snapshot &out) {
-        out.used = 0;
-        out.put(state.NULL_and_reg32);
-        out.put(state.mode);
-        out.put(state.EIP);
-        out.put(state.EFLAGS);
-        out.put(state.sreg);
-        out.put(state.GDTR);
-        out.put(state.IDTR);
-        out.put(state.LDTR);
-        out.put(state.TR);
-        for (unsigned i = 0; i < 4; ++i) out.put(static_cast<unsigned int>(state.GetCR(i)));
-        out.put(state.DR);
-        out.put(state.TEST);
-        out.put(state.fpuState);
-        out.put(state.halt);
-        out.put(state.holdIRQ);
-        out.put(state.exception);
-        out.put(state.exceptionCode);
-        out.put(state.exceptionType);
-        out.put(state.exceptionLinearAddr);
-    }
+    private:
+        // Calls [field] with each part of the state in turn while it returns true; true when every
+        // call did.
+        template <class Field> static bool fields(const CpuState &state, Field &&field) {
+            const unsigned int cr[4] = {static_cast<unsigned int>(state.GetCR(0)), static_cast<unsigned int>(state.GetCR(1)),
+                                        static_cast<unsigned int>(state.GetCR(2)), static_cast<unsigned int>(state.GetCR(3))};
+            return field(&state.NULL_and_reg32, sizeof state.NULL_and_reg32) && field(&state.mode, sizeof state.mode) &&
+                   field(&state.EIP, sizeof state.EIP) && field(&state.EFLAGS, sizeof state.EFLAGS) &&
+                   field(&state.sreg, sizeof state.sreg) && field(&state.GDTR, sizeof state.GDTR) &&
+                   field(&state.IDTR, sizeof state.IDTR) && field(&state.LDTR, sizeof state.LDTR) &&
+                   field(&state.TR, sizeof state.TR) && field(cr, sizeof cr) && field(&state.DR, sizeof state.DR) &&
+                   field(&state.TEST, sizeof state.TEST) && field(&state.fpuState, sizeof state.fpuState) &&
+                   field(&state.halt, sizeof state.halt) && field(&state.holdIRQ, sizeof state.holdIRQ) &&
+                   field(&state.exception, sizeof state.exception) &&
+                   field(&state.exceptionCode, sizeof state.exceptionCode) &&
+                   field(&state.exceptionType, sizeof state.exceptionType) &&
+                   field(&state.exceptionLinearAddr, sizeof state.exceptionLinearAddr);
+        }
+    };
 
     // Moves guest time over the whole passes of `clocks` clocks that end by `deadline`, as
     // FMTownsTemplate::RunOneInstruction would count them one instruction at a time: its
@@ -168,7 +176,7 @@ private:
     uint16_t pass_cs_ = 0;
     uint32_t pass_eip_ = 0;
     uint64_t pass_effects_ = 0, pass_instructions_ = 0, pass_clocks_ = 0;
-    Snapshot pass_state_, scratch_;
+    Snapshot pass_state_;
     Counts counts_;
 };
 
