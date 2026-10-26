@@ -11,7 +11,7 @@ import com.mrjackspade.kairo.frontend.LibraryStrings
 import com.mrjackspade.kairo.frontend.MachineActivity
 import com.mrjackspade.kairo.frontend.MachineFirstRun
 import com.mrjackspade.kairo.frontend.NativeMachine
-import com.mrjackspade.kairo.frontend.mediaFor
+import com.mrjackspade.kairo.frontend.companionFor
 
 import java.io.File
 import java.util.concurrent.atomic.AtomicBoolean
@@ -42,26 +42,33 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
     /**
      * CDs as Tsugaru opens them: a CCD reads its IMG, an MDS its MDF, a CUE the BIN, IMG or ISO
      * beside it, and an ISO itself. A CUE beside a CCD or MDS, and an ISO beside a CUE, are the
-     * same disc, listed once. tools/catalog_config.py hashes them by the same rules.
+     * same disc, listed once. Floppies in D77 and raw sector images (HDM), and SCSI hard disks
+     * (.h0 to .h6, the SCSI ID in the extension). tools/catalog_config.py hashes them by the same rules.
      */
     private val disks by lazy {
         DiskImageLibrary(this, DiskImageLibrary.Format(
-            kinds = listOf("ccd", "cue", "mds", "iso").associateWith { "cd" } + listOf("d77", "d88", "88d").associateWith { "fd" },
-            labels = mapOf("cd" to "CD-ROM", "fd" to "Floppy disk"),
-            maxBytes = mapOf("cd" to 2L * 1024 * 1024 * 1024, "fd" to 64L * 1024 * 1024),
+            kinds = listOf("ccd", "cue", "mds", "iso").associateWith { "cd" } +
+                listOf("d77", "d88", "88d", "hdm").associateWith { "fd" } + (0..6).associate { "h$it" to "hd" },
+            labels = mapOf("cd" to "CD-ROM", "fd" to "Floppy disk", "hd" to "Hard disk"),
+            maxBytes = mapOf("cd" to 2L * 1024 * 1024 * 1024, "fd" to 64L * 1024 * 1024, "hd" to 4L * 1024 * 1024 * 1024),
             guestName = "FM Towns",
             data = mapOf("ccd" to listOf("img"), "mds" to listOf("mdf"), "cue" to listOf("bin", "img", "iso")),
-            supersededBy = mapOf("cue" to setOf("ccd", "mds"), "iso" to setOf("cue"))))
+            supersededBy = mapOf("cue" to setOf("ccd", "mds"), "iso" to setOf("cue"))),
+            // 2: hard disks and HDM floppies, so archives scanned before are looked into again.
+            DiskImageLibrary.Cache(mediaFormatsVersion = 2))
     }
     override fun createCatalog() = LayeredGameCatalog(this, TownsCatalog)
     override fun createLibrary(catalog: LayeredGameCatalog) = disks
 
     private fun isCd(entry: DiskImageEntry) = entry.mediaLabel == "CD-ROM"
+    private fun isFloppy(entry: DiskImageEntry) = entry.mediaLabel == "Floppy disk"
+    private fun isHardDisk(entry: DiskImageEntry) = entry.mediaLabel == "Hard disk"
 
     override val machineOptions = TownsCatalog.options
-    override val mediaPageTitle = "Discs"
+    override val mediaPageTitle = "Disks"
+    // In the core's slot order (kairotowns/src/main/cpp/towns_core.cpp).
     override val mediaSlots = listOf(MediaSlot<DiskImageEntry>("CD-ROM", ::isCd),
-        MediaSlot("Floppy A") { !isCd(it) }, MediaSlot("Floppy B") { !isCd(it) })
+        MediaSlot("Floppy A", ::isFloppy), MediaSlot("Floppy B", ::isFloppy), MediaSlot("Hard disk", ::isHardDisk))
 
     private val firmwareDir by lazy { File(filesDir, "firmware") }
     override val firmwareSets by lazy {
@@ -78,25 +85,35 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
     override fun startGame(entry: DiskImageEntry, game: CatalogGame, cancelled: AtomicBoolean,
                            progress: (String) -> Unit) {
         requireFirmware()
+        // A CD game's floppy: the boot floppy its catalog names, else the one floppy in its set, such
+        // as a user disk.
         val floppy = when {
-            !isCd(entry) -> entry
-            else -> game.mediaId("floppyA")?.let { id ->
-                mediaFor(id, entry, libraryEntries) ?: error("The boot floppy this game needs is not in the library")
-            }
+            isFloppy(entry) -> entry
+            isCd(entry) -> companionFor(game.mediaId("floppyA"), entry, launchEntries, "boot floppy", ::isFloppy)
+            else -> null
         }
-        val cd = entry.takeIf(::isCd)
-        val disc = cd?.let { disks.prepare(it, cancelled, progress) }
-        val floppyImage = floppy?.let { disks.prepare(it, cancelled, progress) }
+        // A hard disk game's CD, and the hard disk installed beside a CD, as their sets hold them.
+        val cd = if (isCd(entry)) entry else companionFor(null, entry, launchEntries, "CD", ::isCd)
+        val hardDisk = if (isHardDisk(entry)) entry else companionFor(null, entry, launchEntries, "hard disk", ::isHardDisk)
+        val media = listOf(cd, floppy, null, hardDisk)
+        val images = media.map { disk -> disk?.let { disks.prepare(it, cancelled, progress).absolutePath } }
         val home = File(filesDir, "tsugaru").apply { mkdirs() }
-        check(bridge.start(firmwareDir.absolutePath, home.absolutePath,
-            listOf(disc?.absolutePath, floppyImage?.absolutePath, null),
-            optionValues(game))) { "Another machine is still running" }
+        // The machine boots the disk the player starts: a hard disk boots before the CD beside it.
+        val settings = optionValues(game) + (BOOT_HARD_DISK to if (isHardDisk(entry)) "on" else "off")
+        check(bridge.start(firmwareDir.absolutePath, home.absolutePath, images, settings)) {
+            "Another machine is still running"
+        }
         awaitRunning()
-        mediaStarted(listOf(cd, floppy, null))
+        mediaStarted(media)
     }
 
     override fun stateError(code: Int) = when (code) {
         2 -> "the emulator could not read or write the state"
         else -> "code $code"
+    }
+
+    private companion object {
+        /** The launch setting that boots the hard disk although a CD is in the drive (towns_core.cpp). */
+        const val BOOT_HARD_DISK = "bootHardDisk"
     }
 }

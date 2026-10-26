@@ -175,6 +175,8 @@ struct TownsMachine::Impl {
     Speaker speaker;
     PictureWorker pictures;
     std::string cd;
+    // The CD that goes in once a hard disk boot has read its first disk (Config::boot_hd).
+    std::string cd_after_boot;
     uint64_t last_frame = kFrameNanoseconds;
     TownsMachine::Profile profile;
     bool sample_pcs = false;
@@ -558,6 +560,19 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
     parameters.cdImgFName = config.cd;
     parameters.fdImgFName[0] = config.fd[0];
     parameters.fdImgFName[1] = config.fd[1];
+    static_assert(Config::kHardDisks == TownsStartParameters::MAX_NUM_SCSI_DEVICES, "a hard disk for each SCSI ID");
+    for (int id = 0; id < Config::kHardDisks; ++id) {
+        if (config.hd[id].empty()) continue;
+        parameters.scsiImg[id].imageType = TownsStartParameters::SCSIIMAGE_HARDDISK;
+        parameters.scsiImg[id].imgFName = config.hd[id];
+    }
+    if (config.boot_hd) {
+        if (std::none_of(std::begin(config.hd), std::end(config.hd), [](const std::string &hd) { return !hd.empty(); })) {
+            error = "The machine has no hard disk to boot";
+            return nullptr;
+        }
+        parameters.cdImgFName.clear();
+    }
     parameters.memSizeInMB = config.memory_mb;
     parameters.freq = config.cpu_mhz;
     // Booting until the first disk read: run_frame runs it as fast as it can when skipping the memory check.
@@ -575,7 +590,15 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
         return nullptr;
     }
     towns.DisableDebugger();
+    // Setup only prints when a hard disk image does not open.
+    for (int id = 0; id < Config::kHardDisks; ++id) {
+        if (!config.hd[id].empty() && towns.scsi.state.dev[id].devType != TownsSCSI::SCSIDEVICE_HARDDISK) {
+            error = "The hard disk image " + config.hd[id] + " did not open";
+            return nullptr;
+        }
+    }
     impl->cd = config.cd;
+    if (config.boot_hd) impl->cd_after_boot = config.cd;
     impl->skip_wait_loops = config.skip_wait_loops;
     // Reads without effect do not keep a wait loop from being skipped (Impl::pure_read).
     towns.io.kairoPureRead = &Impl::pure_read;
@@ -685,6 +708,14 @@ std::string TownsMachine::disassemble(uint16_t selector, uint32_t eip, int count
 bool TownsMachine::run_frame_body(std::string &error) {
     auto &towns = *impl_->towns;
     uint64_t ran = 0;
+    if (!impl_->cd_after_boot.empty() && towns.kairoDiskReads > 0) {
+        const std::string cd = impl_->cd_after_boot;
+        impl_->cd_after_boot.clear();
+        if (!insert_cd(cd)) {
+            error = "The CD " + cd + " did not open";
+            return false;
+        }
+    }
     if (!towns.state.noWait) {
         if (!run_guest(ran, error)) return false;
         impl_->last_frame = ran;
@@ -871,6 +902,7 @@ bool TownsMachine::load_state(const std::string &file) {
 
 bool TownsMachine::insert_cd(const std::string &path) {
     auto &towns = *impl_->towns;
+    impl_->cd_after_boot.clear();
     if (path.empty()) {
         towns.cdrom.state.GetDisc().CleanUp();
         impl_->cd.clear();
@@ -893,7 +925,27 @@ bool TownsMachine::insert_fd(int drive, const std::string &path) {
     return towns.fdc.LoadD77orRDDorRAW(drive, path.c_str(), towns.state.townsTime, false);
 }
 
+bool TownsMachine::insert_hd(int id, const std::string &path) {
+    auto &towns = *impl_->towns;
+    if (id < 0 || id >= Config::kHardDisks) return false;
+    auto &device = towns.scsi.state.dev[id];
+    if (device.devType == TownsSCSI::SCSIDEVICE_CDROM) return false;
+    if (path.empty()) {
+        device.devType = TownsSCSI::SCSIDEVICE_NONE;
+        device.imageFName.clear();
+        device.imageSize = 0;
+        return true;
+    }
+    return towns.scsi.LoadHardDiskImage(id, path);
+}
+
 std::string TownsMachine::cd_path() const { return impl_->cd; }
+
+std::string TownsMachine::hd_path(int id) const {
+    if (id < 0 || id >= Config::kHardDisks) return "";
+    const auto &device = impl_->towns->scsi.state.dev[id];
+    return device.devType == TownsSCSI::SCSIDEVICE_HARDDISK ? device.imageFName : "";
+}
 
 std::string TownsMachine::fd_path(int drive) const {
     if (drive < 0 || drive > 1) return "";

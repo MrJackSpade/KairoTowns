@@ -23,6 +23,13 @@ struct Config {
     // A disc image (.ccd, .cue, .mds or .iso) and two floppy images; "" for none.
     std::string cd;
     std::string fd[2];
+    // Hard disk images by SCSI ID ("" for none), written in place as the guest writes them.
+    static constexpr int kHardDisks = 7;
+    std::string hd[kHardDisks];
+    // Whether the machine boots its hard disk although a CD is given: the BIOS boots a CD before a hard
+    // disk, so the drive starts empty, as a player would power on, and the CD goes in once the boot
+    // has read its first disk. (Tsugaru's boot keys do not help: this BIOS reads no key before it boots.)
+    bool boot_hd = false;
     // Main memory in megabytes.
     unsigned memory_mb = 4;
     // The CPU clock in MHz.
@@ -140,8 +147,11 @@ public:
     // Inserts an image, or ejects it for ""; true when it is in.
     bool insert_cd(const std::string &path);
     bool insert_fd(int drive, const std::string &path);
+    // The hard disk at a SCSI ID ("" ejects it), as a SCSI device attached while running.
+    bool insert_hd(int id, const std::string &path);
     std::string cd_path() const;
     std::string fd_path(int drive) const;
+    std::string hd_path(int id) const;
 
 private:
     struct Impl;

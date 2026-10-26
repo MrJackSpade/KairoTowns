@@ -17,6 +17,15 @@ using kairotowns::TownsMachine;
 constexpr int kCd = 0;
 constexpr int kFloppyA = 1;
 constexpr int kFloppyB = 2;
+constexpr int kHardDisk = 3;
+
+// A hard disk image's SCSI ID, from its extension (.h0 to .h6); -1 for any other name.
+int hard_disk_id(const std::string &path) {
+    const size_t size = path.size();
+    if (size < 3 || path[size - 3] != '.' || (path[size - 2] != 'h' && path[size - 2] != 'H')) return -1;
+    const int id = path[size - 1] - '0';
+    return id >= 0 && id < kairotowns::Config::kHardDisks ? id : -1;
+}
 constexpr const char *kStateFile = "/state.tss";
 // MainActivity.stateError reads this.
 constexpr int kStateFailed = 2;
@@ -83,15 +92,32 @@ public:
         case kCd: return machine_->insert_cd(path) ? 0 : kStateFailed;
         case kFloppyA: return machine_->insert_fd(0, path) ? 0 : kStateFailed;
         case kFloppyB: return machine_->insert_fd(1, path) ? 0 : kStateFailed;
+        case kHardDisk: {
+            // The slot holds one hard disk, at the SCSI ID its name gives.
+            const int id = path.empty() ? -1 : hard_disk_id(path);
+            if (!path.empty() && id < 0) return kStateFailed;
+            const int current = attached_hard_disk();
+            if (current >= 0 && !machine_->insert_hd(current, "")) return kStateFailed;
+            return path.empty() || machine_->insert_hd(id, path) ? 0 : kStateFailed;
+        }
         default: return kUnsupported;
         }
     }
 
     std::vector<std::string> media_paths() override {
-        return {machine_->cd_path(), machine_->fd_path(0), machine_->fd_path(1)};
+        const int hard_disk = attached_hard_disk();
+        return {machine_->cd_path(), machine_->fd_path(0), machine_->fd_path(1),
+                hard_disk < 0 ? std::string() : machine_->hd_path(hard_disk)};
     }
 
 private:
+    // The SCSI ID of the hard disk in the slot, or -1.
+    int attached_hard_disk() const {
+        for (int id = 0; id < kairotowns::Config::kHardDisks; ++id)
+            if (!machine_->hd_path(id).empty()) return id;
+        return -1;
+    }
+
     std::unique_ptr<TownsMachine> machine_;
     std::string error_;
     std::vector<uint8_t> blank_;
@@ -108,6 +134,15 @@ std::unique_ptr<kairo::MachineCore> kairo::create_core(const kairo::Launch &laun
     config.cd = launch.media.size() > kCd ? launch.media[kCd] : "";
     config.fd[0] = launch.media.size() > kFloppyA ? launch.media[kFloppyA] : "";
     config.fd[1] = launch.media.size() > kFloppyB ? launch.media[kFloppyB] : "";
+    const std::string hard_disk = launch.media.size() > kHardDisk ? launch.media[kHardDisk] : "";
+    if (!hard_disk.empty()) {
+        const int id = hard_disk_id(hard_disk);
+        if (id < 0) {
+            error = "The hard disk " + hard_disk + " is not named .h0 to .h6";
+            return nullptr;
+        }
+        config.hd[id] = hard_disk;
+    }
     // The settings TownsCatalog's options name; every launch passes all of them.
     config.memory_mb = static_cast<unsigned>(std::stoul(launch.settings.at("memory")));
     config.cpu_mhz = static_cast<unsigned>(std::stoul(launch.settings.at("cpu")));
@@ -117,6 +152,13 @@ std::unique_ptr<kairo::MachineCore> kairo::create_core(const kairo::Launch &laun
         return nullptr;
     }
     config.skip_memory_check = skip == "on";
+    // MainActivity's: on when the player starts the hard disk, which then boots before the CD.
+    const std::string &boot_hard_disk = launch.settings.at("bootHardDisk");
+    if (boot_hard_disk != "on" && boot_hard_disk != "off") {
+        error = "Boot hard disk is \"" + boot_hard_disk + "\", not on or off";
+        return nullptr;
+    }
+    config.boot_hd = boot_hard_disk == "on";
     auto machine = TownsMachine::create(config, error);
     if (!machine) return nullptr;
     return std::make_unique<TownsCore>(std::move(machine));

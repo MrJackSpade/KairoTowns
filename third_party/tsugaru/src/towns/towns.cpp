@@ -1209,6 +1209,7 @@ void FMTownsCommon::Reset(unsigned int bootKey)
 
 void FMTownsCommon::NotifyDiskRead(void)
 {
+	++kairoDiskReads; // KairoTowns
 	keyboard.BootSequenceStarted();
 	gameport.BootSequenceStarted();
 	state.noWait=var.noWaitStandby;

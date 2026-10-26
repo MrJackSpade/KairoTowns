@@ -677,6 +677,10 @@ public:
 	*/
 	void NotifyDiskRead(void);
 
+	/*! KairoTowns: counts NotifyDiskRead calls, so the machine knows a boot has read its first disk.
+	*/
+	uint64_t kairoDiskReads=0;
+
 
 	/*! Process sound.
 	*/

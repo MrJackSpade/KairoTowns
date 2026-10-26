@@ -17,8 +17,8 @@ object TownsCatalog : LayeredGameCatalog.Schema {
     override val metadataUrl = "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/core-v3.meta.json"
     override val coreVersion = 3
     override val selfHostedArt = "/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/"
-    override val contentId = Regex("sha256-(?:cd|fd)-v1:[0-9a-f]{64}")
-    override val mediaExtensions = Regex("\\.(?:zip|7z|ccd|cue|mds|iso|img|bin|mdf|d77|d88|88d)$", RegexOption.IGNORE_CASE)
+    override val contentId = Regex("sha256-(?:cd|fd|hd)-v1:[0-9a-f]{64}")
+    override val mediaExtensions = Regex("\\.(?:zip|7z|ccd|cue|mds|iso|img|bin|mdf|d77|d88|88d|hdm|h[0-6])$", RegexOption.IGNORE_CASE)
 
     val memory = MachineOption("memory", "Memory", listOf(2, 4, 6, 8, 12, 16).map { ChoiceOption("$it", "$it MB") },
         "6", numeric = true)

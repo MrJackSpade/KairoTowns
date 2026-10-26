@@ -117,11 +117,25 @@ uint64_t fnv1a(uint64_t hash, const void *data, size_t bytes) {
 } // namespace
 
 int main(int argc, char **argv) {
-    if (argc < 6) return fail("usage: game_profile <rom dir> <work dir> <disc image> <seconds> <skip|check> [pcs] [host] [noskip] [exact] [ops] [jit]");
-    bool pcs = false, host = false, noskip = false, exact = false, ops = false, jit = false;
+    if (argc < 6) return fail("usage: game_profile <rom dir> <work dir> <disc image> <seconds> <skip|check> [pcs] [host] [noskip] [exact] [ops] [jit] [pictures] [fd0=<image>] [fd1=<image>] [hd0=<image>] ... [hd6=<image>] [boothd] [mem=<MB>]");
+    bool pcs = false, host = false, noskip = false, exact = false, ops = false, jit = false, pictures = false;
+    std::string fd[2], hd[Config::kHardDisks];
+    bool boot_hd = false;
+    unsigned memory_mb = Config().memory_mb;
     for (int i = 6; i < argc; ++i) {
         const std::string option = argv[i];
+        // A floppy or hard disk image by drive or SCSI ID, such as hd0=disk.h0.
+        if (option.size() > 4 && option[3] == '=' && (option.compare(0, 2, "fd") == 0 || option.compare(0, 2, "hd") == 0)) {
+            const int drive = option[2] - '0';
+            const bool floppy = option[0] == 'f';
+            if (drive < 0 || drive >= (floppy ? 2 : Config::kHardDisks)) return fail("no drive " + option.substr(0, 3));
+            (floppy ? fd[drive] : hd[drive]) = option.substr(4);
+            continue;
+        }
         if (option == "pcs") pcs = true;
+        else if (option == "pictures") pictures = true;
+        else if (option == "boothd") boot_hd = true;
+        else if (option.compare(0, 4, "mem=") == 0) memory_mb = static_cast<unsigned>(std::atoi(option.c_str() + 4));
         else if (option == "host") host = true;
         else if (option == "noskip") noskip = true;
         else if (option == "exact") exact = true;
@@ -145,6 +159,10 @@ int main(int argc, char **argv) {
     config.rom_dir = argv[1];
     config.cmos_file = std::string(argv[2]) + "/cmos.bin";
     config.cd = argv[3];
+    for (int drive = 0; drive < 2; ++drive) config.fd[drive] = fd[drive];
+    for (int id = 0; id < Config::kHardDisks; ++id) config.hd[id] = hd[id];
+    config.boot_hd = boot_hd;
+    config.memory_mb = memory_mb;
     config.skip_memory_check = memory_check == "skip";
     config.skip_wait_loops = !noskip;
     config.repeatable = exact;
@@ -169,6 +187,18 @@ int main(int argc, char **argv) {
             uint32_t width = 0, height = 0;
             const uint8_t *pixels = machine->frame(width, height);
             if (pixels) hash = fnv1a(hash, pixels, size_t(width) * height * 4);
+        }
+        // The picture every 10 s as <work dir>/picture-<frame>.ppm, to see where a game is.
+        if (pictures && frame % 600 == 0) {
+            uint32_t width = 0, height = 0;
+            if (const uint8_t *pixels = machine->frame(width, height)) {
+                const std::string path = std::string(argv[2]) + "/picture-" + std::to_string(frame) + ".ppm";
+                FILE *out = std::fopen(path.c_str(), "wb");
+                if (!out) return fail("cannot write " + path);
+                std::fprintf(out, "P6 %u %u 255\n", width, height);
+                for (size_t i = 0; i < size_t(width) * height; ++i) std::fwrite(pixels + i * 4, 1, 3, out);
+                std::fclose(out);
+            }
         }
         window.push_back(ms);
         all.push_back(ms);
