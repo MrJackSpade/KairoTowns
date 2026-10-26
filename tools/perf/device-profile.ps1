@@ -40,6 +40,7 @@ if ($LASTEXITCODE -ne 0) { throw "building failed; see $dir-build.log" }
 
 $adb = (Get-Command adb -CommandType Application | Select-Object -First 1).Source
 function Adb { $out = & $adb -s $Device @args 2>&1; if ($LASTEXITCODE -ne 0) { throw "adb $args failed: $out" }; $out }
+. (Join-Path $PSScriptRoot 'awake.ps1')
 
 $remote = '/data/local/tmp/kairotowns'
 Adb shell "mkdir -p $remote/bios $remote/disc $remote/work" | Out-Null
@@ -54,5 +55,7 @@ foreach ($file in Get-ChildItem $discItem.DirectoryName -File) {
 }
 Adb shell "rm -f $remote/work/cmos.bin" | Out-Null
 $command = "cd $remote && ./game_profile-$Name bios work 'disc/$($discItem.Name)' $Seconds $($Options -join ' ')"
-& $adb -s $Device shell $command 2>&1 | Where-Object { $_ -match '^(frames|all|  hash|FAIL|CS:EIP|  [0-9A-F]{4}:)' }
-if ($LASTEXITCODE -ne 0) { throw "game_profile failed on the device" }
+Invoke-Awake {
+    & $adb -s $Device shell $command 2>&1 | Where-Object { $_ -match '^(frames|all|  hash|FAIL|CS:EIP|  [0-9A-F]{4}:)' }
+    if ($LASTEXITCODE -ne 0) { throw "game_profile failed on the device" }
+}

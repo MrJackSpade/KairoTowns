@@ -46,6 +46,7 @@ if ($LASTEXITCODE -ne 0) { throw "building failed; see $dir-build.log" }
 # The executable by its path: a bare "adb" inside the function named Adb would call the function.
 $adb = (Get-Command adb -CommandType Application | Select-Object -First 1).Source
 function Adb { $out = & $adb -s $Device @args 2>&1; if ($LASTEXITCODE -ne 0) { throw "adb $args failed: $out" }; $out }
+. (Join-Path $PSScriptRoot 'awake.ps1')
 
 $remote = '/data/local/tmp/kairotowns'
 $raw = Join-Path $root '.build\perf\pgo\raw'
@@ -55,7 +56,7 @@ Adb shell "mkdir -p $remote/bios $remote/disc $remote/work $remote/pgo; rm -f $r
 Adb push (Join-Path $dir 'game_profile') "$remote/game_profile-pgogen" | Out-Null
 Adb shell "chmod 755 $remote/game_profile-pgogen" | Out-Null
 foreach ($rom in Get-ChildItem (Join-Path $root 'bios') -File) { Adb push $rom.FullName "$remote/bios/$($rom.Name)" | Out-Null }
-foreach ($name in $discs.Keys) {
+Invoke-Awake { foreach ($name in $discs.Keys) {
     $disc = Get-Item (Join-Path $root $discs[$name])
     foreach ($file in Get-ChildItem $disc.DirectoryName -File) {
         $target = "$remote/disc/$($file.Name)"
@@ -66,7 +67,7 @@ foreach ($name in $discs.Keys) {
     $text = Adb shell "cd $remote && LLVM_PROFILE_FILE=$remote/pgo/$name.profraw ./game_profile-pgogen bios work 'disc/$($disc.Name)' $Seconds skip"
     "${name}: " + ($text | Select-String '^all').Line
     Adb pull "$remote/pgo/$name.profraw" (Join-Path $raw "$name.profraw") | Out-Null
-}
+} }
 
 $profdata = Join-Path $Ndk 'toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-profdata.exe'
 $merged = Join-Path $root '.build\perf\pgo\kairotowns.profdata'
