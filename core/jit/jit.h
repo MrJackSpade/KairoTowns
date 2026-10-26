@@ -63,6 +63,8 @@ public:
         uint64_t runs = 0, instructions = 0, translations = 0, refused = 0, flushes = 0;
         // Blocks linked to the next, and blocks found changed at their entry.
         uint64_t links = 0, mismatches = 0, tlb_flushes = 0;
+        // Host time spent translating, and translated code's bytes.
+        uint64_t translate_ns = 0, code_bytes = 0;
         // Runs by what ended them (ExitWhy, context.h).
         uint64_t exits[WHY_COUNT] = {};
     };

@@ -4,6 +4,7 @@
 
 #include <algorithm>
 #include <cerrno>
+#include <chrono>
 #include <deque>
 #include <cstdio>
 #include <cstdlib>
@@ -194,6 +195,9 @@ struct Jit::Impl {
     // What the dispatch in translated code finds (Translator::emit_dispatch).
     std::vector<DispatchEntry> dispatch_table = std::vector<DispatchEntry>(size_t(1) << kDispatchBits);
     void *dispatch = nullptr;
+    // Translator::emit_stub's routines, by Translator::Stub.
+    static constexpr size_t kStubs = size_t(Translator::Stub::TlbMissPaged) + 1;
+    void *stubs[kStubs] = {};
     static size_t dispatch_slot(const uint8_t *code, uint32_t eip) {
         return size_t(((reinterpret_cast<uintptr_t>(code) ^ uint64_t(eip) << 20) * 0x9E3779B97F4A7C15ull) >> (64 - kDispatchBits));
     }
@@ -229,6 +233,13 @@ struct Jit::Impl {
         ctx.tlb = tlb.data();
         ctx.interpret_helper = reinterpret_cast<void *>(&kairotowns_jit_interpret);
         ctx.jumped_back_helper = reinterpret_cast<void *>(&kairotowns_jit_jumped_back);
+        ctx.exit_stub = stubs[size_t(Translator::Stub::Exit)];
+        ctx.interpret_stub = stubs[size_t(Translator::Stub::Interpret)];
+        ctx.jumped_back_stub = stubs[size_t(Translator::Stub::JumpedBack)];
+        ctx.link_stub = stubs[size_t(Translator::Stub::Link)];
+        ctx.compare_stub = stubs[size_t(Translator::Stub::Compare)];
+        ctx.tlb_miss_flat = stubs[size_t(Translator::Stub::TlbMissFlat)];
+        ctx.tlb_miss_paged = stubs[size_t(Translator::Stub::TlbMissPaged)];
         ctx.io_memory = &mem;
         ctx.irq_waiting = irq_waiting;
         ctx.jit = this;
@@ -273,6 +284,10 @@ struct Jit::Impl {
         leave = install();
         Translator::emit_dispatch(assembler, cpu);
         dispatch = install();
+        for (size_t i = 0; i < kStubs; ++i) {
+            translator.emit_stub(assembler, Translator::Stub(i));
+            stubs[i] = install();
+        }
         trampolines = used;
         set_up_context();
 #else
@@ -281,9 +296,10 @@ struct Jit::Impl {
     }
     ~Impl() {
         if (std::getenv("KAIROTOWNS_JIT_STATS")) {
-            std::fprintf(stderr, "jit: %llu runs, %llu instructions, %llu TLB flushes, %llu translations; runs ended by",
+            std::fprintf(stderr, "jit: %llu runs, %llu instructions, %llu TLB flushes, %llu translations in %.1f ms, %llu bytes; runs ended by",
                          (unsigned long long) stats.runs, (unsigned long long) stats.instructions,
-                         (unsigned long long) stats.tlb_flushes, (unsigned long long) stats.translations);
+                         (unsigned long long) stats.tlb_flushes, (unsigned long long) stats.translations,
+                         stats.translate_ns / 1e6, (unsigned long long) stats.code_bytes);
             for (uint32_t i = 0; i < WHY_COUNT; ++i)
                 std::fprintf(stderr, " %s %llu", exit_why_name(i), (unsigned long long) stats.exits[i]);
             std::fprintf(stderr, "\n");
@@ -319,6 +335,7 @@ struct Jit::Impl {
         uint8_t *at = buffer + used;
         std::memcpy(at, assembler.code(), bytes);
         installed_bytes = bytes;
+        stats.code_bytes += bytes;
         __builtin___clear_cache(reinterpret_cast<char *>(at), reinterpret_cast<char *>(at + bytes));
         used += (bytes + 15) & ~size_t(15);
         assembler.clear();
@@ -343,6 +360,15 @@ struct Jit::Impl {
     Block translate(const uint8_t *code, uint32_t avail, uint32_t eip, const Mode &mode, bool generic) {
         // A block's translation checks the code at its entry, so only a refused block keeps its
         // code here.
+        const auto started = std::chrono::steady_clock::now();
+        struct Timed {
+            Stats &stats;
+            std::chrono::steady_clock::time_point started;
+            ~Timed() {
+                stats.translate_ns += uint64_t(std::chrono::duration_cast<std::chrono::nanoseconds>(
+                    std::chrono::steady_clock::now() - started).count());
+            }
+        } timed{stats, started};
         Block block;
         block.code = code;
         block.eip = eip;

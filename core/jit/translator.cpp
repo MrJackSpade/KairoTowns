@@ -11,8 +11,7 @@
 #include <algorithm>
 #include <cstdlib>
 #include <cstring>
-#include <functional>
-#include <memory>
+#include <deque>
 #include <stdexcept>
 
 namespace kairotowns::jit {
@@ -82,7 +81,7 @@ struct Translator::Impl {
         bool back = false;
         uint32_t next_eip = 0;
     };
-    std::vector<std::unique_ptr<Exit>> exits;
+    std::deque<Exit> exits;  // stays where it is as it grows
 
     // The lazily kept flags at this point of the code.
     uint32_t kind = 0;
@@ -143,8 +142,7 @@ struct Translator::Impl {
     // --- Exits --------------------------------------------------------------------------------
 
     Exit &new_exit(uint32_t reason, uint32_t instructions, uint32_t clocks, uint32_t last, uint32_t to) {
-        exits.push_back(std::make_unique<Exit>());
-        Exit &e = *exits.back();
+        Exit &e = exits.emplace_back();
         e.reason = reason;
         e.instructions = instructions;
         e.clocks = clocks;
@@ -204,113 +202,66 @@ struct Translator::Impl {
         if (e.reason == REASON_NEXT && !e.entry && max_instructions() > 1 &&
             (e.why == WHY_DYNAMIC || e.why == WHY_ELSEWHERE))
             return emit_dispatched(e);
-        exit_tail(e.instructions, e.clocks, e.entry, e.last_eip, e.reason, e.eip_in_reg, e.eip, e.kind, e.why);
+        exit_record(e.instructions, e.clocks, e.entry, e.last_eip, e.reason, e.eip_in_reg, e.eip, e.kind, e.why);
     }
-    // Leaves translated code: the instructions run are those of the blocks before this one and
-    // instructions more; the clocks, the static count plus what conditional instructions and the
-    // blocks before took off the limit.
-    void exit_tail(uint32_t instructions, uint32_t clocks, bool last_from_ctx, uint32_t last, uint32_t reason,
-                   bool eip_in_reg, uint32_t to, uint32_t flag_kind_now, uint32_t why) {
-        a.mov_imm32(V1, why);
-        a.str_w(V1, host::CTX, ctx(offsetof(Context, why)));
-        a.ldr_w(V0, host::CTX, ctx(offsetof(Context, clock_limit)));
-        a.sub(false, V0, V0, host::LIMIT);
-        add_const(V0, V0, clocks);
-        a.str_w(V0, host::CTX, ctx(offsetof(Context, clocks)));
-        a.ldr_w(V1, host::CTX, ctx(offsetof(Context, chained_instructions)));
-        add_const(V1, V1, instructions);
-        a.str_w(V1, host::CTX, ctx(offsetof(Context, instructions)));
-        if (last_from_ctx) a.ldr_w(V1, host::CTX, ctx(offsetof(Context, chained_last_eip)));
-        else a.mov_imm32(V1, last);
-        a.str_w(V1, host::CTX, ctx(offsetof(Context, last_eip)));
-        a.mov_imm32(V1, reason);
-        a.str_w(V1, host::CTX, ctx(offsetof(Context, reason)));
-        if (eip_in_reg) {
-            a.str_w(V2, host::STATE, eip_offset());
-        } else {
-            a.mov_imm32(V1, to);
-            a.str_w(V1, host::STATE, eip_offset());
-        }
-        flags_into(flag_kind_now, V0);
-        a.str_w(V0, host::STATE, eflags_offset());
-        a.ldr_x(IP0, host::CTX, ctx(offsetof(Context, leave)));
-        a.br(IP0);
+
+    // Calls the shared routine whose address Context has at field; the words emitted after the
+    // call are its record, which it finds by the return address.
+    void call_stub(size_t field) {
+        a.ldr_x(IP1, host::CTX, ctx(field));
+        a.blr(IP1);
     }
-    // The interpreter runs the instruction at e.eip (kairotowns_jit_interpret), with the CPU state
-    // as it has it; its clocks come off the limit. The run then goes on into the block at the
-    // next instruction, which checks its code (the instruction may have stored into it), or ends
-    // where the interpreter went elsewhere or left a reason to stop.
+    // An exit record's first word: why, the reason, where EIP and the last EIP come from, and the
+    // lazily kept flags' kind (Stub::Exit).
+    static constexpr uint32_t kEipInReg = 1u << 12, kLastFromCtx = 1u << 13;
+
+    // Leaves translated code (Stub::Exit): the instructions run are those of the blocks before
+    // this one and instructions more; the clocks, the static count plus what conditional
+    // instructions and the blocks before took off the limit. With eip_in_reg, EIP is in V2.
+    void exit_record(uint32_t instructions, uint32_t clocks, bool last_from_ctx, uint32_t last, uint32_t reason,
+                     bool eip_in_reg, uint32_t to, uint32_t flag_kind_now, uint32_t why) {
+        call_stub(offsetof(Context, exit_stub));
+        a.emit(why | reason << 8 | (eip_in_reg ? kEipInReg : 0) | (last_from_ctx ? kLastFromCtx : 0) | flag_kind_now << 16);
+        a.emit(clocks);
+        a.emit(instructions);
+        a.emit(last);
+        a.emit(to);
+    }
+    // The interpreter runs the instruction at e.eip (Stub::Interpret), with the CPU state as it
+    // has it; its clocks come off the limit. The run then goes on into the block at the next
+    // instruction, which checks its code (the instruction may have stored into it), or ends where
+    // the interpreter went elsewhere or left a reason to stop.
     void interpret_here(Exit &e) {
-        flags_into(e.kind, host::FLAGS);
-        const uint32_t regs = reg_offset(0);
-        for (uint32_t i = 0; i < 8; i += 2) a.stp_w(gr(i), gr(i + 1), host::STATE, int32_t(regs + 4 * i));
-        a.str_w(host::FLAGS, host::STATE, eflags_offset());
-        a.mov_imm32(V0, e.eip);
-        a.str_w(V0, host::STATE, eip_offset());
-        a.str_w(host::LIMIT, host::CTX, ctx(offsetof(Context, spill)));
-        a.ldr_w(V1, host::CTX, ctx(offsetof(Context, clock_limit)));
-        a.sub(false, V1, V1, host::LIMIT);
-        add_const(V1, V1, e.clocks);
-        a.mov_imm32(V2, e.eip);
-        a.mov_imm32(V3, e.next_eip);
-        a.mov_imm32(OFF, mode.key());
-        a.mov(true, V0, host::CTX);
-        a.ldr_x(IP0, host::CTX, ctx(offsetof(Context, interpret_helper)));
-        a.blr(IP0);
-        a.ldr_w(host::LIMIT, host::CTX, ctx(offsetof(Context, spill)));
-        a.ldr_w(host::TLB_TAG, host::CTX, ctx(offsetof(Context, tlb_tag)));
-        for (uint32_t i = 0; i < 8; i += 2) a.ldp_w(gr(i), gr(i + 1), host::STATE, int32_t(regs + 4 * i));
-        a.ldr_w(host::FLAGS, host::STATE, eflags_offset());
-        a.and_imm(false, V1, V0, 0x7FFFFFFF);
-        a.sub(false, host::LIMIT, host::LIMIT, V1);
-        // The exits after it count it with its clocks already off the limit.
-        const uint32_t saved_kind = kind;
-        kind = 0;
-        Exit &stop = new_exit(REASON_NEXT, e.instructions + 1, e.clocks, e.eip, 0);
-        stop.eip_in_reg = true;
-        stop.why = WHY_INTERPRETED;
-        Exit &on = new_exit(REASON_NEXT, e.instructions + 1, e.clocks, e.eip, e.next_eip);
+        call_stub(offsetof(Context, interpret_stub));
+        a.emit(e.kind);
+        a.emit(e.eip);
+        a.emit(e.next_eip);
+        a.emit(e.clocks);
+        a.emit(e.instructions);
+        a.emit(mode.key());
+        // Going on, it counts with its clocks already off the limit.
+        Exit on;
+        on.reason = REASON_NEXT;
+        on.instructions = e.instructions + 1;
+        on.clocks = e.clocks;
+        on.last_eip = e.eip;
+        on.eip = e.next_eip;
         on.why = WHY_INTERPRETED;
         const int64_t at = int64_t(window_offset) + int64_t(e.next_eip) - int64_t(block_eip);
-        on.chain = at >= 0 && at < 4096 && max_instructions() > 1;
-        kind = saved_kind;
-        Assembler::Label go_on;
-        a.tbz(V0, 31, go_on);
-        a.ldr_w(V2, host::STATE, eip_offset());
-        a.b(stop.label);
-        a.bind(go_on);
-        a.b(on.label);
+        if (at >= 0 && at < 4096 && max_instructions() > 1) return emit_chain(on);
+        exit_record(on.instructions, on.clocks, false, on.last_eip, on.reason, false, on.eip, 0, on.why);
     }
 
     // A jump back to e.eip: what the interpreter's loop does before that instruction, the
-    // wait-loop skip (kairotowns_jit_jumped_back), with the CPU state as it has it; then on into
-    // the block there, or the run ends where the skip moved guest time.
+    // wait-loop skip (Stub::JumpedBack), with the CPU state as it has it; then on into the block
+    // there, or the run ends where the skip moved guest time.
     void jump_back(Exit &e) {
-        flags_into(e.kind, host::FLAGS);
-        const uint32_t regs = reg_offset(0);
-        for (uint32_t i = 0; i < 8; i += 2) a.stp_w(gr(i), gr(i + 1), host::STATE, int32_t(regs + 4 * i));
-        a.str_w(host::FLAGS, host::STATE, eflags_offset());
-        a.mov_imm32(V0, e.eip);
-        a.str_w(V0, host::STATE, eip_offset());
-        a.str_w(host::LIMIT, host::CTX, ctx(offsetof(Context, spill)));
-        a.ldr_w(V1, host::CTX, ctx(offsetof(Context, clock_limit)));
-        a.sub(false, V1, V1, host::LIMIT);
-        add_const(V1, V1, e.clocks);
-        a.ldr_w(V2, host::CTX, ctx(offsetof(Context, chained_instructions)));
-        add_const(V2, V2, e.instructions);
-        a.mov_imm32(V3, e.last_eip);
-        a.mov(true, V0, host::CTX);
-        a.ldr_x(IP0, host::CTX, ctx(offsetof(Context, jumped_back_helper)));
-        a.blr(IP0);
-        // The call takes the caller-saved registers, the limit and EFLAGS among them.
-        a.ldr_w(host::LIMIT, host::CTX, ctx(offsetof(Context, spill)));
-        a.ldr_w(host::FLAGS, host::STATE, eflags_offset());
-        Assembler::Label go_on;
-        a.cbz(false, V0, go_on);
-        // The skip has seen the jump, and the instruction there as the next: the last instruction
-        // for the interpreter's loop's own wait-loop bookkeeping is the one jumped to.
-        exit_tail(e.instructions, e.clocks, false, e.eip, REASON_NEXT, false, e.eip, 0, WHY_BACKWARD);
-        a.bind(go_on);
+        call_stub(offsetof(Context, jumped_back_stub));
+        a.emit(e.kind);
+        a.emit(e.eip);
+        a.emit(e.clocks);
+        a.emit(e.instructions);
+        a.emit(e.last_eip);
         Exit on = e;
         on.kind = 0;
         on.back = false;
@@ -326,10 +277,10 @@ struct Translator::Impl {
             Assembler::Label forward;
             cmp_const(V2, e.last_eip);
             a.b_cond(HI, forward);
-            exit_tail(e.instructions, e.clocks, e.entry, e.last_eip, e.reason, true, 0, e.kind, WHY_BACKWARD);
+            exit_record(e.instructions, e.clocks, e.entry, e.last_eip, e.reason, true, 0, e.kind, WHY_BACKWARD);
             a.bind(forward);
         } else if (e.eip <= e.last_eip) {
-            return exit_tail(e.instructions, e.clocks, e.entry, e.last_eip, e.reason, false, e.eip, e.kind, WHY_BACKWARD);
+            return exit_record(e.instructions, e.clocks, e.entry, e.last_eip, e.reason, false, e.eip, e.kind, WHY_BACKWARD);
         }
         if (e.eip_in_reg) a.str_w(V2, host::CTX, ctx(offsetof(Context, spill_eip)));
         flags_into(e.kind, host::FLAGS);
@@ -349,7 +300,7 @@ struct Translator::Impl {
 
     // Runs on into the block at e.eip: the flags made whole, the clocks and instructions so far
     // carried over, and a branch the dispatcher points at that block. Until it does, the branch
-    // leaves and asks for it.
+    // leaves and asks for it (Stub::Link).
     void emit_chain(Exit &e) {
         flags_into(e.kind, host::FLAGS);
         a.sub_imm(false, host::LIMIT, host::LIMIT, e.clocks);
@@ -364,10 +315,278 @@ struct Translator::Impl {
         a.bind(site);
         a.b(request);
         a.bind(request);
+        call_stub(offsetof(Context, link_stub));
+        a.emit(e.eip);
+    }
+
+    // --- Shared routines (Translator::emit_stub) ----------------------------------------------
+
+    // FLAGS = EFLAGS of the lazily kept operation whose kind is in V1, when it is not 0; the
+    // record's address in IP0, the limit and V2 are kept. Clobbers the caller-saved registers.
+    void stub_materialize() {
+        Assembler::Label done;
+        a.cbz(false, V1, done);
+        a.str_w(host::LIMIT, host::CTX, ctx(offsetof(Context, spill)));
+        a.str_w(V2, host::CTX, ctx(offsetof(Context, spill_eip)));
+        a.str_x(IP0, host::CTX, ctx(offsetof(Context, spill_record)));
+        call_materialize_v1();
+        a.mov(false, host::FLAGS, V0);
+        a.ldr_w(host::LIMIT, host::CTX, ctx(offsetof(Context, spill)));
+        a.ldr_w(V2, host::CTX, ctx(offsetof(Context, spill_eip)));
+        a.ldr_x(IP0, host::CTX, ctx(offsetof(Context, spill_record)));
+        a.bind(done);
+    }
+    // Leaves with the record at IP0: why, its clocks and instructions (plus one) at those offsets,
+    // the last EIP at last_at. EIP and EFLAGS are in the CPU state.
+    void stub_leave(uint32_t why, uint32_t clocks_at, uint32_t instructions_at, bool plus_one, uint32_t last_at) {
+        a.movz(false, V1, why, 0);
+        a.str_w(V1, host::CTX, ctx(offsetof(Context, why)));
+        a.str_w(ZR, host::CTX, ctx(offsetof(Context, reason)));
+        a.ldr_w(V1, host::CTX, ctx(offsetof(Context, clock_limit)));
+        a.sub(false, V1, V1, host::LIMIT);
+        a.ldr_w(V3, IP0, clocks_at);
+        a.add(false, V1, V1, V3);
+        a.str_w(V1, host::CTX, ctx(offsetof(Context, clocks)));
+        a.ldr_w(V1, host::CTX, ctx(offsetof(Context, chained_instructions)));
+        a.ldr_w(V3, IP0, instructions_at);
+        a.add(false, V1, V1, V3);
+        if (plus_one) a.add_imm(false, V1, V1, 1);
+        a.str_w(V1, host::CTX, ctx(offsetof(Context, instructions)));
+        a.ldr_w(V1, IP0, last_at);
+        a.str_w(V1, host::CTX, ctx(offsetof(Context, last_eip)));
+        a.ldr_x(IP0, host::CTX, ctx(offsetof(Context, leave)));
+        a.br(IP0);
+    }
+    void store_guest_registers() {
+        const uint32_t regs = reg_offset(0);
+        for (uint32_t i = 0; i < 8; i += 2) a.stp_w(gr(i), gr(i + 1), host::STATE, int32_t(regs + 4 * i));
+    }
+    void load_guest_registers() {
+        const uint32_t regs = reg_offset(0);
+        for (uint32_t i = 0; i < 8; i += 2) a.ldp_w(gr(i), gr(i + 1), host::STATE, int32_t(regs + 4 * i));
+    }
+
+    // exit_record()'s record: header, clocks, instructions, last EIP, EIP.
+    void exit_stub() {
+        Assembler::Label last_ctx, last_done, eip_reg;
+        a.mov(true, IP0, 30);
+        a.ldr_w(V1, IP0);
+        a.lsr_imm(false, V1, V1, 16);
+        stub_materialize();
+        a.ldr_w(V0, IP0);
+        a.and_imm(false, V1, V0, 0xFF);
+        a.str_w(V1, host::CTX, ctx(offsetof(Context, why)));
+        a.ubfx(false, V1, V0, 8, 4);
+        a.str_w(V1, host::CTX, ctx(offsetof(Context, reason)));
+        a.ldr_w(V1, host::CTX, ctx(offsetof(Context, clock_limit)));
+        a.sub(false, V1, V1, host::LIMIT);
+        a.ldr_w(V3, IP0, 4);
+        a.add(false, V1, V1, V3);
+        a.str_w(V1, host::CTX, ctx(offsetof(Context, clocks)));
+        a.ldr_w(V1, host::CTX, ctx(offsetof(Context, chained_instructions)));
+        a.ldr_w(V3, IP0, 8);
+        a.add(false, V1, V1, V3);
+        a.str_w(V1, host::CTX, ctx(offsetof(Context, instructions)));
+        a.tbnz(V0, 13, last_ctx);
+        a.ldr_w(V1, IP0, 12);
+        a.b(last_done);
+        a.bind(last_ctx);
+        a.ldr_w(V1, host::CTX, ctx(offsetof(Context, chained_last_eip)));
+        a.bind(last_done);
+        a.str_w(V1, host::CTX, ctx(offsetof(Context, last_eip)));
+        a.tbnz(V0, 12, eip_reg);
+        a.ldr_w(V2, IP0, 16);
+        a.bind(eip_reg);
+        a.str_w(V2, host::STATE, eip_offset());
+        a.str_w(host::FLAGS, host::STATE, eflags_offset());
+        a.ldr_x(IP0, host::CTX, ctx(offsetof(Context, leave)));
+        a.br(IP0);
+    }
+    // interpret_here()'s record: flags kind, EIP, next EIP, clocks, instructions, mode key. Calls
+    // kairotowns_jit_interpret; returns past the record to go on, or leaves.
+    void interpret_stub() {
+        Assembler::Label stop;
+        a.mov(true, IP0, 30);
+        a.str_x(IP0, host::CTX, ctx(offsetof(Context, spill_record)));
+        a.ldr_w(V1, IP0);
+        stub_materialize();
+        store_guest_registers();
+        a.str_w(host::FLAGS, host::STATE, eflags_offset());
+        a.ldr_w(V0, IP0, 4);
+        a.str_w(V0, host::STATE, eip_offset());
+        a.str_w(host::LIMIT, host::CTX, ctx(offsetof(Context, spill)));
+        a.ldr_w(V1, host::CTX, ctx(offsetof(Context, clock_limit)));
+        a.sub(false, V1, V1, host::LIMIT);
+        a.ldr_w(V2, IP0, 12);
+        a.add(false, V1, V1, V2);
+        a.ldr_w(V2, IP0, 4);
+        a.ldr_w(V3, IP0, 8);
+        a.ldr_w(OFF, IP0, 20);
+        a.mov(true, V0, host::CTX);
+        a.ldr_x(IP0, host::CTX, ctx(offsetof(Context, interpret_helper)));
+        a.blr(IP0);
+        a.ldr_w(host::LIMIT, host::CTX, ctx(offsetof(Context, spill)));
+        a.ldr_w(host::TLB_TAG, host::CTX, ctx(offsetof(Context, tlb_tag)));
+        load_guest_registers();
+        a.ldr_w(host::FLAGS, host::STATE, eflags_offset());
+        a.and_imm(false, V1, V0, 0x7FFFFFFF);
+        a.sub(false, host::LIMIT, host::LIMIT, V1);
+        a.ldr_x(IP0, host::CTX, ctx(offsetof(Context, spill_record)));
+        a.tbnz(V0, 31, stop);
+        a.add_imm(true, IP0, IP0, 24);
+        a.br(IP0);
+        // Ended: EIP is where the interpreter left it.
+        a.bind(stop);
+        stub_leave(WHY_INTERPRETED, 12, 16, true, 4);
+    }
+    // jump_back()'s record: flags kind, EIP, clocks, instructions, last EIP. Calls
+    // kairotowns_jit_jumped_back; returns past the record to go on, or leaves.
+    void jumped_back_stub() {
+        Assembler::Label stop;
+        a.mov(true, IP0, 30);
+        a.str_x(IP0, host::CTX, ctx(offsetof(Context, spill_record)));
+        a.ldr_w(V1, IP0);
+        stub_materialize();
+        store_guest_registers();
+        a.str_w(host::FLAGS, host::STATE, eflags_offset());
+        a.ldr_w(V0, IP0, 4);
+        a.str_w(V0, host::STATE, eip_offset());
+        a.str_w(host::LIMIT, host::CTX, ctx(offsetof(Context, spill)));
+        a.ldr_w(V1, host::CTX, ctx(offsetof(Context, clock_limit)));
+        a.sub(false, V1, V1, host::LIMIT);
+        a.ldr_w(V2, IP0, 8);
+        a.add(false, V1, V1, V2);
+        a.ldr_w(V2, host::CTX, ctx(offsetof(Context, chained_instructions)));
+        a.ldr_w(V3, IP0, 12);
+        a.add(false, V2, V2, V3);
+        a.ldr_w(V3, IP0, 16);
+        a.mov(true, V0, host::CTX);
+        a.ldr_x(IP0, host::CTX, ctx(offsetof(Context, jumped_back_helper)));
+        a.blr(IP0);
+        // The call takes the caller-saved registers, the limit and EFLAGS among them.
+        a.ldr_w(host::LIMIT, host::CTX, ctx(offsetof(Context, spill)));
+        a.ldr_w(host::FLAGS, host::STATE, eflags_offset());
+        a.ldr_x(IP0, host::CTX, ctx(offsetof(Context, spill_record)));
+        a.cbnz(false, V0, stop);
+        a.add_imm(true, IP0, IP0, 20);
+        a.br(IP0);
+        // The skip has seen the jump, and the instruction there as the next: the last instruction
+        // for the interpreter's loop's own wait-loop bookkeeping is the one jumped to.
+        a.bind(stop);
+        a.ldr_w(V1, IP0, 4);
+        a.str_w(V1, host::STATE, eip_offset());
+        a.str_w(host::FLAGS, host::STATE, eflags_offset());
+        stub_leave(WHY_BACKWARD, 8, 12, false, 4);
+    }
+    // emit_chain()'s request: the branch in V0; the record, the EIP of the block to link.
+    void link_stub() {
         a.str_x(V0, host::CTX, ctx(offsetof(Context, link_site)));
-        a.mov_imm32(V1, e.eip);
-        a.str_w(V1, host::CTX, ctx(offsetof(Context, link_eip)));
-        exit_tail(0, 0, true, 0, REASON_NEXT, false, e.eip, 0, WHY_LINK);
+        a.ldr_w(V2, 30);
+        a.str_w(V2, host::CTX, ctx(offsetof(Context, link_eip)));
+        a.movz(false, V1, WHY_LINK, 0);
+        a.str_w(V1, host::CTX, ctx(offsetof(Context, why)));
+        a.str_w(ZR, host::CTX, ctx(offsetof(Context, reason)));
+        a.ldr_w(V1, host::CTX, ctx(offsetof(Context, clock_limit)));
+        a.sub(false, V1, V1, host::LIMIT);
+        a.str_w(V1, host::CTX, ctx(offsetof(Context, clocks)));
+        a.ldr_w(V1, host::CTX, ctx(offsetof(Context, chained_instructions)));
+        a.str_w(V1, host::CTX, ctx(offsetof(Context, instructions)));
+        a.ldr_w(V1, host::CTX, ctx(offsetof(Context, chained_last_eip)));
+        a.str_w(V1, host::CTX, ctx(offsetof(Context, last_eip)));
+        a.str_w(V2, host::STATE, eip_offset());
+        a.str_w(host::FLAGS, host::STATE, eflags_offset());
+        a.ldr_x(IP0, host::CTX, ctx(offsetof(Context, leave)));
+        a.br(IP0);
+    }
+    // w0 = 0 when the w2 bytes (at least 1) at x0 and x1 are the same, else 1; a plain call, no
+    // record. Keeps every register but x0-x4 and x16 (FLAGS and the limit among them).
+    void compare_stub() {
+        Assembler::Label loop, tail, small, tiny, byte, differ;
+        a.cmp_imm(false, V2, 8);
+        a.b_cond(LO, small);
+        // Every 8 bytes, then the last 8, overlapping the ones before.
+        a.sub_imm(false, V2, V2, 8);
+        a.movz(true, V3, 0, 0);
+        a.bind(loop);
+        a.cmp(true, V3, V2);
+        a.b_cond(HS, tail);
+        a.ldr_x_r(OFF, V0, V3);
+        a.ldr_x_r(IP0, V1, V3);
+        a.cmp(true, OFF, IP0);
+        a.b_cond(NE, differ);
+        a.add_imm(true, V3, V3, 8);
+        a.b(loop);
+        a.bind(tail);
+        a.ldr_x_r(OFF, V0, V2);
+        a.ldr_x_r(IP0, V1, V2);
+        a.cmp(true, OFF, IP0);
+        a.b_cond(NE, differ);
+        a.movz(false, V0, 0, 0);
+        a.ret();
+        // 4 to 7: the first 4 and the last 4.
+        a.bind(small);
+        a.cmp_imm(false, V2, 4);
+        a.b_cond(LO, tiny);
+        a.sub_imm(false, V2, V2, 4);
+        a.ldr_w(OFF, V0);
+        a.ldr_w(IP0, V1);
+        a.cmp(false, OFF, IP0);
+        a.b_cond(NE, differ);
+        a.ldr_w_r(OFF, V0, V2);
+        a.ldr_w_r(IP0, V1, V2);
+        a.cmp(false, OFF, IP0);
+        a.b_cond(NE, differ);
+        a.movz(false, V0, 0, 0);
+        a.ret();
+        // 2 or 3: the first 2 and the last 2.
+        a.bind(tiny);
+        a.cmp_imm(false, V2, 2);
+        a.b_cond(LO, byte);
+        a.sub_imm(false, V2, V2, 2);
+        a.ldrh(OFF, V0);
+        a.ldrh(IP0, V1);
+        a.cmp(false, OFF, IP0);
+        a.b_cond(NE, differ);
+        a.ldrh_r(OFF, V0, V2);
+        a.ldrh_r(IP0, V1, V2);
+        a.cmp(false, OFF, IP0);
+        a.b_cond(NE, differ);
+        a.movz(false, V0, 0, 0);
+        a.ret();
+        a.bind(byte);
+        a.ldrb(OFF, V0);
+        a.ldrb(IP0, V1);
+        a.cmp(false, OFF, IP0);
+        a.b_cond(NE, differ);
+        a.movz(false, V0, 0, 0);
+        a.ret();
+        a.bind(differ);
+        a.movz(false, V0, 1, 0);
+        a.ret();
+    }
+    // ram_address()'s miss: ADDR = where main RAM has the linear address in LIN, by the
+    // page-table cache and Memory's slots, with the TLB filled; 0 where the interpreter would not
+    // reach main RAM by a pointer there. Returns by x30.
+    void tlb_miss_stub() {
+        Assembler::Label fail;
+        if (mode.paging) {
+            translate_page(LIN, V4, fail);
+            main_ram(V4, fail);
+        } else {
+            main_ram(LIN, fail);
+        }
+        a.lsr_imm(false, T0, LIN, 12);
+        a.add(false, T1, T0, host::TLB_TAG);
+        a.and_imm(false, T0, T0, kTlbEntries - 1);
+        a.ldr_x(IP0, host::CTX, ctx(offsetof(Context, tlb)));
+        a.add(true, IP0, IP0, T0, LSL, 4);
+        a.str_w(T1, IP0, offsetof(TlbEntry, tag));
+        a.sub_ext(true, IP1, ADDR, LIN, UXTW);
+        a.str_x(IP1, IP0, offsetof(TlbEntry, addend));
+        a.ret();
+        a.bind(fail);
+        a.mov(true, ADDR, ZR);
+        a.ret();
     }
 
     // dst = all of EFLAGS as the lazily kept operation k leaves them. Inline for ADD, SUB, AND, OR,
@@ -439,8 +658,12 @@ struct Translator::Impl {
 
     // w0 = EFLAGS of the lazily kept operation kind; clobbers the caller-saved registers.
     void call_materialize(uint32_t k) {
-        a.mov(true, V0, host::CTX);
         a.mov_imm32(V1, k);
+        call_materialize_v1();
+    }
+    // The same with the kind in V1.
+    void call_materialize_v1() {
+        a.mov(true, V0, host::CTX);
         a.mov(false, V2, host::FLAGS);
         a.mov(false, V3, host::FLAG_A);
         a.mov(false, OFF, host::FLAG_B);
@@ -573,11 +796,11 @@ struct Translator::Impl {
     // and Memory's slots as the interpreter finds it, which fills the TLB, or the instruction
     // stops before it when the interpreter would not reach main RAM by a pointer there.
     void ram_address(Reg lin) {
+        // The shared miss routine takes it in LIN.
+        if (lin != LIN) throw std::logic_error("ram_address takes the linear address in LIN");
         Assembler::Label *fail = &bail();
-        cold_labels.push_back(std::make_unique<Assembler::Label>());
-        Assembler::Label *miss = cold_labels.back().get();
-        cold_labels.push_back(std::make_unique<Assembler::Label>());
-        Assembler::Label *back = cold_labels.back().get();
+        Assembler::Label *miss = &cold_labels.emplace_back();
+        Assembler::Label *back = &cold_labels.emplace_back();
         a.lsr_imm(false, T0, lin, 12);
         a.add(false, T1, T0, host::TLB_TAG);
         a.and_imm(false, T0, T0, kTlbEntries - 1);
@@ -589,29 +812,20 @@ struct Translator::Impl {
         a.ldr_x(IP1, IP0, offsetof(TlbEntry, addend));
         a.add_ext(true, ADDR, IP1, lin, UXTW);
         a.bind(*back);
-        const bool paging = mode.paging;
-        cold.push_back([this, lin, fail, miss, back, paging] {
-            a.bind(*miss);
-            if (paging) {
-                translate_page(lin, V4, *fail);
-                main_ram(V4, *fail);
-            } else {
-                main_ram(lin, *fail);
-            }
-            a.lsr_imm(false, T0, lin, 12);
-            a.add(false, T1, T0, host::TLB_TAG);
-            a.and_imm(false, T0, T0, kTlbEntries - 1);
-            a.ldr_x(IP0, host::CTX, ctx(offsetof(Context, tlb)));
-            a.add(true, IP0, IP0, T0, LSL, 4);
-            a.str_w(T1, IP0, offsetof(TlbEntry, tag));
-            a.sub_ext(true, IP1, ADDR, lin, UXTW);
-            a.str_x(IP1, IP0, offsetof(TlbEntry, addend));
-            a.b(*back);
-        });
+        misses.push_back({miss, back, fail});
     }
-    // Code emitted after the block's exits: the slow ways of ram_address().
-    std::vector<std::function<void()>> cold;
-    std::vector<std::unique_ptr<Assembler::Label>> cold_labels;
+    // Code emitted after the block's exits: ram_address()'s misses, through the shared routine.
+    struct Miss {
+        Assembler::Label *miss, *back, *fail;
+    };
+    std::vector<Miss> misses;
+    std::deque<Assembler::Label> cold_labels;
+    void emit_miss(const Miss &m) {
+        a.bind(*m.miss);
+        call_stub(mode.paging ? offsetof(Context, tlb_miss_paged) : offsetof(Context, tlb_miss_flat));
+        a.cbz(true, ADDR, *m.fail);
+        a.b(*m.back);
+    }
 
     // Stops before a store of bytes at ADDR into the running block's own code.
     void code_check(uint32_t bytes) {
@@ -1228,25 +1442,32 @@ struct Translator::Impl {
         return true;
     }
 
-    // 64-bit constants the block loads, placed after it.
+    // 64-bit constants the block loads, placed after it in the order they were made; a value may
+    // be set until then.
     struct Literal {
         Assembler::Label label;
         uint64_t value = 0;
     };
-    std::vector<std::unique_ptr<Literal>> literals;
-    Assembler::Label &literal(uint64_t value) {
-        literals.push_back(std::make_unique<Literal>());
-        literals.back()->value = value;
-        return literals.back()->label;
+    std::deque<Literal> literals;
+    Literal &literal(uint64_t value) {
+        Literal &l = literals.emplace_back();
+        l.value = value;
+        return l;
     }
 
-    void prologue(const uint8_t *code, uint32_t bytes);
+    // The block's entry, and the code check it branches to, written once the block's code and
+    // the segment registers it uses are known.
+    void prologue();
+    void verify(const uint8_t *code, uint32_t bytes);
     uint64_t *stamp = nullptr;
-    // The segments the first pass found the block using (translate()).
-    uint32_t check_segments = 0;
-    // The block at code (avail bytes to the end of its code window), the guest's CS:start; with
-    // check_bytes, it checks that many bytes of code at its entry.
-    Result translate_block(const uint8_t *code, uint32_t avail, uint32_t start, uint32_t check_bytes);
+    Assembler::Label verify_label, checked_label;
+    Literal *stamp_literal = nullptr, *start_literal = nullptr, *bytes_literal = nullptr;
+    Exit *changed_exit = nullptr, *segments_exit = nullptr;
+    // The code as it was translated, placed after the literals.
+    std::vector<uint8_t> copy;
+    Assembler::Label copy_label;
+    // The block at code (avail bytes to the end of its code window), the guest's CS:start.
+    Result translate_block(const uint8_t *code, uint32_t avail, uint32_t start);
 };
 
 namespace {
@@ -1706,7 +1927,7 @@ bool Translator::Impl::translate_one(uint32_t &clocks, Next &next, uint32_t next
         a.cbz(false, V0, go_on);
         a.ldr_w(V2, host::STATE, eip_offset());
         exit_after_dynamic(clocks);
-        exits.back()->why = WHY_IO;
+        exits.back().why = WHY_IO;
         a.bind(go_on);
         has_effects = true;
         return true;
@@ -1904,72 +2125,53 @@ bool Translator::Impl::translate_one(uint32_t &clocks, Next &next, uint32_t next
 Translator::Translator(i486DXCommon &cpu, Memory &mem) : cpu_(cpu), mem_(mem) {}
 
 // Its entry: stops before the first instruction when the clock limit has run out (a block entered
-// from another), and when the code is no longer the bytes it was translated from; then it tells
-// translated code where its code is, for code_check().
-void Translator::Impl::prologue(const uint8_t *code, uint32_t bytes) {
+// from another), and when the code is no longer the bytes it was translated from (verify()); then
+// it tells translated code where its code is, for code_check().
+void Translator::Impl::prologue() {
     Exit &stop = new_exit(REASON_NEXT, 0, 0, 0, block_eip);
     stop.entry = true;
     stop.why = WHY_ENTRY;
-    Exit &changed = new_exit(REASON_MISMATCH, 0, 0, 0, block_eip);
-    changed.entry = true;
-    changed.why = WHY_ENTRY;
-    Exit &segments = new_exit(REASON_SEGMENTS, 0, 0, 0, block_eip);
-    segments.entry = true;
-    segments.why = WHY_ENTRY;
+    changed_exit = &new_exit(REASON_MISMATCH, 0, 0, 0, block_eip);
+    changed_exit->entry = true;
+    changed_exit->why = WHY_ENTRY;
+    segments_exit = &new_exit(REASON_SEGMENTS, 0, 0, 0, block_eip);
+    segments_exit->entry = true;
+    segments_exit->why = WHY_ENTRY;
     a.cmp_imm(false, host::LIMIT, 0);
     a.b_cond(LT, stop.label);
     // Checked since memory last changed: the code is as it was.
-    Assembler::Label checked;
-    a.ldr_x_literal(IP0, literal(reinterpret_cast<uintptr_t>(stamp)));
+    stamp_literal = &literal(reinterpret_cast<uintptr_t>(stamp));
+    a.ldr_x_literal(IP0, stamp_literal->label);
     a.ldr_x(IP1, IP0);
     a.ldr_x(V0, host::CTX, ctx(offsetof(Context, code_generation)));
     a.cmp(true, IP1, V0);
-    a.b_cond(EQ, checked);
-    a.ldr_x_literal(IP0, literal(reinterpret_cast<uintptr_t>(code)));
-    auto word = [&](uint32_t at, uint32_t size) {
-        uint64_t value = 0;
-        std::memcpy(&value, code + at, size);
-        return value;
-    };
-    auto compare = [&](Reg loaded, uint32_t at, uint32_t size) {
-        if (size == 8) {
-            a.ldr_x_literal(V0, literal(word(at, 8)));
-            a.cmp(true, loaded, V0);
-        } else {
-            a.mov_imm32(V0, uint32_t(word(at, size)));
-            a.cmp(false, loaded, V0);
-        }
-        a.b_cond(NE, changed.label);
-    };
-    if (bytes >= 8) {
-        uint32_t at = 0;
-        for (; at + 8 <= bytes; at += 8) {
-            a.ldr_x(IP1, IP0, at);
-            compare(IP1, at, 8);
-        }
-        if (at < bytes) {
-            // The last 8 bytes, overlapping the ones before.
-            a.add_imm(true, IP1, IP0, bytes - 8);
-            a.ldr_x(IP1, IP1);
-            compare(IP1, bytes - 8, 8);
-        }
-    } else if (bytes >= 4) {
-        a.ldr_w(IP1, IP0);
-        compare(IP1, 0, 4);
-        a.ldur_w(IP1, IP0, int32_t(bytes - 4));
-        compare(IP1, bytes - 4, 4);
-    } else if (bytes >= 2) {
-        a.ldrh(IP1, IP0);
-        compare(IP1, 0, 2);
-        a.ldurh(IP1, IP0, int32_t(bytes - 2));
-        compare(IP1, bytes - 2, 2);
-    } else {
-        a.ldrb(IP1, IP0);
-        compare(IP1, 0, 1);
-    }
+    a.b_cond(NE, verify_label);
+    a.bind(checked_label);
+    // Context::code_start and code_bytes, from two literals next to each other.
+    start_literal = &literal(0);
+    bytes_literal = &literal(0);
+    a.adr(IP0, start_literal->label);
+    a.ldp_x(IP0, IP1, IP0, 0);
+    a.stp_x(IP0, IP1, host::CTX, int32_t(offsetof(Context, code_start)));
+}
+
+// The code check: the block's code compared with the bytes it was translated from, and the
+// segment registers with what it was translated with.
+void Translator::Impl::verify(const uint8_t *code, uint32_t bytes) {
+    start_literal->value = reinterpret_cast<uintptr_t>(code);
+    bytes_literal->value = bytes;
+    Exit &changed = *changed_exit, &segments = *segments_exit;
+    a.bind(verify_label);
+    // The code, with the copy of it placed after the literals (translate_block()).
+    copy.assign(code, code + bytes);
+    a.ldr_x_literal(V0, start_literal->label);
+    a.adr(V1, copy_label);
+    a.mov_imm32(V2, bytes);
+    call_stub(offsetof(Context, compare_stub));
+    a.cbnz(false, V0, changed.label);
     // The segment registers as the block was translated with them.
     for (int s = 0; s < 6; ++s) {
-        if (!(check_segments & 1u << s)) continue;
+        if (!(segments_used & 1u << s)) continue;
         const auto &seg = st.sreg[s];
         const std::pair<uint32_t, uint32_t> fields[] = {{seg_base(s), seg.baseLinearAddr}, {seg_max(s), seg.maxLimit},
                                                         {seg_min(s), seg.minLimit}, {seg_min_adjust(s), seg.minLimitAdjust}};
@@ -1980,23 +2182,19 @@ void Translator::Impl::prologue(const uint8_t *code, uint32_t bytes) {
             a.b_cond(NE, segments.label);
         }
     }
-    a.ldr_x_literal(IP0, literal(reinterpret_cast<uintptr_t>(stamp)));
+    a.ldr_x_literal(IP0, stamp_literal->label);
     a.ldr_x(V0, host::CTX, ctx(offsetof(Context, code_generation)));
     a.str_x(V0, IP0);
-    a.bind(checked);
-    a.ldr_x_literal(IP0, literal(reinterpret_cast<uintptr_t>(code)));
-    a.str_x(IP0, host::CTX, ctx(offsetof(Context, code_start)));
-    a.mov_imm32(IP1, bytes);
-    a.str_x(IP1, host::CTX, ctx(offsetof(Context, code_bytes)));
+    a.b(checked_label);
 }
 
-Translator::Result Translator::Impl::translate_block(const uint8_t *code, uint32_t avail, uint32_t start, uint32_t check_bytes) {
+Translator::Result Translator::Impl::translate_block(const uint8_t *code, uint32_t avail, uint32_t start) {
     auto &cpu_ = static_cast<Cpu &>(cpu);
     Result result;
     uint32_t pos = 0;
     eip = block_eip = start;
     window_offset = 4096 - avail;
-    if (check_bytes) prologue(code, check_bytes);
+    prologue();
     for (index = 0;; ++index) {
         // A block ends at the end of its code window: past it the interpreter moves its window.
         const bool room = pos < avail;
@@ -2081,13 +2279,22 @@ Translator::Result Translator::Impl::translate_block(const uint8_t *code, uint32
         last_eip = eip;
         eip = next_eip;
     }
-    for (size_t i = 0; i < exits.size(); ++i) emit_exit(*exits[i]);
-    for (auto &emit : cold) emit();
+    for (size_t i = 0; i < exits.size(); ++i) emit_exit(exits[i]);
+    for (const Miss &m : misses) emit_miss(m);
+    // After everything that may use a segment register.
+    verify(code, pos);
     // The literals, 8-byte aligned in a block that starts 16-byte aligned.
     if (a.size() % 8) a.emit(0xD503201Fu);
     for (auto &l : literals) {
-        a.bind(l->label);
-        a.emit64(l->value);
+        a.bind(l.label);
+        a.emit64(l.value);
+    }
+    a.bind(copy_label);
+    copy.resize((copy.size() + 3) & ~size_t(3));
+    for (size_t at = 0; at < copy.size(); at += 4) {
+        uint32_t word;
+        std::memcpy(&word, copy.data() + at, 4);
+        a.emit(word);
     }
     result.instructions = index;
     result.bytes = pos;
@@ -2096,22 +2303,24 @@ Translator::Result Translator::Impl::translate_block(const uint8_t *code, uint32
 
 Translator::Result Translator::translate(Assembler &a, const uint8_t *code, uint32_t avail, uint32_t eip, const Mode &mode,
                                          uint64_t *stamp, bool specialize) {
-    // Twice: the code a block checks at its entry is the code its translation covers, known once
-    // it is translated. Translating is deterministic, so the second covers the same code.
-    Assembler first;
-    Impl pass(first, cpu_, mem_, mode);
-    pass.specialize = specialize;
-    const Result covered = pass.translate_block(code, avail, eip, 0);
-    if (covered.instructions == 0) return {};
-    Impl second(a, cpu_, mem_, mode);
-    second.specialize = specialize;
-    second.stamp = stamp;
-    second.check_segments = pass.segments_used;
-    const Result result = second.translate_block(code, avail, eip, covered.bytes);
-    if (result.instructions != covered.instructions || result.bytes != covered.bytes ||
-        second.segments_used != pass.segments_used)
-        throw std::logic_error("translating the same code twice covered different code");
-    return result;
+    Impl impl(a, cpu_, mem_, mode);
+    impl.specialize = specialize;
+    impl.stamp = stamp;
+    return impl.translate_block(code, avail, eip);
+}
+
+void Translator::emit_stub(Assembler &a, Stub stub) {
+    Mode mode;
+    mode.paging = stub == Stub::TlbMissPaged;
+    Impl impl(a, cpu_, mem_, mode);
+    switch (stub) {
+    case Stub::Exit: impl.exit_stub(); break;
+    case Stub::Interpret: impl.interpret_stub(); break;
+    case Stub::JumpedBack: impl.jumped_back_stub(); break;
+    case Stub::Link: impl.link_stub(); break;
+    case Stub::Compare: impl.compare_stub(); break;
+    case Stub::TlbMissFlat: case Stub::TlbMissPaged: impl.tlb_miss_stub(); break;
+    }
 }
 
 void Translator::emit_enter(Assembler &a, const i486DXCommon &cpu) {

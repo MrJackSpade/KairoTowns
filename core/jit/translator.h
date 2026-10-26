@@ -65,6 +65,18 @@ public:
     // else leaves for the dispatcher.
     static void emit_dispatch(Assembler &a, const i486DXCommon &cpu);
 
+    // The routines every block's exits and slow ways share, written once after the trampolines;
+    // Context has where each is.
+    enum class Stub {
+        Exit,        // leaves translated code, as the exit record after the call says
+        Interpret,   // the interpreter runs an instruction inside the run
+        JumpedBack,  // the wait-loop skip asked at a jump back
+        Link,        // leaves asking for the branch in V0 to be linked
+        Compare,     // compares a block's code with its copy of it
+        TlbMissFlat, TlbMissPaged,  // ram_address() where the TLB misses, without or with paging
+    };
+    void emit_stub(Assembler &a, Stub stub);
+
 private:
     struct Impl;
     i486DXCommon &cpu_;

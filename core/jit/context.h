@@ -139,6 +139,15 @@ struct Context {
     void *io_helper = nullptr;
     void *interpret_helper = nullptr;
     void *jumped_back_helper = nullptr;
+    // The routines blocks share (Translator::emit_stub), entered with blr and the record of the
+    // place they are called from after the call.
+    void *exit_stub = nullptr;
+    void *interpret_stub = nullptr;
+    void *jumped_back_stub = nullptr;
+    void *link_stub = nullptr;
+    void *compare_stub = nullptr;
+    void *tlb_miss_flat = nullptr;
+    void *tlb_miss_paged = nullptr;
     Memory *io_memory = nullptr;  // the machine's Memory, for the interpreter
     // The PIC's IRR0_OR_IRR1_Cache: non-zero while an interrupt waits that the CPU takes when IF
     // is set (towns/pic/pic.h).
@@ -178,6 +187,7 @@ struct Context {
     // instruction (an SS load or STI): the dispatcher's caller then keeps them held.
     uint32_t keep_hold_irq = 0;
     uint32_t spill_eip = 0;
+    uint64_t spill_record = 0;
 
     // Written by the exit of a block.
     uint32_t instructions = 0;  // run
