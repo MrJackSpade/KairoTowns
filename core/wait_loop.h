@@ -6,10 +6,15 @@
 // the polling (FMTownsCommon::RunFastDevicePollingInternal), or through I/O and memory the CPU
 // touches. So when a pass of a loop starts at the same place as the last pass, with the whole CPU
 // state equal and nothing in between that may have an effect (a store, an I/O access, a read from
-// anything but RAM; Memory::sideEffects and InOut::accesses count them), every later pass until
+// anything but RAM, a push that changes the stack; Memory::sideEffects and InOut::accesses count
+// them), every later pass until
 // the polling is the same pass again. The skip moves guest time over as many whole passes as end
 // before the polling, with Tsugaru's own clock arithmetic, and the CPU then runs on from the same
 // instruction with the same state and time as it would have reached. Nothing else changes.
+//
+// Every backward jump in a code segment may start a pass, and a loop may hold several, such as the
+// return from a routine it calls: the skip keeps the last few places a pass started (kPasses), each
+// compared only with itself.
 //
 // A pass may also read I/O ports whose reads have no effect, such as VSYNC status
 // (TownsMachine::Impl::pure_read): such a pass is skipped too, while every read would return what it
@@ -42,13 +47,14 @@ public:
     // What came before says nothing about what follows: an interrupt may be taken, or the machine
     // did more between instructions than the fast device polling (TownsMachine::run_guest).
     void restart() {
-        candidate_ = false;
-        reads_hold_until_ = kForever;
+        for (auto &pass : passes_) pass.used = false;
     }
 
     // An I/O read without effect (InOut::kairoPureRead) returns what it returned until the
     // guest time [until]: no skipped pass may run into it.
-    void read_holds_until(uint64_t until) { reads_hold_until_ = std::min(reads_hold_until_, until); }
+    void read_holds_until(uint64_t until) {
+        for (auto &pass : passes_) pass.reads_hold_until = std::min(pass.reads_hold_until, until);
+    }
 
     // Before the CPU runs the instruction at CS:EIP, after `instructions` instructions and `clocks`
     // clocks in all. May move guest time on over whole repeated passes, never past `deadline`.
@@ -79,36 +85,53 @@ private:
                                                  uint64_t clocks, uint64_t deadline) {
         const auto &state = towns.CPU().state;
         const uint64_t effects = towns.mem.sideEffects + towns.io.accesses;
-        // Only a pass that starts where the last one did, with nothing done in between, can be a
-        // repeat; the state is captured for such a pass alone, so code that only loops now and then
-        // costs no copies.
-        const bool again = cs == pass_cs_ && eip == pass_eip_ && effects == pass_effects_;
+        Pass *found = nullptr;
+        for (auto &pass : passes_)
+            if (pass.used && pass.cs == cs && pass.eip == eip) found = &pass;
+        if (found == nullptr) {
+            // A new place: it takes the place of the one found longest ago.
+            found = &passes_[next_];
+            next_ = (next_ + 1) % kPasses;
+            found->used = true;
+            found->candidate = false;
+            found->cs = cs;
+            found->eip = eip;
+            found->effects = ~effects;
+            found->reads_hold_until = kForever;
+        }
+        Pass &pass = *found;
+        Snapshot &pass_state = states_[found - passes_];
+        // Only a pass that starts where one did, with nothing done in between, can be a repeat;
+        // the state is captured for such a pass alone, so code that only loops now and then costs
+        // no copies.
+        const bool again = effects == pass.effects;
         // The pass's reads without effect hold until this time; a skipped pass runs before it.
-        const uint64_t reads_hold_until = reads_hold_until_;
-        reads_hold_until_ = kForever;
-        if (again && candidate_) {
-            if (pass_state_.matches(state)) {
-                skip(towns, instructions - pass_instructions_, clocks - pass_clocks_,
+        const uint64_t reads_hold_until = pass.reads_hold_until;
+        pass.reads_hold_until = kForever;
+        if (again && pass.candidate) {
+            if (pass_state.matches(state)) {
+                skip(towns, instructions - pass.instructions, clocks - pass.clocks,
                      reads_hold_until == kForever ? deadline : std::min<uint64_t>(deadline, reads_hold_until - 1));
                 // The time left is less than a pass; the CPU runs it, across the polling, and the
                 // pass after it, with the same state and nothing done between, is the same pass:
-                // it is counted from here.
-                pass_instructions_ = instructions;
-                pass_clocks_ = clocks;
+                // it is counted from here. Passes counted from elsewhere span the skip: they
+                // start again.
+                for (auto &other : passes_)
+                    if (&other != &pass) other.used = false;
+                pass.instructions = instructions;
+                pass.clocks = clocks;
                 return;
             }
-            pass_state_.take(state);
+            pass_state.take(state);
         } else if (again) {
-            pass_state_.take(state);
-            candidate_ = true;
+            pass_state.take(state);
+            pass.candidate = true;
         } else {
-            candidate_ = false;
+            pass.candidate = false;
         }
-        pass_cs_ = cs;
-        pass_eip_ = eip;
-        pass_effects_ = effects;
-        pass_instructions_ = instructions;
-        pass_clocks_ = clocks;
+        pass.effects = effects;
+        pass.instructions = instructions;
+        pass.clocks = clocks;
     }
 
     using CpuState = typename std::remove_reference<decltype(std::declval<TownsType &>().CPU().state)>::type;
@@ -186,15 +209,24 @@ private:
     }
 
     static constexpr uint64_t kForever = ~uint64_t(0);
-    // The earliest time a read without effect since the pass started returns something else.
-    uint64_t reads_hold_until_ = kForever;
+    // A place a pass started, and what was so when it last did.
+    struct Pass {
+        bool used = false;
+        // Whether the last pass from here did nothing; its start's state is in states_.
+        bool candidate = false;
+        uint16_t cs = 0;
+        uint32_t eip = 0;
+        uint64_t effects = 0, instructions = 0, clocks = 0;
+        // The earliest time a read without effect since the pass started returns something else.
+        uint64_t reads_hold_until = kForever;
+    };
+    static constexpr unsigned int kPasses = 4;
+    Pass passes_[kPasses];
+    // The state each place's last pass started with, apart, so looking a place up stays small.
+    Snapshot states_[kPasses];
+    unsigned int next_ = 0;
     uint32_t last_eip_ = 0;
     uint16_t last_cs_ = 0;
-    bool candidate_ = false;
-    uint16_t pass_cs_ = 0;
-    uint32_t pass_eip_ = 0;
-    uint64_t pass_effects_ = 0, pass_instructions_ = 0, pass_clocks_ = 0;
-    Snapshot pass_state_;
     Counts counts_;
 };
 

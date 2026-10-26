@@ -353,7 +353,10 @@ struct TownsMachine::Impl {
     // Whether a read of [bytes] bytes at [port] has no effect on any device, and until when it
     // returns what it returns now (WaitLoopSkip::read_holds_until), for InOut::kairoPureRead.
     // Only ports whose reads were checked in Tsugaru's own code are pure (KairoTowns#36); a word or
-    // dword read is the device's byte reads (Device::IOReadWord), each of which must be pure.
+    // dword read is the device's byte reads (Device::IOReadWord), each of which must be pure. What a
+    // pure read returns may change only with guest time, which [until] says, or with an Out or the
+    // app between steps (which restart the skip): never in a device's scheduled task or the fast
+    // device polling, which a skip goes on across.
     static bool pure_read(void *owner, unsigned int port, unsigned int bytes) {
         auto &impl = *static_cast<Impl *>(owner);
         auto &t = *impl.towns;

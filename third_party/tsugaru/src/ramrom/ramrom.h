@@ -19,6 +19,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 
 #include <cstddef>
+#include <cstring>
 #include <vector>
 #include "cpputil.h"
 
@@ -278,7 +279,8 @@ private:
 public:
 	/*! KairoTowns: counts every store and every read from an object whose reads may have an
 	    effect (readWithoutSideEffect false), including stores the CPU makes through memory
-	    windows. While it stays the same, the CPU has only read RAM.
+	    windows, and every push through a stack pointer that changes memory (KairoPushed). While
+	    it stays the same, the CPU has only read RAM and pushed what the stack held.
 	*/
 	mutable uint64_t sideEffects=0;
 
@@ -323,6 +325,18 @@ public:
 		else
 		{
 			++kairoWrites;
+		}
+	}
+
+	/*! KairoTowns: a push the CPU made through a stack pointer into a memory window, which bypasses
+	    Memory: counts in sideEffects when the [bytes] bytes at [at] differ from what they were
+	    ([before]). A push of what the stack already holds changes nothing.
+	*/
+	inline void KairoPushed(const unsigned char *at,const unsigned char *before,unsigned int bytes)
+	{
+		if(0!=std::memcmp(at,before,bytes))
+		{
+			++sideEffects;
 		}
 	}
 

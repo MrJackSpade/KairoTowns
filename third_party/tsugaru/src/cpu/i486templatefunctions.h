@@ -544,7 +544,10 @@ void i486DXFidelityLayer <FIDELITY>::Push16(Memory &mem,unsigned int value)
 	if(nullptr!=accessPtr)
 	{
 		mem.KairoWritten(accessPtr,2); // KairoTowns
+		unsigned char before[2]; // KairoTowns
+		std::memcpy(before,accessPtr,2);
 		cpputil::PutWord(accessPtr,value);
+		mem.KairoPushed(accessPtr,before,2);
 		return;
 	}
 
@@ -580,7 +583,10 @@ void i486DXFidelityLayer <FIDELITY>::Push32(Memory &mem,unsigned int value)
 	if(nullptr!=accessPtr)
 	{
 		mem.KairoWritten(accessPtr,4); // KairoTowns
+		unsigned char before[4]; // KairoTowns
+		std::memcpy(before,accessPtr,4);
 		cpputil::PutDword(accessPtr,value);
+		mem.KairoPushed(accessPtr,before,4);
 		return;
 	}
 	StoreDword(mem,addressSize,state.SS(),ESP,value);
@@ -663,6 +669,8 @@ void i486DXFidelityLayer <FIDELITY>::Push(Memory &mem,unsigned int operandSize,u
 	if(nullptr!=accessPtr)
 	{
 		mem.KairoWritten(accessPtr,bytesToStore); // KairoTowns
+		unsigned char before[8]; // KairoTowns
+		std::memcpy(before,accessPtr,bytesToStore);
 		if(16==operandSize)
 		{
 			cpputil::PutWord(accessPtr+2,firstPush);
@@ -673,6 +681,7 @@ void i486DXFidelityLayer <FIDELITY>::Push(Memory &mem,unsigned int operandSize,u
 			cpputil::PutDword(accessPtr+4,firstPush);
 			cpputil::PutDword(accessPtr  ,secondPush);
 		}
+		mem.KairoPushed(accessPtr,before,bytesToStore);
 		return;
 	}
 
@@ -753,6 +762,8 @@ void i486DXFidelityLayer <FIDELITY>::Push(Memory &mem,unsigned int operandSize,u
 	if(nullptr!=accessPtr)
 	{
 		mem.KairoWritten(accessPtr,bytesToStore); // KairoTowns
+		unsigned char before[12]; // KairoTowns
+		std::memcpy(before,accessPtr,bytesToStore);
 		if(16==operandSize)
 		{
 			cpputil::PutWord(accessPtr+4,firstPush);
@@ -765,6 +776,7 @@ void i486DXFidelityLayer <FIDELITY>::Push(Memory &mem,unsigned int operandSize,u
 			cpputil::PutDword(accessPtr+4,secondPush);
 			cpputil::PutDword(accessPtr  ,thirdPush);
 		}
+		mem.KairoPushed(accessPtr,before,bytesToStore);
 		return;
 	}
 
