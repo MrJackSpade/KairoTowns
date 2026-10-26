@@ -16,12 +16,6 @@ add_compile_options(-fsigned-char)
 # The emulator runs in real time only optimized, so the core is optimized in debug builds too;
 # without this a debug APK compiles every Tsugaru library at -O0.
 add_compile_options(-O3)
-# Scheduled for the Cortex-A55 (KairoTowns#12): 2-3% less time a frame on the RG DS than generic
-# scheduling, with the instruction set unchanged (ARMv8.0), so it runs on every arm64 device. -O2
-# was slower, -mcpu=cortex-a55 (ARMv8.2) no faster than this.
-if(ANDROID)
-    add_compile_options(-mtune=cortex-a55)
-endif()
 # The device build of the core uses a profile of the device playing games (KairoTowns#9,
 # core/pgo/README.md). The profile describes this exact code as the device compiles it, so a
 # training build (KAIROTOWNS_PGO_GENERATE), an experiment on the core or another compiler turns it
