@@ -66,9 +66,23 @@ public:
 	void AddDevice(Device *devPtr,unsigned int minIOPort,unsigned int maxIOPort);
 	void AddDevice(Device *devPtr,unsigned int ioPort);
 
-	/*! KairoTowns: counts every In and Out.
+	/*! KairoTowns: counts every In and Out but the reads kairoPureRead says have no effect.
 	*/
 	uint64_t accesses=0;
+
+	/*! KairoTowns: asked before every In, with the port and its bytes: true when the read has no
+	    effect on any device (the wait-loop skip then counts it apart from accesses, core/wait_loop.h).
+	*/
+	bool (*kairoPureRead)(void *owner,unsigned int port,unsigned int bytes)=nullptr;
+	void *kairoPureOwner=nullptr;
+
+	/*! KairoTowns: the device an In or Out of the port goes to, which also answers the other bytes
+	    of a word or dword read of it.
+	*/
+	inline const Device *KairoDevice(unsigned int port) const
+	{
+		return ioMap[port&IO_ADDR_MASK];
+	}
 
 	unsigned int In8(unsigned int port);
 	unsigned int In16(unsigned int port);

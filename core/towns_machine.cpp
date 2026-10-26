@@ -350,6 +350,81 @@ struct TownsMachine::Impl {
                                           t.state.nextFastDevicePollingTime);
         return t.state.townsTime != time || t.state.clockBalance != balance;
     }
+    // Whether a read of [bytes] bytes at [port] has no effect on any device, and until when it
+    // returns what it returns now (WaitLoopSkip::read_holds_until), for InOut::kairoPureRead.
+    // Only ports whose reads were checked in Tsugaru's own code are pure (KairoTowns#36); a word or
+    // dword read is the device's byte reads (Device::IOReadWord), each of which must be pure.
+    static bool pure_read(void *owner, unsigned int port, unsigned int bytes) {
+        auto &impl = *static_cast<Impl *>(owner);
+        auto &t = *impl.towns;
+        const Device *device = t.io.KairoDevice(port);
+        uint64_t until = ~uint64_t(0);
+        for (unsigned int i = 0; i < bytes; ++i)
+            if (!impl.pure_byte(device, (port + i) & 0xFFFF, until)) return false;
+        impl.wait_loop.read_holds_until(until);
+        return true;
+    }
+    bool pure_byte(const Device *device, unsigned int port, uint64_t &until) {
+        auto &t = *towns;
+        const uint64_t now = t.state.townsTime;
+        if (device == &t.crtc) {
+            switch (port) {
+            case TOWNSIO_CRTC_DATA_LOW:  // crtcReg[latch]: changes only with an Out
+                return true;
+            case TOWNSIO_CRTC_DATA_HIGH:  // the same, or with FR latched the sync bits as FDA0
+                if (t.crtc.state.crtcAddrLatch == TownsCRTC::REG_FR) until = std::min(until, next_sync_change(now));
+                return true;
+            case TOWNSIO_HSYNC_VSYNC:  // InVSYNC and InHSYNC of guest time
+                until = std::min(until, next_sync_change(now));
+                return true;
+            case TOWNSIO_HSYNC_VSYNC + 1:  // no port: the CRTC's 0xFF
+                return true;
+            }
+            return false;
+        }
+        if (device == &t.fdc) {
+            switch (port) {
+            case TOWNSIO_FDC_DRIVE_STATUS_CONTROL: {
+                // The drive's flags; DriveReady, asked while the motor runs, counts a pretended
+                // not-ready read down (an effect) and is not ready until a time.
+                const auto &state = t.fdc.state;
+                const unsigned int drive = t.fdc.DriveSelect();
+                const auto &d = state.drive[drive];
+                if (d.motor && state.driveSelectBit != 0 && t.fdc.DiskLoaded(drive)) {
+                    if (d.pretendDriveNotReadyCount > 0) return false;
+                    if (now < d.pretendDriveNotReadyUntil) until = std::min<uint64_t>(until, d.pretendDriveNotReadyUntil);
+                }
+                return true;
+            }
+            case TOWNSIO_FDC_DRIVE_STATUS_CONTROL + 1:  // no port: the FDC's 0xFF
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+    // The first guest time after [time] at which InVSYNC or InHSYNC differs from what it is at
+    // [time]. They are functions of the time within the frame (VSYNC_CYCLE) and line
+    // (HSYNC_CYCLE); each candidate below is a place one of them may change, checked with the
+    // functions themselves.
+    uint64_t next_sync_change(uint64_t time) const {
+        const auto &crtc = towns->crtc;
+        auto sync = [&](uint64_t at) { return (crtc.InVSYNC(at) ? 1 : 0) | (crtc.InHSYNC(at) ? 2 : 0); };
+        const int now = sync(time);
+        const uint64_t frame = TownsCRTC::VSYNC_CYCLE, line = TownsCRTC::HSYNC_CYCLE;
+        const uint64_t drawing = TownsCRTC::CRT_VERTICAL_DURATION, shown = TownsCRTC::CRT_HORIZONTAL_DURATION;
+        uint64_t at = time;
+        for (;;) {
+            const uint64_t into = at % frame, start = at - into;
+            const uint64_t row = into / line * line;
+            uint64_t next = frame;
+            for (uint64_t candidate : {row + shown + 1, row + line, drawing, drawing + 1})
+                if (candidate > into && candidate < next) next = candidate;
+            at = start + next;
+            if (sync(at) != now) return at;
+        }
+    }
+
     jit::Host jit_host() {
         jit::Host host;
         host.owner = this;
@@ -499,6 +574,9 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
     towns.DisableDebugger();
     impl->cd = config.cd;
     impl->skip_wait_loops = config.skip_wait_loops;
+    // Reads without effect do not keep a wait loop from being skipped (Impl::pure_read).
+    towns.io.kairoPureRead = &Impl::pure_read;
+    towns.io.kairoPureOwner = impl.get();
     if (config.jit && jit::supported())
         impl->jit = std::make_unique<jit::Jit>(towns.CPU(), towns.mem, towns.io, &towns.physMem.mainRAMAccess,
                                                towns.physMem.state.RAM, impl->jit_host(),

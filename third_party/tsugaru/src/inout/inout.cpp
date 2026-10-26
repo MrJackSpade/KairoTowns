@@ -62,7 +62,11 @@ void InOut::AddDevice(Device *devPtr,unsigned int ioPort)
 
 unsigned int InOut::In8(unsigned int port)
 {
-	++accesses; // KairoTowns
+	// KairoTowns
+	if(nullptr==kairoPureRead || true!=kairoPureRead(kairoPureOwner,port&IO_ADDR_MASK,1))
+	{
+		++accesses;
+	}
 	unsigned int value=ioMap[port&IO_ADDR_MASK]->IOReadByte(port&IO_ADDR_MASK);
 
 	// Read from appropriate device..
@@ -79,7 +83,11 @@ unsigned int InOut::In8(unsigned int port)
 
 unsigned int InOut::In16(unsigned int port)
 {
-	++accesses; // KairoTowns
+	// KairoTowns
+	if(nullptr==kairoPureRead || true!=kairoPureRead(kairoPureOwner,port&IO_ADDR_MASK,2))
+	{
+		++accesses;
+	}
 	unsigned int value=ioMap[port&IO_ADDR_MASK]->IOReadWord(port&IO_ADDR_MASK);
 
 	if(true==takeLog)
@@ -95,7 +103,11 @@ unsigned int InOut::In16(unsigned int port)
 
 unsigned int InOut::In32(unsigned int port)
 {
-	++accesses; // KairoTowns
+	// KairoTowns
+	if(nullptr==kairoPureRead || true!=kairoPureRead(kairoPureOwner,port&IO_ADDR_MASK,4))
+	{
+		++accesses;
+	}
 	unsigned int value=ioMap[port&IO_ADDR_MASK]->IOReadDword(port&IO_ADDR_MASK);
 
 	if(true==takeLog)
