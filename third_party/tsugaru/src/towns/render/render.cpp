@@ -149,6 +149,44 @@ void TownsRender::OerrideShowPage(bool layer0,bool layer1)
 	crtcShowPage[1]=layer1;
 }
 
+size_t TownsRender::KairoVRAMBytesRead(size_t vramSize) const
+{
+	// The high-resolution CRTC's layers start at 80000H a page and wrap in all of VRAM.
+	if(true==highResCRTC)
+	{
+		return vramSize;
+	}
+	size_t end=0;
+	// A layer's row starts at layer.VRAMAddr+layer.VRAMHSkipBytes plus an offset no higher than
+	// highestOffset, and reads at most its pixels across the screen from there (no layer is
+	// zoomed below 1x), plus the rest of a dword.
+	auto reach=[&](const TownsCRTC::Layer &layer,size_t highestOffset)
+	{
+		const size_t row=size_t(layer.sizeOnMonitor.x())*layer.bitsPerPixel/8+4;
+		end=std::max(end,size_t(layer.VRAMAddr)+layer.VRAMHSkipBytes+highestOffset+row);
+	};
+	if(true==crtcIsSinglePageMode)
+	{
+		// VRAM1Trans takes every offset below 80000H.
+		if(true==crtcShowPage[0])
+		{
+			reach(crtcLayer[0],0x7FFFF);
+		}
+	}
+	else
+	{
+		// VRAM0Trans leaves the offset, which the layer's mask keeps within it.
+		for(int page=0; page<2; ++page)
+		{
+			if(true==crtcShowPage[page])
+			{
+				reach(crtcLayer[page],crtcLayer[page].VScrollMask);
+			}
+		}
+	}
+	return std::min(end,vramSize);
+}
+
 void TownsRender::BuildImage(const unsigned char VRAM[],const TownsCRTC::AnalogPalette &palette,const TownsCRTC::ChaseHQPalette &chaseHQPalette)
 {
 	SetResolution(crtcRenderSize.x(),crtcRenderSize.y());

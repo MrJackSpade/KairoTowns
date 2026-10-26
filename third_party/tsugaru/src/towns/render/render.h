@@ -85,6 +85,12 @@ public:
 	*/
 	void BuildImage(const unsigned char VRAM[],const TownsCRTC::AnalogPalette &palette,const TownsCRTC::ChaseHQPalette &chaseHQ);
 
+	/*! KairoTowns: how many bytes from the start of VRAM BuildImage can read with the screen as
+	    Prepare saw it, at most vramSize. A copy of that much of VRAM draws the same picture as all
+	    of it (KairoTowns#34).
+	*/
+	size_t KairoVRAMBytesRead(size_t vramSize) const;
+
 	/*!
 	*/
 	void FlipUpsideDown(void);
