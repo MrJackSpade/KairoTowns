@@ -1342,6 +1342,11 @@ public:
 	};
 	INT21HInterceptor *int21HInterceptorPtr=nullptr;
 
+	/*! KairoTowns: counts INT 21H calls with AH=0AH (buffered line input), as the guest waiting
+	    for a typed line; startup commands are typed then (core/towns_typing.h).
+	*/
+	uint64_t kairoLineInputs=0;
+
 
 	enum
 	{

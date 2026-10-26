@@ -5484,6 +5484,11 @@ unsigned int i486DXFidelityLayer<FIDELITY>::RunOneInstruction(Memory &mem,InOut 
 			EIPIncrement=0;
 			break;
 		}
+		// KairoTowns: DOS's buffered line input, where COMMAND.COM waits for a command.
+		if(0x21==inst.EvalUimm8() && 0x0A==GetAH())
+		{
+			++kairoLineInputs;
+		}
 		Interrupt(inst.EvalUimm8(),mem,2,2,true);
 		EIPIncrement=0;
 		break;

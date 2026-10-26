@@ -11,6 +11,7 @@ import com.mrjackspade.kairo.frontend.LibraryStrings
 import com.mrjackspade.kairo.frontend.MachineActivity
 import com.mrjackspade.kairo.frontend.MachineFirstRun
 import com.mrjackspade.kairo.frontend.NativeMachine
+import com.mrjackspade.kairo.frontend.StartupCommands
 import com.mrjackspade.kairo.frontend.companionFor
 
 import java.io.File
@@ -93,13 +94,15 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
             else -> null
         }
         // A hard disk game's CD, and the hard disk installed beside a CD, as their sets hold them.
-        val cd = if (isCd(entry)) entry else companionFor(null, entry, launchEntries, "CD", ::isCd)
+        val cd = if (isCd(entry)) entry else companionFor(game.mediaId("cd"), entry, launchEntries, "CD", ::isCd)
         val hardDisk = if (isHardDisk(entry)) entry else companionFor(null, entry, launchEntries, "hard disk", ::isHardDisk)
         val media = listOf(cd, floppy, null, hardDisk)
         val images = media.map { disk -> disk?.let { disks.prepare(it, cancelled, progress).absolutePath } }
         val home = File(filesDir, "tsugaru").apply { mkdirs() }
         // The machine boots the disk the player starts: a hard disk boots before the CD beside it.
-        val settings = optionValues(game) + (BOOT_HARD_DISK to if (isHardDisk(entry)) "on" else "off")
+        val options = optionValues(game)
+        val settings = options + (BOOT_HARD_DISK to if (isHardDisk(entry)) "on" else "off") +
+            StartupCommands.setting(TownsCatalog.startupCommands.value(game, options))
         check(bridge.start(firmwareDir.absolutePath, home.absolutePath, images, settings)) {
             "Another machine is still running"
         }

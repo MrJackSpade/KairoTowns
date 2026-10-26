@@ -65,10 +65,24 @@
   "fmtowns:124834": {
    "boxArtUrl": "https://images.launchbox-app.com/8cb93ae1-a9e3-460a-8237-4b7f16d1b0d5.jpg",
    "contentIds": [
-    "sha256-cd-v1:b828d67f8fbdd00020941ade711a01b0c715ba772ce59da55fda549476b47769"
+    "sha256-cd-v1:b828d67f8fbdd00020941ade711a01b0c715ba772ce59da55fda549476b47769",
+    "sha256-fd-v1:a8f63c48306fcd96c704194a6710c5512063220906771ed6daa28572eefd5cb4"
    ],
    "description": "A sci-fi role-playing game set in a small cluster of star systems, where a young hero travels between planets and fights in turn-based battles.",
    "developer": "Right Stuff",
+   "diskSets": {
+    "sha256-cd-v1:b828d67f8fbdd00020941ade711a01b0c715ba772ce59da55fda549476b47769": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:a8f63c48306fcd96c704194a6710c5512063220906771ed6daa28572eefd5cb4",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:a8f63c48306fcd96c704194a6710c5512063220906771ed6daa28572eefd5cb4"
+     ]
+    }
+   },
    "launchbox": "124834",
    "mobygames": 15395,
    "publisher": "Right Stuff",
@@ -260,10 +274,24 @@
    ],
    "boxArtUrl": "https://images.launchbox-app.com/00bf11be-dcd4-4dc2-a920-aa6d71212498.jpg",
    "contentIds": [
-    "sha256-cd-v1:66bbf8d901844ac015f99faff2dda2ce8d0a349132e11a9ad482b811a2c16d6d"
+    "sha256-cd-v1:66bbf8d901844ac015f99faff2dda2ce8d0a349132e11a9ad482b811a2c16d6d",
+    "sha256-fd-v1:ff942b97e07fbec08cdecff1572f7ae4e671c607b6d7f6b17f8af1d08eba9e76"
    ],
    "description": "Toaplan's vertical helicopter shooter: fly the Twin Cobra over enemy territory, destroying tanks, ships and gun emplacements with upgradable weapons and bombs.",
    "developer": "ToaPlan",
+   "diskSets": {
+    "sha256-cd-v1:66bbf8d901844ac015f99faff2dda2ce8d0a349132e11a9ad482b811a2c16d6d": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:ff942b97e07fbec08cdecff1572f7ae4e671c607b6d7f6b17f8af1d08eba9e76",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:ff942b97e07fbec08cdecff1572f7ae4e671c607b6d7f6b17f8af1d08eba9e76"
+     ]
+    }
+   },
    "launchbox": "144466",
    "mobygames": 13725,
    "publisher": "Toaplan",
@@ -301,6 +329,19 @@
    ],
    "description": "The Avatar returns to Britannia, now at war with the gargoyles, and uncovers the truth behind the conflict in this open-world role-playing game.",
    "developer": "Origin Systems",
+   "diskSets": {
+    "sha256-cd-v1:dc1fe9453edd91c39e5d526016ee8b8915d5913df52f06702ab6494c9479e105": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:143eeb47da9282c159a1954d66ad2197217f0ac5fb1c522ad613874768b96ce0",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:143eeb47da9282c159a1954d66ad2197217f0ac5fb1c522ad613874768b96ce0"
+     ]
+    }
+   },
    "launchbox": "145080",
    "mobygames": 104,
    "publisher": "Fujitsu Interactive",
@@ -655,6 +696,19 @@
    ],
    "description": "The Avatar returns to Britannia, where Lord British has vanished and the tyrant Blackthorn enforces twisted laws, in this party-based role-playing game of exploration and turn-based combat.",
    "developer": "Origin Systems",
+   "diskSets": {
+    "sha256-cd-v1:42a7ce2aab190bacb4c404eb8ae8b2ed699b24efdc32e9ea70c1aa3db2bb3e96": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:143eeb47da9282c159a1954d66ad2197217f0ac5fb1c522ad613874768b96ce0",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:143eeb47da9282c159a1954d66ad2197217f0ac5fb1c522ad613874768b96ce0"
+     ]
+    }
+   },
    "launchbox": "157264",
    "mobygames": 808,
    "publisher": "Fujitsu Interactive",
@@ -756,10 +810,24 @@
   "fmtowns:166885": {
    "boxArtUrl": "https://images.launchbox-app.com/fa945ecb-29cc-4cb6-97ad-ab5fdafdd0a8.jpg",
    "contentIds": [
-    "sha256-cd-v1:63317d443de35abf2cc466ea5db33e01fbf5c2520c0eda14fa8580fa1a486d37"
+    "sha256-cd-v1:63317d443de35abf2cc466ea5db33e01fbf5c2520c0eda14fa8580fa1a486d37",
+    "sha256-fd-v1:510fc28b209a55f8f157b3492ca0bc6cc82821861d8a854811ce19cdc75c8ac3"
    ],
    "description": "A first-person role-playing game in real time: the Avatar descends into the Stygian Abyss to rescue a baron's kidnapped daughter.",
    "developer": "Blue Sky Productions",
+   "diskSets": {
+    "sha256-cd-v1:63317d443de35abf2cc466ea5db33e01fbf5c2520c0eda14fa8580fa1a486d37": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:510fc28b209a55f8f157b3492ca0bc6cc82821861d8a854811ce19cdc75c8ac3",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:510fc28b209a55f8f157b3492ca0bc6cc82821861d8a854811ce19cdc75c8ac3"
+     ]
+    }
+   },
    "launchbox": "166885",
    "mobygames": 690,
    "publisher": "Electronic Arts Victor",
@@ -907,10 +975,24 @@
    ],
    "boxArtUrl": "https://images.launchbox-app.com/0e382736-e519-4385-a586-25a015390b12.jpg",
    "contentIds": [
-    "sha256-cd-v1:a730dcbb73ee77ab2bdf22057169806ebf96bde9ceee8fceffc531e57a474b34"
+    "sha256-cd-v1:a730dcbb73ee77ab2bdf22057169806ebf96bde9ceee8fceffc531e57a474b34",
+    "sha256-fd-v1:90744a69941e6ead4c783dcbac904230583a377d915efbf76181afb1f11f671e"
    ],
    "description": "A role-playing game set in the Record of Lodoss War world, with a party fighting the dark forces around the Grey Witch.",
    "developer": "Humming Bird Soft",
+   "diskSets": {
+    "sha256-cd-v1:a730dcbb73ee77ab2bdf22057169806ebf96bde9ceee8fceffc531e57a474b34": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:90744a69941e6ead4c783dcbac904230583a377d915efbf76181afb1f11f671e",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:90744a69941e6ead4c783dcbac904230583a377d915efbf76181afb1f11f671e"
+     ]
+    }
+   },
    "launchbox": "182660",
    "mobygames": 58636,
    "publisher": "Humming Bird Soft",
@@ -1343,10 +1425,24 @@
   "fmtowns:184148": {
    "boxArtUrl": "https://images.launchbox-app.com/edde361b-cbee-410c-810e-a1c1ef07e02a.jpg",
    "contentIds": [
-    "sha256-cd-v1:99e6c87f1175cd52f1bb6e0d8b9ab28c86f6f5a70e5c8c1b8c6e025b581d0ad3"
+    "sha256-cd-v1:99e6c87f1175cd52f1bb6e0d8b9ab28c86f6f5a70e5c8c1b8c6e025b581d0ad3",
+    "sha256-hd-v1:425869b3836459620cc1319c5a715b680165804526353b498f768b2fc928753b"
    ],
    "description": "Strike Commander with its additional tactical operations missions.",
    "developer": "Origin Systems",
+   "diskSets": {
+    "sha256-hd-v1:425869b3836459620cc1319c5a715b680165804526353b498f768b2fc928753b": {
+     "media": [
+      {
+       "contentId": "sha256-cd-v1:99e6c87f1175cd52f1bb6e0d8b9ab28c86f6f5a70e5c8c1b8c6e025b581d0ad3",
+       "role": "cd"
+      }
+     ],
+     "setDisks": [
+      "sha256-cd-v1:99e6c87f1175cd52f1bb6e0d8b9ab28c86f6f5a70e5c8c1b8c6e025b581d0ad3"
+     ]
+    }
+   },
    "launchbox": "184148",
    "publisher": "Electronic Arts Victor",
    "screenshotUrl": "https://images.launchbox-app.com/5cd3f2eb-81f4-4d8c-9663-71ea08f9164a.png",
@@ -2372,10 +2468,24 @@
    "adult": true,
    "boxArtUrl": "https://images.launchbox-app.com/7463a381-56bb-470a-a17b-097c3f5801eb.jpg",
    "contentIds": [
-    "sha256-cd-v1:d40d171c28f4edf50bce814112c2c8321dd1c568de6626f09eb9662f07545095"
+    "sha256-cd-v1:d40d171c28f4edf50bce814112c2c8321dd1c568de6626f09eb9662f07545095",
+    "sha256-fd-v1:dbe56d5486ff405580f67684a1ad03dccf9a16492223c29de9a7dc2da792c00c"
    ],
    "description": "A turn-based strategy game set in 2048, after biological weapons from a third world war created monsters.",
    "developer": "D.O.",
+   "diskSets": {
+    "sha256-cd-v1:d40d171c28f4edf50bce814112c2c8321dd1c568de6626f09eb9662f07545095": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:dbe56d5486ff405580f67684a1ad03dccf9a16492223c29de9a7dc2da792c00c",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:dbe56d5486ff405580f67684a1ad03dccf9a16492223c29de9a7dc2da792c00c"
+     ]
+    }
+   },
    "launchbox": "185083",
    "mobygames": 50019,
    "publisher": "D.O.",
@@ -2542,10 +2652,24 @@
    ],
    "boxArtUrl": "https://images.launchbox-app.com/5bc2bfee-7a31-4979-bb40-dacfaf220a89.jpg",
    "contentIds": [
-    "sha256-cd-v1:0796eb027b0631bfb624baea7ff504294b2af98d2a9a770588f74320e4619a12"
+    "sha256-cd-v1:0796eb027b0631bfb624baea7ff504294b2af98d2a9a770588f74320e4619a12",
+    "sha256-fd-v1:3fdbdac7db28030168999550003779ba630e92a91ff162a230d9819051de5cb5"
    ],
    "description": "The fourth Might and Magic: a party explores the world of Xeen to stop Lord Xeen.",
    "developer": "New World Computing",
+   "diskSets": {
+    "sha256-cd-v1:0796eb027b0631bfb624baea7ff504294b2af98d2a9a770588f74320e4619a12": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:3fdbdac7db28030168999550003779ba630e92a91ff162a230d9819051de5cb5",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:3fdbdac7db28030168999550003779ba630e92a91ff162a230d9819051de5cb5"
+     ]
+    }
+   },
    "launchbox": "185094",
    "mobygames": 3423,
    "publisher": "StarCraft",
@@ -4257,10 +4381,24 @@
   "fmtowns:188203": {
    "boxArtUrl": "https://images.launchbox-app.com/b0123a48-e245-4934-99e4-6bc0c9a5aa3d.jpg",
    "contentIds": [
-    "sha256-cd-v1:6c80e80deeaa2627782fb1fd7746e35bfb557ab51bb6b15549b2071b8e59c93e"
+    "sha256-cd-v1:6c80e80deeaa2627782fb1fd7746e35bfb557ab51bb6b15549b2071b8e59c93e",
+    "sha256-fd-v1:4d634a3e6d73396d373dc89d63503c7b080990915b0e7fd007eca39c4172dcaa"
    ],
    "description": "ArtDink's open-ended fantasy role-playing game: an adventurer takes jobs, explores and builds a reputation in a living world.",
    "developer": "ArtDink",
+   "diskSets": {
+    "sha256-cd-v1:6c80e80deeaa2627782fb1fd7746e35bfb557ab51bb6b15549b2071b8e59c93e": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:4d634a3e6d73396d373dc89d63503c7b080990915b0e7fd007eca39c4172dcaa",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:4d634a3e6d73396d373dc89d63503c7b080990915b0e7fd007eca39c4172dcaa"
+     ]
+    }
+   },
    "launchbox": "188203",
    "mobygames": 44478,
    "publisher": "ArtDink",
@@ -4790,10 +4928,24 @@
   "fmtowns:188283": {
    "boxArtUrl": "https://images.launchbox-app.com/a7f68b72-fc03-44d4-8f43-c32bb615bc3d.jpg",
    "contentIds": [
-    "sha256-cd-v1:52b8da68a36fce65398e102932a8c44be814092deb9c7b1a19192f32c8879334"
+    "sha256-cd-v1:52b8da68a36fce65398e102932a8c44be814092deb9c7b1a19192f32c8879334",
+    "sha256-fd-v1:83935e67e95eb9fab617492a5b6b41dabdbc733cf40fafb34391e5581bec3218"
    ],
    "description": "A fantasy role-playing game: the long peace of the Kingdom of Faladia comes to a sudden end.",
    "developer": "Kinpukurin",
+   "diskSets": {
+    "sha256-cd-v1:52b8da68a36fce65398e102932a8c44be814092deb9c7b1a19192f32c8879334": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:83935e67e95eb9fab617492a5b6b41dabdbc733cf40fafb34391e5581bec3218",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:83935e67e95eb9fab617492a5b6b41dabdbc733cf40fafb34391e5581bec3218"
+     ]
+    }
+   },
    "launchbox": "188283",
    "mobygames": 58617,
    "publisher": "Kinpukurin",
@@ -4895,10 +5047,24 @@
    ],
    "boxArtUrl": "https://images.launchbox-app.com/0244c5f7-72c6-43db-b00e-3108ae35cd46.jpg",
    "contentIds": [
-    "sha256-cd-v1:15ac36a907b02c0dccaeb01b0e0341eb0dc739c8353f2ab036b88588c737a5e0"
+    "sha256-cd-v1:15ac36a907b02c0dccaeb01b0e0341eb0dc739c8353f2ab036b88588c737a5e0",
+    "sha256-fd-v1:f675b4d04b22f7c93261b5b0fa4f945129a121d9a9e80f23f795833a73942291"
    ],
    "description": "A one-on-one fighting game with an all-female cast.",
    "developer": "Agumix",
+   "diskSets": {
+    "sha256-cd-v1:15ac36a907b02c0dccaeb01b0e0341eb0dc739c8353f2ab036b88588c737a5e0": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:f675b4d04b22f7c93261b5b0fa4f945129a121d9a9e80f23f795833a73942291",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:f675b4d04b22f7c93261b5b0fa4f945129a121d9a9e80f23f795833a73942291"
+     ]
+    }
+   },
    "launchbox": "188292",
    "mobygames": 58619,
    "publisher": "Agumix",
@@ -5413,10 +5579,24 @@
    ],
    "boxArtUrl": "https://images.launchbox-app.com/0a8f7d60-947c-4d5e-8688-811857da5311.jpg",
    "contentIds": [
-    "sha256-cd-v1:0bee493a4cac3f4b0b0cf39928bcb81ef6dcc88148769e325ed76486033f5913"
+    "sha256-cd-v1:0bee493a4cac3f4b0b0cf39928bcb81ef6dcc88148769e325ed76486033f5913",
+    "sha256-fd-v1:7dbe4456618fe9d6634a703103de0292c2d3e17fd7018afc224bd54f649d8fc0"
    ],
    "description": "A raising simulation: as a high school teacher, guide five troubled girls through their final school year.",
    "developer": "Headroom",
+   "diskSets": {
+    "sha256-cd-v1:0bee493a4cac3f4b0b0cf39928bcb81ef6dcc88148769e325ed76486033f5913": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:7dbe4456618fe9d6634a703103de0292c2d3e17fd7018afc224bd54f649d8fc0",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:7dbe4456618fe9d6634a703103de0292c2d3e17fd7018afc224bd54f649d8fc0"
+     ]
+    }
+   },
    "launchbox": "188328",
    "mobygames": 43243,
    "publisher": "Japan Home Video",
@@ -8515,9 +8695,23 @@
   },
   "fmtowns:local-49fbb614d7": {
    "contentIds": [
-    "sha256-cd-v1:590a38e6080df344cb83fdfb3a2e08500092bd8ea431ea2db446bf310e5882e5"
+    "sha256-cd-v1:590a38e6080df344cb83fdfb3a2e08500092bd8ea431ea2db446bf310e5882e5",
+    "sha256-hd-v1:3b2fda75e28a200ef5a8c42e50c66f8060d6465d41fb1495a702d2b5af853510"
    ],
    "description": "The second Wing Commander, with its Special Operations missions: Christopher Blair, disgraced after the loss of the Tiger's Claw, flies again against the Kilrathi in a campaign that branches with each mission's outcome.",
+   "diskSets": {
+    "sha256-hd-v1:3b2fda75e28a200ef5a8c42e50c66f8060d6465d41fb1495a702d2b5af853510": {
+     "media": [
+      {
+       "contentId": "sha256-cd-v1:590a38e6080df344cb83fdfb3a2e08500092bd8ea431ea2db446bf310e5882e5",
+       "role": "cd"
+      }
+     ],
+     "setDisks": [
+      "sha256-cd-v1:590a38e6080df344cb83fdfb3a2e08500092bd8ea431ea2db446bf310e5882e5"
+     ]
+    }
+   },
    "sourceGroups": [
     "fmtowns-cd:Wing Commander II and Special Operations (1991)(Origin)(Jp)[+HDD+CMOS].zip"
    ],
@@ -8526,9 +8720,23 @@
   },
   "fmtowns:local-53e11de06c": {
    "contentIds": [
-    "sha256-cd-v1:f87c681ad72b9bfff058761f6717b03b1690bf7baa630baaea7520373b17e6dd"
+    "sha256-cd-v1:f87c681ad72b9bfff058761f6717b03b1690bf7baa630baaea7520373b17e6dd",
+    "sha256-fd-v1:0f471e2cf63187a4fa177da4e521cdc697b87af20f28127c70885869128a3318"
    ],
    "description": "The first Psychic Detective story: Katsuya Furuyagi, who can dive into people's minds, is called in by the wealthy Shiratori family when their youngest, Asami, falls unconscious and won't wake.",
+   "diskSets": {
+    "sha256-cd-v1:f87c681ad72b9bfff058761f6717b03b1690bf7baa630baaea7520373b17e6dd": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:0f471e2cf63187a4fa177da4e521cdc697b87af20f28127c70885869128a3318",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:0f471e2cf63187a4fa177da4e521cdc697b87af20f28127c70885869128a3318"
+     ]
+    }
+   },
    "sourceGroups": [
     "fmtowns-cd:Psychic Detective Vol. 1 - Invitation (1992)(Datawest)(Jp)[+UserDisk].zip"
    ],
@@ -8591,9 +8799,23 @@
   },
   "fmtowns:local-957fd52ad3": {
    "contentIds": [
-    "sha256-cd-v1:9274104019624d608a2f830aa40e303205a08cfa93786daebea9a6ecdf108fa9"
+    "sha256-cd-v1:9274104019624d608a2f830aa40e303205a08cfa93786daebea9a6ecdf108fa9",
+    "sha256-fd-v1:1c812290271de446b95bf7744fa29da92c259ee9c86386cab6963384ca27735d"
    ],
    "description": "The second Kyrandia adventure: as the alchemist Zanthia, journey to the center of the world to stop the land of Kyrandia from vanishing piece by piece.",
+   "diskSets": {
+    "sha256-cd-v1:9274104019624d608a2f830aa40e303205a08cfa93786daebea9a6ecdf108fa9": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:1c812290271de446b95bf7744fa29da92c259ee9c86386cab6963384ca27735d",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:1c812290271de446b95bf7744fa29da92c259ee9c86386cab6963384ca27735d"
+     ]
+    }
+   },
    "sourceGroups": [
     "fmtowns-cd:Legend of Kyrandia 2, The (1993)(Westwood Studios)(Jp)[+UserDisk].zip"
    ],
@@ -8661,9 +8883,23 @@
   },
   "fmtowns:local-c839510143": {
    "contentIds": [
-    "sha256-cd-v1:385b0ea43b4eae8c71c89bfa2e9442e808d864bb9066b0345e41d0a2b8773df9"
+    "sha256-cd-v1:385b0ea43b4eae8c71c89bfa2e9442e808d864bb9066b0345e41d0a2b8773df9",
+    "sha256-fd-v1:ec9731cdf4ceb0308e1356608633c79dc58bbbc4c907e989cbd4cbf4e2481c1e"
    ],
    "description": "Richard Garriott's first three Ultima role-playing games together: defeat Mondain, then his apprentice Minax, then their creation Exodus.",
+   "diskSets": {
+    "sha256-cd-v1:385b0ea43b4eae8c71c89bfa2e9442e808d864bb9066b0345e41d0a2b8773df9": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:ec9731cdf4ceb0308e1356608633c79dc58bbbc4c907e989cbd4cbf4e2481c1e",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:ec9731cdf4ceb0308e1356608633c79dc58bbbc4c907e989cbd4cbf4e2481c1e"
+     ]
+    }
+   },
    "sourceGroups": [
     "fmtowns-cd:Ultima Trilogy 1-3 (1990)(Origins)(Jp-En)[+UserDisk].zip"
    ],
@@ -8672,9 +8908,23 @@
   },
   "fmtowns:local-ca1c75e58e": {
    "contentIds": [
-    "sha256-cd-v1:ff169f7e80877a93b6cf603b01ecaf6ed836b5f062a3cd85f4fae3aef4a29867"
+    "sha256-cd-v1:ff169f7e80877a93b6cf603b01ecaf6ed836b5f062a3cd85f4fae3aef4a29867",
+    "sha256-fd-v1:b27341a9d374c615c6430cef7140a02e3e9a8f890d466c35722325a1fbb5b7f5"
    ],
    "description": "The first Wing Commander, with its Secret Missions: fly fighters from the carrier Tiger's Claw against the Kilrathi Empire in a campaign that branches with your wins and losses.",
+   "diskSets": {
+    "sha256-cd-v1:ff169f7e80877a93b6cf603b01ecaf6ed836b5f062a3cd85f4fae3aef4a29867": {
+     "media": [
+      {
+       "contentId": "sha256-fd-v1:b27341a9d374c615c6430cef7140a02e3e9a8f890d466c35722325a1fbb5b7f5",
+       "role": "floppyA"
+      }
+     ],
+     "setDisks": [
+      "sha256-fd-v1:b27341a9d374c615c6430cef7140a02e3e9a8f890d466c35722325a1fbb5b7f5"
+     ]
+    }
+   },
    "sourceGroups": [
     "fmtowns-cd:Wing Commander+Secret Missions (1990)(Origin)(Jp-En)[+UserDisk].zip"
    ],
@@ -9090,6 +9340,10 @@
  },
  "schemaVersion": 1,
  "sharedContentIds": {
+  "sha256-fd-v1:143eeb47da9282c159a1954d66ad2197217f0ac5fb1c522ad613874768b96ce0": [
+   "fmtowns:145080",
+   "fmtowns:157264"
+  ],
   "sha256-fd-v1:e45f81d9805fa3aebcce3e48794d5020ffe1d18f07d8bccfdaf6b26a7ec94cfc": [
    "fmtowns:local-b1b187cf00",
    "fmtowns:local-ed6e2d5ebe"

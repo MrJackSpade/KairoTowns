@@ -177,6 +177,10 @@ struct TownsMachine::Impl {
     std::string cd;
     // The CD that goes in once a hard disk boot has read its first disk (Config::boot_hd).
     std::string cd_after_boot;
+    // The guest's calls of DOS's line input when a key last went down (TownsMachine::prompt).
+    uint64_t line_inputs_at_key = 0;
+    // The modifier keys held, which every key's code carries (TownsMachine::key).
+    bool shift_held = false, ctrl_held = false;
     uint64_t last_frame = kFrameNanoseconds;
     TownsMachine::Profile profile;
     bool sample_pcs = false;
@@ -597,6 +601,31 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
             return nullptr;
         }
     }
+    // A hard disk's own MS-DOS boots only when the CMOS's drive table names a SCSI drive (KairoTowns#38),
+    // as Towns OS's setup does when a player installs a hard disk: with none, the first free drive from
+    // D: becomes SCSI unit 0. The guest's own MS-DOS then names the disk's partitions there itself.
+    // Each drive, A: to P:, is two bytes, its type (2 for SCSI, FFh for none) and unit, from
+    // TOWNSIO_CMOS_DRIVE_ASSIGN, outside the CMOS checksum's range; the bytes after P: are other settings.
+    if (std::any_of(std::begin(config.hd), std::end(config.hd), [](const std::string &hd) { return !hd.empty(); })) {
+        unsigned char *drives = towns.physMem.state.CMOSRAM + (TOWNSIO_CMOS_DRIVE_ASSIGN - TOWNSIO_CMOS_BASE) / 2;
+        constexpr int kScsi = 2, kFirstDrive = 3, kDrives = 16;
+        bool named = false;
+        for (int drive = 0; drive < kDrives; ++drive) named = named || drives[drive * 2] == kScsi;
+        if (!named) {
+            if (config.hd[0].empty()) {
+                error = "Only a hard disk at SCSI ID 0 (.h0) can be given a drive in the CMOS";
+                return nullptr;
+            }
+            int drive = kFirstDrive;
+            while (drive < kDrives && drives[drive * 2] != 0xFF) ++drive;
+            if (drive == kDrives) {
+                error = "The CMOS has no free drive for the hard disk " + config.hd[0];
+                return nullptr;
+            }
+            drives[drive * 2] = kScsi;
+            drives[drive * 2 + 1] = 0;
+        }
+    }
     impl->cd = config.cd;
     if (config.boot_hd) impl->cd_after_boot = config.cd;
     impl->skip_wait_loops = config.skip_wait_loops;
@@ -871,7 +900,13 @@ uint32_t TownsMachine::read_audio(int16_t *stereo, uint32_t max_frames) { return
 
 void TownsMachine::key(int code, bool down) {
     if (code <= 0 || code > 0x7f) return;
-    impl_->towns->keyboard.PushFifo(down ? TOWNS_KEYFLAG_JIS_PRESS : TOWNS_KEYFLAG_JIS_RELEASE,
+    if (down) impl_->line_inputs_at_key = impl_->towns->CPU().kairoLineInputs;
+    // The keyboard sends the held Shift and Ctrl with every key, as Tsugaru's own frontend does;
+    // the BIOS reads them from there, not from the Shift and Ctrl keys' own codes.
+    if (code == TOWNS_JISKEY_SHIFT) impl_->shift_held = down;
+    if (code == TOWNS_JISKEY_CTRL) impl_->ctrl_held = down;
+    const unsigned char flags = (impl_->shift_held ? TOWNS_KEYFLAG_SHIFT : 0) | (impl_->ctrl_held ? TOWNS_KEYFLAG_CTRL : 0);
+    impl_->towns->keyboard.PushFifo(flags | (down ? TOWNS_KEYFLAG_JIS_PRESS : TOWNS_KEYFLAG_JIS_RELEASE),
                                     static_cast<unsigned char>(code));
 }
 
@@ -937,6 +972,34 @@ bool TownsMachine::insert_hd(int id, const std::string &path) {
         return true;
     }
     return towns.scsi.LoadHardDiskImage(id, path);
+}
+
+kairo::Prompt TownsMachine::prompt() const {
+    return impl_->towns->CPU().kairoLineInputs > impl_->line_inputs_at_key ? kairo::Prompt::Line : kairo::Prompt::None;
+}
+
+bool TownsMachine::typed_key(char c, int &code, bool &shift) {
+    unsigned char codes[2];
+    if (TownsKeyboard::TranslateChar(codes, static_cast<unsigned char>(c)) == 0) return false;
+    // Ctrl characters are not typed: a line's {CTRL-x} holds Ctrl.
+    if (codes[0] & TOWNS_KEYFLAG_CTRL) return false;
+    code = codes[1];
+    shift = (codes[0] & TOWNS_KEYFLAG_SHIFT) != 0;
+    return true;
+}
+
+int TownsMachine::special_key(kairo::SpecialKey key) {
+    switch (key) {
+    case kairo::SpecialKey::Return: return TOWNS_JISKEY_RETURN;
+    case kairo::SpecialKey::Shift: return TOWNS_JISKEY_SHIFT;
+    case kairo::SpecialKey::Ctrl: return TOWNS_JISKEY_CTRL;
+    case kairo::SpecialKey::F1: return TOWNS_JISKEY_PF01;
+    case kairo::SpecialKey::F2: return TOWNS_JISKEY_PF02;
+    case kairo::SpecialKey::F3: return TOWNS_JISKEY_PF03;
+    case kairo::SpecialKey::F4: return TOWNS_JISKEY_PF04;
+    case kairo::SpecialKey::F5: return TOWNS_JISKEY_PF05;
+    }
+    return -1;
 }
 
 std::string TownsMachine::cd_path() const { return impl_->cd; }

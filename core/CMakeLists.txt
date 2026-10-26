@@ -76,7 +76,8 @@ add_library(yssimplesound STATIC "${YSSOUND}/yssimplesound.cpp" "${YSSOUND}/nown
 target_include_directories(yssimplesound PUBLIC "${YSSOUND}")
 
 add_library(kairotowns_core STATIC towns_machine.cpp jit/jit.cpp jit/translator.cpp)
-target_include_directories(kairotowns_core PUBLIC "${CMAKE_CURRENT_LIST_DIR}")
+# The shared typer's header (kairo/startup_typer.h), which TownsMachine's typing members serve.
+target_include_directories(kairotowns_core PUBLIC "${CMAKE_CURRENT_LIST_DIR}" "${CMAKE_CURRENT_LIST_DIR}/../shared/frontend/src/main/cpp")
 target_link_libraries(kairotowns_core PUBLIC towns townsrender outside_world yssimplesound)
 
 # The measurement tool for the device too, as a standalone executable run through adb

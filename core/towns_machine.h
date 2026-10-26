@@ -11,6 +11,8 @@
 #include <string>
 #include <vector>
 
+#include "kairo/startup_typer.h"
+
 namespace kairotowns {
 
 // What a machine starts with.
@@ -75,6 +77,14 @@ public:
 
     // A key by its JIS key code (TOWNS_JISKEY_*, towns/townsdef/townsdef.h).
     void key(int code, bool down);
+
+    // The machine as the shared typer types a game's startup commands (kairo/startup_typer.h): a
+    // line goes in when the guest has called DOS's line input (INT 21h AH=0Ah, where COMMAND.COM
+    // waits for a command) since the last key, typed on the JIS keyboard as Tsugaru types text.
+    kairo::Prompt prompt() const;
+    static bool typed_key(char c, int &code, bool &shift);
+    static int special_key(kairo::SpecialKey key);
+    static bool expand_command(std::string &line) { (void) line; return true; }
     // The held PadButton bits of the gamepad in port 0.
     void pad(unsigned buttons);
     // The mouse in port 1: motion in mickeys, and button 1 (left) or 2 (right).

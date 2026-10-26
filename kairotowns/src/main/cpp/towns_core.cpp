@@ -2,6 +2,7 @@
 // (shared/frontend/src/main/cpp/kairo/machine_core.h).
 
 #include <array>
+#include <fstream>
 #include <memory>
 #include <string>
 #include <vector>
@@ -110,6 +111,12 @@ public:
                 hard_disk < 0 ? std::string() : machine_->hd_path(hard_disk)};
     }
 
+    // A game's startup commands go in at DOS's line input (TownsMachine::prompt).
+    kairo::Prompt prompt() override { return machine_->prompt(); }
+    bool typed_key(char c, int &code, bool &shift) override { return TownsMachine::typed_key(c, code, shift); }
+    int special_key(kairo::SpecialKey key) override { return TownsMachine::special_key(key); }
+    bool expand_command(std::string &line) override { return TownsMachine::expand_command(line); }
+
 private:
     // The SCSI ID of the hard disk in the slot, or -1.
     int attached_hard_disk() const {
@@ -142,6 +149,21 @@ std::unique_ptr<kairo::MachineCore> kairo::create_core(const kairo::Launch &laun
             return nullptr;
         }
         config.hd[id] = hard_disk;
+        // A game with a hard disk keeps its own CMOS beside the disk's working copy, with the drive
+        // table its MS-DOS writes, so other games keep the machine's; it starts as a copy of that.
+        const std::string own = hard_disk + ".cmos";
+        if (!std::ifstream(own, std::ios::binary).good()) {
+            std::ifstream machine(config.cmos_file, std::ios::binary);
+            if (machine.good()) {
+                std::ofstream copy(own, std::ios::binary);
+                copy << machine.rdbuf();
+                if (!copy.good()) {
+                    error = "The hard disk's CMOS could not be written to " + own;
+                    return nullptr;
+                }
+            }
+        }
+        config.cmos_file = own;
     }
     // The settings TownsCatalog's options name; every launch passes all of them.
     config.memory_mb = static_cast<unsigned>(std::stoul(launch.settings.at("memory")));

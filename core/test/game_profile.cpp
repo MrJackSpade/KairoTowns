@@ -117,10 +117,12 @@ uint64_t fnv1a(uint64_t hash, const void *data, size_t bytes) {
 } // namespace
 
 int main(int argc, char **argv) {
-    if (argc < 6) return fail("usage: game_profile <rom dir> <work dir> <disc image> <seconds> <skip|check> [pcs] [host] [noskip] [exact] [ops] [jit] [pictures] [fd0=<image>] [fd1=<image>] [hd0=<image>] ... [hd6=<image>] [boothd] [mem=<MB>]");
+    if (argc < 6) return fail("usage: game_profile <rom dir> <work dir> <disc image> <seconds> <skip|check> [pcs] [host] [noskip] [exact] [ops] [jit] [pictures] [fd0=<image>] [fd1=<image>] [hd0=<image>] ... [hd6=<image>] [boothd] [mem=<MB>] [type=<lines separated by |>]");
     bool pcs = false, host = false, noskip = false, exact = false, ops = false, jit = false, pictures = false;
     std::string fd[2], hd[Config::kHardDisks];
     bool boot_hd = false;
+    // Startup commands, as the app's shared typer types them at the guest's prompt.
+    std::string commands;
     unsigned memory_mb = Config().memory_mb;
     for (int i = 6; i < argc; ++i) {
         const std::string option = argv[i];
@@ -135,6 +137,10 @@ int main(int argc, char **argv) {
         if (option == "pcs") pcs = true;
         else if (option == "pictures") pictures = true;
         else if (option == "boothd") boot_hd = true;
+        else if (option.compare(0, 5, "type=") == 0) {
+            commands = option.substr(5);
+            std::replace(commands.begin(), commands.end(), '|', '\n');
+        }
         else if (option.compare(0, 4, "mem=") == 0) memory_mb = static_cast<unsigned>(std::atoi(option.c_str() + 4));
         else if (option == "host") host = true;
         else if (option == "noskip") noskip = true;
@@ -170,6 +176,8 @@ int main(int argc, char **argv) {
 
     std::string error;
     auto machine = TownsMachine::create(config, error);
+    kairo::StartupTyper typer;
+    typer.start(commands);
     if (!machine) return fail("create: " + error);
     std::vector<int16_t> audio(4096 * 2);
     std::vector<double> window, all;
@@ -179,6 +187,7 @@ int main(int argc, char **argv) {
     for (int frame = 1; frame <= frames; ++frame) {
         const auto start = std::chrono::steady_clock::now();
         if (!machine->run_frame(error)) return fail("run: " + error);
+        if (!typer.frame(*machine, error)) return fail("type: " + error);
         const double ms = std::chrono::duration<double, std::milli>(std::chrono::steady_clock::now() - start).count();
         uint32_t got;
         while ((got = machine->read_audio(audio.data(), 4096)) > 0)
