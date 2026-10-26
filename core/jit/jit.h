@@ -83,8 +83,9 @@ public:
     // changed().
     struct Mark {
         uint64_t writes = 0, other_writes = 0;  // Memory::kairoWrites, kairoOtherWrites
-        // The segment registers whole: a change to any of their bytes counts.
-        i486DXCommon::SegmentRegister segments[6];
+        // The segment registers' base and limits, where what is watched may load one.
+        uint32_t segments[6][4] = {};
+        bool has_segments = false;
     };
     Mark mark() const;
     void after(const Mark &mark);

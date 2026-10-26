@@ -69,7 +69,7 @@ extern "C" uint32_t kairotowns_jit_materialize(Context *ctx, uint32_t kind, uint
 }
 
 // Watching what may write memory outside translated code (Jit::Mark).
-static Jit::Mark mark_of(const Context *ctx);
+static Jit::Mark mark_of(const Context *ctx, bool segments);
 static void account(Context *ctx, const Jit::Mark &m);
 
 extern "C" uint32_t kairotowns_jit_io(Context *ctx, uint32_t what, uint32_t port, uint32_t value, uint32_t clocks_before,
@@ -80,7 +80,7 @@ extern "C" uint32_t kairotowns_jit_io(Context *ctx, uint32_t what, uint32_t port
     ctx->host->advance(ctx->host->owner, clocks_before - ctx->advanced);
     ctx->advanced = clocks_before;
     const uint64_t effects = *ctx->side_effects;
-    const Jit::Mark mark = mark_of(ctx);
+    const Jit::Mark mark = mark_of(ctx, false);
     const uint32_t bytes = (what >> 8) & 0xFF, length = what >> 16;
     if (what & 1) {
         if (bytes == 1) cpu.IOOut8(io, port, value & 0xFF);
@@ -167,14 +167,23 @@ extern "C" int32_t kairotowns_jit_poll(Context *ctx, uint32_t clocks, uint32_t i
 // Counts the instruction at CS:EIP by opcode, with KAIROTOWNS_JIT_STATS set.
 static void count_interpreted(Context *ctx);
 
-// What a Jit::Mark holds, as the CPU and memory are now.
-static Jit::Mark mark_of(const Context *ctx) {
+// What a Jit::Mark holds, as the CPU and memory are now; the segment registers only where what
+// it watches may load one (not I/O).
+static Jit::Mark mark_of(const Context *ctx, bool segments = true) {
     const auto &st = ctx->cpu->state;
     Jit::Mark m;
     m.writes = *ctx->writes;
     m.other_writes = *ctx->other_writes;
-    static_assert(sizeof m.segments == sizeof st.sreg, "a mark holds the segment registers whole");
-    std::memcpy(m.segments, st.sreg, sizeof m.segments);
+    m.has_segments = segments;
+    if (segments) {
+        for (int s = 0; s < 6; ++s) {
+            const auto &seg = st.sreg[s];
+            m.segments[s][0] = seg.baseLinearAddr;
+            m.segments[s][1] = seg.minLimit;
+            m.segments[s][2] = seg.maxLimit;
+            m.segments[s][3] = seg.minLimitAdjust;
+        }
+    }
     return m;
 }
 // What changed since the mark, for blocks' checks: stores into main RAM count in their lines
@@ -189,7 +198,15 @@ static void account(Context *ctx, const Jit::Mark &m) {
         ++ctx->steps_interpret;
     }
     if (*ctx->other_writes != m.other_writes) ++ctx->other_generation;
-    if (std::memcmp(m.segments, st.sreg, sizeof m.segments) != 0) ++ctx->segment_generation;
+    if (!m.has_segments) return;
+    for (int s = 0; s < 6; ++s) {
+        const auto &seg = st.sreg[s];
+        if (m.segments[s][0] != seg.baseLinearAddr || m.segments[s][1] != seg.minLimit ||
+            m.segments[s][2] != seg.maxLimit || m.segments[s][3] != seg.minLimitAdjust) {
+            ++ctx->segment_generation;
+            return;
+        }
+    }
 }
 
 extern "C" uint32_t kairotowns_jit_interpret(Context *ctx, uint32_t clocks_before, uint32_t eip, uint32_t next_eip,
@@ -438,6 +455,12 @@ struct Jit::Impl {
         }
         if (FILE *f = std::fopen((name + ".x86").c_str(), "wb")) {
             std::fwrite(guest, 1, guest_bytes, f);
+            std::fclose(f);
+        }
+        // Where each translation is in the code buffer, to read a profile of it by: host address,
+        // bytes, file.
+        if (FILE *f = std::fopen((std::string(dump) + "/map.txt").c_str(), "a")) {
+            std::fprintf(f, "%llx %zu %s\n", (unsigned long long) reinterpret_cast<uintptr_t>(host), bytes, name.c_str());
             std::fclose(f);
         }
     }
