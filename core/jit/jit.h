@@ -54,6 +54,9 @@ public:
         bool keep_hold_irq = false;
         // Whether the interpreter runs the next instruction (translated code may not).
         bool interpret_next = true;
+        // Whether the machine did what follows the run already: it ended where translated code
+        // did the polling (Host::poll) or went on after the wait-loop skip (Host::go_on).
+        bool ended = false;
     };
     // Runs translated code from CS:EIP. clock_limit is the most clocks the instructions run before
     // an instruction may have taken for the interpreter's loop to start it.
@@ -65,13 +68,31 @@ public:
         uint64_t links = 0, mismatches = 0, tlb_flushes = 0;
         // Host time spent translating, and translated code's bytes.
         uint64_t translate_ns = 0, code_bytes = 0;
+        // Blocks the dispatch in translated code found through the dispatcher.
+        uint64_t found = 0;
         // Runs by what ended them (ExitWhy, context.h).
         uint64_t exits[WHY_COUNT] = {};
     };
     const Stats &stats() const;
 
-private:
+    // Blocks check their code and the segment registers they take as constants only where they
+    // may have changed (Translator prologue()). Stores into main RAM count by line, translated
+    // or not (Memory::kairoLines); whatever else may write memory or load a segment register
+    // between runs (an instruction the interpreter runs, an interrupt taken, the devices) is
+    // watched: a Mark before it, and after() once it is done. Anything else the machine does,
+    // changed().
+    struct Mark {
+        uint64_t writes = 0, other_writes = 0;  // Memory::kairoWrites, kairoOtherWrites
+        // The segment registers whole: a change to any of their bytes counts.
+        i486DXCommon::SegmentRegister segments[6];
+    };
+    Mark mark() const;
+    void after(const Mark &mark);
+    void changed();
+
     struct Impl;
+
+private:
     std::unique_ptr<Impl> impl_;
 };
 

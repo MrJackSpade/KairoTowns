@@ -4229,6 +4229,7 @@ inline void i486DXFidelityLayer<FIDELITY>::StoreByte(Memory &mem,int addressSize
 	   // nullptr!=state.SSESPWindow.ptr &&
 	   true==state.SSESPWindow.IsLinearAddressInRange(linearAddr))
 	{
+		mem.KairoWritten(state.SSESPWindow.ptr+(linearAddr&(MemoryAccess::MEMORY_WINDOW_SIZE-1)),1); // KairoTowns: Memory counts its own.
 		state.SSESPWindow.ptr[linearAddr&(MemoryAccess::MEMORY_WINDOW_SIZE-1)]=byteData;
 		return;
 	}
@@ -4261,6 +4262,7 @@ inline void i486DXFidelityLayer<FIDELITY>::StoreWord(Memory &mem,int addressSize
 		unsigned int low12bits=(linearAddr&(MemoryAccess::MEMORY_WINDOW_SIZE-1));
 		if(low12bits<=MemoryAccess::MEMORY_WINDOW_SIZE-2)
 		{
+			mem.KairoWritten(state.SSESPWindow.ptr+low12bits,2); // KairoTowns: Memory counts its own.
 			cpputil::PutWord(state.SSESPWindow.ptr+low12bits,data);
 			return;
 		}
@@ -4299,6 +4301,7 @@ inline void i486DXFidelityLayer<FIDELITY>::StoreDword(Memory &mem,int addressSiz
 		unsigned int low12bits=(linearAddr&(MemoryAccess::MEMORY_WINDOW_SIZE-1));
 		if(low12bits<=MemoryAccess::MEMORY_WINDOW_SIZE-4)
 		{
+			mem.KairoWritten(state.SSESPWindow.ptr+low12bits,4); // KairoTowns: Memory counts its own.
 			cpputil::PutDword(state.SSESPWindow.ptr+low12bits,data);
 			return;
 		}

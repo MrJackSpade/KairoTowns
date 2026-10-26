@@ -206,6 +206,112 @@ struct TownsMachine::Impl {
         return (t.pic.state.IRR0_OR_IRR1_Cache != 0 && t.CPU().GetIF()) || t.GetStopFlags() != 0 ||
                t.state.nextFastDevicePollingTime != static_cast<Impl *>(owner)->run_polling;
     }
+
+    // Where the machine's loop is when a run of translated code that did the polling itself
+    // ends (host_poll): past the polling, or before the next instruction.
+    enum class Polled { No, PastPolling, AtInstruction };
+    Polled polled = Polled::No;
+
+    // The most clocks translated code may run for from now: the interpreter's loop starts an
+    // instruction while guest time has not passed the next fast device polling; after c more
+    // clocks the time is townsTime + (clockBalance + 1000c) / FREQ, so c may be at most
+    // ((polling - townsTime + 1) * FREQ - clockBalance - 1) / 1000. -1 where the interpreter runs
+    // the next instruction: an interrupt the PIC would fire after it is the interpreter's.
+    int32_t translated_room() {
+        auto &t = *towns;
+        if (t.pic.state.IRR0_OR_IRR1_Cache != 0 && t.CPU().GetIF()) return -1;
+        const int64_t room = (int64_t(t.state.nextFastDevicePollingTime - t.state.townsTime) + 1) *
+                                 int64_t(t.state.currentFreq) - int64_t(t.state.clockBalance) - 1;
+        if (room < 0) return -1;
+        run_polling = t.state.nextFastDevicePollingTime;
+        return int32_t(std::min<int64_t>(room / 1000, 1 << 20));
+    }
+    // What the interpreter's loop does after an instruction, for the last of a run of translated
+    // code.
+    void end_run(uint32_t last_eip, bool keep_hold_irq) {
+        auto &t = *towns;
+        auto &cpu = t.CPU();
+        // Each instruction the interpreter runs clears it first; the last may have set it again.
+        if (!keep_hold_irq) cpu.state.holdIRQ = false;
+        wait_loop.ran_to(cpu.state.CS().value, last_eip);
+        process_irq();
+    }
+    // Takes an interrupt the PIC fires, as the interpreter's loop does after each instruction.
+    void process_irq() {
+        auto &t = *towns;
+        // It takes one only where TownsPIC::ProcessIRQ would.
+        auto &cpu = t.CPU();
+        if (!jit || t.pic.state.IRR0_OR_IRR1_Cache == 0 || !cpu.GetIF() || cpu.state.holdIRQ)
+            return t.pic.ProcessIRQ(cpu, t.mem);
+        const auto mark = jit->mark();
+        t.pic.ProcessIRQ(t.CPU(), t.mem);
+        jit->after(mark);
+    }
+    // Runs the instruction at CS:EIP in the interpreter.
+    uint32_t run_one_instruction() {
+        auto &t = *towns;
+        if (!jit) return t.RunOneInstruction();
+        const auto mark = jit->mark();
+        const uint32_t ran = t.RunOneInstruction();
+        jit->after(mark);
+        return ran;
+    }
+    // The fast device polling, when the CPU has run to it.
+    void fast_polling() {
+        auto &t = *towns;
+        if (!jit) {
+            t.RunScheduledTasks();
+            t.RunFastDevicePolling();
+            return;
+        }
+        const auto mark = jit->mark();
+        t.RunScheduledTasks();
+        t.RunFastDevicePolling();
+        jit->after(mark);
+    }
+    // Whether the machine's loop starts another instruction before the polling.
+    bool cpu_runs() const {
+        const auto &t = *towns;
+        return t.state.townsTime <= t.state.nextFastDevicePollingTime && 0 == t.GetStopFlags();
+    }
+    // Before the loop starts an instruction, after `instructions` and `clocks` more than counted.
+    void before_instruction(uint64_t instructions, uint64_t clocks) {
+        auto &t = *towns;
+        if (sample_pcs && profile.instructions % kPcSampleInterval == 0)
+            ++profile.pcs[uint64_t(t.CPU().state.CS().value) << 32 | t.CPU().state.EIP];
+        if (skip_wait_loops)
+            wait_loop.before_instruction(t, profile.instructions + instructions, clocks + this->clocks,
+                                         t.state.nextFastDevicePollingTime);
+    }
+
+    // The run of translated code reached the polling having run instructions and clocks, the last
+    // at last_eip: what the machine's loop does from there to its next instruction (run_step).
+    // Returns the clocks the run may go on for, or -1 where it ends.
+    static int32_t host_poll(void *owner, uint32_t instructions, uint32_t clocks, uint32_t last_eip,
+                             bool keep_hold_irq) {
+        auto &impl = *static_cast<Impl *>(owner);
+        auto &t = *impl.towns;
+        impl.end_run(last_eip, keep_hold_irq);
+        impl.polled = Polled::PastPolling;
+        impl.fast_polling();
+        if (t.CheckAbort()) return -1;
+        impl.check_render();
+        if (t.state.townsTime >= t.var.nextTimeSync) return -1;
+        if (t.pic.state.IRR0_OR_IRR1_Cache != 0) impl.wait_loop.restart();
+        if (!impl.cpu_runs()) return -1;
+        impl.polled = Polled::AtInstruction;
+        impl.before_instruction(instructions, clocks);
+        return impl.translated_room();
+    }
+    // The wait-loop skip moved guest time at a jump back to the instruction at the CPU's EIP: the
+    // run ends there as the machine's loop would end it, and goes on for the clocks returned, or
+    // -1 where it ends.
+    static int32_t host_go_on(void *owner, bool keep_hold_irq) {
+        auto &impl = *static_cast<Impl *>(owner);
+        impl.end_run(impl.towns->CPU().state.EIP, keep_hold_irq);
+        impl.polled = Polled::AtInstruction;
+        return impl.translated_room();
+    }
     // Instructions and clocks before the running run of translated code, for host_jumped_back.
     uint64_t run_instructions = 0, run_clocks = 0;
     static bool host_jumped_back(void *owner, uint16_t cs, uint32_t jump_eip, uint32_t instructions, uint32_t clocks) {
@@ -225,6 +331,8 @@ struct TownsMachine::Impl {
         host.advance = &host_advance;
         host.must_stop = &host_must_stop;
         host.jumped_back = &host_jumped_back;
+        host.poll = &host_poll;
+        host.go_on = &host_go_on;
         return host;
     }
     // Traces for test tools (TownsMachine::trace_translated, trace_interpreted).
@@ -249,22 +357,21 @@ struct TownsMachine::Impl {
         return s;
     }
 
+    // What a run of translated code did, for the machine's loop.
+    enum class Translated {
+        No,           // the interpreter runs the next instruction
+        Ran,          // the loop goes on before the next instruction
+        PastPolling,  // the run did the fast device polling, and the loop goes on after it
+    };
     // Runs translated code from the CPU's CS:EIP when the interpreter's loop would run the same
-    // instructions; false when the interpreter runs the next one.
-    bool run_translated() {
+    // instructions.
+    Translated run_translated() {
         auto &t = *towns;
         auto &cpu = t.CPU();
-        // An interrupt the PIC would fire after the next instruction is the interpreter's.
-        if (t.pic.state.IRR0_OR_IRR1_Cache != 0 && cpu.GetIF()) return false;
-        // The loop starts an instruction while guest time has not passed the next fast device
-        // polling; after c more clocks the time is townsTime + (clockBalance + 1000c) / FREQ, so
-        // c may be at most ((polling - townsTime + 1) * FREQ - clockBalance - 1) / 1000.
-        const int64_t room = (int64_t(t.state.nextFastDevicePollingTime - t.state.townsTime) + 1) *
-                                 int64_t(t.state.currentFreq) - int64_t(t.state.clockBalance) - 1;
-        if (room < 0) return false;
-        const int32_t limit = int32_t(std::min<int64_t>(room / 1000, 1 << 20));
+        const int32_t limit = translated_room();
+        if (limit < 0) return Translated::No;
         const uint32_t start_eip = cpu.state.EIP;
-        run_polling = t.state.nextFastDevicePollingTime;
+        polled = Polled::No;
         run_instructions = profile.instructions;
         run_clocks = clocks;
         uint8_t start_code[32] = {};
@@ -277,25 +384,27 @@ struct TownsMachine::Impl {
         }
         const jit::Jit::Run ran = jit->run(limit);
         interpret_next = ran.interpret_next;
-        if (ran.instructions == 0) return false;
-        // I/O in the run added the clocks before it already.
+        if (ran.instructions == 0) {
+            if (polled != Polled::No) throw std::logic_error("a run of translated code polled without running");
+            return Translated::No;
+        }
+        // I/O and the polling in the run added the clocks before them already.
         advance(ran.clocks - ran.advanced);
         t.var.disassemblePointer.SEG = cpu.state.CS().value;
         t.var.disassemblePointer.OFFSET = cpu.state.EIP;
-        // Each instruction the interpreter runs clears it first; the last may have set it again.
-        if (!ran.keep_hold_irq) cpu.state.holdIRQ = false;
         profile.instructions += ran.instructions;
         profile.jit_instructions += ran.instructions;
         ++profile.jit_runs;
         clocks += ran.clocks;
-        wait_loop.ran_to(cpu.state.CS().value, ran.last_eip);
-        t.pic.ProcessIRQ(cpu, t.mem);
+        // Ended where it did what follows its last instruction itself (host_poll, host_go_on).
+        if (!ran.ended) end_run(ran.last_eip, ran.keep_hold_irq);
         if (translated_trace) {
             translated_trace->push_back(snapshot());
             translated_trace->back().start_eip = start_eip;
             std::memcpy(translated_trace->back().code, start_code, sizeof start_code);
         }
-        return true;
+        if (ran.ended && polled == Polled::No) throw std::logic_error("a run of translated code ended without the machine");
+        return ran.ended && polled == Polled::PastPolling ? Translated::PastPolling : Translated::Ran;
     }
 
     unsigned pad = 0;
@@ -512,13 +621,18 @@ bool TownsMachine::run_step(uint64_t &ran, std::string &error) {
             // Until the fast device polling only the CPU runs; after a polling, a skip goes on unless
             // an interrupt request is waiting (wait_loop.h), as ProcessIRQ would then act.
             if (towns.pic.state.IRR0_OR_IRR1_Cache != 0) impl_->wait_loop.restart();
-            while (towns.state.townsTime <= towns.state.nextFastDevicePollingTime && 0 == towns.GetStopFlags()) {
-                if (impl_->sample_pcs && impl_->profile.instructions % kPcSampleInterval == 0)
-                    ++impl_->profile.pcs[uint64_t(towns.CPU().state.CS().value) << 32 | towns.CPU().state.EIP];
-                if (impl_->skip_wait_loops)
-                    impl_->wait_loop.before_instruction(towns, impl_->profile.instructions, impl_->clocks,
-                                                        towns.state.nextFastDevicePollingTime);
-                if (impl_->jit && !impl_->interpret_next && impl_->run_translated()) continue;
+            // Translated code may do the polling itself (Impl::host_poll).
+            bool polled = false;
+            while (impl_->cpu_runs()) {
+                impl_->before_instruction(0, 0);
+                if (impl_->jit && !impl_->interpret_next) {
+                    const auto ran = impl_->run_translated();
+                    if (ran == Impl::Translated::PastPolling) {
+                        polled = true;
+                        break;
+                    }
+                    if (ran == Impl::Translated::Ran) continue;
+                }
                 impl_->interpret_next = false;
                 ++impl_->profile.instructions;
                 if (impl_->count_ops) {
@@ -531,17 +645,17 @@ bool TownsMachine::run_step(uint64_t &ran, std::string &error) {
 #if defined(__x86_64__)
                     const uint64_t ticks = __rdtsc();
 #endif
-                    impl_->clocks += towns.RunOneInstruction();
+                    impl_->clocks += impl_->run_one_instruction();
                     const bool transfer = towns.CPU().state.EIP != next;
-                    towns.pic.ProcessIRQ(towns.CPU(), towns.mem);
+                    impl_->process_irq();
 #if defined(__x86_64__)
                     impl_->profile.op_ticks[key] += __rdtsc() - ticks;
 #endif
                     if (transfer) ++impl_->profile.transfers;
                     continue;
                 }
-                impl_->clocks += towns.RunOneInstruction();
-                towns.pic.ProcessIRQ(towns.CPU(), towns.mem);
+                impl_->clocks += impl_->run_one_instruction();
+                impl_->process_irq();
                 if (impl_->interpreted_trace) {
                     const auto &counts = *impl_->trace_counts;
                     while (impl_->trace_next < counts.size() && counts[impl_->trace_next] < impl_->profile.instructions)
@@ -550,17 +664,18 @@ bool TownsMachine::run_step(uint64_t &ran, std::string &error) {
                         impl_->interpreted_trace->push_back(impl_->snapshot());
                 }
             }
-            towns.RunScheduledTasks();
-            towns.RunFastDevicePolling();
+            if (!polled) impl_->fast_polling();
             if (towns.CheckAbort()) {
                 error = towns.vmAbortReason.empty() ? "The FM Towns stopped" : towns.vmAbortReason;
                 return false;
             }
-            impl_->check_render();
+            if (!polled) impl_->check_render();
         }
         const uint64_t step_end = towns.state.townsTime;
         const uint64_t step = step_end > step_start ? step_end - step_start : 0;
         ran = step;
+        // What sound, the app's own hooks and input write, translated code's checks watch.
+        const jit::Jit::Mark between = impl_->jit ? impl_->jit->mark() : jit::Jit::Mark();
         impl_->speaker.advance(step);
         const auto sound_start = std::chrono::steady_clock::now();
         towns.ProcessSound(&impl_->world);
@@ -576,6 +691,7 @@ bool TownsMachine::run_step(uint64_t &ran, std::string &error) {
             towns.fdc.SaveModifiedDiskImages();
             towns.physMem.state.memCard.SaveRawImageIfModified();
         }
+        if (impl_->jit) impl_->jit->after(between);
         if (towns.var.powerOff) {
             error = "The FM Towns turned itself off";
             return false;
@@ -632,12 +748,16 @@ void TownsMachine::mouse_button(int button, bool down) {
     if (button == 1 || button == 2) impl_->buttons[button - 1] = down;
 }
 
-void TownsMachine::reset() { impl_->towns->Reset(); }
+void TownsMachine::reset() {
+    impl_->towns->Reset();
+    if (impl_->jit) impl_->jit->changed();
+}
 
 bool TownsMachine::save_state(const std::string &file) { return impl_->towns->SaveState(file); }
 
 bool TownsMachine::load_state(const std::string &file) {
     if (!impl_->towns->LoadState(file)) return false;
+    if (impl_->jit) impl_->jit->changed();
     impl_->speaker.restart();
     return true;
 }

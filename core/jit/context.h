@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <climits>
 #include <cstddef>
 #include <cstdint>
 
@@ -25,11 +26,12 @@ enum ExitWhy : uint32_t {
     WHY_POPF,           // after POPF
     WHY_INTERPRETED,    // after an instruction the interpreter ran inside the run
     WHY_DISPATCH,       // a jump the dispatch in translated code found no block for
+    WHY_POLLED,         // the fast device polling, done from translated code, ended it
     WHY_COUNT
 };
 inline const char *exit_why_name(uint32_t why) {
     static const char *names[WHY_COUNT] = {"interpret", "dynamic", "backward", "elsewhere", "limit", "entry", "link", "io", "popf",
-                                           "interpreted", "dispatch"};
+                                           "interpreted", "dispatch", "polled"};
     return why < WHY_COUNT ? names[why] : "?";
 }
 
@@ -83,8 +85,23 @@ extern "C" uint32_t kairotowns_jit_interpret(Context *ctx, uint32_t clocks_befor
                                              uint32_t mode);
 
 // A jump back from the instruction at jump_eip, with instructions and clocks run so far: guest
-// time brought up to it, and Host::jumped_back asked. Non-zero when the run must end (jit.cpp).
-extern "C" uint32_t kairotowns_jit_jumped_back(Context *ctx, uint32_t clocks_before, uint32_t instructions, uint32_t jump_eip);
+// time brought up to it, and Host::jumped_back asked. Where the wait-loop skip moved guest time,
+// the run goes on with a new clock limit (Host::go_on). Returns what the limit moved by, or
+// kStopRun when the run must end (jit.cpp).
+extern "C" int32_t kairotowns_jit_jumped_back(Context *ctx, uint32_t clocks_before, uint32_t instructions, uint32_t jump_eip);
+
+// The clock limit ran out before the instruction at next_eip, with instructions and clocks run
+// so far, the last at last_eip: the fast device polling and what the machine's loop does around
+// it (Host::poll), with the CPU state in the CPU. Returns what the limit moved by, or kStopRun
+// when the run must end (jit.cpp).
+extern "C" int32_t kairotowns_jit_poll(Context *ctx, uint32_t clocks, uint32_t instructions, uint32_t last_eip,
+                                       uint32_t next_eip, uint32_t mode);
+constexpr int32_t kStopRun = INT32_MIN;
+
+// The block for the code at the CPU's CS:eip, found or translated as at a run's start, for the
+// dispatch in translated code; null where the run must end there (no block, or translating
+// dropped every block).
+extern "C" const void *kairotowns_jit_find(Context *ctx, uint32_t eip);
 
 // The machine around the CPU, for I/O in translated code: guest time and the devices are its.
 struct Host {
@@ -99,6 +116,15 @@ struct Host {
     // interpreter's loop does before that instruction (the wait-loop skip, wait_loop.h). True when
     // it moved guest time on, which ends the run.
     bool (*jumped_back)(void *owner, uint16_t cs, uint32_t jump_eip, uint32_t instructions, uint32_t clocks) = nullptr;
+    // The run reached the next fast device polling, with instructions and clocks more run since it
+    // started, the last at last_eip: what the machine's loop does after that instruction, the
+    // polling, and what it does before the next instruction. The clocks the run may go on for
+    // from there, or -1 where it ends; either way the machine did what follows the run.
+    int32_t (*poll)(void *owner, uint32_t instructions, uint32_t clocks, uint32_t last_eip, bool keep_hold_irq) = nullptr;
+    // jumped_back moved guest time: what the machine's loop does after the instruction before the
+    // CPU's EIP, and before it. The clocks the run may go on for, or -1 where it ends; either way
+    // the machine did what follows the run.
+    int32_t (*go_on)(void *owner, bool keep_hold_irq) = nullptr;
 };
 
 // Where main RAM is for a guest linear page, as the page-table cache and Memory's slots put it
@@ -121,6 +147,14 @@ struct DispatchEntry {
 };
 constexpr uint32_t kDispatchBits = 12;
 
+constexpr uint32_t kCodeLineShift = 8;
+
+// What a block's code check last saw (Translator prologue()): Context::code_generation, the sum
+// of the counts of the lines its code is on, and Context::segment_generation.
+struct Stamp {
+    uint64_t generation = 0, written = 0, segments = 0;
+};
+
 // The context a block runs with; x19 holds it while translated code runs. Translated code reads
 // and writes it at offsetof() offsets.
 struct Context {
@@ -130,6 +164,8 @@ struct Context {
     const MemoryAccess *main_ram = nullptr;
     uint8_t *ram = nullptr;
     uint64_t *side_effects = nullptr;
+    const uint64_t *writes = nullptr;        // Memory::kairoWrites
+    const uint64_t *other_writes = nullptr;  // Memory::kairoOtherWrites
     const bool *parity = nullptr;
     i486DXCommon::PageTableCache *page_cache = nullptr;
     MemoryAccess::MemoryWindow *stack_window = nullptr;
@@ -139,6 +175,8 @@ struct Context {
     void *io_helper = nullptr;
     void *interpret_helper = nullptr;
     void *jumped_back_helper = nullptr;
+    void *poll_helper = nullptr;
+    void *find_helper = nullptr;
     // The routines blocks share (Translator::emit_stub), entered with blr and the record of the
     // place they are called from after the call.
     void *exit_stub = nullptr;
@@ -146,6 +184,7 @@ struct Context {
     void *jumped_back_stub = nullptr;
     void *link_stub = nullptr;
     void *compare_stub = nullptr;
+    void *poll_stub = nullptr;
     void *tlb_miss_flat = nullptr;
     void *tlb_miss_paged = nullptr;
     Memory *io_memory = nullptr;  // the machine's Memory, for the interpreter
@@ -156,10 +195,20 @@ struct Context {
     const Host *host = nullptr;
     TlbEntry *tlb = nullptr;
     DispatchEntry *dispatch_table = nullptr;
-    // Steps whenever memory may have changed by anything but translated code's checked stores,
-    // and at every store translated code makes: a block whose code check saw this generation
-    // need not check its code again (Translator prologue()).
+    // Steps whenever main RAM may have changed by anything but translated code's stores, which
+    // count in code_lines instead: a block whose code is in main RAM and whose code check saw this
+    // generation, and the counts of the lines its code is on as they are, need not check its code
+    // again (Translator prologue()).
     uint64_t code_generation = 1;
+    // Steps whenever any memory may have changed: a block whose code is elsewhere checks it again.
+    uint64_t other_generation = 1;
+    // Translated code's stores into main RAM, by line of 1 << kCodeLineShift bytes: the line of a
+    // store's first byte counts it.
+    uint64_t *code_lines = nullptr;
+    uint64_t code_line_count = 0;
+    // Steps whenever a segment register may have changed: a block specialized on them checks
+    // them again.
+    uint64_t segment_generation = 1;
     void *dispatch = nullptr;  // Translator::emit_dispatch's code
     const MemoryAccess::ConstMemoryWindow *code_window = nullptr;
     // The TLB's generation << 20; translated code keeps it in host::TLB_TAG.
@@ -188,6 +237,16 @@ struct Context {
     uint32_t keep_hold_irq = 0;
     uint32_t spill_eip = 0;
     uint64_t spill_record = 0;
+    // Code checks at block entries (KAIROTOWNS_JIT_STATS): for the code generation, and for the
+    // lines the code is on.
+    uint64_t checks_generation = 0, checks_lines = 0, checks_other = 0;
+    // Steps of the code generation: translated stores outside main RAM, and stores Memory could
+    // not place in main RAM's lines (Jit::after()).
+    uint64_t steps_store = 0, steps_interpret = 0;
+    // The lazily kept flags across the polling (Stub::Poll): FLAG_A, FLAG_B, FLAG_R and FLAGS.
+    uint32_t spill_flags[4] = {};
+    // Whether the machine did what follows the run already (Host::poll, Host::go_on).
+    uint32_t ended = 0;
 
     // Written by the exit of a block.
     uint32_t instructions = 0;  // run

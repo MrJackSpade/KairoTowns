@@ -282,6 +282,50 @@ public:
 	*/
 	mutable uint64_t sideEffects=0;
 
+	/*! KairoTowns: where memory is written, for the JIT (core/jit), which checks translated
+	    code only where it may have changed. Main RAM's bytes (kairoRAM, the main RAM object's
+	    state, indexed by physical address) count every store into them in kairoLines, by line of
+	    1<<KAIRO_LINE_SHIFT bytes: the line of a store's first byte, and every line of a longer
+	    push. A store the CPU makes through a window or pointer elsewhere counts in kairoWrites,
+	    and a store Memory makes into any other object in kairoOtherWrites. The JIT sets
+	    kairoRAM, kairoRAMBytes and kairoLines; without it, every store counts in kairoWrites or
+	    kairoOtherWrites.
+	*/
+	enum
+	{
+		KAIRO_LINE_SHIFT=8
+	};
+	const unsigned char *kairoRAM=nullptr;
+	uint64_t kairoRAMBytes=0;
+	uint64_t *kairoLines=nullptr;
+	uint64_t kairoWrites=0,kairoOtherWrites=0;
+	inline void KairoWrittenRAM(unsigned int physAddr)
+	{
+		if(nullptr!=kairoLines && physAddr<kairoRAMBytes)
+		{
+			++kairoLines[physAddr>>KAIRO_LINE_SHIFT];
+		}
+		else
+		{
+			++kairoWrites;
+		}
+	}
+	inline void KairoWritten(const unsigned char *at,unsigned int bytes)
+	{
+		const uint64_t offset=uint64_t(reinterpret_cast<uintptr_t>(at)-reinterpret_cast<uintptr_t>(kairoRAM));
+		if(nullptr!=kairoLines && offset<kairoRAMBytes && offset+bytes<=kairoRAMBytes)
+		{
+			for(uint64_t line=offset>>KAIRO_LINE_SHIFT; line<=((offset+bytes-1)>>KAIRO_LINE_SHIFT); ++line)
+			{
+				++kairoLines[line];
+			}
+		}
+		else
+		{
+			++kairoWrites;
+		}
+	}
+
 	/*! KairoTowns: counts changes to which memory-access object serves which 4KB slot, for the
 	    JIT (core/jit), which keeps where main RAM is per page.
 	*/
@@ -373,6 +417,14 @@ public:
 	{
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];
 		++sideEffects;
+		if(true==memAccess->readWithoutSideEffect)
+		{
+			KairoWrittenRAM(physAddr);
+		}
+		else
+		{
+			++kairoOtherWrites;
+		}
 		memAccess->StoreByte(physAddr,data);
 	}
 
@@ -387,6 +439,14 @@ public:
 	{
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];
 		++sideEffects;
+		if(true==memAccess->readWithoutSideEffect)
+		{
+			KairoWrittenRAM(physAddr);
+		}
+		else
+		{
+			++kairoOtherWrites;
+		}
 		memAccess->StoreByteDMA(physAddr,data);
 	}
 
@@ -394,6 +454,14 @@ public:
 	{
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];
 		++sideEffects;
+		if(true==memAccess->readWithoutSideEffect)
+		{
+			KairoWrittenRAM(physAddr);
+		}
+		else
+		{
+			++kairoOtherWrites;
+		}
 		memAccess->StoreWord(physAddr,data);
 	}
 
@@ -401,6 +469,14 @@ public:
 	{
 		auto memAccess=memAccessPtr[physAddr>>GRANURALITY_SHIFT];
 		++sideEffects;
+		if(true==memAccess->readWithoutSideEffect)
+		{
+			KairoWrittenRAM(physAddr);
+		}
+		else
+		{
+			++kairoOtherWrites;
+		}
 		memAccess->StoreDword(physAddr,data);
 	}
 };

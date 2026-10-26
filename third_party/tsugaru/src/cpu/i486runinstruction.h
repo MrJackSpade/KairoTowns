@@ -939,6 +939,10 @@ void i486DXCommon::FetchOperandLoop(CPUCLASS &cpu,InstructionAndOperand &instOp,
 			auto memWin=mem.GetMemoryWindow(physAddr); \
 			if(nullptr!=memWin.ptr) \
 			{ \
+				if(true==forWrite) /* KairoTowns: at most 4 bytes, from here. */ \
+				{ \
+					mem.KairoWritten(memWin.ptr+low12bit,1); \
+				} \
 				return memWin.ptr+low12bit; \
 			} \
 		}

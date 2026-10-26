@@ -68,6 +68,10 @@ extern "C" uint32_t kairotowns_jit_materialize(Context *ctx, uint32_t kind, uint
     return cpu.state.EFLAGS;
 }
 
+// Watching what may write memory outside translated code (Jit::Mark).
+static Jit::Mark mark_of(const Context *ctx);
+static void account(Context *ctx, const Jit::Mark &m);
+
 extern "C" uint32_t kairotowns_jit_io(Context *ctx, uint32_t what, uint32_t port, uint32_t value, uint32_t clocks_before,
                                       uint32_t next_eip) {
     i486DXCommon &cpu = *ctx->cpu;
@@ -76,6 +80,7 @@ extern "C" uint32_t kairotowns_jit_io(Context *ctx, uint32_t what, uint32_t port
     ctx->host->advance(ctx->host->owner, clocks_before - ctx->advanced);
     ctx->advanced = clocks_before;
     const uint64_t effects = *ctx->side_effects;
+    const Jit::Mark mark = mark_of(ctx);
     const uint32_t bytes = (what >> 8) & 0xFF, length = what >> 16;
     if (what & 1) {
         if (bytes == 1) cpu.IOOut8(io, port, value & 0xFF);
@@ -92,20 +97,14 @@ extern "C" uint32_t kairotowns_jit_io(Context *ctx, uint32_t what, uint32_t port
         if (!cpu.state.exception) cpu.SetEAX(read);
     }
     cpu.state.EIP += length;
-    // A device may have remapped or written memory.
+    // A device may have remapped or written memory; one that wrote it also ends the run.
     ctx->refresh_tlb(ctx->jit);
-    ++ctx->code_generation;
+    account(ctx, mark);
     // The run goes on only where nothing it relies on changed: the device did not move EIP (a
     // reset), write memory (code included), raise a fault, or give the interpreter's loop a
     // reason to stop.
     return cpu.state.EIP != next_eip || *ctx->side_effects != effects || cpu.state.exception ||
            ctx->host->must_stop(ctx->host->owner);
-}
-
-extern "C" uint32_t kairotowns_jit_jumped_back(Context *ctx, uint32_t clocks_before, uint32_t instructions, uint32_t jump_eip) {
-    ctx->host->advance(ctx->host->owner, clocks_before - ctx->advanced);
-    ctx->advanced = clocks_before;
-    return ctx->host->jumped_back(ctx->host->owner, ctx->cpu->state.CS().value, jump_eip, instructions, clocks_before);
 }
 
 // The modes translated code depends on, as the CPU is now.
@@ -119,18 +118,94 @@ Mode mode_of(const i486DXCommon &cpu) {
     return mode;
 }
 
+// Where a run that has taken clocks goes on for room more: what its clock limit moves by.
+static int32_t go_on_for(Context *ctx, uint32_t clocks, int32_t room) {
+    const int64_t moved = int64_t(clocks) + room - ctx->clock_limit;
+    if (moved <= int64_t(kStopRun) || moved > INT32_MAX || int64_t(ctx->clock_limit) + moved > INT32_MAX)
+        throw std::logic_error("a run's clock limit out of range");
+    ctx->clock_limit += int32_t(moved);
+    return int32_t(moved);
+}
+
+extern "C" int32_t kairotowns_jit_jumped_back(Context *ctx, uint32_t clocks_before, uint32_t instructions, uint32_t jump_eip) {
+    i486DXCommon &cpu = *ctx->cpu;
+    ctx->host->advance(ctx->host->owner, clocks_before - ctx->advanced);
+    ctx->advanced = clocks_before;
+    if (!ctx->host->jumped_back(ctx->host->owner, cpu.state.CS().value, jump_eip, instructions, clocks_before)) return 0;
+    // Guest time moved: the run ends as the machine's loop ends one, and goes on as it starts one.
+    const uint32_t eip = cpu.state.EIP;
+    const uint16_t cs = cpu.state.CS().value;
+    const int32_t room = ctx->host->go_on(ctx->host->owner, ctx->keep_hold_irq != 0);
+    ctx->ended = 1;
+    if (room < 0 || cpu.state.EIP != eip || cpu.state.CS().value != cs || cpu.state.exception) return kStopRun;
+    ctx->ended = 0;
+    return go_on_for(ctx, clocks_before, room);
+}
+
+extern "C" int32_t kairotowns_jit_poll(Context *ctx, uint32_t clocks, uint32_t instructions, uint32_t last_eip,
+                                       uint32_t next_eip, uint32_t mode) {
+    auto &cpu = *ctx->cpu;
+    ctx->host->advance(ctx->host->owner, clocks - ctx->advanced);
+    ctx->advanced = clocks;
+    const uint16_t cs = cpu.state.CS().value;
+    const uint32_t cs_base = cpu.state.CS().baseLinearAddr;
+    const uint64_t effects = *ctx->side_effects;
+    const int32_t room = ctx->host->poll(ctx->host->owner, instructions, clocks, last_eip, ctx->keep_hold_irq != 0);
+    ctx->ended = 1;
+    // Devices may have remapped memory. One that wrote it ends the run, and the next run starts
+    // with the code generation stepped.
+    ctx->refresh_tlb(ctx->jit);
+    // The run goes on only where nothing it relies on changed: no interrupt was taken, nothing
+    // wrote memory (its own code among it), and the CPU's modes are as they were.
+    if (room < 0 || cpu.state.EIP != next_eip || cpu.state.CS().value != cs || cpu.state.CS().baseLinearAddr != cs_base ||
+        mode_of(cpu).key() != mode || cpu.state.exception || cpu.state.halt || *ctx->side_effects != effects)
+        return kStopRun;
+    ctx->ended = 0;
+    return go_on_for(ctx, clocks, room);
+}
+
+// Counts the instruction at CS:EIP by opcode, with KAIROTOWNS_JIT_STATS set.
+static void count_interpreted(Context *ctx);
+
+// What a Jit::Mark holds, as the CPU and memory are now.
+static Jit::Mark mark_of(const Context *ctx) {
+    const auto &st = ctx->cpu->state;
+    Jit::Mark m;
+    m.writes = *ctx->writes;
+    m.other_writes = *ctx->other_writes;
+    static_assert(sizeof m.segments == sizeof st.sreg, "a mark holds the segment registers whole");
+    std::memcpy(m.segments, st.sreg, sizeof m.segments);
+    return m;
+}
+// What changed since the mark, for blocks' checks: stores into main RAM count in their lines
+// as they are made (Memory::kairoLines); one Memory could not place steps the code generation,
+// and one into any other object the other generation; a segment register loaded steps the
+// segment generation.
+static void account(Context *ctx, const Jit::Mark &m) {
+    const auto &st = ctx->cpu->state;
+    if (*ctx->writes != m.writes) {
+        ++ctx->code_generation;
+        ++ctx->other_generation;
+        ++ctx->steps_interpret;
+    }
+    if (*ctx->other_writes != m.other_writes) ++ctx->other_generation;
+    if (std::memcmp(m.segments, st.sreg, sizeof m.segments) != 0) ++ctx->segment_generation;
+}
+
 extern "C" uint32_t kairotowns_jit_interpret(Context *ctx, uint32_t clocks_before, uint32_t eip, uint32_t next_eip,
                                              uint32_t mode) {
     auto &cpu = static_cast<i486DXDefaultFidelity &>(*ctx->cpu);
+    count_interpreted(ctx);
     ctx->host->advance(ctx->host->owner, clocks_before - ctx->advanced);
     ctx->advanced = clocks_before;
     const uint16_t cs = cpu.state.CS().value;
     const uint32_t cs_base = cpu.state.CS().baseLinearAddr;
+    const Jit::Mark mark = mark_of(ctx);
     const uint32_t clocks = cpu.RunOneInstruction(*ctx->io_memory, *ctx->io);
     if (clocks >= 0x80000000u) throw std::logic_error("an instruction took more clocks than a run counts");
-    // Page tables or memory slots may have changed, and memory.
+    // Page tables or memory slots may have changed.
     ctx->refresh_tlb(ctx->jit);
-    ++ctx->code_generation;
+    account(ctx, mark);
     const bool stop = cpu.state.EIP != next_eip || cpu.state.CS().value != cs || cpu.state.CS().baseLinearAddr != cs_base ||
                       mode_of(cpu).key() != mode || cpu.state.exception || cpu.state.halt || cpu.state.holdIRQ ||
                       ctx->host->must_stop(ctx->host->owner);
@@ -180,6 +255,9 @@ struct Jit::Impl {
     Translator translator;
     Assembler assembler;
     Stats stats;
+    // Instructions the interpreter ran inside runs, by opcode (KAIROTOWNS_JIT_STATS).
+    const bool counting = std::getenv("KAIROTOWNS_JIT_STATS") != nullptr;
+    std::unordered_map<uint32_t, uint64_t> interpreted_ops;
 
     uint8_t *buffer = nullptr;
     size_t used = 0, trampolines = 0, installed_bytes = 0;
@@ -191,7 +269,9 @@ struct Jit::Impl {
     std::vector<Block *> table = std::vector<Block *>(kTableSize);
     // Where each block keeps the code generation its code check last saw; a deque keeps them
     // where they are as it grows.
-    std::deque<uint64_t> stamps;
+    std::deque<Stamp> stamps;
+    // Translated code's stores into main RAM by line (Context::code_lines).
+    std::vector<uint64_t> code_lines;
     // What the dispatch in translated code finds (Translator::emit_dispatch).
     std::vector<DispatchEntry> dispatch_table = std::vector<DispatchEntry>(size_t(1) << kDispatchBits);
     void *dispatch = nullptr;
@@ -216,8 +296,10 @@ struct Jit::Impl {
         ctx.state = &st;
         ctx.access = mem.KairoAccessTable();
         ctx.main_ram = main_ram;
-        ctx.ram = ram.data();
+        set_ram();
         ctx.side_effects = &mem.sideEffects;
+        ctx.writes = &mem.kairoWrites;
+        ctx.other_writes = &mem.kairoOtherWrites;
         ctx.parity = i486DXCommon::ParityTable;
         ctx.page_cache = st.pageTableCache;
         ctx.stack_window = &st.SSESPWindow;
@@ -238,12 +320,29 @@ struct Jit::Impl {
         ctx.jumped_back_stub = stubs[size_t(Translator::Stub::JumpedBack)];
         ctx.link_stub = stubs[size_t(Translator::Stub::Link)];
         ctx.compare_stub = stubs[size_t(Translator::Stub::Compare)];
+        ctx.poll_stub = stubs[size_t(Translator::Stub::Poll)];
+        ctx.poll_helper = reinterpret_cast<void *>(&kairotowns_jit_poll);
+        ctx.find_helper = reinterpret_cast<void *>(&kairotowns_jit_find);
         ctx.tlb_miss_flat = stubs[size_t(Translator::Stub::TlbMissFlat)];
         ctx.tlb_miss_paged = stubs[size_t(Translator::Stub::TlbMissPaged)];
         ctx.io_memory = &mem;
         ctx.irq_waiting = irq_waiting;
         ctx.jit = this;
         ctx.refresh_tlb = [](void *jit) { static_cast<Impl *>(jit)->refresh_tlb(); };
+    }
+
+    // Main RAM where it is now, and the counts of stores into it by line.
+    void set_ram() {
+        static_assert(kCodeLineShift == Memory::KAIRO_LINE_SHIFT, "Memory and the JIT count stores by the same lines");
+        ctx.ram = ram.data();
+        code_lines.resize((ram.size() >> kCodeLineShift) + 1);
+        ctx.code_lines = code_lines.data();
+        ctx.code_line_count = ram.size() >> kCodeLineShift;
+        translator.set_code_lines(ram.data(), ram.size(), code_lines.data());
+        // Main RAM's object stores RAM[physical address] (TownsMainRAMAccess).
+        mem.kairoRAM = ram.data();
+        mem.kairoRAMBytes = ram.size();
+        mem.kairoLines = code_lines.data();
     }
 
     // Drops the TLB when the page-table cache was invalidated, a slot of Memory changed hands,
@@ -259,7 +358,7 @@ struct Jit::Impl {
             tlb_generation = 1;
         }
         ctx.tlb_tag = tlb_generation << 20;
-        ctx.ram = ram.data();
+        set_ram();
         tlb_page_counter = st.pageTableCacheValidCounter;
         tlb_map_generation = mem.kairoMapGeneration;
         tlb_paging = cpu.PagingEnabled();
@@ -296,12 +395,29 @@ struct Jit::Impl {
     }
     ~Impl() {
         if (std::getenv("KAIROTOWNS_JIT_STATS")) {
-            std::fprintf(stderr, "jit: %llu runs, %llu instructions, %llu TLB flushes, %llu translations in %.1f ms, %llu bytes; runs ended by",
+            std::fprintf(stderr, "jit: %llu runs, %llu instructions, %llu TLB flushes, %llu translations in %.1f ms, %llu bytes, "
+                                 "%llu blocks found in a run; runs ended by",
                          (unsigned long long) stats.runs, (unsigned long long) stats.instructions,
                          (unsigned long long) stats.tlb_flushes, (unsigned long long) stats.translations,
-                         stats.translate_ns / 1e6, (unsigned long long) stats.code_bytes);
+                         stats.translate_ns / 1e6, (unsigned long long) stats.code_bytes, (unsigned long long) stats.found);
             for (uint32_t i = 0; i < WHY_COUNT; ++i)
                 std::fprintf(stderr, " %s %llu", exit_why_name(i), (unsigned long long) stats.exits[i]);
+            // Where the shared code is, to read a profile of the code buffer by.
+            std::fprintf(stderr, "\njit: code buffer at %p: enter +0 leave +%zx dispatch +%zx stubs", static_cast<void *>(buffer),
+                         static_cast<size_t>(static_cast<uint8_t *>(leave) - buffer),
+                         static_cast<size_t>(static_cast<uint8_t *>(dispatch) - buffer));
+            for (size_t i = 0; i < kStubs; ++i)
+                std::fprintf(stderr, " +%zx", static_cast<size_t>(static_cast<uint8_t *>(stubs[i]) - buffer));
+            std::fprintf(stderr, ", blocks from +%zx\n", trampolines);
+            std::fprintf(stderr, "jit: code checks %llu for the generation, %llu for lines written, %llu off main RAM; generation steps %llu by stores, %llu by interpreted instructions\n",
+                         (unsigned long long) ctx.checks_generation, (unsigned long long) ctx.checks_lines,
+                         (unsigned long long) ctx.checks_other,
+                         (unsigned long long) ctx.steps_store, (unsigned long long) ctx.steps_interpret);
+            std::vector<std::pair<uint32_t, uint64_t>> ops(interpreted_ops.begin(), interpreted_ops.end());
+            std::sort(ops.begin(), ops.end(), [](const auto &x, const auto &y) { return x.second > y.second; });
+            std::fprintf(stderr, "jit: interpreted in runs, by opcode (prefixed +10000):");
+            for (size_t i = 0; i < ops.size() && i < 24; ++i)
+                std::fprintf(stderr, " %x:%llu", ops[i].first, (unsigned long long) ops[i].second);
             std::fprintf(stderr, "\n");
         }
 #ifdef KAIROTOWNS_JIT_RUNS
@@ -326,7 +442,8 @@ struct Jit::Impl {
         }
     }
 
-    void *install() {
+    // entry: where the code is entered, in bytes from its start.
+    void *install(size_t entry = 0) {
         const size_t bytes = assembler.size();
         if (used + bytes > kCodeBytes) {
             assembler.clear();
@@ -339,7 +456,7 @@ struct Jit::Impl {
         __builtin___clear_cache(reinterpret_cast<char *>(at), reinterpret_cast<char *>(at + bytes));
         used += (bytes + 15) & ~size_t(15);
         assembler.clear();
-        return at;
+        return at + entry;
     }
     void flush() {
         blocks.clear();
@@ -374,7 +491,7 @@ struct Jit::Impl {
         block.eip = eip;
         block.mode = mode.key();
         block.generic = generic;
-        uint64_t *stamp = &stamps.emplace_back(0);
+        Stamp *stamp = &stamps.emplace_back();
         Translator::Result result = translator.translate(assembler, code, avail, eip, mode, stamp, !generic);
         ++stats.translations;
         if (result.instructions == 0) {
@@ -384,7 +501,7 @@ struct Jit::Impl {
             block.bytes = std::min<uint32_t>(avail, i486DXCommon::MAX_INSTRUCTION_LENGTH);
         } else {
             block.bytes = result.bytes;
-            block.entry = install();
+            block.entry = install(result.entry);
             if (!block.entry) {
                 flush();
                 block = Block();
@@ -392,15 +509,15 @@ struct Jit::Impl {
                 block.eip = eip;
                 block.mode = mode.key();
                 block.generic = generic;
-                stamp = &stamps.emplace_back(0);
+                stamp = &stamps.emplace_back();
                 result = translator.translate(assembler, code, avail, eip, mode, stamp, !generic);
                 block.bytes = result.bytes;
-                block.entry = install();
+                block.entry = install(result.entry);
                 if (!block.entry) throw std::logic_error("a block does not fit an empty JIT code buffer");
             }
         }
         if (!block.entry) block.original.assign(code, code + block.bytes);
-        else if (dump) dump_block(block.entry, installed_bytes, code, block.bytes, eip);
+        else if (dump) dump_block(static_cast<const uint8_t *>(block.entry) - result.entry, installed_bytes, code, block.bytes, eip);
         return block;
     }
 
@@ -454,6 +571,15 @@ struct Jit::Impl {
         return block;
     }
 
+    // kairotowns_jit_find.
+    const void *find() {
+        const uint64_t flushes = stats.flushes;
+        Block *block = current(false, true);
+        if (!block || stats.flushes != flushes) return nullptr;
+        ++stats.found;
+        return block->entry;
+    }
+
     // Points the branch at site at entry.
     void patch(void *site, const void *entry) {
         auto *word = static_cast<uint32_t *>(site);
@@ -474,8 +600,10 @@ struct Jit::Impl {
 
         ctx.keep_hold_irq = 0;
         ctx.advanced = 0;
-        // The interpreter and devices ran since the last run.
-        ++ctx.code_generation;
+        ctx.ended = 0;
+        // The interpreter clears it as each instruction starts (RunOneInstruction); at least one
+        // starts now, translated or not.
+        st.holdIRQ = false;
         ctx.clock_limit = clock_limit;
         ctx.chained_instructions = 0;
         ctx.came_from = nullptr;
@@ -492,6 +620,7 @@ struct Jit::Impl {
         result.advanced = ctx.advanced;
         result.keep_hold_irq = ctx.keep_hold_irq != 0;
         result.interpret_next = ctx.reason == REASON_INTERPRET;
+        result.ended = ctx.ended != 0;
 
         // The run stopped at CS:EIP; there the dispatcher translates the code again where it
         // changed, and links a block to its successor where the block asked for it. A flush of
@@ -511,6 +640,20 @@ struct Jit::Impl {
     }
 };
 
+static void count_interpreted(Context *ctx) {
+    auto &impl = *static_cast<Jit::Impl *>(ctx->jit);
+    if (!impl.counting) return;
+    i486DXCommon::InstructionAndOperand decoded;
+    MemoryAccess::ConstMemoryWindow window;
+    impl.cpu.DebugFetchInstruction(window, decoded, impl.mem);
+    ++impl.interpreted_ops[decoded.inst.RealOpCode() | (decoded.inst.instPrefix != 0 ? 0x10000u : 0u)];
+}
+
+extern "C" const void *kairotowns_jit_find(Context *ctx, uint32_t eip) {
+    if (ctx->cpu->state.EIP != eip) throw std::logic_error("kairotowns_jit_find: EIP not stored");
+    return static_cast<Jit::Impl *>(ctx->jit)->find();
+}
+
 Jit::Jit(i486DXCommon &cpu, Memory &mem, InOut &io, const MemoryAccess *main_ram, std::vector<unsigned char> &ram,
          const Host &host, const unsigned char *irq_waiting)
     : impl_(std::make_unique<Impl>(cpu, mem, io, main_ram, ram, host)) {
@@ -519,6 +662,13 @@ Jit::Jit(i486DXCommon &cpu, Memory &mem, InOut &io, const MemoryAccess *main_ram
 }
 Jit::~Jit() = default;
 Jit::Run Jit::run(int32_t clock_limit) { return impl_->run(clock_limit); }
+Jit::Mark Jit::mark() const { return mark_of(&impl_->ctx); }
+void Jit::after(const Mark &mark) { account(&impl_->ctx, mark); }
+void Jit::changed() {
+    ++impl_->ctx.code_generation;
+    ++impl_->ctx.other_generation;
+    ++impl_->ctx.segment_generation;
+}
 const Jit::Stats &Jit::stats() const { return impl_->stats; }
 
 } // namespace kairotowns::jit

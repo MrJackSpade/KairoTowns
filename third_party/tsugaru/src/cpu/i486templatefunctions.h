@@ -543,6 +543,7 @@ void i486DXFidelityLayer <FIDELITY>::Push16(Memory &mem,unsigned int value)
 
 	if(nullptr!=accessPtr)
 	{
+		mem.KairoWritten(accessPtr,2); // KairoTowns
 		cpputil::PutWord(accessPtr,value);
 		return;
 	}
@@ -578,6 +579,7 @@ void i486DXFidelityLayer <FIDELITY>::Push32(Memory &mem,unsigned int value)
 
 	if(nullptr!=accessPtr)
 	{
+		mem.KairoWritten(accessPtr,4); // KairoTowns
 		cpputil::PutDword(accessPtr,value);
 		return;
 	}
@@ -660,6 +662,7 @@ void i486DXFidelityLayer <FIDELITY>::Push(Memory &mem,unsigned int operandSize,u
 	auto accessPtr=GetStackAccessPointer(mem,linearAddr,bytesToStore);
 	if(nullptr!=accessPtr)
 	{
+		mem.KairoWritten(accessPtr,bytesToStore); // KairoTowns
 		if(16==operandSize)
 		{
 			cpputil::PutWord(accessPtr+2,firstPush);
@@ -749,6 +752,7 @@ void i486DXFidelityLayer <FIDELITY>::Push(Memory &mem,unsigned int operandSize,u
 	auto accessPtr=GetStackAccessPointer(mem,linearAddr,bytesToStore);
 	if(nullptr!=accessPtr)
 	{
+		mem.KairoWritten(accessPtr,bytesToStore); // KairoTowns
 		if(16==operandSize)
 		{
 			cpputil::PutWord(accessPtr+4,firstPush);

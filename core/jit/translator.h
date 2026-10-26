@@ -45,15 +45,19 @@ public:
     struct Result {
         uint32_t instructions = 0;  // translated
         uint32_t bytes = 0;         // of guest code they cover
+        uint32_t entry = 0;         // where the block's code is entered, in bytes from its start
     };
     // Translates the code at host pointer code (at least MAX_INSTRUCTION_LENGTH readable bytes
     // up to the end of its 4 KB page, avail in all), which is the guest's CS:eip, into a.
     // instructions is 0 when the first instruction cannot be translated; a holds nothing then.
-    // stamp is where the block keeps the code generation its code check last saw.
+    // stamp is where the block keeps what its code check last saw.
     // specialize: the block takes the segment registers' base and limits as constants, checked
     // at its entry; else it reads them as it runs.
-    Result translate(Assembler &a, const uint8_t *code, uint32_t avail, uint32_t eip, const Mode &mode, uint64_t *stamp,
+    Result translate(Assembler &a, const uint8_t *code, uint32_t avail, uint32_t eip, const Mode &mode, Stamp *stamp,
                      bool specialize);
+    // Main RAM, and the counts of translated code's stores into it by line (Context::code_lines):
+    // a block whose code is there checks the lines its code is on.
+    void set_code_lines(const uint8_t *ram, size_t bytes, const uint64_t *lines);
 
     // The trampolines: enter(Context *, const void *block) runs a block; blocks leave through
     // leave. Written once at the start of the code buffer.
@@ -73,6 +77,7 @@ public:
         JumpedBack,  // the wait-loop skip asked at a jump back
         Link,        // leaves asking for the branch in V0 to be linked
         Compare,     // compares a block's code with its copy of it
+        Poll,        // the fast device polling where the clock limit runs out
         TlbMissFlat, TlbMissPaged,  // ram_address() where the TLB misses, without or with paging
     };
     void emit_stub(Assembler &a, Stub stub);
@@ -81,6 +86,9 @@ private:
     struct Impl;
     i486DXCommon &cpu_;
     Memory &mem_;
+    const uint8_t *ram_ = nullptr;
+    size_t ram_bytes_ = 0;
+    const uint64_t *lines_ = nullptr;
 };
 
 } // namespace kairotowns::jit
