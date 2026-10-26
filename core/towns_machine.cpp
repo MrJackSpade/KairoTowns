@@ -14,6 +14,7 @@
 #include "towns.h"
 #include "townsdef.h"
 #include "townsparam.h"
+#include "picture_worker.h"
 #include "wait_loop.h"
 
 namespace kairotowns {
@@ -167,8 +168,7 @@ struct TownsMachine::Impl {
     World world;
     Window window;
     Speaker speaker;
-    TownsRender render;
-    TownsRender::ImageCopy image;
+    PictureWorker pictures;
     std::string cd;
     uint64_t last_frame = kFrameNanoseconds;
     TownsMachine::Profile profile;
@@ -202,11 +202,8 @@ struct TownsMachine::Impl {
         auto &t = *towns;
         if (t.state.nextRenderingTime > t.state.townsTime || t.crtc.InVSYNC(t.state.townsTime)) return;
         const auto start = std::chrono::steady_clock::now();
-        render.Prepare(t.crtc);
-        render.damperWireLine = t.var.damperWireLine;
-        render.scanLineEffectIn15KHz = t.var.scanLineEffectIn15KHz;
-        render.BuildImage(t.physMem.state.VRAM, t.crtc.GetPalette(), t.crtc.chaseHQPalette);
-        render.SwapImage(image);
+        pictures.start(t.crtc, t.physMem.state.VRAM, sizeof(t.physMem.state.VRAM), t.var.damperWireLine,
+                       t.var.scanLineEffectIn15KHz);
         t.state.nextRenderingTime = t.state.townsTime + TOWNS_RENDERING_FREQUENCY;
         ++profile.pictures;
         profile.picture_ns += elapsed_ns(start);
@@ -269,6 +266,10 @@ TownsMachine::~TownsMachine() {
 bool TownsMachine::run_frame(std::string &error) {
     const auto start = std::chrono::steady_clock::now();
     const bool ran = run_frame_body(error);
+    // The frame's picture, drawn beside the emulation since its rendering point (PictureWorker).
+    const auto wait_start = std::chrono::steady_clock::now();
+    impl_->pictures.wait();
+    impl_->profile.picture_ns += elapsed_ns(wait_start);
     ++impl_->profile.frames;
     impl_->profile.run_ns += elapsed_ns(start);
     return ran;
@@ -381,7 +382,7 @@ bool TownsMachine::run_guest(uint64_t &ran, std::string &error) {
 double TownsMachine::frame_seconds() const { return impl_->last_frame / 1e9; }
 
 const uint8_t *TownsMachine::frame(uint32_t &width, uint32_t &height) const {
-    const auto &image = impl_->image;
+    const auto &image = impl_->pictures.image();
     if (image.rgba.empty()) return nullptr;
     width = image.wid;
     height = image.hei;
