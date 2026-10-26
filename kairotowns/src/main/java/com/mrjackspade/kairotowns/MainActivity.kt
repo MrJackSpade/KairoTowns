@@ -37,7 +37,6 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
         setOf(TownsKeys.SHIFT, TownsKeys.CTRL, TownsKeys.ALT), TownsKeys.joystick.zip(TownsKeys.joystickLabels),
         "The gamepad in game port 1.", ControllerGuestSpec.STANDARD_ACTIONS, TownsKeys.layout)
     override val bindingsCodec = TownsKeys.bindings
-    override fun defaultBindings(layout: ControllerLayout) = TownsKeys.defaults(layout)
     override val artworkDownloadsEnabled: Boolean get() = resources.getBoolean(R.bool.catalog_art_download_enabled)
 
     /**
