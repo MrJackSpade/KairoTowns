@@ -26,7 +26,7 @@ permissions:
 jobs:
   build:
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
-    uses: MrJackSpade/Kairo/.github/workflows/app-build.yml@f12993de199240a82f0156a5302771576fb2d7fd
+    uses: MrJackSpade/Kairo/.github/workflows/app-build.yml@fd8c9ef87b287fe21e04de08f03910914cfdffd2
     with:
       module: kairotowns
       signed: ${{ inputs.signed || false }}
