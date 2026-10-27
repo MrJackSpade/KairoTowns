@@ -20,6 +20,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 #include "towns.h"
 #include "cpputil.h"
 
+// KairoTowns: where a disk a save state names is now (shared kairo/state_paths.h).
+extern "C" const char *kairo_state_path(const char *recorded);
+
 TownsCDROM::AsyncWaveReader::AsyncWaveReader()
 {
 }
@@ -1695,7 +1698,7 @@ void TownsCDROM::SetSIRQ_IRR(void)
 
 
 
-	std::string fName=ReadString(data);
+	std::string fName=std::string(kairo_state_path(ReadString(data).c_str())); // KairoTowns
 	std::string relPath;
 	if(1<=version)
 	{

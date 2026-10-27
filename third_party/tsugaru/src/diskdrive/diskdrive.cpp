@@ -19,6 +19,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 #include "vmbase.h"
 #include "d77ext.h"
 
+// KairoTowns: where a disk a save state names is now (shared kairo/state_paths.h).
+extern "C" const char *kairo_state_path(const char *recorded);
+
 
 
 void DiskDrive::Sector::Make(unsigned int C,unsigned int H,unsigned int R,unsigned int N)
@@ -1677,7 +1680,7 @@ bool DiskDrive::DeserializeVersion0to6(const unsigned char *&data,std::string st
 	for(auto &imgf : imgFile)
 	{
 		imgf.img.fileType=ReadUint32(data);
-		auto fName=ReadString(data);
+		auto fName=std::string(kairo_state_path(ReadString(data).c_str())); // KairoTowns
 		std::string relPath;
 		if(1<=version)
 		{

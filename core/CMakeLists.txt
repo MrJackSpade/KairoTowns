@@ -80,30 +80,35 @@ add_library(kairotowns_core STATIC towns_machine.cpp jit/jit.cpp jit/translator.
 target_include_directories(kairotowns_core PUBLIC "${CMAKE_CURRENT_LIST_DIR}" "${CMAKE_CURRENT_LIST_DIR}/../shared/frontend/src/main/cpp")
 target_link_libraries(kairotowns_core PUBLIC towns townsrender outside_world yssimplesound)
 
+# Tsugaru's save-state loads ask the shared kairo_state_path where each disk is now; the app
+# has it in its machine library, and the executables below link it from here.
+add_library(kairo_state_paths STATIC EXCLUDE_FROM_ALL "${CMAKE_CURRENT_LIST_DIR}/../shared/frontend/src/main/cpp/kairo/state_paths.cpp")
+target_include_directories(kairo_state_paths PRIVATE "${CMAKE_CURRENT_LIST_DIR}/../shared/frontend/src/main/cpp")
+
 # The measurement tool for the device too, as a standalone executable run through adb
 # (tools/perf/device-profile.ps1).
 option(KAIROTOWNS_TOOLS "Build game_profile on Android" OFF)
 if(ANDROID AND KAIROTOWNS_TOOLS)
     add_executable(game_profile test/game_profile.cpp)
-    target_link_libraries(game_profile PRIVATE kairotowns_core)
+    target_link_libraries(game_profile PRIVATE kairotowns_core kairo_state_paths)
     target_link_options(game_profile PRIVATE -static-libstdc++)
     add_executable(jit_lockstep test/jit_lockstep.cpp)
-    target_link_libraries(jit_lockstep PRIVATE kairotowns_core)
+    target_link_libraries(jit_lockstep PRIVATE kairotowns_core kairo_state_paths)
     target_link_options(jit_lockstep PRIVATE -static-libstdc++)
 endif()
 
 if(NOT ANDROID)
     add_executable(boot_test test/boot_test.cpp)
-    target_link_libraries(boot_test PRIVATE kairotowns_core)
+    target_link_libraries(boot_test PRIVATE kairotowns_core kairo_state_paths)
     add_executable(memory_check_test test/memory_check_test.cpp)
-    target_link_libraries(memory_check_test PRIVATE kairotowns_core)
+    target_link_libraries(memory_check_test PRIVATE kairotowns_core kairo_state_paths)
     add_executable(frame_dump test/frame_dump.cpp)
-    target_link_libraries(frame_dump PRIVATE kairotowns_core)
+    target_link_libraries(frame_dump PRIVATE kairotowns_core kairo_state_paths)
     # The JIT's assembler against clang's (tools/check-a64-encoding.ps1).
     add_executable(a64_encoding_test test/a64_encoding_test.cpp)
     target_include_directories(a64_encoding_test PRIVATE "${CMAKE_CURRENT_LIST_DIR}")
     add_executable(game_profile test/game_profile.cpp)
-    target_link_libraries(game_profile PRIVATE kairotowns_core)
+    target_link_libraries(game_profile PRIVATE kairotowns_core kairo_state_paths)
     if(WIN32)
         target_link_libraries(game_profile PRIVATE winmm)
     endif()
