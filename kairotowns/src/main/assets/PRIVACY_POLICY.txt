@@ -1,7 +1,7 @@
 KairoTowns Privacy Policy
 Last updated: October 22, 2026
 
-KairoTowns is an Android FM Towns emulator published by Loxifi LLC. This policy covers KairoTowns. For privacy questions or requests, email admin@loxifi.com.
+KairoTowns is an Android FM Towns emulator published by Loxifi LLC. This policy covers KairoTowns, including the paid Google Play edition and the free GitHub edition. For privacy questions or requests, email admin@loxifi.com.
 
 Data on your device
 KairoTowns reads the game files and folders and any firmware files that you choose through Android's file picker, and games that another app asks it to open. It uses file contents to identify supported games. Game files, file names, content hashes, imported firmware, save states, settings, and downloaded images stay on your device in the selected folder or the app's private storage. Loxifi does not receive these files, names, hashes, or settings. KairoTowns has no account, advertising, analytics, or crash reporting service.
@@ -13,7 +13,7 @@ Catalog updates
 When KairoTowns checks for catalog updates, it requests the latest catalog over HTTPS from raw.githubusercontent.com, which hosts the Kairo projects' catalogs. The request sends ordinary network information, including your IP address, to that service. It does not send your game files, file names, or content hashes. The hosting service controls its own logs and retention.
 
 Update checks
-When KairoTowns starts, it requests the list of KairoTowns's releases over HTTPS from api.github.com to see whether a newer version is available. The request sends ordinary network information, including your IP address, to GitHub. It does not send your game files, file names, or content hashes. GitHub controls its own logs and retention.
+When the GitHub edition of KairoTowns starts, it requests the list of KairoTowns's releases over HTTPS from api.github.com to see whether a newer version is available; the Google Play edition does not, since Google Play updates it. The request sends ordinary network information, including your IP address, to GitHub. It does not send your game files, file names, or content hashes. GitHub controls its own logs and retention.
 
 Imported catalog files
 When you import a catalog file, a copy of its metadata, artwork and update address is stored privately on your device. Checking installed catalogs contacts only the update addresses supplied by those installed files over HTTPS. Those servers receive your IP address and ordinary request information, but not your game files, library names or content hashes. The servers control their own logs and retention. Removing a catalog deletes its imported metadata and artwork, while keeping your games and personal overrides.
@@ -25,4 +25,4 @@ Support correspondence
 If you email Loxifi for support, we receive your email address and the information you choose to send and use it to respond. Email admin@loxifi.com to request deletion of that correspondence.
 
 Changes
-We may update this policy when KairoTowns's behavior changes. The current version will be available in the app.
+We may update this policy when KairoTowns's behavior changes. The current version will be available in the app and through the Google Play listing.

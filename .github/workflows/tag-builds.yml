@@ -22,7 +22,7 @@ jobs:
       contents: write
       actions: write
     # Pinned to the shared commit this repository's shared submodule names.
-    uses: MrJackSpade/Kairo/.github/workflows/app-release.yml@fd8c9ef87b287fe21e04de08f03910914cfdffd2
+    uses: MrJackSpade/Kairo/.github/workflows/app-release.yml@57157955a075a3f1c1ffda12f1e09e5280ff03dc
     with:
       module: kairotowns
       name: KairoTowns

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KairoTowns Privacy Policy — Loxifi LLC</title>
+  <style>
+    body { background: #10131b; color: #f1f3f8; font: 1.05rem/1.6 system-ui, sans-serif; margin: 0 auto; max-width: 48rem; padding: 2rem 1.25rem 4rem; }
+    h1, h2 { line-height: 1.2; }
+    h2 { margin-top: 2rem; }
+    a { color: #9fc4ff; }
+    .date { color: #bfc6d4; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>KairoTowns Privacy Policy</h1>
+    <p class="date">Last updated: October 22, 2026</p>
+    <p>KairoTowns is an Android FM Towns emulator published by Loxifi LLC. This policy covers KairoTowns, including the paid Google Play edition and the free GitHub edition. For privacy questions or requests, email <a href="mailto:admin@loxifi.com">admin@loxifi.com</a>.</p>
+    <h2>Data on your device</h2>
+    <p>KairoTowns reads the game files and folders and any firmware files that you choose through Android's file picker, and games that another app asks it to open. It uses file contents to identify supported games. Game files, file names, content hashes, imported firmware, save states, settings, and downloaded images stay on your device in the selected folder or the app's private storage. Loxifi does not receive these files, names, hashes, or settings. KairoTowns has no account, advertising, analytics, or crash reporting service.</p>
+    <h2>Optional artwork downloads</h2>
+    <p>The standard edition does not bundle artwork. If you choose "Download missing images" or tap an image to request a larger version, KairoTowns makes an HTTPS request directly to <code>images.launchbox-app.com</code>, <code>gamesdb-images.launchbox.gg</code> or <code>raw.githubusercontent.com</code>. The requested image URL can reveal which game's artwork was requested. The image service also receives your network IP address and ordinary request information needed to deliver the image. KairoTowns does not send your game files, file names, firmware, or content hashes to these services, and Loxifi does not receive their request logs. The services control their own logging and retention. Downloaded images are stored on your device.</p>
+    <h2>Catalog updates</h2>
+    <p>When KairoTowns checks for catalog updates, it requests the latest catalog over HTTPS from <code>raw.githubusercontent.com</code>, which hosts the Kairo projects' catalogs. The request sends ordinary network information, including your IP address, to that service. It does not send your game files, file names, or content hashes. The hosting service controls its own logs and retention.</p>
+    <h2>Update checks</h2>
+    <p>When the GitHub edition of KairoTowns starts, it requests the list of KairoTowns's releases over HTTPS from <code>api.github.com</code> to see whether a newer version is available; the Google Play edition does not, since Google Play updates it. The request sends ordinary network information, including your IP address, to GitHub. It does not send your game files, file names, or content hashes. GitHub controls its own logs and retention.</p>
+    <h2>Imported catalog files</h2>
+    <p>When you import a catalog file, a copy of its metadata, artwork and update address is stored privately on your device. Checking installed catalogs contacts only the update addresses supplied by those installed files over HTTPS. Those servers receive your IP address and ordinary request information, but not your game files, library names or content hashes. The servers control their own logs and retention. Removing a catalog deletes its imported metadata and artwork, while keeping your games and personal overrides.</p>
+    <h2>Storage, security, and deletion</h2>
+    <p>KairoTowns accesses files only after you select them with Android's file picker or another app asks it to open them. It stores app data in private app storage, does not enable Android app backup, and uses HTTPS for every network request. Local app data remains until you clear KairoTowns's storage or uninstall it; that does not remove original game files in your chosen folder. If you use a game's Delete action and confirm, KairoTowns deletes that game's file from your chosen folder. Loxifi has no server copy of app data to delete. To ask about data sent to an image or hosting service, contact that service.</p>
+    <h2>Support correspondence</h2>
+    <p>If you email Loxifi for support, we receive your email address and the information you choose to send and use it to respond. Email <a href="mailto:admin@loxifi.com">admin@loxifi.com</a> to request deletion of that correspondence.</p>
+    <h2>Changes</h2>
+    <p>We may update this policy when KairoTowns's behavior changes. The current version will be available in the app and through the Google Play listing.</p>
+  </main>
+</body>
+</html>

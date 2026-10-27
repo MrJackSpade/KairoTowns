@@ -32,9 +32,10 @@
 ## Download
 
 <!-- kairo:download -->
+- **[Google Play](https://play.google.com/store/apps/details?id=com.loxifi.kairotowns)** (paid): updates automatically. Buying it supports development.
 - **[GitHub Releases](https://github.com/MrJackSpade/KairoTowns/releases)** (free): install the APK yourself. The larger `-with-images` APK also bundles catalog artwork.
 
-Requires an ARM64 device running Android 8.0 or newer.
+Both editions are built from the same source and have the same features. Requires an ARM64 device running Android 8.0 or newer.
 <!-- /kairo:download -->
 
 ## Quick start
