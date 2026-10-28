@@ -115,11 +115,6 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
         mediaStarted(media)
     }
 
-    override fun stateError(code: Int) = when (code) {
-        2 -> getString(R.string.state_error_io)
-        else -> getString(R.string.state_error_code, code)
-    }
-
     private companion object {
         /** The launch setting that boots the hard disk although a CD is in the drive (towns_core.cpp). */
         const val BOOT_HARD_DISK = "bootHardDisk"

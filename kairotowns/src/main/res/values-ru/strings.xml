@@ -64,11 +64,6 @@
     <string name="firmware_dictionary_description">словарь преобразования каны в кандзи для японского текста</string>
     <!-- EN: a 20-dot font some games use -->
     <string name="firmware_large_font_description">20-точечный шрифт, который используют некоторые игры</string>
-    <!-- EN: the emulator could not read or write the state -->
-    <string name="state_error_io">эмулятор не смог прочитать или записать состояние</string>
-    <!-- %1$d is the emulator's error code. -->
-    <!-- EN: code %1$d -->
-    <string name="state_error_code">код %1$d</string>
     <!-- EN: Memory -->
     <string name="option_memory">Память</string>
     <!-- %1$d is a size in megabytes. -->

@@ -64,11 +64,6 @@
     <string name="firmware_dictionary_description">일본어 텍스트용 가나-한자 변환 사전</string>
     <!-- EN: a 20-dot font some games use -->
     <string name="firmware_large_font_description">일부 게임이 사용하는 20도트 글꼴</string>
-    <!-- EN: the emulator could not read or write the state -->
-    <string name="state_error_io">에뮬레이터가 상태를 읽거나 쓸 수 없음</string>
-    <!-- %1$d is the emulator's error code. -->
-    <!-- EN: code %1$d -->
-    <string name="state_error_code">코드 %1$d</string>
     <!-- EN: Memory -->
     <string name="option_memory">메모리</string>
     <!-- %1$d is a size in megabytes. -->

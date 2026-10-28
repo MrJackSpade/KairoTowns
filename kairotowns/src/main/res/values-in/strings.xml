@@ -64,11 +64,6 @@
     <string name="firmware_dictionary_description">kamus kana ke kanji untuk teks Jepang</string>
     <!-- EN: a 20-dot font some games use -->
     <string name="firmware_large_font_description">font 20 titik yang digunakan beberapa game</string>
-    <!-- EN: the emulator could not read or write the state -->
-    <string name="state_error_io">emulator tidak dapat membaca atau menulis status</string>
-    <!-- %1$d is the emulator's error code. -->
-    <!-- EN: code %1$d -->
-    <string name="state_error_code">kode %1$d</string>
     <!-- EN: Memory -->
     <string name="option_memory">Memori</string>
     <!-- %1$d is a size in megabytes. -->

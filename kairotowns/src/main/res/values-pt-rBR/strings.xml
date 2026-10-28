@@ -64,11 +64,6 @@
     <string name="firmware_dictionary_description">dicionário de kana para kanji para texto em japonês</string>
     <!-- EN: a 20-dot font some games use -->
     <string name="firmware_large_font_description">uma fonte de 20 pontos usada por alguns jogos</string>
-    <!-- EN: the emulator could not read or write the state -->
-    <string name="state_error_io">o emulador não conseguiu ler nem gravar o estado</string>
-    <!-- %1$d is the emulator's error code. -->
-    <!-- EN: code %1$d -->
-    <string name="state_error_code">código %1$d</string>
     <!-- EN: Memory -->
     <string name="option_memory">Memória</string>
     <!-- %1$d is a size in megabytes. -->

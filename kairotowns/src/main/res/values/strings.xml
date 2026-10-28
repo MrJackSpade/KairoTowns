@@ -39,9 +39,6 @@
     <string name="firmware_dictionary_description">kana-to-kanji dictionary for Japanese text</string>
     <string name="firmware_large_font_description">a 20-dot font some games use</string>
 
-    <string name="state_error_io">the emulator could not read or write the state</string>
-    <!-- %1$d is the emulator's error code. -->
-    <string name="state_error_code">code %1$d</string>
 
     <string name="option_memory">Memory</string>
     <!-- %1$d is a size in megabytes. -->

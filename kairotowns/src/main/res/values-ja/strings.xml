@@ -64,11 +64,6 @@
     <string name="firmware_dictionary_description">日本語テキスト用のかな漢字変換辞書</string>
     <!-- EN: a 20-dot font some games use -->
     <string name="firmware_large_font_description">一部のゲームが使う 20 ドットフォント</string>
-    <!-- EN: the emulator could not read or write the state -->
-    <string name="state_error_io">エミュレーターがステートを読み書きできませんでした</string>
-    <!-- %1$d is the emulator's error code. -->
-    <!-- EN: code %1$d -->
-    <string name="state_error_code">コード %1$d</string>
     <!-- EN: Memory -->
     <string name="option_memory">メモリ</string>
     <!-- %1$d is a size in megabytes. -->

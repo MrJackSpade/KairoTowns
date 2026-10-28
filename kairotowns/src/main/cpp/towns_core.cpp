@@ -29,7 +29,6 @@ int hard_disk_id(const std::string &path) {
 }
 constexpr const char *kStateFile = "/state.tss";
 // MainActivity.stateError reads this.
-constexpr int kStateFailed = 2;
 
 class TownsCore : public kairo::MachineCore {
 public:
@@ -81,25 +80,25 @@ public:
     void reset() override { machine_->reset(); }
 
     int save_state(const std::string &directory) override {
-        return machine_->save_state(directory + kStateFile) ? 0 : kStateFailed;
+        return machine_->save_state(directory + kStateFile) ? 0 : kFailed;
     }
 
     int load_state(const std::string &directory) override {
-        return machine_->load_state(directory + kStateFile) ? 0 : kStateFailed;
+        return machine_->load_state(directory + kStateFile) ? 0 : kFailed;
     }
 
     int media(int slot, const std::string &path) override {
         switch (slot) {
-        case kCd: return machine_->insert_cd(path) ? 0 : kStateFailed;
-        case kFloppyA: return machine_->insert_fd(0, path) ? 0 : kStateFailed;
-        case kFloppyB: return machine_->insert_fd(1, path) ? 0 : kStateFailed;
+        case kCd: return machine_->insert_cd(path) ? 0 : kFailed;
+        case kFloppyA: return machine_->insert_fd(0, path) ? 0 : kFailed;
+        case kFloppyB: return machine_->insert_fd(1, path) ? 0 : kFailed;
         case kHardDisk: {
             // The slot holds one hard disk, at the SCSI ID its name gives.
             const int id = path.empty() ? -1 : hard_disk_id(path);
-            if (!path.empty() && id < 0) return kStateFailed;
+            if (!path.empty() && id < 0) return kFailed;
             const int current = attached_hard_disk();
-            if (current >= 0 && !machine_->insert_hd(current, "")) return kStateFailed;
-            return path.empty() || machine_->insert_hd(id, path) ? 0 : kStateFailed;
+            if (current >= 0 && !machine_->insert_hd(current, "")) return kFailed;
+            return path.empty() || machine_->insert_hd(id, path) ? 0 : kFailed;
         }
         default: return kUnsupported;
         }
