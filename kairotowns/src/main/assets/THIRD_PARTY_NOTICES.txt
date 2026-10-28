@@ -5,6 +5,7 @@ These notices apply to the emulator code, libraries, and C++ runtime in this pac
 Tsugaru v20260522 by Soji Yamakawa (CaptainYS)
 Source: third_party/tsugaru/LICENSE
 ========================================================================
+
 Copyright 2020 Soji Yamakawa (CaptainYS, http://www.ysflight.com)
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
