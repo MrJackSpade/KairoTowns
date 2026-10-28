@@ -20,8 +20,6 @@
     <string name="companion_boot_floppy">起動フロッピー</string>
     <!-- EN: hard disk -->
     <string name="companion_hard_disk">ハードディスク</string>
-    <!-- EN: Lines to type, separated by ; -->
-    <string name="startup_commands_hint">入力する行（; 区切り）</string>
     <!-- EN: System -->
     <string name="firmware_system">システム</string>
     <!-- EN: Font -->

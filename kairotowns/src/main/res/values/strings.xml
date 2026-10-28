@@ -14,7 +14,6 @@
     <!-- A disk a game needs beside the one it starts from, as "The %1$s this game needs is not in the library" names it. -->
     <string name="companion_boot_floppy">boot floppy</string>
     <string name="companion_hard_disk">hard disk</string>
-    <string name="startup_commands_hint">Lines to type, separated by ;</string>
 
     <string name="firmware_system">System</string>
     <string name="firmware_font">Font</string>

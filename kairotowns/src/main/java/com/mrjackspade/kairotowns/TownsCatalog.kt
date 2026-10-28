@@ -30,7 +30,7 @@ object TownsCatalog : LayeredGameCatalog.Schema {
 
     /** The lines typed at DOS's prompt to start the game, such as a hard disk's `CD \GAME` and `GAME`. */
     val startupCommands = CatalogSetting.Lines(LAUNCH, COMMANDS, UiText.res(FrontendR.string.kairo_startup_commands),
-        UiText.res(R.string.startup_commands_hint), Regex("[ -~]{1,120}"), 8) { _, _ -> emptyList() }
+        UiText.res(FrontendR.string.kairo_startup_commands_hint), Regex("[ -~]{1,120}"), 8) { _, _ -> emptyList() }
 
     override val settings: List<CatalogSetting> = options.map(CatalogSetting::Choice) +
         CatalogSetting.Drive("floppyA", UiText.res(R.string.floppy_a)) { it.startsWith(CD) } +

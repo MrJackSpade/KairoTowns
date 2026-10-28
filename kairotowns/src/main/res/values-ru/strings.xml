@@ -20,8 +20,6 @@
     <string name="companion_boot_floppy">загрузочная дискета</string>
     <!-- EN: hard disk -->
     <string name="companion_hard_disk">жесткий диск</string>
-    <!-- EN: Lines to type, separated by ; -->
-    <string name="startup_commands_hint">Строки для ввода, разделенные ;</string>
     <!-- EN: System -->
     <string name="firmware_system">Система</string>
     <!-- EN: Font -->
