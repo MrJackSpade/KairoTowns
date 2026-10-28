@@ -2291,4 +2291,16 @@ void FMTownsCommon::NotifyDiskRead(void)
 	*/
 '''),
     ],
+    # A state load reopens a disc by trying its recorded path, then paths near the state file; each
+    # try counted a failed open as loaded and a successful one as not, so every later try opened the
+    # disc again and its last match named it (a path relative to the state file, KairoTowns#76).
+    'tsugaru-state-disc-open': [
+        ('tsugaru/src/towns/cdrom/cdrom.cpp', '\n\t\t   DiscImage::ERROR_NOERROR!=state.GetDisc().Open(fName))', '\n\t\t   DiscImage::ERROR_NOERROR==state.GetDisc().Open(fName))'),
+        ('tsugaru/src/towns/cdrom/cdrom.cpp', '\n\t\t   DiscImage::ERROR_NOERROR!=state.GetDisc().Open(stateRel))', '\n\t\t   DiscImage::ERROR_NOERROR==state.GetDisc().Open(stateRel))'),
+        ('tsugaru/src/towns/cdrom/cdrom.cpp', '\n\t\t\t   DiscImage::ERROR_NOERROR!=state.GetDisc().Open(ful))', '\n\t\t\t   DiscImage::ERROR_NOERROR==state.GetDisc().Open(ful))'),
+        ('tsugaru/src/towns/cdrom/cdrom.cpp', '\n\t\t   DiscImage::ERROR_NOERROR!=state.GetDisc().Open(ful))', '\n\t\t   DiscImage::ERROR_NOERROR==state.GetDisc().Open(ful))'),
+        ('tsugaru/src/towns/scsi/scsi.cpp', '\n\t\t\t\t   DiscImage::ERROR_NOERROR!=dev.discImg.Open(fName))', '\n\t\t\t\t   DiscImage::ERROR_NOERROR==dev.discImg.Open(fName))'),
+        ('tsugaru/src/towns/scsi/scsi.cpp', '\n\t\t\t\t   DiscImage::ERROR_NOERROR!=dev.discImg.Open(stateRel))', '\n\t\t\t\t   DiscImage::ERROR_NOERROR==dev.discImg.Open(stateRel))'),
+        ('tsugaru/src/towns/scsi/scsi.cpp', '\n\t\t\t\t   DiscImage::ERROR_NOERROR!=dev.discImg.Open(ful))', '\n\t\t\t\t   DiscImage::ERROR_NOERROR==dev.discImg.Open(ful))'),
+    ],
 }

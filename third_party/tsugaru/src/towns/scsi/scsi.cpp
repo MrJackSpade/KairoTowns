@@ -1908,7 +1908,7 @@ std::vector <std::string> TownsSCSI::GetStatusText(void) const
 			if(true!=loaded)
 			{
 				if(cpputil::FileExists(fName) &&
-				   DiscImage::ERROR_NOERROR!=dev.discImg.Open(fName))
+				   DiscImage::ERROR_NOERROR==dev.discImg.Open(fName))
 				{
 					dev.imageFName=fName;
 					loaded=true;
@@ -1920,7 +1920,7 @@ std::vector <std::string> TownsSCSI::GetStatusText(void) const
 			if(true!=loaded)
 			{
 				if(cpputil::FileExists(stateRel) &&
-				   DiscImage::ERROR_NOERROR!=dev.discImg.Open(stateRel))
+				   DiscImage::ERROR_NOERROR==dev.discImg.Open(stateRel))
 				{
 					dev.imageFName=stateRel;
 					loaded=true;
@@ -1937,7 +1937,7 @@ std::vector <std::string> TownsSCSI::GetStatusText(void) const
 				cpputil::SeparatePathFile(imgDir,imgName,fName);
 				auto ful=cpputil::MakeFullPathName(stateDir,imgName);
 				if(cpputil::FileExists(ful) &&
-				   DiscImage::ERROR_NOERROR!=dev.discImg.Open(ful))
+				   DiscImage::ERROR_NOERROR==dev.discImg.Open(ful))
 				{
 					dev.imageFName=ful;
 					loaded=true;

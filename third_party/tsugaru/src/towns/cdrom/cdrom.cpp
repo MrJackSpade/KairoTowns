@@ -1713,7 +1713,7 @@ void TownsCDROM::SetSIRQ_IRR(void)
 	if(true!=loaded)
 	{
 		if(cpputil::FileExists(fName) &&
-		   DiscImage::ERROR_NOERROR!=state.GetDisc().Open(fName))
+		   DiscImage::ERROR_NOERROR==state.GetDisc().Open(fName))
 		{
 			loaded=true;
 		}
@@ -1724,7 +1724,7 @@ void TownsCDROM::SetSIRQ_IRR(void)
 	if(true!=loaded)
 	{
 		if(cpputil::FileExists(stateRel) &&
-		   DiscImage::ERROR_NOERROR!=state.GetDisc().Open(stateRel))
+		   DiscImage::ERROR_NOERROR==state.GetDisc().Open(stateRel))
 		{
 			loaded=true;
 		}
@@ -1739,7 +1739,7 @@ void TownsCDROM::SetSIRQ_IRR(void)
 		{
 			auto ful=cpputil::MakeFullPathName(dir,imgName);
 			if(cpputil::FileExists(ful) &&
-			   DiscImage::ERROR_NOERROR!=state.GetDisc().Open(ful))
+			   DiscImage::ERROR_NOERROR==state.GetDisc().Open(ful))
 			{
 				loaded=true;
 			}
@@ -1753,7 +1753,7 @@ void TownsCDROM::SetSIRQ_IRR(void)
 		cpputil::SeparatePathFile(imgDir,imgName,fName);
 		auto ful=cpputil::MakeFullPathName(stateDir,imgName);
 		if(cpputil::FileExists(ful) &&
-		   DiscImage::ERROR_NOERROR!=state.GetDisc().Open(ful))
+		   DiscImage::ERROR_NOERROR==state.GetDisc().Open(ful))
 		{
 			loaded=true;
 		}

@@ -174,7 +174,6 @@ struct TownsMachine::Impl {
     Window window;
     Speaker speaker;
     PictureWorker pictures;
-    std::string cd;
     // The CD that goes in once a hard disk boot has read its first disk (Config::boot_hd).
     std::string cd_after_boot;
     // The guest's calls of DOS's line input when a key last went down (TownsMachine::prompt).
@@ -626,7 +625,6 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
             drives[drive * 2 + 1] = 0;
         }
     }
-    impl->cd = config.cd;
     if (config.boot_hd) impl->cd_after_boot = config.cd;
     impl->skip_wait_loops = config.skip_wait_loops;
     // Reads without effect do not keep a wait loop from being skipped (Impl::pure_read).
@@ -940,12 +938,9 @@ bool TownsMachine::insert_cd(const std::string &path) {
     impl_->cd_after_boot.clear();
     if (path.empty()) {
         towns.cdrom.state.GetDisc().CleanUp();
-        impl_->cd.clear();
         return true;
     }
-    if (towns.cdrom.LoadDiscImage(path) != DiscImage::ERROR_NOERROR) return false;
-    impl_->cd = path;
-    return true;
+    return towns.cdrom.LoadDiscImage(path) == DiscImage::ERROR_NOERROR;
 }
 
 bool TownsMachine::insert_fd(int drive, const std::string &path) {
@@ -1002,7 +997,8 @@ int TownsMachine::special_key(kairo::SpecialKey key) {
     return -1;
 }
 
-std::string TownsMachine::cd_path() const { return impl_->cd; }
+// The disc Tsugaru has open, which a loaded state may have changed (KairoTowns#76).
+std::string TownsMachine::cd_path() const { return impl_->towns->cdrom.state.GetDisc().fName; }
 
 std::string TownsMachine::hd_path(int id) const {
     if (id < 0 || id >= Config::kHardDisks) return "";

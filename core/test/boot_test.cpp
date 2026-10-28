@@ -3,8 +3,9 @@
 //   boot_test <rom dir> <work dir> <disc image> <seconds>
 //
 // Runs the disc for <seconds>, writing <work dir>/boot.ppm of the last picture and reporting
-// its audio. Then it saves a state, runs on, loads the state, and checks that the next second
-// draws the same picture as it did after the save. Last it starts a second machine in the same
+// its audio. Then it saves a state, runs on, ejects the disc, loads the state, and checks that the
+// disc is back in the drive as the machine reports it (cd_path) and that the next second draws the
+// same picture as it did after the save. Last it starts a second machine in the same
 // process, as the app does for its next game.
 
 #include <cstdio>
@@ -122,7 +123,12 @@ int main(int argc, char **argv) {
     Run after_save, after_load, ignored;
     if (!run(*machine, 60, after_save, error)) return fail("run after save: " + error);
     if (!run(*machine, 120, ignored, error)) return fail("run on: " + error);
+    const std::string disc = machine->cd_path();
+    if (disc.empty()) return fail("no disc reported in the drive");
+    if (!machine->insert_cd("") || !machine->cd_path().empty()) return fail("eject the disc");
     if (!machine->load_state(state)) return fail("load state");
+    std::printf("state: the drive holds %s after the load\n", machine->cd_path().c_str());
+    if (machine->cd_path() != disc) return fail("the drive does not report the state's disc");
     if (!run(*machine, 60, after_load, error)) return fail("run after load: " + error);
     write_ppm(work + "/after_save.ppm", after_save);
     write_ppm(work + "/after_load.ppm", after_load);
