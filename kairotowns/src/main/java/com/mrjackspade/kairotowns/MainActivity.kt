@@ -12,7 +12,9 @@ import com.mrjackspade.kairo.frontend.MachineActivity
 import com.mrjackspade.kairo.frontend.MachineFirstRun
 import com.mrjackspade.kairo.frontend.NativeMachine
 import com.mrjackspade.kairo.frontend.StartupCommands
+import com.mrjackspade.kairo.frontend.UiText
 import com.mrjackspade.kairo.frontend.companionFor
+import com.mrjackspade.kairo.frontend.R as FrontendR
 
 import java.io.File
 import java.util.concurrent.atomic.AtomicBoolean
@@ -21,12 +23,11 @@ import java.util.concurrent.atomic.AtomicBoolean
 class MainActivity : MachineActivity<DiskImageEntry>() {
     override val identity = Identity("KAIROTOWNS", 0xff3AF677.toInt(), "KairoTowns", "FM Towns", "kairotowns",
         LibraryStrings("KAIROTOWNS", "KairoTowns"),
-        "KairoTowns uses the Tsugaru emulator. Source and provenance: github.com/MrJackSpade/KairoTowns.",
-        "Choose a games folder to find CD and floppy images and the ZIP and 7z archives holding them",
-        "Folder access expired. Select the games folder again.",
-        MachineFirstRun.Folder("Choose a games folder", "Select the folder containing your FM Towns games. KairoTowns " +
-            "will scan its CD and floppy images and the ZIP and 7z archives holding them.", "Choose games folder…"),
-        "SAVE STATES", "MrJackSpade/KairoTowns")
+        UiText.res(R.string.credits, "KairoTowns", "Tsugaru", "MrJackSpade/KairoTowns"),
+        UiText.res(R.string.library_empty), UiText.res(R.string.library_expired),
+        MachineFirstRun.Folder(UiText.res(R.string.folder_title), UiText.res(R.string.folder_description, "FM Towns", "KairoTowns"),
+            UiText.res(R.string.folder_button)),
+        UiText.res(R.string.saves_group), "MrJackSpade/KairoTowns")
     override val machine = Machine(640, 480, 4.0 / 3.0, "state.tss")
     override val bridge by lazy { NativeMachine("kairotowns") }
     override val keyboard = TownsKeys.layout
@@ -35,7 +36,7 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
     override val joystickControls get() = TownsKeys.joystick
     override val controllerSpec = ControllerGuestSpec("FM Towns", TownsKeys.bindableCodes, { TownsKeys.label(it) ?: "Key $it" },
         setOf(TownsKeys.SHIFT, TownsKeys.CTRL, TownsKeys.ALT), TownsKeys.joystick.zip(TownsKeys.joystickLabels),
-        "The gamepad in game port 1.", ControllerGuestSpec.STANDARD_ACTIONS, TownsKeys.layout)
+        UiText.res(R.string.joystick_help), ControllerGuestSpec.STANDARD_ACTIONS, TownsKeys.layout)
     override val bindingsCodec = TownsKeys.bindings
     override val artworkDownloadsEnabled: Boolean get() = resources.getBoolean(R.bool.catalog_art_download_enabled)
 
@@ -45,41 +46,46 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
      * same disc, listed once. Floppies in D77 and raw sector images (HDM), and SCSI hard disks
      * (.h0 to .h6, the SCSI ID in the extension). tools/catalog_config.py hashes them by the same rules.
      */
+    private val format = DiskImageLibrary.Format(
+        kinds = listOf("ccd", "cue", "mds", "iso").associateWith { "cd" } +
+            listOf("d77", "d88", "88d", "hdm").associateWith { "fd" } + (0..6).associate { "h$it" to "hd" },
+        labels = mapOf("cd" to UiText.res(R.string.cd_rom), "fd" to UiText.res(R.string.floppy_disk),
+            "hd" to UiText.res(R.string.hard_disk)),
+        maxBytes = mapOf("cd" to 2L * 1024 * 1024 * 1024, "fd" to 64L * 1024 * 1024, "hd" to 4L * 1024 * 1024 * 1024),
+        guestName = "FM Towns",
+        data = mapOf("ccd" to listOf("img"), "mds" to listOf("mdf"), "cue" to listOf("bin", "img", "iso")),
+        supersededBy = mapOf("cue" to setOf("ccd", "mds"), "iso" to setOf("cue")))
     private val disks by lazy {
-        DiskImageLibrary(this, DiskImageLibrary.Format(
-            kinds = listOf("ccd", "cue", "mds", "iso").associateWith { "cd" } +
-                listOf("d77", "d88", "88d", "hdm").associateWith { "fd" } + (0..6).associate { "h$it" to "hd" },
-            labels = mapOf("cd" to "CD-ROM", "fd" to "Floppy disk", "hd" to "Hard disk"),
-            maxBytes = mapOf("cd" to 2L * 1024 * 1024 * 1024, "fd" to 64L * 1024 * 1024, "hd" to 4L * 1024 * 1024 * 1024),
-            guestName = "FM Towns",
-            data = mapOf("ccd" to listOf("img"), "mds" to listOf("mdf"), "cue" to listOf("bin", "img", "iso")),
-            supersededBy = mapOf("cue" to setOf("ccd", "mds"), "iso" to setOf("cue"))),
-            // 2: hard disks and HDM floppies, so archives scanned before are looked into again.
-            DiskImageLibrary.Cache(mediaFormatsVersion = 2))
+        // 2: hard disks and HDM floppies, so archives scanned before are looked into again.
+        DiskImageLibrary(this, format, DiskImageLibrary.Cache(mediaFormatsVersion = 2))
     }
     override fun createCatalog() = LayeredGameCatalog(this, TownsCatalog)
     override fun createLibrary(catalog: LayeredGameCatalog) = disks
 
-    private fun isCd(entry: DiskImageEntry) = entry.mediaLabel == "CD-ROM"
-    private fun isFloppy(entry: DiskImageEntry) = entry.mediaLabel == "Floppy disk"
-    private fun isHardDisk(entry: DiskImageEntry) = entry.mediaLabel == "Hard disk"
+    private fun isCd(entry: DiskImageEntry) = format.kind(entry.displayName) == "cd"
+    private fun isFloppy(entry: DiskImageEntry) = format.kind(entry.displayName) == "fd"
+    private fun isHardDisk(entry: DiskImageEntry) = format.kind(entry.displayName) == "hd"
 
     override val machineOptions = TownsCatalog.options
-    override val mediaPageTitle = "Disks"
     // In the core's slot order (kairotowns/src/main/cpp/towns_core.cpp).
-    override val mediaSlots = listOf(MediaSlot<DiskImageEntry>("CD-ROM", ::isCd),
-        MediaSlot("Floppy A", ::isFloppy), MediaSlot("Floppy B", ::isFloppy), MediaSlot("Hard disk", ::isHardDisk))
+    override val mediaSlots = listOf(MediaSlot<DiskImageEntry>(UiText.res(R.string.cd_rom), ::isCd),
+        MediaSlot(UiText.res(R.string.floppy_a), ::isFloppy), MediaSlot(UiText.res(R.string.floppy_b), ::isFloppy),
+        MediaSlot(UiText.res(R.string.hard_disk), ::isHardDisk))
 
     private val firmwareDir by lazy { File(filesDir, "firmware") }
     override val firmwareSets by lazy {
-        fun rom(name: String, label: String, description: String, required: Boolean, size: Int) =
-            FirmwareSet.Part(name, label, "$name · $description", setOf(name.lowercase()), required, setOf(size.toLong()))
-        listOf("FM Towns BIOS" to FirmwareSet(firmwareDir, listOf(
-            rom("FMT_SYS.ROM", "System", "the BIOS that starts the FM Towns", true, 0x40000),
-            rom("FMT_DOS.ROM", "DOS", "the built-in DOS that CD games boot through", true, 0x80000),
-            rom("FMT_FNT.ROM", "Font", "the text and kanji font", true, 0x40000),
-            rom("FMT_DIC.ROM", "Dictionary", "kana-to-kanji dictionary for Japanese text", true, 0x80000),
-            rom("FMT_F20.ROM", "Large font", "a 20-dot font some games use", false, 0x80000))))
+        fun rom(name: String, label: UiText, description: UiText, required: Boolean, size: Int) =
+            FirmwareSet.Part(name, label, UiText.res(R.string.firmware_part, name, description), setOf(name.lowercase()),
+                required, setOf(size.toLong()))
+        fun rom(name: String, label: Int, description: Int, required: Boolean, size: Int) =
+            rom(name, UiText.res(label), UiText.res(description), required, size)
+        listOf(UiText.res(FrontendR.string.kairo_firmware_title, "FM Towns") to FirmwareSet(firmwareDir, listOf(
+            rom("FMT_SYS.ROM", UiText.res(R.string.firmware_system), UiText.res(R.string.firmware_system_description, "FM Towns"),
+                true, 0x40000),
+            rom("FMT_DOS.ROM", UiText.fixed("DOS"), UiText.res(R.string.firmware_dos_description), true, 0x80000),
+            rom("FMT_FNT.ROM", R.string.firmware_font, R.string.firmware_font_description, true, 0x40000),
+            rom("FMT_DIC.ROM", R.string.firmware_dictionary, R.string.firmware_dictionary_description, true, 0x80000),
+            rom("FMT_F20.ROM", R.string.firmware_large_font, R.string.firmware_large_font_description, false, 0x80000))))
     }
 
     override fun startGame(entry: DiskImageEntry, game: CatalogGame, cancelled: AtomicBoolean,
@@ -110,8 +116,8 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
     }
 
     override fun stateError(code: Int) = when (code) {
-        2 -> "the emulator could not read or write the state"
-        else -> "code $code"
+        2 -> getString(R.string.state_error_io)
+        else -> getString(R.string.state_error_code, code)
     }
 
     private companion object {

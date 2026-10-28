@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- KairoTowns's own words. The frontend's are in shared/frontend's values/strings*.xml. -->
+<resources>
+    <!-- %1$s is the app's name, KairoTowns; %2$s the emulator it runs; %3$s its GitHub repository. -->
+    <string name="credits">%1$s uses the %2$s emulator. Source and provenance: github.com/%3$s.</string>
+    <string name="library_empty">Choose a games folder to find CD and floppy images and the ZIP and 7z archives holding them</string>
+    <string name="library_expired">Folder access expired. Select the games folder again.</string>
+    <string name="folder_title">Choose a games folder</string>
+    <!-- %1$s is the machine's name, FM Towns; %2$s the app's name, KairoTowns. -->
+    <string name="folder_description">Select the folder containing your %1$s games. %2$s will scan its CD and floppy images and the ZIP and 7z archives holding them.</string>
+    <string name="folder_button">Choose games folder…</string>
+    <string name="saves_group">SAVE STATES</string>
+
+    <string name="joystick_help">The gamepad in game port 1.</string>
+    <string name="keyboard_symbols">Symbols</string>
+
+    <string name="cd_rom">CD-ROM</string>
+    <string name="floppy_disk">Floppy disk</string>
+    <string name="hard_disk">Hard disk</string>
+    <string name="floppy_a">Floppy A</string>
+    <string name="floppy_b">Floppy B</string>
+    <string name="startup_commands">Startup commands</string>
+    <string name="startup_commands_hint">Lines to type, separated by ;</string>
+
+    <!-- A firmware file's description: %1$s is its file name; %2$s what it does. -->
+    <string name="firmware_part">%1$s · %2$s</string>
+    <string name="firmware_system">System</string>
+    <string name="firmware_font">Font</string>
+    <string name="firmware_dictionary">Dictionary</string>
+    <string name="firmware_large_font">Large font</string>
+    <!-- %1$s is the machine's name, FM Towns. -->
+    <string name="firmware_system_description">the BIOS that starts the %1$s</string>
+    <string name="firmware_dos_description">the built-in DOS that CD games boot through</string>
+    <string name="firmware_font_description">the text and kanji font</string>
+    <string name="firmware_dictionary_description">kana-to-kanji dictionary for Japanese text</string>
+    <string name="firmware_large_font_description">a 20-dot font some games use</string>
+
+    <string name="state_error_io">the emulator could not read or write the state</string>
+    <!-- %1$d is the emulator's error code. -->
+    <string name="state_error_code">code %1$d</string>
+
+    <string name="option_memory">Memory</string>
+    <!-- %1$d is a size in megabytes. -->
+    <string name="memory_mb">%1$d MB</string>
+    <string name="option_clock">CPU clock</string>
+    <!-- %1$d is a clock speed in megahertz. -->
+    <string name="clock_mhz">%1$d MHz</string>
+</resources>

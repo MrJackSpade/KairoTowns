@@ -10,6 +10,8 @@ import com.mrjackspade.kairo.frontend.JisMainBlock.RETURN
 import com.mrjackspade.kairo.frontend.JisMainBlock.SPACE
 import com.mrjackspade.kairo.frontend.JoystickInputRouter
 import com.mrjackspade.kairo.frontend.KeyboardKey
+import com.mrjackspade.kairo.frontend.UiText
+import com.mrjackspade.kairo.frontend.R as FrontendR
 import android.view.KeyEvent
 
 /**
@@ -62,7 +64,7 @@ object TownsKeys {
             GuestKeyboardPage("ABC", JisMainBlock.alphabetRows(CTRL, SHIFT, listOf(KeyboardKey("Caps", CAPS),
                 KeyboardKey("Alt", ALT), KeyboardKey("Kana", KATAKANA), KeyboardKey("Space", SPACE, 5f),
                 KeyboardKey("Exec", EXECUTE), KeyboardKey("Cancel", CANCEL)))),
-            GuestKeyboardPage("?123", JisMainBlock.symbolRows(), pickerLabel = "Symbols"),
+            GuestKeyboardPage("?123", JisMainBlock.symbolRows(), pickerLabel = UiText.res(R.string.keyboard_symbols)),
             GuestKeyboardPage("Towns", townsRows())
         ),
         modifiers = setOf(SHIFT, CTRL, ALT),
@@ -162,7 +164,8 @@ object TownsKeys {
 
     /** The gamepad's controls in the order of the core's pad bits (towns_machine.h PadButton). */
     val joystick = JoystickInputRouter.DEFAULT_CONTROLS + listOf("run", "select")
-    val joystickLabels = listOf("Up", "Down", "Left", "Right", "A", "B", "RUN", "SELECT")
+    val joystickLabels = listOf(FrontendR.string.kairo_up, FrontendR.string.kairo_down, FrontendR.string.kairo_left,
+        FrontendR.string.kairo_right).map { UiText.res(it) } + listOf("A", "B", "RUN", "SELECT").map(UiText::fixed)
 
     val bindings = ControllerBindingsCodec({ it in bindableCodes }, joystick,
         setOf("menu", "pause", "restart", "exit", "fastForward"))
