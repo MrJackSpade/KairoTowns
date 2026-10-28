@@ -14,6 +14,7 @@ import com.mrjackspade.kairo.frontend.NativeMachine
 import com.mrjackspade.kairo.frontend.StartupCommands
 import com.mrjackspade.kairo.frontend.UiText
 import com.mrjackspade.kairo.frontend.companionFor
+import com.mrjackspade.kairo.frontend.missingDisk
 import com.mrjackspade.kairo.frontend.R as FrontendR
 
 import java.io.File
@@ -95,12 +96,12 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
         // as a user disk.
         val floppy = when {
             isFloppy(entry) -> entry
-            isCd(entry) -> companionFor(game.mediaId("floppyA"), entry, launchEntries, UiText.res(R.string.companion_boot_floppy), ::isFloppy)
+            isCd(entry) -> companionFor(game.mediaId("floppyA"), entry, launchEntries, missingDisk(UiText.res(R.string.companion_boot_floppy)), ::isFloppy)
             else -> null
         }
         // A hard disk game's CD, and the hard disk installed beside a CD, as their sets hold them.
-        val cd = if (isCd(entry)) entry else companionFor(game.mediaId("cd"), entry, launchEntries, UiText.res(FrontendR.string.kairo_companion_cd), ::isCd)
-        val hardDisk = if (isHardDisk(entry)) entry else companionFor(null, entry, launchEntries, UiText.res(R.string.companion_hard_disk), ::isHardDisk)
+        val cd = if (isCd(entry)) entry else companionFor(game.mediaId("cd"), entry, launchEntries, missingDisk(UiText.res(FrontendR.string.kairo_companion_cd)), ::isCd)
+        val hardDisk = if (isHardDisk(entry)) entry else companionFor(null, entry, launchEntries, missingDisk(UiText.res(R.string.companion_hard_disk)), ::isHardDisk)
         val media = listOf(cd, floppy, null, hardDisk)
         val images = media.map { disk -> disk?.let { disks.prepare(it, cancelled, progress).absolutePath } }
         val home = File(filesDir, "tsugaru").apply { mkdirs() }
