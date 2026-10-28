@@ -3,79 +3,79 @@
 <resources>
     <!-- %1$s is the app's name, KairoTowns; %2$s the emulator it runs; %3$s its GitHub repository. -->
     <!-- EN: %1$s uses the %2$s emulator. Source and provenance: github.com/%3$s. -->
-    <string name="credits">%1$s uses the %2$s emulator. Source and provenance: github.com/%3$s.</string>
+    <string name="credits">%1$s usa o emulador %2$s. Código-fonte e procedência: github.com/%3$s.</string>
     <!-- EN: Choose a games folder to find CD and floppy images and the ZIP and 7z archives holding them -->
-    <string name="library_empty">Choose a games folder to find CD and floppy images and the ZIP and 7z archives holding them</string>
+    <string name="library_empty">Escolha uma pasta de jogos para encontrar imagens de CD e de disquete e os arquivos ZIP e 7z que as contêm</string>
     <!-- EN: Folder access expired. Select the games folder again. -->
-    <string name="library_expired">Folder access expired. Select the games folder again.</string>
+    <string name="library_expired">O acesso à pasta expirou. Selecione a pasta de jogos de novo.</string>
     <!-- EN: Choose a games folder -->
-    <string name="folder_title">Choose a games folder</string>
+    <string name="folder_title">Escolha uma pasta de jogos</string>
     <!-- %1$s is the machine's name, FM Towns; %2$s the app's name, KairoTowns. -->
     <!-- EN: Select the folder containing your %1$s games. %2$s will scan its CD and floppy images and the ZIP and 7z archives holding them. -->
-    <string name="folder_description">Select the folder containing your %1$s games. %2$s will scan its CD and floppy images and the ZIP and 7z archives holding them.</string>
+    <string name="folder_description">Selecione a pasta com seus jogos de %1$s. O %2$s vai verificar as imagens de CD e de disquete dela e os arquivos ZIP e 7z que as contêm.</string>
     <!-- EN: Choose games folder… -->
-    <string name="folder_button">Choose games folder…</string>
+    <string name="folder_button">Escolher pasta de jogos…</string>
     <!-- EN: SAVE STATES -->
-    <string name="saves_group">SAVE STATES</string>
+    <string name="saves_group">ESTADOS SALVOS</string>
     <!-- EN: The gamepad in game port 1. -->
-    <string name="joystick_help">The gamepad in game port 1.</string>
+    <string name="joystick_help">O gamepad na porta de jogo 1.</string>
     <!-- EN: Symbols -->
-    <string name="keyboard_symbols">Symbols</string>
+    <string name="keyboard_symbols">Símbolos</string>
     <!-- EN: CD-ROM -->
     <string name="cd_rom">CD-ROM</string>
     <!-- EN: Floppy disk -->
-    <string name="floppy_disk">Floppy disk</string>
+    <string name="floppy_disk">Disquete</string>
     <!-- EN: Hard disk -->
-    <string name="hard_disk">Hard disk</string>
+    <string name="hard_disk">Disco rígido</string>
     <!-- EN: Floppy A -->
-    <string name="floppy_a">Floppy A</string>
+    <string name="floppy_a">Disquete A</string>
     <!-- EN: Floppy B -->
-    <string name="floppy_b">Floppy B</string>
+    <string name="floppy_b">Disquete B</string>
     <!-- A disk a game needs beside the one it starts from, as "The %1$s this game needs is not in the library" names it. -->
     <!-- EN: boot floppy -->
-    <string name="companion_boot_floppy">boot floppy</string>
+    <string name="companion_boot_floppy">disquete de inicialização</string>
     <!-- EN: CD -->
     <string name="companion_cd">CD</string>
     <!-- EN: hard disk -->
-    <string name="companion_hard_disk">hard disk</string>
+    <string name="companion_hard_disk">disco rígido</string>
     <!-- EN: Startup commands -->
-    <string name="startup_commands">Startup commands</string>
+    <string name="startup_commands">Comandos de inicialização</string>
     <!-- EN: Lines to type, separated by ; -->
-    <string name="startup_commands_hint">Lines to type, separated by ;</string>
+    <string name="startup_commands_hint">Linhas a digitar, separadas por ;</string>
     <!-- A firmware file's description: %1$s is its file name; %2$s what it does. -->
     <!-- EN: %1$s · %2$s -->
     <string name="firmware_part">%1$s · %2$s</string>
     <!-- EN: System -->
-    <string name="firmware_system">System</string>
+    <string name="firmware_system">Sistema</string>
     <!-- EN: Font -->
-    <string name="firmware_font">Font</string>
+    <string name="firmware_font">Fonte</string>
     <!-- EN: Dictionary -->
-    <string name="firmware_dictionary">Dictionary</string>
+    <string name="firmware_dictionary">Dicionário</string>
     <!-- EN: Large font -->
-    <string name="firmware_large_font">Large font</string>
+    <string name="firmware_large_font">Fonte grande</string>
     <!-- %1$s is the machine's name, FM Towns. -->
     <!-- EN: the BIOS that starts the %1$s -->
-    <string name="firmware_system_description">the BIOS that starts the %1$s</string>
+    <string name="firmware_system_description">a BIOS que inicia o %1$s</string>
     <!-- EN: the built-in DOS that CD games boot through -->
-    <string name="firmware_dos_description">the built-in DOS that CD games boot through</string>
+    <string name="firmware_dos_description">o DOS integrado pelo qual os jogos em CD dão boot</string>
     <!-- EN: the text and kanji font -->
-    <string name="firmware_font_description">the text and kanji font</string>
+    <string name="firmware_font_description">a fonte de texto e kanji</string>
     <!-- EN: kana-to-kanji dictionary for Japanese text -->
-    <string name="firmware_dictionary_description">kana-to-kanji dictionary for Japanese text</string>
+    <string name="firmware_dictionary_description">dicionário de kana para kanji para texto em japonês</string>
     <!-- EN: a 20-dot font some games use -->
-    <string name="firmware_large_font_description">a 20-dot font some games use</string>
+    <string name="firmware_large_font_description">uma fonte de 20 pontos usada por alguns jogos</string>
     <!-- EN: the emulator could not read or write the state -->
-    <string name="state_error_io">the emulator could not read or write the state</string>
+    <string name="state_error_io">o emulador não conseguiu ler nem gravar o estado</string>
     <!-- %1$d is the emulator's error code. -->
     <!-- EN: code %1$d -->
-    <string name="state_error_code">code %1$d</string>
+    <string name="state_error_code">código %1$d</string>
     <!-- EN: Memory -->
-    <string name="option_memory">Memory</string>
+    <string name="option_memory">Memória</string>
     <!-- %1$d is a size in megabytes. -->
     <!-- EN: %1$d MB -->
     <string name="memory_mb">%1$d MB</string>
     <!-- EN: CPU clock -->
-    <string name="option_clock">CPU clock</string>
+    <string name="option_clock">Clock da CPU</string>
     <!-- %1$d is a clock speed in megahertz. -->
     <!-- EN: %1$d MHz -->
     <string name="clock_mhz">%1$d MHz</string>
