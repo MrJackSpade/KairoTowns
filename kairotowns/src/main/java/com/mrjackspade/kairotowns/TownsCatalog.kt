@@ -15,9 +15,7 @@ import org.json.JSONArray
  */
 object TownsCatalog : LayeredGameCatalog.Schema {
     override val platform = "fmtowns"
-    override val updateUrl = "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/core-v3.json"
-    override val metadataUrl = "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/core-v3.meta.json"
-    override val coreVersion = 3
+    override val catalogUrl = "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/"
     override val selfHostedArt = "/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/"
     override val contentId = Regex("sha256-(?:cd|fd|hd)-v1:[0-9a-f]{64}")
     override val mediaExtensions = Regex("\\.(?:zip|7z|ccd|cue|mds|iso|img|bin|mdf|d77|d88|88d|hdm|h[0-6])$", RegexOption.IGNORE_CASE)
