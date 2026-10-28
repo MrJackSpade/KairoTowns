@@ -67,10 +67,12 @@ object TownsKeys {
             GuestKeyboardPage("?123", JisMainBlock.symbolRows(), pickerLabel = UiText.res(FrontendR.string.kairo_keyboard_symbols)),
             GuestKeyboardPage("Towns", townsRows())
         ),
-        modifiers = setOf(SHIFT, CTRL, ALT),
+        modifiers = setOf(SHIFT, CTRL, ALT, CAPS, KATAKANA),
         shiftCodes = setOf(SHIFT),
-        capsCode = null,
-        chordShiftCode = SHIFT
+        // CAPS and カタカナ lock, each with its light; with カタカナ on the keys show their kana (JisMainBlock).
+        capsCode = CAPS,
+        chordShiftCode = SHIFT,
+        kanaCode = KATAKANA
     )
 
     private fun townsRows(): List<List<KeyboardKey>> = listOf(
