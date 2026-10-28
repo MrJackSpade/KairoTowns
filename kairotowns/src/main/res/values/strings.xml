@@ -19,6 +19,10 @@
     <string name="hard_disk">Hard disk</string>
     <string name="floppy_a">Floppy A</string>
     <string name="floppy_b">Floppy B</string>
+    <!-- A disk a game needs beside the one it starts from, as "The %1$s this game needs is not in the library" names it. -->
+    <string name="companion_boot_floppy">boot floppy</string>
+    <string name="companion_cd">CD</string>
+    <string name="companion_hard_disk">hard disk</string>
     <string name="startup_commands">Startup commands</string>
     <string name="startup_commands_hint">Lines to type, separated by ;</string>
 
