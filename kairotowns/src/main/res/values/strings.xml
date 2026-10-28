@@ -4,33 +4,20 @@
     <!-- %1$s is the app's name, KairoTowns; %2$s the emulator it runs; %3$s its GitHub repository. -->
     <string name="credits">%1$s uses the %2$s emulator. Source and provenance: github.com/%3$s.</string>
     <string name="library_empty">Choose a games folder to find CD and floppy images and the ZIP and 7z archives holding them</string>
-    <string name="library_expired">Folder access expired. Select the games folder again.</string>
-    <string name="folder_title">Choose a games folder</string>
     <!-- %1$s is the machine's name, FM Towns; %2$s the app's name, KairoTowns. -->
     <string name="folder_description">Select the folder containing your %1$s games. %2$s will scan its CD and floppy images and the ZIP and 7z archives holding them.</string>
-    <string name="folder_button">Choose games folder…</string>
-    <string name="saves_group">SAVE STATES</string>
 
     <string name="joystick_help">The gamepad in game port 1.</string>
-    <string name="keyboard_symbols">Symbols</string>
 
-    <string name="cd_rom">CD-ROM</string>
-    <string name="floppy_disk">Floppy disk</string>
-    <string name="hard_disk">Hard disk</string>
     <string name="floppy_a">Floppy A</string>
     <string name="floppy_b">Floppy B</string>
     <!-- A disk a game needs beside the one it starts from, as "The %1$s this game needs is not in the library" names it. -->
     <string name="companion_boot_floppy">boot floppy</string>
-    <string name="companion_cd">CD</string>
     <string name="companion_hard_disk">hard disk</string>
-    <string name="startup_commands">Startup commands</string>
     <string name="startup_commands_hint">Lines to type, separated by ;</string>
 
-    <!-- A firmware file's description: %1$s is its file name; %2$s what it does. -->
-    <string name="firmware_part">%1$s · %2$s</string>
     <string name="firmware_system">System</string>
     <string name="firmware_font">Font</string>
-    <string name="firmware_dictionary">Dictionary</string>
     <string name="firmware_large_font">Large font</string>
     <!-- %1$s is the machine's name, FM Towns. -->
     <string name="firmware_system_description">the BIOS that starts the %1$s</string>
@@ -40,10 +27,4 @@
     <string name="firmware_large_font_description">a 20-dot font some games use</string>
 
 
-    <string name="option_memory">Memory</string>
-    <!-- %1$d is a size in megabytes. -->
-    <string name="memory_mb">%1$d MB</string>
-    <string name="option_clock">CPU clock</string>
-    <!-- %1$d is a clock speed in megahertz. -->
-    <string name="clock_mhz">%1$d MHz</string>
 </resources>

@@ -64,7 +64,7 @@ object TownsKeys {
             GuestKeyboardPage("ABC", JisMainBlock.alphabetRows(CTRL, SHIFT, listOf(KeyboardKey("Caps", CAPS),
                 KeyboardKey("Alt", ALT), KeyboardKey("Kana", KATAKANA), KeyboardKey("Space", SPACE, 5f),
                 KeyboardKey("Exec", EXECUTE), KeyboardKey("Cancel", CANCEL)))),
-            GuestKeyboardPage("?123", JisMainBlock.symbolRows(), pickerLabel = UiText.res(R.string.keyboard_symbols)),
+            GuestKeyboardPage("?123", JisMainBlock.symbolRows(), pickerLabel = UiText.res(FrontendR.string.kairo_keyboard_symbols)),
             GuestKeyboardPage("Towns", townsRows())
         ),
         modifiers = setOf(SHIFT, CTRL, ALT),

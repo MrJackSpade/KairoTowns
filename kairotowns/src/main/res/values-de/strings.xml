@@ -6,27 +6,11 @@
     <string name="credits">%1$s verwendet den Emulator %2$s. Quellcode und Herkunft: github.com/%3$s.</string>
     <!-- EN: Choose a games folder to find CD and floppy images and the ZIP and 7z archives holding them -->
     <string name="library_empty">Wählen Sie einen Spieleordner, um CD- und Diskettenabbilder und die ZIP- und 7z-Archive mit ihnen zu finden</string>
-    <!-- EN: Folder access expired. Select the games folder again. -->
-    <string name="library_expired">Der Ordnerzugriff ist abgelaufen. Wählen Sie den Spieleordner erneut aus.</string>
-    <!-- EN: Choose a games folder -->
-    <string name="folder_title">Spieleordner auswählen</string>
     <!-- %1$s is the machine's name, FM Towns; %2$s the app's name, KairoTowns. -->
     <!-- EN: Select the folder containing your %1$s games. %2$s will scan its CD and floppy images and the ZIP and 7z archives holding them. -->
     <string name="folder_description">Wählen Sie den Ordner mit Ihren %1$s-Spielen. %2$s durchsucht seine CD- und Diskettenabbilder und die ZIP- und 7z-Archive mit ihnen.</string>
-    <!-- EN: Choose games folder… -->
-    <string name="folder_button">Spieleordner auswählen…</string>
-    <!-- EN: SAVE STATES -->
-    <string name="saves_group">SPEICHERSTÄNDE</string>
     <!-- EN: The gamepad in game port 1. -->
     <string name="joystick_help">Das Gamepad an Spieleport 1.</string>
-    <!-- EN: Symbols -->
-    <string name="keyboard_symbols">Symbole</string>
-    <!-- EN: CD-ROM -->
-    <string name="cd_rom">CD-ROM</string>
-    <!-- EN: Floppy disk -->
-    <string name="floppy_disk">Diskette</string>
-    <!-- EN: Hard disk -->
-    <string name="hard_disk">Festplatte</string>
     <!-- EN: Floppy A -->
     <string name="floppy_a">Diskette A</string>
     <!-- EN: Floppy B -->
@@ -34,23 +18,14 @@
     <!-- A disk a game needs beside the one it starts from, as "The %1$s this game needs is not in the library" names it. -->
     <!-- EN: boot floppy -->
     <string name="companion_boot_floppy">Boot-Diskette</string>
-    <!-- EN: CD -->
-    <string name="companion_cd">CD</string>
     <!-- EN: hard disk -->
     <string name="companion_hard_disk">Festplatte</string>
-    <!-- EN: Startup commands -->
-    <string name="startup_commands">Startbefehle</string>
     <!-- EN: Lines to type, separated by ; -->
     <string name="startup_commands_hint">Einzugebende Zeilen, getrennt durch ;</string>
-    <!-- A firmware file's description: %1$s is its file name; %2$s what it does. -->
-    <!-- EN: %1$s · %2$s -->
-    <string name="firmware_part">%1$s · %2$s</string>
     <!-- EN: System -->
     <string name="firmware_system">System</string>
     <!-- EN: Font -->
     <string name="firmware_font">Schriftart</string>
-    <!-- EN: Dictionary -->
-    <string name="firmware_dictionary">Wörterbuch</string>
     <!-- EN: Large font -->
     <string name="firmware_large_font">Große Schrift</string>
     <!-- %1$s is the machine's name, FM Towns. -->
@@ -64,14 +39,4 @@
     <string name="firmware_dictionary_description">Kana-zu-Kanji-Wörterbuch für japanischen Text</string>
     <!-- EN: a 20-dot font some games use -->
     <string name="firmware_large_font_description">eine 20-Punkt-Schrift, die manche Spiele nutzen</string>
-    <!-- EN: Memory -->
-    <string name="option_memory">Arbeitsspeicher</string>
-    <!-- %1$d is a size in megabytes. -->
-    <!-- EN: %1$d MB -->
-    <string name="memory_mb">%1$d MB</string>
-    <!-- EN: CPU clock -->
-    <string name="option_clock">CPU-Takt</string>
-    <!-- %1$d is a clock speed in megahertz. -->
-    <!-- EN: %1$d MHz -->
-    <string name="clock_mhz">%1$d MHz</string>
 </resources>

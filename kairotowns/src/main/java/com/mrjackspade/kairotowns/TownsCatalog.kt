@@ -1,5 +1,6 @@
 package com.mrjackspade.kairotowns
 
+import com.mrjackspade.kairo.frontend.R as FrontendR
 import com.mrjackspade.kairo.frontend.CatalogSetting
 import com.mrjackspade.kairo.frontend.ChoiceOption
 import com.mrjackspade.kairo.frontend.LayeredGameCatalog
@@ -20,20 +21,20 @@ object TownsCatalog : LayeredGameCatalog.Schema {
     override val contentId = Regex("sha256-(?:cd|fd|hd)-v1:[0-9a-f]{64}")
     override val mediaExtensions = Regex("\\.(?:zip|7z|ccd|cue|mds|iso|img|bin|mdf|d77|d88|88d|hdm|h[0-6])$", RegexOption.IGNORE_CASE)
 
-    val memory = MachineOption("memory", UiText.res(R.string.option_memory),
-        listOf(2, 4, 6, 8, 12, 16).map { ChoiceOption("$it", UiText.res(R.string.memory_mb, it)) }, "6", numeric = true)
-    val cpu = MachineOption("cpu", UiText.res(R.string.option_clock),
-        listOf(16, 20, 25, 33, 40, 66).map { ChoiceOption("$it", UiText.res(R.string.clock_mhz, it)) }, "40", numeric = true)
+    val memory = MachineOption("memory", UiText.res(FrontendR.string.kairo_option_memory),
+        listOf(2, 4, 6, 8, 12, 16).map { ChoiceOption("$it", UiText.res(FrontendR.string.kairo_memory_mb, it)) }, "6", numeric = true)
+    val cpu = MachineOption("cpu", UiText.res(FrontendR.string.kairo_option_clock),
+        listOf(16, 20, 25, 33, 40, 66).map { ChoiceOption("$it", UiText.res(FrontendR.string.kairo_clock_mhz, it)) }, "40", numeric = true)
     val skipMemoryCheck = MachineOption.skipMemoryCheck()
     val options = listOf(memory, cpu, skipMemoryCheck)
 
     /** The lines typed at DOS's prompt to start the game, such as a hard disk's `CD \GAME` and `GAME`. */
-    val startupCommands = CatalogSetting.Lines(LAUNCH, COMMANDS, UiText.res(R.string.startup_commands),
+    val startupCommands = CatalogSetting.Lines(LAUNCH, COMMANDS, UiText.res(FrontendR.string.kairo_startup_commands),
         UiText.res(R.string.startup_commands_hint), Regex("[ -~]{1,120}"), 8) { _, _ -> emptyList() }
 
     override val settings: List<CatalogSetting> = options.map(CatalogSetting::Choice) +
         CatalogSetting.Drive("floppyA", UiText.res(R.string.floppy_a)) { it.startsWith(CD) } +
-        CatalogSetting.Drive("cd", UiText.res(R.string.cd_rom)) { it.startsWith(HARD_DISK) } + startupCommands
+        CatalogSetting.Drive("cd", UiText.res(FrontendR.string.kairo_cd_rom)) { it.startsWith(HARD_DISK) } + startupCommands
     override val fields = CatalogSetting.fields(settings)
 
     override fun validMedia(role: String, contentId: String) =
