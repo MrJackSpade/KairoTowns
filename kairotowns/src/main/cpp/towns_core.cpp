@@ -75,6 +75,8 @@ public:
     }
 
     void mouse_move(int dx, int dy) override { machine_->mouse_move(dx, dy); }
+    void mouse_warp(int x, int y) override { machine_->mouse_warp(x, y); }
+    bool mouse_warp_done() override { return machine_->mouse_warp_done(); }
     void mouse_button(int button, bool down) override { machine_->mouse_button(button, down); }
 
     void reset() override { machine_->reset(); }

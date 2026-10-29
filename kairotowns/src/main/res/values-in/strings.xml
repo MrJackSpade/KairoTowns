@@ -11,6 +11,8 @@
     <string name="folder_description">Pilih folder yang berisi game %1$s Anda. %2$s akan memindai image CD dan disket di dalamnya serta arsip ZIP dan 7z yang berisi image tersebut.</string>
     <!-- EN: The gamepad in game port 1. -->
     <string name="joystick_help">Gamepad di port game 1.</string>
+    <!-- EN: Direct tap lands on the touched point in games that use the FM Towns mouse BIOS. -->
+    <string name="touch_direct_explanation">Ketuk langsung mendarat di titik yang disentuh pada game yang memakai BIOS mouse FM Towns.</string>
     <!-- EN: Floppy A -->
     <string name="floppy_a">Disket A</string>
     <!-- EN: Floppy B -->

@@ -11,6 +11,8 @@
     <string name="folder_description">Selecciona la carpeta que contiene tus juegos de %1$s. %2$s analizará sus imágenes de CD y disquete y los archivos ZIP y 7z que las contienen.</string>
     <!-- EN: The gamepad in game port 1. -->
     <string name="joystick_help">El control del puerto de juegos 1.</string>
+    <!-- EN: Direct tap lands on the touched point in games that use the FM Towns mouse BIOS. -->
+    <string name="touch_direct_explanation">El toque directo cae en el punto tocado en los juegos que usan la BIOS de ratón del FM Towns.</string>
     <!-- EN: Floppy A -->
     <string name="floppy_a">Disquete A</string>
     <!-- EN: Floppy B -->

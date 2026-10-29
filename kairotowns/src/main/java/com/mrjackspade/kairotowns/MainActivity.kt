@@ -31,6 +31,7 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
         UiText.res(FrontendR.string.kairo_saves_group), "MrJackSpade/KairoTowns")
     override val machine = Machine(640, 480, 4.0 / 3.0, "state.tss")
     override val bridge by lazy { NativeMachine("kairotowns") }
+    override val directTouchExplanation = UiText.res(R.string.touch_direct_explanation)
     override val keyboard = TownsKeys.layout
     override val maxKeyCode = TownsKeys.MAX_CODE
     override fun guestKey(androidKey: Int) = TownsKeys.fromAndroid(androidKey)

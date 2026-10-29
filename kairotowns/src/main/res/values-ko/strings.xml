@@ -11,6 +11,8 @@
     <string name="folder_description">%1$s 게임이 들어 있는 폴더를 선택하세요. %2$s이(가) CD 및 플로피 이미지와 이를 담은 ZIP 및 7z 압축 파일을 스캔합니다.</string>
     <!-- EN: The gamepad in game port 1. -->
     <string name="joystick_help">게임 포트 1의 게임패드입니다.</string>
+    <!-- EN: Direct tap lands on the touched point in games that use the FM Towns mouse BIOS. -->
+    <string name="touch_direct_explanation">직접 탭은 FM Towns 마우스 BIOS를 사용하는 게임에서 터치한 지점에 닿습니다.</string>
     <!-- EN: Floppy A -->
     <string name="floppy_a">플로피 A</string>
     <!-- EN: Floppy B -->

@@ -36,6 +36,8 @@ object TownsCatalog : LayeredGameCatalog.Schema {
         CatalogSetting.Drive("floppyA", UiText.res(R.string.floppy_a)) { it.startsWith(CD) } +
         CatalogSetting.Drive("cd", UiText.res(FrontendR.string.kairo_cd_rom)) { it.startsWith(HARD_DISK) } + startupCommands
     override val fields = CatalogSetting.fields(settings)
+    /** Tsugaru moves the guest's TBIOS mouse pointer to a point (TownsMachine::mouse_warp). */
+    override val directTouch = true
 
     override fun validMedia(role: String, contentId: String) =
         role == "floppyA" && contentId.startsWith(FLOPPY) || role == "cd" && contentId.startsWith(CD)

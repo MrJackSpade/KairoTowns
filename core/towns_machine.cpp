@@ -521,6 +521,13 @@ struct TownsMachine::Impl {
     unsigned pad = 0;
     bool buttons[2] = {false, false};
     int mouse_dx = 0, mouse_dy = 0;
+    // Direct touch (TownsMachine::mouse_warp): the frame point the TBIOS pointer is heading for, and
+    // polls since the pointer last moved. A guest clamps its pointer at its own limits, so a pointer
+    // that stops short has gone as far as it can.
+    enum class Warp { kNone, kMoving, kUnreachable } warp = Warp::kNone;
+    int warp_x = 0, warp_y = 0;
+    int warp_mx = 0, warp_my = 0, warp_still = 0;
+    static constexpr int kWarpStill = 30;
 
     // Gives the guest the held pad and mouse, as Outside_World::DevicePolling would.
     void poll_devices() {
@@ -528,13 +535,36 @@ struct TownsMachine::Impl {
         t.SetGamePadState(0, pad & PAD_A, pad & PAD_B, pad & PAD_LEFT, pad & PAD_RIGHT, pad & PAD_UP, pad & PAD_DOWN,
                           pad & PAD_RUN, pad & PAD_SELECT, false);
         t.SetMouseButtonState(buttons[0], buttons[1]);
-        if (mouse_dx || mouse_dy) {
+        if (warp == Warp::kMoving) {
+            steer_warp();
+        } else if (mouse_dx || mouse_dy) {
             const int dx = std::clamp(mouse_dx, -127, 127), dy = std::clamp(mouse_dy, -127, 127);
             t.ControlMouseByDiffDirect(dx, dy);
             mouse_dx -= dx;
             mouse_dy -= dy;
         }
         t.rex3586.Polling();
+    }
+
+    // One poll of a warp: Tsugaru's mouse integration reads the TBIOS pointer and moves it toward the
+    // point. Without the TBIOS mouse running nothing knows where the pointer is, and the warp never
+    // arrives, so the tap's click is not sent.
+    void steer_warp() {
+        auto &t = *towns;
+        int diff_x, diff_y, mx, my;
+        if (!t.ControlMouse(diff_x, diff_y, warp_x, warp_y, t.state.tbiosVersion) ||
+            !t.GetMouseCoordinate(mx, my, t.state.tbiosVersion)) {
+            warp = Warp::kUnreachable;
+            return;
+        }
+        if (mx == warp_mx && my == warp_my) ++warp_still;
+        else warp_still = 0;
+        warp_mx = mx;
+        warp_my = my;
+        if ((diff_x == 0 && diff_y == 0) || warp_still >= kWarpStill) {
+            t.DontControlMouse();
+            warp = Warp::kNone;
+        }
     }
 
     // A new picture once a 60 Hz rendering slot has come, outside vertical sync.
@@ -580,6 +610,13 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
         parameters.cdImgFName.clear();
     }
     parameters.memSizeInMB = config.memory_mb;
+    if (!config.app.empty()) {
+        parameters.appSpecificSetting = TownsStrToApp(config.app);
+        if (parameters.appSpecificSetting == TOWNS_APPSPECIFIC_NONE) {
+            error = "Tsugaru has no game setting named " + config.app;
+            return nullptr;
+        }
+    }
     parameters.freq = config.cpu_mhz;
     // Booting until the first disk read: run_frame runs it as fast as it can when skipping the memory check.
     parameters.noWait = config.skip_memory_check;
@@ -921,9 +958,25 @@ void TownsMachine::key(int code, bool down) {
 void TownsMachine::pad(unsigned buttons) { impl_->pad = buttons; }
 
 void TownsMachine::mouse_move(int dx, int dy) {
+    // A drag after a direct tap moves the point the warp heads for.
+    if (impl_->warp == Impl::Warp::kMoving) {
+        impl_->warp_x += dx;
+        impl_->warp_y += dy;
+        return;
+    }
     impl_->mouse_dx += dx;
     impl_->mouse_dy += dy;
 }
+
+void TownsMachine::mouse_warp(int x, int y) {
+    impl_->warp = Impl::Warp::kMoving;
+    impl_->warp_x = x;
+    impl_->warp_y = y;
+    impl_->warp_still = 0;
+    impl_->mouse_dx = impl_->mouse_dy = 0;
+}
+
+bool TownsMachine::mouse_warp_done() const { return impl_->warp == Impl::Warp::kNone; }
 
 void TownsMachine::mouse_button(int button, bool down) {
     if (button == 1 || button == 2) impl_->buttons[button - 1] = down;

@@ -11,6 +11,8 @@
     <string name="folder_description">اختر المجلد الذي يحتوي على ألعاب %1$s. سيفحص %2$s صور الأقراص المضغوطة والمرنة فيه وأرشيفات ZIP و7z التي تحتويها.</string>
     <!-- EN: The gamepad in game port 1. -->
     <string name="joystick_help">ذراع التحكم في منفذ الألعاب 1.</string>
+    <!-- EN: Direct tap lands on the touched point in games that use the FM Towns mouse BIOS. -->
+    <string name="touch_direct_explanation">تصل النقرة المباشرة إلى النقطة الملموسة في الألعاب التي تستخدم BIOS الفأرة في FM Towns.</string>
     <!-- EN: Floppy A -->
     <string name="floppy_a">القرص المرن A</string>
     <!-- EN: Floppy B -->

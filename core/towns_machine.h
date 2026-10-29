@@ -50,6 +50,9 @@ struct Config {
     // It changes nothing the guest does. Off by default: it is not yet faster where it matters
     // and stalls frames while it translates (KairoTowns#19).
     bool jit = false;
+    // Tsugaru's per-game setting by its name (TownsStrToApp: "ULTIMAUNDERWORLD", "BRANDISH", ...),
+    // such as the memory a game keeps its own mouse pointer in; "" for none.
+    std::string app;
 };
 
 // The gamepad in game port 0. A, B, RUN and SELECT are the pad's buttons.
@@ -89,6 +92,12 @@ public:
     void pad(unsigned buttons);
     // The mouse in port 1: motion in mickeys, and button 1 (left) or 2 (right).
     void mouse_move(int dx, int dy);
+    // Direct touch: moves the guest's TBIOS mouse pointer to frame point (x, y) over the next polls,
+    // through Tsugaru's mouse integration. A guest without the TBIOS mouse running cannot be moved
+    // there, and the warp never finishes.
+    void mouse_warp(int x, int y);
+    // Whether the pointer reached the last warp's point, or stopped where the guest clamps it.
+    bool mouse_warp_done() const;
     void mouse_button(int button, bool down);
 
     // Host time run_frame() has spent since the machine started, in all and in its parts, for
