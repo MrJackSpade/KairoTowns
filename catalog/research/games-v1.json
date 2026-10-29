@@ -177,6 +177,9 @@
     "fmtowns-cd:Ambivalenz (1994)(Alice Soft)(Jp)[+BootDisk].zip"
    ],
    "title": "AmbivalenZ: Niritsu Haihan",
+   "titles": {
+    "ja": "AmbivalenZ -二律背反-"
+   },
    "year": 1994
   },
   "fmtowns:124836": {
@@ -538,7 +541,10 @@
    "sourceGroups": [
     "fmtowns-cd:Ultima VI - The False Prophet (1990)(Origins)(Jp-En)[+UserDisk].zip"
    ],
-   "title": "Ultima VI: The False Prophet"
+   "title": "Ultima VI: The False Prophet",
+   "titles": {
+    "ja": "ウルティマVI 偽りの予言者"
+   }
   },
   "fmtowns:145236": {
    "boxArtUrl": "https://images.launchbox-app.com/32bc2f71-b223-4ea1-87e8-fca455ad756d.jpg",
@@ -640,6 +646,9 @@
    "publisher": "ZyX",
    "screenshotUrl": "https://images.launchbox-app.com/4fcd470a-26f6-45f5-8e54-0cc16c5a0d40.png",
    "title": "Ikazuchi no Senshi Raidy 2",
+   "titles": {
+    "ja": "雷の戦士ライディ２"
+   },
    "year": 1996
   },
   "fmtowns:146764": {
@@ -1382,7 +1391,10 @@
    "sourceGroups": [
     "fmtowns-cd:Desire (1994)(Cs Ware)(Jp).zip"
    ],
-   "title": "Desire"
+   "title": "Desire",
+   "titles": {
+    "ja": "DESIRE 背徳の螺旋"
+   }
   },
   "fmtowns:177879": {
    "boxArtUrl": "https://images.launchbox-app.com/c15ee296-a9c2-4004-947a-4dd7744bb053.jpg",
@@ -1430,7 +1442,10 @@
    "sourceGroups": [
     "fmtowns-cd:Idol Project (1995)(KSS)(Jp)[+SystemDisk].zip"
    ],
-   "title": "Idol Project"
+   "title": "Idol Project",
+   "titles": {
+    "ja": "アイドル・プロジェクト"
+   }
   },
   "fmtowns:182654": {
    "aliases": [
@@ -1507,7 +1522,10 @@
    "sourceGroups": [
     "fmtowns-cd:Secret of the Blue Water, The (1991)(Toho)(Jp).zip"
    ],
-   "title": "Fushigi no Umi no Nadia: The Secret of the Blue Water"
+   "title": "Fushigi no Umi no Nadia: The Secret of the Blue Water",
+   "titles": {
+    "ja": "ふしぎの海のナディア"
+   }
   },
   "fmtowns:182659": {
    "aliases": [
@@ -1532,7 +1550,10 @@
    "mobygames": 58496,
    "publisher": "CSK Research Institute",
    "screenshotUrl": "https://images.launchbox-app.com/365ee2c7-94c8-4ae0-a1bb-b65f6138539d.png",
-   "title": "Lupin the Third: Hong Kong no mashu"
+   "title": "Lupin the Third: Hong Kong no mashu",
+   "titles": {
+    "ja": "ルパン三世 香港の魔手 復讐は迷宮の果てに"
+   }
   },
   "fmtowns:182660": {
    "aliases": [
@@ -1629,7 +1650,10 @@
    "mobygames": 58062,
    "publisher": "Data West",
    "screenshotUrl": "https://images.launchbox-app.com/e4ea52cb-c366-4daf-ae7f-cc12fe6f8709.png",
-   "title": "The 4th Unit Act.3: Dual Targets"
+   "title": "The 4th Unit Act.3: Dual Targets",
+   "titles": {
+    "ja": "デュアルターゲット -第４のユニット３-"
+   }
   },
   "fmtowns:183541": {
    "aliases": [
@@ -1677,7 +1701,10 @@
    "mobygames": 58086,
    "publisher": "Data West",
    "screenshotUrl": "https://images.launchbox-app.com/a43bd5b2-7376-4a86-b8c3-9bef604dde65.png",
-   "title": "The 4th Unit Five: D-Again"
+   "title": "The 4th Unit Five: D-Again",
+   "titles": {
+    "ja": "第４のユニット５ Ｄ－Ａｇａｉｎ"
+   }
   },
   "fmtowns:183543": {
    "aliases": [
@@ -1701,6 +1728,9 @@
    "publisher": "Data West",
    "screenshotUrl": "https://images.launchbox-app.com/4ab56b45-2e48-40db-865e-9d89bd9776e2.png",
    "title": "The 4th Unit Series: Merrygoround",
+   "titles": {
+    "ja": "第４のユニット ＭＥＲＲＹ ＧＯ ＲＯＵＮＤ"
+   },
    "year": 1990
   },
   "fmtowns:183545": {
@@ -1725,6 +1755,9 @@
    "publisher": "Data West",
    "screenshotUrl": "https://images.launchbox-app.com/f9285a4d-9990-4009-8d07-8d5feacd0111.png",
    "title": "The 4th Unit Series: Wyatt",
+   "titles": {
+    "ja": "第４のユニット ＷＹＡＴＴ"
+   },
    "year": 1992
   },
   "fmtowns:183859": {
@@ -1776,6 +1809,9 @@
     "fmtowns-cd:3x3 Eyes (1993)(Nihon Create)(Jp)[+UserDisk].zip"
    ],
    "title": "3x3 Eyes: Sanjiyan Henjyo",
+   "titles": {
+    "ja": "3x3 EYES ～三只眼變成～"
+   },
    "year": 1993
   },
   "fmtowns:184100": {
@@ -1853,7 +1889,10 @@
    "sourceGroups": [
     "fmtowns-cd:De.FaNa (1995)(Himeya Soft)(Jp).zip"
    ],
-   "title": "De. FaNa"
+   "title": "De. FaNa",
+   "titles": {
+    "ja": "デ・ファーナ"
+   }
   },
   "fmtowns:184103": {
    "boxArtUrl": "https://images.launchbox-app.com/76bd26e6-b09f-4932-b5ba-9fdefbf110ac.jpg",
@@ -1879,7 +1918,10 @@
    "sourceGroups": [
     "fmtowns-cd:Dragon Half (1994)(MicroCabin)(Jp).zip"
    ],
-   "title": "Dragon Half"
+   "title": "Dragon Half",
+   "titles": {
+    "ja": "ドラゴンハーフ"
+   }
   },
   "fmtowns:184107": {
    "boxArtUrl": "https://images.launchbox-app.com/a4e51967-9834-41f8-8b11-5add7f7e016c.jpg",
@@ -1959,7 +2001,10 @@
    "sourceGroups": [
     "fmtowns-cd:Silent Mobius (1991)(Gainax)(Jp).zip"
    ],
-   "title": "Silent Möbius: Case: Titanic"
+   "title": "Silent Möbius: Case: Titanic",
+   "titles": {
+    "ja": "サイレントメビウス"
+   }
   },
   "fmtowns:184111": {
    "aliases": [
@@ -2026,7 +2071,10 @@
    "launchbox": "184136",
    "mobygames": 47395,
    "publisher": "Cocktail Soft",
-   "title": "Dengeki Nurse"
+   "title": "Dengeki Nurse",
+   "titles": {
+    "ja": "電撃ナース"
+   }
   },
   "fmtowns:184138": {
    "aliases": [
@@ -2492,6 +2540,9 @@
     "fmtowns-cd:Ikazuchi no Sensi Laidi (1994)(ZyX)(Jp).zip"
    ],
    "title": "Lightning Warrior Raidy",
+   "titles": {
+    "ja": "雷の戦士ライディ"
+   },
    "year": 1994
   },
   "fmtowns:184375": {
@@ -2960,6 +3011,9 @@
     "fmtowns-cd:Yumimi Mix (1993)(CRI)(Jp).zip"
    ],
    "title": "Yumimi Mix",
+   "titles": {
+    "ja": "ゆみみみっくす"
+   },
    "year": 1993
   },
   "fmtowns:184598": {
@@ -4009,7 +4063,10 @@
    "sourceGroups": [
     "fmtowns-cd:Youju Senki AD2048 (Adult)(19xx)(DO)(Jp)[+UserDisk].zip"
    ],
-   "title": "Youjuu Senki: A.D. 2048"
+   "title": "Youjuu Senki: A.D. 2048",
+   "titles": {
+    "ja": "妖獣戦記 －Ａ．Ｄ．２０４８－"
+   }
   },
   "fmtowns:185084": {
    "aliases": [
@@ -4031,6 +4088,9 @@
    "launchbox": "185084",
    "publisher": "D.O.",
    "title": "Zoku Youjuu Senki: Sajin no Mokushiroku",
+   "titles": {
+    "ja": "続妖獣戦記 －砂塵の黙示録－"
+   },
    "year": 1994
   },
   "fmtowns:185085": {
@@ -4052,7 +4112,10 @@
    "developer": "D.O.",
    "launchbox": "185085",
    "publisher": "D.O.",
-   "title": "Youjuu Senki 2"
+   "title": "Youjuu Senki 2",
+   "titles": {
+    "ja": "妖獣戦記２ -黎明の戦士たち-"
+   }
   },
   "fmtowns:185086": {
    "adult": true,
@@ -4230,6 +4293,9 @@
    "launchbox": "185092",
    "publisher": "Tokuma Shoten",
    "title": "Shinjuku Labyrinth",
+   "titles": {
+    "ja": "新宿ラビリンス"
+   },
    "year": 1994
   },
   "fmtowns:185093": {
@@ -4346,7 +4412,10 @@
    "mobygames": 48394,
    "publisher": "System Sacom",
    "screenshotUrl": "https://images.launchbox-app.com/1c4da994-ba19-4b6e-801d-d4cddddc1c65.png",
-   "title": "38 Man Kilo No Kokuu"
+   "title": "38 Man Kilo No Kokuu",
+   "titles": {
+    "ja": "38万キロの虚空"
+   }
   },
   "fmtowns:185134": {
    "boxArtUrl": "https://images.launchbox-app.com/6b0e76d0-7121-4be7-b2c8-c9b7a93a30bd.jpg",
@@ -4428,7 +4497,10 @@
    "mobygames": 42900,
    "publisher": "D.O.",
    "screenshotUrl": "https://images.launchbox-app.com/f7d93c96-02cf-4219-8603-2892a7ea86a8.png",
-   "title": "Crystal Rinal"
+   "title": "Crystal Rinal",
+   "titles": {
+    "ja": "クリスタルリナール －逢魔の迷宮－"
+   }
   },
   "fmtowns:185177": {
    "aliases": [
@@ -4512,6 +4584,9 @@
    "launchbox": "185644",
    "publisher": "Family Soft",
    "title": "Para Para Paradise",
+   "titles": {
+    "ja": "ぱらＰＡＲＡパラダイス"
+   },
    "year": 1997
   },
   "fmtowns:186476": {
@@ -4733,7 +4808,10 @@
    "sourceGroups": [
     "fmtowns-cd:Angel Halo (1996)(Active)(Jp)[+BootDisk].zip"
    ],
-   "title": "Angel Halo"
+   "title": "Angel Halo",
+   "titles": {
+    "ja": "Angel Halo－エンジェル・ハイロウ－"
+   }
   },
   "fmtowns:187741": {
    "adult": true,
@@ -4755,6 +4833,9 @@
    "publisher": "FairyTale",
    "screenshotUrl": "https://images.launchbox-app.com/23e50cac-c1f0-4c17-9d12-5efb2465002b.png",
    "title": "Arabesque: Shoujo-tachi no Orinasu Ai no Monogatari",
+   "titles": {
+    "ja": "アラベスク ～少女たちの織りなす愛の物語～"
+   },
    "year": 1994
   },
   "fmtowns:187742": {
@@ -4856,7 +4937,10 @@
    "sourceGroups": [
     "fmtowns-cd:Ayumichan Monogatari (1993)(Alice Soft)(Jp)[+BootDisk].zip"
    ],
-   "title": "Ayumi-chan Monogatari"
+   "title": "Ayumi-chan Monogatari",
+   "titles": {
+    "ja": "あゆみちゃん物語"
+   }
   },
   "fmtowns:187746": {
    "adult": true,
@@ -4883,7 +4967,10 @@
    "sourceGroups": [
     "fmtowns-cd:Ayumichan Monogatari Jissyaban (1995)(Byakuya Shobou)(Jp).zip"
    ],
-   "title": "Ayumi-chan Monogatari: Jisshaban"
+   "title": "Ayumi-chan Monogatari: Jisshaban",
+   "titles": {
+    "ja": "あゆみちゃん物語 実写版"
+   }
   },
   "fmtowns:187747": {
    "adult": true,
@@ -4940,7 +5027,10 @@
    "sourceGroups": [
     "fmtowns-cd:Maria ni Sasageru Ballade (1995)(Fairytale)(Jp)[+UserDisk].zip"
    ],
-   "title": "Ballade for Maria"
+   "title": "Ballade for Maria",
+   "titles": {
+    "ja": "マリアに捧げるバラード"
+   }
   },
   "fmtowns:187749": {
    "adult": true,
@@ -4967,7 +5057,10 @@
    "sourceGroups": [
     "fmtowns-cd:Branmarker (1993)(D.O.)(Jp).zip"
    ],
-   "title": "Branmarker"
+   "title": "Branmarker",
+   "titles": {
+    "ja": "ブランマーカー"
+   }
   },
   "fmtowns:187750": {
    "adult": true,
@@ -4994,7 +5087,10 @@
    "sourceGroups": [
     "fmtowns-cd:Branmarker2 (1995)(D.O.)(Jp)(missing Extra Disc).zip"
    ],
-   "title": "Branmarker 2"
+   "title": "Branmarker 2",
+   "titles": {
+    "ja": "ブランマーカー２"
+   }
   },
   "fmtowns:187751": {
    "aliases": [
@@ -5158,7 +5254,10 @@
    "mobygames": 58184,
    "publisher": "Birdy Soft",
    "screenshotUrl": "https://images.launchbox-app.com/060d83a1-e813-4ac7-9c0a-1df3644948ae.png",
-   "title": "CAL Gaiden: Tiny Step: Tiny Steps Behind the CAL"
+   "title": "CAL Gaiden: Tiny Step: Tiny Steps Behind the CAL",
+   "titles": {
+    "ja": "キャル外伝 タイニィステップ"
+   }
   },
   "fmtowns:188061": {
    "adult": true,
@@ -5182,7 +5281,10 @@
    "mobygames": 16367,
    "publisher": "Birdy Soft",
    "screenshotUrl": "https://images.launchbox-app.com/ae826bbb-451c-4b8a-9223-40599b39040a.png",
-   "title": "Cal III"
+   "title": "Cal III",
+   "titles": {
+    "ja": "キャルIII 完結編"
+   }
   },
   "fmtowns:188062": {
    "adult": true,
@@ -5236,7 +5338,10 @@
    "sourceGroups": [
     "fmtowns-cd:Can Can Bunny Extra (1993)(Cocktail Soft)(Jp).zip"
    ],
-   "title": "Can Can Bunny Extra"
+   "title": "Can Can Bunny Extra",
+   "titles": {
+    "ja": "きゃんきゃんバニー　エクストラ"
+   }
   },
   "fmtowns:188065": {
    "adult": true,
@@ -5257,7 +5362,10 @@
    "mobygames": 145777,
    "publisher": "Cocktail Soft",
    "screenshotUrl": "https://images.launchbox-app.com/da06d02e-91ca-4e39-8570-c0d11ea98d84.png",
-   "title": "Can Can Bunny Premiere"
+   "title": "Can Can Bunny Premiere",
+   "titles": {
+    "ja": "きゃんきゃんバニー プルミエール"
+   }
   },
   "fmtowns:188066": {
    "adult": true,
@@ -5666,6 +5774,9 @@
     "fmtowns-cd:Doukyusei (1993)(Elf)(Jp).zip"
    ],
    "title": "Doukyuusei",
+   "titles": {
+    "ja": "同級生"
+   },
    "year": 1993
   },
   "fmtowns:188118": {
@@ -5693,7 +5804,10 @@
    "sourceGroups": [
     "fmtowns-cd:Doukyusei2 (1995)(Elf)(Jp).zip"
    ],
-   "title": "Doukyuusei 2"
+   "title": "Doukyuusei 2",
+   "titles": {
+    "ja": "同級生2"
+   }
   },
   "fmtowns:188119": {
    "adult": true,
@@ -5723,7 +5837,10 @@
    "sourceGroups": [
     "fmtowns-cd:DOR Special Edition Sakigake (1993)(D.O.)(Jp).zip"
    ],
-   "title": "DOR Special Edition: Sakigake"
+   "title": "DOR Special Edition: Sakigake",
+   "titles": {
+    "ja": "ＤＯＲ ＳＰＥＣＩＡＬ ＥＤＩＴＩＯＮ 魁"
+   }
   },
   "fmtowns:188120": {
    "adult": true,
@@ -5775,6 +5892,9 @@
     "fmtowns-cd:DPS Zenbu(req.HD Install) (1995)(Alice Soft)(Jp).zip"
    ],
    "title": "D.P.S. Zenbu",
+   "titles": {
+    "ja": "D.P.S.全部"
+   },
    "year": 1995
   },
   "fmtowns:188122": {
@@ -5800,6 +5920,9 @@
    "publisher": "IDES",
    "screenshotUrl": "https://images.launchbox-app.com/2613dc8e-fff1-44c9-90e4-ff2c63d4151f.png",
    "title": "Dracula Hakushaku",
+   "titles": {
+    "ja": "ドラキュラ伯爵"
+   },
    "year": 1993
   },
   "fmtowns:188123": {
@@ -5828,6 +5951,9 @@
     "fmtowns-cd:Dragon Knight4 (1994)(Elf)(Jp).zip"
    ],
    "title": "Dragon Knight 4",
+   "titles": {
+    "ja": "ドラゴンナイト4"
+   },
    "year": 1994
   },
   "fmtowns:188125": {
@@ -5855,7 +5981,10 @@
    "sourceGroups": [
     "fmtowns-cd:Dragon Knight III (1991)(Elf)(Jp).zip"
    ],
-   "title": "Dragon Knight III"
+   "title": "Dragon Knight III",
+   "titles": {
+    "ja": "ドラゴンナイトIII"
+   }
   },
   "fmtowns:188126": {
    "aliases": [
@@ -5905,6 +6034,9 @@
    "publisher": "Koei",
    "screenshotUrl": "https://images.launchbox-app.com/3f6e667b-efae-44ce-bdb8-efd75224c683.png",
    "title": "EMIT Vol. 1: Toki no Maigo",
+   "titles": {
+    "ja": "EMIT Vol.1: 時の迷子"
+   },
    "year": 1994
   },
   "fmtowns:188128": {
@@ -5947,6 +6079,9 @@
    "publisher": "Koei",
    "screenshotUrl": "https://images.launchbox-app.com/2bdcf862-1a5c-4027-ac4a-2b7d7869ae30.png",
    "title": "EMIT Vol. 3: Watashi ni Sayonara o",
+   "titles": {
+    "ja": "EMIT Vol.3: 私にさよならを"
+   },
    "year": 1994
   },
   "fmtowns:188130": {
@@ -6019,6 +6154,9 @@
     "fmtowns-cd:Giga Motion (1995)(InterHeart)(Jp).zip"
    ],
    "title": "Giga Motion",
+   "titles": {
+    "ja": "戯画もーしょん"
+   },
    "year": 1995
   },
   "fmtowns:188133": {
@@ -6136,6 +6274,9 @@
    "publisher": "IDES",
    "screenshotUrl": "https://images.launchbox-app.com/4912fa58-5eac-4444-a7c8-be7d66c6afc2.png",
    "title": "Gokuraku Mandala",
+   "titles": {
+    "ja": "極楽まんだら"
+   },
    "year": 1994
   },
   "fmtowns:188138": {
@@ -6209,6 +6350,9 @@
     "fmtowns-cd:Gakuen King(req.Hd Install) (1996)(Alice Soft)(Jp).zip"
    ],
    "title": "Gakuen King: Hidehiko Gakkou o Tsukuru",
+   "titles": {
+    "ja": "学園KING －日出彦 学校をつくる－"
+   },
    "year": 1996
   },
   "fmtowns:188142": {
@@ -6230,6 +6374,9 @@
    "mobygames": 59207,
    "publisher": "Queen Soft",
    "title": "Gambler: Queen's Cup",
+   "titles": {
+    "ja": "ギャンブラー ～Queen's Cup～"
+   },
    "year": 1994
   },
   "fmtowns:188143": {
@@ -6352,6 +6499,9 @@
     "fmtowns-cd:Gun Blaze (1994)(Active)(Jp).zip"
    ],
    "title": "GunBlaze",
+   "titles": {
+    "ja": "ガンブレイズ"
+   },
    "year": 1994
   },
   "fmtowns:188169": {
@@ -6380,6 +6530,9 @@
     "fmtowns-cd:Hana no Kioku (1995)(Foster)(Jp).zip"
    ],
    "title": "Hana no Kioku",
+   "titles": {
+    "ja": "花の記憶"
+   },
    "year": 1995
   },
   "fmtowns:188170": {
@@ -6434,7 +6587,10 @@
    "sourceGroups": [
     "fmtowns-cd:Hoshi no Suna Monogatari (1992)(D.O.)(Jp).zip"
    ],
-   "title": "Hoshi no Suna Monogatari"
+   "title": "Hoshi no Suna Monogatari",
+   "titles": {
+    "ja": "星の砂物語"
+   }
   },
   "fmtowns:188172": {
    "adult": true,
@@ -6462,6 +6618,9 @@
     "fmtowns-cd:Hoshi no Suna Monogatari2 (1992)(D.O.)(Jp).zip"
    ],
    "title": "Hoshi no Suna Monogatari 2",
+   "titles": {
+    "ja": "星の砂物語２"
+   },
    "year": 1992
   },
   "fmtowns:188173": {
@@ -6489,7 +6648,10 @@
    "sourceGroups": [
     "fmtowns-cd:Hoshi no Suna Monogatari3 (1995)(D.O.)(Jp).zip"
    ],
-   "title": "Hoshi no Suna Monogatari 3"
+   "title": "Hoshi no Suna Monogatari 3",
+   "titles": {
+    "ja": "星の砂物語３"
+   }
   },
   "fmtowns:188174": {
    "adult": true,
@@ -6514,6 +6676,9 @@
    "publisher": "Active Software",
    "screenshotUrl": "https://images.launchbox-app.com/f7f02513-83e9-4956-93e6-321a82ac58f2.png",
    "title": "if 2",
+   "titles": {
+    "ja": "イフ ２"
+   },
    "year": 1993
   },
   "fmtowns:188175": {
@@ -6535,6 +6700,9 @@
    "mobygames": 47913,
    "publisher": "Active Software",
    "title": "if",
+   "titles": {
+    "ja": "イフ"
+   },
    "year": 1993
   },
   "fmtowns:188176": {
@@ -6641,6 +6809,9 @@
     "fmtowns-cd:Inju Gakuen (1994)(Dez Soft Network)(Jp).zip"
    ],
    "title": "Inju Gakuen: La Blue Girl",
+   "titles": {
+    "ja": "淫獣学園 ～Ｌａ★Ｂｌｕｅ Ｇｉｒｌ～"
+   },
    "year": 1994
   },
   "fmtowns:188180": {
@@ -6662,6 +6833,9 @@
    "mobygames": 48439,
    "publisher": "Agumix",
    "title": "Iris Tei Serenade",
+   "titles": {
+    "ja": "イーリス亭小夜曲"
+   },
    "year": 1992
   },
   "fmtowns:188181": {
@@ -6684,6 +6858,9 @@
    "publisher": "Orange House",
    "screenshotUrl": "https://images.launchbox-app.com/45e2daa1-0e22-4712-9615-a21730bde2c7.png",
    "title": "Irium",
+   "titles": {
+    "ja": "イリウム"
+   },
    "year": 1993
   },
   "fmtowns:188182": {
@@ -6761,6 +6938,9 @@
     "fmtowns-cd:Jan Jaka Jan (1993)(Elf)(Jp).zip"
    ],
    "title": "Jan Jaka Jan",
+   "titles": {
+    "ja": "雀ＪＡＫＡ雀"
+   },
    "year": 1993
   },
   "fmtowns:188185": {
@@ -6788,7 +6968,10 @@
    "sourceGroups": [
     "fmtowns-cd:Jankirou (1994)(Fairytale)(Jp).zip"
    ],
-   "title": "Jankirou"
+   "title": "Jankirou",
+   "titles": {
+    "ja": "雀妃楼"
+   }
   },
   "fmtowns:188186": {
    "adult": true,
@@ -6815,7 +6998,10 @@
    "sourceGroups": [
     "fmtowns-cd:Jealousy (1995)(InterHeart)(Jp).zip"
    ],
-   "title": "Jealousy"
+   "title": "Jealousy",
+   "titles": {
+    "ja": "ジェラシー"
+   }
   },
   "fmtowns:188187": {
    "boxArtUrl": "https://images.launchbox-app.com/7b532f3c-321a-4b10-ab47-5204c3eb37bf.jpg",
@@ -6861,7 +7047,10 @@
    "launchbox": "188188",
    "mobygames": 50043,
    "publisher": "Silky's",
-   "title": "Kawarazaki Ke no Ichizoku"
+   "title": "Kawarazaki Ke no Ichizoku",
+   "titles": {
+    "ja": "河原崎家の一族"
+   }
   },
   "fmtowns:188189": {
    "boxArtUrl": "https://images.launchbox-app.com/2b135751-2e72-4f4e-bf2a-fe272784168a.jpg",
@@ -7132,6 +7321,9 @@
    "mobygames": 45927,
    "publisher": "IDES",
    "title": "Lipstick Adventure 3",
+   "titles": {
+    "ja": "リップスティックアドベンチャー３"
+   },
    "year": 1993
   },
   "fmtowns:188203": {
@@ -7241,6 +7433,9 @@
    "publisher": "Studio Milk",
    "screenshotUrl": "https://images.launchbox-app.com/4b95c0fe-3970-4766-9bbc-0fd8acc821a5.png",
    "title": "Marionette Mind",
+   "titles": {
+    "ja": "マリオネット・マインド"
+   },
    "year": 1994
   },
   "fmtowns:188209": {
@@ -7335,6 +7530,9 @@
    "mobygames": 44599,
    "publisher": "Discovery",
    "title": "Mirage 2",
+   "titles": {
+    "ja": "ミラージュ２ トリーＸニートＸローンの大冒険"
+   },
    "year": 1994
   },
   "fmtowns:188216": {
@@ -7386,6 +7584,9 @@
     "fmtowns-cd:Mahjong de Pon! (1994)(Active)(Jp).zip"
    ],
    "title": "Mahjong de Pon!",
+   "titles": {
+    "ja": "麻雀でPON!"
+   },
    "year": 1994
   },
   "fmtowns:188219": {
@@ -7413,7 +7614,10 @@
    "sourceGroups": [
     "fmtowns-cd:Mahjong Houteiraoyui (1995)(Queen Soft)(Jp).zip"
    ],
-   "title": "Mahjong Houtei Raoyui"
+   "title": "Mahjong Houtei Raoyui",
+   "titles": {
+    "ja": "麻雀 河底撈魚"
+   }
   },
   "fmtowns:188220": {
    "adult": true,
@@ -7507,6 +7711,9 @@
    "launchbox": "188224",
    "publisher": "Alice Soft",
    "title": "Alice no Yakata 3",
+   "titles": {
+    "ja": "ALICEの館3"
+   },
    "year": 1995
   },
   "fmtowns:188225": {
@@ -7579,7 +7786,10 @@
    "sourceGroups": [
     "fmtowns-cd:Mirrors (1992)(Views)(Jp).zip"
    ],
-   "title": "Mirrors"
+   "title": "Mirrors",
+   "titles": {
+    "ja": "ミラーズ"
+   }
   },
   "fmtowns:188262": {
    "aliases": [
@@ -7657,6 +7867,9 @@
     "fmtowns-cd:Mugenhouyou(req.HD Install) (1995)(Alice Soft)(Jp).zip"
    ],
    "title": "Mugen Houyou",
+   "titles": {
+    "ja": "夢幻泡影"
+   },
    "year": 1995
   },
   "fmtowns:188265": {
@@ -7678,6 +7891,9 @@
    "publisher": "KSS",
    "screenshotUrl": "https://images.launchbox-app.com/9052f0f9-11cb-4b56-b5ed-0dcc27f99bd4.png",
    "title": "Mujintou Monogatari",
+   "titles": {
+    "ja": "無人島物語"
+   },
    "year": 1995
   },
   "fmtowns:188266": {
@@ -7775,7 +7991,10 @@
    "sourceGroups": [
     "fmtowns-cd:Necronomicon (1994)(Fairytale)(Jp).zip"
    ],
-   "title": "Necronomicon"
+   "title": "Necronomicon",
+   "titles": {
+    "ja": "ネクロノミコン"
+   }
   },
   "fmtowns:188269": {
    "boxArtUrl": "https://images.launchbox-app.com/493429b0-dc86-401d-b28e-4a6063a1a18e.jpg",
@@ -7965,6 +8184,9 @@
     "fmtowns-cd:Ponkan (1994)(Ponytail Soft)(Jp).zip"
    ],
    "title": "Ponkan",
+   "titles": {
+    "ja": "ポンカン"
+   },
    "year": 1994
   },
   "fmtowns:188278": {
@@ -8036,6 +8258,9 @@
     "fmtowns-cd:Pro Student -G- (1993)(Alice Soft)(Jp)[+BootDisk].zip"
    ],
    "title": "Pro Student G",
+   "titles": {
+    "ja": "ぷろすちゅーでんとG"
+   },
    "year": 1993
   },
   "fmtowns:188282": {
@@ -8116,7 +8341,10 @@
    "mobygames": 54909,
    "publisher": "Data West",
    "screenshotUrl": "https://images.launchbox-app.com/76bb9c65-69a5-402d-9dfe-95f8f79a2758.png",
-   "title": "Psychic Detective Series Vol. 1: Invitation: Kage kara no Shoutaijou"
+   "title": "Psychic Detective Series Vol. 1: Invitation: Kage kara no Shoutaijou",
+   "titles": {
+    "ja": "サイキック・ディテクティブ・シリーズ Vol.1 インビテーション 影からの招待状"
+   }
   },
   "fmtowns:188286": {
    "boxArtUrl": "https://images.launchbox-app.com/332c1e57-c94c-4a1a-9258-35444f3486e6.jpg",
@@ -8137,6 +8365,9 @@
    "publisher": "Data West",
    "screenshotUrl": "https://images.launchbox-app.com/11d564bc-8338-404c-ae43-8c0b4b90b0ed.png",
    "title": "Psychic Detective Series Vol. 2: Memories",
+   "titles": {
+    "ja": "サイキック・ディテクティブ・シリーズ Vol.2 メモリーズ"
+   },
    "year": 1989
   },
   "fmtowns:188287": {
@@ -8157,6 +8388,9 @@
    "mobygames": 54911,
    "publisher": "Data West",
    "title": "Psychic Detective Series Vol. 3: Aya",
+   "titles": {
+    "ja": "サイキック・ディテクティブ・シリーズ Vol.3 アヤ"
+   },
    "year": 1990
   },
   "fmtowns:188288": {
@@ -8184,6 +8418,9 @@
     "fmtowns-cd:Psychic Detective Vol. 4 - Olgel (1991)(Datawest)(Jp)[+UserDisk].zip"
    ],
    "title": "Psychic Detective Series Vol. 4: Orgel",
+   "titles": {
+    "ja": "サイキック・ディテクティブ・シリーズ Vol.4 オルゴール"
+   },
    "year": 1991
   },
   "fmtowns:188289": {
@@ -8205,6 +8442,9 @@
    "publisher": "Data West",
    "screenshotUrl": "https://images.launchbox-app.com/771a5cb7-a223-47be-976c-3442ec382f6a.png",
    "title": "Psychic Detective Series Vol. 5: Nightmare",
+   "titles": {
+    "ja": "サイキック・ディテクティブ・シリーズ Vol.5 ナイトメア"
+   },
    "year": 1991
   },
   "fmtowns:188290": {
@@ -8329,6 +8569,9 @@
     "fmtowns-cd:Rance4.1(Req.Hd Install) (1995)(Alice Soft)(Jp).zip"
    ],
    "title": "Rance 4.1: Okusuri Koujou o Sukue!",
+   "titles": {
+    "ja": "ランス４．１　～お薬工場を救え！～"
+   },
    "year": 1995
   },
   "fmtowns:188295": {
@@ -8356,6 +8599,9 @@
     "fmtowns-cd:Rance4.2(Req.Hd Install) (1995)(Alice Soft)(Jp).zip"
    ],
    "title": "Rance 4.2: Angel-gumi",
+   "titles": {
+    "ja": "ランス４．２　～エンジェル組～"
+   },
    "year": 1995
   },
   "fmtowns:188296": {
@@ -8378,6 +8624,9 @@
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/15222213-99df-413a-b957-a2b016b809ce.png",
    "title": "Rance: Hikari o Motomete",
+   "titles": {
+    "ja": "Rance -光をもとめて-"
+   },
    "year": 1990
   },
   "fmtowns:188297": {
@@ -8427,6 +8676,9 @@
     "fmtowns-cd:Rance 3 v1.21 (Adult)(1991)(Alice Soft)(Jp).zip"
    ],
    "title": "Rance III: Leazas Kanraku",
+   "titles": {
+    "ja": "ランス III　－リーザス陥落－"
+   },
    "year": 1992
   },
   "fmtowns:188299": {
@@ -8463,6 +8715,9 @@
     "fmtowns-cd:RanceIV (1994)(Alice Soft)(Jp)[+BootDisk].zip"
    ],
    "title": "Rance IV: Kyoudan no Isan",
+   "titles": {
+    "ja": "ランス IV　－教団の遺産－"
+   },
    "year": 1994
   },
   "fmtowns:188300": {
@@ -8628,6 +8883,9 @@
     "fmtowns-cd:Ring Out!! (1995)(ZyX)(Jp).zip"
    ],
    "title": "Ring Out!!",
+   "titles": {
+    "ja": "リングアウト!!"
+   },
    "year": 1995
   },
   "fmtowns:188307": {
@@ -9049,7 +9307,10 @@
    "launchbox": "188324",
    "mobygames": 42880,
    "publisher": "Active Software",
-   "title": "Sweet Angel"
+   "title": "Sweet Angel",
+   "titles": {
+    "ja": "スウィートエンジェル"
+   }
   },
   "fmtowns:188325": {
    "boxArtUrl": "https://images.launchbox-app.com/5fca7619-9295-43d7-b860-23099f713905.jpg",
@@ -9280,7 +9541,10 @@
    "mobygames": 45307,
    "publisher": "elf",
    "screenshotUrl": "https://images.launchbox-app.com/41c17813-fbe6-4dd2-be1a-788bd7adeafb.png",
-   "title": "Tenshin Ranma"
+   "title": "Tenshin Ranma",
+   "titles": {
+    "ja": "天神乱魔"
+   }
   },
   "fmtowns:188335": {
    "adult": true,
@@ -9302,6 +9566,9 @@
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/aa6e38c0-fd10-4942-995d-a224bba0025e.png",
    "title": "Toushin Toshi",
+   "titles": {
+    "ja": "闘神都市"
+   },
    "year": 1990
   },
   "fmtowns:188336": {
@@ -9323,6 +9590,9 @@
    "mobygames": 45393,
    "publisher": "Alice Soft",
    "title": "Toushin Toshi II",
+   "titles": {
+    "ja": "闘神都市II"
+   },
    "year": 1995
   },
   "fmtowns:188337": {
@@ -9348,6 +9618,9 @@
     "fmtowns-cd:Toushin Toshi II Soshite Sorekara(req.HD Install) (1995)(Alice Soft)(Jp).zip"
    ],
    "title": "Toushin Toshi II: Soshite, Sorekara...",
+   "titles": {
+    "ja": "闘神都市II そして、それから・・・"
+   },
    "year": 1995
   },
   "fmtowns:188338": {
@@ -9376,6 +9649,9 @@
     "fmtowns-cd:Trigger (1994)(ZyX)(Jp).zip"
    ],
    "title": "Trigger",
+   "titles": {
+    "ja": "トリガー"
+   },
    "year": 1994
   },
   "fmtowns:188339": {
@@ -9396,7 +9672,10 @@
    "launchbox": "188339",
    "mobygames": 45405,
    "publisher": "Cocktail Soft",
-   "title": "True Heart"
+   "title": "True Heart",
+   "titles": {
+    "ja": "トゥルーハート"
+   }
   },
   "fmtowns:188340": {
    "adult": true,
@@ -9431,6 +9710,9 @@
     "fmtowns-cd:Uchu Kaitou Funny Bee (1994)(Alice Soft)(Jp)[+BootDisk].zip"
    ],
    "title": "Uchuu Kaitou Funny Bee",
+   "titles": {
+    "ja": "宇宙快盗ファニーBee"
+   },
    "year": 1994
   },
   "fmtowns:188341": {
@@ -9459,6 +9741,9 @@
     "fmtowns-cd:Vastness (1993)(CD Bros)(Jp).zip"
    ],
    "title": "Vastness: Kuukyo no Ikenie-tachi",
+   "titles": {
+    "ja": "ヴァーストニス 空虚の生贄達"
+   },
    "year": 1994
   },
   "fmtowns:188342": {
@@ -9780,6 +10065,9 @@
     "fmtowns-cd:Xenon (19xx)(Cs Ware)(Jp).zip"
    ],
    "title": "Xenon: Mugen no Shitai",
+   "titles": {
+    "ja": "XENON ～夢幻の肢体～"
+   },
    "year": 1995
   },
   "fmtowns:188354": {
@@ -9885,6 +10173,9 @@
     "fmtowns-cd:Zatsuon Ryouiki (1995)(D.O.)(Jp).zip"
    ],
    "title": "Zatsuon Ryouiki",
+   "titles": {
+    "ja": "雑音領域"
+   },
    "year": 1995
   },
   "fmtowns:188358": {
@@ -9945,7 +10236,10 @@
    "sourceGroups": [
     "fmtowns-cd:Zenith (1995)(Himeya Soft)(Jp).zip"
    ],
-   "title": "Zenith"
+   "title": "Zenith",
+   "titles": {
+    "ja": "ゼニス"
+   }
   },
   "fmtowns:188361": {
    "boxArtUrl": "https://images.launchbox-app.com/bd197190-e680-4870-bdbd-cf995308d808.jpg",
@@ -10056,6 +10350,9 @@
    "launchbox": "188365",
    "publisher": "FairyTale",
    "title": "Virtuacall",
+   "titles": {
+    "ja": "バーチャコール"
+   },
    "year": 1995
   },
   "fmtowns:188366": {
@@ -10075,6 +10372,9 @@
    "launchbox": "188366",
    "publisher": "FairyTale",
    "title": "Virtuacall 2",
+   "titles": {
+    "ja": "バーチャコール2"
+   },
    "year": 1995
   },
   "fmtowns:188367": {
@@ -10199,7 +10499,10 @@
    "launchbox": "188768",
    "mobygames": 45901,
    "publisher": "Wendy Magazine",
-   "title": "Bell's Avenue"
+   "title": "Bell's Avenue",
+   "titles": {
+    "ja": "ベルズアベニュー"
+   }
   },
   "fmtowns:188769": {
    "adult": true,
@@ -10252,7 +10555,10 @@
    "developer": "Queen Soft",
    "launchbox": "188772",
    "publisher": "Queen Soft",
-   "title": "Curse"
+   "title": "Curse",
+   "titles": {
+    "ja": "カース"
+   }
   },
   "fmtowns:188773": {
    "boxArtUrl": "https://images.launchbox-app.com/3511dd79-4eb0-49ad-acbc-ae261bf28c06.jpg",
@@ -10371,6 +10677,9 @@
     "fmtowns-cd:Eimmy to Yobanaide (1995)(Cs Ware)(Jp).zip"
    ],
    "title": "Amy to Yobanaide",
+   "titles": {
+    "ja": "エイミーと呼ばないでっ"
+   },
    "year": 1995
   },
   "fmtowns:188780": {
@@ -10390,7 +10699,10 @@
    "launchbox": "188780",
    "publisher": "T2 Co.",
    "screenshotUrl": "https://images.launchbox-app.com/a483278c-5188-48c4-b011-90778d7b6463.png",
-   "title": "Yuuwaku"
+   "title": "Yuuwaku",
+   "titles": {
+    "ja": "誘惑"
+   }
   },
   "fmtowns:188781": {
    "adult": true,
@@ -10418,6 +10730,9 @@
     "fmtowns-cd:Etsuraku no Gakuen (1994)(Cs Ware)(Jp).zip"
    ],
    "title": "Etsuraku no Gakuen",
+   "titles": {
+    "ja": "悦楽の学園"
+   },
    "year": 1994
   },
   "fmtowns:188782": {
@@ -10569,6 +10884,9 @@
    "publisher": "Mink",
    "screenshotUrl": "https://images.launchbox-app.com/3aef43e2-525f-4ea4-a542-6419c2c09f65.png",
    "title": "Two Shot Diary",
+   "titles": {
+    "ja": "ツーショットDiary"
+   },
    "year": 1995
   },
   "fmtowns:188790": {
@@ -10631,7 +10949,10 @@
    "developer": "Active Software",
    "launchbox": "188794",
    "publisher": "Active Software",
-   "title": "Hana Yori Dango 2"
+   "title": "Hana Yori Dango 2",
+   "titles": {
+    "ja": "花よりダンゴ2"
+   }
   },
   "fmtowns:188795": {
    "adult": true,
@@ -10667,7 +10988,10 @@
    "sourceGroups": [
     "fmtowns-cd:Hanahuda de Pon! (1996)(Active)(Jp)[+BootDisk].zip"
    ],
-   "title": "Hanafuda de Pon!"
+   "title": "Hanafuda de Pon!",
+   "titles": {
+    "ja": "花札でPON!"
+   }
   },
   "fmtowns:188796": {
    "adult": true,
@@ -10726,6 +11050,9 @@
    "publisher": "Brother Kougyou",
    "screenshotUrl": "https://images.launchbox-app.com/c3e81536-35df-44b2-9491-709a85b004e1.png",
    "title": "Houma Hunter Lime",
+   "titles": {
+    "ja": "宝魔ハンターライム"
+   },
    "year": 1993
   },
   "fmtowns:188799": {
@@ -10757,7 +11084,10 @@
    "developer": "KSS",
    "launchbox": "188801",
    "publisher": "KSS",
-   "title": "Joshikou Seifuku Monogatari"
+   "title": "Joshikou Seifuku Monogatari",
+   "titles": {
+    "ja": "女子校制服物語"
+   }
   },
   "fmtowns:188803": {
    "adult": true,
@@ -10778,6 +11108,9 @@
    "mobygames": 6576,
    "publisher": "C's Ware",
    "title": "Kindan no Ketsuzoku",
+   "titles": {
+    "ja": "禁断の血族"
+   },
    "year": 1994
   },
   "fmtowns:188804": {
@@ -10822,6 +11155,9 @@
    "publisher": "Foster",
    "screenshotUrl": "https://images.launchbox-app.com/87fe8679-a673-4f21-9d0b-3253ce0bbafc.png",
    "title": "Koko wa Rakuensou 2",
+   "titles": {
+    "ja": "ここは楽園荘2"
+   },
    "year": 1996
   },
   "fmtowns:188806": {
@@ -10844,6 +11180,9 @@
    "publisher": "Foresight",
    "screenshotUrl": "https://images.launchbox-app.com/2c5ebf0e-46ba-4208-9293-449e5af13578.png",
    "title": "Madou Gakuin R",
+   "titles": {
+    "ja": "魔導学院Ｒ"
+   },
    "year": 1994
   },
   "fmtowns:188807": {
@@ -10928,6 +11267,9 @@
     "fmtowns-cd:Ms. Detective (1991)(Datawest)(Jp).zip"
    ],
    "title": "Ms. Detective File #1: Iwami Ginzan Satsujin Jiken",
+   "titles": {
+    "ja": "ミス・ディテクティヴ　ファイル#1　石見銀山殺人事件"
+   },
    "year": 1992
   },
   "fmtowns:188810": {
@@ -10950,7 +11292,10 @@
    "launchbox": "188810",
    "publisher": "DataWest",
    "screenshotUrl": "https://images.launchbox-app.com/915f536f-8ee1-4178-958e-b08482915200.png",
-   "title": "Ms. Detective File #2: Sugata-naki Irainin"
+   "title": "Ms. Detective File #2: Sugata-naki Irainin",
+   "titles": {
+    "ja": "ミス・ディテクティヴ　ファイル#2　姿なき依頼人"
+   }
   },
   "fmtowns:188811": {
    "aliases": [
@@ -10980,7 +11325,10 @@
    "developer": "Cocktail Soft",
    "launchbox": "188812",
    "publisher": "Cocktail Soft",
-   "title": "Noushuku Angel 120%"
+   "title": "Noushuku Angel 120%",
+   "titles": {
+    "ja": "濃縮ANGEL・120%"
+   }
   },
   "fmtowns:188813": {
    "aliases": [
@@ -11054,6 +11402,9 @@
    "launchbox": "188816",
    "publisher": "Active Software",
    "title": "Sakura no Mori",
+   "titles": {
+    "ja": "櫻の杜 ～さくらのもり～"
+   },
    "year": 1995
   },
   "fmtowns:188818": {
@@ -11108,7 +11459,10 @@
    "launchbox": "188821",
    "publisher": "Chou Onsoku",
    "screenshotUrl": "https://images.launchbox-app.com/d3445cc2-8c58-489b-8f5e-bd4937d8168c.png",
-   "title": "Teito Taisen"
+   "title": "Teito Taisen",
+   "titles": {
+    "ja": "帝都大戦"
+   }
   },
   "fmtowns:188903": {
    "adult": true,
@@ -11231,6 +11585,9 @@
    "mobygames": 58733,
    "publisher": "ZyX",
    "title": "Trigger 2",
+   "titles": {
+    "ja": "トリガー２"
+   },
    "year": 1995
   },
   "fmtowns:192856": {
@@ -11300,6 +11657,9 @@
    "mobygames": 47345,
    "publisher": "Cocktail Soft",
    "title": "Demon City",
+   "titles": {
+    "ja": "デーモンシティ"
+   },
    "year": 1994
   },
   "fmtowns:192859": {
@@ -11321,6 +11681,9 @@
    "mobygames": 47396,
    "publisher": "Cocktail Soft",
    "title": "Dengeki Nurse 2: More Sexy",
+   "titles": {
+    "ja": "電撃ナース２ ～モアセクシー～"
+   },
    "year": 1994
   },
   "fmtowns:192860": {
@@ -11345,6 +11708,9 @@
    "mobygames": 47919,
    "publisher": "Active Software",
    "title": "if 3",
+   "titles": {
+    "ja": "イフ ３"
+   },
    "year": 1995
   },
   "fmtowns:192861": {
@@ -11364,6 +11730,9 @@
    "launchbox": "192861",
    "publisher": "Ponytail Soft",
    "title": "Kyouko no Ijiwaru!! Hachamecha Daishingeki",
+   "titles": {
+    "ja": "恭子のいぢわる!! ～ハチャメチャ大進撃～"
+   },
    "year": 1994
   },
   "fmtowns:192862": {
@@ -11436,6 +11805,9 @@
    "publisher": "Foster",
    "screenshotUrl": "https://images.launchbox-app.com/r2_4612c375-864d-449d-92e1-59f7d03b6453.png",
    "title": "Sayonara no Mukougawa",
+   "titles": {
+    "ja": "さよならの向こう側"
+   },
    "year": 1997
   },
   "fmtowns:192867": {
@@ -11481,6 +11853,9 @@
    "mobygames": 43560,
    "publisher": "Mink",
    "title": "Wonpara Wars II",
+   "titles": {
+    "ja": "ＷＯＮＰＡＲＡウォーズII"
+   },
    "year": 1995
   },
   "fmtowns:192869": {
@@ -11507,7 +11882,10 @@
    "launchbox": "192870",
    "mobygames": 47400,
    "publisher": "Cocktail Soft",
-   "title": "Doki Doki Vacation: Kirameku Kisetsu no Naka de"
+   "title": "Doki Doki Vacation: Kirameku Kisetsu no Naka de",
+   "titles": {
+    "ja": "DOKIDOKIバケーション ～きらめく季節の中で～"
+   }
   },
   "fmtowns:194280": {
    "boxArtUrl": "https://images.launchbox-app.com/c77c93a4-66ec-4f44-8030-4a7d520d3b45.jpg",
@@ -11564,6 +11942,9 @@
     "fmtowns-cd:Nova (1993)(Cats Pro)(Jp).zip"
    ],
    "title": "Nova",
+   "titles": {
+    "ja": "ノ・ヴァ"
+   },
    "year": 1993
   },
   "fmtowns:197094": {
@@ -11698,7 +12079,10 @@
    "developer": "D.O.",
    "launchbox": "197142",
    "publisher": "D.O.",
-   "title": "Collector D"
+   "title": "Collector D",
+   "titles": {
+    "ja": "コレクターD"
+   }
   },
   "fmtowns:197143": {
    "aliases": [
@@ -11767,6 +12151,9 @@
    "mobygames": 46067,
    "publisher": "Active",
    "title": "Mahjong Gensoukyoku II",
+   "titles": {
+    "ja": "麻雀幻想曲II"
+   },
    "year": 1993
   },
   "fmtowns:197147": {
@@ -11792,6 +12179,9 @@
    "mobygames": 46073,
    "publisher": "Active",
    "title": "Mahjong Gensoukyoku III",
+   "titles": {
+    "ja": "麻雀幻想曲III"
+   },
    "year": 1995
   },
   "fmtowns:197148": {
@@ -11812,7 +12202,10 @@
    "mobygames": 55042,
    "publisher": "System Sacom",
    "screenshotUrl": "https://images.launchbox-app.com/70dc968c-3e8e-4ca0-9445-de78d8e0b142.png",
-   "title": "Soft de Hard na Monogatari"
+   "title": "Soft de Hard na Monogatari",
+   "titles": {
+    "ja": "ソフトでハードな物語"
+   }
   },
   "fmtowns:197149": {
    "boxArtUrl": "https://images.launchbox-app.com/1ed7afc3-455b-4dcf-be48-d62501b8cb2f.jpg",
@@ -11832,7 +12225,10 @@
    "mobygames": 55044,
    "publisher": "System Sacom",
    "screenshotUrl": "https://images.launchbox-app.com/7ceaa2d1-9a2f-4d19-ad62-a3648d2f15ed.png",
-   "title": "Soft de Hard na Monogatari 2"
+   "title": "Soft de Hard na Monogatari 2",
+   "titles": {
+    "ja": "ソフトでハードな物語 II"
+   }
   },
   "fmtowns:197150": {
    "adult": true,
@@ -11853,6 +12249,9 @@
    "mobygames": 189697,
    "publisher": "Interheart",
    "title": "Vampire High School",
+   "titles": {
+    "ja": "バンパイアハイすく～る"
+   },
    "year": 1994
   },
   "fmtowns:197152": {
@@ -11898,6 +12297,9 @@
    "mobygames": 46066,
    "publisher": "Active",
    "title": "Mahjong Gensoukyoku",
+   "titles": {
+    "ja": "麻雀幻想曲"
+   },
    "year": 1992
   },
   "fmtowns:197175": {
@@ -11951,7 +12353,10 @@
    "mobygames": 47653,
    "publisher": "Ponytail Soft",
    "screenshotUrl": "https://images.launchbox-app.com/7227a9e7-dcd8-4cce-8cb4-8bc33017a4f0.png",
-   "title": "Engage Errands II: Hikari o Ninau Mono"
+   "title": "Engage Errands II: Hikari o Ninau Mono",
+   "titles": {
+    "ja": "エンゲージエランズII ～光輝を担うもの～"
+   }
   },
   "fmtowns:198889": {
    "boxArtUrl": "https://images.launchbox-app.com/9643d32d-16ff-49d5-8b93-7f8323d1ba7e.jpg",
@@ -11988,7 +12393,10 @@
    "developer": "Libido",
    "launchbox": "198890",
    "publisher": "Libido",
-   "title": "Naru Mahjong"
+   "title": "Naru Mahjong",
+   "titles": {
+    "ja": "なる麻雀"
+   }
   },
   "fmtowns:198891": {
    "boxArtUrl": "https://images.launchbox-app.com/6a0913ae-3288-4a7a-bcd4-ff226d77e01b.jpg",
@@ -12154,6 +12562,9 @@
    "mobygames": 50492,
    "publisher": "Foster",
    "title": "Kousoku Chojin",
+   "titles": {
+    "ja": "拘束超人"
+   },
    "year": 1996
   },
   "fmtowns:199998": {
@@ -12173,6 +12584,9 @@
    "launchbox": "199998",
    "publisher": "Active",
    "title": "Misato-chan no Yume Nikki",
+   "titles": {
+    "ja": "みさとちゃんの夢日記"
+   },
    "year": 1997
   },
   "fmtowns:199999": {
@@ -12213,6 +12627,9 @@
    "mobygames": 9769,
    "publisher": "Foster",
    "title": "Time Stripper Mako-chan",
+   "titles": {
+    "ja": "タイムストリッパー真子ちゃん"
+   },
    "year": 1996
   },
   "fmtowns:200002": {
@@ -12234,6 +12651,9 @@
    "mobygames": 14609,
    "publisher": "Silky's",
    "title": "Nonomura Byouin no Hitobito",
+   "titles": {
+    "ja": "野々村病院の人々"
+   },
    "year": 1994
   },
   "fmtowns:200003": {
@@ -12282,6 +12702,9 @@
    "launchbox": "200007",
    "publisher": "ZyX",
    "title": "Gakuen Bakuretsu Tenkousei!",
+   "titles": {
+    "ja": "学園爆裂転校生!"
+   },
    "year": 1996
   },
   "fmtowns:200009": {
@@ -12357,6 +12780,9 @@
    "publisher": "Cocktail Soft",
    "screenshotUrl": "https://images.launchbox-app.com/805dbd90-66db-4b9f-92f0-8ba0fe516723.png",
    "title": "Half Moon ni Kawaru made: Ramiya Ryo no Nijiiro Tamatebako",
+   "titles": {
+    "ja": "ハーフムーンにかわるまで ～蘭宮涼の虹色玉手箱～"
+   },
    "year": 1995
   },
   "fmtowns:200751": {
@@ -12395,6 +12821,9 @@
    "launchbox": "200752",
    "publisher": "Tips",
    "title": "Never Land",
+   "titles": {
+    "ja": "Never Land ～ネバーランド～"
+   },
    "year": 1996
   },
   "fmtowns:200753": {
@@ -12450,7 +12879,10 @@
    "launchbox": "201328",
    "publisher": "HOP",
    "screenshotUrl": "https://images.launchbox-app.com/dfae49ea-1c1a-4ee5-bdd9-3ecf9ebd2f4f.png",
-   "title": "California x Party: Joshidaisei Himitsu Club"
+   "title": "California x Party: Joshidaisei Himitsu Club",
+   "titles": {
+    "ja": "CALIFORNIA X PARTY 女子大生秘密クラブ"
+   }
   },
   "fmtowns:201329": {
    "aliases": [
@@ -12506,6 +12938,9 @@
    "launchbox": "201331",
    "publisher": "Megami",
    "title": "Yumeutsutsu: Dreamy",
+   "titles": {
+    "ja": "夢現 Ｄｒｅａｍｙ －ゆめうつつ－"
+   },
    "year": 1994
   },
   "fmtowns:201332": {
@@ -12527,6 +12962,9 @@
    "publisher": "IDES",
    "screenshotUrl": "https://images.launchbox-app.com/be0806da-5006-4df2-957f-b72cb1a8f919.png",
    "title": "Jinmon Yuugi",
+   "titles": {
+    "ja": "尋問遊戯"
+   },
    "year": 1995
   },
   "fmtowns:201334": {
@@ -12594,6 +13032,9 @@
    "publisher": "Active",
    "screenshotUrl": "https://images.launchbox-app.com/9dc54ef9-96fe-46dc-89f7-a8a9557d476d.png",
    "title": "Kusuriyubi no Kyoukasho",
+   "titles": {
+    "ja": "くすり指の教科書"
+   },
    "year": 1996
   },
   "fmtowns:201337": {
@@ -12616,6 +13057,9 @@
    "publisher": "Jast",
    "screenshotUrl": "https://images.launchbox-app.com/f26f8748-db70-4cdc-be3e-1a7548a9fd62.png",
    "title": "Meisou Toshi",
+   "titles": {
+    "ja": "迷走都市"
+   },
    "year": 1996
   },
   "fmtowns:201338": {
@@ -12637,6 +13081,9 @@
    "mobygames": 54064,
    "publisher": "Interheart",
    "title": "Moonlight Energy",
+   "titles": {
+    "ja": "ムーンライトエナジー"
+   },
    "year": 1993
   },
   "fmtowns:201339": {
@@ -12660,7 +13107,10 @@
    "mobygames": 54118,
    "publisher": "Sur de Wave",
    "screenshotUrl": "https://images.launchbox-app.com/175c1cf6-0f57-4bf7-8b98-166d89b50455.png",
-   "title": "Nostalgia 1907"
+   "title": "Nostalgia 1907",
+   "titles": {
+    "ja": "ノスタルジア1907"
+   }
   },
   "fmtowns:201340": {
    "adult": true,
@@ -12705,7 +13155,10 @@
    "launchbox": "201341",
    "mobygames": 58982,
    "publisher": "Interheart",
-   "title": "Reijou Monogatari"
+   "title": "Reijou Monogatari",
+   "titles": {
+    "ja": "令嬢物語 　～れいじょうものがたり～"
+   }
   },
   "fmtowns:201342": {
    "boxArtUrl": "https://images.launchbox-app.com/08c6ebc0-4fb6-4d65-895f-3030bc77cdb2.jpg",
@@ -12724,6 +13177,9 @@
    "launchbox": "201342",
    "publisher": "Tips",
    "title": "Tania",
+   "titles": {
+    "ja": "TANIA ～タニア～"
+   },
    "year": 1996
   },
   "fmtowns:201343": {
@@ -12763,6 +13219,9 @@
    "launchbox": "201344",
    "publisher": "Japan Home Video",
    "title": "URM: M15 Wakusei ni Umarete",
+   "titles": {
+    "ja": "URM～M15惑星に生まれて～"
+   },
    "year": 1995
   },
   "fmtowns:201345": {
@@ -12784,6 +13243,9 @@
    "publisher": "Jast",
    "screenshotUrl": "https://images.launchbox-app.com/aca53394-a0d9-40e1-921f-d2d8d16cfad4.png",
    "title": "Vanishing Point: Tenshi no Kieta Machi",
+   "titles": {
+    "ja": "Vanishing Point －天使の消えた街－"
+   },
    "year": 1995
   },
   "fmtowns:201346": {
@@ -12954,6 +13416,9 @@
    "mobygames": 45836,
    "publisher": "Jast",
    "title": "Tenshitachi no Gogo VI: My Fair Teacher",
+   "titles": {
+    "ja": "天使たちの午後ＶＩ -My Fair Teacher-"
+   },
    "year": 1993
   },
   "fmtowns:202014": {
@@ -12975,7 +13440,10 @@
    "mobygames": 192895,
    "publisher": "Silky's",
    "screenshotUrl": "https://images.launchbox-app.com/bd0db51c-5b48-47b3-8bae-23e33f47e9a7.png",
-   "title": "Ushinawareta Rakuen"
+   "title": "Ushinawareta Rakuen",
+   "titles": {
+    "ja": "失われた楽園"
+   }
   },
   "fmtowns:202743": {
    "aliases": [
@@ -13019,6 +13487,9 @@
    "publisher": "Silky's",
    "screenshotUrl": "https://images.launchbox-app.com/3548c849-8db9-40e3-a7c9-d09f59b2682c.png",
    "title": "Ai Shimai: Futari no Kajitsu",
+   "titles": {
+    "ja": "愛姉妹 ～二人の果実～"
+   },
    "year": 1994
   },
   "fmtowns:202971": {
@@ -13149,7 +13620,10 @@
    "launchbox": "203206",
    "publisher": "Grocer",
    "screenshotUrl": "https://images.launchbox-app.com/acb65326-f775-4ab5-95e6-5d9e628d98e4.png",
-   "title": "Wedding Errantry: Gyakutama Ou"
+   "title": "Wedding Errantry: Gyakutama Ou",
+   "titles": {
+    "ja": "ウェディングエラントリー -逆玉王-"
+   }
   },
   "fmtowns:203208": {
    "boxArtUrl": "https://images.launchbox-app.com/5b39b326-089c-4510-9096-0534141cad9c.png",
@@ -13190,6 +13664,9 @@
    "publisher": "Alice Soft",
    "screenshotUrl": "https://images.launchbox-app.com/0ae8ef39-8c3c-428e-ac72-00548b9ce571.png",
    "title": "Abunai Tengu Densetsu",
+   "titles": {
+    "ja": "あぶない天狗伝説"
+   },
    "year": 1990
   },
   "fmtowns:203230": {
@@ -13211,7 +13688,10 @@
    "mobygames": 58693,
    "publisher": "Virgin House",
    "screenshotUrl": "https://images.launchbox-app.com/75191cf7-014b-4012-96bc-8ee155aeef76.png",
-   "title": "Soreyuke Nanpa-kun"
+   "title": "Soreyuke Nanpa-kun",
+   "titles": {
+    "ja": "それゆけナンパくん"
+   }
   },
   "fmtowns:203258": {
    "adult": true,
@@ -13276,6 +13756,9 @@
    "launchbox": "203291",
    "publisher": "D.O.",
    "title": "Collector D: Bangai-hen: Gokurakudai Nishichiku Sales Daisakusen",
+   "titles": {
+    "ja": "コレクターＤ 番外編 極楽台西地区セールス大作戦"
+   },
    "year": 1993
   },
   "fmtowns:203292": {
@@ -13356,7 +13839,10 @@
    "mobygames": 47840,
    "publisher": "Fairy Tale",
    "screenshotUrl": "https://images.launchbox-app.com/faf3f736-5d3a-4384-a1ce-79a3caaf8c63.png",
-   "title": "Akiko Gold: The Queen of Adult"
+   "title": "Akiko Gold: The Queen of Adult",
+   "titles": {
+    "ja": "亜紀子 GOLD"
+   }
   },
   "fmtowns:204354": {
    "boxArtUrl": "https://images.launchbox-app.com/528d2306-213d-4e23-bb55-5c20fcc0be7b.jpg",
@@ -14068,6 +14554,9 @@
    "publisher": "Active Software",
    "screenshotUrl": "https://images.launchbox-app.com/bc6d4d64-0a2a-4064-9f22-d14fe3502230.png",
    "title": "Gakuen Bomber",
+   "titles": {
+    "ja": "学園ボンバー"
+   },
    "year": 1994
   },
   "fmtowns:218770": {
@@ -14369,6 +14858,9 @@
    "mobygames": 45838,
    "publisher": "JAST",
    "title": "Tenshi-tachi no Gogo: Tenkousei",
+   "titles": {
+    "ja": "天使たちの午後 ～転校生～"
+   },
    "year": 1995
   },
   "fmtowns:466726": {
@@ -15443,6 +15935,9 @@
    },
    "mobygames": 45929,
    "title": ":Loop - Iginahi no Kaikiten",
+   "titles": {
+    "ja": "：ＬＯＯＰ ～いざなひの回帰点～"
+   },
    "year": 1995
   },
   "fmtowns:moby-47437": {
@@ -15477,6 +15972,9 @@
    },
    "mobygames": 47937,
    "title": "Image II",
+   "titles": {
+    "ja": "イマージュ２"
+   },
    "year": 1994
   },
   "fmtowns:moby-48571": {
@@ -15682,6 +16180,9 @@
    },
    "mobygames": 59189,
    "title": "Crescent",
+   "titles": {
+    "ja": "クレセント"
+   },
    "year": 1993
   },
   "fmtowns:moby-7009": {

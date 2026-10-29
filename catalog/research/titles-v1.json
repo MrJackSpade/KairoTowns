@@ -1,0 +1,673 @@
+{
+  "schemaVersion": 1,
+  "games": {
+    "fmtowns:124835": {
+      "ja": "AmbivalenZ -二律背反-",
+      "source": "vndb:v2048"
+    },
+    "fmtowns:145080": {
+      "ja": "ウルティマVI 偽りの予言者",
+      "source": "launchbox:145080"
+    },
+    "fmtowns:145240": {
+      "ja": "雷の戦士ライディ２",
+      "source": "vndb:v603"
+    },
+    "fmtowns:177171": {
+      "ja": "DESIRE 背徳の螺旋",
+      "source": "vndb:v151"
+    },
+    "fmtowns:178588": {
+      "ja": "アイドル・プロジェクト",
+      "source": "vndb:v18251"
+    },
+    "fmtowns:182658": {
+      "ja": "ふしぎの海のナディア",
+      "source": "vndb:v4553"
+    },
+    "fmtowns:182659": {
+      "ja": "ルパン三世 香港の魔手 復讐は迷宮の果てに",
+      "source": "vndb:v18254"
+    },
+    "fmtowns:183539": {
+      "ja": "デュアルターゲット -第４のユニット３-",
+      "source": "vndb:v9114"
+    },
+    "fmtowns:183542": {
+      "ja": "第４のユニット５ Ｄ－Ａｇａｉｎ",
+      "source": "vndb:v9116"
+    },
+    "fmtowns:183543": {
+      "ja": "第４のユニット ＭＥＲＲＹ ＧＯ ＲＯＵＮＤ",
+      "source": "vndb:v9117"
+    },
+    "fmtowns:183545": {
+      "ja": "第４のユニット ＷＹＡＴＴ",
+      "source": "vndb:v9118"
+    },
+    "fmtowns:183926": {
+      "ja": "3x3 EYES ～三只眼變成～",
+      "source": "vndb:v4547"
+    },
+    "fmtowns:184102": {
+      "ja": "デ・ファーナ",
+      "source": "vndb:v8671"
+    },
+    "fmtowns:184103": {
+      "ja": "ドラゴンハーフ",
+      "source": "vndb:v18249"
+    },
+    "fmtowns:184110": {
+      "ja": "サイレントメビウス",
+      "source": "vndb:v9086"
+    },
+    "fmtowns:184136": {
+      "ja": "電撃ナース",
+      "source": "vndb:v8676"
+    },
+    "fmtowns:184374": {
+      "ja": "雷の戦士ライディ",
+      "source": "vndb:v158"
+    },
+    "fmtowns:184597": {
+      "ja": "ゆみみみっくす",
+      "source": "vndb:v43980"
+    },
+    "fmtowns:185083": {
+      "ja": "妖獣戦記 －Ａ．Ｄ．２０４８－",
+      "source": "vndb:v127"
+    },
+    "fmtowns:185084": {
+      "ja": "続妖獣戦記 －砂塵の黙示録－",
+      "source": "vndb:v4067"
+    },
+    "fmtowns:185085": {
+      "ja": "妖獣戦記２ -黎明の戦士たち-",
+      "source": "vndb:v6535"
+    },
+    "fmtowns:185092": {
+      "ja": "新宿ラビリンス",
+      "source": "vndb:v18226"
+    },
+    "fmtowns:185133": {
+      "ja": "38万キロの虚空",
+      "source": "vndb:v6994"
+    },
+    "fmtowns:185172": {
+      "ja": "クリスタルリナール －逢魔の迷宮－",
+      "source": "vndb:v17132"
+    },
+    "fmtowns:185644": {
+      "ja": "ぱらＰＡＲＡパラダイス",
+      "source": "vndb:v27158"
+    },
+    "fmtowns:187740": {
+      "ja": "Angel Halo－エンジェル・ハイロウ－",
+      "source": "vndb:v6958"
+    },
+    "fmtowns:187741": {
+      "ja": "アラベスク ～少女たちの織りなす愛の物語～",
+      "source": "vndb:v8556"
+    },
+    "fmtowns:187745": {
+      "ja": "あゆみちゃん物語",
+      "source": "vndb:v1929"
+    },
+    "fmtowns:187746": {
+      "ja": "あゆみちゃん物語 実写版",
+      "source": "vndb:v8566"
+    },
+    "fmtowns:187748": {
+      "ja": "マリアに捧げるバラード",
+      "source": "vndb:v8650"
+    },
+    "fmtowns:187749": {
+      "ja": "ブランマーカー",
+      "source": "vndb:v523"
+    },
+    "fmtowns:187750": {
+      "ja": "ブランマーカー２",
+      "source": "vndb:v8006"
+    },
+    "fmtowns:188060": {
+      "ja": "キャル外伝 タイニィステップ",
+      "source": "vndb:v8600"
+    },
+    "fmtowns:188061": {
+      "ja": "キャルIII 完結編",
+      "source": "vndb:v4836"
+    },
+    "fmtowns:188063": {
+      "ja": "きゃんきゃんバニー　エクストラ",
+      "source": "vndb:v4560"
+    },
+    "fmtowns:188065": {
+      "ja": "きゃんきゃんバニー プルミエール",
+      "source": "vndb:v6478"
+    },
+    "fmtowns:188117": {
+      "ja": "同級生",
+      "source": "vndb:v185"
+    },
+    "fmtowns:188118": {
+      "ja": "同級生2",
+      "source": "vndb:v2337"
+    },
+    "fmtowns:188119": {
+      "ja": "ＤＯＲ ＳＰＥＣＩＡＬ ＥＤＩＴＩＯＮ 魁",
+      "source": "vndb:v18195"
+    },
+    "fmtowns:188121": {
+      "ja": "D.P.S.全部",
+      "source": "vndb:v2234"
+    },
+    "fmtowns:188122": {
+      "ja": "ドラキュラ伯爵",
+      "source": "vndb:v8849"
+    },
+    "fmtowns:188123": {
+      "ja": "ドラゴンナイト4",
+      "source": "vndb:v498"
+    },
+    "fmtowns:188125": {
+      "ja": "ドラゴンナイトIII",
+      "source": "vndb:v723"
+    },
+    "fmtowns:188127": {
+      "ja": "EMIT Vol.1: 時の迷子",
+      "source": "vndb:v6956"
+    },
+    "fmtowns:188129": {
+      "ja": "EMIT Vol.3: 私にさよならを",
+      "source": "vndb:v19003"
+    },
+    "fmtowns:188132": {
+      "ja": "戯画もーしょん",
+      "source": "vndb:v21091"
+    },
+    "fmtowns:188137": {
+      "ja": "極楽まんだら",
+      "source": "vndb:v8706"
+    },
+    "fmtowns:188141": {
+      "ja": "学園KING －日出彦 学校をつくる－",
+      "source": "vndb:v2461"
+    },
+    "fmtowns:188142": {
+      "ja": "ギャンブラー ～Queen's Cup～",
+      "source": "vndb:v62581"
+    },
+    "fmtowns:188168": {
+      "ja": "ガンブレイズ",
+      "source": "vndb:v35861"
+    },
+    "fmtowns:188169": {
+      "ja": "花の記憶",
+      "source": "vndb:v8708"
+    },
+    "fmtowns:188171": {
+      "ja": "星の砂物語",
+      "source": "vndb:v8720"
+    },
+    "fmtowns:188172": {
+      "ja": "星の砂物語２",
+      "source": "vndb:v8721"
+    },
+    "fmtowns:188173": {
+      "ja": "星の砂物語３",
+      "source": "vndb:v8722"
+    },
+    "fmtowns:188174": {
+      "ja": "イフ ２",
+      "source": "vndb:v8725"
+    },
+    "fmtowns:188175": {
+      "ja": "イフ",
+      "source": "vndb:v8724"
+    },
+    "fmtowns:188179": {
+      "ja": "淫獣学園 ～Ｌａ★Ｂｌｕｅ Ｇｉｒｌ～",
+      "source": "vndb:v8733"
+    },
+    "fmtowns:188180": {
+      "ja": "イーリス亭小夜曲",
+      "source": "vndb:v8735"
+    },
+    "fmtowns:188181": {
+      "ja": "イリウム",
+      "source": "vndb:v8908"
+    },
+    "fmtowns:188184": {
+      "ja": "雀ＪＡＫＡ雀",
+      "source": "vndb:v18064"
+    },
+    "fmtowns:188185": {
+      "ja": "雀妃楼",
+      "source": "vndb:v18234"
+    },
+    "fmtowns:188186": {
+      "ja": "ジェラシー",
+      "source": "vndb:v8736"
+    },
+    "fmtowns:188188": {
+      "ja": "河原崎家の一族",
+      "source": "vndb:v2351"
+    },
+    "fmtowns:188201": {
+      "ja": "リップスティックアドベンチャー３",
+      "source": "vndb:v8780"
+    },
+    "fmtowns:188208": {
+      "ja": "マリオネット・マインド",
+      "source": "vndb:v8963"
+    },
+    "fmtowns:188215": {
+      "ja": "ミラージュ２ トリーＸニートＸローンの大冒険",
+      "source": "vndb:v18062"
+    },
+    "fmtowns:188218": {
+      "ja": "麻雀でPON!",
+      "source": "vndb:v35864"
+    },
+    "fmtowns:188219": {
+      "ja": "麻雀 河底撈魚",
+      "source": "vndb:v62582"
+    },
+    "fmtowns:188224": {
+      "ja": "ALICEの館3",
+      "source": "vndb:v9426"
+    },
+    "fmtowns:188261": {
+      "ja": "ミラーズ",
+      "source": "vndb:v18091"
+    },
+    "fmtowns:188264": {
+      "ja": "夢幻泡影",
+      "source": "vndb:v5933"
+    },
+    "fmtowns:188265": {
+      "ja": "無人島物語",
+      "source": "vndb:v5157"
+    },
+    "fmtowns:188268": {
+      "ja": "ネクロノミコン",
+      "source": "vndb:v8813"
+    },
+    "fmtowns:188277": {
+      "ja": "ポンカン",
+      "source": "vndb:v9015"
+    },
+    "fmtowns:188280": {
+      "ja": "ぷろすちゅーでんとG",
+      "source": "vndb:v4701"
+    },
+    "fmtowns:188285": {
+      "ja": "サイキック・ディテクティブ・シリーズ Vol.1 インビテーション 影からの招待状",
+      "source": "vndb:v9037"
+    },
+    "fmtowns:188286": {
+      "ja": "サイキック・ディテクティブ・シリーズ Vol.2 メモリーズ",
+      "source": "vndb:v9038"
+    },
+    "fmtowns:188287": {
+      "ja": "サイキック・ディテクティブ・シリーズ Vol.3 アヤ",
+      "source": "vndb:v4734"
+    },
+    "fmtowns:188288": {
+      "ja": "サイキック・ディテクティブ・シリーズ Vol.4 オルゴール",
+      "source": "vndb:v4735"
+    },
+    "fmtowns:188289": {
+      "ja": "サイキック・ディテクティブ・シリーズ Vol.5 ナイトメア",
+      "source": "vndb:v9039"
+    },
+    "fmtowns:188294": {
+      "ja": "ランス４．１　～お薬工場を救え！～",
+      "source": "vndb:v2043"
+    },
+    "fmtowns:188295": {
+      "ja": "ランス４．２　～エンジェル組～",
+      "source": "vndb:v2044"
+    },
+    "fmtowns:188296": {
+      "ja": "Rance -光をもとめて-",
+      "source": "vndb:v1414"
+    },
+    "fmtowns:188298": {
+      "ja": "ランス III　－リーザス陥落－",
+      "source": "vndb:v1829"
+    },
+    "fmtowns:188299": {
+      "ja": "ランス IV　－教団の遺産－",
+      "source": "vndb:v2040"
+    },
+    "fmtowns:188306": {
+      "ja": "リングアウト!!",
+      "source": "vndb:v1189"
+    },
+    "fmtowns:188324": {
+      "ja": "スウィートエンジェル",
+      "source": "vndb:v9102"
+    },
+    "fmtowns:188333": {
+      "ja": "天神乱魔",
+      "source": "vndb:v7824"
+    },
+    "fmtowns:188335": {
+      "ja": "闘神都市",
+      "source": "vndb:v888"
+    },
+    "fmtowns:188336": {
+      "ja": "闘神都市II",
+      "source": "vndb:v889"
+    },
+    "fmtowns:188337": {
+      "ja": "闘神都市II そして、それから・・・",
+      "source": "vndb:v6916"
+    },
+    "fmtowns:188338": {
+      "ja": "トリガー",
+      "source": "vndb:v9134"
+    },
+    "fmtowns:188339": {
+      "ja": "トゥルーハート",
+      "source": "vndb:v8824"
+    },
+    "fmtowns:188340": {
+      "ja": "宇宙快盗ファニーBee",
+      "source": "vndb:v1723"
+    },
+    "fmtowns:188341": {
+      "ja": "ヴァーストニス 空虚の生贄達",
+      "source": "vndb:v13659"
+    },
+    "fmtowns:188353": {
+      "ja": "XENON ～夢幻の肢体～",
+      "source": "vndb:v7474"
+    },
+    "fmtowns:188357": {
+      "ja": "雑音領域",
+      "source": "vndb:v9173"
+    },
+    "fmtowns:188359": {
+      "ja": "ゼニス",
+      "source": "vndb:v9174"
+    },
+    "fmtowns:188365": {
+      "ja": "バーチャコール",
+      "source": "vndb:v4452"
+    },
+    "fmtowns:188366": {
+      "ja": "バーチャコール2",
+      "source": "vndb:v4453"
+    },
+    "fmtowns:188768": {
+      "ja": "ベルズアベニュー",
+      "source": "vndb:v8651"
+    },
+    "fmtowns:188772": {
+      "ja": "カース",
+      "source": "vndb:v8833"
+    },
+    "fmtowns:188779": {
+      "ja": "エイミーと呼ばないでっ",
+      "source": "vndb:v734"
+    },
+    "fmtowns:188780": {
+      "ja": "誘惑",
+      "source": "vndb:v17066"
+    },
+    "fmtowns:188781": {
+      "ja": "悦楽の学園",
+      "source": "vndb:v740"
+    },
+    "fmtowns:188789": {
+      "ja": "ツーショットDiary",
+      "source": "vndb:v6964"
+    },
+    "fmtowns:188794": {
+      "ja": "花よりダンゴ2",
+      "source": "vndb:v35863"
+    },
+    "fmtowns:188795": {
+      "ja": "花札でPON!",
+      "source": "vndb:v35865"
+    },
+    "fmtowns:188797": {
+      "ja": "宝魔ハンターライム",
+      "source": "vndb:v4569"
+    },
+    "fmtowns:188801": {
+      "ja": "女子校制服物語",
+      "source": "vndb:v8922"
+    },
+    "fmtowns:188803": {
+      "ja": "禁断の血族",
+      "source": "vndb:v739"
+    },
+    "fmtowns:188805": {
+      "ja": "ここは楽園荘2",
+      "source": "vndb:v1013"
+    },
+    "fmtowns:188806": {
+      "ja": "魔導学院Ｒ",
+      "source": "vndb:v18098"
+    },
+    "fmtowns:188809": {
+      "ja": "ミス・ディテクティヴ　ファイル#1　石見銀山殺人事件",
+      "source": "vndb:v18092"
+    },
+    "fmtowns:188810": {
+      "ja": "ミス・ディテクティヴ　ファイル#2　姿なき依頼人",
+      "source": "vndb:v18093"
+    },
+    "fmtowns:188812": {
+      "ja": "濃縮ANGEL・120%",
+      "source": "vndb:v8991"
+    },
+    "fmtowns:188816": {
+      "ja": "櫻の杜 ～さくらのもり～",
+      "source": "vndb:v9069"
+    },
+    "fmtowns:188821": {
+      "ja": "帝都大戦",
+      "source": "vndb:v18215"
+    },
+    "fmtowns:190755": {
+      "ja": "トリガー２",
+      "source": "vndb:v9135"
+    },
+    "fmtowns:192858": {
+      "ja": "デーモンシティ",
+      "source": "vndb:v8675"
+    },
+    "fmtowns:192859": {
+      "ja": "電撃ナース２ ～モアセクシー～",
+      "source": "vndb:v8678"
+    },
+    "fmtowns:192860": {
+      "ja": "イフ ３",
+      "source": "vndb:v8726"
+    },
+    "fmtowns:192861": {
+      "ja": "恭子のいぢわる!! ～ハチャメチャ大進撃～",
+      "source": "vndb:v8942"
+    },
+    "fmtowns:192865": {
+      "ja": "さよならの向こう側",
+      "source": "vndb:v15179"
+    },
+    "fmtowns:192868": {
+      "ja": "ＷＯＮＰＡＲＡウォーズII",
+      "source": "vndb:v8377"
+    },
+    "fmtowns:192870": {
+      "ja": "DOKIDOKIバケーション ～きらめく季節の中で～",
+      "source": "vndb:v2547"
+    },
+    "fmtowns:194669": {
+      "ja": "ノ・ヴァ",
+      "source": "vndb:v8992"
+    },
+    "fmtowns:197142": {
+      "ja": "コレクターD",
+      "source": "vndb:v18255"
+    },
+    "fmtowns:197146": {
+      "ja": "麻雀幻想曲II",
+      "source": "vndb:v6025"
+    },
+    "fmtowns:197147": {
+      "ja": "麻雀幻想曲III",
+      "source": "vndb:v6026"
+    },
+    "fmtowns:197148": {
+      "ja": "ソフトでハードな物語",
+      "source": "vndb:v16761"
+    },
+    "fmtowns:197149": {
+      "ja": "ソフトでハードな物語 II",
+      "source": "vndb:v16762"
+    },
+    "fmtowns:197150": {
+      "ja": "バンパイアハイすく～る",
+      "source": "vndb:v9148"
+    },
+    "fmtowns:197163": {
+      "ja": "麻雀幻想曲",
+      "source": "vndb:v6024"
+    },
+    "fmtowns:198888": {
+      "ja": "エンゲージエランズII ～光輝を担うもの～",
+      "source": "vndb:v41910"
+    },
+    "fmtowns:198890": {
+      "ja": "なる麻雀",
+      "source": "vndb:v34417"
+    },
+    "fmtowns:199997": {
+      "ja": "拘束超人",
+      "source": "vndb:v8756"
+    },
+    "fmtowns:199998": {
+      "ja": "みさとちゃんの夢日記",
+      "source": "vndb:v8972"
+    },
+    "fmtowns:200001": {
+      "ja": "タイムストリッパー真子ちゃん",
+      "source": "vndb:v1444"
+    },
+    "fmtowns:200002": {
+      "ja": "野々村病院の人々",
+      "source": "vndb:v2346"
+    },
+    "fmtowns:200007": {
+      "ja": "学園爆裂転校生!",
+      "source": "vndb:v7832"
+    },
+    "fmtowns:200749": {
+      "ja": "ハーフムーンにかわるまで ～蘭宮涼の虹色玉手箱～",
+      "source": "vndb:v8897"
+    },
+    "fmtowns:200752": {
+      "ja": "Never Land ～ネバーランド～",
+      "source": "vndb:v8981"
+    },
+    "fmtowns:201328": {
+      "ja": "CALIFORNIA X PARTY 女子大生秘密クラブ",
+      "source": "vndb:v18257"
+    },
+    "fmtowns:201331": {
+      "ja": "夢現 Ｄｒｅａｍｙ －ゆめうつつ－",
+      "source": "vndb:v8851"
+    },
+    "fmtowns:201332": {
+      "ja": "尋問遊戯",
+      "source": "vndb:v8920"
+    },
+    "fmtowns:201336": {
+      "ja": "くすり指の教科書",
+      "source": "vndb:v8759"
+    },
+    "fmtowns:201337": {
+      "ja": "迷走都市",
+      "source": "vndb:v843"
+    },
+    "fmtowns:201338": {
+      "ja": "ムーンライトエナジー",
+      "source": "vndb:v8974"
+    },
+    "fmtowns:201339": {
+      "ja": "ノスタルジア1907",
+      "source": "vndb:v18192"
+    },
+    "fmtowns:201341": {
+      "ja": "令嬢物語 　～れいじょうものがたり～",
+      "source": "vndb:v9052"
+    },
+    "fmtowns:201342": {
+      "ja": "TANIA ～タニア～",
+      "source": "vndb:v9106"
+    },
+    "fmtowns:201344": {
+      "ja": "URM～M15惑星に生まれて～",
+      "source": "vndb:v18247"
+    },
+    "fmtowns:201345": {
+      "ja": "Vanishing Point －天使の消えた街－",
+      "source": "vndb:v18143"
+    },
+    "fmtowns:202013": {
+      "ja": "天使たちの午後ＶＩ -My Fair Teacher-",
+      "source": "vndb:v8774"
+    },
+    "fmtowns:202014": {
+      "ja": "失われた楽園",
+      "source": "vndb:v9147"
+    },
+    "fmtowns:202969": {
+      "ja": "愛姉妹 ～二人の果実～",
+      "source": "vndb:v1836"
+    },
+    "fmtowns:203206": {
+      "ja": "ウェディングエラントリー -逆玉王-",
+      "source": "vndb:v17721"
+    },
+    "fmtowns:203209": {
+      "ja": "あぶない天狗伝説",
+      "source": "vndb:v8549"
+    },
+    "fmtowns:203230": {
+      "ja": "それゆけナンパくん",
+      "source": "vndb:v18217"
+    },
+    "fmtowns:203291": {
+      "ja": "コレクターＤ 番外編 極楽台西地区セールス大作戦",
+      "source": "vndb:v18256"
+    },
+    "fmtowns:204353": {
+      "ja": "亜紀子 GOLD",
+      "source": "vndb:v8552"
+    },
+    "fmtowns:215112": {
+      "ja": "学園ボンバー",
+      "source": "vndb:v8691"
+    },
+    "fmtowns:462586": {
+      "ja": "天使たちの午後 ～転校生～",
+      "source": "vndb:v16345"
+    },
+    "fmtowns:moby-45929": {
+      "ja": "：ＬＯＯＰ ～いざなひの回帰点～",
+      "source": "vndb:v8546"
+    },
+    "fmtowns:moby-47937": {
+      "ja": "イマージュ２",
+      "source": "vndb:v8728"
+    },
+    "fmtowns:moby-59189": {
+      "ja": "クレセント",
+      "source": "vndb:v8830"
+    }
+  }
+}
