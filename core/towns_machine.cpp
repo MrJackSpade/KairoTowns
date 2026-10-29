@@ -174,6 +174,9 @@ struct TownsMachine::Impl {
     Window window;
     Speaker speaker;
     PictureWorker pictures;
+    // Disk reads before the last frame and whether it read any (TownsMachine::loading).
+    uint64_t reads_before = 0;
+    bool frame_read = false;
     // The CD that goes in once a hard disk boot has read its first disk (Config::boot_hd).
     std::string cd_after_boot;
     // The guest's calls of DOS's line input when a key last went down (TownsMachine::prompt).
@@ -655,6 +658,9 @@ TownsMachine::~TownsMachine() {
 bool TownsMachine::run_frame(std::string &error) {
     const auto start = std::chrono::steady_clock::now();
     const bool ran = run_frame_body(error);
+    const uint64_t reads = impl_->towns->kairoDiskReads;
+    impl_->frame_read = reads != impl_->reads_before;
+    impl_->reads_before = reads;
     // The frame's picture, drawn beside the emulation since its rendering point (PictureWorker).
     const auto wait_start = std::chrono::steady_clock::now();
     impl_->pictures.wait();
@@ -663,6 +669,8 @@ bool TownsMachine::run_frame(std::string &error) {
     impl_->profile.run_ns += elapsed_ns(start);
     return ran;
 }
+
+bool TownsMachine::loading() const { return impl_->frame_read; }
 
 const TownsMachine::Profile &TownsMachine::profile() const {
     impl_->profile.skipped_instructions = impl_->wait_loop.counts().instructions;

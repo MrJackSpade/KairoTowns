@@ -162,6 +162,9 @@ public:
     std::string cd_path() const;
     std::string fd_path(int drive) const;
     std::string hd_path(int id) const;
+    // Whether the last frame read a CD, floppy or hard disk sector (Tsugaru's NotifyDiskRead), which
+    // the host runs flat out (Kairo#82). CD audio plays without reading data and does not count.
+    bool loading() const;
 
 private:
     struct Impl;

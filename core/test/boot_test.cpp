@@ -31,6 +31,8 @@ struct Run {
     uint64_t audio_frames = 0, loud_frames = 0;
     double seconds = 0;
     std::vector<int16_t> sound;
+    // Frames that read a disk, which the host runs flat out (TownsMachine::loading).
+    uint64_t loading_frames = 0;
 };
 
 bool run(TownsMachine &machine, int frames, Run &result, std::string &error) {
@@ -38,6 +40,7 @@ bool run(TownsMachine &machine, int frames, Run &result, std::string &error) {
     for (int i = 0; i < frames; ++i) {
         if (!machine.run_frame(error)) return false;
         result.seconds += machine.frame_seconds();
+        if (machine.loading()) ++result.loading_frames;
         uint32_t got;
         while ((got = machine.read_audio(audio.data(), 4096)) > 0) {
             result.audio_frames += got;
@@ -114,6 +117,7 @@ int main(int argc, char **argv) {
                 boot.width, boot.height, (unsigned long long) boot.audio_frames, (unsigned long long) boot.loud_frames,
                 frames, boot.seconds);
     if (boot.picture.empty()) return fail("no picture");
+    std::printf("boot: loading (a disk read) in %llu frames\n", (unsigned long long) boot.loading_frames);
     const double expected = boot.seconds * TownsMachine::kAudioRate;
     if (boot.audio_frames < expected * 0.98 || boot.audio_frames > expected * 1.02)
         return fail("audio does not follow guest time");
@@ -132,6 +136,7 @@ int main(int argc, char **argv) {
     if (!run(*machine, 60, after_load, error)) return fail("run after load: " + error);
     write_ppm(work + "/after_save.ppm", after_save);
     write_ppm(work + "/after_load.ppm", after_load);
+    std::printf("after the boot: loading in %llu of the next second's frames\n", (unsigned long long) after_save.loading_frames);
     std::printf("state: the second after load %s the second after save\n",
                 after_save.picture == after_load.picture ? "matches" : "differs from");
     if (after_save.picture != after_load.picture) return fail("state round trip");
