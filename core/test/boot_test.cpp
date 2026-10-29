@@ -128,6 +128,7 @@ int main(int argc, char **argv) {
     if (boot.picture.empty()) return fail("no picture");
     std::printf("boot: loading (a disk read) in %llu frames\n", (unsigned long long) boot.loading_frames);
     std::printf("boot: the TBIOS mouse driver %s\n", machine->mouse_driver_running() ? "runs" : "does not run");
+    std::printf("boot: %llu complete mouse reads\n", static_cast<unsigned long long>(machine->mouse_samples()));
     if (warp_x >= 0) {
         machine->mouse_warp(warp_x, warp_y);
         Run warped;

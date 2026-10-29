@@ -177,6 +177,26 @@ unsigned char TownsGamePort::Port::Read(long long int townsTime)
 		{
 			data|=0x20;
 		}
+		// KairoTowns: complete mouse reads (kairoMouseSamples).
+		if(kairoPhase!=(unsigned int)state)
+		{
+			kairoPhase=state;
+			kairoPhaseReads=0;
+		}
+		++kairoPhaseReads;
+		if(MOUSESTATE_XHIGH==state)
+		{
+			kairoXHighReads=kairoPhaseReads;
+		}
+		else if(MOUSESTATE_YLOW==state && 1==kairoPhaseReads && 2<=kairoXHighReads)
+		{
+			kairoRun=(townsTime-kairoLastSampleTime<=100000000LL ? kairoRun+1 : 1);
+			kairoLastSampleTime=townsTime;
+			if(30<=kairoRun)
+			{
+				++kairoMouseSamples;
+			}
+		}
 		switch(state)
 		{
 		case MOUSESTATE_XHIGH:

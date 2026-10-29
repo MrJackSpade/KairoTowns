@@ -711,6 +711,9 @@ bool TownsMachine::loading() const { return impl_->frame_read; }
 
 bool TownsMachine::mouse_driver_running() const { return impl_->towns->state.mouseBIOSActive; }
 
+// Port 1 is the mouse (Impl's gamePort setup).
+uint64_t TownsMachine::mouse_samples() const { return impl_->towns->gameport.state.ports[1].kairoMouseSamples; }
+
 const TownsMachine::Profile &TownsMachine::profile() const {
     impl_->profile.skipped_instructions = impl_->wait_loop.counts().instructions;
     impl_->profile.wait_skips = impl_->wait_loop.counts().skips;

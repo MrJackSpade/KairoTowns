@@ -111,6 +111,18 @@ public:
 		long long int lastAccessTime;
 		long long int lastStateChangeTime;
 
+		/*! KairoTowns: complete mouse reads, for Auto touch mode (KairoTowns#82). A guest reading
+		    the mouse (TBIOS's driver, or a game's own code such as Lemmings') reads the X-high phase
+		    at least twice and then each other phase, within MOUSEREAD_RESET_TIMEOUT; a 6-button pad
+		    reader (Super Street Fighter II) reads each phase once, and a 2-button one never gets
+		    past the first. One count a cycle, at its Y-low read, once 30 have come in a row, each
+		    within 100 ms of the last: a pad game's start-up check (Super Street Fighter II reads
+		    the port so four times) is no mouse game.
+		*/
+		uint64_t kairoMouseSamples=0;
+		unsigned int kairoPhase=~0u,kairoPhaseReads=0,kairoXHighReads=0,kairoRun=0;
+		long long int kairoLastSampleTime=0;
+
 
 		// Used in Read() >>
 		bool lastButtonRead[2]={false,false};

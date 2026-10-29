@@ -115,13 +115,15 @@ public:
     // A game's startup commands go in at DOS's line input (TownsMachine::prompt).
     // Flat out while the guest reads a disk (Kairo#82).
     bool loading() override { return machine_->loading(); }
-    // Auto touch mode (Kairo#78): the guest running the TBIOS mouse driver is the mouse; with no
-    // keyboard signal of its own, the keyboard stays the default.
+    // Auto touch mode (Kairo#78): the guest running the TBIOS mouse driver is the mouse, and so is
+    // one reading the mouse's port itself (complete mouse reads, KairoTowns#82); with no keyboard
+    // signal of its own, the keyboard stays the default.
     // CAPS and カナ, as the keyboard lights them (TownsKeys.CAPS, KATAKANA).
     int locks() override { return machine_->locks(); }
 
     bool guest_input(GuestInput &input) override {
         input.mouse_enabled = machine_->mouse_driver_running();
+        input.mouse_reads = machine_->mouse_samples();
         return true;
     }
     kairo::Prompt prompt() override { return machine_->prompt(); }

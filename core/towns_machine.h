@@ -180,6 +180,10 @@ public:
     // programs and most mouse games do. Its reads go past any port a pad uses too, so this, not the
     // reads, says the guest wants the mouse.
     bool mouse_driver_running() const;
+    // Complete mouse reads the guest made on the mouse's port so far, as TBIOS's driver and a game
+    // reading the mouse itself (Lemmings) make them and a pad reader (Super Street Fighter II's
+    // 6-button read) does not (Port::kairoMouseSamples, KairoTowns#82).
+    uint64_t mouse_samples() const;
 
 private:
     struct Impl;
