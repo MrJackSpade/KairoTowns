@@ -42,3 +42,7 @@ SCANS = {"fmtowns-cd": (".downloads/scan/fmtowns-cd.json", ("fmtowns",))}
 # else from its CD, with its floppy (often a user disk) in drive A.
 BOOT_KINDS = ["hd", "cd", "fd"]
 COMPANION = {"cd": ("fd", "floppyA", True), "hd": ("cd", "cd", False, True)}
+
+# The media slots a disk swap can use and the disks each takes (MainActivity.mediaSlots, the
+# catalog schema's CatalogSetting.DiskSwaps; shared/tools/startup_automation.py).
+DISK_SWAPS = {0: {"cd"}, 1: {"fd"}, 2: {"fd"}}

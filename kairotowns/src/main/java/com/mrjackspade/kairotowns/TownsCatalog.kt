@@ -34,7 +34,11 @@ object TownsCatalog : LayeredGameCatalog.Schema {
 
     override val settings: List<CatalogSetting> = options.map(CatalogSetting::Choice) +
         CatalogSetting.Drive("floppyA", UiText.res(R.string.floppy_a)) { it.startsWith(CD) } +
-        CatalogSetting.Drive("cd", UiText.res(FrontendR.string.kairo_cd_rom)) { it.startsWith(HARD_DISK) } + startupCommands
+        CatalogSetting.Drive("cd", UiText.res(FrontendR.string.kairo_cd_rom)) { it.startsWith(HARD_DISK) } + startupCommands +
+        // A game's startup menus and disk swaps (shared StartupAutomation).
+        listOf(CatalogSetting.StartupChoices,
+        // The CD-ROM drive and floppy drives A and B (MainActivity.mediaSlots).
+        CatalogSetting.DiskSwaps(3) { drive, id -> id.startsWith(if (drive == 0) CD else FLOPPY) })
     override val fields = CatalogSetting.fields(settings)
     /** Tsugaru moves the guest's TBIOS mouse pointer to a point (TownsMachine::mouse_warp). */
     override val directTouch = true
@@ -43,7 +47,7 @@ object TownsCatalog : LayeredGameCatalog.Schema {
         role == "floppyA" && contentId.startsWith(FLOPPY) || role == "cd" && contentId.startsWith(CD)
 
     override fun validField(field: String, value: Any): Boolean =
-        field in fields && CatalogSetting.validSection(settings, field, value)
+        field in fields && CatalogSetting.valid(settings, contentId, field, value)
 
     override fun validBindings(bindings: JSONArray) = TownsKeys.bindings.valid(bindings)
 
