@@ -80,6 +80,8 @@ public:
 
     // A key by its JIS key code (TOWNS_JISKEY_*, towns/townsdef/townsdef.h).
     void key(int code, bool down);
+    // The keyboard's lamps, one bit each: CAPS (bit 0) and カナ (bit 1) (Kairo#80).
+    int locks() const;
 
     // The machine as the shared typer types a game's startup commands (kairo/startup_typer.h): a
     // line goes in when the guest has called DOS's line input (INT 21h AH=0Ah, where COMMAND.COM

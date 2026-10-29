@@ -51,6 +51,18 @@ void TownsKeyboard::SetAutoType(std::string str)
 
 void TownsKeyboard::PushFifo(unsigned char code1,unsigned char code2)
 {
+	// KairoTowns: a press of CAPS or カナ switches its lamp (State::capsLamp).
+	if(0!=(code1&TOWNS_KEYFLAG_TYPE_FIRSTBYTE) && 0==(code1&TOWNS_KEYFLAG_RELEASE))
+	{
+		if(TOWNS_JISKEY_CAPS==code2)
+		{
+			state.capsLamp=!state.capsLamp;
+		}
+		else if(TOWNS_JISKEY_KATAKANA==code2)
+		{
+			state.kanaLamp=!state.kanaLamp;
+		}
+	}
 	if(TOWNS_APPSPECIFIC_DAIKOUKAIJIDAI2==townsPtr->state.appSpecificSetting &&
 	   TBIOS_UNKNOWN!=townsPtr->state.tbiosVersion)
 	{
@@ -679,7 +691,7 @@ void TownsKeyboard::TypeToFifo(const unsigned char byteData[2])
 
 /* virtual */ uint32_t TownsKeyboard::SerializeVersion(void) const
 {
-	return 0;
+	return 1; // KairoTowns: the lamps
 }
 /* virtual */ void TownsKeyboard::SpecificSerialize(std::vector <unsigned char> &data,std::string stateFName) const
 {
@@ -690,6 +702,9 @@ void TownsKeyboard::TypeToFifo(const unsigned char byteData[2])
 	PushUint32(data,state.bootKeyCombSequenceCounter);
 
 	PushUint32(data,state.lastCmd);
+
+	PushBool(data,state.capsLamp); // KairoTowns
+	PushBool(data,state.kanaLamp);
 }
 /* virtual */ bool TownsKeyboard::SpecificDeserialize(const unsigned char *&data,std::string stateFName,uint32_t version)
 {
@@ -700,6 +715,10 @@ void TownsKeyboard::TypeToFifo(const unsigned char byteData[2])
 	state.bootKeyCombSequenceCounter=ReadUint32(data);
 
 	state.lastCmd=ReadUint32(data);
+
+	// KairoTowns: a state saved before the lamps has them off.
+	state.capsLamp=1<=version && ReadBool(data);
+	state.kanaLamp=1<=version && ReadBool(data);
 
 	return true;
 }

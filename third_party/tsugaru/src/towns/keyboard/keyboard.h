@@ -39,6 +39,12 @@ public:
 
 		unsigned char lastCmd=0;
 
+		/*! KairoTowns: the keyboard's CAPS and カナ lamps. The keyboard takes no lamp orders from the
+		    machine (Technical Databook 7.1.2), so it switches them itself at each press of the key;
+		    they come on with the keyboard off. Saved with the state (version 1).
+		*/
+		bool capsLamp=false,kanaLamp=false;
+
 		void Reset(void);
 	};
 

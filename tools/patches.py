@@ -2303,4 +2303,13 @@ void FMTownsCommon::NotifyDiskRead(void)
         ('tsugaru/src/towns/scsi/scsi.cpp', '\n\t\t\t\t   DiscImage::ERROR_NOERROR!=dev.discImg.Open(stateRel))', '\n\t\t\t\t   DiscImage::ERROR_NOERROR==dev.discImg.Open(stateRel))'),
         ('tsugaru/src/towns/scsi/scsi.cpp', '\n\t\t\t\t   DiscImage::ERROR_NOERROR!=dev.discImg.Open(ful))', '\n\t\t\t\t   DiscImage::ERROR_NOERROR==dev.discImg.Open(ful))'),
     ],
+    'tsugaru/src/towns/keyboard/keyboard.h': [
+        ('tsugaru/src/towns/keyboard/keyboard.h', '\t\tunsigned char lastCmd=0;\n\n\t\tvoid Reset(void);\n', "\t\tunsigned char lastCmd=0;\n\n\t\t/*! KairoTowns: the keyboard's CAPS and カナ lamps. The keyboard takes no lamp orders from the\n\t\t    machine (Technical Databook 7.1.2), so it switches them itself at each press of the key;\n\t\t    they come on with the keyboard off. Saved with the state (version 1).\n\t\t*/\n\t\tbool capsLamp=false,kanaLamp=false;\n\n\t\tvoid Reset(void);\n"),
+    ],
+    'tsugaru/src/towns/keyboard/keyboard.cpp': [
+        ('tsugaru/src/towns/keyboard/keyboard.cpp', 'void TownsKeyboard::PushFifo(unsigned char code1,unsigned char code2)\n{\n', 'void TownsKeyboard::PushFifo(unsigned char code1,unsigned char code2)\n{\n\t// KairoTowns: a press of CAPS or カナ switches its lamp (State::capsLamp).\n\tif(0!=(code1&TOWNS_KEYFLAG_TYPE_FIRSTBYTE) && 0==(code1&TOWNS_KEYFLAG_RELEASE))\n\t{\n\t\tif(TOWNS_JISKEY_CAPS==code2)\n\t\t{\n\t\t\tstate.capsLamp=!state.capsLamp;\n\t\t}\n\t\telse if(TOWNS_JISKEY_KATAKANA==code2)\n\t\t{\n\t\t\tstate.kanaLamp=!state.kanaLamp;\n\t\t}\n\t}\n'),
+        ('tsugaru/src/towns/keyboard/keyboard.cpp', '/* virtual */ uint32_t TownsKeyboard::SerializeVersion(void) const\n{\n\treturn 0;\n}\n', '/* virtual */ uint32_t TownsKeyboard::SerializeVersion(void) const\n{\n\treturn 1; // KairoTowns: the lamps\n}\n'),
+        ('tsugaru/src/towns/keyboard/keyboard.cpp', '\tPushUint32(data,state.lastCmd);\n}\n', '\tPushUint32(data,state.lastCmd);\n\n\tPushBool(data,state.capsLamp); // KairoTowns\n\tPushBool(data,state.kanaLamp);\n}\n'),
+        ('tsugaru/src/towns/keyboard/keyboard.cpp', '\tstate.lastCmd=ReadUint32(data);\n\n\treturn true;\n}\n', '\tstate.lastCmd=ReadUint32(data);\n\n\t// KairoTowns: a state saved before the lamps has them off.\n\tstate.capsLamp=1<=version && ReadBool(data);\n\tstate.kanaLamp=1<=version && ReadBool(data);\n\n\treturn true;\n}\n'),
+    ],
 }

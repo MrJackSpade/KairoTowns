@@ -955,6 +955,11 @@ void TownsMachine::key(int code, bool down) {
                                     static_cast<unsigned char>(code));
 }
 
+int TownsMachine::locks() const {
+    const auto &keyboard = impl_->towns->keyboard.state;
+    return (keyboard.capsLamp ? 1 : 0) | (keyboard.kanaLamp ? 2 : 0);
+}
+
 void TownsMachine::pad(unsigned buttons) { impl_->pad = buttons; }
 
 void TownsMachine::mouse_move(int dx, int dy) {

@@ -117,6 +117,9 @@ public:
     bool loading() override { return machine_->loading(); }
     // Auto touch mode (Kairo#78): the guest running the TBIOS mouse driver is the mouse; with no
     // keyboard signal of its own, the keyboard stays the default.
+    // CAPS and カナ, as the keyboard lights them (TownsKeys.CAPS, KATAKANA).
+    int locks() override { return machine_->locks(); }
+
     bool guest_input(GuestInput &input) override {
         input.mouse_enabled = machine_->mouse_driver_running();
         return true;
