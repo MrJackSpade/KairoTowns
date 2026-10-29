@@ -19,9 +19,10 @@ permissions:
 
 jobs:
   sync:
-    uses: MrJackSpade/Kairo/.github/workflows/discord-sync-run.yml@50c87c7a601afac67cc629b8ab6654287cba27f2
+    uses: MrJackSpade/Kairo/.github/workflows/discord-sync-run.yml@43a615d7eaede225dd31f3440f1ffde405cf58f3
     with:
       issue: ${{ inputs.issue }}
     secrets:
       webhook: ${{ secrets.KAIRO_DISCORD_WEBHOOK }}
+      owner-webhook: ${{ secrets.KAIRO_DISCORD_OWNER_WEBHOOK }}
       bot-token: ${{ secrets.KAIRO_DISCORD_BOT_TOKEN }}
