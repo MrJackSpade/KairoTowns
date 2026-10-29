@@ -672,6 +672,8 @@ bool TownsMachine::run_frame(std::string &error) {
 
 bool TownsMachine::loading() const { return impl_->frame_read; }
 
+bool TownsMachine::mouse_driver_running() const { return impl_->towns->state.mouseBIOSActive; }
+
 const TownsMachine::Profile &TownsMachine::profile() const {
     impl_->profile.skipped_instructions = impl_->wait_loop.counts().instructions;
     impl_->profile.wait_skips = impl_->wait_loop.counts().skips;

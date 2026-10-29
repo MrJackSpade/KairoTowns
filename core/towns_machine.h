@@ -165,6 +165,10 @@ public:
     // Whether the last frame read a CD, floppy or hard disk sector (Tsugaru's NotifyDiskRead), which
     // the host runs flat out (Kairo#82). CD audio plays without reading data and does not count.
     bool loading() const;
+    // Whether the guest has the TBIOS mouse driver running (MOS_start to MOS_end), as Towns OS
+    // programs and most mouse games do. Its reads go past any port a pad uses too, so this, not the
+    // reads, says the guest wants the mouse.
+    bool mouse_driver_running() const;
 
 private:
     struct Impl;

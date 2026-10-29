@@ -113,6 +113,12 @@ public:
     // A game's startup commands go in at DOS's line input (TownsMachine::prompt).
     // Flat out while the guest reads a disk (Kairo#82).
     bool loading() override { return machine_->loading(); }
+    // Auto touch mode (Kairo#78): the guest running the TBIOS mouse driver is the mouse; with no
+    // keyboard signal of its own, the keyboard stays the default.
+    bool guest_input(GuestInput &input) override {
+        input.mouse_enabled = machine_->mouse_driver_running();
+        return true;
+    }
     kairo::Prompt prompt() override { return machine_->prompt(); }
     bool typed_key(char c, int &code, bool &shift) override { return TownsMachine::typed_key(c, code, shift); }
     int special_key(kairo::SpecialKey key) override { return TownsMachine::special_key(key); }

@@ -1,8 +1,8 @@
 // Boots an FM Towns disc on the host and checks what the app relies on.
 //
-//   boot_test <rom dir> <work dir> <disc image> <seconds>
+//   boot_test <rom dir> <work dir> <disc image> <seconds> [<floppy>]
 //
-// Runs the disc for <seconds>, writing <work dir>/boot.ppm of the last picture and reporting
+// Runs the disc for <seconds> (with <floppy> in drive 0 when given, such as a game's user disk), writing <work dir>/boot.ppm of the last picture and reporting
 // its audio. Then it saves a state, runs on, ejects the disc, loads the state, and checks that the
 // disc is back in the drive as the machine reports it (cd_path) and that the next second draws the
 // same picture as it did after the save. Last it starts a second machine in the same
@@ -78,12 +78,13 @@ void write_wav(const std::string &file, const std::vector<int16_t> &sound) {
 } // namespace
 
 int main(int argc, char **argv) {
-    if (argc != 5) return fail("usage: boot_test <rom dir> <work dir> <disc image> <seconds>");
+    if (argc != 5 && argc != 6) return fail("usage: boot_test <rom dir> <work dir> <disc image> <seconds> [<floppy>]");
     const std::string work = argv[2];
     Config config;
     config.rom_dir = argv[1];
     config.cmos_file = work + "/cmos.bin";
     config.cd = argv[3];
+    if (argc == 6) config.fd[0] = argv[5];
     // The state round trip compares two runs of the same second, so the run must repeat: CD audio
     // read in the background and the host's clock would make them differ (Config::repeatable).
     config.repeatable = true;
@@ -118,6 +119,7 @@ int main(int argc, char **argv) {
                 frames, boot.seconds);
     if (boot.picture.empty()) return fail("no picture");
     std::printf("boot: loading (a disk read) in %llu frames\n", (unsigned long long) boot.loading_frames);
+    std::printf("boot: the TBIOS mouse driver %s\n", machine->mouse_driver_running() ? "runs" : "does not run");
     const double expected = boot.seconds * TownsMachine::kAudioRate;
     if (boot.audio_frames < expected * 0.98 || boot.audio_frames > expected * 1.02)
         return fail("audio does not follow guest time");
