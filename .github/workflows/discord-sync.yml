@@ -16,10 +16,11 @@ on:
 permissions:
   contents: write
   issues: read
+  actions: write
 
 jobs:
   sync:
-    uses: MrJackSpade/Kairo/.github/workflows/discord-sync-run.yml@43a615d7eaede225dd31f3440f1ffde405cf58f3
+    uses: MrJackSpade/Kairo/.github/workflows/discord-sync-run.yml@4e35c679e3cfd7d4743f3bdd1c8082be0fa75664
     with:
       issue: ${{ inputs.issue }}
     secrets:
