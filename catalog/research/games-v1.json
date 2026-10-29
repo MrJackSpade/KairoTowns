@@ -434,8 +434,7 @@
    ],
    "boxArtUrl": "https://images.launchbox-app.com/00bf11be-dcd4-4dc2-a920-aa6d71212498.jpg",
    "contentIds": [
-    "sha256-cd-v1:66bbf8d901844ac015f99faff2dda2ce8d0a349132e11a9ad482b811a2c16d6d",
-    "sha256-fd-v1:ff942b97e07fbec08cdecff1572f7ae4e671c607b6d7f6b17f8af1d08eba9e76"
+    "sha256-cd-v1:66bbf8d901844ac015f99faff2dda2ce8d0a349132e11a9ad482b811a2c16d6d"
    ],
    "description": "Toaplan's vertical helicopter shooter: fly the Twin Cobra over enemy territory, destroying tanks, ships and gun emplacements with upgradable weapons and bombs.",
    "descriptions": {
@@ -1037,6 +1036,13 @@
     "ru": "Пиратская комедия от LucasArts: Гайбраш Трипвуд берется стать пиратом на острове Мелее и сталкивается с призраком пирата Ле Чаком."
    },
    "developer": "Lucasfilm Games",
+   "diskSets": {
+    "sha256-cd-v1:f88d7d3fd27e2dde9bec9e8697f9e72d7d1f15f436b189d210867f1c4d53a526": {
+     "setDisks": [
+      "sha256-fd-v1:ff942b97e07fbec08cdecff1572f7ae4e671c607b6d7f6b17f8af1d08eba9e76"
+     ]
+    }
+   },
    "launchbox": "157260",
    "mobygames": 141074,
    "publisher": "Victor Musical Industries",
@@ -7898,6 +7904,13 @@
     "ru": "Шестая Nobunaga's Ambition: объедините Японию эпохи Сэнгоку с новой изометрической картой замков и сражений."
    },
    "developer": "Koei",
+   "diskSets": {
+    "sha256-cd-v1:597cb5cc1a3c85019c91e69aa93a6a8fce84eb9a96271cdf3ce3c01d075b82de": {
+     "setDisks": [
+      "sha256-fd-v1:ff942b97e07fbec08cdecff1572f7ae4e671c607b6d7f6b17f8af1d08eba9e76"
+     ]
+    }
+   },
    "launchbox": "188275",
    "mobygames": 171215,
    "publisher": "Koei",
@@ -14503,6 +14516,16 @@
    "title": "Doki Doki Disk CDban Vol.1",
    "year": 1994
   },
+  "fmtowns:local-493aea2b75": {
+   "contentIds": [
+    "sha256-fd-v1:65ca1fe5d2fe74c7147dcac73b239b1fce4af60f08174d92d149bd73a8fc9e2f"
+   ],
+   "sourceGroups": [
+    "fmtowns-cd:Might and Magic - World of Xeen (1993)(New World Computing)(Jp)[req MM CoX & DoX].zip"
+   ],
+   "title": "Might and Magic - World of Xeen",
+   "year": 1993
+  },
   "fmtowns:local-49fbb614d7": {
    "contentIds": [
     "sha256-cd-v1:590a38e6080df344cb83fdfb3a2e08500092bd8ea431ea2db446bf310e5882e5",
@@ -14990,7 +15013,8 @@
   },
   "fmtowns:local-f826f302b0": {
    "contentIds": [
-    "sha256-cd-v1:7d4ee74788bb57c0d329e65bd6812d3583460e05891c654995133812b755cf6a"
+    "sha256-cd-v1:7d4ee74788bb57c0d329e65bd6812d3583460e05891c654995133812b755cf6a",
+    "sha256-fd-v1:c0186c22974782e07468d91b3028ebcf8b52f0e81bd1c0c27ee56642e237bdce"
    ],
    "description": "The fifth Psychic Detective story: Katsuya Furuyagi dreams of a young woman trapped in a remote castle and begins to wonder whether the nightmare is real.",
    "descriptions": {
@@ -15002,6 +15026,13 @@
     "ko": "다섯 번째 Psychic Detective 이야기이다. Katsuya Furuyagi가 외딴 성에 갇힌 젊은 여성의 꿈을 꾸고 그 악몽이 현실인지 의심하기 시작한다.",
     "pt-BR": "A quinta história de Psychic Detective: Katsuya Furuyagi sonha com uma jovem presa em um castelo remoto e começa a se perguntar se o pesadelo é real.",
     "ru": "Пятая история Psychic Detective: Кацуе Фуруяги снится молодая женщина, запертая в отдаленном замке, и он начинает задумываться, не реален ли этот кошмар."
+   },
+   "diskSets": {
+    "sha256-cd-v1:7d4ee74788bb57c0d329e65bd6812d3583460e05891c654995133812b755cf6a": {
+     "setDisks": [
+      "sha256-fd-v1:c0186c22974782e07468d91b3028ebcf8b52f0e81bd1c0c27ee56642e237bdce"
+     ]
+    }
    },
    "sourceGroups": [
     "fmtowns-cd:Psychic Detective Vol. 5 - Nightmare (1994)(Datawest)(Jp)[+SystemDisk].zip"
@@ -15777,6 +15808,11 @@
   "sha256-fd-v1:e45f81d9805fa3aebcce3e48794d5020ffe1d18f07d8bccfdaf6b26a7ec94cfc": [
    "fmtowns:local-b1b187cf00",
    "fmtowns:local-ed6e2d5ebe"
+  ],
+  "sha256-fd-v1:ff942b97e07fbec08cdecff1572f7ae4e671c607b6d7f6b17f8af1d08eba9e76": [
+   "fmtowns:144466",
+   "fmtowns:157260",
+   "fmtowns:188275"
   ]
  }
 }
