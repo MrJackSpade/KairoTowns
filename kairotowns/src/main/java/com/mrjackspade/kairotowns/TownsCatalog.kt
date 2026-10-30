@@ -7,6 +7,7 @@ import com.mrjackspade.kairo.frontend.LayeredGameCatalog
 import com.mrjackspade.kairo.frontend.MachineOption
 import com.mrjackspade.kairo.frontend.UiText
 import org.json.JSONArray
+import com.mrjackspade.kairo.frontend.JisMainBlock
 
 /**
  * KairoTowns's catalog records beyond the common fields: the machine a game boots (`machine`:
@@ -19,6 +20,9 @@ object TownsCatalog : LayeredGameCatalog.Schema {
     override val catalogUrl = "https://raw.githubusercontent.com/MrJackSpade/KairoTowns/main/catalog/"
     override val selfHostedArt = "/MrJackSpade/KairoTowns/main/catalog/artwork/art/catalog/"
     override val contentId = Regex("sha256-(?:cd|fd|hd)-v1:[0-9a-f]{64}")
+    /** The FM Towns keyboard's Esc, and its Return and keypad Return. */
+    override val escapeKeys = setOf(JisMainBlock.ESC)
+    override val enterKeys = setOf(JisMainBlock.RETURN, TownsKeys.NUM_RETURN)
     override val mediaExtensions = Regex("\\.(?:zip|7z|ccd|cue|mds|iso|img|bin|mdf|d77|d88|88d|hdm|h[0-6])$", RegexOption.IGNORE_CASE)
 
     val memory = MachineOption("memory", UiText.res(FrontendR.string.kairo_option_memory),
