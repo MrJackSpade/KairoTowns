@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 
+#include "kairo/blank_image.h"
 #include "kairo/machine_core.h"
 #include "towns_machine.h"
 
@@ -198,4 +199,13 @@ std::unique_ptr<kairo::MachineCore> kairo::create_core(const kairo::Launch &laun
     auto machine = TownsMachine::create(config, error);
     if (!machine) return nullptr;
     return std::make_unique<TownsCore>(std::move(machine));
+}
+
+// The blank disks MainActivity.blankDisks lists: SCSI hard disks at ID 0, zero-filled as Tsugaru
+// takes a new one ("create a big binary filled with zeros"); Towns OS's own setup prepares it.
+std::string kairo::create_blank_disk(const std::string &kind, const std::string &path) {
+    if (kind == "scsi-40") return kairo::write_zeroed_image(path, 40ull * 1024 * 1024);
+    if (kind == "scsi-100") return kairo::write_zeroed_image(path, 100ull * 1024 * 1024);
+    if (kind == "scsi-240") return kairo::write_zeroed_image(path, 240ull * 1024 * 1024);
+    return "KairoTowns makes no blank disk " + kind;
 }

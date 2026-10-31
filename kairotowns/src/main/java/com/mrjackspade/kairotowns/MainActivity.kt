@@ -69,6 +69,10 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
     private fun isHardDisk(entry: DiskImageEntry) = format.kind(entry.displayName) == "hd"
 
     override val machineOptions = TownsCatalog.options
+    // Zero-filled SCSI hard disks at ID 0 (.h0): Towns OS's setup prepares one.
+    override val blankDisks = listOf(40, 100, 240).map { mb ->
+        coreBlankDisk("scsi-$mb", UiText.res(FrontendR.string.kairo_blank_hard_disk, "$mb MB · SCSI"), "h0")
+    }
     // In the core's slot order (kairotowns/src/main/cpp/towns_core.cpp).
     override val mediaSlots = listOf(MediaSlot<DiskImageEntry>(UiText.res(FrontendR.string.kairo_cd_rom), ::isCd),
         MediaSlot(UiText.res(R.string.floppy_a), ::isFloppy), MediaSlot(UiText.res(R.string.floppy_b), ::isFloppy),
