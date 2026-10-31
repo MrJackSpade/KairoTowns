@@ -201,9 +201,11 @@ std::unique_ptr<kairo::MachineCore> kairo::create_core(const kairo::Launch &laun
     return std::make_unique<TownsCore>(std::move(machine));
 }
 
-// The blank disks MainActivity.blankDisks lists: SCSI hard disks at ID 0, zero-filled as Tsugaru
-// takes a new one ("create a big binary filled with zeros"); Towns OS's own setup prepares it.
+// The blank disks MainActivity.blankDisks lists: a 1.2 MB 2HD floppy (77 cylinders, 2 sides, 8
+// sectors of 1024 bytes) and SCSI hard disks at ID 0, zero-filled as Tsugaru takes a new one
+// ("create a big binary filled with zeros"); Towns OS formats the floppy and sets up the hard disk.
 std::string kairo::create_blank_disk(const std::string &kind, const std::string &path) {
+    if (kind == "fd-2hd") return kairo::write_zeroed_image(path, 77ull * 2 * 8 * 1024);
     if (kind == "scsi-40") return kairo::write_zeroed_image(path, 40ull * 1024 * 1024);
     if (kind == "scsi-100") return kairo::write_zeroed_image(path, 100ull * 1024 * 1024);
     if (kind == "scsi-240") return kairo::write_zeroed_image(path, 240ull * 1024 * 1024);

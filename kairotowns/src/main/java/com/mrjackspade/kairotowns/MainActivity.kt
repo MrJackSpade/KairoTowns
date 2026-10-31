@@ -73,10 +73,12 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
     // and two taps are a double click, as Towns MENU needs to open anything.
     override val tapClickMillis: Long = 100
 
-    // Zero-filled SCSI hard disks at ID 0 (.h0): Towns OS's setup prepares one.
-    override val blankDisks = listOf(40, 100, 240).map { mb ->
-        coreBlankDisk("scsi-$mb", UiText.res(FrontendR.string.kairo_blank_hard_disk, "$mb MB · SCSI"), "h0")
-    }
+    // A zero-filled 1.2 MB floppy (.hdm), which Towns OS's Disk › Initialize formats, and zero-filled
+    // SCSI hard disks at ID 0 (.h0), which Towns OS's hard disk setup prepares.
+    override val blankDisks = listOf(coreBlankDisk("fd-2hd", UiText.res(FrontendR.string.kairo_blank_floppy, "1.2 MB · 2HD"), "hdm")) +
+        listOf(40, 100, 240).map { mb ->
+            coreBlankDisk("scsi-$mb", UiText.res(FrontendR.string.kairo_blank_hard_disk, "$mb MB · SCSI"), "h0")
+        }
     // In the core's slot order (kairotowns/src/main/cpp/towns_core.cpp).
     override val mediaSlots = listOf(MediaSlot<DiskImageEntry>(UiText.res(FrontendR.string.kairo_cd_rom), ::isCd),
         MediaSlot(UiText.res(R.string.floppy_a), ::isFloppy), MediaSlot(UiText.res(R.string.floppy_b), ::isFloppy),
