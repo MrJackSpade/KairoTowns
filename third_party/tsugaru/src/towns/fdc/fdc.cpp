@@ -84,6 +84,16 @@ void TownsFDC::MakeReady(void)
 		}
 		drv.trackPos+=drv.dataReg;
 		drv.trackPos-=GetTrackReg();
+		// KairoTowns: the head stops at track 0 and 80, as Step does: a track register left
+		// from another drive could seek past track 0, and formatting there then wrote track -1.
+		if(drv.trackPos<0)
+		{
+			drv.trackPos=0;
+		}
+		else if(80<drv.trackPos)
+		{
+			drv.trackPos=80;
+		}
 		SetTrackReg(drv.dataReg);
 		break;
 	case 0x20: // Step?

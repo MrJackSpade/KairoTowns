@@ -2315,6 +2315,27 @@ void FMTownsCommon::NotifyDiskRead(void)
     'tsugaru/src/towns/gameport/gameport.h': [
         ('tsugaru/src/towns/gameport/gameport.h', '\t\tlong long int lastAccessTime;\n\t\tlong long int lastStateChangeTime;\n', "\t\tlong long int lastAccessTime;\n\t\tlong long int lastStateChangeTime;\n\n\t\t/*! KairoTowns: complete mouse reads, for Auto touch mode (KairoTowns#82). A guest reading\n\t\t    the mouse (TBIOS's driver, or a game's own code such as Lemmings') reads the X-high phase\n\t\t    at least twice and then each other phase, within MOUSEREAD_RESET_TIMEOUT; a 6-button pad\n\t\t    reader (Super Street Fighter II) reads each phase once, and a 2-button one never gets\n\t\t    past the first. One count a cycle, at its Y-low read, once 30 have come in a row, each\n\t\t    within 100 ms of the last: a pad game's start-up check (Super Street Fighter II reads\n\t\t    the port so four times) is no mouse game.\n\t\t*/\n\t\tuint64_t kairoMouseSamples=0;\n\t\tunsigned int kairoPhase=~0u,kairoPhaseReads=0,kairoXHighReads=0,kairoRun=0;\n\t\tlong long int kairoLastSampleTime=0;\n"),
     ],
+    'tsugaru/src/towns/fdc/fdc.cpp': [
+        ('tsugaru/src/towns/fdc/fdc.cpp',
+         '''		drv.trackPos+=drv.dataReg;
+		drv.trackPos-=GetTrackReg();
+		SetTrackReg(drv.dataReg);
+''',
+         '''		drv.trackPos+=drv.dataReg;
+		drv.trackPos-=GetTrackReg();
+		// KairoTowns: the head stops at track 0 and 80, as Step does: a track register left
+		// from another drive could seek past track 0, and formatting there then wrote track -1.
+		if(drv.trackPos<0)
+		{
+			drv.trackPos=0;
+		}
+		else if(80<drv.trackPos)
+		{
+			drv.trackPos=80;
+		}
+		SetTrackReg(drv.dataReg);
+'''),
+    ],
     'tsugaru/src/towns/gameport/gameport.cpp': [
         ('tsugaru/src/towns/gameport/gameport.cpp', '\t\tswitch(state)\n\t\t{\n\t\tcase MOUSESTATE_XHIGH:\n\t\t\tif(true==monitorMouse', '\t\t// KairoTowns: complete mouse reads (kairoMouseSamples).\n\t\tif(kairoPhase!=(unsigned int)state)\n\t\t{\n\t\t\tkairoPhase=state;\n\t\t\tkairoPhaseReads=0;\n\t\t}\n\t\t++kairoPhaseReads;\n\t\tif(MOUSESTATE_XHIGH==state)\n\t\t{\n\t\t\tkairoXHighReads=kairoPhaseReads;\n\t\t}\n\t\telse if(MOUSESTATE_YLOW==state && 1==kairoPhaseReads && 2<=kairoXHighReads)\n\t\t{\n\t\t\tkairoRun=(townsTime-kairoLastSampleTime<=100000000LL ? kairoRun+1 : 1);\n\t\t\tkairoLastSampleTime=townsTime;\n\t\t\tif(30<=kairoRun)\n\t\t\t{\n\t\t\t\t++kairoMouseSamples;\n\t\t\t}\n\t\t}\n\t\tswitch(state)\n\t\t{\n\t\tcase MOUSESTATE_XHIGH:\n\t\t\tif(true==monitorMouse'),
     ],
