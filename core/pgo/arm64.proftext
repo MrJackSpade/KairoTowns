@@ -24,8 +24,8 @@
 # Num Counters:
 2
 # Counter Values:
-12579203
-11647
+12576920
+11746
 
 @KAIRO_SOURCE@/core/towns_machine.cpp;_ZN10kairotowns12_GLOBAL__N_17Speaker6appendERKNSt6__ndk16vectorIhNS2_9allocatorIhEEEERm
 # Func Hash:
@@ -33,8 +33,8 @@
 # Num Counters:
 2
 # Counter Values:
-6627348
-3757
+6493284
+3681
 
 @KAIRO_SOURCE@/core/towns_machine.cpp;_ZN10kairotowns12_GLOBAL__N_17Speaker7restartEv
 # Func Hash:
@@ -42,9 +42,9 @@
 # Num Counters:
 8
 # Counter Values:
-639
-698544
-690
+633
+695016
+685
 132
 129
 129
@@ -58,7 +58,7 @@
 10
 # Counter Values:
 16200
-7890
+8065
 0
 0
 0
@@ -74,8 +74,8 @@
 # Num Counters:
 2
 # Counter Values:
-26509392
-3757
+25973136
+3681
 
 @KAIRO_SOURCE@/core/towns_machine.cpp;_ZNK10kairotowns12_GLOBAL__N_15World27GetProgramResourceDirectoryEv
 # Func Hash:
@@ -819,13 +819,13 @@ _ZN10TownsCDROM10IOReadByteEj
 # Counter Values:
 183870
 33108
-5836870
+5837680
 0
 0
 0
 0
 0
-5803761
+5804571
 33108
 1
 0
@@ -860,12 +860,12 @@ _ZN10TownsCDROM10IOReadByteEj
 0
 0
 0
-5791111
-4904715
-5803761
-987746
-5789224
-5803761
+5791921
+4904403
+5804571
+989304
+5790034
+5804571
 4927
 
 _ZN10TownsCDROM11IOWriteByteEjj
@@ -990,7 +990,7 @@ _ZN10TownsCDROM16RunScheduledTaskEy
 0
 0
 0
-5787
+5976
 12047
 11993088
 6
@@ -1086,7 +1086,7 @@ _ZN10TownsCDROM19BreakOnCommandCheckEPKc
 0
 0
 0
-7654
+7843
 0
 0
 0
@@ -1108,7 +1108,7 @@ _ZN10TownsCDROM19BreakOnCommandCheckEPKc
 0
 0
 0
-7654
+7843
 0
 0
 0
@@ -1136,30 +1136,30 @@ _ZN10TownsCDROM20AddWaveForNumSamplesEPhji
 # Num Counters:
 24
 # Counter Values:
-829
+782
 1410613
-1462945
+1380037
 1410612
-1462944
+1380036
 0
 0
 0
 0
 0
-1630
-1630
-1630
+1583
+1583
+1583
 2
-1630
-1630
-830
-830
+1583
+1583
+783
+783
 0
 1410612
 1410612
 1145424
-1462944
-180
+1380036
+133
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -1188,11 +1188,11 @@ _ZN10TownsCDROM23DelayedCommandExecutionEy
 # Counter Values:
 329
 0
-46296
+47808
 0
 0
 0
-5787
+5976
 0
 0
 0
@@ -1228,7 +1228,7 @@ _ZN10TownsCDROM23DelayedCommandExecutionEy
 0
 6
 0
-3920
+4109
 3
 0
 4
@@ -1343,7 +1343,7 @@ _ZN10TownsCDROM23UpdateCDDAStateInternalEx
 4
 # Counter Values:
 20355
-4604
+4474
 2
 0
 
@@ -1470,20 +1470,15 @@ _ZN10TownsCDROM5StateC2Ev
 
 _ZN10TownsCDROM5StateD2Ev
 # Func Hash:
-701607649293546898
+93478050184159130
 # Num Counters:
-11
+6
 # Counter Values:
 19220544
 0
-0
-92
 3
 3
 2
-3
-0
-3
 3
 
 _ZN10TownsCDROM7PowerOnEv
@@ -1524,25 +1519,25 @@ _ZN10TownsSound10IOReadByteEj
 20
 # Counter Values:
 0
-319016
+313593
 0
 0
-165880
+163238
 0
-153021
+150252
 1
 1
 19
-94
-145123
+82
+142478
 0
 0
 0
 0
-24398
+24139
 0
-34273
-152975
+34124
+150212
 
 _ZN10TownsSound11IOWriteByteEjj
 # Func Hash:
@@ -1550,24 +1545,24 @@ _ZN10TownsSound11IOWriteByteEjj
 # Num Counters:
 18
 # Counter Values:
-342196
+334507
 13
-149182
-149182
+145818
+145818
 351
-91
+89
 11
-45
-188
-220
-220
+40
 180
-25280
+208
+208
+172
+24830
 351
-188
+180
 0
-16265
-429
+15833
+405
 
 _ZN10TownsSound12ProcessSoundEv
 # Func Hash:
@@ -1578,63 +1573,60 @@ _ZN10TownsSound12ProcessSoundEv
 0
 0
 94
-785
+786
 0
-28791
-0
-0
-26320
+28773
 0
 0
-14720
+25788
 0
 0
-219
+14112
+0
+0
+214
 0
 663264
-5538960
+5546016
 0
 284629
 0
 0
-272882
-141245
+273570
+144127
 0
-1168083
-3757
-201978
-0
-0
-0
-2988
-0
-201978
+1189083
+3681
+205072
 0
 0
-3760
-1630
-3760
+0
+2913
+0
+205072
 0
 0
-210
-1055
-1630
-49
+3684
+1583
+3684
+0
+0
+194
+978
+1583
+44
 94
-785
-201239
+786
+204351
 94
 0
-785
+786
 0
 0
-210
-1055
-49
-166869
-0
-0
-0
+194
+978
+44
+169869
 0
 0
 0
@@ -1644,12 +1636,15 @@ _ZN10TownsSound12ProcessSoundEv
 0
 0
 0
-11020
-70904
 0
-138078
-265
-1840
+0
+0
+10399
+68498
+0
+141096
+253
+1764
 0
 # Num Value Kinds:
 1
@@ -1660,7 +1655,7 @@ _ZN10TownsSound12ProcessSoundEv
 1
 @KAIRO_SOURCE@/core/towns_machine.cpp;_ZN10kairotowns12_GLOBAL__N_17Speaker19FMPCMChannelPlayingEv:284629
 1
-@KAIRO_SOURCE@/core/towns_machine.cpp;_ZN10kairotowns12_GLOBAL__N_17Speaker9FMPCMPlayERNSt6__ndk16vectorIhNS2_9allocatorIhEEEE:3757
+@KAIRO_SOURCE@/core/towns_machine.cpp;_ZN10kairotowns12_GLOBAL__N_17Speaker9FMPCMPlayERNSt6__ndk16vectorIhNS2_9allocatorIhEEEE:3681
 0
 0
 
@@ -1670,9 +1665,9 @@ _ZN10TownsSound12SoundPollingEy
 # Num Counters:
 3
 # Counter Values:
-25246712
-24663932
-23124797
+25267213
+24691885
+23158361
 
 _ZN10TownsSound14SetSCSIPointerEP9TownsSCSI
 # Func Hash:
@@ -1704,7 +1699,7 @@ _ZN10TownsSound20ProcessRecordFMWriteEjjh
 # Num Counters:
 7
 # Counter Values:
-149533
+146169
 0
 0
 0
@@ -1725,7 +1720,7 @@ _ZN10TownsSound21ProcessRecordPCMWriteEjh
 # Num Counters:
 5
 # Counter Values:
-43015
+42056
 0
 0
 0
@@ -1829,26 +1824,26 @@ _ZN10TownsTimer10IOReadByteEj
 # Num Counters:
 20
 # Counter Values:
-34388
-27252
-17398
+34186
+26947
+17289
+1
 0
 0
 0
 0
 0
 0
+26947
 0
-27252
+17093
+323
 0
-17194
-332
-0
-287
-27252
+278
+26947
 48
-27252
-27252
+26947
+26947
 
 _ZN10TownsTimer11IOWriteByteEjj
 # Func Hash:
@@ -1856,7 +1851,7 @@ _ZN10TownsTimer11IOWriteByteEjj
 # Num Counters:
 20
 # Counter Values:
-27271
+26966
 3
 0
 0
@@ -1865,17 +1860,17 @@ _ZN10TownsTimer11IOWriteByteEjj
 0
 0
 0
-27262
-26853
-27231
+26957
+26548
+26926
 0
 0
 0
 0
 0
 0
-27262
-27180
+26957
+26875
 
 _ZN10TownsTimer5ResetEv
 # Func Hash:
@@ -1930,15 +1925,15 @@ _ZN10TownsTimer5State6TickInEj
 # Num Counters:
 9
 # Counter Values:
-151581426
-126317855
-73660
-126244195
+151703682
+126419735
+73658
+126346077
 0
 0
-25263571
+25283947
 0
-18933
+18932
 
 _ZN10TownsTimer7PowerOnEv
 # Func Hash:
@@ -1990,8 +1985,8 @@ _ZN10kairotowns12TownsMachine10read_audioEPsj
 # Num Counters:
 2
 # Counter Values:
-12229931
-27649
+12229412
+27749
 
 _ZN10kairotowns12TownsMachine14run_frame_bodyERNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE
 # Func Hash:
@@ -2032,9 +2027,9 @@ _ZN10kairotowns12TownsMachine4Impl12check_renderEv
 # Num Counters:
 3
 # Counter Values:
-25246712
-17412
-17200
+25267213
+17395
+17199
 
 _ZN10kairotowns12TownsMachine4Impl12fast_pollingEv
 # Func Hash:
@@ -2043,11 +2038,11 @@ _ZN10kairotowns12TownsMachine4Impl12fast_pollingEv
 6
 # Counter Values:
 0
-23420889
+23156802
 0
-35915
+35631
 0
-25246712
+25267213
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -2055,22 +2050,25 @@ _ZN10kairotowns12TownsMachine4Impl12fast_pollingEv
 # NumValueSites:
 2
 4
-_ZN10TownsCDROM16RunScheduledTaskEy:17834
-_ZN11TownsSprite16RunScheduledTaskEy:14553
-_ZN15TownsHighResPCM16RunScheduledTaskEy:3516
+_ZN10TownsCDROM16RunScheduledTaskEy:18023
+_ZN11TownsSprite16RunScheduledTaskEy:14371
+_ZN15TownsHighResPCM16RunScheduledTaskEy:3225
 _ZN13TownsKeyboard16RunScheduledTaskEy:12
 0
 
 _ZN10kairotowns12TownsMachine4Impl12poll_devicesEv
 # Func Hash:
-536873292609532375
+974670607368107547
 # Num Counters:
-4
+7
 # Counter Values:
-35560
 0
 0
-35560
+35544
+0
+0
+0
+35544
 
 _ZN10kairotowns12TownsMachine4Impl20interpret_to_pollingEv
 # Func Hash:
@@ -2078,12 +2076,12 @@ _ZN10kairotowns12TownsMachine4Impl20interpret_to_pollingEv
 # Num Counters:
 6
 # Counter Values:
-451092948
-451092948
-451092948
-56969095
-25246712
-449209709
+447089398
+447089398
+447089398
+56612472
+25267213
+445118889
 
 _ZN10kairotowns12TownsMachine4Impl9pure_byteEPK6DevicejRm
 # Func Hash:
@@ -2091,18 +2089,18 @@ _ZN10kairotowns12TownsMachine4Impl9pure_byteEPK6DevicejRm
 # Num Counters:
 16
 # Counter Values:
-546470
-9826347
-19616444
-2101186
-2101179
+546356
+9921626
+19555687
+2100400
+2100393
 7
-546473
-589926
-17933575
-2100972
-546463
-2100972
+546359
+587308
+17875664
+2100186
+546349
+2100186
 0
 0
 0
@@ -2114,10 +2112,10 @@ _ZN10kairotowns12TownsMachine4Impl9pure_readEPvjj
 # Num Counters:
 4
 # Counter Values:
-12950312
-3784048
-28896321
-3237578
+12936240
+3780416
+28930957
+3234060
 
 _ZN10kairotowns12TownsMachine4Impl9save_cmosEv
 # Func Hash:
@@ -2152,21 +2150,20 @@ _ZN10kairotowns12TownsMachine4ImplC2Ev
 
 _ZN10kairotowns12TownsMachine4ImplD2Ev
 # Func Hash:
-1096621591214462149
+844982800087245094
 # Num Counters:
-5
+4
 # Counter Values:
 3
 0
 3
 0
-3
 
 _ZN10kairotowns12TownsMachine6createERKNS_6ConfigERNSt6__ndk112basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEE
 # Func Hash:
-722484241314815455
+425993981792916421
 # Num Counters:
-76
+88
 # Counter Values:
 0
 3
@@ -2176,7 +2173,6 @@ _ZN10kairotowns12TownsMachine6createERKNS_6ConfigERNSt6__ndk112basic_stringIcNS4
 21
 0
 21
-0
 3
 3
 3
@@ -2187,15 +2183,26 @@ _ZN10kairotowns12TownsMachine6createERKNS_6ConfigERNSt6__ndk112basic_stringIcNS4
 0
 0
 0
+0
+0
+0
 3
 0
 0
+0
+0
+0
+3
+0
 3
 3
 3
 3
-3
-3
+0
+0
+0
+0
+0
 0
 0
 0
@@ -2240,6 +2247,8 @@ _ZN10kairotowns12TownsMachine6createERKNS_6ConfigERNSt6__ndk112basic_stringIcNS4
 0
 21
 0
+3
+3
 0
 21
 21
@@ -2255,7 +2264,7 @@ _ZN10kairotowns12TownsMachine8run_stepERmRNSt6__ndk112basic_stringIcNS2_11char_t
 0
 0
 0
-3425096
+4505868
 0
 0
 0
@@ -2271,29 +2280,29 @@ _ZN10kairotowns12TownsMachine8run_stepERmRNSt6__ndk112basic_stringIcNS2_11char_t
 0
 0
 0
-856274
-25246712
-25246712
-25246712
+1126467
+25267213
+25267213
+25267213
 0
 0
 0
 0
-25246712
+25267213
 0
 0
 0
 0
 0
-25246712
+25267213
 284629
-25246712
+25267213
 0
 0
 0
-25246712
+25267213
 20355
-35560
+35544
 285
 284629
 0
@@ -2352,19 +2361,19 @@ _ZN10kairotowns12WaitLoopSkipI15FMTownsTemplateI21i486DXDefaultFidelityEE13at_pa
 # Num Counters:
 13
 # Counter Values:
-227876380
-107219631
-94021569
-42487236
-31865427
-41476650
-5719860
-1198625
-10621809
-3672011
-658729
-51249235
-342758
+226449888
+105887641
+92727814
+41949488
+31462116
+41276081
+5777011
+1200356
+10487372
+3648663
+656839
+50835461
+342016
 
 _ZN10kairotowns12WaitLoopSkipI15FMTownsTemplateI21i486DXDefaultFidelityEE4skipERS3_mmm
 # Func Hash:
@@ -2372,11 +2381,11 @@ _ZN10kairotowns12WaitLoopSkipI15FMTownsTemplateI21i486DXDefaultFidelityEE4skipER
 # Num Counters:
 5
 # Counter Values:
-10621809
-10621809
-10437820
-10437820
-10050137
+10487372
+10487372
+10303825
+10303825
+9916451
 
 _ZN10kairotowns12WaitLoopSkipI15FMTownsTemplateI21i486DXDefaultFidelityEE8Snapshot6fieldsIZNKS5_7matchesERKN12i486DXCommon5StateEEUlPKvmE_EEbSA_OT_
 # Func Hash:
@@ -2384,25 +2393,25 @@ _ZN10kairotowns12WaitLoopSkipI15FMTownsTemplateI21i486DXDefaultFidelityEE8Snapsh
 # Num Counters:
 19
 # Counter Values:
-14293820
-10621915
-10621915
-10621915
-10621915
-10621809
-10621809
-10621809
-10621809
-10621809
-10621809
-10621809
-10621809
-10621809
-10621809
-10621809
-10621809
-10621809
-10621809
+14136035
+10487480
+10487480
+10487480
+10487480
+10487372
+10487372
+10487372
+10487372
+10487372
+10487372
+10487372
+10487372
+10487372
+10487372
+10487372
+10487372
+10487372
+10487372
 
 _ZN10kairotowns12WaitLoopSkipI15FMTownsTemplateI21i486DXDefaultFidelityEE8Snapshot6fieldsIZNS5_4takeERKN12i486DXCommon5StateEEUlPKvmE_EEbSA_OT_
 # Func Hash:
@@ -2410,7 +2419,7 @@ _ZN10kairotowns12WaitLoopSkipI15FMTownsTemplateI21i486DXDefaultFidelityEE8Snapsh
 # Num Counters:
 1
 # Counter Values:
-4870636
+4849019
 
 _ZN10kairotowns13PictureWorker3runEv
 # Func Hash:
@@ -2418,10 +2427,10 @@ _ZN10kairotowns13PictureWorker3runEv
 # Num Counters:
 5
 # Counter Values:
-34403
-17203
-17200
-17203
+34401
+17202
+17199
+17202
 3
 
 _ZN10kairotowns13PictureWorker4waitEv
@@ -2430,9 +2439,9 @@ _ZN10kairotowns13PictureWorker4waitEv
 # Num Counters:
 3
 # Counter Values:
-5587
-33400
-33400
+5788
+33399
+33399
 
 _ZN10kairotowns13PictureWorker5startERK9TownsCRTCPKhmbb
 # Func Hash:
@@ -2441,7 +2450,7 @@ _ZN10kairotowns13PictureWorker5startERK9TownsCRTCPKhmbb
 4
 # Counter Values:
 0
-17197
+17196
 3
 0
 
@@ -2474,6 +2483,22 @@ _ZN10kairotowns13PictureWorkerD2Ev
 3
 3
 3
+0
+
+_ZN10kairotowns6ConfigD2Ev
+# Func Hash:
+599005163413842929
+# Num Counters:
+9
+# Counter Values:
+42
+12
+0
+0
+6
+0
+3
+0
 0
 
 _ZN11RealNetworkC2Ev
@@ -2517,17 +2542,17 @@ _ZN11TownsRender10BuildImageEPKhRKN9TownsCRTC13AnalogPaletteERKNS2_14ChaseHQPale
 0
 0
 0
-1281
+1279
 0
 21
-15919
+15920
 0
-11796
+11612
 14628
-1281
-17190
+1279
+17189
 0
-17200
+17199
 0
 
 _ZN11TownsRender10Render4BitINS_10VRAM0TransEEEvRKN9TownsCRTC5LayerEPK6Vec4ubRKNS2_14ChaseHQPaletteEPKhb
@@ -2536,62 +2561,62 @@ _ZN11TownsRender10Render4BitINS_10VRAM0TransEEEvRKN9TownsCRTC5LayerEPK6Vec4ubRKN
 # Num Counters:
 60
 # Counter Values:
-359830000
-359830000
+383510000
+383510000
 0
 0
 0
 0
-153227648
-201292224
-29763309
+153229312
+201265664
+31802443
 0
-30127230
-0
-0
-0
-2811
+32188981
 0
 0
 0
-83740832
-359830400
-0
-0
-515872
+2996
 0
 0
 0
-83602624
-359830000
+83805440
+383510400
+0
+0
+515424
 0
 0
 0
-0
-0
-559552
-1124480
-0
-0
-0
-0
-43680
-515872
-1124480
+83667456
+383510000
 0
 0
 0
 0
 0
-43680
-1124480
-5223
+559504
+1198480
 0
-2811
-153227648
-201430432
-359830000
-359830000
+0
+0
+0
+44080
+515424
+1198480
+0
+0
+0
+0
+0
+44080
+1198480
+5407
+0
+2996
+153229312
+201403648
+383510000
+383510000
 0
 0
 0
@@ -2615,15 +2640,15 @@ _ZN11TownsRender10Render8BitINS_10VRAM1TransEEEvRKN9TownsCRTC5LayerEPK6Vec4ubPKh
 0
 0
 0
-614880
+613920
 0
-614880
+613920
 0
-1281
-1281
-1281
-1281
-1281
+1279
+1279
+1279
+1279
+1279
 0
 0
 
@@ -2635,11 +2660,9 @@ _ZN11TownsRender11Render16BitINS_10VRAM0TransEEEvRKN9TownsCRTC5LayerEPKhb
 # Counter Values:
 0
 0
-11817
+11632
 0
-2227892
-0
-0
+2186072
 0
 0
 0
@@ -2647,20 +2670,22 @@ _ZN11TownsRender11Render16BitINS_10VRAM0TransEEEvRKN9TownsCRTC5LayerEPKhb
 0
 0
 0
-2227892
-5560100
 0
-2227892
 0
-5560100
+2186072
+5475288
 0
-2780050
-21201
-21201
-21201
-11817
-21201
-21201
+2186072
+0
+5475288
+0
+2737644
+20833
+20833
+20833
+11632
+20833
+20833
 
 _ZN11TownsRender6CreateEii
 # Func Hash:
@@ -2679,11 +2704,11 @@ _ZN11TownsRender6RenderINS_10VRAM0TransEEEvjRKN9TownsCRTC5LayerERKNS2_13AnalogPa
 # Num Counters:
 5
 # Counter Values:
-26424
+26240
 0
 0
-21201
-5223
+20833
+5407
 
 _ZN11TownsRender6RenderINS_10VRAM1TransEEEvjRKN9TownsCRTC5LayerERKNS2_13AnalogPaletteERKNS2_14ChaseHQPaletteEPKhb
 # Func Hash:
@@ -2691,9 +2716,9 @@ _ZN11TownsRender6RenderINS_10VRAM1TransEEEvjRKN9TownsCRTC5LayerERKNS2_13AnalogPa
 # Num Counters:
 5
 # Counter Values:
-1281
+1279
 0
-1281
+1279
 0
 0
 
@@ -2703,16 +2728,16 @@ _ZN11TownsRender7PrepareERK9TownsCRTC
 # Num Counters:
 10
 # Counter Values:
-17200
+17199
 0
 0
 0
-1281
-15919
-15919
-1281
-14497
-11927
+1279
+15920
+15920
+1279
+14498
+11742
 
 _ZN11TownsRender9SwapImageERNS_9ImageCopyE
 # Func Hash:
@@ -2720,7 +2745,7 @@ _ZN11TownsRender9SwapImageERNS_9ImageCopyE
 # Num Counters:
 1
 # Counter Values:
-17200
+17199
 
 _ZN11TownsRenderC2Ev
 # Func Hash:
@@ -2749,19 +2774,19 @@ _ZN11TownsSprite11IOWriteByteEjj
 # Num Counters:
 15
 # Counter Values:
-1558
-1558
-21227
-10064
-11163
-3115
-3115
-1917
-1917
+1537
+1537
+20975
+9938
+11037
+3073
+3073
+1896
+1896
 0
 0
-1910
-1907
+1889
+1886
 7
 4
 
@@ -2771,11 +2796,11 @@ _ZN11TownsSprite16RunScheduledTaskEy
 # Num Counters:
 5
 # Counter Values:
-14553
+14371
 4
 0
-7271
-7278
+7180
+7187
 
 _ZN11TownsSprite5ResetEv
 # Func Hash:
@@ -2864,7 +2889,7 @@ _ZN12MemoryAccess15GetMemoryWindowEj
 # Num Counters:
 1
 # Counter Values:
-9812
+9810
 
 _ZN12MemoryAccess9StoreWordEjj
 # Func Hash:
@@ -2943,8 +2968,8 @@ _ZN12i486DXCommon11REPCheckA16ERjj
 # Num Counters:
 4
 # Counter Values:
-1089302
-1084530
+1089329
+1084557
 1011048
 4772
 
@@ -2954,10 +2979,10 @@ _ZN12i486DXCommon11REPCheckA32ERjj
 # Num Counters:
 4
 # Counter Values:
-52179180
-51929076
-47554634
-250104
+50991468
+50751740
+46435625
+239728
 
 _ZN12i486DXCommon11ShlTemplateILj16ELj65535ELj32768EEEvRjj
 # Func Hash:
@@ -2965,15 +2990,15 @@ _ZN12i486DXCommon11ShlTemplateILj16ELj65535ELj32768EEEvRjj
 # Num Counters:
 9
 # Counter Values:
-1028126
-917266
-1947
-1035153
-2753
-152983
-502498
-2080
-108780
+998716
+890493
+1845
+1005731
+2647
+150739
+487740
+2041
+106182
 
 _ZN12i486DXCommon11ShlTemplateILj32ELj4294967295ELj2147483648EEEvRjj
 # Func Hash:
@@ -2981,14 +3006,14 @@ _ZN12i486DXCommon11ShlTemplateILj32ELj4294967295ELj2147483648EEEvRjj
 # Num Counters:
 9
 # Counter Values:
-1327439
-109651
-1217823
-80570
-193721
-434931
-80757
-109616
+1271312
+101988
+1169359
+80361
+189867
+413129
+80627
+101953
 0
 
 _ZN12i486DXCommon11ShlTemplateILj8ELj255ELj128EEEvRjj
@@ -2997,15 +3022,15 @@ _ZN12i486DXCommon11ShlTemplateILj8ELj255ELj128EEEvRjj
 # Num Counters:
 9
 # Counter Values:
-238872
-149890
-12706
-226176
-19572
-51874
-151799
-6118
-82864
+237179
+149045
+12114
+225075
+18909
+51384
+138146
+5928
+82206
 
 _ZN12i486DXCommon13DecrementByteERj
 # Func Hash:
@@ -3013,12 +3038,12 @@ _ZN12i486DXCommon13DecrementByteERj
 # Num Counters:
 6
 # Counter Values:
-933172
-903402
-18571
-915022
-317283
-365389
+867891
+846089
+15753
+852459
+307504
+334706
 
 _ZN12i486DXCommon13DecrementWordERj
 # Func Hash:
@@ -3026,12 +3051,12 @@ _ZN12i486DXCommon13DecrementWordERj
 # Num Counters:
 6
 # Counter Values:
-1069318
-994132
-76764
-992554
-283663
-413150
+1061600
+988530
+76348
+985252
+279203
+404974
 
 _ZN12i486DXCommon13IncrementByteERj
 # Func Hash:
@@ -3039,12 +3064,12 @@ _ZN12i486DXCommon13IncrementByteERj
 # Num Counters:
 6
 # Counter Values:
-449393
-450079
-590
-449493
+433652
+434235
+541
+433697
 37
-392657
+379626
 
 _ZN12i486DXCommon13IncrementWordERj
 # Func Hash:
@@ -3052,12 +3077,12 @@ _ZN12i486DXCommon13IncrementWordERj
 # Num Counters:
 6
 # Counter Values:
-1603879
-1706062
-190534
-1515555
-27778
-1008830
+1588810
+1689972
+185358
+1504641
+27467
+998490
 
 _ZN12i486DXCommon14DecrementDwordERj
 # Func Hash:
@@ -3065,12 +3090,12 @@ _ZN12i486DXCommon14DecrementDwordERj
 # Num Counters:
 6
 # Counter Values:
-4362341
-286981
-4075360
-82136
-149136
-2193760
+4266111
+281338
+3984773
+76727
+143057
+2145717
 
 _ZN12i486DXCommon14DetachDebuggerEv
 # Func Hash:
@@ -3086,12 +3111,12 @@ _ZN12i486DXCommon14IncrementDwordERj
 # Num Counters:
 6
 # Counter Values:
-7523744
+7418535
 0
-7893250
-10398
-11823
-4234359
+7780096
+9522
+11676
+4167711
 
 _ZN12i486DXCommon15ConsumeVariableEj
 # Func Hash:
@@ -3099,7 +3124,7 @@ _ZN12i486DXCommon15ConsumeVariableEj
 # Num Counters:
 1
 # Counter Values:
-782959
+771433
 
 _ZN12i486DXCommon15GetRegisterSizeEi
 # Func Hash:
@@ -3107,13 +3132,10 @@ _ZN12i486DXCommon15GetRegisterSizeEi
 # Num Counters:
 33
 # Counter Values:
-176801
+175489
 0
 0
-43557
-0
-0
-0
+43229
 0
 0
 0
@@ -3130,15 +3152,18 @@ _ZN12i486DXCommon15GetRegisterSizeEi
 0
 0
 0
-365976
 0
-501960
-1060875
-263157
-2545121
-220358
 0
-2324763
+0
+360894
+0
+494988
+1047202
+262161
+2515663
+218718
+0
+2296945
 0
 
 _ZN12i486DXCommon16FetchOperandLoopI19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6MemoryNS3_29RealFetchInstructionFunctionsEEEvRT_RNS_21InstructionAndOperandERN12MemoryAccess12ConstPointerERKNS_15SegmentRegisterEiRT0_jj
@@ -3147,7 +3172,7 @@ _ZN12i486DXCommon16FetchOperandLoopI19i486DXFidelityLayerI30i486DXDefaultFidelit
 # Num Counters:
 145
 # Counter Values:
-3248
+3179
 0
 0
 0
@@ -3158,30 +3183,30 @@ _ZN12i486DXCommon16FetchOperandLoopI19i486DXFidelityLayerI30i486DXDefaultFidelit
 0
 1015
 148
-1843
-291
+1704
+188
 6
-2622
+2521
 0
 0
-10571
-0
-0
-0
+10460
 0
 0
 0
 0
 0
 0
-3248
+0
+0
+0
+3179
 1015
-5830452
+5808144
 13
-2628
+2527
 0
 27
-207
+106
 0
 0
 0
@@ -3189,15 +3214,15 @@ _ZN12i486DXCommon16FetchOperandLoopI19i486DXFidelityLayerI30i486DXDefaultFidelit
 0
 0
 0
-52285
-1813
-2836213
+52182
+1673
+2830323
 152
 1
-2275
+2033
 14
-46058
-2677203
+38795
+2674531
 0
 0
 0
@@ -3209,19 +3234,19 @@ _ZN12i486DXCommon16FetchOperandLoopI19i486DXFidelityLayerI30i486DXDefaultFidelit
 0
 840
 0
-25974
+22540
 0
 0
 992
 0
 553
-14725
+11873
 0
 0
 0
-170536
-3925
-2717325
+168742
+3756
+2714583
 6
 0
 0
@@ -3252,16 +3277,16 @@ _ZN12i486DXCommon16FetchOperandLoopI19i486DXFidelityLayerI30i486DXDefaultFidelit
 0
 0
 0
-5212
+4711
 0
 0
 0
 138
-1231
+931
 0
 0
 0
-3258
+3189
 0
 0
 0
@@ -3299,24 +3324,24 @@ _ZN12i486DXCommon16FetchOperandLoopI19i486DXFidelityLayerI30i486DXDefaultFidelit
 # Num Counters:
 103
 # Counter Values:
-3462
+3369
 3
 21
-15
+13
 0
-16
+15
 2
 0
-2104
-45470
-7705
-43863
-11471
-33206
-35031
+2046
+42862
+7394
+41505
+10941
+31194
+33377
 344
-65
-815338
+67
+790522
 0
 0
 0
@@ -3326,52 +3351,52 @@ _ZN12i486DXCommon16FetchOperandLoopI19i486DXFidelityLayerI30i486DXDefaultFidelit
 0
 0
 0
-3506
-47600
-3202201
+3411
+44933
+3065085
 406
-36361
-71908
-44953
-119
-26514
-18606
+35649
+67011
+42018
+120
+25194
+17527
 8
 489
-18891
-72759
+18938
+69845
 3
 62
 24
-163
-406090
-7814
-2419
-7753
-4135
-28347
-119282
-8099
-74613
-201235
-184747
-546
-69
+161
+379032
+7269
+2360
+7673
+3835
+28367
+113959
+7708
+70394
+190946
+175735
+444
+72
 0
-498687
-101165
-388242
-34960
-24213
+480917
+94218
+369909
+32184
+23031
 0
-225795
+214404
 167
 0
-2525
-1604
-55628
-16799
-9298
+2404
+1392
+53812
+16223
+9276
 0
 0
 0
@@ -3381,13 +3406,13 @@ _ZN12i486DXCommon16FetchOperandLoopI19i486DXFidelityLayerI30i486DXDefaultFidelit
 17
 0
 9
-4579
-429
+4544
+426
 0
 0
 0
-166708
-250348
+162618
+234597
 0
 0
 15
@@ -3395,10 +3420,10 @@ _ZN12i486DXCommon16FetchOperandLoopI19i486DXFidelityLayerI30i486DXDefaultFidelit
 0
 0
 0
-25188
+23906
 0
-9065
-223
+8708
+218
 0
 0
 0
@@ -3410,28 +3435,28 @@ _ZN12i486DXCommon21FetchInstructionClassI19i486DXFidelityLayerI30i486DXDefaultFi
 23
 # Counter Values:
 0
-9032653
-12747330
-445262496
-5830452
-3194926
-3055825
-3202201
-442061732
+8873229
+12691059
+441281254
+5808144
+3177536
+2925731
+3065085
+438217613
 0
-38256
+35722
 0
 3
-442061730
-38256
+438217611
+35722
 0
-442061730
-442060295
-442060295
-1386407
+438217611
+438216169
+438216169
+1488334
 0
 0
-86970
+82306
 
 _ZN12i486DXCommon23FetchOperandRMandDecodeI19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6MemoryNS3_29RealFetchInstructionFunctionsEEEjRNS_7OperandEiiRT_RNS_11InstructionERN12MemoryAccess12ConstPointerERKNS_15SegmentRegisterEjRT0_
 # Func Hash:
@@ -3440,35 +3465,35 @@ _ZN12i486DXCommon23FetchOperandRMandDecodeI19i486DXFidelityLayerI30i486DXDefault
 30
 # Counter Values:
 9393
-2959838
-23700
+2942349
+21621
 63
 4819
-2667060
-86488
+2663248
+79689
 2891
 256
 0
 566
 7
-3668
+3534
 791
 7
-707
+507
 297
 0
 0
 0
-4216
-20132
+4047
+18585
 140
 140
 0
 88
-114416
+112440
 140
 88
-62619
+59767
 
 _ZN12i486DXCommon23FetchOperandRMandDecodeI19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6MemoryNS3_34BurstModeFetchInstructionFunctionsEEEjRNS_7OperandEiiRT_RNS_11InstructionERN12MemoryAccess12ConstPointerERKNS_15SegmentRegisterEjRT0_
 # Func Hash:
@@ -3476,24 +3501,24 @@ _ZN12i486DXCommon23FetchOperandRMandDecodeI19i486DXFidelityLayerI30i486DXDefault
 # Num Counters:
 18
 # Counter Values:
-370174
-987078
-108381
-108798
-10636
-20743
-121616
-233212
-189963
-26662
-75670
-375252
-24823
-32698
-24907
-507
-3201
-183
+364177
+924033
+105738
+107336
+10385
+20572
+120146
+218368
+175056
+22860
+71314
+354369
+23972
+30743
+23612
+414
+3149
+176
 
 _ZN12i486DXCommon23MakeOpCodeRenumberTableEv
 # Func Hash:
@@ -3512,7 +3537,7 @@ _ZN12i486DXCommon24InvalidatePageTableCacheEv
 3
 # Counter Values:
 0
-121650
+120659
 0
 
 _ZN12i486DXCommon25InvalidateDescriptorCacheEv
@@ -3523,7 +3548,7 @@ _ZN12i486DXCommon25InvalidateDescriptorCacheEv
 # Counter Values:
 0
 0
-209167
+207520
 0
 
 _ZN12i486DXCommon27LoadDescriptorTableRegisterERNS_21SystemAddressRegisterEiPKh
@@ -3533,7 +3558,7 @@ _ZN12i486DXCommon27LoadDescriptorTableRegisterERNS_21SystemAddressRegisterEiPKh
 2
 # Counter Values:
 186
-174517
+173206
 
 _ZN12i486DXCommon27LoadSegmentRegisterRealModeERNS_15SegmentRegisterEj
 # Func Hash:
@@ -3541,7 +3566,7 @@ _ZN12i486DXCommon27LoadSegmentRegisterRealModeERNS_15SegmentRegisterEj
 # Num Counters:
 2
 # Counter Values:
-259504
+258468
 0
 
 _ZN12i486DXCommon27LoadSegmentRegisterTemplateI19i486DXFidelityLayerI30i486DXDefaultFidelityOperationES2_E19LoadSegmentRegisterERS3_RNS_15SegmentRegisterEjRK6Memoryj
@@ -3551,14 +3576,14 @@ _ZN12i486DXCommon27LoadSegmentRegisterTemplateI19i486DXFidelityLayerI30i486DXDef
 10
 # Counter Values:
 0
-2856110
+3012764
 0
-5023661
-5340693
+4915737
+5230770
 0
 93
-3162823
-5327431
+3085249
+5217509
 0
 
 _ZN12i486DXCommon27LoadSegmentRegisterTemplateI19i486DXFidelityLayerI30i486DXDefaultFidelityOperationES2_E27LoadProtectedModeDescriptorERS3_jRK6Memory
@@ -3567,15 +3592,15 @@ _ZN12i486DXCommon27LoadSegmentRegisterTemplateI19i486DXFidelityLayerI30i486DXDef
 # Num Counters:
 12
 # Counter Values:
-5533520
-5106120
-427400
-339067
-88333
-427400
-87082
-338677
-87082
+5420295
+4996224
+424071
+336725
+87346
+424071
+86428
+336008
+86428
 0
 0
 0
@@ -3586,11 +3611,11 @@ _ZN12i486DXCommon27LoadSegmentRegisterTemplateI19i486DXFidelityLayerI30i486DXDef
 # NumValueSites:
 3
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:87082
+_ZNK18TownsMainRAMAccess10FetchDwordEj:86428
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:87082
+_ZNK18TownsMainRAMAccess10FetchDwordEj:86428
 2
-_ZNK18TownsMainRAMAccess20GetConstMemoryWindowEj:426488
+_ZNK18TownsMainRAMAccess20GetConstMemoryWindowEj:423159
 _ZNK17TownsSysROMAccess20GetConstMemoryWindowEj:912
 
 _ZN12i486DXCommon27LoadSegmentRegisterTemplateIKS_30i486DXDefaultFidelityOperationE27LoadProtectedModeDescriptorERS1_jRK6Memory
@@ -3626,14 +3651,14 @@ _ZN12i486DXCommon27LoadSegmentRegisterTemplateIS_30i486DXDefaultFidelityOperatio
 # Num Counters:
 12
 # Counter Values:
-43534
+43207
 0
-43534
-43534
+43207
+43207
 0
-43534
+43207
 0
-43534
+43207
 0
 0
 0
@@ -3647,7 +3672,7 @@ _ZN12i486DXCommon27LoadSegmentRegisterTemplateIS_30i486DXDefaultFidelityOperatio
 0
 0
 1
-_ZNK18TownsMainRAMAccess20GetConstMemoryWindowEj:43534
+_ZNK18TownsMainRAMAccess20GetConstMemoryWindowEj:43207
 
 _ZN12i486DXCommon5ResetEv
 # Func Hash:
@@ -3678,10 +3703,10 @@ _ZN12i486DXCommon6OrByteERjj
 # Num Counters:
 4
 # Counter Values:
-780064
-343455
-182742
-221053
+752053
+330242
+173249
+208515
 
 _ZN12i486DXCommon6OrWordERjj
 # Func Hash:
@@ -3689,10 +3714,10 @@ _ZN12i486DXCommon6OrWordERjj
 # Num Counters:
 4
 # Counter Values:
-1312846
-693913
-257672
-734386
+1294871
+670259
+245559
+726081
 
 _ZN12i486DXCommon7AdcByteERjj
 # Func Hash:
@@ -3716,12 +3741,12 @@ _ZN12i486DXCommon7AdcWordERjj
 # Num Counters:
 9
 # Counter Values:
-124426
-121747
-124422
-75770
+124312
+121633
+124308
+75656
 0
-21931
+21817
 5
 37476
 53578
@@ -3732,12 +3757,12 @@ _ZN12i486DXCommon7AddByteERjj
 # Num Counters:
 6
 # Counter Values:
-480494
-452507
-13127
-26107
-101466
-201780
+476443
+450307
+12978
+26029
+101367
+199639
 
 _ZN12i486DXCommon7AddWordERjj
 # Func Hash:
@@ -3745,12 +3770,12 @@ _ZN12i486DXCommon7AddWordERjj
 # Num Counters:
 6
 # Counter Values:
-6649026
-5517936
-133263
-44142
-807664
-3263363
+6505778
+5408891
+127992
+43477
+806427
+3191205
 
 _ZN12i486DXCommon7AndByteERjj
 # Func Hash:
@@ -3758,9 +3783,9 @@ _ZN12i486DXCommon7AndByteERjj
 # Num Counters:
 3
 # Counter Values:
-32005126
-7365516
-23720895
+31868115
+7248687
+23716777
 
 _ZN12i486DXCommon7AndWordERjj
 # Func Hash:
@@ -3768,9 +3793,9 @@ _ZN12i486DXCommon7AndWordERjj
 # Num Counters:
 3
 # Counter Values:
-1934392
-600566
-791106
+1878041
+588953
+767686
 
 _ZN12i486DXCommon7Operand13DecodeFarAddrEiiPKh
 # Func Hash:
@@ -3778,8 +3803,8 @@ _ZN12i486DXCommon7Operand13DecodeFarAddrEiiPKh
 # Num Counters:
 2
 # Counter Values:
-4910
-429
+4875
+426
 
 _ZN12i486DXCommon7Operand23DecodeMODR_MForRegisterEih
 # Func Hash:
@@ -3787,7 +3812,7 @@ _ZN12i486DXCommon7Operand23DecodeMODR_MForRegisterEih
 # Num Counters:
 1
 # Counter Values:
-103580
+97714
 
 _ZN12i486DXCommon7Operand25DecodeMODR_MForCRRegisterEh
 # Func Hash:
@@ -3795,7 +3820,7 @@ _ZN12i486DXCommon7Operand25DecodeMODR_MForCRRegisterEh
 # Num Counters:
 1
 # Counter Values:
-4129
+3796
 
 _ZN12i486DXCommon7Operand25DecodeMODR_MForDRRegisterEh
 # Func Hash:
@@ -3811,7 +3836,7 @@ _ZN12i486DXCommon7Operand30DecodeMODR_MForSegmentRegisterEh
 # Num Counters:
 1
 # Counter Values:
-73058
+70666
 
 _ZN12i486DXCommon7OrDwordERjj
 # Func Hash:
@@ -3819,10 +3844,10 @@ _ZN12i486DXCommon7OrDwordERjj
 # Num Counters:
 4
 # Counter Values:
-900037
-75811
-725578
-264357
+874870
+74449
+713203
+248327
 
 _ZN12i486DXCommon7RclByteERjj
 # Func Hash:
@@ -3831,10 +3856,10 @@ _ZN12i486DXCommon7RclByteERjj
 5
 # Counter Values:
 0
-230608
-55216
+225709
+54043
 0
-6496
+6358
 
 _ZN12i486DXCommon7RclWordERjj
 # Func Hash:
@@ -3878,11 +3903,11 @@ _ZN12i486DXCommon7RolWordERjj
 # Num Counters:
 5
 # Counter Values:
-308
-3645
+307
+3435
 54
 378
-3953
+3742
 
 _ZN12i486DXCommon7RorByteERjj
 # Func Hash:
@@ -3903,10 +3928,10 @@ _ZN12i486DXCommon7RorWordERjj
 5
 # Counter Values:
 4
-23033
+22878
 0
 0
-23037
+22882
 
 _ZN12i486DXCommon7SarWordERjj
 # Func Hash:
@@ -3914,14 +3939,14 @@ _ZN12i486DXCommon7SarWordERjj
 # Num Counters:
 8
 # Counter Values:
-17716
-2176
-17065
-1465
-5809
-3232
-17065
-19241
+17330
+2061
+16626
+1463
+5716
+3046
+16626
+18687
 
 _ZN12i486DXCommon7SbbByteERjj
 # Func Hash:
@@ -3946,12 +3971,12 @@ _ZN12i486DXCommon7SbbWordERjj
 # Num Counters:
 10
 # Counter Values:
-74158
-74155
-74148
+73325
+73322
+73315
 3
-74155
-72873
+73322
+72040
 759
 0
 8
@@ -3963,7 +3988,7 @@ _ZN12i486DXCommon7ShlByteERjj
 # Num Counters:
 1
 # Counter Values:
-238882
+237189
 
 _ZN12i486DXCommon7ShlWordERjj
 # Func Hash:
@@ -3971,7 +3996,7 @@ _ZN12i486DXCommon7ShlWordERjj
 # Num Counters:
 1
 # Counter Values:
-1037100
+1007576
 
 _ZN12i486DXCommon7ShrByteERjj
 # Func Hash:
@@ -3979,15 +4004,15 @@ _ZN12i486DXCommon7ShrByteERjj
 # Num Counters:
 9
 # Counter Values:
-427462
-426687
+415620
+414871
 0
-427462
-18082
-80063
-213996
+415620
+9117
+71311
+204970
 5
-770
+744
 
 _ZN12i486DXCommon7ShrWordERjj
 # Func Hash:
@@ -3995,15 +4020,15 @@ _ZN12i486DXCommon7ShrWordERjj
 # Num Counters:
 9
 # Counter Values:
-361506
-325574
+350955
+315565
 1
-361512
-45297
-34763
-236491
+350961
+44941
+34612
+230165
 70
-35862
+35320
 
 _ZN12i486DXCommon7SubByteERjj
 # Func Hash:
@@ -4011,12 +4036,12 @@ _ZN12i486DXCommon7SubByteERjj
 # Num Counters:
 6
 # Counter Values:
-21626530
-985879
-324232
-9906056
-6115016
-4285231
+21508407
+978173
+322431
+9824235
+6110579
+4230646
 
 _ZN12i486DXCommon7SubWordERjj
 # Func Hash:
@@ -4024,12 +4049,12 @@ _ZN12i486DXCommon7SubWordERjj
 # Num Counters:
 6
 # Counter Values:
-7358758
-1613942
-164287
-1867067
-2180616
-2599371
+7094153
+1535109
+123745
+1821095
+2101798
+2491288
 
 _ZN12i486DXCommon7XorByteERjj
 # Func Hash:
@@ -4037,10 +4062,10 @@ _ZN12i486DXCommon7XorByteERjj
 # Num Counters:
 4
 # Counter Values:
-18701
-412603
-404075
-11327
+14824
+404969
+397088
+9786
 
 _ZN12i486DXCommon7XorWordERjj
 # Func Hash:
@@ -4049,9 +4074,9 @@ _ZN12i486DXCommon7XorWordERjj
 4
 # Counter Values:
 0
-88294
-85945
-2226
+83105
+81308
+1674
 
 _ZN12i486DXCommon8AdcDwordERjj
 # Func Hash:
@@ -4074,12 +4099,12 @@ _ZN12i486DXCommon8AddDwordERjj
 # Num Counters:
 6
 # Counter Values:
-13570048
-11816880
-15252
-167533
-4168774
-6325232
+13287929
+11539763
+15215
+167374
+4103155
+6220678
 
 _ZN12i486DXCommon8AndDwordERjj
 # Func Hash:
@@ -4087,9 +4112,9 @@ _ZN12i486DXCommon8AndDwordERjj
 # Num Counters:
 3
 # Counter Values:
-10981172
-1600632
-4391376
+10896439
+1584986
+4357742
 
 _ZN12i486DXCommon8FPUState6FNINITEv
 # Func Hash:
@@ -4117,8 +4142,8 @@ _ZN12i486DXCommon8REPCheckERjjj
 # Num Counters:
 4
 # Counter Values:
-2884942
-2883494
+2837727
+2836279
 11584
 1448
 
@@ -4129,10 +4154,10 @@ _ZN12i486DXCommon8RcrDwordERjj
 5
 # Counter Values:
 15
-6493
-6508
+6496
+6511
 41
-6467
+6470
 
 _ZN12i486DXCommon8RolDwordERjj
 # Func Hash:
@@ -4140,11 +4165,11 @@ _ZN12i486DXCommon8RolDwordERjj
 # Num Counters:
 5
 # Counter Values:
-21653
-434090
+18331
+420511
 0
 0
-455743
+438842
 
 _ZN12i486DXCommon8RorDwordERjj
 # Func Hash:
@@ -4152,11 +4177,11 @@ _ZN12i486DXCommon8RorDwordERjj
 # Num Counters:
 5
 # Counter Values:
-870576
-1391671
+851909
+1341014
 0
 0
-2262247
+2192923
 
 _ZN12i486DXCommon8SarDwordERjj
 # Func Hash:
@@ -4164,14 +4189,14 @@ _ZN12i486DXCommon8SarDwordERjj
 # Num Counters:
 8
 # Counter Values:
-874980
-555521
-470457
+874855
+555479
+470270
 159548
-187885
-530020
-555521
-1025978
+187858
+529928
+555479
+1025749
 
 _ZN12i486DXCommon8ShlDwordERjj
 # Func Hash:
@@ -4179,7 +4204,7 @@ _ZN12i486DXCommon8ShlDwordERjj
 # Num Counters:
 1
 # Counter Values:
-1327474
+1271347
 
 _ZN12i486DXCommon8ShrDwordERjj
 # Func Hash:
@@ -4187,15 +4212,15 @@ _ZN12i486DXCommon8ShrDwordERjj
 # Num Counters:
 9
 # Counter Values:
-2019129
-673098
-1350918
-462965
-159043
-1112581
-2628
-667405
-806
+1958704
+670537
+1292094
+445362
+158489
+1075937
+2148
+665948
+662
 
 _ZN12i486DXCommon8SubDwordERjj
 # Func Hash:
@@ -4203,12 +4228,12 @@ _ZN12i486DXCommon8SubDwordERjj
 # Num Counters:
 6
 # Counter Values:
-26436144
-2226246
+26189327
+2221179
 862
-12081243
-5264186
-7080287
+11971603
+5230144
+7018199
 
 _ZN12i486DXCommon8XorDwordERjj
 # Func Hash:
@@ -4216,10 +4241,10 @@ _ZN12i486DXCommon8XorDwordERjj
 # Num Counters:
 4
 # Counter Values:
-815587
+804244
 0
-815587
-2147
+804244
+2097
 
 _ZN12i486DXCommonC2EP6VMBase
 # Func Hash:
@@ -4344,8 +4369,8 @@ _ZN13FMTownsCommon10IOReadByteEj
 # Num Counters:
 29
 # Counter Values:
-296825
-296578
+294102
+293855
 3
 0
 159
@@ -4393,28 +4418,28 @@ _ZN13FMTownsCommon11IOWriteByteEjj
 # Num Counters:
 57
 # Counter Values:
-397766
+394071
 0
-87147
-0
-0
+86491
 0
 0
 0
 0
-398
-400
-6578
-6582
+0
+0
+378
+380
+6440
+6444
 0
 0
 0
 0
 3
-6552
+6414
 0
 0
-6554
+6416
 0
 0
 0
@@ -4801,7 +4826,7 @@ _ZN13FMTownsCommon15SetGamePadStateEibbbbbbbbb
 # Num Counters:
 1
 # Counter Values:
-35560
+35544
 
 _ZN13FMTownsCommon16AppSpecificSetupEP13Outside_WorldRK20TownsStartParameters
 # Func Hash:
@@ -5400,8 +5425,8 @@ _ZN13FMTownsCommon19SetMouseButtonStateEbb
 0
 0
 0
-71120
-35560
+71088
+35544
 0
 0
 0
@@ -5416,7 +5441,7 @@ _ZN13FMTownsCommon19SetMouseButtonStateEbb
 0
 0
 0
-35560
+35544
 0
 0
 0
@@ -5439,17 +5464,17 @@ _ZN13FMTownsCommon28RunFastDevicePollingInternalEv
 # Num Counters:
 11
 # Counter Values:
-50492754
-37867274
-27423
-89992
+50533708
+37900066
+27421
+90007
 3
 3
-25156720
-25246377
-25246709
-16644
-16644
+25177206
+25266854
+25267210
+16645
+16645
 
 _ZN13FMTownsCommon5ResetEv
 # Func Hash:
@@ -5947,9 +5972,9 @@ _ZN13FMTownsCommon8VariableD2Ev
 
 _ZN13FMTownsCommonC2Ev
 # Func Hash:
-787327392750072933
+284052076326360343
 # Num Counters:
-518
+521
 # Counter Values:
 21
 24576
@@ -6449,6 +6474,9 @@ _ZN13FMTownsCommonC2Ev
 0
 0
 0
+0
+0
+0
 3
 3
 0
@@ -6503,18 +6531,21 @@ _ZN13FMTownsCommonC2Ev
 
 _ZN13FMTownsCommonD2Ev
 # Func Hash:
-744640996493335158
+934081912442035879
 # Num Counters:
-17
+20
 # Counter Values:
 3
 21
 21
-18
 12
+21
 30
+0
 15
+0
 3145728
+0
 0
 0
 0
@@ -6761,20 +6792,20 @@ _ZN13TownsGamePort10IOReadByteEj
 16
 # Counter Values:
 0
-152009
-132549
-19460
+150731
+131796
+18935
 0
 48
 0
 0
 0
 3
-132549
+131796
 0
 0
 0
-132549
+131796
 0
 # Num Value Kinds:
 1
@@ -6790,8 +6821,8 @@ _ZN13TownsGamePort11IOWriteByteEjj
 # Num Counters:
 2
 # Counter Values:
-135806
-135806
+134984
+134984
 
 _ZN13TownsGamePort19BootSequenceStartedEv
 # Func Hash:
@@ -6890,18 +6921,18 @@ _ZN13TownsGamePort4Port15SetGamePadStateEbbbbbbbbbx
 # Num Counters:
 3
 # Counter Values:
-35560
+35544
 0
 0
 
 _ZN13TownsGamePort4Port4ReadEx
 # Func Hash:
-339226955483688981
+822591364638697093
 # Num Counters:
-100
+107
 # Counter Values:
-132549
-304018
+131796
+301462
 0
 0
 0
@@ -6914,36 +6945,7 @@ _ZN13TownsGamePort4Port4ReadEx
 0
 0
 0
-530196
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-132549
-0
-0
-0
-0
-0
-7299
-0
-0
-0
-0
-0
-4051
-4051
-4051
-7307
+527184
 0
 0
 0
@@ -6957,25 +6959,61 @@ _ZN13TownsGamePort4Port4ReadEx
 0
 0
 0
+131796
 0
 0
 0
 0
-131750
-131750
-19460
-19460
 0
-132549
-132549
-132549
-132549
-132549
-132549
-132549
-132549
-120396
-132549
+7116
+15749
+0
+0
+0
+3937
+7124
+0
+0
+3937
+3937
+3937
+7124
+0
+4
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+131042
+131042
+18935
+18935
+3937
+3
+0
+131796
+131796
+131796
+131796
+131796
+131796
+131796
+131796
+119985
+131796
 0
 0
 0
@@ -7007,20 +7045,20 @@ _ZN13TownsGamePort4Port5WriteExbh
 # Num Counters:
 14
 # Counter Values:
-4056
-4051
+3942
+3937
 0
 5
 0
-271612
-135806
+269968
+134984
 0
-16205
+15749
 0
 0
-4047
-8102
-8098
+3933
+7874
+7870
 
 _ZN13TownsGamePort5ResetEv
 # Func Hash:
@@ -7149,9 +7187,9 @@ _ZN13TownsKeyboard5ResetEv
 
 _ZN13TownsKeyboard8PushFifoEhh
 # Func Hash:
-441200136512014043
+288907646318132558
 # Num Counters:
-95
+98
 # Counter Values:
 0
 0
@@ -7177,11 +7215,14 @@ _ZN13TownsKeyboard8PushFifoEhh
 0
 0
 8
+4
 0
 8
 0
 0
 8
+0
+0
 0
 0
 0
@@ -7411,7 +7452,7 @@ _ZN15FMTownsTemplateI21i486DXDefaultFidelityE3CPUEv
 # Num Counters:
 2
 # Counter Values:
-533342394
+529002722
 0
 
 _ZN15FMTownsTemplateI21i486DXDefaultFidelityEC2Ev
@@ -7443,8 +7484,8 @@ _ZN15TownsHighResPCM10IOReadByteEj
 # Num Counters:
 57
 # Counter Values:
-179
-179
+166
+166
 0
 0
 1
@@ -7453,9 +7494,9 @@ _ZN15TownsHighResPCM10IOReadByteEj
 0
 0
 0
-90
+82
 0
-88
+83
 0
 0
 0
@@ -7476,9 +7517,9 @@ _ZN15TownsHighResPCM10IOReadByteEj
 0
 0
 2
-90
-90
-90
+82
+82
+82
 0
 0
 0
@@ -7497,8 +7538,8 @@ _ZN15TownsHighResPCM10IOReadByteEj
 0
 0
 0
-88
-88
+83
+83
 1
 
 _ZN15TownsHighResPCM10ProcessDMAEv
@@ -7507,21 +7548,21 @@ _ZN15TownsHighResPCM10ProcessDMAEv
 # Num Counters:
 15
 # Counter Values:
-309558
-3516
-3429
-3429
-88
-88
-88
-88
-13
+285328
+3225
+3143
+3143
+80
+80
+80
+80
+11
 0
 0
 0
 0
-3429
-3429
+3143
+3143
 
 _ZN15TownsHighResPCM11IOWriteByteEjj
 # Func Hash:
@@ -7529,47 +7570,47 @@ _ZN15TownsHighResPCM11IOWriteByteEjj
 # Num Counters:
 49
 # Counter Values:
-2702
-293878
-2702
-88
-404
-316
-220
-176
-132
-132
-132
-132
-132
-132
+2571
+271248
+2571
+83
+380
+297
+211
+166
+128
+128
+128
+128
+128
+128
 0
 0
 1
 0
-404
-176
-264
-176
-88
+380
+166
+246
+166
+83
 0
-89
-88
-88
-88
-88
-88
-88
-0
-0
+84
+83
+83
+83
+83
+83
+83
 0
 0
 0
-88
+0
+0
+83
 0
 0
 0
-88
+83
 0
 0
 0
@@ -7593,8 +7634,8 @@ _ZN15TownsHighResPCM16RunScheduledTaskEy
 # Num Counters:
 2
 # Counter Values:
-3516
-3429
+3225
+3143
 
 _ZN15TownsHighResPCM20AddWaveForNumSamplesEPhjj
 # Func Hash:
@@ -7602,20 +7643,20 @@ _ZN15TownsHighResPCM20AddWaveForNumSamplesEPhjj
 # Num Counters:
 14
 # Counter Values:
-15680
+14080
 0
-49
-49
-49
-49
-49
-49
+44
+44
+44
+44
+44
+44
 0
-49
-49
+44
+44
 0
 0
-49
+44
 # Num Value Kinds:
 1
 # ValueKind = IPVK_MemOPSize:
@@ -7623,7 +7664,7 @@ _ZN15TownsHighResPCM20AddWaveForNumSamplesEPhjj
 # NumValueSites:
 1
 1
-513:49
+513:44
 
 _ZN15TownsHighResPCM5ResetEv
 # Func Hash:
@@ -7664,10 +7705,10 @@ _ZN15TownsHighResPCM9PopulatorINS_8WAV8MonoEE8PopulateERiPhRKNSt6__ndk16vectorIh
 # Num Counters:
 4
 # Counter Values:
-86436
-15680
-49
-102165
+77616
+14080
+44
+91740
 
 _ZN15TownsHighResPCM9UpdatePICEv
 # Func Hash:
@@ -7675,14 +7716,14 @@ _ZN15TownsHighResPCM9UpdatePICEv
 # Num Counters:
 8
 # Counter Values:
-896
-984
-984
-896
-345
+843
+923
+923
+843
+333
 0
-264
-345
+249
+333
 
 _ZN15TownsHighResPCMC2EP13FMTownsCommon
 # Func Hash:
@@ -9490,7 +9531,7 @@ _ZN18TownsMainRAMAccess10StoreDwordEjj
 # Num Counters:
 1
 # Counter Values:
-32362265
+32059822
 
 _ZN18TownsMainRAMAccess15GetMemoryWindowEj
 # Func Hash:
@@ -9498,7 +9539,7 @@ _ZN18TownsMainRAMAccess15GetMemoryWindowEj
 # Num Counters:
 1
 # Counter Values:
-41590655
+41033887
 
 _ZN18TownsMainRAMAccess9StoreByteEjh
 # Func Hash:
@@ -9506,7 +9547,7 @@ _ZN18TownsMainRAMAccess9StoreByteEjh
 # Num Counters:
 1
 # Counter Values:
-23627818
+23548667
 
 _ZN18TownsMainRAMAccess9StoreWordEjj
 # Func Hash:
@@ -9514,7 +9555,7 @@ _ZN18TownsMainRAMAccess9StoreWordEjj
 # Num Counters:
 1
 # Counter Values:
-15133957
+14822171
 
 _ZN18TownsWaveRAMAccess9StoreByteEjh
 # Func Hash:
@@ -9522,7 +9563,7 @@ _ZN18TownsWaveRAMAccess9StoreByteEjh
 # Num Counters:
 2
 # Counter Values:
-720251
+687478
 0
 
 _ZN18TownsWaveRAMAccessC2EP13FMTownsCommonP6RF5C68P11VGMRecorder
@@ -9539,12 +9580,12 @@ _ZN19TownsPhysicalMemory10IOReadByteEj
 # Num Counters:
 55
 # Counter Values:
-126761
+125813
 11091
 0
 0
-74117
-52635
+73490
+52314
 0
 3
 0
@@ -9581,8 +9622,8 @@ _ZN19TownsPhysicalMemory10IOReadByteEj
 0
 0
 0
-9070
-9056
+9077
+9063
 0
 0
 0
@@ -9652,9 +9693,9 @@ _ZN19TownsPhysicalMemory11IOWriteByteEjj
 # Counter Values:
 0
 0
-197091
+195473
 6946
-108717
+107755
 1038
 0
 2
@@ -9662,7 +9703,7 @@ _ZN19TownsPhysicalMemory11IOWriteByteEjj
 0
 0
 0
-87312
+86656
 0
 0
 14
@@ -10129,10 +10170,10 @@ _ZN19TownsPhysicalMemory24UpdateFMRVRAMMappingFlagEb
 # Num Counters:
 4
 # Counter Values:
-108732
-43676
+107770
+43348
 0
-43676
+43348
 
 _ZN19TownsPhysicalMemory29UpdateSysROMDicROMMappingFlagEbb
 # Func Hash:
@@ -10140,10 +10181,10 @@ _ZN19TownsPhysicalMemory29UpdateSysROMDicROMMappingFlagEbb
 # Num Counters:
 6
 # Counter Values:
-87330
+86674
 20
-43662
-43665
+43334
+43337
 10
 10
 
@@ -10273,21 +10314,21 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE10FetchDwordEjRKN12i48
 # Num Counters:
 15
 # Counter Values:
-45678143
+44411798
 0
-42230022
-3395768
-3395768
+40975194
+3385876
+3385874
 142139
-36005646
-52353
-141506
-141506
+34760077
+50730
+135623
+135623
 0
 0
 0
 0
-1959450
+1950744
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -10295,11 +10336,11 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE10FetchDwordEjRKN12i48
 # NumValueSites:
 3
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:141506
+_ZNK18TownsMainRAMAccess10FetchDwordEj:135623
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:141506
+_ZNK18TownsMainRAMAccess10FetchDwordEj:135623
 7
-_ZNK18TownsMainRAMAccess10FetchDwordEj:42087883
+_ZNK18TownsMainRAMAccess10FetchDwordEj:40833055
 _ZNK20TownsSpriteRAMAccess10FetchDwordEj:75032
 _ZNK16TownsOsROMAccess10FetchDwordEj:55552
 _ZNK23TownsVRAMAccessTemplateILj0EE10FetchDwordEj:9481
@@ -10314,23 +10355,23 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE10StoreDwordER6Memoryi
 19
 # Counter Values:
 0
-1921591
-11203548
-1921588
+1910346
+10330246
+1910342
 0
-32362265
+32059822
 0
-36726167
-258
+35555508
+260
 0
-57554
-57554
-0
-0
+55152
+55152
 0
 0
 0
-939451
+0
+0
+934489
 0
 # Num Value Kinds:
 1
@@ -10339,13 +10380,13 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE10StoreDwordER6Memoryi
 # NumValueSites:
 3
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:57554
+_ZNK18TownsMainRAMAccess10FetchDwordEj:55152
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:57554
+_ZNK18TownsMainRAMAccess10FetchDwordEj:55152
 6
-_ZN18TownsMainRAMAccess10StoreDwordEjj:32362265
-_ZN20TownsSpriteRAMAccess10StoreDwordEjj:5705472
-_ZN23TownsVRAMAccessTemplateILj0EE10StoreDwordEjj:4381212
+_ZN18TownsMainRAMAccess10StoreDwordEjj:32059822
+_ZN20TownsSpriteRAMAccess10StoreDwordEjj:5461760
+_ZN23TownsVRAMAccessTemplateILj0EE10StoreDwordEjj:3751622
 _ZN33TownsSinglePageVRAMAccessTemplateILj0E35TownsSinglePageVRAMAddressTransformE10StoreDwordEjj:1115712
 _ZN16NullMemoryAccess10StoreDwordEjj:576
 _ZN18TownsFMRVRAMAccess10StoreDwordEjj:576
@@ -10356,10 +10397,10 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE14FetchImm16or32ERN12i
 # Num Counters:
 4
 # Counter Values:
-952
-6976
-2665267
-4021
+851
+6979
+2662833
+3881
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE15EvaluateOperandER6MemoryiiRKN12i486DXCommon7OperandEi
 # Func Hash:
@@ -10381,24 +10422,24 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE15EvaluateOperandER6Me
 0
 0
 0
-131380
+130396
 0
 0
-9067
+9074
 0
-3617724
-211291
-10776446
-1216306
-4071515
+3580950
+209644
+10657595
+1202076
+3982325
 0
-742344
-0
-0
+733610
 0
 0
-7753469
-2419992
+0
+0
+7665335
+2395404
 0
 0
 0
@@ -10412,7 +10453,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RedirectInterruptEjR
 # Num Counters:
 1
 # Counter Values:
-191133
+187865
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6MemoryR5InOut
 # Func Hash:
@@ -10427,30 +10468,30 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-153336
-341772
+153339
+341775
 103947
 0
 0
 13842
-30889
-93
-323
+29661
+85
+306
 7988
 0
 615
 1
 0
-7144
-4151
+7147
+4146
 0
 306
-17657611
-13367226
-222030
+17422050
+13201303
+195492
 7988
 615
-451092948
+447089398
 0
 0
 0
@@ -10465,7 +10506,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-451092948
+447089398
 0
 0
 0
@@ -10479,8 +10520,8 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-43957
-43557
+43629
+43229
 0
 0
 0
@@ -10488,7 +10529,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-29345
+29120
 0
 756
 0
@@ -10498,7 +10539,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 80
-117986
+111784
 0
 39918
 0
@@ -10514,7 +10555,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 4144
-157426
+156653
 0
 0
 0
@@ -10539,35 +10580,35 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 1495
 0
 323260
-4332759
+4303784
 7571
-31484
+23808
 7521
 375
 0
 321537
-4297496
+4268526
 6777
-30153
+22780
 0
-350529
-3409084
-349766
+350541
+3376319
+349778
 313861
 97059
-27967
-669656
+27979
+664819
 0
 0
 0
 0
 1
-685096
+684113
 528
 150917
 43516
 205651
-17180711
+16188806
 0
 5
 0
@@ -10579,11 +10620,11 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-31476
+23800
 150246
 41459
 205601
-16808602
+15831195
 0
 0
 0
@@ -10594,22 +10635,22 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 9083
 0
-48737
-557123
+48752
+553064
 396
-21492849
+21370517
 0
-31231
-434
+30077
+327
 321669
 0
-3409009
-46904
+3376244
+46919
 386
 10829
-536704
+535120
 322
-20610219
+20506847
 0
 0
 0
@@ -10625,17 +10666,17 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 5131619
 0
 0
-18666
-4834283
-349392
-1362
-26684327
-24571
+18354
+4825478
+341498
+1311
+26611301
+24285
 0
-325811
-119345
-463907
-2809310
+409145
+111467
+457173
+2822942
 1120
 0
 0
@@ -10644,59 +10685,59 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-566412
-27783434
+670185
+27714411
 0
-48415
-2995272
-175946
-927627
-1944283
-2324763
-1918868
-212505
-333162
-3577891
-2549
-203614
-9067
-18128
-68695
-2495044
+48667
+3033618
+175088
+910904
+1913791
+2296945
+1909869
+204184
+320856
+3554400
+1867
+200967
+9074
+18142
+68465
+2517655
 13032
 0
-23512
-2125
-130674
-435741
-3351792
-541865
-623962
+22085
+1822
+129690
+428247
+3319039
+593687
+607452
 0
-232562
+229868
 0
 0
 28
-10990
-23442
+10762
+22608
 0
-1013282
-405336
-702936
-88514
+1273147
+394063
+689450
+86973
 0
-221248
-204245
-371502
-6743
+216489
+202786
+364650
+6591
 0
-7244
-41537
-742344
+7106
+41367
+733610
 0
-388970
-3977
-397492
+368285
+3769
+381870
 0
 0
 0
@@ -10709,328 +10750,328 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 243
-4325991
+4297021
 0
-556752
+552792
 0
-21480418
+21358183
 0
 96
 320
 0
-211291
-816446
+209644
+816300
 6
 0
-445240
+445285
 66039
-2
-2300
+0
+1576
 23
 0
 0
-193397
-10825
+246013
+8750
 0
-61199
+61192
 210
 2
 0
 212
-1383676
-647549
+1302450
+620544
 0
-3861159
-0
-0
-0
-850046
+3771659
 0
 0
 0
-223096
+846637
 0
-2278338
+0
+0
+207582
+0
+2278237
 4
 0
-53251
+52000
 0
-763519
+753508
 0
-1257355
-96597
-96380
-528751
+1244833
+96523
+95368
+515129
 0
 0
-209610
-1340413
-406814
-666806
-812075
-88087
-806051
-99439
-100094
-5
-5
+206136
+1303371
+376556
+675104
+785611
+82898
+794758
+144947
+145602
+2
+2
 3925
-491747
-277971
-1455967
-102617
-261508
+471047
+271643
+1430474
+98359
+256556
 674
 0
 0
 0
-693
-22708
-178783
-304820
+673
+22602
+173290
+302496
 993
 0
 0
 0
-1894539
-1004426
-4615801
-1380878
-888285
+1859390
+942426
+4610104
+1347202
+848716
 87
-730774
-8203872
-100088
-1197182
-3730042
+716883
+8185109
+98664
+1249942
+3617499
 0
-559800
-188642
-83814
-266122
+546403
+175528
+83512
+262019
 0
 0
 0
-739140
-993849
-142442
-24664
+739137
+992952
+130966
+20737
 80
-322483
+316052
 198
 123
-183849
+180780
 151
 66760
 3890
-8580
+8518
 0
 0
 0
-75753
-345356
-856124
-1684238
-200437
-244739
+75148
+334600
+959757
+1645410
+196881
+242331
 981
 11
-128923
-831801
+128020
+812005
 2
 0
 478
-3127
-16879
+2824
+12467
 6
 0
-107271
-3677527
+106616
+3633075
 0
-346909
-181761
-129338
-104773
-32
-49
-34896
-233618
+338467
+170665
+127837
+101357
+29
+44
+34906
+224967
 0
-2063
+1963
 5
 47320
 0
-2021030
-62935
-108553
+2054092
+60383
+100316
 0
-23198
+22474
 0
 1175
 4025
-82421
-953254
-211291
+82427
+905858
+209644
 0
 0
-417572
-1058345
-129581
-838275
+414921
+1014164
+128678
+818480
 0
 0
 0
 0
 828
 111625
-53517
-19045
-433280
-886310
-197114
-467084
+53243
+17828
+429900
+868683
+196195
+463137
 0
 0
-39236
+39254
 6115
-21715
-355334
-138972
-805975
+19733
+341741
+138689
+805015
 0
-3878047
-1554846
-314977
-1166626
-880620
-1706427
-18301
+3809084
+1476950
+313306
+1165427
+930499
+1658422
+18307
 1127
-24726
-7611
+24735
+7425
 64
 0
-880647
-267606
-29470
-38559
-75808
+864800
+266875
+29337
+38371
+75505
 0
-66150
-78943
-913940
-546800
-0
-0
-0
-62494
-1040130
+65670
+76798
+913695
+546798
 0
 0
-18860
+0
+60034
+1020397
+0
+0
+18866
 103
 0
 0
-196407
-331377
+195488
+327549
 0
 0
-369228
-3039735
+357598
+2976278
 5725
-2376656
+2376534
 11
 5
-2050191
-3495795
-57622
+2011428
+3433900
+57602
 0
-7918
+7921
 0
-7918
-7918
-481234
-3516387
-0
-0
-289493
-1170791
+7921
+7921
+531061
+3426489
 0
 0
-0
-64181
-102420
-0
-0
-452580
-280087
-452580
-22791
-126748
+287649
+1123607
 0
 0
-90821
-798395
-253027
 0
-2442158
-586416
+63885
+101767
+0
+0
+535334
+276685
+535334
+22563
+126735
+0
+0
+90863
+704396
+251052
+0
+2407172
+574880
 4
 4
 16
-112790
-193316
-1334460
-59061
-39450
+112783
+189842
+1297416
+57301
+35444
 591
 0
 0
-1166189
-702366
-239722
+1166090
+754501
+238379
 0
 0
 0
 0
-10032473
-5146030
-452092
-759736
-134401
-100
+9821341
+5095065
+555060
+745264
+133405
+95
 0
-178386
-431376
-803224
-248036
+158677
+427862
+788492
+247910
 407
-248036
-360654
-755996
-124924
-321109
-1194125
-3132388
-149682
-75776
+247910
+409844
+741524
+124303
+316700
+1246885
+3033052
+145152
+75129
 89893
 131
-443927
-1200682
-1146443
-617547
-841111
+436829
+1187863
+1138973
+625821
+814648
 5
 0
 0
 0
-696567
-134013
-3125259
-351001
-3125259
-89543
+679768
+128689
+3042272
+402105
+3042272
+88012
 0
 0
 1160
@@ -11040,26 +11081,26 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 738786
 0
 0
-433257
-953915
-200593
-3243602
+429743
+938839
+200055
+3239844
 0
-15036591
-8345333
-1523752
-1421737
+14812823
+8296982
+1505952
+1417296
 0
-218327
+209833
 2
-18425
+13582
 14
 0
-467868
-550667
+476295
+535071
 72130
-27460904
-7276941
+27373149
+7189250
 0
 0
 0
@@ -11067,7 +11108,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 41466
 8192
-16943905
+15962175
 155
 519
 0
@@ -11079,27 +11120,27 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-215
-3369
+163
+2780
 0
-112790
+112783
 6311
 0
-1675
-66332
+1452
+66323
 0
 0
 0
 0
 0
 0
-30430
+29311
 0
 0
 3
 0
-5
-3
+2
+2
 0
 0
 0
@@ -11109,15 +11150,15 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-546471
+546357
 0
 0
-14
+12
 0
 0
-81504
-6213710
-1190740
+80213
+6239001
+1678097
 0
 0
 0
@@ -11125,25 +11166,25 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-2714016
+2639225
 0
-634951
+634419
 4
 0
 3
 0
 0
 0
-10990
+10762
 24
 22046
-241779
-2104911
-128695
+240162
+2080594
+102637
 103
 0
 3472
-1748
+1750
 0
 0
 0
@@ -11151,92 +11192,92 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-112790
+112783
 16
-112790
-1467855
+112783
+1416247
 0
-832674
+815594
 0
 0
 4044
 55032
-94
+89
 0
 0
 0
 198
 0
-15490
-75406
-5613361
-17980256
+15376
+60196
+5466465
+17680252
 3563
 281
 0
 0
-601103
-127265
+572505
+126885
 0
-4488371
-1548624
+4429858
+1573417
 127966
-2774016
+2769636
 0
 206
 0
 0
-167180
-13340
+163775
+13196
 0
 3219
 0
-166386
-939267
-23881
-183517
-6166
+163205
+930918
+23884
+181235
+6160
 1237
 0
-570270
+560066
 0
-570270
-570270
+560066
+560066
 0
-21539
-38664
-1280719
-6087293
-143447
-3690
+21459
+38345
+1243019
+5906889
+116017
+3673
 0
 0
 0
 0
 99
-100
-27783434
-4151
-673801
-7144
-219
-27862
-566412
+98
+27714411
+4146
+672820
+7147
+164
+27297
+670185
 0
 0
 0
 0
 0
 764
-509080
-5
-5
-34562
-5564617
+501008
+2
+2
+34227
+5515097
 9277
 0
-8310
-6323
+8313
+6326
 0
 0
 0
@@ -11246,31 +11287,31 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 718
 0
-623196
-623196
-623196
-623196
-623196
-623196
+606685
+606685
+606685
+606685
+606685
+606685
 0
-623196
+606685
 170
 3106
 831
-131798
+131481
 0
 0
 81
 0
 0
 9
-31855
-11584
-866958
+31870
+11389
+848023
 0
 0
 3955
-35870
+35640
 0
 0
 0
@@ -11300,7 +11341,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-121650
+120659
 4
 4
 0
@@ -11310,26 +11351,26 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-8681
+7701
 0
 88808
-758522
+758231
 8
 475022
 0
-157782
+154041
 0
 0
 0
-1699036
+1749823
 0
 98
-463835
+406719
 0
 0
 0
 9473
-5289993
+5318357
 0
 0
 0
@@ -11337,16 +11378,16 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-1702874
+1671239
 0
 0
 0
-125429
-130613
-554483
+121023
+129624
+554489
 0
-43861
-57560
+43533
+57223
 0
 0
 0
@@ -11360,25 +11401,25 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 186
 2428
-35817
+35479
 0
 0
 0
 0
-87151
+86323
 0
 0
 432
 84
-5092
+4863
 0
 0
 0
 0
 9504
 11584
-1737954
-4158942
+1733755
+4102094
 0
 0
 61
@@ -11402,41 +11443,41 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 18
 0
-360
-75
-323
+352
+67
+306
 0
 0
 0
 0
-43559
-169130
-43559
+43231
+168136
+43231
 0
 0
 0
 0
-10634290
-14196293
-0
-0
-0
-0
-0
+10386290
+13971693
 0
 0
 0
 0
 0
-564588
-0
-1379695
-66355
-0
-6383075
 0
 0
-4285530
+0
+0
+0
+551250
+0
+1362541
+66018
+0
+6310036
+0
+0
+4258113
 0
 0
 8
@@ -11450,7 +11491,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-1548624
+1573417
 0
 0
 0
@@ -11459,18 +11500,18 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-272063
+260847
 0
 0
-11
+8
 0
 0
 0
-43557
-43557
-43560
+43229
+43229
+43232
 0
-546471
+546357
 0
 0
 4
@@ -11479,47 +11520,47 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 1430
 2130
 1639
-346600
+330223
 0
-16211
-74525
-72247
-3993631
+14188
+74332
+71414
+3897165
 0
-9736594
-120026
+9610161
+119912
 0
-3301165
-540161
-9812975
-135025
-861678
-1944377
+3242077
+532584
+9598455
+134369
+814168
+1878963
 1
 9620
-718083
-6078259
-450083
-933593
-617000
-360029
-7963
-377529
+686309
+6058845
+434238
+868212
+604369
+350195
+7966
+373684
 0
 0
 0
 4
-104689
+104590
 1856
-4515
+4416
 10
-169857
+168987
 8
-2185772
-6557
-131169
+2166963
+6561
+130185
 0
-130679
+129695
 93
 93
 0
@@ -11536,7 +11577,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-276
+265
 0
 0
 0
@@ -11546,35 +11587,35 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 993
-72575
+72602
 186
 0
 0
-1379695
-120092
+1362541
+120098
 0
 0
 0
 0
 143
-23055
+22331
 0
 0
 0
-69765
-6043
-542299
-4501
+69472
+6033
+542302
+4496
 20
-15954920
+15750994
 776
-246758
-331906
-15747
-18701
+246553
+320512
+14686
+18601
 31155
-26467
-1088966
+26447
+1070091
 0
 0
 0
@@ -11592,18 +11633,18 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-35356
+34695
 0
 0
 0
 184
-377529
+373684
 0
 0
-730
-68734
+582
+68577
 15940
-1912
+1124
 0
 0
 0
@@ -11612,40 +11653,18 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-14
+12
 0
 0
 0
 0
 0
-159558
+153909
 0
 0
 0
 0
-360
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-143873
-614516
-0
-0
-346464
-328891
+352
 0
 0
 0
@@ -11656,7 +11675,29 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-490
+0
+0
+0
+0
+0
+0
+139409
+614511
+0
+0
+341863
+325448
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+487
 3209
 0
 0
@@ -11686,13 +11727,13 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-106
+101
 0
 0
 0
 0
-130507
-130507
+129523
+129523
 0
 0
 0
@@ -11716,17 +11757,15 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-855052
-360029
+838302
+350195
 0
-1824191
-0
-0
+1793693
 0
 0
-93357
 0
 0
+89551
 0
 0
 0
@@ -11747,17 +11786,19 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-87212
-87122
-43957
-43557
-46598
-150708
-11954
-1098078
-851285
-827238
-3207393
+0
+0
+86556
+86466
+43629
+43229
+39556
+145649
+11949
+1092368
+848317
+821833
+3168256
 0
 0
 0
@@ -11818,44 +11859,44 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 1832
-59684
-50526
-252236
+58211
+48807
+251424
 0
 143
 0
 0
-69765
-542299
+69472
+542302
 0
 31155
 8
-5662
-729646
+5574
+729343
 0
 0
 0
 0
 2
 0
-45917
-50678
+45932
+50589
 0
 0
-6496
+6358
 46
 98
-775
-88965
-68734
-544
+749
+88117
+68577
+406
 0
 0
-48720
+47685
 12
 10
-380770
-99239
+368939
+98483
 0
 0
 0
@@ -11870,8 +11911,8 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-2372
-1091
+2293
+788
 0
 0
 0
@@ -11881,7 +11922,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-346464
+341863
 0
 0
 0
@@ -11892,10 +11933,10 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-24499
-23427
-593573
-23427
+24508
+23433
+580936
+23433
 0
 0
 0
@@ -11908,8 +11949,8 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-61516
-26
+60043
+25
 0
 0
 0
@@ -11932,7 +11973,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 15
 0
-43560
+43232
 0
 0
 0
@@ -11950,8 +11991,8 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-59453
-2184
+57934
+1929
 0
 0
 0
@@ -11978,16 +12019,16 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 5195
-75100
-10274
+59890
+10160
 306
-1098078
-851285
-827238
-3207393
+1092368
+848317
+821833
+3168256
 13880
-1465
-6508
+1463
+6511
 159548
 3871
 0
@@ -11995,24 +12036,24 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-35909
-663597
-110829
-109614
+35367
+662908
+108192
+101951
 0
-17776
+17224
 0
-866430
+866201
 0
 0
-3502
-23035
-455743
-2262247
-320409
-1285319
-915997
-1217554
+3291
+22880
+438842
+2192923
+310400
+1239833
+889224
+1169090
 0
 0
 0
@@ -12053,14 +12094,14 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 3309
 0
-12902
+10879
 0
 0
 0
-3290
+3281
 728555
-2372
-1091
+2293
+788
 0
 0
 0
@@ -12072,10 +12113,10 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-24499
+24508
 0
 0
-23427
+23433
 0
 0
 0
@@ -12222,7 +12263,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-43534
+43207
 0
 0
 0
@@ -12563,14 +12604,11 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 20592
 0
 0
-27292
-21331
+26776
+21279
 0
 0
-1627
-0
-0
-0
+1261
 0
 0
 0
@@ -12578,7 +12616,10 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-3191
+0
+0
+0
+2706
 0
 0
 38459
@@ -12599,7 +12640,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 1533
 8202
-3747
+3739
 18910
 0
 0
@@ -12667,92 +12708,92 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-1531005
+1513709
 54
-726
+578
 72
 0
 0
 0
 0
 0
-67927
+66791
 1
-1731
+1468
 12278
-24
+14
 0
 0
 0
-10825
-10825
-61199
-61199
-193397
-193397
-53251
-53251
+8750
+8750
+61192
+61192
+246013
+246013
+52000
+52000
 0
 0
-2300
-2300
+1576
+1576
 23
 23
-176131
-176131
+173868
+173868
 0
 0
 0
-5564
+4737
 0
-1415
+1316
 0
-342413
+340742
 0
-4905
+4055
 0
 0
 0
-913
+744
 0
-4332
+3442
 3219
 3219
-728368
-728368
-55126
-55126
-2902414
-2902414
+699390
+699390
+55121
+55121
+2898034
+2898034
 1237
 1237
-147137
-147137
-60203
-60203
+119690
+119690
+59804
+59804
 206
 206
 1134
-3164208
-226613
-2956719
+3095257
+224942
+2890462
 523
-213145
-637651
+197077
+631131
 0
 0
 0
 0
 0
 0
-200149
+193742
 0
 306
 3186
 0
 0
 0
-325811
+409145
 60
 0
 1385
@@ -12998,32 +13039,32 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-360316
+466045
 3
-5077682
+5076221
 0
-106
-431722
+101
+421499
 0
-1949363
-4034631
-97457
-279589
-7963
+1940685
+3990089
+97014
+276188
+7966
 0
-25851
-10227
+26129
+10210
 0
-14999310
-14999310
-14754171
-14754171
-3761591
-9605635
-82233
-72419
+14806495
+14806495
+14485539
+14485539
+3650426
+9550877
+81569
+72446
 0
-119992
+119998
 0
 186
 0
@@ -13034,12 +13075,12 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 6
-736913
+731656
 192538
 321537
 1627
-4297496
-6601
+4268526
+6596
 150604
 150246
 906
@@ -13048,30 +13089,30 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 205614
 205601
 114
-16808602
-232969
-2163686
+15831195
+222652
+2126248
 11584
 11584
 11584
 0
 0
 0
-433280
-353892
-452580
+429900
+405658
+535334
 1160
 7469
 6777
-30153
+22780
 0
 0
 0
 0
 0
 5124247
-43557
-43557
+43229
+43229
 0
 0
 0
@@ -13081,18 +13122,18 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RunOneInstructionER6
 0
 0
 0
-343474
+343486
 767
 97
-46904
+46919
 1836
-448
+349
 386
 10
-14325
-13652
-180752
-8102
+14206
+13258
+177251
+7874
 0
 0
 0
@@ -13134,25 +13175,25 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17StoreOperandValueERK
 0
 0
 0
-8118873
-18128
+8012753
+18142
 0
-784074
+778170
 0
-4561668
-925117
-220541
-68656
-2324763
-0
-0
-0
-501960
+4489239
+920677
+219102
+68648
+2296945
 0
 0
-3234923
-840659
-355407
+0
+494988
+0
+0
+3189854
+826715
+342975
 0
 0
 0
@@ -13178,31 +13219,31 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE18GetOperandPointer8ER
 # Num Counters:
 25
 # Counter Values:
-5691518
-15942590
+5537525
+15785306
 0
-644365
-15942590
-15942590
-15942584
-644365
-0
-0
-474151
-10559337
-591
-591
-48250
-48250
+628181
+15785306
+15785306
+15785300
+628181
 0
 0
+458905
+10336411
+545
+545
+46676
+46676
 0
 0
 0
 0
 0
 0
-4859894
+0
+0
+4942402
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -13210,15 +13251,15 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE18GetOperandPointer8ER
 # NumValueSites:
 5
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:591
+_ZNK18TownsMainRAMAccess10FetchDwordEj:545
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:591
+_ZNK18TownsMainRAMAccess10FetchDwordEj:545
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:48250
+_ZNK18TownsMainRAMAccess10FetchDwordEj:46676
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:48250
+_ZNK18TownsMainRAMAccess10FetchDwordEj:46676
 2
-_ZN18TownsMainRAMAccess15GetMemoryWindowEj:15942584
+_ZN18TownsMainRAMAccess15GetMemoryWindowEj:15785300
 _ZN12MemoryAccess15GetMemoryWindowEj:6
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE19GetOperandPointer16ER6MemoryiiRKN12i486DXCommon7OperandEb
@@ -13227,32 +13268,32 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE19GetOperandPointer16E
 # Num Counters:
 26
 # Counter Values:
-4750028
-9384136
-6056143
-9384136
+4614989
+9165313
+5903777
+9165313
 0
-9384136
-9384136
-9384122
-6056143
-0
-0
-4845373
-2773750
-2892
-2892
-67065
-67065
+9165313
+9165313
+9165301
+5903777
 0
 0
+4696272
+2711844
+2805
+2805
+66552
+66552
 0
 0
 0
 0
 0
 0
-2085403
+0
+0
+2074466
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -13260,16 +13301,16 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE19GetOperandPointer16E
 # NumValueSites:
 5
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:2892
+_ZNK18TownsMainRAMAccess10FetchDwordEj:2805
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:2892
+_ZNK18TownsMainRAMAccess10FetchDwordEj:2805
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:67065
+_ZNK18TownsMainRAMAccess10FetchDwordEj:66552
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:67065
+_ZNK18TownsMainRAMAccess10FetchDwordEj:66552
 2
-_ZN18TownsMainRAMAccess15GetMemoryWindowEj:9384122
-_ZN12MemoryAccess15GetMemoryWindowEj:14
+_ZN18TownsMainRAMAccess15GetMemoryWindowEj:9165301
+_ZN12MemoryAccess15GetMemoryWindowEj:12
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE19GetOperandPointer32ER6MemoryiiRKN12i486DXCommon7OperandEb
 # Func Hash:
@@ -13277,32 +13318,32 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE19GetOperandPointer32E
 # Num Counters:
 26
 # Counter Values:
-26254855
-15580054
-7019598
-15580054
+25745190
+15412107
+6962076
+15412107
 0
-15580054
-15579910
-15579622
-7019598
-0
-0
-6945827
-8544278
-6226
-6226
-15261
-15261
+15412107
+15411963
+15411675
+6962076
 0
 0
+6889032
+8434120
+6140
+6140
+14995
+14995
 0
 0
 0
 0
 0
 0
-100352
+0
+0
+99714
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -13310,15 +13351,15 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE19GetOperandPointer32E
 # NumValueSites:
 5
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:6226
+_ZNK18TownsMainRAMAccess10FetchDwordEj:6140
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:6226
+_ZNK18TownsMainRAMAccess10FetchDwordEj:6140
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:15261
+_ZNK18TownsMainRAMAccess10FetchDwordEj:14995
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:15261
+_ZNK18TownsMainRAMAccess10FetchDwordEj:14995
 2
-_ZN18TownsMainRAMAccess15GetMemoryWindowEj:15579622
+_ZN18TownsMainRAMAccess15GetMemoryWindowEj:15411675
 _ZN12MemoryAccess15GetMemoryWindowEj:288
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE21GetStackAccessPointerER6Memoryjj
@@ -13327,14 +13368,14 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE21GetStackAccessPointe
 # Num Counters:
 13
 # Counter Values:
-54409122
-54398979
-511347
-54311844
-54398979
-310873
-59791
-59791
+53993352
+53983557
+502395
+53897078
+53983557
+303643
+58984
+58984
 0
 0
 0
@@ -13347,11 +13388,11 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE21GetStackAccessPointe
 # NumValueSites:
 3
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:59791
+_ZNK18TownsMainRAMAccess10FetchDwordEj:58984
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:59791
+_ZNK18TownsMainRAMAccess10FetchDwordEj:58984
 1
-_ZN18TownsMainRAMAccess15GetMemoryWindowEj:511347
+_ZN18TownsMainRAMAccess15GetMemoryWindowEj:502395
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE22GetInterruptDescriptorEjR6Memory
 # Func Hash:
@@ -13359,10 +13400,10 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE22GetInterruptDescript
 # Num Counters:
 4
 # Counter Values:
-192734
+189432
 0
-192734
-192734
+189432
+189432
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE23GetOperandPointer16or32ER6MemoryiiRKN12i486DXCommon7OperandEb
 # Func Hash:
@@ -13370,24 +13411,22 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE23GetOperandPointer16o
 # Num Counters:
 27
 # Counter Values:
-75352
-164850
-182484
-182484
-182484
+67920
+159735
+178720
+178720
+178720
 0
-182484
-182484
-172980
-172980
-0
-0
-174207
-0
-26
-26
+178720
+178720
+169216
+169216
 0
 0
+170440
+0
+27
+27
 0
 0
 0
@@ -13396,7 +13435,9 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE23GetOperandPointer16o
 0
 0
 0
-139887
+0
+0
+137149
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -13404,13 +13445,13 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE23GetOperandPointer16o
 # NumValueSites:
 5
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:26
+_ZNK18TownsMainRAMAccess10FetchDwordEj:27
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:26
+_ZNK18TownsMainRAMAccess10FetchDwordEj:27
 0
 0
 2
-_ZN18TownsMainRAMAccess15GetMemoryWindowEj:172980
+_ZN18TownsMainRAMAccess15GetMemoryWindowEj:169216
 _ZN12MemoryAccess15GetMemoryWindowEj:9504
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE24EvaluateOperandRegOrMem8ER6MemoryiiRKN12i486DXCommon7OperandE
@@ -13419,9 +13460,9 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE24EvaluateOperandRegOr
 # Num Counters:
 3
 # Counter Values:
-6917597
-5343580
-1481998
+6826809
+5407633
+1480675
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE25EvaluateOperandRegOrMem16ER6MemoryiiRKN12i486DXCommon7OperandE
 # Func Hash:
@@ -13429,9 +13470,9 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE25EvaluateOperandRegOr
 # Num Counters:
 3
 # Counter Values:
-4378355
+4287032
 0
-11520182
+11211414
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE25EvaluateOperandRegOrMem32ER6MemoryiiRKN12i486DXCommon7OperandE
 # Func Hash:
@@ -13440,8 +13481,8 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE25EvaluateOperandRegOr
 3
 # Counter Values:
 0
-13434459
-13815988
+13262989
+13617707
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE26StoreOperandValueRegOrMem8ERKN12i486DXCommon7OperandER6Memoryiih
 # Func Hash:
@@ -13450,7 +13491,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE26StoreOperandValueReg
 2
 # Counter Values:
 0
-3577891
+3554400
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE27StoreOperandValueRegOrMem16ERKN12i486DXCommon7OperandER6Memoryiit
 # Func Hash:
@@ -13460,7 +13501,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE27StoreOperandValueReg
 # Counter Values:
 0
 0
-10032473
+9821341
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE27StoreOperandValueRegOrMem32ERKN12i486DXCommon7OperandER6Memoryiij
 # Func Hash:
@@ -13470,7 +13511,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE27StoreOperandValueReg
 # Counter Values:
 0
 0
-5146030
+5095065
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE32EvaluateOperandReg16OrReg32OrMemER6MemoryiiRKN12i486DXCommon7OperandEi
 # Func Hash:
@@ -13479,11 +13520,11 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE32EvaluateOperandReg16
 7
 # Counter Values:
 0
-123008
-52574
-940647
+122998
+50719
+936094
 15714
-107294
+107284
 0
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE37GetConstMemoryWindowFromLinearAddressEjR6Memory
@@ -13492,10 +13533,10 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE37GetConstMemoryWindow
 # Num Counters:
 9
 # Counter Values:
-12940064
-11143680
-479999
-479999
+12880491
+10989808
+472034
+472034
 0
 0
 0
@@ -13508,12 +13549,12 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE37GetConstMemoryWindow
 # NumValueSites:
 3
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:479999
+_ZNK18TownsMainRAMAccess10FetchDwordEj:472034
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:479999
+_ZNK18TownsMainRAMAccess10FetchDwordEj:472034
 3
-_ZNK18TownsMainRAMAccess20GetConstMemoryWindowEj:12929898
-_ZNK23TownsMappedSysROMAccess20GetConstMemoryWindowEj:9859
+_ZNK18TownsMainRAMAccess20GetConstMemoryWindowEj:12869772
+_ZNK23TownsMappedSysROMAccess20GetConstMemoryWindowEj:10412
 _ZNK17TownsSysROMAccess20GetConstMemoryWindowEj:307
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE3PopERjS2_R6Memoryj
@@ -13522,11 +13563,11 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE3PopERjS2_R6Memoryj
 # Num Counters:
 5
 # Counter Values:
-452580
-280087
+535334
+276685
 0
 0
-452580
+535334
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE3PopERjS2_S2_R6Memoryj
 # Func Hash:
@@ -13534,11 +13575,11 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE3PopERjS2_S2_R6Memoryj
 # Num Counters:
 5
 # Counter Values:
-169130
-613623
+168136
+603095
 0
-206
-212689
+202
+211367
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE4JMPFER6Memorytttjt
 # Func Hash:
@@ -13552,15 +13593,15 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE4JMPFER6Memorytttjt
 0
 0
 0
-43867
-101427
-82482
+43539
+100762
+82292
 0
 0
 0
 0
 0
-57560
+57223
 0
 0
 0
@@ -13570,7 +13611,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE4JMPFER6Memorytttjt
 0
 0
 0
-101427
+100762
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE4PushER6Memoryjjj
 # Func Hash:
@@ -13580,14 +13621,14 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE4PushER6Memoryjjj
 # Counter Values:
 0
 0
-910451
-424030
-903247
+927782
+506921
+883337
 0
 0
-25
+23
 0
-424466
+507357
 # Num Value Kinds:
 1
 # ValueKind = IPVK_MemOPSize:
@@ -13595,8 +13636,8 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE4PushER6Memoryjjj
 # NumValueSites:
 1
 2
-8:903247
-4:424030
+8:883337
+4:506921
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE4PushER6Memoryjjjj
 # Func Hash:
@@ -13606,14 +13647,14 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE4PushER6Memoryjjjj
 # Counter Values:
 0
 0
-835628
-48339
-1429224
+811508
+48625
+1393246
 0
 0
-9910
+9566
 0
-49211
+49497
 # Num Value Kinds:
 1
 # ValueKind = IPVK_MemOPSize:
@@ -13621,8 +13662,8 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE4PushER6Memoryjjjj
 # NumValueSites:
 1
 2
-9:1429224
-6:48339
+9:1393246
+6:48625
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE5CALLFER6Memorytttjt
 # Func Hash:
@@ -13638,16 +13679,12 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE5CALLFER6Memorytttjt
 0
 0
 0
-280072
+276670
 0
 0
 0
-423268
-280072
-0
-0
-0
-0
+506159
+276670
 0
 0
 0
@@ -13667,7 +13704,11 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE5CALLFER6Memorytttjt
 0
 0
 0
-280072
+0
+0
+0
+0
+276670
 0
 0
 0
@@ -13688,9 +13729,9 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE5Pop16ER6Memory
 # Num Counters:
 3
 # Counter Values:
-5134341
+5383688
 0
-4405320
+4667937
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE5Pop32ER6Memory
 # Func Hash:
@@ -13698,9 +13739,9 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE5Pop32ER6Memory
 # Num Counters:
 3
 # Counter Values:
-21327454
-1
-282864
+20773228
+2
+280585
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6Push16ER6Memoryj
 # Func Hash:
@@ -13709,13 +13750,13 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6Push16ER6Memoryj
 8
 # Counter Values:
 0
-5947985
+6191544
 0
-3834015
+3921780
 0
 0
 0
-5040879
+5299020
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6Push32ER6Memoryj
 # Func Hash:
@@ -13724,13 +13765,13 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE6Push32ER6Memoryj
 8
 # Counter Values:
 0
-17668939
+17219718
 0
-10865465
-1
+10563673
+2
 0
 0
-355866
+352742
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9FetchByteEjRKN12i486DXCommon15SegmentRegisterEjR6Memory
 # Func Hash:
@@ -13739,17 +13780,17 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9FetchByteEjRKN12i486D
 12
 # Counter Values:
 0
-542289
-18387997
+542298
+18166307
 298623
-13677345
-69437
-69437
+13466769
+66933
+66933
 0
 0
 0
 0
-5448339
+5434640
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -13757,11 +13798,11 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9FetchByteEjRKN12i486D
 # NumValueSites:
 3
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:69437
+_ZNK18TownsMainRAMAccess10FetchDwordEj:66933
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:69437
+_ZNK18TownsMainRAMAccess10FetchDwordEj:66933
 8
-_ZNK18TownsMainRAMAccess9FetchByteEj:18089374
+_ZNK18TownsMainRAMAccess9FetchByteEj:17867684
 _ZNK23TownsVRAMAccessTemplateILj0EE9FetchByteEj:174891
 _ZNK16TownsOsROMAccess9FetchByteEj:77313
 _ZNK23TownsMappedSysROMAccess9FetchByteEj:36958
@@ -13776,21 +13817,21 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9FetchWordEjRKN12i486D
 # Num Counters:
 15
 # Counter Values:
-22166810
+21665336
 0
-20744631
-1381363
-1381363
-199339
-18829789
-40816
-167832
-167832
-0
-0
+20269196
+1355325
+1355325
+199337
+18367097
+40815
+164216
+164216
 0
 0
-2972506
+0
+0
+2959365
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -13798,16 +13839,16 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9FetchWordEjRKN12i486D
 # NumValueSites:
 3
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:167832
+_ZNK18TownsMainRAMAccess10FetchDwordEj:164216
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:167832
+_ZNK18TownsMainRAMAccess10FetchDwordEj:164216
 6
-_ZNK18TownsMainRAMAccess9FetchWordEj:20545292
+_ZNK18TownsMainRAMAccess9FetchWordEj:20069859
 _ZNK23TownsVRAMAccessTemplateILj0EE9FetchWordEj:197874
 _ZNK23TownsMappedSysROMAccess9FetchWordEj:851
 _ZNK20TownsSpriteRAMAccess9FetchWordEj:341
 _ZNK12MemoryAccess9FetchWordEj:259
-_ZNK18TownsFMRVRAMAccess9FetchWordEj:14
+_ZNK18TownsFMRVRAMAccess9FetchWordEj:12
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9InterruptEjR6Memoryjjb
 # Func Hash:
@@ -13819,7 +13860,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9InterruptEjR6Memoryjj
 0
 0
 0
-46815
+47101
 0
 0
 0
@@ -13840,7 +13881,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9InterruptEjR6Memoryjj
 0
 0
 0
-192734
+189432
 0
 0
 0
@@ -13854,8 +13895,8 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9InterruptEjR6Memoryjj
 0
 0
 0
-192734
-192734
+189432
+189432
 0
 0
 0
@@ -13871,9 +13912,9 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9InterruptEjR6Memoryjj
 0
 0
 0
-22564
-8535
-192734
+22538
+8537
+189432
 0
 0
 0
@@ -13887,7 +13928,7 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9InterruptEjR6Memoryjj
 # NumValueSites:
 1
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:46815
+_ZNK18TownsMainRAMAccess10FetchDwordEj:47101
 
 _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9StoreByteER6MemoryiRKN12i486DXCommon15SegmentRegisterEjh
 # Func Hash:
@@ -13896,20 +13937,20 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9StoreByteER6MemoryiRK
 16
 # Counter Values:
 0
-182686
+182720
 0
-1520882
-0
-0
-11634730
-11559581
-24744
-24744
+1488109
 0
 0
+11555579
+11451484
+24442
+24442
 0
 0
-2220679
+0
+0
+2212922
 0
 # Num Value Kinds:
 1
@@ -13918,13 +13959,13 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9StoreByteER6MemoryiRK
 # NumValueSites:
 3
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:24744
+_ZNK18TownsMainRAMAccess10FetchDwordEj:24442
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:24744
+_ZNK18TownsMainRAMAccess10FetchDwordEj:24442
 5
-_ZN18TownsMainRAMAccess9StoreByteEjh:11634730
+_ZN18TownsMainRAMAccess9StoreByteEjh:11555579
 _ZN23TownsVRAMAccessTemplateILj0EE9StoreByteEjh:733152
-_ZN18TownsWaveRAMAccess9StoreByteEjh:720251
+_ZN18TownsWaveRAMAccess9StoreByteEjh:687478
 _ZN18TownsFMRVRAMAccess9StoreByteEjh:67477
 _ZN16TownsOsROMAccess9StoreByteEjh:2
 
@@ -13935,23 +13976,23 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9StoreWordER6MemoryiRK
 19
 # Counter Values:
 0
-297817
+297849
 99203
-297817
+297849
 0
-15133957
+14822171
 0
-14248866
-0
-0
-21874
-21874
+13940558
 0
 0
+21355
+21355
 0
 0
 0
-1273548
+0
+0
+1269064
 0
 # Num Value Kinds:
 1
@@ -13960,11 +14001,11 @@ _ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE9StoreWordER6MemoryiRK
 # NumValueSites:
 3
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:21874
+_ZNK18TownsMainRAMAccess10FetchDwordEj:21355
 1
-_ZNK18TownsMainRAMAccess10FetchDwordEj:21874
+_ZNK18TownsMainRAMAccess10FetchDwordEj:21355
 4
-_ZN18TownsMainRAMAccess9StoreWordEjj:15133957
+_ZN18TownsMainRAMAccess9StoreWordEjj:14822171
 _ZN23TownsVRAMAccessTemplateILj0EE9StoreWordEjj:58639
 _ZN20TownsSpriteRAMAccess9StoreWordEjj:36244
 _ZN18TownsFMRVRAMAccess9StoreWordEjj:4320
@@ -13975,7 +14016,7 @@ _ZN20TownsSpriteRAMAccess10StoreDwordEjj
 # Num Counters:
 1
 # Counter Values:
-5705472
+5461760
 
 _ZN20TownsSpriteRAMAccess9StoreWordEjj
 # Func Hash:
@@ -14057,7 +14098,7 @@ _ZN23TownsVRAMAccessTemplateILj0EE10StoreDwordEjj
 # Num Counters:
 1
 # Counter Values:
-4381212
+3751622
 
 _ZN23TownsVRAMAccessTemplateILj0EE9StoreByteEjh
 # Func Hash:
@@ -14091,9 +14132,9 @@ _ZN5InOut3In8Ej
 11
 # Counter Values:
 0
-28349846
-25658738
-28349846
+28384596
+25696892
+28384596
 0
 0
 0
@@ -14108,23 +14149,23 @@ _ZN5InOut3In8Ej
 # NumValueSites:
 2
 1
-_ZN10kairotowns12TownsMachine4Impl9pure_readEPvjj:28349846
+_ZN10kairotowns12TownsMachine4Impl9pure_readEPvjj:28384596
 17
-_ZN9TownsCRTC10IOReadByteEj:18523504
-_ZN10TownsCDROM10IOReadByteEj:5836870
-_ZN8TownsFDC10IOReadByteEj:2101186
-_ZN9TownsSCSI10IOReadByteEj:696613
-_ZN10TownsSound10IOReadByteEj:319016
-_ZThn96_N13FMTownsCommon10IOReadByteEj:296817
-_ZN8TownsRTC10IOReadByteEj:155165
-_ZN13TownsGamePort10IOReadByteEj:152009
-_ZN19TownsPhysicalMemory10IOReadByteEj:137850
-_ZN8TownsPIC10IOReadByteEj:90852
-_ZN10TownsTimer10IOReadByteEj:27252
+_ZN9TownsCRTC10IOReadByteEj:18462975
+_ZN10TownsCDROM10IOReadByteEj:5837680
+_ZN8TownsFDC10IOReadByteEj:2100400
+_ZN9TownsSCSI10IOReadByteEj:695765
+_ZN10TownsSound10IOReadByteEj:313593
+_ZThn96_N13FMTownsCommon10IOReadByteEj:294094
+_ZN8TownsRTC10IOReadByteEj:262761
+_ZN13TownsGamePort10IOReadByteEj:150731
+_ZN19TownsPhysicalMemory10IOReadByteEj:136902
+_ZN8TownsPIC10IOReadByteEj:90052
+_ZN10TownsTimer10IOReadByteEj:26947
 _ZN9TownsDMAC10IOReadByteEj:11329
 _ZN11TownsSprite10IOReadByteEj:1099
-_ZN15TownsHighResPCM10IOReadByteEj:179
-_ZN6Device10IOReadByteEj:51
+_ZN15TownsHighResPCM10IOReadByteEj:166
+_ZN6Device10IOReadByteEj:48
 _ZN15TownsSerialPort10IOReadByteEj:34
 _ZN13TownsKeyboard10IOReadByteEj:20
 # ValueKind = IPVK_MemOPSize:
@@ -14140,9 +14181,9 @@ _ZN5InOut4In16Ej
 11
 # Counter Values:
 0
-546475
+546361
 5
-546475
+546361
 0
 0
 0
@@ -14157,9 +14198,9 @@ _ZN5InOut4In16Ej
 # NumValueSites:
 2
 1
-_ZN10kairotowns12TownsMachine4Impl9pure_readEPvjj:546475
+_ZN10kairotowns12TownsMachine4Impl9pure_readEPvjj:546361
 3
-_ZN6Device10IOReadWordEj:546470
+_ZN6Device10IOReadWordEj:546356
 _ZThn96_N13FMTownsCommon10IOReadWordEj:4
 _ZN19TownsPhysicalMemory10IOReadWordEj:1
 # ValueKind = IPVK_MemOPSize:
@@ -14175,7 +14216,7 @@ _ZN5InOut4Out8Ejj
 9
 # Counter Values:
 0
-6068781
+6455010
 0
 0
 0
@@ -14190,19 +14231,19 @@ _ZN5InOut4Out8Ejj
 # NumValueSites:
 1
 17
-_ZN6Device11IOWriteByteEjj:3740734
-_ZN8TownsRTC11IOWriteByteEjj:465276
-_ZN8TownsPIC11IOWriteByteEjj:447028
-_ZThn96_N13FMTownsCommon11IOWriteByteEjj:397766
-_ZN10TownsSound11IOWriteByteEjj:342196
-_ZN9TownsCRTC11IOWriteByteEjj:218253
-_ZN19TownsPhysicalMemory11IOWriteByteEjj:204037
-_ZN13TownsGamePort11IOWriteByteEjj:135806
+_ZN6Device11IOWriteByteEjj:3826195
+_ZN8TownsRTC11IOWriteByteEjj:787926
+_ZN8TownsPIC11IOWriteByteEjj:439997
+_ZThn96_N13FMTownsCommon11IOWriteByteEjj:394071
+_ZN10TownsSound11IOWriteByteEjj:334507
+_ZN9TownsCRTC11IOWriteByteEjj:217860
+_ZN19TownsPhysicalMemory11IOWriteByteEjj:202419
+_ZN13TownsGamePort11IOWriteByteEjj:134984
 _ZN10TownsCDROM11IOWriteByteEjj:33953
 _ZN9TownsDMAC11IOWriteByteEjj:32598
-_ZN10TownsTimer11IOWriteByteEjj:27271
-_ZN11TownsSprite11IOWriteByteEjj:21227
-_ZN15TownsHighResPCM11IOWriteByteEjj:1382
+_ZN10TownsTimer11IOWriteByteEjj:26966
+_ZN11TownsSprite11IOWriteByteEjj:20975
+_ZN15TownsHighResPCM11IOWriteByteEjj:1305
 _ZN8TownsFDC11IOWriteByteEjj:1116
 _ZN15TownsSerialPort11IOWriteByteEjj:76
 _ZN9TownsSCSI11IOWriteByteEjj:52
@@ -14220,7 +14261,7 @@ _ZN5InOut5Out16Ejj
 9
 # Counter Values:
 0
-7986
+7763
 0
 0
 0
@@ -14235,8 +14276,8 @@ _ZN5InOut5Out16Ejj
 # NumValueSites:
 1
 3
-_ZN6Device11IOWriteWordEjj:6531
-_ZN9TownsCRTC11IOWriteWordEjj:1443
+_ZN6Device11IOWriteWordEjj:6522
+_ZN9TownsCRTC11IOWriteWordEjj:1229
 _ZN19TownsPhysicalMemory11IOWriteWordEjj:12
 # ValueKind = IPVK_MemOPSize:
 1
@@ -14251,7 +14292,7 @@ _ZN5InOut5Out32Ejj
 9
 # Counter Values:
 0
-66332
+66323
 0
 0
 0
@@ -14267,7 +14308,7 @@ _ZN5InOut5Out32Ejj
 1
 2
 _ZN9TownsCRTC12IOWriteDwordEjj:66112
-_ZN6Device12IOWriteDwordEjj:220
+_ZN6Device12IOWriteDwordEjj:211
 # ValueKind = IPVK_MemOPSize:
 1
 # NumValueSites:
@@ -14416,14 +14457,14 @@ _ZN5i82536TickInEj
 # Num Counters:
 10
 # Counter Values:
-75740127
+75801630
 0
 0
 0
 0
 0
 0
-25246709
+25267210
 0
 0
 # Num Value Kinds:
@@ -14445,11 +14486,10 @@ _ZN5i82537PowerOnEv
 
 _ZN5kairo12StartupTyper5frameIN10kairotowns12TownsMachineEEEbRT_RNSt6__ndk112basic_stringIcNS6_11char_traitsIcEENS6_9allocatorIcEEEE
 # Func Hash:
-1068891784677318788
+657178620639569494
 # Num Counters:
-27
+32
 # Counter Values:
-0
 16200
 0
 0
@@ -14476,12 +14516,27 @@ _ZN5kairo12StartupTyper5frameIN10kairotowns12TownsMachineEEEbRT_RNSt6__ndk112bas
 0
 0
 0
+0
+0
+0
+0
+0
+0
+
+_ZN5kairo12StartupTyper5startENSt6__ndk16vectorINS_11StartupStepENS1_9allocatorIS3_EEEE
+# Func Hash:
+146835646621254984
+# Num Counters:
+2
+# Counter Values:
+0
+3
 
 _ZN5kairo12StartupTyper5startERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE
 # Func Hash:
-118056774895967773
+878603426588061006
 # Num Counters:
-13
+17
 # Counter Values:
 0
 0
@@ -14490,7 +14545,11 @@ _ZN5kairo12StartupTyper5startERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEEN
 0
 0
 0
+0
 3
+0
+0
+0
 0
 0
 3
@@ -14503,7 +14562,7 @@ _ZN6Device10IOReadByteEj
 # Num Counters:
 1
 # Counter Values:
-51
+48
 
 _ZN6Device10IOReadWordEj
 # Func Hash:
@@ -14511,7 +14570,7 @@ _ZN6Device10IOReadWordEj
 # Num Counters:
 1
 # Counter Values:
-546475
+546361
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -14519,11 +14578,11 @@ _ZN6Device10IOReadWordEj
 # NumValueSites:
 2
 3
-_ZN9TownsCRTC10IOReadByteEj:546470
+_ZN9TownsCRTC10IOReadByteEj:546356
 _ZThn96_N13FMTownsCommon10IOReadByteEj:4
 _ZN19TownsPhysicalMemory10IOReadByteEj:1
 3
-_ZN9TownsCRTC10IOReadByteEj:546470
+_ZN9TownsCRTC10IOReadByteEj:546356
 _ZThn96_N13FMTownsCommon10IOReadByteEj:4
 _ZN19TownsPhysicalMemory10IOReadByteEj:1
 
@@ -14533,7 +14592,7 @@ _ZN6Device11IOWriteByteEjj
 # Num Counters:
 1
 # Counter Values:
-3740734
+3826195
 
 _ZN6Device11IOWriteWordEjj
 # Func Hash:
@@ -14541,7 +14600,7 @@ _ZN6Device11IOWriteWordEjj
 # Num Counters:
 1
 # Counter Values:
-6531
+6522
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -14550,10 +14609,10 @@ _ZN6Device11IOWriteWordEjj
 2
 2
 _ZN9TownsDMAC11IOWriteByteEjj:6311
-_ZN15TownsHighResPCM11IOWriteByteEjj:220
+_ZN15TownsHighResPCM11IOWriteByteEjj:211
 2
 _ZN9TownsDMAC11IOWriteByteEjj:6311
-_ZN15TownsHighResPCM11IOWriteByteEjj:220
+_ZN15TownsHighResPCM11IOWriteByteEjj:211
 
 _ZN6Device12IOWriteDwordEjj
 # Func Hash:
@@ -14561,7 +14620,7 @@ _ZN6Device12IOWriteDwordEjj
 # Num Counters:
 1
 # Counter Values:
-220
+211
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -14569,13 +14628,13 @@ _ZN6Device12IOWriteDwordEjj
 # NumValueSites:
 4
 1
-_ZN15TownsHighResPCM11IOWriteByteEjj:220
+_ZN15TownsHighResPCM11IOWriteByteEjj:211
 1
-_ZN15TownsHighResPCM11IOWriteByteEjj:220
+_ZN15TownsHighResPCM11IOWriteByteEjj:211
 1
-_ZN15TownsHighResPCM11IOWriteByteEjj:220
+_ZN15TownsHighResPCM11IOWriteByteEjj:211
 1
-_ZN15TownsHighResPCM11IOWriteByteEjj:220
+_ZN15TownsHighResPCM11IOWriteByteEjj:211
 
 _ZN6Device5ResetEv
 # Func Hash:
@@ -14622,8 +14681,8 @@ _ZN6Memory12RemoveAccessEjj
 # Counter Values:
 0
 0
-2967527
-43689
+2957031
+43361
 
 _ZN6Memory7CleanUpEv
 # Func Hash:
@@ -14642,8 +14701,8 @@ _ZN6Memory9AddAccessEP12MemoryAccessjj
 # Counter Values:
 0
 0
-3528021
-174746
+3501781
+173434
 0
 0
 0
@@ -14682,8 +14741,8 @@ _ZN6RF5C6810SetIRQBankEj
 # Num Counters:
 2
 # Counter Values:
-219
-46
+214
+41
 
 _ZN6RF5C6813WriteRegisterEhhm
 # Func Hash:
@@ -14692,7 +14751,7 @@ _ZN6RF5C6813WriteRegisterEhhm
 6
 # Counter Values:
 0
-43015
+42056
 0
 0
 0
@@ -14704,7 +14763,7 @@ _ZN6RF5C6816WriteIRQBankMaskEh
 # Num Counters:
 1
 # Counter Values:
-91
+89
 
 _ZN6RF5C6819ReallyWriteRegisterEjjm
 # Func Hash:
@@ -14712,23 +14771,23 @@ _ZN6RF5C6819ReallyWriteRegisterEjjm
 # Num Counters:
 17
 # Counter Values:
-288
-1128
-148
+272
+1064
+140
 0
-43015
-188
-429
-45
-188
+42056
 180
-16265
-220
-220
-418
-23053
-2227
-23233
+405
+40
+180
+172
+15833
+208
+208
+394
+22613
+2217
+22784
 
 _ZN6RF5C6820AddWaveForNumSamplesEPhjim
 # Func Hash:
@@ -14737,46 +14796,46 @@ _ZN6RF5C6820AddWaveForNumSamplesEPhjim
 41
 # Counter Values:
 0
-7734224
-1858996
-1858996
+7400759
+1785531
+1785531
 0
 0
 0
-5876299
-3242232
-5875228
+5616302
+3108168
+5615228
 0
-1071
-3242232
-3242232
-0
-0
-849935
-185
+1074
+3108168
+3108168
 0
 0
-1710586
-1710586
-5875228
-767
-1071
-0
-14720
-1531646
-14720
+805238
+184
 0
 0
-12179
-14720
-8111
-1840
-1531648
-1316705
-1316705
+1639855
+1639855
+5615228
+763
+1074
+0
+14112
+1468313
+14112
 0
 0
-3243262
+11703
+14112
+7802
+1764
+1468315
+1269823
+1269823
+0
+0
+3109155
 
 _ZN6RF5C685ClearEv
 # Func Hash:
@@ -14820,9 +14879,9 @@ _ZN6VMBase22ScheduleDeviceCallBackER6Devicex
 # Num Counters:
 3
 # Counter Values:
-41775
-35918
-12378
+41491
+35634
+12270
 
 _ZN6VMBase24UnscheduleDeviceCallBackER6Device
 # Func Hash:
@@ -14830,9 +14889,9 @@ _ZN6VMBase24UnscheduleDeviceCallBackER6Device
 # Num Counters:
 3
 # Counter Values:
-37437
-35915
-10684
+37153
+35631
+10578
 
 _ZN6VMBase7Device0C2EPS_
 # Func Hash:
@@ -14894,15 +14953,15 @@ _ZN6YM261213CheckToneDoneEj
 10
 # Counter Values:
 8
-756
-124
-31
-66
-31
-690
-22542
-21786
-31
+726
+100
+25
+60
+25
+666
+22086
+21360
+25
 
 _ZN6YM261213UpdateReleaseERKNS_7ChannelERNS_4SlotE
 # Func Hash:
@@ -14910,7 +14969,7 @@ _ZN6YM261213UpdateReleaseERKNS_7ChannelERNS_4SlotE
 # Num Counters:
 1
 # Counter Values:
-500
+468
 
 _ZN6YM261213WriteRegisterEjjjm
 # Func Hash:
@@ -14918,9 +14977,9 @@ _ZN6YM261213WriteRegisterEjjjm
 # Num Counters:
 3
 # Counter Values:
-145634
-149533
-3899
+142988
+146169
+3181
 
 _ZN6YM261218UpdateSlotEnvelopeEjj
 # Func Hash:
@@ -14928,7 +14987,7 @@ _ZN6YM261218UpdateSlotEnvelopeEjj
 # Num Counters:
 6
 # Counter Values:
-96
+64
 0
 0
 0
@@ -14941,7 +15000,7 @@ _ZN6YM261219MakeWaveForNSamplesEPhjPjym
 # Num Counters:
 4
 # Counter Values:
-56
+40
 248
 0
 0
@@ -14952,9 +15011,9 @@ _ZN6YM261219MakeWaveForNSamplesEPhym
 # Num Counters:
 3
 # Counter Values:
-1824
-725
-304
+1728
+701
+288
 
 _ZN6YM261219ReallyWriteRegisterEjjjm
 # Func Hash:
@@ -14965,8 +15024,8 @@ _ZN6YM261219ReallyWriteRegisterEjjjm
 19
 0
 0
-149525
-3409
+146169
+2725
 0
 0
 0
@@ -14974,34 +15033,34 @@ _ZN6YM261219ReallyWriteRegisterEjjjm
 0
 0
 0
-145614
-482
+142968
+456
 0
-300
-300
-96
-431
-69
-276
-431
-300
-1
-69
-0
-72
-24
-0
-478
-3
-3
-137333
-17275
-477
-564
-0
-63
+260
+260
 56
-72
+279
+59
+236
+279
+260
+1
+59
+0
+48
+16
+0
+452
+3
+3
+134841
+17122
+381
+532
+0
+53
+48
+48
 288
 120
 0
@@ -15012,7 +15071,7 @@ _ZN6YM261219ReallyWriteRegisterEjjjm
 0
 0
 0
-357
+261
 # Num Value Kinds:
 1
 # ValueKind = IPVK_MemOPSize:
@@ -15065,12 +15124,12 @@ _ZN6YM261221UpdatePhase12StepSlotERNS_7ChannelE
 # Num Counters:
 6
 # Counter Values:
-1724
-1642
-431
+1116
+1034
+279
 1
 0
-1642
+1034
 
 _ZN6YM261221WriteRegisterScheduleEjjjm
 # Func Hash:
@@ -15079,7 +15138,7 @@ _ZN6YM261221WriteRegisterScheduleEjjjm
 8
 # Counter Values:
 0
-3874
+3156
 25
 22
 25
@@ -15108,8 +15167,8 @@ _ZN6YM261224CheckToneDoneAllChannelsEv
 # Num Counters:
 2
 # Counter Values:
-22542
-3757
+22086
+3681
 
 _ZN6YM261227MakeWaveForNSamplesTemplateINS_10WithoutLFOENS_13WithSchedulerE10WordOp_SetEExPhjPjym
 # Func Hash:
@@ -15119,17 +15178,17 @@ _ZN6YM261227MakeWaveForNSamplesTemplateINS_10WithoutLFOENS_13WithSchedulerE10Wor
 # Counter Values:
 0
 1166004
-48554
+48608
 0
-1170
+1172
 0
 0
 1488
 411012
-689
+687
 1859
 0
-47435
+47488
 248
 411027
 0
@@ -15141,25 +15200,25 @@ _ZN6YM261227MakeWaveForNSamplesTemplateINS_7WithLFOENS_13WithSchedulerE10WordOp_
 # Num Counters:
 21
 # Counter Values:
-112896
+70560
 0
-112896
-0
-0
-112896
-0
-47622
-888
+70560
 0
 0
-336
-56448
-1144
-2032
+70560
 0
-46765
-56
-56472
+30125
+570
+0
+0
+240
+35280
+752
+1322
+0
+29575
+40
+35300
 0
 0
 
@@ -15169,15 +15228,15 @@ _ZN6YM26123RunEy
 # Num Counters:
 11
 # Counter Values:
-25246709
+25267210
 3
-25246709
-5882789
-15530867
-137843
-19138
-137843
-19138
+25267210
+5772375
+15415880
+135266
+18978
+135266
+18978
 0
 0
 
@@ -15187,18 +15246,18 @@ _ZN6YM26125KeyOnEjj
 # Num Counters:
 12
 # Counter Values:
-252
-204
-146
-252
+212
+172
+106
+212
 0
-48
-63
-63
-63
+40
+53
+53
+53
 2
 0
-146
+106
 
 _ZN6YM26125ResetEv
 # Func Hash:
@@ -15233,10 +15292,10 @@ _ZN6YM26126KeyOffEjj
 # Num Counters:
 4
 # Counter Values:
-212
-212
-56
-53
+180
+180
+48
+45
 
 _ZN6YM26127Channel5ClearEv
 # Func Hash:
@@ -15296,7 +15355,7 @@ _ZN6YM2612D2Ev
 # Num Counters:
 5
 # Counter Values:
-8
+0
 0
 3
 3
@@ -15730,15 +15789,15 @@ _ZN8TownsFDC10IOReadByteEj
 # Num Counters:
 13
 # Counter Values:
-2101186
+2100400
 0
 0
 0
 4
 3
-2101179
+2100393
 0
-2100972
+2100186
 3
 0
 0
@@ -15843,17 +15902,17 @@ _ZN8TownsPIC10IOReadByteEj
 # Num Counters:
 11
 # Counter Values:
-90852
-72655
-16719
-915
+90052
+71988
+16592
+909
 563
-16719
-72655
+16592
+71988
 0
 0
 0
-54118
+53644
 
 _ZN8TownsPIC10ProcessIRQER12i486DXCommonR6Memory
 # Func Hash:
@@ -15861,17 +15920,17 @@ _ZN8TownsPIC10ProcessIRQER12i486DXCommonR6Memory
 # Num Counters:
 12
 # Counter Values:
-173574
-451092948
-8403512
-194489
-191133
-191133
+170303
+447089398
+10351331
+191155
+187865
+187865
 0
-164264
-173574
+161301
+170303
 0
-164264
+161301
 0
 
 _ZN8TownsPIC11IOWriteByteEjj
@@ -15880,16 +15939,16 @@ _ZN8TownsPIC11IOWriteByteEjj
 # Num Counters:
 25
 # Counter Values:
-447028
-263794
-180989
+439997
+259859
+177899
 18
 18
 0
 0
 0
 0
-1241
+1235
 968
 0
 0
@@ -15904,7 +15963,7 @@ _ZN8TownsPIC11IOWriteByteEjj
 0
 0
 980
-1253
+1247
 
 _ZN8TownsPIC22SetInterruptRequestBitEjb
 # Func Hash:
@@ -15912,9 +15971,9 @@ _ZN8TownsPIC22SetInterruptRequestBitEjb
 # Num Counters:
 3
 # Counter Values:
-3169096
-72670479
-382166
+3424972
+72475431
+376362
 
 _ZN8TownsPIC5ResetEv
 # Func Hash:
@@ -15941,7 +16000,7 @@ _ZN8TownsPIC6I8259A7FireIRQER12i486DXCommonR6Memoryj
 # Num Counters:
 5
 # Counter Values:
-191133
+187865
 0
 0
 0
@@ -15953,7 +16012,7 @@ _ZN8TownsPIC6I8259A7FireIRQER12i486DXCommonR6Memoryj
 # NumValueSites:
 1
 1
-_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RedirectInterruptEjR6Memoryjjb:191133
+_ZN19i486DXFidelityLayerI30i486DXDefaultFidelityOperationE17RedirectInterruptEjR6Memoryjjb:187865
 
 _ZN8TownsPIC6I8259A9WriteReg0Eh
 # Func Hash:
@@ -15963,21 +16022,21 @@ _ZN8TownsPIC6I8259A9WriteReg0Eh
 # Counter Values:
 12
 0
-2297343
+2255912
 0
-2106210
-355397
-89374
-0
-0
+2068047
+349166
+88580
 0
 0
 0
 0
-355397
 0
 0
-2106210
+349166
+0
+0
+2068047
 0
 
 _ZN8TownsPIC7PowerOnEv
@@ -16004,28 +16063,28 @@ _ZN8TownsRTC10IOReadByteEj
 # Num Counters:
 28
 # Counter Values:
-155165
-155165
+262761
+262761
 0
 0
-154757
-153017
-372
-365
-365
-282
-279
-11
-11
-11
-11
-11
-11
-11
+262353
+261144
+368
+361
+363
+13
+13
+13
+13
+13
+13
+13
+13
+13
 0
-279
+13
 0
-51
+81
 0
 0
 0
@@ -16039,15 +16098,15 @@ _ZN8TownsRTC11IOWriteByteEjj
 # Num Counters:
 10
 # Counter Values:
-465276
-387729
-77547
-77545
-232639
-77545
-77545
+787926
+656604
+131322
+131320
+393964
+131320
+131320
 1
-77545
+131320
 0
 
 _ZN8TownsRTC5ResetEv
@@ -16073,6 +16132,216 @@ _ZN8TownsRTCC2EP13FMTownsCommon
 1
 # Counter Values:
 3
+
+_ZN9DiscImage10BinarySizeERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+# Func Hash:
+752756512842941730
+# Num Counters:
+12
+# Counter Values:
+0
+0
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+2
+0
+0
+
+_ZN9DiscImage10OpenBinaryERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+# Func Hash:
+35819532363997038
+# Num Counters:
+37
+# Counter Values:
+0
+0
+5859
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+6
+0
+0
+0
+0
+0
+0
+
+_ZN9DiscImage13OpenCUEStreamERNSt6__ndk113basic_istreamIcNS0_11char_traitsIcEEEE
+# Func Hash:
+723228579520451991
+# Num Counters:
+105
+# Counter Values:
+186
+0
+0
+0
+0
+186
+186
+186
+0
+183
+183
+3
+183
+0
+3
+89
+89
+2
+0
+0
+0
+0
+0
+0
+3
+2
+89
+0
+89
+3
+3
+89
+3
+0
+0
+0
+0
+0
+2
+0
+89
+0
+86
+3
+3
+18
+71
+3
+2
+0
+89
+3
+3
+0
+0
+86
+89
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+183
+89
+86
+3
+89
+89
+2
+0
+0
+0
+# Num Value Kinds:
+2
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+2
+1
+** External Symbol **:186
+0
+# ValueKind = IPVK_MemOPSize:
+1
+# NumValueSites:
+1
+1
+5:86
 
 _ZN9DiscImage18OpenCUEPostProcessEv
 # Func Hash:
@@ -16303,10 +16572,11 @@ _ZN9DiscImage49TryAnalyzeTracksWithProbablyCorrectInterpretationEv
 
 _ZN9DiscImage4OpenERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
 # Func Hash:
-653593442302675307
+419184316226689613
 # Num Counters:
-154
+161
 # Counter Values:
+0
 0
 0
 0
@@ -16427,10 +16697,16 @@ _ZN9DiscImage4OpenERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocat
 0
 0
 0
+0
+0
+0
+0
 3
 3
 3
 3
+0
+0
 0
 0
 0
@@ -16466,9 +16742,10 @@ _ZN9DiscImage4OpenERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocat
 # ValueKind = IPVK_MemOPSize:
 1
 # NumValueSites:
-12
+13
 1
 4:3
+0
 0
 0
 0
@@ -16483,9 +16760,9 @@ _ZN9DiscImage4OpenERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocat
 
 _ZN9DiscImage7CleanUpEv
 # Func Hash:
-927205941557500827
+369518218942219044
 # Num Counters:
-8
+10
 # Counter Values:
 0
 0
@@ -16495,139 +16772,30 @@ _ZN9DiscImage7CleanUpEv
 0
 0
 27
-
-_ZN9DiscImage7OpenCUEERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
-# Func Hash:
-414647040480231131
-# Num Counters:
-111
-# Counter Values:
-186
-0
-0
-0
-0
-186
-186
-186
-0
-183
-183
-3
-183
-3
-0
-3
-89
-89
-2
-0
-0
-0
-0
-0
-0
-3
-3
-3
-2
-89
-0
-89
-3
-3
-89
-3
-0
-0
-0
-0
-0
-2
-0
-89
-0
-86
-3
-3
-18
-71
-3
-2
-0
-89
-3
-3
-0
-0
-86
-89
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-183
-89
-86
-3
-89
-89
-2
-0
 0
 0
 # Num Value Kinds:
-2
+1
 # ValueKind = IPVK_IndirectCallTarget:
 0
 # NumValueSites:
-2
 1
-** External Symbol **:186
 0
-# ValueKind = IPVK_MemOPSize:
-1
-# NumValueSites:
-1
-1
-5:86
+
+_ZN9DiscImage7OpenCUEERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+# Func Hash:
+948827210301426182
+# Num Counters:
+8
+# Counter Values:
+3
+3
+3
+3
+3
+0
+0
+0
 
 _ZN9DiscImage8BCDToBinEj
 # Func Hash:
@@ -16673,9 +16841,9 @@ _ZN9DiscImage8StrToMSFERNS_9MinSecFrmEPKc
 
 _ZN9DiscImageC2Ev
 # Func Hash:
-414921810394990440
+315285102080727676
 # Num Counters:
-7
+9
 # Counter Values:
 24
 0
@@ -16683,6 +16851,37 @@ _ZN9DiscImageC2Ev
 0
 0
 0
+0
+0
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
+0
+
+_ZN9DiscImageD2Ev
+# Func Hash:
+903233819986685747
+# Num Counters:
+8
+# Counter Values:
+0
+92
+24
+0
+0
+3
+3
+0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+1
 0
 
 _ZN9DiskDrive11SetTrackRegEi
@@ -16828,17 +17027,17 @@ _ZN9TownsCRTC10IOReadByteEj
 0
 0
 0
-19616444
+19555687
 0
 0
-589926
+587308
 0
-546470
+546356
 256
 0
 271
 256
-17932787
+17874876
 0
 0
 0
@@ -16848,7 +17047,7 @@ _ZN9TownsCRTC10IOReadByteEj
 0
 0
 0
-546463
+546349
 10
 0
 0
@@ -16865,20 +17064,20 @@ _ZN9TownsCRTC10IOReadByteEj
 0
 0
 0
-17932785
-1846282
-111192
-2407
-111192
-111192
-2407
-2407
+17874874
+1785610
+111207
+2461
+111207
+111207
+2461
+2461
 0
 0
 0
 0
 0
-156021
+155498
 0
 0
 
@@ -16895,7 +17094,7 @@ _ZN9TownsCRTC11IOWriteByteEjj
 3
 3
 3
-218253
+217860
 24
 32
 77
@@ -16903,16 +17102,16 @@ _ZN9TownsCRTC11IOWriteByteEjj
 0
 0
 0
-2542
+2544
 39
-68654
-2542
+68656
+2544
 77
-68910
+68912
 0
 0
-67589
-7604
+67375
+7418
 0
 0
 0
@@ -16945,7 +17144,7 @@ _ZN9TownsCRTC11IOWriteByteEjj
 1
 8
 0
-158
+157
 0
 0
 5
@@ -17093,7 +17292,7 @@ _ZN9TownsCRTC11IOWriteWordEjj
 # Counter Values:
 0
 0
-1443
+1229
 0
 0
 0
@@ -17101,7 +17300,7 @@ _ZN9TownsCRTC11IOWriteWordEjj
 0
 0
 0
-1438
+1224
 0
 5
 0
@@ -17474,10 +17673,10 @@ _ZN9TownsCRTC13AnalogPalette6SetRedEhj
 5
 # Counter Values:
 66048
-68654
+68656
 66048
 112
-2494
+2496
 
 _ZN9TownsCRTC13AnalogPalette7SetBlueEhj
 # Func Hash:
@@ -17486,10 +17685,10 @@ _ZN9TownsCRTC13AnalogPalette7SetBlueEhj
 5
 # Counter Values:
 66048
-68654
+68656
 66048
 112
-2494
+2496
 
 _ZN9TownsCRTC13AnalogPalette8SetGreenEhj
 # Func Hash:
@@ -17498,10 +17697,10 @@ _ZN9TownsCRTC13AnalogPalette8SetGreenEhj
 5
 # Counter Values:
 66048
-68654
+68656
 66048
 112
-2494
+2496
 
 _ZN9TownsCRTC14TurnOnVSYNCIRQEv
 # Func Hash:
@@ -17509,7 +17708,7 @@ _ZN9TownsCRTC14TurnOnVSYNCIRQEv
 # Num Counters:
 1
 # Counter Values:
-16644
+16645
 
 _ZN9TownsCRTC15ScreenModeCacheC2Ev
 # Func Hash:
@@ -17525,7 +17724,7 @@ _ZN9TownsCRTC15TurnOffVSYNCIRQEv
 # Num Counters:
 1
 # Counter Values:
-16644
+16645
 
 _ZN9TownsCRTC20UpdateSpriteHardwareEv
 # Func Hash:
@@ -17534,11 +17733,11 @@ _ZN9TownsCRTC20UpdateSpriteHardwareEv
 7
 # Counter Values:
 0
-1586
+1372
 0
-1546
-1129
-1129
+1332
+915
+915
 0
 
 _ZN9TownsCRTC28MEMIOWriteFMRVRAMDisplayModeEh
@@ -17731,30 +17930,30 @@ _ZN9TownsDMAC5State7Channel14MemoryToDeviceEP13FMTownsCommonj
 # Counter Values:
 0
 0
-154779
-154779
-154779
+142664
+142664
+142664
 0
 0
-88
-88
+80
+80
 0
 0
-88
-88
+80
+80
 0
-88
-0
-0
-88
-75
+80
 0
 0
+80
+69
 0
 0
 0
-88
-88
+0
+0
+80
+80
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -17763,9 +17962,9 @@ _ZN9TownsDMAC5State7Channel14MemoryToDeviceEP13FMTownsCommonj
 3
 0
 1
-_ZNK12MemoryAccess12FetchByteDMAEj:154779
+_ZNK12MemoryAccess12FetchByteDMAEj:142664
 1
-_ZNK12MemoryAccess12FetchByteDMAEj:154779
+_ZNK12MemoryAccess12FetchByteDMAEj:142664
 
 _ZN9TownsDMAC7PowerOnEv
 # Func Hash:
@@ -17800,7 +17999,7 @@ _ZN9TownsMIDI20TimerPollingInternalEm
 # Num Counters:
 5
 # Counter Values:
-25246709
+25267210
 0
 0
 0
@@ -17858,34 +18057,18 @@ _ZN9TownsSCSI10IOReadByteEj
 # Num Counters:
 12
 # Counter Values:
-696613
-696613
+695765
+695765
 0
-696611
+695763
 2
 0
-696611
-696611
-696611
-696611
-696611
-696611
-
-_ZN9TownsSCSI10SCSIDeviceD2Ev
-# Func Hash:
-5832819194261385
-# Num Counters:
-9
-# Counter Values:
-0
-0
-0
-21
-0
-0
-0
-0
-0
+695763
+695763
+695763
+695763
+695763
+695763
 
 _ZN9TownsSCSI11IOWriteByteEjj
 # Func Hash:
@@ -17975,6 +18158,22 @@ _ZN9TownsSCSI5State5ResetEv
 42
 6
 
+_ZN9TownsSCSI5StateC2Ev
+# Func Hash:
+599005163368745645
+# Num Counters:
+9
+# Counter Values:
+21
+3
+0
+0
+0
+0
+0
+0
+0
+
 _ZN9TownsSCSI7PowerOnEv
 # Func Hash:
 742261418966908927
@@ -17985,14 +18184,12 @@ _ZN9TownsSCSI7PowerOnEv
 
 _ZN9TownsSCSIC2EP13FMTownsCommon
 # Func Hash:
-331779889499070054
+414921812799879691
 # Num Counters:
-9
+7
 # Counter Values:
-21
 768
 3
-0
 0
 0
 0
@@ -18014,10 +18211,10 @@ _ZNK10TownsTimer16UpdatePICRequestEv
 # Num Counters:
 4
 # Counter Values:
-25246377
-24236542
+25266854
+23987797
 0
-23897294
+23648549
 
 _ZNK10kairotowns12TownsMachine4Impl16next_sync_changeEm
 # Func Hash:
@@ -18025,13 +18222,13 @@ _ZNK10kairotowns12TownsMachine4Impl16next_sync_changeEm
 # Num Counters:
 7
 # Counter Values:
-4571612
-1142903
-1136389
-267213
-865619
-6514
-4282222
+4561104
+1140276
+1133657
+266705
+863337
+6619
+4271856
 
 _ZNK10kairotowns12TownsMachine7profileEv
 # Func Hash:
@@ -18048,12 +18245,12 @@ _ZNK11TownsRender18KairoVRAMBytesReadEm
 # Num Counters:
 6
 # Counter Values:
-31838
-26424
-17200
-17200
-1281
-1281
+31840
+26240
+17199
+17199
+1279
+1279
 
 _ZNK11TownsSprite6RenderEPhPKh
 # Func Hash:
@@ -18062,37 +18259,37 @@ _ZNK11TownsSprite6RenderEPhPKh
 34
 # Counter Values:
 1501696
-489035008
+482855424
 0
 0
-382361567
-258439391
-0
-0
-0
+377032244
+255029855
 0
 0
 0
 0
-1819648
-45507072
-1459456
+0
+0
+0
+1824768
+44040192
+1459968
 857600
 728832
 213248
 15637248
 93856
-30564688
-923925
-2777685
+30178464
+912368
+2736382
 5866
-1910293
-7275
-3637
-431082
-431082
-393277776
-392108812
+1886154
+7184
+3591
+426212
+426212
+387174272
+386034267
 0
 0
 
@@ -18137,7 +18334,7 @@ _ZNK12MemoryAccess12FetchByteDMAEj
 # Num Counters:
 1
 # Counter Values:
-309558
+285328
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -18145,7 +18342,7 @@ _ZNK12MemoryAccess12FetchByteDMAEj
 # NumValueSites:
 1
 1
-_ZNK18TownsMainRAMAccess9FetchByteEj:309558
+_ZNK18TownsMainRAMAccess9FetchByteEj:285328
 
 _ZNK12MemoryAccess9FetchWordEj
 # Func Hash:
@@ -18153,7 +18350,7 @@ _ZNK12MemoryAccess9FetchWordEj
 # Num Counters:
 1
 # Counter Values:
-273
+271
 # Num Value Kinds:
 1
 # ValueKind = IPVK_IndirectCallTarget:
@@ -18162,10 +18359,10 @@ _ZNK12MemoryAccess9FetchWordEj
 2
 2
 _ZNK17TownsSysROMAccess9FetchByteEj:259
-_ZNK18TownsFMRVRAMAccess9FetchByteEj:14
+_ZNK18TownsFMRVRAMAccess9FetchByteEj:12
 2
 _ZNK17TownsSysROMAccess9FetchByteEj:259
-_ZNK18TownsFMRVRAMAccess9FetchByteEj:14
+_ZNK18TownsFMRVRAMAccess9FetchByteEj:12
 
 _ZNK12i486DXCommon13REPEorNECheckEj
 # Func Hash:
@@ -18173,8 +18370,8 @@ _ZNK12i486DXCommon13REPEorNECheckEj
 # Num Counters:
 3
 # Counter Values:
-5172687
-61044
+5165011
+53368
 5110703
 
 _ZNK12i486DXCommon29DescriptorTableToOperandValueERKNS_21SystemAddressRegisterEi
@@ -18183,7 +18380,7 @@ _ZNK12i486DXCommon29DescriptorTableToOperandValueERKNS_21SystemAddressRegisterEi
 # Num Counters:
 2
 # Counter Values:
-130679
+129695
 0
 
 _ZNK12i486DXCommon5State15RecalculateModeEv
@@ -18192,9 +18389,9 @@ _ZNK12i486DXCommon5State15RecalculateModeEv
 # Num Counters:
 3
 # Counter Values:
-823390
-823390
-122037
+811211
+811211
+121046
 
 _ZNK12i486DXCommon7Operand7GetSizeEv
 # Func Hash:
@@ -18215,18 +18412,18 @@ _ZNK12i486DXCommon7Operand7GetSizeEv
 0
 0
 1
-18123
+18137
 0
 0
 0
 0
 0
-2324763
+2296945
 0
 0
-2563249
-18128
-2545121
+2533805
+18142
+2515663
 
 _ZNK12i486DXCommon8FPUState13GetStatusWordEv
 # Func Hash:
@@ -18261,7 +18458,7 @@ _ZNK13FMTownsCommon15GetEleVolCDLeftEv
 # Num Counters:
 1
 # Counter Values:
-1630
+1583
 
 _ZNK13FMTownsCommon16GetEleVolCDRightEv
 # Func Hash:
@@ -18269,7 +18466,7 @@ _ZNK13FMTownsCommon16GetEleVolCDRightEv
 # Num Counters:
 1
 # Counter Values:
-1630
+1583
 
 _ZNK13FMTownsCommon16GetEleVolPCMLeftEv
 # Func Hash:
@@ -18277,7 +18474,7 @@ _ZNK13FMTownsCommon16GetEleVolPCMLeftEv
 # Num Counters:
 1
 # Counter Values:
-49
+44
 
 _ZNK13FMTownsCommon17GetEleVolCDLeftC0Ev
 # Func Hash:
@@ -18285,7 +18482,7 @@ _ZNK13FMTownsCommon17GetEleVolCDLeftC0Ev
 # Num Counters:
 1
 # Counter Values:
-1630
+1583
 
 _ZNK13FMTownsCommon17GetEleVolCDLeftENEv
 # Func Hash:
@@ -18293,7 +18490,7 @@ _ZNK13FMTownsCommon17GetEleVolCDLeftENEv
 # Num Counters:
 1
 # Counter Values:
-1630
+1583
 
 _ZNK13FMTownsCommon17GetEleVolPCMRightEv
 # Func Hash:
@@ -18301,7 +18498,7 @@ _ZNK13FMTownsCommon17GetEleVolPCMRightEv
 # Num Counters:
 1
 # Counter Values:
-49
+44
 
 _ZNK13FMTownsCommon18GetEleVolCDLeftC32Ev
 # Func Hash:
@@ -18309,7 +18506,7 @@ _ZNK13FMTownsCommon18GetEleVolCDLeftC32Ev
 # Num Counters:
 1
 # Counter Values:
-1630
+1583
 
 _ZNK13FMTownsCommon18GetEleVolCDRightC0Ev
 # Func Hash:
@@ -18317,7 +18514,7 @@ _ZNK13FMTownsCommon18GetEleVolCDRightC0Ev
 # Num Counters:
 1
 # Counter Values:
-1630
+1583
 
 _ZNK13FMTownsCommon18GetEleVolCDRightENEv
 # Func Hash:
@@ -18325,7 +18522,7 @@ _ZNK13FMTownsCommon18GetEleVolCDRightENEv
 # Num Counters:
 1
 # Counter Values:
-1630
+1583
 
 _ZNK13FMTownsCommon18GetEleVolPCMLeftC0Ev
 # Func Hash:
@@ -18333,7 +18530,7 @@ _ZNK13FMTownsCommon18GetEleVolPCMLeftC0Ev
 # Num Counters:
 1
 # Counter Values:
-49
+44
 
 _ZNK13FMTownsCommon18GetEleVolPCMLeftENEv
 # Func Hash:
@@ -18341,7 +18538,7 @@ _ZNK13FMTownsCommon18GetEleVolPCMLeftENEv
 # Num Counters:
 1
 # Counter Values:
-49
+44
 
 _ZNK13FMTownsCommon19GetEleVolCDRightC32Ev
 # Func Hash:
@@ -18349,7 +18546,7 @@ _ZNK13FMTownsCommon19GetEleVolCDRightC32Ev
 # Num Counters:
 1
 # Counter Values:
-1630
+1583
 
 _ZNK13FMTownsCommon19GetEleVolPCMLeftC32Ev
 # Func Hash:
@@ -18357,7 +18554,7 @@ _ZNK13FMTownsCommon19GetEleVolPCMLeftC32Ev
 # Num Counters:
 1
 # Counter Values:
-49
+44
 
 _ZNK13FMTownsCommon19GetEleVolPCMRightC0Ev
 # Func Hash:
@@ -18365,7 +18562,7 @@ _ZNK13FMTownsCommon19GetEleVolPCMRightC0Ev
 # Num Counters:
 1
 # Counter Values:
-49
+44
 
 _ZNK13FMTownsCommon19GetEleVolPCMRightENEv
 # Func Hash:
@@ -18373,7 +18570,7 @@ _ZNK13FMTownsCommon19GetEleVolPCMRightENEv
 # Num Counters:
 1
 # Counter Values:
-49
+44
 
 _ZNK13FMTownsCommon20GetEleVolPCMRightC32Ev
 # Func Hash:
@@ -18381,7 +18578,7 @@ _ZNK13FMTownsCommon20GetEleVolPCMRightC32Ev
 # Num Counters:
 1
 # Counter Values:
-49
+44
 
 _ZNK13FMTownsCommon8Variable10ApplyAliasENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE
 # Func Hash:
@@ -18458,7 +18655,7 @@ _ZNK13YsSoundPlayer9SoundData22GetNumSamplePerChannelEv
 # Num Counters:
 2
 # Counter Values:
-205738
+208756
 0
 
 _ZNK16NullMemoryAccess10FetchDwordEj
@@ -18511,9 +18708,9 @@ _ZNK18TownsFMRVRAMAccess9FetchByteEj
 # Num Counters:
 60
 # Counter Values:
-112
+96
 8640
-28
+24
 0
 0
 0
@@ -18569,8 +18766,8 @@ _ZNK18TownsFMRVRAMAccess9FetchByteEj
 0
 384
 720
-112
-112
+96
+96
 # Num Value Kinds:
 1
 # ValueKind = IPVK_MemOPSize:
@@ -18588,7 +18785,7 @@ _ZNK18TownsFMRVRAMAccess9FetchWordEj
 # Counter Values:
 0
 0
-14
+12
 0
 0
 0
@@ -18628,7 +18825,7 @@ _ZNK18TownsMainRAMAccess10FetchDwordEj
 # Num Counters:
 1
 # Counter Values:
-44634958
+43325970
 
 _ZNK18TownsMainRAMAccess20GetConstMemoryWindowEj
 # Func Hash:
@@ -18636,7 +18833,7 @@ _ZNK18TownsMainRAMAccess20GetConstMemoryWindowEj
 # Num Counters:
 1
 # Counter Values:
-13399934
+13336152
 
 _ZNK18TownsMainRAMAccess9FetchByteEj
 # Func Hash:
@@ -18644,7 +18841,7 @@ _ZNK18TownsMainRAMAccess9FetchByteEj
 # Num Counters:
 1
 # Counter Values:
-18398932
+18153012
 
 _ZNK18TownsMainRAMAccess9FetchWordEj
 # Func Hash:
@@ -18652,7 +18849,7 @@ _ZNK18TownsMainRAMAccess9FetchWordEj
 # Num Counters:
 1
 # Counter Values:
-20545292
+20069859
 
 _ZNK20TownsSpriteRAMAccess10FetchDwordEj
 # Func Hash:
@@ -18696,7 +18893,7 @@ _ZNK23TownsMappedSysROMAccess20GetConstMemoryWindowEj
 # Num Counters:
 1
 # Counter Values:
-9859
+10412
 
 _ZNK23TownsMappedSysROMAccess9FetchByteEj
 # Func Hash:
@@ -18794,8 +18991,8 @@ _ZNK6RF5C689IsPlayingEv
 # Num Counters:
 2
 # Counter Values:
-276642
-195577
+277254
+193161
 
 _ZNK6VMBase17SetDebugBreakFlagEb
 # Func Hash:
@@ -18823,7 +19020,7 @@ _ZNK6YM261217CalculateEnvelopeEPjjRKNS_4SlotE
 0
 0
 0
-348
+276
 
 _ZNK6YM261218CalculateAmplitudeINS_10WithoutLFOEEEiiPKmPKjPKiRi
 # Func Hash:
@@ -18832,10 +19029,10 @@ _ZNK6YM261218CalculateAmplitudeINS_10WithoutLFOEEEiiPKmPKjPKiRi
 54
 # Counter Values:
 1166004
-76761
-76761
-76761
-76761
+76734
+76734
+76734
+76734
 0
 0
 0
@@ -18892,12 +19089,12 @@ _ZNK6YM261218CalculateAmplitudeINS_7WithLFOEEEiiPKmPKjPKiRi
 # Num Counters:
 54
 # Counter Values:
-112896
-11605
-11605
-11605
-11605
-112896
+70560
+6575
+6575
+6575
+6575
+70560
 0
 0
 0
@@ -18905,10 +19102,10 @@ _ZNK6YM261218CalculateAmplitudeINS_7WithLFOEEEiiPKmPKjPKiRi
 0
 0
 0
-112896
-112896
-112896
-112896
+70560
+70560
+70560
+70560
 0
 0
 0
@@ -18954,17 +19151,17 @@ _ZNK6YM26124Slot19InterpolateEnvelopeEj
 13
 # Counter Values:
 0
-353464
-92339
+333236
+89635
 0
-92339
-3059
+89635
+2615
 0
 0
-3687210
-1071867
+3538430
+1071975
 0
-3675106
+3526326
 0
 
 _ZNK6YM26128TimerAUpEv
@@ -18973,7 +19170,7 @@ _ZNK6YM26128TimerAUpEv
 # Num Counters:
 1
 # Counter Values:
-25565613
+25580703
 
 _ZNK6YM26128TimerBUpEv
 # Func Hash:
@@ -18981,7 +19178,7 @@ _ZNK6YM26128TimerBUpEv
 # Num Counters:
 1
 # Counter Values:
-24854210
+24879262
 
 _ZNK7D77File10GetNumDiskEv
 # Func Hash:
@@ -19015,30 +19212,30 @@ _ZNK8TownsPIC5State14UpdateIRRCacheEv
 # Num Counters:
 24
 # Counter Values:
-7934887
-7904748
-7904748
-57872
-16856
-16856
-16856
-1001531
-811140
-58
-30147
-811567
-6858426
-6680269
-6680269
-58
-384447
-1020336
-1018229
-208296
-197401
-988090
-190479
-906340
+7805682
+7775484
+7775484
+57558
+16824
+16824
+16824
+983548
+796162
+74
+30206
+796524
+6743432
+6568343
+6568343
+74
+378162
+1004233
+1002130
+205287
+194322
+971932
+187469
+891166
 
 _ZNK8TownsPIC6I8259A28HigherPriorityINTIsInServiceEj
 # Func Hash:
@@ -19046,10 +19243,10 @@ _ZNK8TownsPIC6I8259A28HigherPriorityINTIsInServiceEj
 # Num Counters:
 4
 # Counter Values:
-923010
-749524
-749524
-173574
+905278
+735055
+735055
+170303
 
 _ZNK8TownsPIC6I8259A7INTToGoEv
 # Func Hash:
@@ -19057,12 +19254,12 @@ _ZNK8TownsPIC6I8259A7INTToGoEv
 # Num Counters:
 6
 # Counter Values:
-2297343
-2106210
-2106210
-191168
-191168
-355397
+2255912
+2068047
+2068047
+187891
+187891
+349166
 
 _ZNK9DiscImage12GetNumTracksEv
 # Func Hash:
@@ -19082,7 +19279,7 @@ _ZNK9DiscImage13GetNumSectorsEv
 
 _ZNK9DiscImage15ReadSectorMODE1Ejj
 # Func Hash:
-777368105455541274
+433147968256200286
 # Num Counters:
 33
 # Counter Values:
@@ -19092,13 +19289,13 @@ _ZNK9DiscImage15ReadSectorMODE1Ejj
 0
 0
 0
+0
+5856
+5856
 5856
 5856
 5856
 0
-5856
-0
-5856
 0
 5856
 5856
@@ -19108,6 +19305,7 @@ _ZNK9DiscImage15ReadSectorMODE1Ejj
 5856
 0
 5856
+5856
 0
 0
 0
@@ -19118,13 +19316,21 @@ _ZNK9DiscImage15ReadSectorMODE1Ejj
 0
 0
 0
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+2
+1
+** External Symbol **:5856
 0
 
 _ZNK9DiscImage7GetWaveENS_9MinSecFrmES0_
 # Func Hash:
-367574991217549967
+202991049922235014
 # Num Counters:
-51
+45
 # Counter Values:
 3
 0
@@ -19132,9 +19338,9 @@ _ZNK9DiscImage7GetWaveENS_9MinSecFrmES0_
 0
 0
 0
-0
-0
 42
+0
+0
 39
 0
 0
@@ -19150,19 +19356,13 @@ _ZNK9DiscImage7GetWaveENS_9MinSecFrmES0_
 3
 0
 3
-0
-3
-3
-0
-3
-3
 3
 0
 0
 0
+3
 0
-0
-0
+3
 0
 0
 0
@@ -19177,6 +19377,17 @@ _ZNK9DiscImage7GetWaveENS_9MinSecFrmES0_
 0
 0
 3
+# Num Value Kinds:
+1
+# ValueKind = IPVK_IndirectCallTarget:
+0
+# NumValueSites:
+4
+0
+1
+** External Symbol **:3
+0
+0
 
 _ZNK9DiscImage9GetTracksEv
 # Func Hash:
@@ -19192,9 +19403,9 @@ _ZNK9DiskDrive10DiskLoadedEi
 # Num Counters:
 5
 # Counter Values:
-2100972
-2100972
-2100972
+2100186
+2100186
+2100186
 0
 0
 
@@ -19204,9 +19415,9 @@ _ZNK9DiskDrive10DriveReadyEm
 # Num Counters:
 22
 # Counter Values:
-2100975
-2100975
-763114
+2100189
+2100189
+763177
 0
 0
 0
@@ -19233,8 +19444,8 @@ _ZNK9DiskDrive11DriveSelectEv
 # Num Counters:
 5
 # Counter Values:
-6304653
-2290797
+6302295
+2290986
 1200
 952
 704
@@ -19245,8 +19456,8 @@ _ZNK9TownsCRTC10GetPaletteEv
 # Num Counters:
 2
 # Counter Values:
-17200
-17200
+17199
+17199
 
 _ZNK9TownsCRTC13AnalogPalette6GetRedEj
 # Func Hash:
@@ -19291,11 +19502,11 @@ _ZNK9TownsCRTC13GetRenderSizeEv
 6
 # Counter Values:
 0
-1281
-15919
-1281
-15919
-15919
+1279
+15920
+1279
+15920
+15920
 
 _ZNK9TownsCRTC15GetPriorityPageEv
 # Func Hash:
@@ -19304,7 +19515,7 @@ _ZNK9TownsCRTC15GetPriorityPageEv
 2
 # Counter Values:
 0
-17200
+17199
 
 _ZNK9TownsCRTC16InSinglePageModeEv
 # Func Hash:
@@ -19313,7 +19524,7 @@ _ZNK9TownsCRTC16InSinglePageModeEv
 2
 # Counter Values:
 0
-17200
+17199
 
 _ZNK9TownsCRTC17MakePageLayerInfoERNS_5LayerEh
 # Func Hash:
@@ -19330,13 +19541,13 @@ _ZNK9TownsCRTC19GetLowResPageZoom2XEh
 # Num Counters:
 9
 # Counter Values:
-20796
-46983
-15827
+20118
+46531
+16053
 10360
-26466
+26158
 0
-20796
+20118
 0
 0
 
@@ -19346,15 +19557,15 @@ _ZNK9TownsCRTC20GetPageSizeOnMonitorEh
 # Num Counters:
 9
 # Counter Values:
-13864
+13412
 0
 66238
 66238
 0
 45518
 20720
-25204
-13864
+25492
+13412
 
 _ZNK9TownsCRTC23MakeLowResPageLayerInfoERNS_5LayerEh
 # Func Hash:
@@ -19362,19 +19573,19 @@ _ZNK9TownsCRTC23MakeLowResPageLayerInfoERNS_5LayerEh
 # Num Counters:
 13
 # Counter Values:
-31838
-27550
-5569
-1281
-3277
-12642
-1281
+31840
+27181
+5938
+1279
+3460
+12460
+1279
 0
-23628
-9603
-17200
-1281
-145
+23261
+9689
+17199
+1279
+102
 
 _ZNK9TownsCRTC24GetPageVRAMAddressOffsetEh
 # Func Hash:
@@ -19382,14 +19593,14 @@ _ZNK9TownsCRTC24GetPageVRAMAddressOffsetEh
 # Num Counters:
 9
 # Counter Values:
-1281
-31838
-1281
-23628
-8210
-1281
+1279
+31840
+1279
+23261
+8579
+1279
 0
-23628
+23261
 0
 
 _ZNK9TownsCRTC25GetPageVRAMCoverageSize1XEh
@@ -19411,10 +19622,10 @@ _ZNK9TownsCRTC28GetLowResPageOriginOnMonitorEh
 66238
 66238
 0
-11336
-34182
-34182
-11336
+12076
+33442
+33442
+12076
 0
 20720
 0
@@ -19426,7 +19637,7 @@ _ZNK9TownsCRTC7InHSYNCEy
 # Num Counters:
 1
 # Counter Values:
-2279292
+2273933
 
 _ZNK9TownsCRTC7InVSYNCEy
 # Func Hash:
@@ -19434,7 +19645,7 @@ _ZNK9TownsCRTC7InVSYNCEy
 # Num Counters:
 1
 # Counter Values:
-2296704
+2291328
 
 _ZNK9TownsDMAC5State7Channel15CountsAvailableEv
 # Func Hash:
@@ -19442,7 +19653,7 @@ _ZNK9TownsDMAC5State7Channel15CountsAvailableEv
 # Num Counters:
 1
 # Counter Values:
-3429
+3143
 
 _ZNK9TownsDMAC5State7Channel4AUTIEv
 # Func Hash:
@@ -19450,7 +19661,7 @@ _ZNK9TownsDMAC5State7Channel4AUTIEv
 # Num Counters:
 1
 # Counter Values:
-88
+80
 
 _ZNKSt6__ndk112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EENS_8equal_toIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_SD_SB_Lb1EEENS5_IS8_EEE4findIS7_EENS_21__hash_const_iteratorIPNS_11__hash_nodeIS8_PvEEEERKT_
 # Func Hash:
@@ -19883,7 +20094,7 @@ _ZNSt6__ndk114__split_bufferIPiNS_9allocatorIS1_EEE10push_frontEOS1_
 # Counter Values:
 0
 0
-2484
+2461
 0
 0
 0
@@ -19906,7 +20117,7 @@ _ZNSt6__ndk114__split_bufferIPiNS_9allocatorIS1_EEE9push_backEOS1_
 # Counter Values:
 0
 0
-10530
+10448
 0
 0
 0
@@ -20030,8 +20241,8 @@ _ZNSt6__ndk114basic_ifstreamIcNS_11char_traitsIcEEEC1ERKNS_12basic_stringIcS2_NS
 # Num Counters:
 7
 # Counter Values:
-39
-39
+5898
+5898
 24
 0
 0
@@ -20214,6 +20425,24 @@ _ZNSt6__ndk15dequeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4
 0
 0
 
+_ZNSt6__ndk15dequeINS_4pairIibEENS_9allocatorIS2_EEED2B8ne190000Ev
+# Func Hash:
+653247340344690925
+# Num Counters:
+11
+# Counter Values:
+0
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+
 _ZNSt6__ndk15dequeIiNS_9allocatorIiEEE19__add_back_capacityEv
 # Func Hash:
 489421799420317172
@@ -20226,18 +20455,18 @@ _ZNSt6__ndk15dequeIiNS_9allocatorIiEEE19__add_back_capacityEv
 0
 0
 0
-11495
+11594
 15
-10530
+10448
 12
-990
-2484
+1005
+2461
 0
-990
+1005
 0
-2484
+2461
 0
-2484
+2461
 0
 0
 0
@@ -20258,14 +20487,14 @@ _ZNSt6__ndk15dequeIiNS_9allocatorIiEEE19__add_back_capacityEv
 # NumValueSites:
 2
 1
-8:990
+8:1005
 6
-17:1557
-16:603
-32:186
-65:90
-64:45
-33:3
+17:1514
+16:633
+32:181
+65:86
+64:42
+33:5
 
 _ZNSt6__ndk15dequeIiNS_9allocatorIiEEE9pop_frontEv
 # Func Hash:
@@ -20273,8 +20502,8 @@ _ZNSt6__ndk15dequeIiNS_9allocatorIiEEE9pop_frontEv
 # Num Counters:
 2
 # Counter Values:
-24459862
-12384
+24458824
+12285
 
 _ZNSt6__ndk15dequeIiNS_9allocatorIiEEE9push_backEOi
 # Func Hash:
@@ -20282,9 +20511,9 @@ _ZNSt6__ndk15dequeIiNS_9allocatorIiEEE9push_backEOi
 # Num Counters:
 4
 # Counter Values:
-25158406
-25158406
-24524
+25153840
+25153840
+24518
 3
 
 _ZNSt6__ndk15dequeIiNS_9allocatorIiEEED2B8ne190000Ev
@@ -20770,6 +20999,26 @@ _ZNSt6__ndk16vectorIN20TownsStartParameters12HostShortCutENS_9allocatorIS2_EEE16
 3
 0
 
+_ZNSt6__ndk16vectorIN5kairo11StartupStepENS_9allocatorIS2_EEE13__vdeallocateEv
+# Func Hash:
+1124680653157207770
+# Num Counters:
+3
+# Counter Values:
+0
+3
+0
+
+_ZNSt6__ndk16vectorIN5kairo11StartupStepENS_9allocatorIS2_EEE16__destroy_vectorclB8ne190000Ev
+# Func Hash:
+1124680653157207770
+# Num Counters:
+3
+# Counter Values:
+0
+9
+0
+
 _ZNSt6__ndk16vectorIN9DiscImage5TrackENS_9allocatorIS2_EEE16__destroy_vectorclB8ne190000Ev
 # Func Hash:
 694937219292740260
@@ -20841,7 +21090,7 @@ _ZNSt6__ndk16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS
 # Counter Values:
 568
 24
-216
+213
 186
 
 _ZNSt6__ndk16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEE18__assign_with_sizeB8ne190000IPS6_SA_EEvT_T0_l
@@ -21092,16 +21341,16 @@ _ZNSt6__ndk16vectorIhNS_9allocatorIhEEE18__insert_with_sizeB8ne190000INS_11__wra
 5702
 0
 0
-88
-86
+80
+78
 2
 0
 2
 1
 0
 0
-86
-86
+78
+78
 0
 2
 # Num Value Kinds:
@@ -21111,7 +21360,7 @@ _ZNSt6__ndk16vectorIhNS_9allocatorIhEEE18__insert_with_sizeB8ne190000INS_11__wra
 # NumValueSites:
 5
 2
-513:85
+513:77
 65:1
 0
 0
@@ -21127,15 +21376,15 @@ _ZNSt6__ndk16vectorIhNS_9allocatorIhEEE8__appendEm
 # Num Counters:
 9
 # Counter Values:
-27461712
-72059094
+26925456
+72041920
 0
-3762
-6871
-6871
+3686
+6864
+6864
 6
 0
-6871
+6864
 # Num Value Kinds:
 1
 # ValueKind = IPVK_MemOPSize:
@@ -21143,7 +21392,7 @@ _ZNSt6__ndk16vectorIhNS_9allocatorIhEEE8__appendEm
 # NumValueSites:
 1
 2
-0:6865
+0:6858
 513:6
 
 _ZNSt6__ndk16vectorIsNS_9allocatorIsEEEC2Em
@@ -21237,7 +21486,7 @@ _ZThn96_N13FMTownsCommon10IOReadByteEj
 # Num Counters:
 1
 # Counter Values:
-296825
+294102
 
 _ZThn96_N13FMTownsCommon10IOReadWordEj
 # Func Hash:
@@ -21254,7 +21503,7 @@ _ZThn96_N13FMTownsCommon11IOWriteByteEjj
 # Num Counters:
 1
 # Counter Values:
-397766
+394071
 
 _ZZN11TownsRender10Render8BitINS_10VRAM1TransEEEvRKN9TownsCRTC5LayerEPK6Vec4ubPKhbENKUlRPhbE_clESC_b
 # Func Hash:
@@ -21263,20 +21512,20 @@ _ZZN11TownsRender10Render8BitINS_10VRAM1TransEEEvRKN9TownsCRTC5LayerEPK6Vec4ubPK
 15
 # Counter Values:
 0
-393523200
-393523200
-614880
+392908800
+392908800
+613920
 0
-614880
-614880
-614880
-614880
-614880
+613920
+613920
+613920
+613920
+613920
 0
-614880
-393523200
+613920
+392908800
 0
-393523200
+392908800
 
 _ZZN11TownsRender11Render16BitINS_10VRAM0TransEEEvRKN9TownsCRTC5LayerEPKhbENKUlRPhbE_clES9_b
 # Func Hash:
@@ -21285,35 +21534,50 @@ _ZZN11TownsRender11Render16BitINS_10VRAM0TransEEEvRKN9TownsCRTC5LayerEPKhbENKUlR
 24
 # Counter Values:
 0
-280456990
+256780990
 0
-1822443696
-7787992
-1174408526
-7787992
-7787992
-202930096
-112175184
-1174408526
+1810047008
+7661360
+1162058066
+7661360
+7661360
+192672336
+102706608
+1162058066
 0
-7787992
-7787992
-6557112
+7661360
+7661360
+6507536
 0
 0
-7787992
+7661360
 0
-7787992
-315105280
+7661360
+295378944
 0
+0
+0
+
+kairo_chd_is_chd
+# Func Hash:
+515675266417876642
+# Num Counters:
+8
+# Counter Values:
+5862
+5862
+5862
+0
+0
+5862
 0
 0
 
 main
 # Func Hash:
-63326342689354215
+157748996591751404
 # Num Counters:
-385
+364
 # Counter Values:
 0
 0
@@ -21324,12 +21588,8 @@ main
 0
 21
 6
-21
-6
 3
 18
-21
-6
 0
 0
 0
@@ -21340,7 +21600,7 @@ main
 0
 0
 0
-11449
+11549
 0
 0
 0
@@ -21352,8 +21612,6 @@ main
 0
 0
 16200
-0
-0
 0
 0
 0
@@ -21382,14 +21640,10 @@ main
 0
 0
 0
-0
-0
 16200
 16200
 16200
 16200
-0
-0
 0
 0
 0
@@ -21454,9 +21708,6 @@ main
 27
 27
 0
-0
-0
-0
 3
 3
 3
@@ -21476,20 +21727,12 @@ main
 3
 0
 3
-0
-0
-3
 3
 0
 0
 0
 0
 3
-0
-0
-0
-0
-0
 0
 0
 0

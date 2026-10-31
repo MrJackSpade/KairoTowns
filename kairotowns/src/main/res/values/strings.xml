@@ -27,4 +27,9 @@
     <string name="firmware_large_font_description">a 20-dot font some games use</string>
 
 
+    <!-- The FM Towns Marty (KairoTowns#96). -->
+    <string name="model">Model</string>
+    <string name="model_question">Which machine is this game for?</string>
+    <string name="firmware_marty_ex_description">part of the Marty\'s extension ROM</string>
+    <string name="firmware_marty_note">Only Marty games need these</string>
 </resources>

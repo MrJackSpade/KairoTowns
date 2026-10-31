@@ -36,6 +36,10 @@ struct Config {
     unsigned memory_mb = 4;
     // The CPU clock in MHz.
     unsigned cpu_mhz = 40;
+    // Whether the machine is an FM Towns Marty (KairoTowns#96): Tsugaru's Marty memory and ROM
+    // layout, which needs the four Marty EX-ROMs (MAR_EX0.ROM to MAR_EX3.ROM) in rom_dir, and the
+    // Marty's pad in port 0 (its buttons are the gamepad's, PadButton).
+    bool marty = false;
     // Whether the boot runs as fast as the host can until its first disk read, so the BIOS
     // memory test passes in a moment (this BIOS ignores the CMOS setting that skips it).
     bool skip_memory_check = true;

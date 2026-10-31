@@ -11,7 +11,7 @@ import com.mrjackspade.kairo.frontend.JisMainBlock
 
 /**
  * KairoTowns's catalog records beyond the common fields: the machine a game boots (`machine`:
- * `memory` in megabytes, `cpu` clock in MHz), a boot floppy for drive A (media role `floppyA`)
+ * `model`, `memory` in megabytes, `cpu` clock in MHz), a boot floppy for drive A (media role `floppyA`)
  * for CD games that start from one, the CD of a game that starts from its hard disk (media role
  * `cd`), and the lines typed at DOS's prompt to start the game (`launch`: `commands`).
  */
@@ -23,14 +23,21 @@ object TownsCatalog : LayeredGameCatalog.Schema {
     /** The FM Towns keyboard's Esc, and its Return and keypad Return. */
     override val escapeKeys = setOf(JisMainBlock.ESC)
     override val enterKeys = setOf(JisMainBlock.RETURN, TownsKeys.NUM_RETURN)
-    override val mediaExtensions = Regex("\\.(?:zip|7z|ccd|cue|mds|iso|img|bin|mdf|d77|d88|88d|hdm|h[0-6])$", RegexOption.IGNORE_CASE)
+    override val mediaExtensions = Regex("\\.(?:zip|7z|ccd|cue|mds|iso|chd|img|bin|mdf|d77|d88|88d|hdm|h[0-6])$", RegexOption.IGNORE_CASE)
 
     val memory = MachineOption("memory", UiText.res(FrontendR.string.kairo_option_memory),
         listOf(2, 4, 6, 8, 12, 16).map { ChoiceOption("$it", UiText.res(FrontendR.string.kairo_memory_mb, it)) }, "6", numeric = true)
     val cpu = MachineOption("cpu", UiText.res(FrontendR.string.kairo_option_clock),
         listOf(16, 20, 25, 33, 40, 66).map { ChoiceOption("$it", UiText.res(FrontendR.string.kairo_clock_mhz, it)) }, "40", numeric = true)
     val skipMemoryCheck = MachineOption.skipMemoryCheck()
-    val options = listOf(memory, cpu, skipMemoryCheck)
+    /**
+     * The FM Towns or the FM Towns Marty (KairoTowns#96): the catalog marks Marty games, and a game
+     * no catalog knows is asked at its first launch.
+     */
+    val model = MachineOption("model", UiText.res(R.string.model),
+        listOf(ChoiceOption("towns", UiText.fixed("FM Towns")), ChoiceOption("marty", UiText.fixed("FM Towns Marty"))), "towns",
+        question = UiText.res(R.string.model_question))
+    val options = listOf(model, memory, cpu, skipMemoryCheck)
 
     /** The lines typed at DOS's prompt to start the game, such as a hard disk's `CD \GAME` and `GAME`. */
     val startupCommands = CatalogSetting.Lines(LAUNCH, COMMANDS, UiText.res(FrontendR.string.kairo_startup_commands),

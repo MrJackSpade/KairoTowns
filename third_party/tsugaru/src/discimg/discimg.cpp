@@ -14,6 +14,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 << LICENSE */
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <vector>
 #include <unordered_map>
 #include <string.h>
@@ -124,6 +125,8 @@ DiscImage::DiscImage()
 		return "MDF Binary File Size does not make sense.";
 	case ERROR_MDS_UNEXPECTED_NUMBER:
 		return "MDS Unexpected Number.";
+	case ERROR_CHD_UNREADABLE: // KairoTowns
+		return "The CHD cannot be read.";
 	}
 	return "Undefined error.";
 }
@@ -137,6 +140,7 @@ void DiscImage::CleanUp(void)
 	tracks.clear();
 	layout.clear();
 	binaryCache.clear();
+	chd.reset(); // KairoTowns
 }
 unsigned int DiscImage::Open(const std::string &fName)
 {
@@ -196,7 +200,62 @@ unsigned int DiscImage::Open(const std::string &fName)
 	{
 		return OpenCCD(fName);
 	}
+	if(".CHD"==ext) // KairoTowns
+	{
+		return OpenCHD(fName);
+	}
 	return ERROR_UNSUPPORTED;
+}
+
+unsigned int DiscImage::OpenCHD(const std::string &fName)
+{
+	std::string error;
+	auto source=kairo::ChdSource::Of(fName,error);
+	if(nullptr==source)
+	{
+		std::cout << "Cannot read " << fName << ": " << error << std::endl;
+		return ERROR_CHD_UNREADABLE;
+	}
+	std::string path,file;
+	cpputil::SeparatePathFile(path,file,fName);
+	std::vector <char> cue(kairo_chd_cue(source->get(),file.c_str(),nullptr,0)+1);
+	kairo_chd_cue(source->get(),file.c_str(),cue.data(),cue.size());
+
+	CleanUp();
+	this->fName=fName;
+	fileType=FILETYPE_CHD;
+	chd=source;
+	std::istringstream ifp(std::string(cue.data()));
+	return OpenCUEStream(ifp);
+}
+
+/* static */ std::unique_ptr <std::istream> DiscImage::OpenBinary(const std::string &fName)
+{
+	if(kairo_chd_is_chd(fName.c_str()))
+	{
+		std::string error;
+		auto source=kairo::ChdSource::Of(fName,error);
+		if(nullptr!=source)
+		{
+			return std::unique_ptr <std::istream>(new kairo::ChdStream(source));
+		}
+		std::cout << "Cannot read " << fName << ": " << error << std::endl;
+		std::unique_ptr <std::istream> failed(new std::ifstream);
+		failed->setstate(std::ios::failbit);
+		return failed;
+	}
+	return std::unique_ptr <std::istream>(new std::ifstream(fName,std::ios::binary));
+}
+
+/* static */ long long int DiscImage::BinarySize(const std::string &fName)
+{
+	if(kairo_chd_is_chd(fName.c_str()))
+	{
+		std::string error;
+		auto source=kairo::ChdSource::Of(fName,error);
+		return nullptr==source ? 0 : (long long int)kairo_chd_size(source->get());
+	}
+	return cpputil::FileSize(fName);
 }
 unsigned int DiscImage::OpenCUE(const std::string &fName)
 {
@@ -210,7 +269,11 @@ unsigned int DiscImage::OpenCUE(const std::string &fName)
 	CleanUp();
 	this->fName=fName;
 	fileType=FILETYPE_CUE;
-
+	return OpenCUEStream(ifp);
+}
+// KairoTowns: the cue sheet read from a stream, a file's or a CHD's (OpenCHD).
+unsigned int DiscImage::OpenCUEStream(std::istream &ifp)
+{
 	// https://en.wikipedia.org/wiki/Cue_sheet_(computing)
 	enum
 	{
@@ -411,7 +474,7 @@ unsigned int DiscImage::OpenCUEPostProcess(void)
 		bin.fName="";
 		for(auto fn : binFileCandidate)
 		{
-			auto len=cpputil::FileSize(fn);
+			auto len=BinarySize(fn); // KairoTowns: a CHD's image too
 			if(0<len)
 			{
 				binLength+=len;
@@ -1168,9 +1231,9 @@ bool DiscImage::CacheBinary(void)
 {
 	if(0<binaries.size())
 	{
-		std::ifstream ifp;
-		ifp.open(binaries[0].fName,std::ios::binary);
-		if(true==ifp.is_open())
+		auto binary=OpenBinary(binaries[0].fName); // KairoTowns: a CHD's image too
+		std::istream &ifp=*binary;
+		if(true==ifp.good())
 		{
 			ifp.seekg(0,std::ios::end);
 			auto fSize=ifp.tellg();
@@ -1229,9 +1292,9 @@ std::vector <unsigned char> DiscImage::ReadSectorMODE1(unsigned int HSG,unsigned
 	{
 		if(0==binaryCache.size())
 		{
-			std::ifstream ifp;
-			ifp.open(binaries[0].fName,std::ios::binary);
-			if(true==ifp.is_open() && 0<tracks.size() && (tracks[0].trackType==TRACK_MODE1_DATA || tracks[0].trackType==TRACK_MODE2_DATA))
+			auto binary=OpenBinary(binaries[0].fName); // KairoTowns: a CHD's image too
+			std::istream &ifp=*binary;
+			if(true==ifp.good() && 0<tracks.size() && (tracks[0].trackType==TRACK_MODE1_DATA || tracks[0].trackType==TRACK_MODE2_DATA))
 			{
 				if(HSG+numSec<=tracks[0].end.ToHSG()+1)
 				{
@@ -1299,9 +1362,9 @@ std::vector <unsigned char> DiscImage::ReadSectorRAW(unsigned int HSG,unsigned i
 
 	if(0<binaries.size())
 	{
-		std::ifstream ifp;
-		ifp.open(binaries[0].fName,std::ios::binary);
-		if(true==ifp.is_open() && 0<tracks.size() && (tracks[0].trackType==TRACK_MODE1_DATA || tracks[0].trackType==TRACK_MODE2_DATA))
+		auto binary=OpenBinary(binaries[0].fName); // KairoTowns: a CHD's image too
+		std::istream &ifp=*binary;
+		if(true==ifp.good() && 0<tracks.size() && (tracks[0].trackType==TRACK_MODE1_DATA || tracks[0].trackType==TRACK_MODE2_DATA))
 		{
 			if(HSG+numSec<=tracks[0].end.ToHSG()+1)
 			{
@@ -1353,9 +1416,9 @@ std::vector <unsigned char> DiscImage::ReadSectorMODE2(unsigned int HSG,unsigned
 
 	if(0<binaries.size())
 	{
-		std::ifstream ifp;
-		ifp.open(binaries[0].fName,std::ios::binary);
-		if(true==ifp.is_open() && 0<tracks.size() && (tracks[0].trackType==TRACK_MODE1_DATA || tracks[0].trackType==TRACK_MODE2_DATA))
+		auto binary=OpenBinary(binaries[0].fName); // KairoTowns: a CHD's image too
+		std::istream &ifp=*binary;
+		if(true==ifp.good() && 0<tracks.size() && (tracks[0].trackType==TRACK_MODE1_DATA || tracks[0].trackType==TRACK_MODE2_DATA))
 		{
 			if(HSG+numSec<=tracks[0].end.ToHSG()+1)
 			{
@@ -1496,13 +1559,12 @@ std::vector <unsigned char> DiscImage::GetWave(MinSecFrm startMSF,MinSecFrm endM
 					// To prevent noise from the data track, it needs to be checked here.
 					if(LAYOUT_AUDIO==layoutType)
 					{
-						std::ifstream ifp;
-						ifp.open(bin.fName,std::ios::binary);
-						if(ifp.is_open())
+						auto binary=OpenBinary(bin.fName); // KairoTowns: a CHD's image too
+						std::istream &ifp=*binary;
+						if(ifp.good())
 						{
 							ifp.seekg(readFrom-bin.byteOffsetInDisc+bin.bytesToSkip,std::ios::beg);
 							ifp.read((char *)(wave.data()+curSize),readSize);
-							ifp.close();
 						}
 					}
 				}
@@ -1522,9 +1584,9 @@ std::vector <unsigned char> DiscImage::GetWave(MinSecFrm startMSF,MinSecFrm endM
 
 					if(LAYOUT_AUDIO==layoutType)
 					{
-						std::ifstream ifp;
-						ifp.open(bin.fName,std::ios::binary);
-						if(ifp.is_open())
+						auto binary=OpenBinary(bin.fName); // KairoTowns: a CHD's image too
+						std::istream &ifp=*binary;
+						if(ifp.good())
 						{
 							ifp.seekg(readFrom-bin.byteOffsetInDisc+bin.bytesToSkip,std::ios::beg);
 							for(auto filePos=readFrom; filePos<readTo; filePos+=layoutSectorLength)
@@ -1536,7 +1598,6 @@ std::vector <unsigned char> DiscImage::GetWave(MinSecFrm startMSF,MinSecFrm endM
 								}
 								curPos+=AUDIO_SECTOR_SIZE;
 							}
-							ifp.close();
 						}
 					}
 				}

@@ -63,6 +63,11 @@ foreach(dir
     add_subdirectory("${TSUGARU}/${dir}" "tsugaru/${dir}" EXCLUDE_FROM_ALL)
 endforeach()
 
+# CDs kept as CHDs (KairoTowns#97): DiscImage reads them through the shared reader.
+include("${CMAKE_CURRENT_LIST_DIR}/../shared/cmake/KairoChd.cmake")
+kairo_chd_library()
+target_link_libraries(discimg kairo_chd)
+
 # Tsugaru's file and sound helpers, chosen here for both the host and Android: its own build picks
 # stubs for a Windows compiler other than MSVC. Sound output is the core's, so the silent
 # backend serves only the WAV data helpers Tsugaru's sound device uses.

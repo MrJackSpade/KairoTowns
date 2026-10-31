@@ -39,4 +39,12 @@
     <string name="firmware_dictionary_description">kamus kana ke kanji untuk teks Jepang</string>
     <!-- EN: a 20-dot font some games use -->
     <string name="firmware_large_font_description">font 20 titik yang digunakan beberapa game</string>
+    <!-- EN: Model -->
+    <string name="model">Model</string>
+    <!-- EN: Which machine is this game for? -->
+    <string name="model_question">Game ini untuk mesin apa?</string>
+    <!-- EN: part of the Marty\'s extension ROM -->
+    <string name="firmware_marty_ex_description">bagian dari ROM ekstensi Marty</string>
+    <!-- EN: Only Marty games need these -->
+    <string name="firmware_marty_note">Hanya game Marty yang membutuhkannya</string>
 </resources>

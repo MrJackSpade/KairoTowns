@@ -16,7 +16,8 @@ PLATFORMS = ("fmtowns",)
 ARTWORK_CODE = 86
 ARTWORK = References("KairoTowns", (ARTWORK_CODE,))
 
-CD = {".iso", ".mds", ".cue", ".ccd"}
+# CHDs hash the disc image they were made from (shared tools/chd_image.py, KairoTowns#97).
+CD = {".iso", ".mds", ".cue", ".ccd", ".chd"}
 FLOPPY = {".d77", ".d88", ".88d", ".hdm"}
 # SCSI hard disks, the SCSI ID in the extension (KairoTowns#38).
 HARD_DISK = {".h0", ".h1", ".h2", ".h3", ".h4", ".h5", ".h6"}
@@ -31,8 +32,8 @@ def kind(name):
     return "cd" if suffix in CD else "fd" if suffix in FLOPPY else "hd" if suffix in HARD_DISK else None
 
 
-# Version 3: HDM floppies and hard disks.
-MEDIA = content_ids.Media(kind, content_ids.same_file, LIMITS.__getitem__, 3, seven_zip=True,
+# Version 3: HDM floppies and hard disks. Version 4: CHDs.
+MEDIA = content_ids.Media(kind, content_ids.same_file, LIMITS.__getitem__, 4, seven_zip=True,
                           candidates=CD_DATA, superseded_by=SUPERSEDED_BY)
 
 MOBYGAMES = "fmtowns"
@@ -49,4 +50,4 @@ DISK_SWAPS = {0: {"cd"}, 1: {"fd"}, 2: {"fd"}}
 
 # The extensions the app removes from a file's name before looking it up (the catalog schema's
 # mediaExtensions); the name index is built the same way (shared app_catalog.lookup_name).
-MEDIA_EXTENSIONS = r"\.(?:zip|7z|ccd|cue|mds|iso|img|bin|mdf|d77|d88|88d|hdm|h[0-6])$"
+MEDIA_EXTENSIONS = r"\.(?:zip|7z|ccd|cue|mds|iso|chd|img|bin|mdf|d77|d88|88d|hdm|h[0-6])$"

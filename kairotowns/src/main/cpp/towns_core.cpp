@@ -196,6 +196,13 @@ std::unique_ptr<kairo::MachineCore> kairo::create_core(const kairo::Launch &laun
         return nullptr;
     }
     config.boot_hd = boot_hard_disk == "on";
+    // TownsCatalog.model: the FM Towns or the FM Towns Marty.
+    const std::string &model = launch.settings.at("model");
+    if (model != "towns" && model != "marty") {
+        error = "The model is \"" + model + "\", not towns or marty";
+        return nullptr;
+    }
+    config.marty = model == "marty";
     auto machine = TownsMachine::create(config, error);
     if (!machine) return nullptr;
     return std::make_unique<TownsCore>(std::move(machine));

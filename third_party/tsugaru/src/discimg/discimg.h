@@ -19,6 +19,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 #include <vector>
 #include <string>
 #include <cstdint>
+#include <istream>
+#include <memory>
+
+// KairoTowns: CDs kept as CHDs (OpenCHD).
+#include "kairo_chd_stream.h"
 
 // MDS/MDF implementation is based on:
 //   https://problemkaputt.de/psx-spx.htm#cdromdiskimagesmdsmdfalcohol120
@@ -51,6 +56,7 @@ public:
 		ERROR_MDS_FILE_SIZE_DOES_NOT_MAKE_SENSE,
 		ERROR_MDS_UNEXPECTED_NUMBER,
 		ERROR_MDS_BINARY_TOO_SHORT,
+		ERROR_CHD_UNREADABLE, // KairoTowns
 	};
 	enum
 	{
@@ -69,6 +75,7 @@ public:
 		FILETYPE_CUE,
 		FILETYPE_MDS,
 		FILETYPE_CCD,
+		FILETYPE_CHD, // KairoTowns
 	};
 	enum
 	{
@@ -302,6 +309,9 @@ public:
 	std::vector <Track> tracks;
 	std::vector <DiscLayout> layout;
 	std::vector <unsigned char> binaryCache;
+	/*! KairoTowns: the CHD of a disc opened from one (OpenCHD), held open while the disc is.
+	*/
+	std::shared_ptr <kairo::ChdSource> chd;
 
 	class TrackTime
 	{
@@ -315,7 +325,20 @@ public:
 	void CleanUp(void);
 	unsigned int Open(const std::string &fName);
 	unsigned int OpenCUE(const std::string &fName);
+	/*! KairoTowns: a CD kept as a CHD, read as the image it was made from through its cue sheet
+	    (shared native/chd/kairo_chd.h).
+	*/
+	unsigned int OpenCHD(const std::string &fName);
+	/*! KairoTowns: the track data at fName, a file or a CHD's image; a failed stream when it
+	    cannot be opened.
+	*/
+	static std::unique_ptr <std::istream> OpenBinary(const std::string &fName);
+	/*! KairoTowns: the size of the track data at fName, a file or a CHD's image; 0 when it
+	    cannot be read.
+	*/
+	static long long int BinarySize(const std::string &fName);
 private:
+	unsigned int OpenCUEStream(std::istream &ifp);
 	unsigned int OpenCUEPostProcess(void);
 	void MakeLayoutFromTracksAndBinaryFiles(void);
 	bool TryAnalyzeTracksWithProbablyCorrectInterpretation(void);

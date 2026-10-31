@@ -634,7 +634,8 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
     // Booting until the first disk read: run_frame runs it as fast as it can when skipping the memory check.
     parameters.noWait = config.skip_memory_check;
     parameters.noWaitStandby = false;
-    parameters.gamePort[0] = TOWNS_GAMEPORTEMU_PHYSICAL0;
+    if (config.marty) parameters.townsType = TOWNSTYPE_MARTY;
+    parameters.gamePort[0] = config.marty ? TOWNS_GAMEPORTEMU_MARTYPAD_BY_PHYSICAL0 : TOWNS_GAMEPORTEMU_PHYSICAL0;
     parameters.gamePort[1] = TOWNS_GAMEPORTEMU_MOUSE;
     parameters.interactive = false;
     // Tsugaru by default darkens the row two thirds down every picture, as the damper wire of a

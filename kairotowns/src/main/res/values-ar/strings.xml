@@ -39,4 +39,12 @@
     <string name="firmware_dictionary_description">قاموس تحويل الكانا إلى الكانجي للنص الياباني</string>
     <!-- EN: a 20-dot font some games use -->
     <string name="firmware_large_font_description">خط بدقة 20 نقطة تستخدمه بعض الألعاب</string>
+    <!-- EN: Model -->
+    <string name="model">الطراز</string>
+    <!-- EN: Which machine is this game for? -->
+    <string name="model_question">لأي جهاز هذه اللعبة؟</string>
+    <!-- EN: part of the Marty\'s extension ROM -->
+    <string name="firmware_marty_ex_description">جزء من ذاكرة ROM الإضافية لجهاز Marty</string>
+    <!-- EN: Only Marty games need these -->
+    <string name="firmware_marty_note">تحتاجها ألعاب Marty فقط</string>
 </resources>

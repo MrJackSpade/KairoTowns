@@ -39,4 +39,12 @@
     <string name="firmware_dictionary_description">日本語テキスト用のかな漢字変換辞書</string>
     <!-- EN: a 20-dot font some games use -->
     <string name="firmware_large_font_description">一部のゲームが使う 20 ドットフォント</string>
+    <!-- EN: Model -->
+    <string name="model">機種</string>
+    <!-- EN: Which machine is this game for? -->
+    <string name="model_question">このゲームの機種は？</string>
+    <!-- EN: part of the Marty\'s extension ROM -->
+    <string name="firmware_marty_ex_description">Marty の拡張 ROM の一部</string>
+    <!-- EN: Only Marty games need these -->
+    <string name="firmware_marty_note">Marty のゲームでのみ必要です</string>
 </resources>

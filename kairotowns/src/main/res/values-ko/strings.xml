@@ -39,4 +39,12 @@
     <string name="firmware_dictionary_description">일본어 텍스트용 가나-한자 변환 사전</string>
     <!-- EN: a 20-dot font some games use -->
     <string name="firmware_large_font_description">일부 게임이 사용하는 20도트 글꼴</string>
+    <!-- EN: Model -->
+    <string name="model">기종</string>
+    <!-- EN: Which machine is this game for? -->
+    <string name="model_question">이 게임의 기종은 무엇인가요?</string>
+    <!-- EN: part of the Marty\'s extension ROM -->
+    <string name="firmware_marty_ex_description">Marty 확장 ROM의 일부</string>
+    <!-- EN: Only Marty games need these -->
+    <string name="firmware_marty_note">Marty 게임에만 필요합니다</string>
 </resources>

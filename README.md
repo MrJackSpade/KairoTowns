@@ -51,7 +51,7 @@ Games and the FM Towns BIOS are not supplied.
 
 | Type | Formats |
 | --- | --- |
-| CDs | CUE (with its BIN, IMG or ISO), CCD (with its IMG), MDS (with its MDF), ISO |
+| CDs | CUE (with its BIN, IMG or ISO), CCD (with its IMG), MDS (with its MDF), ISO, CHD |
 | Floppies | D77, D88 |
 | Archives | Any of the above inside ZIP or 7z archives |
 
@@ -59,12 +59,13 @@ A game's discs and disks show as one library entry. **Menu › Discs** changes t
 
 ## Firmware
 
-KairoTowns needs the FM Towns system, DOS, font and dictionary files (`FMT_SYS.ROM`, `FMT_DOS.ROM`, `FMT_FNT.ROM`, `FMT_DIC.ROM`) from your own machine; the 20-dot font (`FMT_F20.ROM`) is optional. **Menu › Machine** lists every BIOS file, each marked Required or Optional. Pick each file, or use **Import all from a folder…** to import every file the app recognizes in a folder you choose.
+KairoTowns needs the FM Towns system, DOS, font and dictionary files (`FMT_SYS.ROM`, `FMT_DOS.ROM`, `FMT_FNT.ROM`, `FMT_DIC.ROM`) from your own machine; the 20-dot font (`FMT_F20.ROM`) is optional. FM Towns Marty games also need the Marty's four extension ROMs, `MAR_EX0.ROM` to `MAR_EX3.ROM`. **Menu › Machine** lists every BIOS file, each marked Required or Optional. Pick each file, or use **Import all from a folder…** to import every file the app recognizes in a folder you choose.
 
 ## Machine settings
 
 **Menu › Machine** sets these for all games; each game can override them in its **Game settings**.
 
+- **Model:** the FM Towns or the FM Towns Marty. The catalog sets it for Marty games; a game it doesn't know asks once, at its first launch.
 - **Memory:** 2 to 16 MB (6 MB by default).
 - **CPU clock:** 16 to 66 MHz (40 MHz by default).
 - **Skip memory check** (on by default): starts games without the FM Towns's power-on memory test.

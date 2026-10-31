@@ -8,4 +8,6 @@ include("${KAIROTOWNS_ROOT}/shared/cmake/KairoMachine.cmake")
 add_subdirectory("${KAIROTOWNS_ROOT}/core" core)
 
 kairo_machine_library(kairotowns towns_core.cpp)
+# libkairo_chd.so, through which the library hashes CDs kept as CHDs (KairoTowns#97).
+kairo_chd_jni_library()
 target_link_libraries(kairotowns PRIVATE kairotowns_core)

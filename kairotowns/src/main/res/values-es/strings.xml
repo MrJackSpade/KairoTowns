@@ -39,4 +39,12 @@
     <string name="firmware_dictionary_description">diccionario de kana a kanji para texto en japonés</string>
     <!-- EN: a 20-dot font some games use -->
     <string name="firmware_large_font_description">una fuente de 20 puntos que usan algunos juegos</string>
+    <!-- EN: Model -->
+    <string name="model">Modelo</string>
+    <!-- EN: Which machine is this game for? -->
+    <string name="model_question">¿Para qué máquina es este juego?</string>
+    <!-- EN: part of the Marty\'s extension ROM -->
+    <string name="firmware_marty_ex_description">parte de la ROM de extensión de la Marty</string>
+    <!-- EN: Only Marty games need these -->
+    <string name="firmware_marty_note">Solo los juegos de Marty los necesitan</string>
 </resources>
