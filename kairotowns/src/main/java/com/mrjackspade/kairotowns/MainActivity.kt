@@ -99,19 +99,24 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
             rom("FMT_FNT.ROM", R.string.firmware_font, R.string.firmware_font_description, true, 0x40000),
             rom("FMT_DIC.ROM", FrontendR.string.kairo_firmware_dictionary, R.string.firmware_dictionary_description, true, 0x80000),
             rom("FMT_F20.ROM", R.string.firmware_large_font, R.string.firmware_large_font_description, false, 0x80000))),
-            // The FM Towns Marty's extension ROMs, which Tsugaru needs to start a Marty (KairoTowns#96).
-            UiText.res(FrontendR.string.kairo_firmware_title, "FM Towns Marty") to FirmwareSet(firmwareDir, (0..3).map { part ->
-                rom("MAR_EX$part.ROM", UiText.fixed("EX-ROM $part"), UiText.res(R.string.firmware_marty_ex_description), true, 0x80000)
+            // The FM Towns Marty's own ROM chips (KairoTowns#96), MAME's dumps, found by content;
+            // MartyRoms cuts them into the files Tsugaru reads.
+            UiText.res(FrontendR.string.kairo_firmware_title, "FM Towns Marty") to FirmwareSet(martyDir, (0..1).map { index ->
+                val name = if (index == 0) MartyRoms.CHIP0 else MartyRoms.CHIP1
+                FirmwareSet.Part(name, UiText.res(R.string.firmware_marty_chip, index + 1),
+                    UiText.res(FrontendR.string.kairo_firmware_part, name, UiText.res(R.string.firmware_marty_chip_description)),
+                    setOf(name), true, setOf(MartyRoms.CHIP_BYTES.toLong()), setOf(MartyRoms.SHA1.getValue(name)))
             }, note = UiText.res(R.string.firmware_marty_note)))
     }
-    /** The firmware a game starts on: the FM Towns's, and a Marty game also the Marty's. */
-    private fun firmwareFor(options: Map<String, String>) =
-        firmwareSets.map { it.second }.take(if (options.getValue(TownsCatalog.model.id) == "marty") 2 else 1)
+    private val martyDir by lazy { File(firmwareDir, "marty") }
+    private fun isMarty(options: Map<String, String>) = options.getValue(TownsCatalog.model.id) == "marty"
 
     override fun startGame(entry: DiskImageEntry, game: CatalogGame, cancelled: AtomicBoolean,
                            progress: (String) -> Unit) {
         val options = optionValues(game)
-        requireFirmware(firmwareFor(options))
+        // A Marty starts from its own ROMs, not the FM Towns's.
+        requireFirmware(listOf(firmwareSets[if (isMarty(options)) 1 else 0].second))
+        val romDir = if (isMarty(options)) MartyRoms.prepare(martyDir, File(martyDir, "rom")) else firmwareDir
         // A CD game's floppy: the boot floppy its catalog names, else the one floppy in its set, such
         // as a user disk.
         val floppy = when {
@@ -124,11 +129,12 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
         val hardDisk = if (isHardDisk(entry)) entry else companionFor(null, entry, launchEntries, missingDisk(UiText.res(R.string.companion_hard_disk)), ::isHardDisk)
         val media = listOf(cd, floppy, null, hardDisk)
         val images = media.map { disk -> disk?.let { disks.prepare(it, cancelled, progress).absolutePath } }
-        val home = File(filesDir, "tsugaru").apply { mkdirs() }
+        // A Marty keeps a CMOS of its own, apart from the FM Towns games' (towns_core.cpp, <home>/cmos.bin).
+        val home = File(filesDir, if (isMarty(options)) "tsugaru-marty" else "tsugaru").apply { mkdirs() }
         // The machine boots the disk the player starts: a hard disk boots before the CD beside it.
         val settings = options + (BOOT_HARD_DISK to if (isHardDisk(entry)) "on" else "off") +
             StartupCommands.setting(TownsCatalog.startupCommands.value(game, options))
-        check(bridge.start(firmwareDir.absolutePath, home.absolutePath, images, settings)) {
+        check(bridge.start(romDir.absolutePath, home.absolutePath, images, settings)) {
             "Another machine is still running"
         }
         awaitRunning()

@@ -43,8 +43,10 @@
     <string name="model">機種</string>
     <!-- EN: Which machine is this game for? -->
     <string name="model_question">このゲームの機種は？</string>
-    <!-- EN: part of the Marty\'s extension ROM -->
-    <string name="firmware_marty_ex_description">Marty の拡張 ROM の一部</string>
+    <!-- EN: ROM chip %1$d -->
+    <string name="firmware_marty_chip">ROM チップ %1$d</string>
+    <!-- EN: the Marty\'s system ROM, as MAME dumps it (fmtmarty.zip) -->
+    <string name="firmware_marty_chip_description">MAME の吸い出し形式の Marty システム ROM（fmtmarty.zip）</string>
     <!-- EN: Only Marty games need these -->
     <string name="firmware_marty_note">Marty のゲームでのみ必要です</string>
 </resources>

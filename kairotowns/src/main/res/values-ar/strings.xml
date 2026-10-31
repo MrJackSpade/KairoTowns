@@ -43,8 +43,10 @@
     <string name="model">الطراز</string>
     <!-- EN: Which machine is this game for? -->
     <string name="model_question">لأي جهاز هذه اللعبة؟</string>
-    <!-- EN: part of the Marty\'s extension ROM -->
-    <string name="firmware_marty_ex_description">جزء من ذاكرة ROM الإضافية لجهاز Marty</string>
+    <!-- EN: ROM chip %1$d -->
+    <string name="firmware_marty_chip">شريحة ROM رقم %1$d</string>
+    <!-- EN: the Marty\'s system ROM, as MAME dumps it (fmtmarty.zip) -->
+    <string name="firmware_marty_chip_description">ذاكرة ROM النظام لجهاز Marty كما يفرّغها MAME ‏(fmtmarty.zip)</string>
     <!-- EN: Only Marty games need these -->
     <string name="firmware_marty_note">تحتاجها ألعاب Marty فقط</string>
 </resources>

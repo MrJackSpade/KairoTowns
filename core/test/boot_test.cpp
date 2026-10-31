@@ -1,6 +1,9 @@
 // Boots an FM Towns disc on the host and checks what the app relies on.
 //
-//   boot_test <rom dir> <work dir> <disc image> <seconds> [<floppy> [warp:<x>,<y> [<Tsugaru game setting>]]]
+//   boot_test <rom dir> <work dir> <disc image> <seconds> [<floppy> [warp:<x>,<y> [<Tsugaru game setting>]]] [model:marty] [memory:<MB>]
+//
+// model:marty, anywhere after <seconds>, starts an FM Towns Marty (Config::marty) from <rom dir>'s Marty ROMs;
+// memory:<MB> sets the main memory (Config::memory_mb).
 //
 // Runs the disc for <seconds> (with <floppy> in drive 0 when given, such as a game's user disk;
 // "" for none), writing <work dir>/boot.ppm of the last picture and reporting
@@ -79,6 +82,19 @@ void write_wav(const std::string &file, const std::vector<int16_t> &sound) {
 } // namespace
 
 int main(int argc, char **argv) {
+    // model:marty and memory:<MB> are taken out before the positional arguments are read.
+    bool marty = false;
+    unsigned memory_mb = 0;
+    for (int i = 5; i < argc;) {
+        const std::string arg = argv[i];
+        if (arg == "model:marty") marty = true;
+        else if (std::sscanf(argv[i], "memory:%u", &memory_mb) != 1) {
+            ++i;
+            continue;
+        }
+        for (int j = i; j + 1 < argc; ++j) argv[j] = argv[j + 1];
+        --argc;
+    }
     if (argc < 5 || argc > 8)
         return fail("usage: boot_test <rom dir> <work dir> <disc image> <seconds> "
                     "[<floppy> [warp:<x>,<y> [<Tsugaru game setting>]]]");
@@ -87,6 +103,8 @@ int main(int argc, char **argv) {
     config.rom_dir = argv[1];
     config.cmos_file = work + "/cmos.bin";
     config.cd = argv[3];
+    config.marty = marty;
+    if (memory_mb) config.memory_mb = memory_mb;
     if (argc >= 6) config.fd[0] = argv[5];
     // A direct-touch warp to this frame point after the boot, with warp.ppm of where it ends.
     int warp_x = -1, warp_y = -1;

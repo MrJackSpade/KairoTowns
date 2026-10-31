@@ -43,8 +43,10 @@
     <string name="model">Modelo</string>
     <!-- EN: Which machine is this game for? -->
     <string name="model_question">¿Para qué máquina es este juego?</string>
-    <!-- EN: part of the Marty\'s extension ROM -->
-    <string name="firmware_marty_ex_description">parte de la ROM de extensión de la Marty</string>
+    <!-- EN: ROM chip %1$d -->
+    <string name="firmware_marty_chip">Chip de ROM %1$d</string>
+    <!-- EN: the Marty\'s system ROM, as MAME dumps it (fmtmarty.zip) -->
+    <string name="firmware_marty_chip_description">la ROM de sistema de la Marty, tal como la vuelca MAME (fmtmarty.zip)</string>
     <!-- EN: Only Marty games need these -->
     <string name="firmware_marty_note">Solo los juegos de Marty los necesitan</string>
 </resources>

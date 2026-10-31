@@ -59,7 +59,7 @@ A game's discs and disks show as one library entry. **Menu › Discs** changes t
 
 ## Firmware
 
-KairoTowns needs the FM Towns system, DOS, font and dictionary files (`FMT_SYS.ROM`, `FMT_DOS.ROM`, `FMT_FNT.ROM`, `FMT_DIC.ROM`) from your own machine; the 20-dot font (`FMT_F20.ROM`) is optional. FM Towns Marty games also need the Marty's four extension ROMs, `MAR_EX0.ROM` to `MAR_EX3.ROM`. **Menu › Machine** lists every BIOS file, each marked Required or Optional. Pick each file, or use **Import all from a folder…** to import every file the app recognizes in a folder you choose.
+KairoTowns needs the FM Towns system, DOS, font and dictionary files (`FMT_SYS.ROM`, `FMT_DOS.ROM`, `FMT_FNT.ROM`, `FMT_DIC.ROM`) from your own machine; the 20-dot font (`FMT_F20.ROM`) is optional. FM Towns Marty games start from the Marty's own ROMs: its two ROM chips as MAME dumps them, `mrom.m36` and `mrom.m37` (MAME's `fmtmarty.zip`; **Import all from a folder…** finds them inside the ZIP). **Menu › Machine** lists every BIOS file, each marked Required or Optional. Pick each file, or use **Import all from a folder…** to import every file the app recognizes in a folder you choose.
 
 ## Machine settings
 
