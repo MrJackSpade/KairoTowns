@@ -520,6 +520,13 @@ struct TownsMachine::Impl {
 
     unsigned pad = 0;
     bool buttons[2] = {false, false};
+    // Button presses and releases not yet given to the guest (poll_devices). A guest reading the
+    // mouse gets the next one only after it has read the mouse with the last (Port::kairoMouseSamples
+    // moved on): it reads the mouse more slowly than presses and releases come, so a double tap's short
+    // release, or a quick tap, would come and go between two of its reads (KairoTowns#99). A guest that
+    // has never read it gets each at once.
+    std::deque<std::pair<int, bool>> button_changes;
+    uint64_t button_samples = 0;
     int mouse_dx = 0, mouse_dy = 0;
     // Direct touch (TownsMachine::mouse_warp): the frame point the TBIOS pointer is heading for, and
     // polls since the pointer last moved. A guest clamps its pointer at its own limits, so a pointer
@@ -534,6 +541,12 @@ struct TownsMachine::Impl {
         auto &t = *towns;
         t.SetGamePadState(0, pad & PAD_A, pad & PAD_B, pad & PAD_LEFT, pad & PAD_RIGHT, pad & PAD_UP, pad & PAD_DOWN,
                           pad & PAD_RUN, pad & PAD_SELECT, false);
+        const uint64_t samples = t.gameport.state.ports[1].kairoMouseSamples;
+        if (!button_changes.empty() && (samples == 0 || samples != button_samples)) {
+            buttons[button_changes.front().first] = button_changes.front().second;
+            button_changes.pop_front();
+            button_samples = samples;
+        }
         t.SetMouseButtonState(buttons[0], buttons[1]);
         if (warp == Warp::kMoving) {
             steer_warp();
@@ -987,7 +1000,7 @@ void TownsMachine::mouse_warp(int x, int y) {
 bool TownsMachine::mouse_warp_done() const { return impl_->warp == Impl::Warp::kNone; }
 
 void TownsMachine::mouse_button(int button, bool down) {
-    if (button == 1 || button == 2) impl_->buttons[button - 1] = down;
+    if (button == 1 || button == 2) impl_->button_changes.emplace_back(button - 1, down);
 }
 
 void TownsMachine::reset() {

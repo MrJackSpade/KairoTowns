@@ -69,6 +69,10 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
     private fun isHardDisk(entry: DiskImageEntry) = format.kind(entry.displayName) == "hd"
 
     override val machineOptions = TownsCatalog.options
+    // The core gives the guest each button change once it has read the last (KairoTowns#99), so a tap is a short click
+    // and two taps are a double click, as Towns MENU needs to open anything.
+    override val tapClickMillis: Long = 100
+
     // Zero-filled SCSI hard disks at ID 0 (.h0): Towns OS's setup prepares one.
     override val blankDisks = listOf(40, 100, 240).map { mb ->
         coreBlankDisk("scsi-$mb", UiText.res(FrontendR.string.kairo_blank_hard_disk, "$mb MB · SCSI"), "h0")
