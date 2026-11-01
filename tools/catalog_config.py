@@ -32,8 +32,8 @@ def kind(name):
     return "cd" if suffix in CD else "fd" if suffix in FLOPPY else "hd" if suffix in HARD_DISK else None
 
 
-# Version 3: HDM floppies and hard disks. Version 4: CHDs.
-MEDIA = content_ids.Media(kind, content_ids.same_file, LIMITS.__getitem__, 4, seven_zip=True,
+# Version 3: HDM floppies and hard disks. Version 4: CHDs. Version 5: multi-BIN CUEs.
+MEDIA = content_ids.Media(kind, content_ids.same_file, LIMITS.__getitem__, 5, seven_zip=True,
                           candidates=CD_DATA, superseded_by=SUPERSEDED_BY)
 
 MOBYGAMES = "fmtowns"

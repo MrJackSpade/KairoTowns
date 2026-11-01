@@ -59,8 +59,8 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
         data = mapOf("ccd" to listOf("img"), "mds" to listOf("mdf"), "cue" to listOf("bin", "img", "iso")),
         supersededBy = mapOf("cue" to setOf("ccd", "mds"), "iso" to setOf("cue")))
     private val disks by lazy {
-        // 2: hard disks and HDM floppies, 3: CHDs, so archives scanned before are looked into again.
-        DiskImageLibrary(this, format, DiskImageLibrary.Cache(mediaFormatsVersion = 3))
+        // 2: hard disks and HDM floppies, 3: CHDs, 4: multi-BIN CUEs, so archives scanned before are looked into again.
+        DiskImageLibrary(this, format, DiskImageLibrary.Cache(mediaFormatsVersion = 4))
     }
     override fun createCatalog() = LayeredGameCatalog(this, TownsCatalog)
     override fun createLibrary(catalog: LayeredGameCatalog) = disks
