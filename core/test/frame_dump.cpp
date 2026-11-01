@@ -1,6 +1,6 @@
 // Runs an FM Towns disc on the host and writes its pictures, to look at what the core draws.
 //
-//   frame_dump <rom dir> <work dir> <disc image> <seconds> <frames between pictures> <skip|check>
+//   frame_dump <rom dir> <work dir> <disc image> <seconds> <frames between pictures> <skip|check> [model:marty]
 //
 // Writes <work dir>/frame-<n>.ppm, n being the frame number, every <frames between pictures>
 // frames, and prints every change of picture size with the frame it happened on. skip skips the
@@ -36,7 +36,10 @@ bool write_ppm(const std::string &file, const uint8_t *pixels, uint32_t width, u
 } // namespace
 
 int main(int argc, char **argv) {
-    if (argc != 7) return fail("usage: frame_dump <rom dir> <work dir> <disc image> <seconds> <frames between pictures> <skip|check>");
+    // model:marty, last, starts an FM Towns Marty from <rom dir>'s Marty ROMs (Config::marty), as boot_test's does.
+    const bool marty = argc == 8 && std::string(argv[7]) == "model:marty";
+    if (marty) --argc;
+    if (argc != 7) return fail("usage: frame_dump <rom dir> <work dir> <disc image> <seconds> <frames between pictures> <skip|check> [model:marty]");
     const std::string memory_check = argv[6];
     if (memory_check != "skip" && memory_check != "check") return fail("the memory check is skip or check");
     const std::string work = argv[2];
@@ -49,6 +52,7 @@ int main(int argc, char **argv) {
     config.cd = argv[3];
     config.skip_memory_check = memory_check == "skip";
     config.repeatable = memory_check == "check";
+    config.marty = marty;
 
     std::string error;
     auto machine = TownsMachine::create(config, error);
@@ -66,9 +70,21 @@ int main(int argc, char **argv) {
             last_width = width;
             last_height = height;
         }
-        if (frame % every == 0 &&
-            !write_ppm(work + "/frame-" + std::to_string(frame) + ".ppm", pixels, width, height))
-            return fail("cannot write frame " + std::to_string(frame));
+        if (frame % every == 0) {
+            if (!write_ppm(work + "/frame-" + std::to_string(frame) + ".ppm", pixels, width, height))
+                return fail("cannot write frame " + std::to_string(frame));
+            // Where the CPU is at each picture, so a boot that stops shows where.
+            const auto cpu = machine->snapshot();
+            std::printf("frame %d: CPU at %04x:%08x, mode %u\n", frame, cpu.cs, cpu.eip, cpu.cpu_mode);
+        }
+    }
+    const auto cpu = machine->snapshot();
+    std::printf("%s", machine->disassemble(cpu.cs, cpu.eip, 12).c_str());
+    // The guest's memory at the end, to read what a program that shows nothing left there.
+    const auto &memory = machine->ram();
+    if (FILE *out = std::fopen((work + "/ram.bin").c_str(), "wb")) {
+        std::fwrite(memory.data(), 1, memory.size(), out);
+        std::fclose(out);
     }
     std::printf("PASS\n");
     return 0;
