@@ -1,14 +1,16 @@
 """KairoTowns's catalog settings: FM Towns CD, floppy and SCSI hard disk media, artwork references
 and the platform's slug. A CD's content ID hashes its data track file, as the app's media rules find it
-(kairotowns MainActivity): a CCD its IMG, an MDS its MDF, a CUE the BIN, IMG or ISO beside it,
-and an ISO itself. A CUE beside a CCD or MDS of the same name, and an ISO beside a CUE, are the
+(kairotowns MainActivity): a CCD its IMG, an MDS its MDF, a CUE the BIN, IMG or ISO beside it
+(or, without one, the BINs its FILE lines name, joined: Redump's one per track), and an ISO itself. A CUE beside a CCD or MDS of the same name, and an ISO beside a CUE, are the
 same disc, listed once."""
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "shared/tools"))
 import content_ids
+import disk_sets
 from launchbox_artwork import References
 
 APP = "kairotowns"
@@ -37,7 +39,24 @@ MEDIA = content_ids.Media(kind, content_ids.same_file, LIMITS.__getitem__, 5, se
                           candidates=CD_DATA, superseded_by=SUPERSEDED_BY)
 
 MOBYGAMES = "fmtowns"
-SCANS = {"fmtowns-cd": (".downloads/scan/fmtowns-cd.json", ("fmtowns",))}
+SCANS = {"fmtowns-cd": (".downloads/scan/fmtowns-cd.json", ("fmtowns",)),
+         # Redump's FM Towns set, the Marty discs among them (KairoTowns#101).
+         "fmtowns-redump": (".downloads/scan/fmtowns-redump.json", ("fmtowns",))}
+# Every Redump dump of a disc (a revision, a Marty rerelease) is one game.
+GROUP = disk_sets.dump_group
+
+# A disc made for the FM Towns Marty, as its Redump name says ("(FM Towns Marty)", "(Car Marty)",
+# "Hyper Planet for Marty"), starts on a Marty (TownsCatalog.model, KairoTowns#96).
+_MARTY = re.compile(r"\bMarty\b")
+
+
+# The machine settings a game can ask for, as TownsCatalog's options name them.
+MACHINE_OPTIONS = {"model": {"towns", "marty"}, "memory": {2, 4, 6, 8, 12, 16}, "cpu": {16, 20, 25, 33, 40, 66}}
+
+
+def MACHINE(name, set_name, content_id):
+    return {"model": "marty"} if _MARTY.search(name) else {}
+
 
 # Disk sets (shared/tools/disk_sets.py): a game boots from its hard disk, with its set's CD in the drive,
 # else from its CD, with its floppy (often a user disk) in drive A.

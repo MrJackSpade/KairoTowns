@@ -1,5 +1,38 @@
 {
  "games": {
+  "fmtowns:183541": {
+   "adult": true
+  },
+  "fmtowns:183542": {
+   "adult": true
+  },
+  "fmtowns:183543": {
+   "adult": true
+  },
+  "fmtowns:183545": {
+   "adult": true
+  },
+  "fmtowns:185084": {
+   "adult": true
+  },
+  "fmtowns:185085": {
+   "adult": true
+  },
+  "fmtowns:187811": {
+   "adult": true
+  },
+  "fmtowns:188224": {
+   "adult": true
+  },
+  "fmtowns:188365": {
+   "adult": true
+  },
+  "fmtowns:188366": {
+   "adult": true
+  },
+  "fmtowns:188772": {
+   "adult": true
+  },
   "fmtowns:188774": {
    "adult": true
   },
@@ -9,7 +42,13 @@
   "fmtowns:188776": {
    "adult": true
   },
+  "fmtowns:188794": {
+   "adult": true
+  },
   "fmtowns:188795": {
+   "adult": true
+  },
+  "fmtowns:188801": {
    "adult": true
   },
   "fmtowns:188807": {
@@ -22,6 +61,9 @@
    "adult": true
   },
   "fmtowns:188903": {
+   "adult": true
+  },
+  "fmtowns:192861": {
    "adult": true
   },
   "fmtowns:192863": {
@@ -45,10 +87,22 @@
   "fmtowns:197175": {
    "adult": true
   },
+  "fmtowns:198889": {
+   "adult": true
+  },
+  "fmtowns:198890": {
+   "adult": true
+  },
+  "fmtowns:199998": {
+   "adult": true
+  },
   "fmtowns:200007": {
    "adult": true
   },
   "fmtowns:200009": {
+   "adult": true
+  },
+  "fmtowns:200752": {
    "adult": true
   },
   "fmtowns:201328": {
@@ -61,6 +115,9 @@
    "adult": true
   },
   "fmtowns:201340": {
+   "adult": true
+  },
+  "fmtowns:201342": {
    "adult": true
   },
   "fmtowns:201345": {
@@ -102,7 +159,22 @@
   "fmtowns:462515": {
    "adult": true
   },
+  "fmtowns:local-62900c8deb": {
+   "adult": true
+  },
+  "fmtowns:local-a796bab8dc": {
+   "adult": true
+  },
   "fmtowns:local-b1b187cf00": {
+   "adult": true
+  },
+  "fmtowns:local-d970e8eb4a": {
+   "adult": true
+  },
+  "fmtowns:local-df6cfc6fbe": {
+   "adult": true
+  },
+  "fmtowns:local-fb86b70e78": {
    "adult": true
   }
  },
