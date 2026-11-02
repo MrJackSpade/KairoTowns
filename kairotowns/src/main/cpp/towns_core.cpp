@@ -38,16 +38,19 @@ public:
     bool run_frame() override { return machine_->run_frame(error_); }
     std::string error() override { return error_; }
 
+    // Only the area the guest displays (KairoTowns#105), inside the wider picture's rows.
     const uint8_t *frame(uint32_t &width, uint32_t &height) override {
-        const uint8_t *pixels = machine_->frame(width, height);
+        const uint8_t *pixels = machine_->displayed(width, height, stride_);
         if (pixels) return pixels;
         // Black until the machine draws its first picture.
         width = 640;
         height = 480;
+        stride_ = 0;
         blank_.resize(width * height * 4);
         for (size_t i = 3; i < blank_.size(); i += 4) blank_[i] = 0xff;
         return blank_.data();
     }
+    uint32_t frame_stride() override { return stride_; }
 
     double frame_seconds() override { return machine_->frame_seconds(); }
     int32_t audio_rate() override { return TownsMachine::kAudioRate; }
@@ -143,6 +146,7 @@ private:
     std::unique_ptr<TownsMachine> machine_;
     std::string error_;
     std::vector<uint8_t> blank_;
+    uint32_t stride_ = 0;
     std::array<bool, 128> keys_{};
     unsigned pad_ = 0;
 };

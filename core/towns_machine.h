@@ -79,6 +79,9 @@ public:
     double frame_seconds() const;
     // The latest picture, RGBA rows of width pixels; null before the first one.
     const uint8_t *frame(uint32_t &width, uint32_t &height) const;
+    // The part of the latest picture the guest displays, where its shown layers lie (KairoTowns#105):
+    // its top left pixel, width by height, in rows stride bytes apart; null before the first one.
+    const uint8_t *displayed(uint32_t &width, uint32_t &height, uint32_t &stride) const;
     // Takes up to max_frames interleaved stereo frames produced so far.
     uint32_t read_audio(int16_t *stereo, uint32_t max_frames);
 
@@ -98,7 +101,7 @@ public:
     void pad(unsigned buttons);
     // The mouse in port 1: motion in mickeys, and button 1 (left) or 2 (right).
     void mouse_move(int dx, int dy);
-    // Direct touch: moves the guest's TBIOS mouse pointer to frame point (x, y) over the next polls,
+    // Direct touch: moves the guest's TBIOS mouse pointer to point (x, y) of displayed() over the next polls,
     // through Tsugaru's mouse integration. A guest without the TBIOS mouse running cannot be moved
     // there, and the warp never finishes.
     void mouse_warp(int x, int y);

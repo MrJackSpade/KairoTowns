@@ -7,6 +7,8 @@
 #include <chrono>
 #include <cstring>
 #include <deque>
+#include <stdexcept>
+#include <string>
 
 #include "cpputil.h"
 #include "outside_world.h"
@@ -958,6 +960,21 @@ const uint8_t *TownsMachine::frame(uint32_t &width, uint32_t &height) const {
     return image.rgba.data();
 }
 
+const uint8_t *TownsMachine::displayed(uint32_t &width, uint32_t &height, uint32_t &stride) const {
+    uint32_t frame_width = 0, frame_height = 0;
+    const uint8_t *pixels = frame(frame_width, frame_height);
+    if (!pixels) return nullptr;
+    const auto &area = impl_->pictures.area();
+    if (area.x + area.width > frame_width || area.y + area.height > frame_height)
+        throw std::logic_error("The displayed area " + std::to_string(area.width) + "x" + std::to_string(area.height) +
+                               " at " + std::to_string(area.x) + "," + std::to_string(area.y) + " is outside the " +
+                               std::to_string(frame_width) + "x" + std::to_string(frame_height) + " picture");
+    width = area.width;
+    height = area.height;
+    stride = frame_width * 4;
+    return pixels + (size_t(area.y) * frame_width + area.x) * 4;
+}
+
 uint32_t TownsMachine::read_audio(int16_t *stereo, uint32_t max_frames) { return impl_->speaker.read(stereo, max_frames); }
 
 void TownsMachine::key(int code, bool down) {
@@ -992,8 +1009,9 @@ void TownsMachine::mouse_move(int dx, int dy) {
 
 void TownsMachine::mouse_warp(int x, int y) {
     impl_->warp = Impl::Warp::kMoving;
-    impl_->warp_x = x;
-    impl_->warp_y = y;
+    // The point is in the displayed area; the pointer moves in the whole picture's pixels.
+    impl_->warp_x = x + int(impl_->pictures.area().x);
+    impl_->warp_y = y + int(impl_->pictures.area().y);
     impl_->warp_still = 0;
     impl_->mouse_dx = impl_->mouse_dy = 0;
 }
