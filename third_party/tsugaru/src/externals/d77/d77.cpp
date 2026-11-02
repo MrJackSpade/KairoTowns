@@ -2312,6 +2312,27 @@ bool D77File::SetRawBinary(long long int nByte,const unsigned char byteData[],bo
 		   737280 bytes ->  720KB   512bytes/sector,  9sectors/track, 80tracks, 2sides
 		   655360 bytes ->  640KB   512bytes/sector,  8sectors/track, 80tracks, 2sides
 		   327680 bytes ->  320KB   256bytes/sector, 16sectors/track, 40tracks, 2sides */
+	/*! KairoTowns: an image a dump padded past its disk with one repeated byte (a 1232KB floppy
+	    followed by unformatted sectors' E5H, KairoTowns#103) is that disk; the padding is not part
+	    of it. An image of a size above is that size's disk, whatever its last bytes are.
+	*/
+	const long long int kairoKnownSizes[]={1474560,1261568,737280,655360,327680};
+	if(std::end(kairoKnownSizes)==std::find(std::begin(kairoKnownSizes),std::end(kairoKnownSizes),nByte))
+	{
+		for(auto known : kairoKnownSizes)
+		{
+			if(known<nByte &&
+			   std::all_of(byteData+known,byteData+nByte,[&](unsigned char c){return c==byteData[known];}))
+			{
+				if(true==verboseMode)
+				{
+					printf("%lld bytes of padding after a %lldKB disk left out.\n",nByte-known,known/1024);
+				}
+				nByte=known;
+				break;
+			}
+		}
+	}
 	switch(nByte)
 	{
 	case 1474560:

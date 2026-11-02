@@ -122,7 +122,13 @@ void FMTownsCommon::State::PowerOn(void)
 		{
 			auto imgFileName=towns.var.ApplyAlias(argv.fdImgFName[drv]);
 			imgFileName=cpputil::ExpandFileName(imgFileName,towns.var.specialPath);
-			towns.fdc.LoadD77orRDDorRAW(drv,imgFileName.c_str(),towns.state.townsTime);
+			// KairoTowns: a floppy image that does not load stops the machine, naming it, instead of
+			// starting with the drive empty (KairoTowns#103).
+			if(true!=towns.fdc.LoadD77orRDDorRAW(drv,imgFileName.c_str(),towns.state.townsTime))
+			{
+				towns.Abort("FDC","The floppy image "+imgFileName+" cannot be read as a disk.");
+				return false;
+			}
 			if(true==argv.fdImgWriteProtect[drv])
 			{
 				// D77 image may have write-protect switch.

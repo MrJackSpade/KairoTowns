@@ -47,7 +47,9 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
      * CDs as Tsugaru opens them: a CCD reads its IMG, an MDS its MDF, a CUE the BIN, IMG or ISO
      * beside it, and an ISO itself. A CUE beside a CCD or MDS, and an ISO beside a CUE, are the
      * same disc, listed once. Floppies in D77 and raw sector images (HDM), and SCSI hard disks
-     * (.h0 to .h6, the SCSI ID in the extension). tools/catalog_config.py hashes them by the same rules.
+     * (.h0 to .h6, the SCSI ID in the extension). A BIN, IMG or ISO no sheet reads is a floppy when it
+     * holds an FM Towns boot sector and is a floppy's size (bootFloppy): a boot disk a dump kept as
+     * .bin beside its CD (KairoTowns#103). tools/catalog_config.py hashes them by the same rules.
      */
     private val format = DiskImageLibrary.Format(
         kinds = listOf("ccd", "cue", "mds", "iso", "chd").associateWith { "cd" } +
@@ -57,17 +59,27 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
         maxBytes = mapOf("cd" to 2L * 1024 * 1024 * 1024, "fd" to 64L * 1024 * 1024, "hd" to 4L * 1024 * 1024 * 1024),
         guestName = "FM Towns",
         data = mapOf("ccd" to listOf("img"), "mds" to listOf("mdf"), "cue" to listOf("bin", "img", "iso")),
-        supersededBy = mapOf("cue" to setOf("ccd", "mds"), "iso" to setOf("cue")))
+        supersededBy = mapOf("cue" to setOf("ccd", "mds"), "iso" to setOf("cue")),
+        probe = { head, size -> if (bootFloppy(head, size)) "fd" else null })
     private val disks by lazy {
-        // 2: hard disks and HDM floppies, 3: CHDs, 4: multi-BIN CUEs, so archives scanned before are looked into again.
-        DiskImageLibrary(this, format, DiskImageLibrary.Cache(mediaFormatsVersion = 4))
+        // 2: hard disks and HDM floppies, 3: CHDs, 4: multi-BIN CUEs, 5: boot floppies kept as track data,
+        // so archives scanned before are looked into again.
+        DiskImageLibrary(this, format, DiskImageLibrary.Cache(mediaFormatsVersion = 5))
     }
     override fun createCatalog() = LayeredGameCatalog(this, TownsCatalog)
     override fun createLibrary(catalog: LayeredGameCatalog) = disks
 
-    private fun isCd(entry: DiskImageEntry) = format.kind(entry.displayName) == "cd"
-    private fun isFloppy(entry: DiskImageEntry) = format.kind(entry.displayName) == "fd"
-    private fun isHardDisk(entry: DiskImageEntry) = format.kind(entry.displayName) == "hd"
+    /**
+     * A floppy's raw sectors: the FM Towns boot sector's "IPL4" at the start, and at most 2 MB (a
+     * 1.44 MB disk with a dump's padding; a CD's first sector has the same signature, but a CD is
+     * far larger). tools/catalog_config.py's boot_floppy is the same rule.
+     */
+    private fun bootFloppy(head: ByteArray, size: Long) =
+        size in 1..2L * 1024 * 1024 && head.size >= 4 && String(head, 0, 4, Charsets.US_ASCII) == "IPL4"
+
+    private fun isCd(entry: DiskImageEntry) = entry.kind == "cd"
+    private fun isFloppy(entry: DiskImageEntry) = entry.kind == "fd"
+    private fun isHardDisk(entry: DiskImageEntry) = entry.kind == "hd"
 
     override val machineOptions = TownsCatalog.options
     // The core holds each button change for a few guest frames (KairoTowns#99), so a tap is a short click and two taps

@@ -52,7 +52,7 @@ Games and the FM Towns BIOS are not supplied.
 | Type | Formats |
 | --- | --- |
 | CDs | CUE (with its BIN, IMG or ISO), CCD (with its IMG), MDS (with its MDF), ISO, CHD |
-| Floppies | D77, D88 |
+| Floppies | D77, D88, 88D, HDM (raw sectors), and a raw boot disk kept as BIN, IMG or ISO beside its CD, recognized by its content |
 | Archives | Any of the above inside ZIP or 7z archives |
 
 A game's discs and disks show as one library entry. **Menu › Discs** changes them during play.

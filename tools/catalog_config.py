@@ -34,9 +34,16 @@ def kind(name):
     return "cd" if suffix in CD else "fd" if suffix in FLOPPY else "hd" if suffix in HARD_DISK else None
 
 
-# Version 3: HDM floppies and hard disks. Version 4: CHDs. Version 5: multi-BIN CUEs.
-MEDIA = content_ids.Media(kind, content_ids.same_file, LIMITS.__getitem__, 5, seven_zip=True,
-                          candidates=CD_DATA, superseded_by=SUPERSEDED_BY)
+def boot_floppy(head, size):
+    """A floppy's raw sectors kept as track data (a boot disk dumped as .bin beside its CD,
+    KairoTowns#103): the FM Towns boot sector's "IPL4" and at most 2 MB, as the app's bootFloppy."""
+    return "fd" if 0 < size <= 2 * 1024**2 and head[:4] == b"IPL4" else None
+
+
+# Version 3: HDM floppies and hard disks. Version 4: CHDs. Version 5: multi-BIN CUEs. Version 6: boot
+# floppies kept as track data.
+MEDIA = content_ids.Media(kind, content_ids.same_file, LIMITS.__getitem__, 6, seven_zip=True,
+                          candidates=CD_DATA, superseded_by=SUPERSEDED_BY, probe=boot_floppy)
 
 MOBYGAMES = "fmtowns"
 SCANS = {"fmtowns-cd": (".downloads/scan/fmtowns-cd.json", ("fmtowns",)),
