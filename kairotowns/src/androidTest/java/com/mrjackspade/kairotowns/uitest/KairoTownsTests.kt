@@ -2,6 +2,7 @@ package com.mrjackspade.kairotowns.uitest
 
 import com.mrjackspade.kairo.uitest.AppUnderTest
 import com.mrjackspade.kairo.uitest.AppUnderTest.BiosFile
+import com.mrjackspade.kairo.uitest.AppUnderTest.CdDrive
 import com.mrjackspade.kairo.uitest.AppUnderTest.MediaSwap
 import com.mrjackspade.kairo.uitest.KairoUiTest
 import com.mrjackspade.kairo.uitest.suites.FirstRunTests
@@ -41,6 +42,10 @@ object KairoTownsApp : AppUnderTest() {
     override val otherGame = "Intruder"
     override val defaultOption = "cpu"
     override val mediaSwap = MediaSwap("Intruder", "Floppy A", "Intruder", filler = "d88")
+    // Lemmings is played with the mouse; Intruder with the pad (TouchTests' Auto).
+    override val mouseGame = "Lemmings"
+    override val keyboardGame = "Intruder"
+    override val cdDrive = CdDrive("Populous & The Promised Lands", "CD-ROM")
 }
 
 class KairoTownsFirstRunTests : FirstRunTests() { override val app = KairoTownsApp }

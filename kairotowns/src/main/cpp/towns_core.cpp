@@ -194,6 +194,8 @@ std::unique_ptr<kairo::MachineCore> kairo::create_core(const kairo::Launch &laun
         return nullptr;
     }
     config.skip_memory_check = skip == "on";
+    // A test that compares runs (the shared PC boot test): the RTC at a fixed time, CD audio read at once.
+    config.repeatable = launch.repeatable;
     // MainActivity's: on when the player starts the hard disk, which then boots before the CD.
     const std::string &boot_hard_disk = launch.settings.at("bootHardDisk");
     if (boot_hard_disk != "on" && boot_hard_disk != "off") {

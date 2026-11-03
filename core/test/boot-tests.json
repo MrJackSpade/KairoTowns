@@ -1,0 +1,110 @@
+{
+  "tests": [
+    {
+      "name": "Populous",
+      "firmware": "bios",
+      "media": [
+        "games/Populous & The Promised Lands (1990)(Imagineer)(Jp)/Populous & The Promised Lands (1990)(Imagineer)(Jp).cue"
+      ],
+      "settings": {
+        "memory": "6",
+        "cpu": "40",
+        "skipMemoryCheck": "on",
+        "bootHardDisk": "off",
+        "model": "towns",
+        "pad": "2"
+      },
+      "checks": {
+        "boot": {
+          "frames": 1800
+        },
+        "sessions": {
+          "frames": 600
+        },
+        "state": {
+          "at": 600,
+          "frames": 120
+        }
+      }
+    },
+    {
+      "name": "Lemmings",
+      "firmware": "bios",
+      "media": [
+        "games/Lemmings (Japan)/Lemmings (Japan).cue"
+      ],
+      "settings": {
+        "memory": "6",
+        "cpu": "40",
+        "skipMemoryCheck": "on",
+        "bootHardDisk": "off",
+        "model": "towns",
+        "pad": "2"
+      },
+      "checks": {
+        "boot": {
+          "frames": 2400
+        },
+        "guestInput": {
+          "frames": 3600,
+          "expect": "mouse"
+        }
+      }
+    },
+    {
+      "name": "Intruder",
+      "firmware": "bios",
+      "media": [
+        "games/Intruder (1989)(AliceSoft)[+UserDisk]/Intruder (1989)(AliceSoft).iso",
+        "games/Intruder (1989)(AliceSoft)[+UserDisk]/Intruder (1989)(AliceSoft)[UserDisk].d88"
+      ],
+      "settings": {
+        "memory": "6",
+        "cpu": "40",
+        "skipMemoryCheck": "on",
+        "bootHardDisk": "off",
+        "model": "towns",
+        "pad": "2"
+      },
+      "checks": {
+        "boot": {
+          "frames": 1800
+        },
+        "guestInput": {
+          "frames": 2400,
+          "expect": "keyboard"
+        },
+        "stateDisks": {
+          "drive": 1,
+          "at": 900,
+          "swap": ""
+        },
+        "sessions": {
+          "frames": 600
+        },
+        "locks": {
+          "at": 900,
+          "keys": [
+            {
+              "code": 85,
+              "bit": 0
+            },
+            {
+              "code": 90,
+              "bit": 1
+            }
+          ]
+        },
+        "loading": {
+          "startsBy": 120,
+          "doneBy": 1800,
+          "settled": 120,
+          "idle": {
+            "media": [],
+            "frames": 900
+          }
+        }
+      }
+    }
+  ]
+}
