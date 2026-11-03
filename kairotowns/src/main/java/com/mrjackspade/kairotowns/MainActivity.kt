@@ -43,24 +43,7 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
     override val bindingsCodec = TownsKeys.bindings
     override val artworkDownloadsEnabled: Boolean get() = resources.getBoolean(R.bool.catalog_art_download_enabled)
 
-    /**
-     * CDs as Tsugaru opens them: a CCD reads its IMG, an MDS its MDF, a CUE the BIN, IMG or ISO
-     * beside it, and an ISO itself. A CUE beside a CCD or MDS, and an ISO beside a CUE, are the
-     * same disc, listed once. Floppies in D77 and raw sector images (HDM), and SCSI hard disks
-     * (.h0 to .h6, the SCSI ID in the extension). A BIN, IMG or ISO no sheet reads is a floppy when it
-     * holds an FM Towns boot sector and is a floppy's size (bootFloppy): a boot disk a dump kept as
-     * .bin beside its CD (KairoTowns#103). tools/catalog_config.py hashes them by the same rules.
-     */
-    private val format = DiskImageLibrary.Format(
-        kinds = listOf("ccd", "cue", "mds", "iso", "chd").associateWith { "cd" } +
-            listOf("d77", "d88", "88d", "hdm").associateWith { "fd" } + (0..6).associate { "h$it" to "hd" },
-        labels = mapOf("cd" to UiText.res(FrontendR.string.kairo_cd_rom), "fd" to UiText.res(FrontendR.string.kairo_floppy_disk),
-            "hd" to UiText.res(FrontendR.string.kairo_hard_disk)),
-        maxBytes = mapOf("cd" to 2L * 1024 * 1024 * 1024, "fd" to 64L * 1024 * 1024, "hd" to 4L * 1024 * 1024 * 1024),
-        guestName = "FM Towns",
-        data = mapOf("ccd" to listOf("img"), "mds" to listOf("mdf"), "cue" to listOf("bin", "img", "iso")),
-        supersededBy = mapOf("cue" to setOf("ccd", "mds"), "iso" to setOf("cue")),
-        probe = { head, size -> if (bootFloppy(head, size)) "fd" else null })
+    private val format = TownsMedia.format
     private val disks by lazy {
         // 2: hard disks and HDM floppies, 3: CHDs, 4: multi-BIN CUEs, 5: boot floppies kept as track data,
         // so archives scanned before are looked into again.
@@ -68,14 +51,6 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
     }
     override fun createCatalog() = LayeredGameCatalog(this, TownsCatalog)
     override fun createLibrary(catalog: LayeredGameCatalog) = disks
-
-    /**
-     * A floppy's raw sectors: the FM Towns boot sector's "IPL4" at the start, and at most 2 MB (a
-     * 1.44 MB disk with a dump's padding; a CD's first sector has the same signature, but a CD is
-     * far larger). tools/catalog_config.py's boot_floppy is the same rule.
-     */
-    private fun bootFloppy(head: ByteArray, size: Long) =
-        size in 1..2L * 1024 * 1024 && head.size >= 4 && String(head, 0, 4, Charsets.US_ASCII) == "IPL4"
 
     private fun isCd(entry: DiskImageEntry) = entry.kind == "cd"
     private fun isFloppy(entry: DiskImageEntry) = entry.kind == "fd"
@@ -98,29 +73,8 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
         MediaSlot(UiText.res(FrontendR.string.kairo_hard_disk), ::isHardDisk))
 
     private val firmwareDir by lazy { File(filesDir, "firmware") }
-    override val firmwareSets by lazy {
-        fun rom(name: String, label: UiText, description: UiText, required: Boolean, size: Int) =
-            FirmwareSet.Part(name, label, UiText.res(FrontendR.string.kairo_firmware_part, name, description), setOf(name.lowercase()),
-                required, setOf(size.toLong()))
-        fun rom(name: String, label: Int, description: Int, required: Boolean, size: Int) =
-            rom(name, UiText.res(label), UiText.res(description), required, size)
-        listOf(UiText.res(FrontendR.string.kairo_firmware_title, "FM Towns") to FirmwareSet(firmwareDir, listOf(
-            rom("FMT_SYS.ROM", UiText.res(R.string.firmware_system), UiText.res(R.string.firmware_system_description, "FM Towns"),
-                true, 0x40000),
-            rom("FMT_DOS.ROM", UiText.fixed("DOS"), UiText.res(R.string.firmware_dos_description), true, 0x80000),
-            rom("FMT_FNT.ROM", R.string.firmware_font, R.string.firmware_font_description, true, 0x40000),
-            rom("FMT_DIC.ROM", FrontendR.string.kairo_firmware_dictionary, R.string.firmware_dictionary_description, true, 0x80000),
-            rom("FMT_F20.ROM", R.string.firmware_large_font, R.string.firmware_large_font_description, false, 0x80000))),
-            // The FM Towns Marty's own ROM chips (KairoTowns#96), MAME's dumps, found by content;
-            // MartyRoms cuts them into the files Tsugaru reads.
-            UiText.res(FrontendR.string.kairo_firmware_title, "FM Towns Marty") to FirmwareSet(martyDir, (0..1).map { index ->
-                val name = if (index == 0) MartyRoms.CHIP0 else MartyRoms.CHIP1
-                FirmwareSet.Part(name, UiText.res(R.string.firmware_marty_chip, index + 1),
-                    UiText.res(FrontendR.string.kairo_firmware_part, name, UiText.res(R.string.firmware_marty_chip_description)),
-                    setOf(name), true, setOf(MartyRoms.CHIP_BYTES.toLong()), setOf(MartyRoms.SHA1.getValue(name)))
-            }, note = UiText.res(R.string.firmware_marty_note)))
-    }
-    private val martyDir by lazy { File(firmwareDir, "marty") }
+    override val firmwareSets by lazy { TownsFirmware.sets(firmwareDir) }
+    private val martyDir by lazy { TownsFirmware.martyDirectory(firmwareDir) }
     private fun isMarty(options: Map<String, String>) = options.getValue(TownsCatalog.model.id) == "marty"
 
     /** A game with the 6-button pad plays with its mapping: L and R are C and Z (catalog/system-v2.json). */
