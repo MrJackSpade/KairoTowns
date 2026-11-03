@@ -40,6 +40,11 @@ struct Config {
     // layout, which needs the four Marty EX-ROMs (MAR_EX0.ROM to MAR_EX3.ROM) in rom_dir, and the
     // Marty's pad in port 0 (its buttons are the gamepad's, PadButton).
     bool marty = false;
+    // Whether port 0 holds Fujitsu's 6-button pad (FMT-PAD601) instead of the 2-button pad (or the
+    // Marty's): its C, X, Y and Z reach the games written for it (Brandia, Super Street Fighter II,
+    // Samurai Spirits, Garou Densetsu Special). Not every game: a game that drives the pad's select
+    // line high to read something else loses the pad's directions (KairoTowns#104).
+    bool six_button_pad = false;
     // Whether the boot runs as fast as the host can until its first disk read, so the BIOS
     // memory test passes in a moment (this BIOS ignores the CMOS setting that skips it).
     bool skip_memory_check = true;
@@ -59,9 +64,12 @@ struct Config {
     std::string app;
 };
 
-// The gamepad in game port 0. A, B, RUN and SELECT are the pad's buttons.
+// The gamepad in game port 0 (Config::six_button_pad): the 2-button pad's directions, A, B, RUN and
+// SELECT; the 6-button pad's C, X, Y and Z; and the Marty pad's ZOOM, which Tsugaru reads from every
+// pad (KairoTowns#104).
 enum PadButton : unsigned {
-    PAD_UP = 1, PAD_DOWN = 2, PAD_LEFT = 4, PAD_RIGHT = 8, PAD_A = 16, PAD_B = 32, PAD_RUN = 64, PAD_SELECT = 128
+    PAD_UP = 1, PAD_DOWN = 2, PAD_LEFT = 4, PAD_RIGHT = 8, PAD_A = 16, PAD_B = 32, PAD_RUN = 64, PAD_SELECT = 128,
+    PAD_C = 256, PAD_X = 512, PAD_Y = 1024, PAD_Z = 2048, PAD_ZOOM = 4096
 };
 
 class TownsMachine {

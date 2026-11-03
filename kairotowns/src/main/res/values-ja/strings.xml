@@ -43,6 +43,12 @@
     <string name="model">機種</string>
     <!-- EN: Which machine is this game for? -->
     <string name="model_question">このゲームの機種は？</string>
+    <!-- EN: Gamepad -->
+    <string name="pad">ゲームパッド</string>
+    <!-- EN: 2-button pad -->
+    <string name="pad_2">2ボタンパッド</string>
+    <!-- EN: 6-button pad -->
+    <string name="pad_6">6ボタンパッド</string>
     <!-- EN: ROM chip %1$d -->
     <string name="firmware_marty_chip">ROM チップ %1$d</string>
     <!-- EN: the Marty\'s system ROM, as MAME dumps it (fmtmarty.zip) -->

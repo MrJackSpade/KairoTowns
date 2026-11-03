@@ -39,7 +39,7 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
     override val joystickControls get() = TownsKeys.joystick
     override val controllerSpec = ControllerGuestSpec("FM Towns", TownsKeys.bindableCodes, { TownsKeys.label(it) ?: "Key $it" },
         setOf(TownsKeys.SHIFT, TownsKeys.CTRL, TownsKeys.ALT), TownsKeys.joystick.zip(TownsKeys.joystickLabels),
-        UiText.res(R.string.joystick_help), ControllerGuestSpec.STANDARD_ACTIONS, TownsKeys.layout)
+        UiText.res(R.string.joystick_help), ControllerGuestSpec.STANDARD_ACTIONS, TownsKeys.layout, TownsKeys.twoButtonPad)
     override val bindingsCodec = TownsKeys.bindings
     override val artworkDownloadsEnabled: Boolean get() = resources.getBoolean(R.bool.catalog_art_download_enabled)
 
@@ -123,9 +123,16 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
     private val martyDir by lazy { File(firmwareDir, "marty") }
     private fun isMarty(options: Map<String, String>) = options.getValue(TownsCatalog.model.id) == "marty"
 
+    /** A game with the 6-button pad plays with its mapping: L and R are C and Z (catalog/system-v2.json). */
+    override fun machineControllerLayers(options: Map<String, String>) =
+        if (options.getValue(TownsCatalog.pad.id) == "6") listOf(SIX_BUTTON_PAD_LAYER) else emptyList()
+
     override fun startGame(entry: DiskImageEntry, game: CatalogGame, cancelled: AtomicBoolean,
                            progress: (String) -> Unit) {
         val options = optionValues(game)
+        // The Joystick tab shows the pad the game has (TownsCatalog.pad).
+        val pad = TownsKeys.joystickPorts(options.getValue(TownsCatalog.pad.id))
+        runOnUiThread { useJoystickPorts(pad) }
         // A Marty starts from its own ROMs, not the FM Towns's.
         requireFirmware(listOf(firmwareSets[if (isMarty(options)) 1 else 0].second))
         val romDir = if (isMarty(options)) MartyRoms.prepare(martyDir, File(martyDir, "rom")) else firmwareDir
@@ -156,5 +163,7 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
     private companion object {
         /** The launch setting that boots the hard disk although a CD is in the drive (towns_core.cpp). */
         const val BOOT_HARD_DISK = "bootHardDisk"
+        /** The system definition's controller layer for the 6-button pad (LayeredGameCatalog.systemControllerLayer). */
+        const val SIX_BUTTON_PAD_LAYER = "sixButtonPad"
     }
 }

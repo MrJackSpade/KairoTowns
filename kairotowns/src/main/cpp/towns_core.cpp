@@ -73,7 +73,8 @@ public:
 
     // Controls in TownsKeys.joystick order, which is the order of the core's pad bits.
     void joystick(int control, bool down) override {
-        if (control < 0 || control > 7) return;
+        // Thirteen: PadButton, PAD_UP to PAD_ZOOM.
+        if (control < 0 || control >= 13) return;
         pad_ = down ? pad_ | (1u << control) : pad_ & ~(1u << control);
         machine_->pad(pad_);
     }
@@ -207,6 +208,13 @@ std::unique_ptr<kairo::MachineCore> kairo::create_core(const kairo::Launch &laun
         return nullptr;
     }
     config.marty = model == "marty";
+    // TownsCatalog.pad: the 2-button pad (the Marty's own on a Marty) or Fujitsu's 6-button pad.
+    const std::string &pad = launch.settings.at("pad");
+    if (pad != "2" && pad != "6") {
+        error = "The gamepad is \"" + pad + "\", not 2 or 6";
+        return nullptr;
+    }
+    config.six_button_pad = pad == "6";
     auto machine = TownsMachine::create(config, error);
     if (!machine) return nullptr;
     return std::make_unique<TownsCore>(std::move(machine));

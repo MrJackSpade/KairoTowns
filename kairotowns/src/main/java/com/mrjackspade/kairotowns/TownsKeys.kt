@@ -9,6 +9,7 @@ import com.mrjackspade.kairo.frontend.JisMainBlock
 import com.mrjackspade.kairo.frontend.JisMainBlock.RETURN
 import com.mrjackspade.kairo.frontend.JisMainBlock.SPACE
 import com.mrjackspade.kairo.frontend.JoystickInputRouter
+import com.mrjackspade.kairo.frontend.JoystickPort
 import com.mrjackspade.kairo.frontend.KeyboardKey
 import com.mrjackspade.kairo.frontend.UiText
 import com.mrjackspade.kairo.frontend.R as FrontendR
@@ -165,9 +166,24 @@ object TownsKeys {
     }
 
     /** The gamepad's controls in the order of the core's pad bits (towns_machine.h PadButton). */
-    val joystick = JoystickInputRouter.DEFAULT_CONTROLS + listOf("run", "select")
+    val joystick = JoystickInputRouter.DEFAULT_CONTROLS + listOf("run", "select", "c", "x", "y", "z", "zoom")
     val joystickLabels = listOf(FrontendR.string.kairo_up, FrontendR.string.kairo_down, FrontendR.string.kairo_left,
-        FrontendR.string.kairo_right).map { UiText.res(it) } + listOf("A", "B", "RUN", "SELECT").map(UiText::fixed)
+        FrontendR.string.kairo_right).map { UiText.res(it) } +
+        listOf("A", "B", "RUN", "SELECT", "C", "X", "Y", "Z", "ZOOM").map(UiText::fixed)
+
+    /** The Joystick tab with the 2-button pad (TownsCatalog.pad): A, B, RUN, SELECT and the Marty pad's ZOOM. */
+    val twoButtonPad = listOf(JoystickPort(null, "up", "down", "left", "right",
+        listOf("button1", "button2", "run", "select", "zoom")))
+    /** With the 6-button pad: its buttons as it has them, X Y Z over A B C, then RUN, SELECT and ZOOM. */
+    val sixButtonPad = listOf(JoystickPort(null, "up", "down", "left", "right",
+        listOf("x", "y", "z", "button1", "button2", "c", "run", "select", "zoom"), columns = 3))
+
+    /** The Joystick tab for a game's pad option value ("2" or "6"). */
+    fun joystickPorts(pad: String): List<JoystickPort> = when (pad) {
+        "2" -> twoButtonPad
+        "6" -> sixButtonPad
+        else -> error("Unknown gamepad: $pad")
+    }
 
     val bindings = ControllerBindingsCodec({ it in bindableCodes }, joystick,
         setOf("menu", "pause", "restart", "exit", "fastForward"))

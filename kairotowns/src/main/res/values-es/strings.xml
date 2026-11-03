@@ -43,6 +43,12 @@
     <string name="model">Modelo</string>
     <!-- EN: Which machine is this game for? -->
     <string name="model_question">¿Para qué máquina es este juego?</string>
+    <!-- EN: Gamepad -->
+    <string name="pad">Mando</string>
+    <!-- EN: 2-button pad -->
+    <string name="pad_2">Mando de 2 botones</string>
+    <!-- EN: 6-button pad -->
+    <string name="pad_6">Mando de 6 botones</string>
     <!-- EN: ROM chip %1$d -->
     <string name="firmware_marty_chip">Chip de ROM %1$d</string>
     <!-- EN: the Marty\'s system ROM, as MAME dumps it (fmtmarty.zip) -->

@@ -37,7 +37,14 @@ object TownsCatalog : LayeredGameCatalog.Schema {
     val model = MachineOption("model", UiText.res(R.string.model),
         listOf(ChoiceOption("towns", UiText.fixed("FM Towns")), ChoiceOption("marty", UiText.fixed("FM Towns Marty"))), "towns",
         question = UiText.res(R.string.model_question))
-    val options = listOf(model, memory, cpu, skipMemoryCheck)
+    /**
+     * The gamepad in game port 0 (KairoTowns#104): the 2-button pad (the Marty's own on a Marty), or
+     * Fujitsu's 6-button pad, which the catalog gives the games written for it. Not the default for
+     * every game: a game that drives the pad's select line high loses the 6-button pad's directions.
+     */
+    val pad = MachineOption("pad", UiText.res(R.string.pad),
+        listOf(ChoiceOption("2", UiText.res(R.string.pad_2)), ChoiceOption("6", UiText.res(R.string.pad_6))), "2")
+    val options = listOf(model, memory, cpu, skipMemoryCheck, pad)
 
     /** The lines typed at DOS's prompt to start the game, such as a hard disk's `CD \GAME` and `GAME`. */
     val startupCommands = CatalogSetting.Lines(LAUNCH, COMMANDS, UiText.res(FrontendR.string.kairo_startup_commands),

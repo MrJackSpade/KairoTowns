@@ -10,8 +10,8 @@
       {"input": "virtual:b", "keys": [53]},
       {"input": "virtual:x", "joystick": "button1"},
       {"input": "virtual:y", "joystick": "button2"},
-      {"input": "virtual:c", "joystick": "button1"},
-      {"input": "virtual:z", "joystick": "button2"},
+      {"input": "virtual:c", "joystick": "c"},
+      {"input": "virtual:z", "joystick": "z"},
       {"input": "virtual:l1", "mouse": "leftButton"},
       {"input": "virtual:r1", "mouse": "rightButton"},
       {"input": "virtual:l2", "keys": [93]},
@@ -29,6 +29,16 @@
       {"input": "virtual:rsdown", "keys": [80]},
       {"input": "virtual:rsleft", "keys": [79]},
       {"input": "virtual:rsright", "keys": [81]}
-    ]
+    ],
+    "layers": {
+      "sixButtonPad": [
+        {"input": "virtual:a", "joystick": "button1"},
+        {"input": "virtual:b", "joystick": "button2"},
+        {"input": "virtual:x", "joystick": "x"},
+        {"input": "virtual:y", "joystick": "y"},
+        {"input": "virtual:l1", "joystick": "c"},
+        {"input": "virtual:r1", "joystick": "z"}
+      ]
+    }
   }
 }

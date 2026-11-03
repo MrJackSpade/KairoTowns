@@ -43,6 +43,12 @@
     <string name="model">الطراز</string>
     <!-- EN: Which machine is this game for? -->
     <string name="model_question">لأي جهاز هذه اللعبة؟</string>
+    <!-- EN: Gamepad -->
+    <string name="pad">ذراع التحكم</string>
+    <!-- EN: 2-button pad -->
+    <string name="pad_2">ذراع بزرين</string>
+    <!-- EN: 6-button pad -->
+    <string name="pad_6">ذراع بستة أزرار</string>
     <!-- EN: ROM chip %1$d -->
     <string name="firmware_marty_chip">شريحة ROM رقم %1$d</string>
     <!-- EN: the Marty\'s system ROM, as MAME dumps it (fmtmarty.zip) -->

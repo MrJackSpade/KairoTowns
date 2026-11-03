@@ -58,7 +58,9 @@ _MARTY = re.compile(r"\bMarty\b")
 
 
 # The machine settings a game can ask for, as TownsCatalog's options name them.
-MACHINE_OPTIONS = {"model": {"towns", "marty"}, "memory": {2, 4, 6, 8, 12, 16}, "cpu": {16, 20, 25, 33, 40, 66}}
+MACHINE_OPTIONS = {"model": {"towns", "marty"}, "memory": {2, 4, 6, 8, 12, 16}, "cpu": {16, 20, 25, 33, 40, 66},
+                   # The gamepad: "6" for the games written for the 6-button pad (KairoTowns#104).
+                   "pad": {"2", "6"}}
 
 
 def MACHINE(name, set_name, content_id):

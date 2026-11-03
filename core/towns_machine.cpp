@@ -541,8 +541,18 @@ struct TownsMachine::Impl {
     // Gives the guest the held pad and mouse, as Outside_World::DevicePolling would.
     void poll_devices() {
         auto &t = *towns;
-        t.SetGamePadState(0, pad & PAD_A, pad & PAD_B, pad & PAD_LEFT, pad & PAD_RIGHT, pad & PAD_UP, pad & PAD_DOWN,
-                          pad & PAD_RUN, pad & PAD_SELECT, false);
+        if (t.gameport.state.ports[0].device == TownsGamePort::GAMEPAD_6BTN) {
+            // Tsugaru keeps a 6-button pad's buttons in CPSF order: its X, Y, L and R are the
+            // 6-button pad's C, X, Y and Z (TownsGamePort::Port::Read, GAMEPAD_6BTN).
+            t.SetCAPCOMCPSFState(0, pad & PAD_LEFT, pad & PAD_RIGHT, pad & PAD_UP, pad & PAD_DOWN, pad & PAD_A,
+                                 pad & PAD_B, pad & PAD_C, pad & PAD_X, pad & PAD_Y, pad & PAD_Z, pad & PAD_RUN,
+                                 pad & PAD_SELECT);
+            // That call has no zoom; the 6-button pad's reading takes it from the port.
+            t.gameport.state.ports[0].zoom = pad & PAD_ZOOM;
+        } else {
+            t.SetGamePadState(0, pad & PAD_A, pad & PAD_B, pad & PAD_LEFT, pad & PAD_RIGHT, pad & PAD_UP, pad & PAD_DOWN,
+                              pad & PAD_RUN, pad & PAD_SELECT, pad & PAD_ZOOM);
+        }
         const int64_t now = int64_t(t.state.townsTime);
         if (!button_changes.empty() && now - button_changed >= kButtonHoldNs) {
             buttons[button_changes.front().first] = button_changes.front().second;
@@ -637,7 +647,9 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
     parameters.noWait = config.skip_memory_check;
     parameters.noWaitStandby = false;
     if (config.marty) parameters.townsType = TOWNSTYPE_MARTY;
-    parameters.gamePort[0] = config.marty ? TOWNS_GAMEPORTEMU_MARTYPAD_BY_PHYSICAL0 : TOWNS_GAMEPORTEMU_PHYSICAL0;
+    parameters.gamePort[0] = config.six_button_pad ? TOWNS_GAMEPORTEMU_6BTNPAD_BY_PHYSICAL0
+                             : config.marty         ? TOWNS_GAMEPORTEMU_MARTYPAD_BY_PHYSICAL0
+                                                    : TOWNS_GAMEPORTEMU_PHYSICAL0;
     parameters.gamePort[1] = TOWNS_GAMEPORTEMU_MOUSE;
     parameters.interactive = false;
     // Tsugaru by default darkens the row two thirds down every picture, as the damper wire of a
