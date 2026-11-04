@@ -17,6 +17,7 @@
 #include "townsdef.h"
 #include "townsparam.h"
 #include "jit/jit.h"
+#include "kairo/relative_warp.h"
 #include "picture_worker.h"
 #include "wait_loop.h"
 
@@ -534,9 +535,13 @@ struct TownsMachine::Impl {
     int mouse_dx = 0, mouse_dy = 0;
     // Direct touch (TownsMachine::mouse_warp): the frame point the TBIOS pointer is heading for, and
     // polls since the pointer last moved. A guest clamps its pointer at its own limits, so a pointer
-    // that stops short has gone as far as it can.
-    enum class Warp { kNone, kMoving, kUnreachable } warp = Warp::kNone;
+    // that stops short has gone as far as it can. A guest with no TBIOS pointer to read (one that
+    // reads the mouse port itself, KairoTowns#110) gets the shared relative warp instead (kRelative),
+    // to the point in the displayed picture's pixels.
+    enum class Warp { kNone, kMoving, kRelative } warp = Warp::kNone;
     int warp_x = 0, warp_y = 0;
+    int warp_point_x = 0, warp_point_y = 0, warp_width = 0, warp_height = 0;
+    kairo::RelativeWarp relative;
     int warp_mx = 0, warp_my = 0, warp_still = 0;
     static constexpr int kWarpStill = 30;
 
@@ -562,9 +567,18 @@ struct TownsMachine::Impl {
             button_changed = now;
         }
         t.SetMouseButtonState(buttons[0], buttons[1]);
-        if (warp == Warp::kMoving) {
-            steer_warp();
-        } else if (mouse_dx || mouse_dy) {
+        if (warp == Warp::kMoving) steer_warp();
+        if (warp == Warp::kRelative) {
+            int dx = 0, dy = 0;
+            relative.step(mouse_dx == 0 && mouse_dy == 0 && motion_taken(), dx, dy);
+            mouse_dx += dx;
+            mouse_dy += dy;
+            if (relative.done()) warp = Warp::kNone;
+        }
+        // A relative warp's counts go on only once the guest has read the last ones: the port keeps
+        // 127 a direction and drops the rest, and the warp's push and its counts from the corner must
+        // all arrive.
+        if (warp != Warp::kMoving && (mouse_dx || mouse_dy) && (warp != Warp::kRelative || motion_taken())) {
             const int dx = std::clamp(mouse_dx, -127, 127), dy = std::clamp(mouse_dy, -127, 127);
             t.ControlMouseByDiffDirect(dx, dy);
             mouse_dx -= dx;
@@ -581,7 +595,8 @@ struct TownsMachine::Impl {
         int diff_x, diff_y, mx, my;
         if (!t.ControlMouse(diff_x, diff_y, warp_x, warp_y, t.state.tbiosVersion) ||
             !t.GetMouseCoordinate(mx, my, t.state.tbiosVersion)) {
-            warp = Warp::kUnreachable;
+            warp = Warp::kRelative;
+            relative.start(warp_point_x, warp_point_y, warp_width, warp_height);
             return;
         }
         if (mx == warp_mx && my == warp_my) ++warp_still;
@@ -592,6 +607,13 @@ struct TownsMachine::Impl {
             t.DontControlMouse();
             warp = Warp::kNone;
         }
+    }
+
+    // Whether the guest has read all the motion given to the mouse port.
+    bool motion_taken() const {
+        for (const auto &port : towns->gameport.state.ports)
+            if (port.device == TownsGamePort::MOUSE && (port.mouseMotion.x() != 0 || port.mouseMotion.y() != 0)) return false;
+        return true;
     }
 
     // A new picture once a 60 Hz rendering slot has come, outside vertical sync.
@@ -1023,6 +1045,7 @@ void TownsMachine::mouse_move(int dx, int dy) {
         impl_->warp_y += dy;
         return;
     }
+    if (impl_->warp == Impl::Warp::kRelative && impl_->relative.hold(dx, dy)) return;
     impl_->mouse_dx += dx;
     impl_->mouse_dy += dy;
 }
@@ -1030,8 +1053,13 @@ void TownsMachine::mouse_move(int dx, int dy) {
 void TownsMachine::mouse_warp(int x, int y) {
     impl_->warp = Impl::Warp::kMoving;
     // The point is in the displayed area; the pointer moves in the whole picture's pixels.
-    impl_->warp_x = x + int(impl_->pictures.area().x);
-    impl_->warp_y = y + int(impl_->pictures.area().y);
+    const auto &area = impl_->pictures.area();
+    impl_->warp_x = x + int(area.x);
+    impl_->warp_y = y + int(area.y);
+    impl_->warp_point_x = x;
+    impl_->warp_point_y = y;
+    impl_->warp_width = int(area.width);
+    impl_->warp_height = int(area.height);
     impl_->warp_still = 0;
     impl_->mouse_dx = impl_->mouse_dy = 0;
 }

@@ -111,8 +111,8 @@ public:
     // The mouse in port 1: motion in mickeys, and button 1 (left) or 2 (right).
     void mouse_move(int dx, int dy);
     // Direct touch: moves the guest's TBIOS mouse pointer to point (x, y) of displayed() over the next polls,
-    // through Tsugaru's mouse integration. A guest without the TBIOS mouse running cannot be moved
-    // there, and the warp never finishes.
+    // through Tsugaru's mouse integration. A guest without the TBIOS mouse running, which reads the
+    // mouse port itself, gets the shared relative warp (kairo/relative_warp.h) instead (KairoTowns#110).
     void mouse_warp(int x, int y);
     // Whether the pointer reached the last warp's point, or stopped where the guest clamps it.
     bool mouse_warp_done() const;
