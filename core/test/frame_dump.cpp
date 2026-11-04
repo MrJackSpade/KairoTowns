@@ -36,7 +36,7 @@ bool write_ppm(const std::string &file, const uint8_t *pixels, uint32_t width, u
 } // namespace
 
 int main(int argc, char **argv) {
-    // model:marty, last, starts an FM Towns Marty from <rom dir>'s Marty ROMs (Config::marty), as boot_test's does.
+    // model:marty, last, starts an FM Towns Marty from <rom dir>'s Marty ROMs (Config::marty).
     const bool marty = argc == 8 && std::string(argv[7]) == "model:marty";
     if (marty) --argc;
     if (argc != 7) return fail("usage: frame_dump <rom dir> <work dir> <disc image> <seconds> <frames between pictures> <skip|check> [model:marty]");

@@ -240,6 +240,26 @@
           ]
         }
       }
+    },
+    {
+      "name": "Marty",
+      "firmware": "host/Marty ROMs",
+      "media": [
+        "games/Populous & The Promised Lands (1990)(Imagineer)(Jp)/Populous & The Promised Lands (1990)(Imagineer)(Jp).cue"
+      ],
+      "settings": {
+        "memory": "6",
+        "cpu": "40",
+        "skipMemoryCheck": "on",
+        "bootHardDisk": "off",
+        "model": "marty",
+        "pad": "2"
+      },
+      "checks": {
+        "boot": {
+          "frames": 1800
+        }
+      }
     }
   ]
 }
