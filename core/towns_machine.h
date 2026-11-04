@@ -52,8 +52,9 @@ struct Config {
     // changes nothing the guest does; off only to compare against.
     bool skip_wait_loops = true;
     // Whether a run repeats exactly, for tests that compare two runs: the clock starts at a fixed
-    // time and runs with guest time, and a CD audio read finishes before the guest goes on (the
-    // app reads it in the background).
+    // time and runs with guest time, a CD audio read finishes before the guest goes on (the app
+    // reads it in the background), and a skipped memory check runs to the first disk read in one
+    // frame instead of for the frame's real time (KairoTowns#106): such a machine needs a disk.
     bool repeatable = false;
     // Whether the CPU runs translated code where it can, on hosts that have the JIT (jit/jit.h).
     // It changes nothing the guest does. Off by default: it is not yet faster where it matters

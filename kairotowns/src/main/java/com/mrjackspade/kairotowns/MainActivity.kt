@@ -102,7 +102,8 @@ class MainActivity : MachineActivity<DiskImageEntry>() {
         val hardDisk = if (isHardDisk(entry)) entry else companionFor(null, entry, launchEntries, missingDisk(UiText.res(R.string.companion_hard_disk)), ::isHardDisk)
         val media = listOf(cd, floppy, null, hardDisk)
         val images = media.map { disk -> disk?.let { disks.prepare(it, cancelled, progress).absolutePath } }
-        // A Marty keeps a CMOS of its own, apart from the FM Towns games' (towns_core.cpp, <home>/cmos.bin).
+        // A Marty keeps a home of its own, apart from the FM Towns games'; each game keeps its own CMOS
+        // beside its working copy (towns_core.cpp).
         val home = File(filesDir, if (isMarty(options)) "tsugaru-marty" else "tsugaru").apply { mkdirs() }
         // The machine boots the disk the player starts: a hard disk boots before the CD beside it.
         val settings = options + (BOOT_HARD_DISK to if (isHardDisk(entry)) "on" else "off") +

@@ -2,7 +2,7 @@
 // (shared/frontend/src/main/cpp/kairo/machine_core.h).
 
 #include <array>
-#include <fstream>
+#include <initializer_list>
 #include <memory>
 #include <string>
 #include <vector>
@@ -157,7 +157,6 @@ private:
 std::unique_ptr<kairo::MachineCore> kairo::create_core(const kairo::Launch &launch, std::string &error) {
     kairotowns::Config config;
     config.rom_dir = launch.firmware;
-    config.cmos_file = launch.home + "/cmos.bin";
     config.cd = launch.media.size() > kCd ? launch.media[kCd] : "";
     config.fd[0] = launch.media.size() > kFloppyA ? launch.media[kFloppyA] : "";
     config.fd[1] = launch.media.size() > kFloppyB ? launch.media[kFloppyB] : "";
@@ -169,21 +168,15 @@ std::unique_ptr<kairo::MachineCore> kairo::create_core(const kairo::Launch &laun
             return nullptr;
         }
         config.hd[id] = hard_disk;
-        // A game with a hard disk keeps its own CMOS beside the disk's working copy, with the drive
-        // table its MS-DOS writes, so other games keep the machine's; it starts as a copy of that.
-        const std::string own = hard_disk + ".cmos";
-        if (!std::ifstream(own, std::ios::binary).good()) {
-            std::ifstream machine(config.cmos_file, std::ios::binary);
-            if (machine.good()) {
-                std::ofstream copy(own, std::ios::binary);
-                copy << machine.rdbuf();
-                if (!copy.good()) {
-                    error = "The hard disk's CMOS could not be written to " + own;
-                    return nullptr;
-                }
-            }
-        }
-        config.cmos_file = own;
+    }
+    // Every game keeps its own CMOS (KairoTowns#109), beside the working copy of the medium it is known
+    // by: its hard disk (with the drive table its MS-DOS writes), else its CD, else its floppy. Tsugaru
+    // writes the whole CMOS back as the machine closes, so one game's settings never reach another's
+    // start. A game without one yet starts from Tsugaru's default; a machine with no medium keeps none.
+    for (const std::string *medium : std::initializer_list<const std::string *>{&hard_disk, &config.cd, &config.fd[0], &config.fd[1]}) {
+        if (medium->empty()) continue;
+        config.cmos_file = *medium + ".cmos";
+        break;
     }
     // The settings TownsCatalog's options name; every launch passes all of them.
     config.memory_mb = static_cast<unsigned>(std::stoul(launch.settings.at("memory")));

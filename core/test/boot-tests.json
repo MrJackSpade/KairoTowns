@@ -101,7 +101,10 @@
           "settled": 120,
           "idle": {
             "media": [],
-            "frames": 900
+            "frames": 900,
+            "settings": {
+              "skipMemoryCheck": "off"
+            }
           }
         }
       }
@@ -123,9 +126,6 @@
         "model": "towns",
         "pad": "2"
       },
-      "home": {
-        "cmos.bin": "host/Strike Commander Plus HDD/cmos.dat"
-      },
       "checks": {
         "boot": {
           "frames": 1800
@@ -135,7 +135,7 @@
           "typedBy": 2400,
           "answerBy": 300,
           "screens": [
-            "2f10fd6ddd80ee98"
+            "fafed4d18a38ac64"
           ]
         },
         "hardDisk": {
@@ -149,7 +149,7 @@
             "typedBy": 2400,
             "answerBy": 300,
             "screens": [
-              "ea6205b29233a8f4"
+              "7b6c4fdf0578f848"
             ]
           }
         },
@@ -223,9 +223,6 @@
         "model": "towns",
         "pad": "2"
       },
-      "home": {
-        "cmos.bin": "host/Strike Commander Plus HDD/cmos.dat"
-      },
       "checks": {
         "clock": {
           "setting": "cpu",
@@ -239,7 +236,7 @@
           "ratio": 2.6,
           "margin": 0.5,
           "screens": [
-            "6d5ce75cd8608ae0"
+            "9a45b24a98094df8"
           ]
         }
       }

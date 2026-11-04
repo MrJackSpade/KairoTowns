@@ -176,6 +176,8 @@ struct TownsMachine::Impl {
     Window window;
     Speaker speaker;
     PictureWorker pictures;
+    // Config::repeatable.
+    bool repeatable = false;
     // Disk reads before the last frame and whether it read any (TownsMachine::loading).
     uint64_t reads_before = 0;
     bool frame_read = false;
@@ -706,6 +708,7 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
         impl->jit = std::make_unique<jit::Jit>(towns.CPU(), towns.mem, towns.io, &towns.physMem.mainRAMAccess,
                                                towns.physMem.state.RAM, impl->jit_host(),
                                                &towns.pic.state.IRR0_OR_IRR1_Cache);
+    impl->repeatable = config.repeatable;
     towns.cdrom.waitForWave = config.repeatable;
     if (config.repeatable) towns.rtc.fixedTime = 946684800; // 2000-01-01 00:00:00
     // As TownsThread::VMStart and VMMainLoopTemplate prepare the machine.
@@ -832,12 +835,13 @@ bool TownsMachine::run_frame_body(std::string &error) {
     }
     // Skipping the memory check: until its first disk read, the machine runs as fast as this
     // frame's real time allows, as Tsugaru's -NOWAITBOOT does, so the BIOS memory test passes in
-    // a moment. Its sound is dropped and the frame counts as one frame, so audio stays in step.
+    // a moment. Its sound is dropped and the frame counts as one frame, so audio stays in step. A
+    // repeatable run cannot depend on the host's speed: it runs to the first disk read in this frame.
     const auto start = std::chrono::steady_clock::now();
     do {
         if (!run_guest(ran, error)) return false;
     } while (towns.state.noWait &&
-             std::chrono::steady_clock::now() - start < std::chrono::nanoseconds(kFrameNanoseconds));
+             (impl_->repeatable || std::chrono::steady_clock::now() - start < std::chrono::nanoseconds(kFrameNanoseconds)));
     impl_->speaker.restart();
     impl_->speaker.advance(kFrameNanoseconds);
     impl_->last_frame = kFrameNanoseconds;
@@ -1125,9 +1129,12 @@ std::string TownsMachine::hd_path(int id) const {
     return device.devType == TownsSCSI::SCSIDEVICE_HARDDISK ? device.imageFName : "";
 }
 
+// The image the drive holds, by the drive's own link to it: a state saved with the drive empty
+// loads back with the drive linked to none, while its image slot keeps the file it had (KairoTowns#107).
 std::string TownsMachine::fd_path(int drive) const {
     if (drive < 0 || drive > 1) return "";
-    return impl_->towns->fdc.imgFile[drive].fName;
+    const auto *image = impl_->towns->fdc.GetDriveImageFile(drive);
+    return image ? image->fName : "";
 }
 
 } // namespace kairotowns
