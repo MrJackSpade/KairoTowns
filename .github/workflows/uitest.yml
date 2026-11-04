@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   uitest:
-    uses: MrJackSpade/Kairo/.github/workflows/app-uitest.yml@501daae79c677b408e15ae68621e2c26e6477b35
+    uses: MrJackSpade/Kairo/.github/workflows/app-uitest.yml@f5069bcd662cc1698242a06ce92483c3a5ab3281
     with:
       filter: ${{ inputs.filter }}
     secrets: inherit
