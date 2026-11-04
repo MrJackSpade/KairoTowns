@@ -1,0 +1,21 @@
+name: UI tests
+
+# The app's UI test suite on the emulator of the apps' minSdk, through the shared UI test workflow
+# (shared/docs/android-build.md, Kairo#114). A manual run; a filter picks tests by their full names.
+on:
+  workflow_dispatch:
+    inputs:
+      filter:
+        description: 'A regular expression over full test names (package.Class#method); every test when empty'
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  uitest:
+    uses: MrJackSpade/Kairo/.github/workflows/app-uitest.yml@5de34dc87c56ddcdd78b09fde9d09c0f7f8f77ad
+    with:
+      filter: ${{ inputs.filter }}
+    secrets: inherit
