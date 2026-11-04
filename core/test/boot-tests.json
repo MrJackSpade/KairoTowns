@@ -260,6 +260,77 @@
           "frames": 1800
         }
       }
+    },
+    {
+      "name": "Towns mouse program",
+      "firmware": "bios",
+      "media": [
+        "",
+        "app:core/test/towns/mouse.bin",
+        "",
+        "host/Strike Commander Plus HDD/Strike Commander Plus (1994)(Origin)(Jp-En)[100MB HDD].h0"
+      ],
+      "settings": {
+        "memory": "6",
+        "cpu": "40",
+        "skipMemoryCheck": "on",
+        "bootHardDisk": "on",
+        "model": "towns",
+        "pad": "2"
+      },
+      "checks": {
+        "directTap": {
+          "commands": "A:TOWNSMS",
+          "typedBy": 2400,
+          "frames": 120,
+          "warpBy": 600,
+          "tolerance": 0,
+          "ownPointer": true,
+          "points": [
+            {
+              "x": 4,
+              "y": 4,
+              "screens": [
+                "6a1b26b22fcfbf0d"
+              ],
+              "selectedBy": 60
+            },
+            {
+              "x": 636,
+              "y": 4,
+              "screens": [
+                "1d110d6c805e65dd"
+              ],
+              "selectedBy": 60
+            },
+            {
+              "x": 4,
+              "y": 396,
+              "screens": [
+                "6ed44d43fede94ad"
+              ],
+              "selectedBy": 60
+            },
+            {
+              "x": 636,
+              "y": 396,
+              "screens": [
+                "38a8bcc68bc37e5d"
+              ],
+              "selectedBy": 60
+            },
+            {
+              "x": 320,
+              "y": 200,
+              "screens": [
+                "03b3277b5f79859d"
+              ],
+              "selectedBy": 60
+            }
+          ],
+          "clickFrames": 6
+        }
+      }
     }
   ]
 }
