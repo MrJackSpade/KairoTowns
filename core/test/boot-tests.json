@@ -205,6 +205,44 @@
           "swap": ""
         }
       }
+    },
+    {
+      "name": "MS-DOS clock",
+      "firmware": "bios",
+      "media": [
+        "",
+        "",
+        "",
+        "host/Strike Commander Plus HDD/Strike Commander Plus (1994)(Origin)(Jp-En)[100MB HDD].h0"
+      ],
+      "settings": {
+        "memory": "6",
+        "cpu": "40",
+        "skipMemoryCheck": "on",
+        "bootHardDisk": "on",
+        "model": "towns",
+        "pad": "2"
+      },
+      "home": {
+        "cmos.bin": "host/Strike Commander Plus HDD/cmos.dat"
+      },
+      "checks": {
+        "clock": {
+          "setting": "cpu",
+          "values": [
+            "40",
+            "10"
+          ],
+          "commands": "FOR %A IN (1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) DO ECHO %A>NUL\nFOR %A IN (1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) DO ECHO %A>NUL\nFOR %A IN (1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) DO ECHO %A>NUL",
+          "typedBy": 12000,
+          "doneBy": 6000,
+          "ratio": 2.6,
+          "margin": 0.5,
+          "screens": [
+            "6d5ce75cd8608ae0"
+          ]
+        }
+      }
     }
   ]
 }

@@ -642,7 +642,11 @@ std::unique_ptr<TownsMachine> TownsMachine::create(const Config &config, std::st
             return nullptr;
         }
     }
+    // The CPU setting is the clock in both of Tsugaru's speeds: fast mode, and the slow mode the memory
+    // wait registers start in and some firmware never leaves (5 MHz by default), as Tsugaru's own game
+    // settings (Lemmings 2, Rocket Ranger) set them (KairoTowns#108).
     parameters.freq = config.cpu_mhz;
+    parameters.slowModeFreq = config.cpu_mhz;
     // Booting until the first disk read: run_frame runs it as fast as it can when skipping the memory check.
     parameters.noWait = config.skip_memory_check;
     parameters.noWaitStandby = false;
