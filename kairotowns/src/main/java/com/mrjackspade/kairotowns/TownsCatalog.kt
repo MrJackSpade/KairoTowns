@@ -3,6 +3,7 @@ package com.mrjackspade.kairotowns
 import com.mrjackspade.kairo.frontend.R as FrontendR
 import com.mrjackspade.kairo.frontend.CatalogSetting
 import com.mrjackspade.kairo.frontend.ChoiceOption
+import com.mrjackspade.kairo.frontend.CustomValue
 import com.mrjackspade.kairo.frontend.LayeredGameCatalog
 import com.mrjackspade.kairo.frontend.MachineOption
 import com.mrjackspade.kairo.frontend.UiText
@@ -25,10 +26,19 @@ object TownsCatalog : LayeredGameCatalog.Schema {
     override val enterKeys = setOf(JisMainBlock.RETURN, TownsKeys.NUM_RETURN)
     override val mediaExtensions = Regex("\\.(?:zip|7z|ccd|cue|mds|iso|chd|img|bin|mdf|d77|d88|88d|hdm|h[0-6])$", RegexOption.IGNORE_CASE)
 
+    /**
+     * Main RAM in MB: the common sizes, or any whole MB typed (Kairo#183) up to what Tsugaru gives a
+     * machine (towns.cpp: 64 MB, 10 MB on the Marty's 386SX).
+     */
     val memory = MachineOption("memory", UiText.res(FrontendR.string.kairo_option_memory),
-        listOf(2, 4, 6, 8, 12, 16).map { ChoiceOption("$it", UiText.res(FrontendR.string.kairo_memory_mb, it)) }, "6", numeric = true)
+        { listOf(2, 4, 6, 8, 12, 16).map { ChoiceOption("$it", UiText.res(FrontendR.string.kairo_memory_mb, it)) } }, "6", numeric = true,
+        customWith = { values ->
+            CustomValue.range(1, if (values["model"] == "marty") 10 else 64, 1) { UiText.res(FrontendR.string.kairo_memory_mb, it) }
+        })
+    /** The CPU clock in MHz: the models' own, or any whole MHz typed (Kairo#183), which Tsugaru runs at as given. */
     val cpu = MachineOption("cpu", UiText.res(FrontendR.string.kairo_option_clock),
-        listOf(16, 20, 25, 33, 40, 66).map { ChoiceOption("$it", UiText.res(FrontendR.string.kairo_clock_mhz, it)) }, "40", numeric = true)
+        { listOf(16, 20, 25, 33, 40, 66).map { ChoiceOption("$it", UiText.res(FrontendR.string.kairo_clock_mhz, it)) } }, "40", numeric = true,
+        customWith = { CustomValue.range(1, 100, 1) { UiText.res(FrontendR.string.kairo_clock_mhz, it) } })
     val skipMemoryCheck = MachineOption.skipMemoryCheck()
     /**
      * The FM Towns or the FM Towns Marty (KairoTowns#96): the catalog marks Marty games, and a game
