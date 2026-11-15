@@ -39,6 +39,14 @@
 Both editions are built from the same source and have the same features. Requires an ARM64 device running Android 8.0 or newer.
 <!-- /kairo:download -->
 
+## Screenshots
+
+| Library | Details | Playing |
+| --- | --- | --- |
+| ![KairoTowns game library](docs/screenshots/library.png) | ![Game details in KairoTowns](docs/screenshots/game-details.png) | ![After Burner II running in KairoTowns](docs/screenshots/running-game.png) |
+
+Games shown in screenshots are user-provided and are not bundled with the app.
+
 ## Quick start
 
 1. Install KairoTowns from [GitHub Releases](https://github.com/MrJackSpade/KairoTowns/releases).
