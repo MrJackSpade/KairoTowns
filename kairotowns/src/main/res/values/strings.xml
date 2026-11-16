@@ -31,6 +31,7 @@
     <string name="model">Model</string>
     <string name="model_question">Which machine is this game for?</string>
     <string name="pad">Gamepad</string>
+    <string name="game_support">Game support</string>
     <string name="pad_2">2-button pad</string>
     <string name="pad_6">6-button pad</string>
     <!-- %1$d is the chip's number, 1 or 2. -->

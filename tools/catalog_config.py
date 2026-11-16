@@ -57,14 +57,50 @@ GROUP = disk_sets.dump_group
 _MARTY = re.compile(r"\bMarty\b")
 
 
+# Tsugaru's per-game settings (KairoTowns#77, TownsStrToApp in townsdef.cpp): the disc names of the games
+# each is for, as this catalog's sets name them. Left out: Dungeon Master, whose JP and EN settings follow
+# the language the player runs the bilingual disc in, and the sequels and other games of a series the
+# setting is not written for (Ultima Underworld II, After Burner III, Wing Commander Armada).
+_APPS = [
+    (re.compile(r"^Wing Commander( \(Japan\)|\+Secret Missions| - The Secret Missions)"), "WINGCOMMANDER1"),
+    (re.compile(r"^Wing Commander II\b"), "WINGCOMMANDER2"),
+    (re.compile(r"^Lemmings \("), "LEMMINGS"),
+    (re.compile(r"^Lemmings 2\b"), "LEMMINGS2"),
+    (re.compile(r"^Strike Commander\b"), "STRIKECOMMANDER"),
+    (re.compile(r"^Amaranth (3|III) \("), "AMARANTH3"),
+    (re.compile(r"^Ultima Underworld - The Stygian Abyss\b"), "ULTIMAUNDERWORLD"),
+    (re.compile(r"^Operation Wolf\b"), "OPERATIONWOLF"),
+    (re.compile(r"\bAir Warrior V2\b"), "AIRWARRIORV2"),
+    (re.compile(r"^Dai ?[Kk]oukai Jidai \("), "DAIKOUKAIJIDAI"),
+    (re.compile(r"^Dai ?[Kk]oukai Jidai II\b"), "DAIKOUKAIJIDAI2"),
+    (re.compile(r"\bOugon no Rashinban\b"), "RASHINBAN"),
+    # Tsugaru's After Burner setting (AFTERBURNER and AFTERBURNER2 name the same) is the Towns' After Burner II port.
+    (re.compile(r"^After ?[Bb]urner( 2 | \(Japan\)| \(1987\))"), "AFTERBURNER2"),
+    (re.compile(r"\bOrgel\b"), "ORGEL"),
+    (re.compile(r"^Rocket Ranger\b"), "ROCKETRANGER"),
+    (re.compile(r"^Asuka 120%"), "ASUKA120"),
+]
+# Every setting Tsugaru has (TownsAppToStr), as TownsCatalog.app lists them.
+APPS = {"WINGCOMMANDER1", "WINGCOMMANDER2", "SUPERDAISEN", "LEMMINGS", "LEMMINGS2", "STRIKECOMMANDER", "AMARANTH3",
+        "ULTIMAUNDERWORLD", "OPERATIONWOLF", "BRANDISH", "AIRWARRIORV2", "DUNGEONMASTER_JP", "DUNGEONMASTER_EN",
+        "DAIKOUKAIJIDAI", "RASHINBAN", "AFTERBURNER2", "DAIKOUKAIJIDAI2", "ORGEL", "ROCKETRANGER", "ASUKA120", "DRAKKEN"}
+
 # The machine settings a game can ask for, as TownsCatalog's options name them.
 MACHINE_OPTIONS = {"model": {"towns", "marty"}, "memory": {2, 4, 6, 8, 12, 16}, "cpu": {16, 20, 25, 33, 40, 66},
                    # The gamepad: "6" for the games written for the 6-button pad (KairoTowns#104).
-                   "pad": {"2", "6"}}
+                   "pad": {"2", "6"},
+                   # Tsugaru's per-game setting, "none" for a game without one (KairoTowns#77).
+                   "app": APPS | {"none"}}
 
 
 def MACHINE(name, set_name, content_id):
-    return {"model": "marty"} if _MARTY.search(name) else {}
+    machine = {"model": "marty"} if _MARTY.search(name) else {}
+    apps = [app for pattern, app in _APPS if pattern.search(name)]
+    if len(apps) > 1:
+        raise SystemExit(f"{name} matches Tsugaru's settings {apps}: one game, one setting")
+    if apps:
+        machine["app"] = apps[0]
+    return machine
 
 
 # Disk sets (shared/tools/disk_sets.py): a game boots from its hard disk, with its set's CD in the drive,

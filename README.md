@@ -78,6 +78,8 @@ KairoTowns needs the FM Towns system, DOS, font and dictionary files (`FMT_SYS.R
 - **Memory:** 2 to 16 MB (6 MB by default).
 - **CPU clock:** 16 to 66 MHz (40 MHz by default).
 - **Skip memory check** (on by default): starts games without the FM Towns's power-on memory test.
+- **Gamepad:** the 2-button pad, or Fujitsu's 6-button pad, which the catalog gives the games written for it.
+- **Game support:** Tsugaru's support for one game, such as reading Ultima Underworld's own mouse pointer or Lemmings' pointer scale. The catalog sets it for the games Tsugaru has support for; other games run with none.
 
 ## Documentation
 

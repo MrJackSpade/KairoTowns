@@ -210,6 +210,9 @@ std::unique_ptr<kairo::MachineCore> kairo::create_core(const kairo::Launch &laun
         return nullptr;
     }
     config.six_button_pad = pad == "6";
+    // TownsCatalog.app: Tsugaru's setting for one game (KairoTowns#77), none for any other.
+    const std::string &app = launch.settings.at("app");
+    config.app = app == "none" ? "" : app;
     auto machine = TownsMachine::create(config, error);
     if (!machine) return nullptr;
     return std::make_unique<TownsCore>(std::move(machine));

@@ -12,7 +12,8 @@
         "skipMemoryCheck": "on",
         "bootHardDisk": "off",
         "model": "towns",
-        "pad": "2"
+        "pad": "2",
+        "app": "none"
       },
       "checks": {
         "boot": {
@@ -39,7 +40,8 @@
         "skipMemoryCheck": "on",
         "bootHardDisk": "off",
         "model": "towns",
-        "pad": "2"
+        "pad": "2",
+        "app": "none"
       },
       "checks": {
         "boot": {
@@ -64,7 +66,8 @@
         "skipMemoryCheck": "on",
         "bootHardDisk": "off",
         "model": "towns",
-        "pad": "2"
+        "pad": "2",
+        "app": "none"
       },
       "checks": {
         "boot": {
@@ -124,7 +127,8 @@
         "skipMemoryCheck": "on",
         "bootHardDisk": "on",
         "model": "towns",
-        "pad": "2"
+        "pad": "2",
+        "app": "none"
       },
       "checks": {
         "boot": {
@@ -172,7 +176,8 @@
         "skipMemoryCheck": "on",
         "bootHardDisk": "off",
         "model": "towns",
-        "pad": "2"
+        "pad": "2",
+        "app": "none"
       },
       "checks": {
         "stateDisks": {
@@ -196,7 +201,8 @@
         "skipMemoryCheck": "on",
         "bootHardDisk": "off",
         "model": "towns",
-        "pad": "2"
+        "pad": "2",
+        "app": "none"
       },
       "checks": {
         "stateDisks": {
@@ -221,7 +227,8 @@
         "skipMemoryCheck": "on",
         "bootHardDisk": "on",
         "model": "towns",
-        "pad": "2"
+        "pad": "2",
+        "app": "none"
       },
       "checks": {
         "clock": {
@@ -253,7 +260,8 @@
         "skipMemoryCheck": "on",
         "bootHardDisk": "off",
         "model": "marty",
-        "pad": "2"
+        "pad": "2",
+        "app": "none"
       },
       "checks": {
         "boot": {
@@ -276,7 +284,8 @@
         "skipMemoryCheck": "on",
         "bootHardDisk": "on",
         "model": "towns",
-        "pad": "2"
+        "pad": "2",
+        "app": "none"
       },
       "checks": {
         "directTap": {

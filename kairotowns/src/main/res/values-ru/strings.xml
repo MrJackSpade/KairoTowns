@@ -45,6 +45,7 @@
     <string name="model_question">Для какой машины эта игра?</string>
     <!-- EN: Gamepad -->
     <string name="pad">Геймпад</string>
+    <string name="game_support">Поддержка игры</string>
     <!-- EN: 2-button pad -->
     <string name="pad_2">Геймпад с 2 кнопками</string>
     <!-- EN: 6-button pad -->

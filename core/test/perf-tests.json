@@ -12,7 +12,8 @@
         "skipMemoryCheck": "on",
         "bootHardDisk": "off",
         "model": "towns",
-        "pad": "2"
+        "pad": "2",
+        "app": "none"
       },
       "checks": {
         "profile": {
@@ -33,7 +34,8 @@
         "skipMemoryCheck": "on",
         "bootHardDisk": "off",
         "model": "towns",
-        "pad": "2"
+        "pad": "2",
+        "app": "none"
       },
       "checks": {
         "profile": {
@@ -55,7 +57,8 @@
         "skipMemoryCheck": "on",
         "bootHardDisk": "off",
         "model": "towns",
-        "pad": "2"
+        "pad": "2",
+        "app": "none"
       },
       "checks": {
         "profile": {

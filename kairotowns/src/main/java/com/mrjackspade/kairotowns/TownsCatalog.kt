@@ -54,7 +54,35 @@ object TownsCatalog : LayeredGameCatalog.Schema {
      */
     val pad = MachineOption("pad", UiText.res(R.string.pad),
         listOf(ChoiceOption("2", UiText.res(R.string.pad_2)), ChoiceOption("6", UiText.res(R.string.pad_6))), "2")
-    val options = listOf(model, memory, cpu, skipMemoryCheck, pad)
+    /**
+     * Tsugaru's support for one game (KairoTowns#77, its TOWNS_APPSPECIFIC settings): how it reads that game's
+     * own mouse pointer, its 386DX check, its flight-stick axes and the like. The catalog gives it the games
+     * Tsugaru has a setting for (tools/catalog_config.py); every other game runs with none.
+     */
+    val app = MachineOption("app", UiText.res(R.string.game_support),
+        listOf(ChoiceOption("none", UiText.res(FrontendR.string.kairo_none))) + listOf(
+            ChoiceOption("WINGCOMMANDER1", UiText.fixed("Wing Commander")),
+            ChoiceOption("WINGCOMMANDER2", UiText.fixed("Wing Commander II")),
+            ChoiceOption("SUPERDAISEN", UiText.fixed("Super Daisenryaku")),
+            ChoiceOption("LEMMINGS", UiText.fixed("Lemmings")),
+            ChoiceOption("LEMMINGS2", UiText.fixed("Lemmings 2")),
+            ChoiceOption("STRIKECOMMANDER", UiText.fixed("Strike Commander")),
+            ChoiceOption("AMARANTH3", UiText.fixed("Amaranth III")),
+            ChoiceOption("ULTIMAUNDERWORLD", UiText.fixed("Ultima Underworld")),
+            ChoiceOption("OPERATIONWOLF", UiText.fixed("Operation Wolf")),
+            ChoiceOption("BRANDISH", UiText.fixed("Brandish")),
+            ChoiceOption("AIRWARRIORV2", UiText.fixed("Air Warrior V2")),
+            ChoiceOption("DUNGEONMASTER_JP", UiText.fixed("Dungeon Master (日本語)")),
+            ChoiceOption("DUNGEONMASTER_EN", UiText.fixed("Dungeon Master (English)")),
+            ChoiceOption("DAIKOUKAIJIDAI", UiText.fixed("Daikoukai Jidai")),
+            ChoiceOption("DAIKOUKAIJIDAI2", UiText.fixed("Daikoukai Jidai II")),
+            ChoiceOption("RASHINBAN", UiText.fixed("Ougon no Rashinban")),
+            ChoiceOption("AFTERBURNER2", UiText.fixed("After Burner")),
+            ChoiceOption("ORGEL", UiText.fixed("Orgel")),
+            ChoiceOption("ROCKETRANGER", UiText.fixed("Rocket Ranger")),
+            ChoiceOption("ASUKA120", UiText.fixed("Asuka 120%")),
+            ChoiceOption("DRAKKEN", UiText.fixed("Drakken"))), "none")
+    val options = listOf(model, memory, cpu, skipMemoryCheck, pad, app)
 
     /** The lines typed at DOS's prompt to start the game, such as a hard disk's `CD \GAME` and `GAME`. */
     val startupCommands = CatalogSetting.Lines(LAUNCH, COMMANDS, UiText.res(FrontendR.string.kairo_startup_commands),

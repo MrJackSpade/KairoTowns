@@ -45,6 +45,7 @@
     <string name="model_question">이 게임의 기종은 무엇인가요?</string>
     <!-- EN: Gamepad -->
     <string name="pad">게임패드</string>
+    <string name="game_support">게임별 지원</string>
     <!-- EN: 2-button pad -->
     <string name="pad_2">2버튼 패드</string>
     <!-- EN: 6-button pad -->

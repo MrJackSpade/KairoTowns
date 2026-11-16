@@ -45,6 +45,7 @@
     <string name="model_question">¿Para qué máquina es este juego?</string>
     <!-- EN: Gamepad -->
     <string name="pad">Mando</string>
+    <string name="game_support">Soporte del juego</string>
     <!-- EN: 2-button pad -->
     <string name="pad_2">Mando de 2 botones</string>
     <!-- EN: 6-button pad -->

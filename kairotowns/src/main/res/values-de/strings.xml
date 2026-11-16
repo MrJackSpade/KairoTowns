@@ -45,6 +45,7 @@
     <string name="model_question">Für welches Gerät ist dieses Spiel?</string>
     <!-- EN: Gamepad -->
     <string name="pad">Gamepad</string>
+    <string name="game_support">Spielunterstützung</string>
     <!-- EN: 2-button pad -->
     <string name="pad_2">Gamepad mit 2 Tasten</string>
     <!-- EN: 6-button pad -->

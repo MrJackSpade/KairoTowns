@@ -45,6 +45,7 @@
     <string name="model_question">Game ini untuk mesin apa?</string>
     <!-- EN: Gamepad -->
     <string name="pad">Gamepad</string>
+    <string name="game_support">Dukungan game</string>
     <!-- EN: 2-button pad -->
     <string name="pad_2">Gamepad 2 tombol</string>
     <!-- EN: 6-button pad -->

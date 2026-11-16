@@ -45,6 +45,7 @@
     <string name="model_question">لأي جهاز هذه اللعبة؟</string>
     <!-- EN: Gamepad -->
     <string name="pad">ذراع التحكم</string>
+    <string name="game_support">دعم اللعبة</string>
     <!-- EN: 2-button pad -->
     <string name="pad_2">ذراع بزرين</string>
     <!-- EN: 6-button pad -->

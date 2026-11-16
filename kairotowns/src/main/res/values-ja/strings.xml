@@ -45,6 +45,7 @@
     <string name="model_question">このゲームの機種は？</string>
     <!-- EN: Gamepad -->
     <string name="pad">ゲームパッド</string>
+    <string name="game_support">ゲーム別の対応</string>
     <!-- EN: 2-button pad -->
     <string name="pad_2">2ボタンパッド</string>
     <!-- EN: 6-button pad -->
