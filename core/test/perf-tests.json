@@ -1,0 +1,68 @@
+{
+  "tests": [
+    {
+      "name": "Populous",
+      "firmware": "bios",
+      "media": [
+        "games/Populous & The Promised Lands (1990)(Imagineer)(Jp)/Populous & The Promised Lands (1990)(Imagineer)(Jp).cue"
+      ],
+      "settings": {
+        "memory": "6",
+        "cpu": "40",
+        "skipMemoryCheck": "on",
+        "bootHardDisk": "off",
+        "model": "towns",
+        "pad": "2"
+      },
+      "checks": {
+        "profile": {
+          "boot": 1800,
+          "frames": 3000
+        }
+      }
+    },
+    {
+      "name": "Lemmings",
+      "firmware": "bios",
+      "media": [
+        "games/Lemmings (Japan)/Lemmings (Japan).cue"
+      ],
+      "settings": {
+        "memory": "6",
+        "cpu": "40",
+        "skipMemoryCheck": "on",
+        "bootHardDisk": "off",
+        "model": "towns",
+        "pad": "2"
+      },
+      "checks": {
+        "profile": {
+          "boot": 2400,
+          "frames": 3000
+        }
+      }
+    },
+    {
+      "name": "Intruder",
+      "firmware": "bios",
+      "media": [
+        "games/Intruder (1989)(AliceSoft)[+UserDisk]/Intruder (1989)(AliceSoft).iso",
+        "games/Intruder (1989)(AliceSoft)[+UserDisk]/Intruder (1989)(AliceSoft)[UserDisk].d88"
+      ],
+      "settings": {
+        "memory": "6",
+        "cpu": "40",
+        "skipMemoryCheck": "on",
+        "bootHardDisk": "off",
+        "model": "towns",
+        "pad": "2"
+      },
+      "checks": {
+        "profile": {
+          "boot": 1800,
+          "frames": 3000
+        }
+      }
+    }
+  ]
+}
